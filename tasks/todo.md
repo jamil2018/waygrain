@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -30,7 +30,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] B03 — Implement schema and basic transactional store — verified
 - [x] B04 — Implement complete and partial capture ingestion — verified
 - [x] B05 — Expose status and evidence retrieval — verified
-- [ ] B06 — Capture checkpoint — pending
+- [x] B06 — Capture checkpoint — verified
 
 ## Stage C — Bundled browser
 
@@ -230,3 +230,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Artifact: bounded read services, shared dispatch, three-tool MCP endpoint, explicit stdin/status CLI, parity/privacy/cursor tests, later packed/protocol harness expectations and updated guides.
 - Verification: writer and independent Node 26.5.0 npm run check PASS; independent Node 24.21.0 PASS, 54 tests each. Independent /root/b05_review accepted artifact without Critical/Required findings; 271 byte-budget boundaries, cross-app separation, cursor binding/corruption, malformed MCP privacy and EOF maintenance-release probes PASS. Independent clean packed smoke PASS on Node 24/26 (46 packed files) with disposable explicit browser setup. Exact source/packed identities and later document identities in evidence/b05/review.md.
 - Remaining limits: capture evidence only; semantic annotations and query/changes/freshness/recovery/browser features remain later. Envelope budgets exclude transport wrappers; unfit single items are explicitly incomplete and require larger budgets. No coding-host or cross-platform claim.
+
+
+### B06 — Capture checkpoint
+
+- Status: verified.
+- Authorized scope: selected Phase B batch and shipping, 7 October 2026; read-only capture/persistence acceptance and recording only. Stage C is not authorized.
+- Dependencies: B01–B05 verified with distinct evidence/b01 through evidence/b05 receipts. B05 implementation accepted and committed at 8b3d44a before checkpoint starts.
+- Acceptance: independent tests verify identity, scope separation, redaction, partial coverage and stored evidence.
+- Artifact: unchanged B05 implementation plus this checkpoint record; later final register/README identities will be recorded separately in evidence/b06/review.md.
+- Verification: fresh independent /root/b06_checkpoint npm run check PASS on Node 24.21.0 and 26.5.0, 54 tests each; headed fixture matrix PASS, 32 cases. Independent current packed smoke PASS on both runtimes, 46 packed files, with disposable explicit setup. Both-runtime identity/noise/order, app/environment/role separation and unknown-role refusal, partial no-state/evidence, replay/history/rollback, retrieval and private SQLite API backup/DB/WAL seeded-marker absence probes PASS. Exact identities, reproducible checker and artifact-specific archive hashes in evidence/b06/review.md. No Critical/Required findings or unresolved capture checkpoint blockers.
+- Remaining limits: no unresolved Phase B blocker. Phase B does not prove browser mapping/ownership, actions/transitions, recall/change/freshness semantics, full recovery/cap remediation, coding-host or cross-platform support. Backup probe uses the SQLite API and does not attest later backup/restore CLI behavior. Opaque nonidentifying provenance and reviewed operator labels remain prerequisites. Publication remains excluded.
+- Next eligible task: C01 — Implement browser session lifecycle. Not authorized by this Phase B request and not started.

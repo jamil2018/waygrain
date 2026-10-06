@@ -6,7 +6,7 @@ Waygrain is being designed as a local plugin with a stdio MCP server, SQLite kno
 
 ## Current status
 
-A01–A06 and B01–B05 are verified; B06 capture checkpoint is next in the authorized Phase B batch. The foundation includes explicit private configuration, packed MCP/SQLite/headed Chromium probes and all 13 public contract definitions. The A06 foundation checkpoint verdict, evidence and limitations are recorded in the [task register](tasks/todo.md). See the [setup guide](docs/configuration.md), [runtime probe guide](docs/runtime-feasibility.md) and [contract guide](docs/contracts.md).
+Phase A and Phase B (B01–B06) are verified. The foundation includes explicit private configuration, packed MCP/SQLite/headed Chromium probes and all 13 public contract definitions. The A06 foundation and B06 capture checkpoint verdicts, evidence and limitations are recorded in the [task register](tasks/todo.md). See the [setup guide](docs/configuration.md), [runtime probe guide](docs/runtime-feasibility.md) and [contract guide](docs/contracts.md).
 
 The MCP endpoint implements redacted capture ingestion, status and bounded evidence retrieval over a scoped SQLite store. See the [capture and persistence guide](docs/capture-persistence.md). Browser sessions, graph annotations/transitions, recall queries, changes and recovery commands remain later tasks. Coding-host integration and cross-platform support remain unverified.
 
