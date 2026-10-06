@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -25,7 +25,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 ## Stage B — Capture and persistence
 
-- [ ] B01 — Build synthetic UI and privacy fixtures — pending
+- [x] B01 — Build synthetic UI and privacy fixtures — verified
 - [ ] B02 — Implement redaction and normalization — pending
 - [ ] B03 — Implement schema and basic transactional store — pending
 - [ ] B04 — Implement complete and partial capture ingestion — pending
@@ -175,3 +175,14 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Review outcome: PASS; no Critical or Required findings or unresolved foundation feasibility blockers. Phase A is complete; accepted contracts and current packed evidence satisfy A06 only.
 - Remaining limitations or blocking reason: no unresolved foundation blocker. Public JSON snapshot methods are confirmed in pinned types, not live mapped/redacted capture; C02 owns mapping/privacy. macOS arm64 Node 24/26 blank-runtime feasibility does not attest product browser policy, authentication, replay/dispatch, temporary-profile deletion, forced cleanup or coding-host/cross-platform support. Graph persistence/recovery and comprehensive native/browser distribution review remain later gates. Remote shipping CI is separate from these local checks; no package publication.
 - Next eligible task: B01 — Build synthetic UI and privacy fixtures. Not authorized by this Phase A request and not started.
+
+
+### B01 — Build synthetic UI and privacy fixtures
+
+- Status: verified.
+- Authorized scope: user selected all Phase B tasks and shipping on 7 October 2026; this explicitly overrides the one-task-per-run default for B01–B06 only. Ship includes commits, push, PR, CI, merge and local sync; package publication remains excluded.
+- Dependencies: A06 verified at the shipped foundation checkpoint, commit cf3fffc, with historical evidence/a06/review.md preserved.
+- Acceptance: four screens, two roles/environments, modal/tab states, changed UI version and synthetic sensitive markers.
+- Artifact: synthetic UI/capture/settings fixtures, corpus test, explicit headed-browser test, package command and capture-persistence guide.
+- Verification: writer and independent npm run check PASS on Node 26.5.0; independent Node 24.21.0 PASS, 37 tests each. Writer and independent npm run test:fixtures PASS, 32 headed cases, using approved escalation after sandbox OS launch restriction. Independent verifier/reviewer /root/b01_review reports no required findings; exact source identities and limitations in evidence/b01/review.md.
+- Remaining limits: fixtures do not implement the Waygrain browser, capture mapping or privacy enforcement. No retained browser artifacts; DevTools MCP unavailable, so live checks use Playwright.
