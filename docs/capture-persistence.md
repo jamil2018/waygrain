@@ -30,3 +30,21 @@ configured ignored field in this version; rules that erase semantic fields fail.
 Opaque trace/session/source/request keys must be caller-minted nonidentifying
 metadata, not copied page values. Operator allowlists still require review;
 redaction cannot guarantee that an operator's approved label is safe.
+
+B03 opens the fixed configured knowledge database with foreign keys, WAL, a
+250 ms busy timeout, startup integrity/version checks and transactional revision
+guards. The initial schema contains scope-bound screens, immutable states,
+controls, captures, evidence links and idempotency receipt slots. Transactions
+roll back records and revision together. Future schemas are refused unchanged.
+Existing unversioned tables are not adopted. The initial migration runs under
+exclusive coordination; a nonempty eligible old database is backed up using the
+SQLite binding before mutation. Later numbered upgrades and full crash recovery
+remain E05, and backup/restore CLI behavior remains E03.
+
+The separate coordination database uses rollback-journal shared read locks for
+normal process lifetimes, and an exclusive lock for migration/maintenance. It
+contains only a singleton lock row and schema version. Multiple normal peers can
+write the WAL database; maintenance refuses while any peer owns a lifetime lock.
+Closing the owning connections releases it; a persisted PID is never lock
+ownership proof. The scoped tests include a separate-process peer. Controlled
+private parent directories and local filesystems remain prerequisites.

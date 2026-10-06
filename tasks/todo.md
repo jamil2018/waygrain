@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -27,7 +27,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 - [x] B01 — Build synthetic UI and privacy fixtures — verified
 - [x] B02 — Implement redaction and normalization — verified
-- [ ] B03 — Implement schema and basic transactional store — pending
+- [x] B03 — Implement schema and basic transactional store — verified
 - [ ] B04 — Implement complete and partial capture ingestion — pending
 - [ ] B05 — Expose status and evidence retrieval — pending
 - [ ] B06 — Capture checkpoint — pending
@@ -197,3 +197,14 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Artifact: core redaction/canonical projection functions, negative/identity tests, reviewed synthetic alias extension and guide.
 - Verification: writer and independent npm run check PASS on Node 26.5.0; independent Node 24.21.0 PASS, 39 tests each. Independent /root/b02_review accepted exact artifact with no Critical or Required findings; additional immutability, partial/variant, ignored-field, hints and safe-name probes PASS. Exact identities and actual limitations in evidence/b02/review.md.
 - Remaining limits: B02 has no persistence or browser mapping. Opaque nonidentifying provenance keys are caller metadata; labels require operator review. Unknown fields fail strict validation; test IDs are conservatively dropped.
+
+
+### B03 — Implement schema and basic transactional store
+
+- Status: verified.
+- Authorized scope: selected Phase B batch and shipping, 7 October 2026.
+- Dependencies: B02 verified, exact-artifact evidence/b02/review.md, commit 3657332.
+- Acceptance: foreign keys, migrations, revision guards, bounded busy handling and maintenance coordination; failed writes leave no partial records.
+- Artifact: initial normalized schema, private fixed-path SQLite store and lifetime coordination, focused synthetic rollback/peer/version tests and guide.
+- Verification: writer and independent Node 26.5.0 npm run check PASS; independent Node 24.21.0 PASS, 44 tests each. Independent /root/b03_review accepted exact artifact without Required findings. Additional probes passed initial-migration backup integrity/private mode, cross-scope/kind FK rollback, and injected mid-migration schema/version rollback. Exact identities/results in evidence/b03/review.md.
+- Remaining limits: initial schema migration only; E03 owns public backup/restore, E05 owns full migration/crash matrix. Local filesystems/private controlled parents required; no cross-platform attestation.
