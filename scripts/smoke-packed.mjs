@@ -117,14 +117,20 @@ try {
     'initialized',
   );
   await probeStdio(cli, config);
-  assert.deepEqual(await readdir(join(directory, 'private/storage')), []);
+  assert.deepEqual((await readdir(join(directory, 'private/storage'))).sort(), [
+    'coordination.sqlite',
+    'knowledge.sqlite',
+  ]);
   assert.equal(
     JSON.parse(run(bin, ['install-browser', '--config', config])).status,
     'browser_installed',
   );
   const smoke = JSON.parse(run(bin, ['smoke-runtime', '--config', config]));
   assert.equal(smoke.status, 'runtime_smoke_passed');
-  assert.deepEqual(await readdir(join(directory, 'private/storage')), []);
+  assert.deepEqual((await readdir(join(directory, 'private/storage'))).sort(), [
+    'coordination.sqlite',
+    'knowledge.sqlite',
+  ]);
   process.stdout.write(
     JSON.stringify({
       status: 'packed_smoke_passed',

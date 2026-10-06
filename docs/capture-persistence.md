@@ -66,3 +66,37 @@ numbers fail atomically. Input metadata must be nonidentifying; unknown values a
 never hashed as a retention workaround. Only redacted structure enters SQLite,
 WAL and receipt rows. This slice does not yet implement freshness, graph
 annotations, actions, transitions, query, changes or cap remediation.
+
+B05 implements `wg_status`, `wg_ingest` and `wg_evidence` through the same core
+used by CLI. `serve --config /absolute/private/config.json` advertises these three
+tools with the A05 schemas; the other ten schemas remain definitions only.
+Capability reporting currently declares `ingest` and `evidence`. Startup opens
+only the fixed private knowledge/coordination files; EOF and normal signals close
+the connections. No browser is launched by these operations.
+
+CLI commands are:
+
+```sh
+waygrain status --config /absolute/private/config.json --app fixture
+waygrain ingest --config /absolute/private/config.json < sanitized-request.json
+waygrain evidence --config /absolute/private/config.json < evidence-request.json
+```
+
+Ingest/evidence stdin contains the full public JSON request with minted project
+and app IDs; input is bounded to 1 MiB. Requests cannot choose storage paths.
+Errors use the same fixed message, stable code and sanitized field paths as core;
+configuration/process errors retain their separate setup codes. Evidence is
+untrusted data and conveys no execution instructions or permissions.
+
+Evidence defaults to summaries of explicit capture IDs; `projection: structured`
+opts into retained redacted captures. Missing or wrong-app IDs return `unavailable`
+with existing items withheld. Annotations remain D01 work. Duplicate IDs are
+collapsed. Every successful knowledge envelope fits the requested record/byte
+budget (defaults 20 records/8192 bytes). Transport protocol wrappers and MCP's
+text compatibility copy are outside that envelope budget. When bounded retrieval
+makes progress, its continuation binds IDs, projection, app/project and revision.
+Writes stale older cursors. If one item cannot fit, an explicit empty incomplete
+result without a cursor requests a larger byte budget; a budget too small for
+even that result raises `BUDGET_EXCEEDED`. Reads never advance revision or check
+times. Capture recency is descriptive; unknown application version and null
+`last_checked_at` are explicit, and retrieval does not verify states or flows.

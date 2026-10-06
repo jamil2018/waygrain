@@ -1,6 +1,6 @@
 # Public contracts (A05)
 
-A05 defines the v1 knowledge contract and separately versioned v1 browser contract. These are validation/type definitions, not functioning tools. The feasibility server still advertises no product tools. Tool implementations, graph/reference checks, redaction and live browser enforcement remain assigned to later tasks. The baseline is [v0.2](specification-v0.2.md), with only [ADR-001](decisions/001-bundled-browser.md) and the plan's amendments.
+A05 defines the v1 knowledge contract and separately versioned v1 browser contract. These are validation/type definitions, not functioning tools. The historical A05 feasibility server advertised no product tools. B02–B05 now implement redaction, scoped capture persistence and status/ingest/evidence; later graph/reference and live browser enforcement remain assigned to their tasks. The baseline is [v0.2](specification-v0.2.md), with only [ADR-001](decisions/001-bundled-browser.md) and the plan's amendments.
 
 The source of truth is `src/contracts/`: common envelopes/primitives/limits, capture/view structure, commit operations, record summaries, knowledge tools and browser tools. `z.strictObject` rejects unknown fields at every fixed object boundary. TypeScript request/response types and JSON Schema come from those same Zod definitions. `npm run build` emits executable ESM, declarations and `dist/contracts/schemas.json`. Consumers can import `waygrain/contracts` or `waygrain/contracts/schemas.json`; `contractJsonSchemas()` returns fresh generated schemas. No separately hand-maintained schema copy is committed.
 
@@ -62,3 +62,9 @@ The contract parser enforces 1 MiB maximum serialized request size (the baseline
 Generated JSON Schema enforces structural types, fixed-object strictness, enum variants, lengths and array/numeric limits. Total tree count/depth, UTF-8 byte size, serialized size, temporal context, unique local references and refinement rules need the parser; they are not silently claimed as JSON Schema features. Likewise, services must enforce same-scope/session/tab/trace identity, monotonic sequence and timestamps, complete transition endpoints, passed matching assertions, revision guards, sanitized idempotency, cursor binding, redaction and origin/live-target authority. A05 contract tests do not verify those services.
 
 `npm run check` includes synthetic fixtures for all 13 request/response pairs in both Zod and the SDK's independent AJV JSON Schema validator, strict unknown-field rejection, mode/operation/action/attempt variants, limits, errors, partial captures and generated-artifact equality. The [test fixtures](../tests/fixtures/contracts.mjs) describe schema examples, never runtime product evidence. Zod API basis: [strict objects and recursive schemas](https://zod.dev/api), [JSON Schema generation](https://zod.dev/json-schema).
+
+B05 implements only status, ingest and capture evidence retrieval; all thirteen
+public schemas remain available, but the server advertises only implemented
+tools. Behavioral scope, budget and error guarantees are documented in the
+[capture/persistence guide](capture-persistence.md). Historical A05 validation
+evidence is preserved and does not attest these new service bytes.
