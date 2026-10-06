@@ -34,7 +34,7 @@ const settings = {
     },
   ],
 };
-test('stdio handshakes without tools or storage writes and exits on EOF', async (t) => {
+test('B05 stdio advertises implemented tools, rejects private arguments and closes storage on EOF', async (t) => {
   const directory = await realpath(
     await mkdtemp('/private/tmp/waygrain-a04-stdio-'),
   );
@@ -42,7 +42,10 @@ test('stdio handshakes without tools or storage writes and exits on EOF', async 
   const config = join(directory, 'private/config.json');
   await initializeConfiguration(config, settings);
   await probeStdio(resolve('dist/cli.js'), config);
-  assert.deepEqual(await readdir(join(directory, 'private/storage')), []);
+  assert.deepEqual((await readdir(join(directory, 'private/storage'))).sort(), [
+    'coordination.sqlite',
+    'knowledge.sqlite',
+  ]);
 });
 test('SQLite opens a private disposable disk database in WAL mode and removes it', async (t) => {
   const directory = await realpath(

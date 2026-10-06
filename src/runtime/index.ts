@@ -4,9 +4,10 @@ import { createRequire } from 'node:module';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
-import { McpServer } from '@modelcontextprotocol/server';
 import { StdioServerTransport } from '@modelcontextprotocol/server/stdio';
 import { loadConfiguration } from '../config/index.js';
+import { Store } from '../store/database.js';
+import { knowledgeServer } from '../mcp/index.js';
 
 const execute = promisify(execFile);
 const require = createRequire(import.meta.url);
@@ -97,21 +98,23 @@ export async function smokeRuntime(configPath: string) {
 }
 
 export async function serve(configPath: string): Promise<void> {
-  await loadConfiguration(configPath);
-  // No public tools or storage effects before their assigned roadmap tasks.
-  const server = new McpServer({
-    name: 'waygrain-feasibility',
-    version: '0.0.0',
-  });
+  const store = await Store.open(configPath);
+  const server = knowledgeServer(store);
   server.server.onerror = () =>
     process.stderr.write('{"error":"MCP_FAILED"}\n');
+  server.server.onclose = () => store.close();
   const transport = new StdioServerTransport(process.stdin, process.stdout, {
-    maxBufferSize: 1024 * 1024,
+    maxBufferSize: 1024 * 1024 + 64 * 1024,
   });
-  await server.connect(transport);
+  try {
+    await server.connect(transport);
+  } catch (error) {
+    store.close();
+    throw error;
+  }
   for (const signal of ['SIGINT', 'SIGTERM'] as const) {
     process.once(signal, () => {
-      void server.close();
+      void server.close().finally(() => store.close());
     });
   }
 }

@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { createInterface } from 'node:readline';
 import process from 'node:process';
+import { readFile } from 'node:fs/promises';
 
-export async function probeStdio(cli, configPath) {
+export async function probeStdio(cli, configPath, exercise) {
   const child = spawn(
     process.execPath,
     [cli, 'serve', '--config', configPath],
@@ -52,16 +53,43 @@ export async function probeStdio(cli, configPath) {
       capabilities: {},
       clientInfo: { name: 'synthetic-a04', version: '1' },
     });
-    assert.equal(initialized.result.serverInfo.name, 'waygrain-feasibility');
+    assert.equal(initialized.result.serverInfo.name, 'waygrain');
     assert.equal(initialized.result.protocolVersion, '2025-11-25');
-    assert.deepEqual(initialized.result.capabilities, {});
+    assert.deepEqual(initialized.result.capabilities, { tools: {} });
     child.stdin.write(
       '{"jsonrpc":"2.0","method":"notifications/initialized"}\n',
     );
     const ping = await request(2, 'ping', {});
     assert.deepEqual(ping.result, {});
     const tools = await request(3, 'tools/list', {});
-    assert.equal(tools.error.code, -32601);
+    assert.deepEqual(
+      tools.result.tools.map((t) => t.name),
+      ['wg_status', 'wg_ingest', 'wg_evidence'],
+    );
+    const config = JSON.parse(await readFile(configPath, 'utf8'));
+    const base = {
+      schema_version: 1,
+      project_id: config.project_id,
+      app_id: config.apps[0].app_id,
+    };
+    const status = await request(4, 'tools/call', {
+      name: 'wg_status',
+      arguments: base,
+    });
+    assert.equal(status.result.structuredContent.store_revision, 0);
+    assert.deepEqual(status.result.structuredContent.data.capabilities, [
+      'ingest',
+      'evidence',
+    ]);
+    const rejected = await request(5, 'tools/call', {
+      name: 'wg_status',
+      arguments: { ...base, SYNTHETIC_SECRET_KEY: 'SYNTHETIC_SECRET_VALUE' },
+    });
+    assert.equal(rejected.result.isError, true);
+    assert.equal(rejected.result.structuredContent.error.code, 'INVALID_INPUT');
+    assert(!JSON.stringify(rejected).includes('SYNTHETIC_SECRET_KEY'));
+    assert(!JSON.stringify(rejected).includes('SYNTHETIC_SECRET_VALUE'));
+    if (exercise) await exercise(request, base, tools.result.tools);
     child.stdin.end();
     assert.deepEqual(await exit, { code: 0, signal: null });
     assert.equal(diagnostics, '');

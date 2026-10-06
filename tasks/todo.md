@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -29,7 +29,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] B02 — Implement redaction and normalization — verified
 - [x] B03 — Implement schema and basic transactional store — verified
 - [x] B04 — Implement complete and partial capture ingestion — verified
-- [ ] B05 — Expose status and evidence retrieval — pending
+- [x] B05 — Expose status and evidence retrieval — verified
 - [ ] B06 — Capture checkpoint — pending
 
 ## Stage C — Bundled browser
@@ -219,3 +219,14 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Artifact: atomic redacted ingest core, synthetic identity/scope/replay/partial/disk-privacy/rollback tests and guide.
 - Verification: writer and independent Node 26.5.0 npm run check PASS; independent Node 24.21.0 PASS, 51 tests each. Independent /root/b04_review accepted artifact with no Critical/Required findings. Extra maximum-node/depth, input immutability, before-write rejection and receipt-insert rollback probes PASS on both runtimes. Exact identities and results in evidence/b04/review.md.
 - Remaining limits: public transport integration is B05; annotations/actions/transitions/freshness/query/changes and cap remediation remain later tasks. No product behavior or browser mapping claim.
+
+
+### B05 — Expose status and evidence retrieval
+
+- Status: verified.
+- Authorized scope: selected Phase B batch and shipping, 7 October 2026.
+- Dependencies: B04 verified, independent evidence/b04/review.md, commit 4f33784.
+- Acceptance: CLI/core/MCP return consistent bounded status and evidence without leaking rejected values.
+- Artifact: bounded read services, shared dispatch, three-tool MCP endpoint, explicit stdin/status CLI, parity/privacy/cursor tests, later packed/protocol harness expectations and updated guides.
+- Verification: writer and independent Node 26.5.0 npm run check PASS; independent Node 24.21.0 PASS, 54 tests each. Independent /root/b05_review accepted artifact without Critical/Required findings; 271 byte-budget boundaries, cross-app separation, cursor binding/corruption, malformed MCP privacy and EOF maintenance-release probes PASS. Independent clean packed smoke PASS on Node 24/26 (46 packed files) with disposable explicit browser setup. Exact source/packed identities and later document identities in evidence/b05/review.md.
+- Remaining limits: capture evidence only; semantic annotations and query/changes/freshness/recovery/browser features remain later. Envelope budgets exclude transport wrappers; unfit single items are explicitly incomplete and require larger budgets. No coding-host or cross-platform claim.

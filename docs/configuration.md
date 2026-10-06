@@ -1,6 +1,6 @@
 # Explicit configuration and initialization (A03)
 
-A03 adds setup and configuration loading. A04 adds [feasibility-only runtime probes](runtime-feasibility.md); graph persistence and public tools remain later work. Configuration is a local version 1 setup format, not the A05 public tool contract.
+A03 adds setup and configuration loading. A04 adds [feasibility-only runtime probes](runtime-feasibility.md); B03–B05 add scoped persistence and three public knowledge tools. See the [capture/persistence guide](capture-persistence.md). Configuration is a local version 1 setup format, not the A05 public tool contract.
 
 Build with `npm run build`. Prepare an operator-authored settings JSON file using nonidentifying synthetic/local aliases and reviewed product labels. Do not generate configuration from page text or include credentials, real account identifiers, personal record labels or input values.
 
@@ -52,7 +52,7 @@ node dist/cli.js check-config --config /absolute/private-waygrain/config.json
 
 The config basename must be `config.json`. Its parent must be a new dedicated directory whose parent already exists. Initialization creates that directory and `storage/` with mode 0700 and `config.json` with mode 0600. It generates an opaque UUID for the project and each app, validates before creating entries, refuses every existing destination directory and never overwrites config. Repeated setup cannot remint identities. A concurrent attempt permits only one initializer. Hand-editing IDs creates a different identity and must not be used to rename an existing project.
 
-Defaults are a 100 MiB storage cap and `unknown` role when omitted. Missing role never means unrestricted scope. A positive cap can be configured without deleting data; actual byte accounting and cap enforcement belong to E04. Redaction profiles require explicit positive versions and `unknown_text: "drop"`; this task defines configuration only, with redaction enforcement assigned to B02. Labels and aliases require operator review: syntactic validation cannot certify that user-authored strings contain no personal data.
+Defaults are a 100 MiB storage cap and `unknown` role when omitted. Missing role never means unrestricted scope. A positive cap can be configured without deleting data; B05 status reports database/WAL byte usage; cap enforcement belongs to E04. Redaction profiles require explicit positive versions and `unknown_text: "drop"`; this task defines configuration only, with redaction enforcement assigned to B02. Labels and aliases require operator review: syntactic validation cannot certify that user-authored strings contain no personal data.
 
 All objects reject unknown fields, including caller-supplied IDs in initialization and path overrides. Aliases use lowercase letters, digits, underscores and hyphens (start with a letter, maximum 64 characters). Origins are exact HTTP(S) origins without paths, queries, fragments, credentials or trailing slash. Scope and route origins must be allowlisted. Route templates contain only structural path characters and placeholder segments such as `:id`; queries, fragments, percent escapes and traversal segments are rejected. App, scope, view-key and profile aliases must be unique in their owning configuration. Settings and stored config are bounded to 64 KiB.
 
