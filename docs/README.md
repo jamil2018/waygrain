@@ -8,6 +8,7 @@
 | [Product specification v0.2](specification-v0.2.md) | Local baseline snapshot from 4 October 2026; source Page provenance is recorded in the file |
 | [ADR-001: bundled browser](decisions/001-bundled-browser.md) | Explicit amendment for session ownership, bounded browser operations, stack and execution rules |
 | [Implementation plan](../tasks/plan.md) | Ordered tasks, dependencies, acceptance criteria and release gates |
+| [Runtime feasibility](runtime-feasibility.md) | A04 packed installation and explicit stdio/SQLite/headed Chromium probes |
 | [Task register](../tasks/todo.md) | Current task states, results and evidence links |
 | [A01 independent review](../tasks/evidence/a01/review.md) | Exact reviewed hashes, verification commands and limits for A01 |
 | [Contributing](../CONTRIBUTING.md) | Scope, verification, independent review and change delivery |

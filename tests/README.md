@@ -7,5 +7,8 @@ overwrite refusal, concurrent setup, bounded reads, and sanitized diagnostics.
 Fixtures live in automatically removed temporary directories.
 
 A02 historically had zero product tests; its receipt remains unchanged.
-These setup checks do not prove SQLite, MCP, browser, redaction enforcement or
-host compatibility. Playwright Test is reserved for later browser scenarios.
+A04 adds stdio handshake/EOF and disposable disk SQLite/WAL probes.
+`npm run smoke:packed` separately exercises a clean tarball install and explicitly
+installs/launches blank headed Chromium. See the [probe guide](../docs/runtime-feasibility.md).
+These checks do not prove graph persistence, product browser/privacy behavior,
+redaction enforcement or host compatibility. Playwright Test is reserved for later browser scenarios.

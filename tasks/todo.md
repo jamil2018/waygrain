@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -19,7 +19,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] A01 — Record specification amendment and task register — verified
 - [x] A02 — Bootstrap package and quality commands — verified
 - [x] A03 — Define explicit configuration and initialization — verified
-- [ ] A04 — Prove packaging and runtime feasibility — pending
+- [x] A04 — Prove packaging and runtime feasibility — verified
 - [ ] A05 — Define public knowledge and browser contracts — pending
 - [ ] A06 — Foundation checkpoint — pending
 
@@ -133,3 +133,17 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Review outcome: PASS; no Critical or Required findings. Initialization mints UUIDs into a new private configuration directory, validates explicit scopes/origins/routes/profiles/cap, derives fixed storage paths, refuses invalid/linked/unsafe destinations and avoids host or ignore-file edits. Special files fail without blocking; failures emit sanitized codes.
 - Remaining limitations or blocking reason: reviewed labels/nonidentifying aliases remain operator responsibilities. Filesystem checks assume controlled parent directories; concurrent hostile ancestor replacement and init crash recovery are not attested. Only this macOS setup artifact was exercised; remote CI and other platforms remain unverified. A04 packed stdio/SQLite/headed-browser feasibility and later redaction, locking, cap enforcement and host compatibility remain outside A03. No commit, push or publication.
 - Next eligible task: A04 — Prove packaging and runtime feasibility. Not started; requires user selection.
+
+
+### A04 — Prove packaging and runtime feasibility
+
+- Status: verified.
+- Authorized scope: user selected the next eligible task and shipping on 7 October 2026; A04 feasibility only. Delivery authorization covers branch, commit, push, PR, CI, merge and local sync, without package publication.
+- Dependencies: A03 verified; historical exact-artifact review in evidence/a03/review.md; A01/A02 authority/history preserved.
+- Acceptance criteria: packed artifact launches stdio, opens SQLite and launches headed Chromium through explicit setup; retain reproducible smoke results.
+- Implementation artifact: feasibility-only serve/install-browser/smoke-runtime commands, disposable SQLite and browser probes, clean tarball harness, focused tests and docs. Exact source and packed file hashes are recorded in the [independent receipt](evidence/a04/review.md), outside its own artifact set. The receipt separately identifies the later final verified-register bytes.
+- Verification commands and results: writer `npm run check` PASS on Node 26.5.0 (10 tests); Node 24.21.0 PASS before the final missing-browser test (9 tests). `PATH=/private/tmp/waygrain-node24/node_modules/node/bin:$PATH npm run smoke:packed` PASS on macOS arm64: clean tarball install with scripts disabled, npm bin initialization, MCP 2025-11-25 initialize/ping/unsupported tools/EOF, private disposable disk SQLite WAL/quick-check/read, explicit Chromium download and blank headed launch, no configured storage left. Preliminary tarball SHA-256 `5f97cd00fd25ed08fb9e1629e0816975f5b85fc0a9adcaa92a24642b51eadd9d` predates README updates and is historical smoke evidence, not the final artifact. Writer Node 26 packed smoke PASS with SHA-256 `83867814b17ef263f2f700584547aeae19979256cb67a20ff33bde18e35fe4e0`. Independent final quality checks PASS on Node 24.21.0 and Node 26.5.0 (all 10 tests each); independent packed smoke PASS on both. Final Node 24 archive SHA-256 `820021281bc478e5f7eddfb5b38b14897d743398c87c387d7c1f35398e78a810`; final Node 26 archive matches the writer. Independent comparison confirms identical content identities for all 17 packed files across both archives, with archive hashes reproduced on their respective runtimes.
+- Independent verifier/reviewer and reviewed artifact: `/root/a04_review`; independently ran both runtime quality/packed checks and reviewed exact source, documentation, tests, authority preservation and artifact content identities. See [review.md](evidence/a04/review.md).
+- Review outcome: PASS; no Critical or Required findings. The accepted feasibility evidence permits A04 verification only.
+- Remaining limitations or blocking reason: no graph persistence/migrations/coordination, public tool contracts, live product capture/privacy, forced browser cleanup, cross-platform or coding-host compatibility claim. Normal disposable resource cleanup is exercised; forced termination/parent-loss and timeout cleanup remain C01/C05. Clean consumer transitive dependencies resolve at install time. Distribution notices and broader native/browser license review remain release work. Remote CI remains unverified until shipping checks finish.
+- Next eligible task: A05 — Define public knowledge and browser contracts. Not started.
