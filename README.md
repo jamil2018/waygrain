@@ -6,26 +6,22 @@ Waygrain is being designed as a local plugin with a stdio MCP server, SQLite kno
 
 ## Current status
 
-This repository currently contains the specification, implementation plan, and reviewed architecture documentation. **A01 is verified; the runtime has not been implemented.** There is no npm package, runnable MCP server, CLI, or browser integration yet. A02, package bootstrap and quality commands, is the next eligible task.
+A01 is verified. A02 adds the private Apache-2.0 npm package scaffold and quality commands; see the [task register](tasks/todo.md) for its verification status. The ESM entry point is intentionally empty. MCP, CLI, configuration, storage and browser behavior arrive in later tasks. Host support remains unverified.
 
-The [task register](tasks/todo.md) is the source for current progress. Support for Codex and Claude Code on macOS is planned, not established.
+## Development setup
 
-## Get started
-
-Clone the repository and read the plan:
+Use Node.js 24 LTS (Node 26 is the smoke-test target) and npm. From this checkout:
 
 ```sh
-git clone https://github.com/jamil2018/waygrain.git
-cd waygrain
+npm ci
+npm run check
 ```
 
-With Python 3 installed, run the existing documentation check:
+`check` runs strict typechecking, ESLint, Prettier checks, the Node test harness and the TypeScript build. Individual commands are `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` and `npm run build`. Output goes to `dist/` without bundling. The A02 test harness contains zero product tests; that result does not verify product behavior. Playwright Test is pinned for later browser scenarios, with no browser installation in this setup.
 
-```sh
-python3 tasks/evidence/a01/check-documents.py
-```
+Exact dependency pins and declared licenses are recorded in [the dependency inventory](docs/dependencies.md), with the complete resolved graph in `package-lock.json`. The package is private until separately authorized release work. No install hook edits host settings or repository ignore rules.
 
-This checks task ordering, dependencies, local document links, and the original A01 scope. It intentionally asserts that package bootstrap has not started; it is historical A01 evidence, not the future project test suite. npm installation, build, lint, typecheck, and runtime commands will be documented when A02 introduces them.
+The [A01 Python checker](tasks/evidence/a01/check-documents.py) preserves the original pre-bootstrap assertions. Run it only against that historical artifact; it intentionally fails on this later package scaffold and is not the current quality command.
 
 ## Planned workflow
 
@@ -40,7 +36,7 @@ Saved controls are descriptions, not executable handles. A fresh screen observat
 
 The planned package separates schemas, redaction and normalization, graph operations, SQLite persistence, MCP transport, CLI, and the isolated Playwright browser worker. The deterministic knowledge core accepts plain JSON and cannot invoke the browser. External structured ingestion remains supported.
 
-The selected stack is TypeScript/ESM, Node.js 24 with Node 26 smoke testing, the official MCP SDK, Zod, better-sqlite3, and Playwright. Exact dependencies, licenses, public APIs, native packaging, and host compatibility need their assigned feasibility checks. See [ADR-001](docs/decisions/001-bundled-browser.md) for choices, boundaries, and consequences.
+The selected stack is TypeScript/ESM, Node.js 24 with Node 26 smoke testing, the official MCP SDK, Zod, better-sqlite3, and Playwright. Dependency versions and declared licenses are recorded in A02; public APIs, native packaging and host compatibility still need their assigned feasibility checks. See [ADR-001](docs/decisions/001-bundled-browser.md) for choices, boundaries, and consequences.
 
 ## Documentation
 
@@ -54,4 +50,4 @@ The selected stack is TypeScript/ESM, Node.js 24 with Node 26 smoke testing, the
 
 ## License
 
-Licensed under [Apache-2.0](LICENSE). Dependency licenses will be inventoried during package bootstrap.
+Licensed under [Apache-2.0](LICENSE). See the [dependency license inventory](docs/dependencies.md).

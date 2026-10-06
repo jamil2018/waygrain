@@ -1,6 +1,6 @@
 # Contributing to Waygrain
 
-Start with the [README](README.md), [implementation plan](tasks/plan.md), and [task register](tasks/todo.md). This repository is at the documentation foundation stage; executable setup and quality commands arrive in A02.
+Start with the [README](README.md), [implementation plan](tasks/plan.md), and [task register](tasks/todo.md). A02 introduces executable package setup and quality commands; product behavior remains assigned to later tasks.
 
 ## Select a bounded change
 
@@ -18,13 +18,16 @@ Record consequential design changes in a numbered ADR under `docs/decisions/`. E
 
 Use the selected task's acceptance criteria and record actual commands and results. Once the package exists, implementation tasks require focused meaningful tests, typecheck and build; checkpoints and shared-contract changes require broader checks. Before A02, document/source consistency and link/task-graph checks are applicable; unavailable runtime checks must not be reported as passed.
 
-The existing A01 check is:
+Use Node.js 24 LTS and run:
 
 ```sh
-python3 tasks/evidence/a01/check-documents.py
+npm ci
+npm run check
 ```
 
-It is specific to the pre-bootstrap A01 artifact, including an assertion that `package.json` is absent. Future package work must introduce its own appropriate checks rather than treating this historical check as a permanent gate.
+The individual typecheck, lint, formatting, test and build commands are documented in the README. Place Node tests in `tests/**/*.test.mjs`. A02's empty harness reports zero tests; later task verification must add meaningful focused assertions. Browser scenarios will use the pinned Playwright Test package at their assigned gates.
+
+The A01 Python checker is historical evidence specific to the original pre-bootstrap artifact, including package absence. Keep it unchanged; do not use it as a gate on later implementation.
 
 An implementation author cannot approve their own artifact. Independent verification and review must identify the same final files or commit. Record hashes, commands, reviewer identity, findings, verdict and remaining limitations in task evidence. Later implementation changes invalidate review of the earlier bytes. Only a task with accepted checks and review becomes `verified`.
 

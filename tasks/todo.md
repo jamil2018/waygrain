@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; all other tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -17,7 +17,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 ## Stage A — Foundation
 
 - [x] A01 — Record specification amendment and task register — verified
-- [ ] A02 — Bootstrap package and quality commands — pending
+- [x] A02 — Bootstrap package and quality commands — verified
 - [ ] A03 — Define explicit configuration and initialization — pending
 - [ ] A04 — Prove packaging and runtime feasibility — pending
 - [ ] A05 — Define public knowledge and browser contracts — pending
@@ -107,3 +107,16 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Review outcome: PASS; no Required findings. Browser ownership/control, network access and trace generation are explicit amendments; knowledge, privacy and evidence invariants remain intact. See the independent report for verification scope and limitations.
 - Remaining limitations or blocking reason: documentation does not prove dependency availability, public APIs, packaging, browser privacy/cleanup or host compatibility; assigned to A02/A04/A05 and later gates. The workspace has no Git repository, so file hashes identify artifacts; no Git initialization, commit, push or publication is included.
 - Next eligible task: A02 — Bootstrap package and quality commands. Not started; needs user selection.
+
+### A02 — Bootstrap package and quality commands
+
+- Status: verified.
+- Authorized scope: user selected the next task on 6 October 2026; A02 package scaffold and quality tooling only.
+- Dependencies: A01 verified with historical exact-artifact review in evidence/a01/review.md.
+- Acceptance criteria: Apache-2.0 package builds; typecheck, lint and empty test harness run; exact dependency versions and licenses recorded.
+- Implementation artifact: A02 package, lockfile, quality configuration, empty ESM module, development docs and register; exact SHA-256 identities are in the [independent review receipt](evidence/a02/review.md), outside its own hashed artifact set. A01 historical evidence and authority sources remain unchanged.
+- Verification commands and results: writer PASS for `npm install`, clean `npm ci` on Node 24.21.0, and `npm run check` on Node 24.21.0 and Node 26.5.0. Strict typecheck, lint, formatting and build pass; Node harness explicitly reports zero tests. Exact runtime pins were confirmed through npm registry metadata; complete declared license inventory is in [dependencies.md](../docs/dependencies.md). Independent `npm run check` PASS on both versions; isolated nested test probes on each discovered a real test and rejected a failing assertion with exit 1. Built ESM scaffold imports with zero exports.
+- Independent verifier/reviewer and reviewed artifact: `/root/a02_review`; reviewed all A02 files and preserved authority/history, independently ran both runtime quality checks and harness probes. Exact hashes and commands are in [review.md](evidence/a02/review.md).
+- Review outcome: PASS; no Critical or Required findings. Strict ESM scaffold, compatible exact tool pins, lockfile/license inventory and quality commands satisfy A02 only.
+- Remaining limitations or blocking reason: empty scaffold has no product behavior tests. Product runtime, configuration, packed stdio/SQLite/headed-browser feasibility, browser licenses/privacy/cleanup, public contracts and host support remain later tasks. Clean installation emitted an npm allow-scripts warning for better-sqlite3; native loading is not attested by these quality checks and remains A04. CI workflow is configured but has not run remotely. Node 24 and 26 checks here attest only this macOS development scaffold. No commit, push or publication.
+- Next eligible task: A03 — Define explicit configuration and initialization. Not started; requires user selection.

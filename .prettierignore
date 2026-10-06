@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+# Preserve historical artifacts and authoritative source documents byte-for-byte.
+tasks/plan.md
+tasks/todo.md
+tasks/evidence/
+docs/specification-v0.2.md
+docs/decisions/001-bundled-browser.md
+AGENTS.md
+LICENSE
+docs/README.md
