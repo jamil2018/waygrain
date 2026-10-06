@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -18,7 +18,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 - [x] A01 — Record specification amendment and task register — verified
 - [x] A02 — Bootstrap package and quality commands — verified
-- [ ] A03 — Define explicit configuration and initialization — pending
+- [x] A03 — Define explicit configuration and initialization — verified
 - [ ] A04 — Prove packaging and runtime feasibility — pending
 - [ ] A05 — Define public knowledge and browser contracts — pending
 - [ ] A06 — Foundation checkpoint — pending
@@ -120,3 +120,16 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Review outcome: PASS; no Critical or Required findings. Strict ESM scaffold, compatible exact tool pins, lockfile/license inventory and quality commands satisfy A02 only.
 - Remaining limitations or blocking reason: empty scaffold has no product behavior tests. Product runtime, configuration, packed stdio/SQLite/headed-browser feasibility, browser licenses/privacy/cleanup, public contracts and host support remain later tasks. Clean installation emitted an npm allow-scripts warning for better-sqlite3; native loading is not attested by these quality checks and remains A04. CI workflow is configured but has not run remotely. Node 24 and 26 checks here attest only this macOS development scaffold. No commit, push or publication.
 - Next eligible task: A03 — Define explicit configuration and initialization. Not started; requires user selection.
+
+### A03 — Define explicit configuration and initialization
+
+- Status: verified.
+- Authorized scope: user selected the next eligible task on 7 October 2026; explicit configuration, initialization and restricted local storage setup only.
+- Dependencies: A02 verified; exact-artifact independent receipt in evidence/a02/review.md. A01/A02 authority and historical evidence preserved.
+- Acceptance criteria: init creates validated project/app configuration and restricted local storage; invalid paths and silent host edits are rejected.
+- Implementation artifact: strict configuration schema, explicit initialization/loading, minimal setup CLI, synthetic tests, setup documentation, package command updates and register; exact SHA-256 identities are in the [independent review receipt](evidence/a03/review.md), outside its own hashed artifact set. The receipt separately identifies this final verified-register artifact.
+- Verification commands and results: writer PASS for `npm run check` on Node 26.5.0 and `PATH=/private/tmp/waygrain-node24/node_modules/node/bin:$PATH npm run check` on Node 24.21.0 (initial six tests). A later named-pipe guard added a seventh test. Independent final `npm run check` PASS on Node 26.5.0 and Node 24.21.0: strict typecheck, lint, formatting, build and all seven synthetic tests. Additional independent probes passed for config size bounds before writes, all six database/WAL/SHM paths' permissions and hard links, deep freezing, read-only load and oversized CLI settings. Details and historical FIFO reproduction are in the receipt.
+- Independent verifier/reviewer and reviewed artifact: `/root/a03_review`; independently ran final checks, reviewed the exact source and documentation, compared preserved authority/history with HEAD, and identified the implemented and final verified register bytes separately in [review.md](evidence/a03/review.md).
+- Review outcome: PASS; no Critical or Required findings. Initialization mints UUIDs into a new private configuration directory, validates explicit scopes/origins/routes/profiles/cap, derives fixed storage paths, refuses invalid/linked/unsafe destinations and avoids host or ignore-file edits. Special files fail without blocking; failures emit sanitized codes.
+- Remaining limitations or blocking reason: reviewed labels/nonidentifying aliases remain operator responsibilities. Filesystem checks assume controlled parent directories; concurrent hostile ancestor replacement and init crash recovery are not attested. Only this macOS setup artifact was exercised; remote CI and other platforms remain unverified. A04 packed stdio/SQLite/headed-browser feasibility and later redaction, locking, cap enforcement and host compatibility remain outside A03. No commit, push or publication.
+- Next eligible task: A04 — Prove packaging and runtime feasibility. Not started; requires user selection.

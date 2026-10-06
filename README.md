@@ -6,7 +6,7 @@ Waygrain is being designed as a local plugin with a stdio MCP server, SQLite kno
 
 ## Current status
 
-A01 is verified. A02 adds the private Apache-2.0 npm package scaffold and quality commands; see the [task register](tasks/todo.md) for its verification status. The ESM entry point is intentionally empty. MCP, CLI, configuration, storage and browser behavior arrive in later tasks. Host support remains unverified.
+A01 and A02 are verified. A03 adds explicit configuration and initialization; see the [task register](tasks/todo.md) for its verification status and [setup guide](docs/configuration.md) for usage. MCP, SQLite persistence and browser behavior arrive in later tasks. Host support remains unverified.
 
 ## Development setup
 
@@ -17,7 +17,7 @@ npm ci
 npm run check
 ```
 
-`check` runs strict typechecking, ESLint, Prettier checks, the Node test harness and the TypeScript build. Individual commands are `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` and `npm run build`. Output goes to `dist/` without bundling. The A02 test harness contains zero product tests; that result does not verify product behavior. Playwright Test is pinned for later browser scenarios, with no browser installation in this setup.
+`check` runs strict typechecking, ESLint, Prettier checks, the Node test harness and the TypeScript build. Individual commands are `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` and `npm run build`. Output goes to `dist/` without bundling. The A03 tests exercise configuration and CLI setup with synthetic fixtures. `npm test` builds the modules before running them. Playwright Test is pinned for later browser scenarios, with no browser installation in this setup.
 
 Exact dependency pins and declared licenses are recorded in [the dependency inventory](docs/dependencies.md), with the complete resolved graph in `package-lock.json`. The package is private until separately authorized release work. No install hook edits host settings or repository ignore rules.
 
