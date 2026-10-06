@@ -6,7 +6,7 @@ Waygrain is being designed as a local plugin with a stdio MCP server, SQLite kno
 
 ## Current status
 
-A01–A03 are verified. A04 adds packed-runtime feasibility probes; see the [task register](tasks/todo.md) for its current verification status, [setup guide](docs/configuration.md) and [runtime probe guide](docs/runtime-feasibility.md). Public product tools, graph persistence and browser sessions arrive in later tasks. Host support remains unverified.
+A01–A04 are verified. A05 defines public schemas and fixtures; see the [task register](tasks/todo.md) for its current verification status, [setup guide](docs/configuration.md) and [runtime probe guide](docs/runtime-feasibility.md). The [contract guide](docs/contracts.md) documents the schema surface. Public tool behavior, graph persistence and browser sessions arrive in later tasks. Host support remains unverified.
 
 ## Development setup
 

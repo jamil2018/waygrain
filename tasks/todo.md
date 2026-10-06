@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 and all later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -20,7 +20,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] A02 — Bootstrap package and quality commands — verified
 - [x] A03 — Define explicit configuration and initialization — verified
 - [x] A04 — Prove packaging and runtime feasibility — verified
-- [ ] A05 — Define public knowledge and browser contracts — pending
+- [x] A05 — Define public knowledge and browser contracts — verified
 - [ ] A06 — Foundation checkpoint — pending
 
 ## Stage B — Capture and persistence
@@ -147,3 +147,17 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Review outcome: PASS; no Critical or Required findings. The accepted feasibility evidence permits A04 verification only.
 - Remaining limitations or blocking reason: no graph persistence/migrations/coordination, public tool contracts, live product capture/privacy, forced browser cleanup, cross-platform or coding-host compatibility claim. Normal disposable resource cleanup is exercised; forced termination/parent-loss and timeout cleanup remain C01/C05. Clean consumer transitive dependencies resolve at install time. Distribution notices and broader native/browser license review remain release work. Remote CI remains unverified until shipping checks finish.
 - Next eligible task: A05 — Define public knowledge and browser contracts. Not started.
+
+
+### A05 — Define public knowledge and browser contracts
+
+- Status: verified.
+- Authorized scope: user explicitly selected the remaining Phase A tasks (A05, then A06) and shipping on 7 October 2026, overriding the one-task-per-run default for this bounded batch. No Stage B work or package publication is authorized.
+- Dependencies: A04 verified, exact source/packed receipts in evidence/a04/review.md; shipped via PR #2. Historical authority/evidence preserved.
+- Acceptance criteria: versioned strict schemas cover tools, envelopes, errors, limits and browser attempt states; contract fixtures validate.
+- Implementation artifact: src/contracts modules, package exports/generated JSON Schema build command, synthetic fixtures/tests, contract documentation and register. The packed harness also checks public contract exports/generated schemas; its guide records this later artifact separately. Exact repaired artifact hashes are recorded in [evidence/a05/review.md](evidence/a05/review.md); the receipt is outside its own artifact set.
+- Verification commands and results: writer `npm run check` PASS on Node 26.5.0 and `PATH=/private/tmp/waygrain-node24/node_modules/node/bin:$PATH npm run check` PASS on Node 24.21.0: typecheck, lint, formatting, build and all 33 tests before independent findings. Writer repaired Node 26 quality check PASS (36 tests); Final independent quality checks PASS on Node 24.21.0 and Node 26.5.0 (36 tests each). Fixtures validate all 13 tool request/response pairs through Zod and SDK AJV, record kinds, mode/operation/action/attempt variants, strict unknown fields, byte/node/depth/time limits, partial identities and generated artifact equality.
+- Independent verifier/reviewer and reviewed artifact: `/root/a05_review`; exact repaired source/docs/tests/package/harness identities, generated schema hash, commands, findings and limits in [review.md](evidence/a05/review.md). The receipt separately identifies the final verified-register bytes.
+- Review outcome: PASS; no unresolved Critical or Required findings. Historical Required findings (structured evidence tree bounds and missing annotation/capture metadata) were repaired; partial/complete capture identity and bounded error paths were also checked independently.
+- Remaining limitations or blocking reason: contracts do not implement tool behavior, persistence, redaction or browser enforcement.
+- Next eligible task: A06 — Foundation checkpoint; authorized in this batch, not yet started.

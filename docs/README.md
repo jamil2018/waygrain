@@ -9,6 +9,7 @@
 | [ADR-001: bundled browser](decisions/001-bundled-browser.md) | Explicit amendment for session ownership, bounded browser operations, stack and execution rules |
 | [Implementation plan](../tasks/plan.md) | Ordered tasks, dependencies, acceptance criteria and release gates |
 | [Runtime feasibility](runtime-feasibility.md) | A04 packed installation and explicit stdio/SQLite/headed Chromium probes |
+| [Public contracts](contracts.md) | A05 strict versioned schemas, generated JSON Schema, fixtures and enforcement boundaries |
 | [Task register](../tasks/todo.md) | Current task states, results and evidence links |
 | [A01 independent review](../tasks/evidence/a01/review.md) | Exact reviewed hashes, verification commands and limits for A01 |
 | [Contributing](../CONTRIBUTING.md) | Scope, verification, independent review and change delivery |

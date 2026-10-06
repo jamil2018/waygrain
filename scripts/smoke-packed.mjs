@@ -59,6 +59,21 @@ try {
     }),
   );
   run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund']);
+  assert(
+    pack.files.some((file) => file.path === 'dist/contracts/schemas.json'),
+  );
+  run(process.execPath, [
+    '--input-type=module',
+    '-e',
+    `
+    import assert from 'node:assert/strict';
+    import { contracts, validateRequest, contractJsonSchemas } from 'waygrain/contracts';
+    import schemas from 'waygrain/contracts/schemas.json' with { type: 'json' };
+    assert.equal(Object.keys(contracts).length, 13);
+    assert.deepEqual(schemas.tools, contractJsonSchemas());
+    validateRequest('wg_status', { schema_version: 1, project_id: '00000000-0000-4000-8000-000000000001', app_id: '00000000-0000-4000-8000-000000000002' });
+  `,
+  ]);
   const cli = join(directory, 'node_modules/waygrain/dist/cli.js');
   const settingsPath = join(directory, 'settings.json');
   await writeFile(
@@ -120,6 +135,7 @@ try {
       packed_files: pack.files.length,
       install: 'ignore_scripts',
       stdio: 'initialize_ping_eof',
+      contracts: 'thirteen_public_exports_and_generated_schemas',
       ...smoke,
       status_packed: 'passed',
     }) + '\n',
