@@ -137,7 +137,13 @@ export function fixtureSettings() {
           {
             alias: 'fixture',
             version: 1,
-            allowed_labels: labels,
+            allowed_labels: [
+              ...labels,
+              'active',
+              'pending',
+              'invite',
+              'members',
+            ],
             ignored_fields: [],
             unknown_text: 'drop',
           },
