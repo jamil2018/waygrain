@@ -6,7 +6,7 @@ Waygrain is being designed as a local plugin with a stdio MCP server, SQLite kno
 
 ## Current status
 
-A01 and A02 are verified. A03 adds explicit configuration and initialization; see the [task register](tasks/todo.md) for its verification status and [setup guide](docs/configuration.md) for usage. MCP, SQLite persistence and browser behavior arrive in later tasks. Host support remains unverified.
+A01–A03 are verified. A04 adds packed-runtime feasibility probes; see the [task register](tasks/todo.md) for its current verification status, [setup guide](docs/configuration.md) and [runtime probe guide](docs/runtime-feasibility.md). Public product tools, graph persistence and browser sessions arrive in later tasks. Host support remains unverified.
 
 ## Development setup
 
@@ -17,7 +17,7 @@ npm ci
 npm run check
 ```
 
-`check` runs strict typechecking, ESLint, Prettier checks, the Node test harness and the TypeScript build. Individual commands are `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` and `npm run build`. Output goes to `dist/` without bundling. The A03 tests exercise configuration and CLI setup with synthetic fixtures. `npm test` builds the modules before running them. Playwright Test is pinned for later browser scenarios, with no browser installation in this setup.
+`check` runs strict typechecking, ESLint, Prettier checks, the Node test harness and the TypeScript build. Individual commands are `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` and `npm run build`. Output goes to `dist/` without bundling. The A03 tests exercise configuration and CLI setup with synthetic fixtures. `npm test` builds the modules before running them. Playwright Test is pinned for later browser scenarios. `npm run smoke:packed` explicitly installs Chromium into a disposable location and launches a blank headed window; ordinary install/check commands do not install or launch browsers.
 
 Exact dependency pins and declared licenses are recorded in [the dependency inventory](docs/dependencies.md), with the complete resolved graph in `package-lock.json`. The package is private until separately authorized release work. No install hook edits host settings or repository ignore rules.
 

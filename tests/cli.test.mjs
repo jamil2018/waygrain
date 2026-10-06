@@ -85,7 +85,7 @@ test('CLI uses only explicit paths, creates no host settings and emits bounded r
     [],
     ['check-config'],
     ['check-config', '--config', 'relative/config.json'],
-    ['serve', '--config', configPath],
+    ['serve', '--config', configPath, '--unexpected'],
     ['init', '--config', configPath, '--settings', settingsPath, '--force'],
   ]) {
     const result = run(args, directory);

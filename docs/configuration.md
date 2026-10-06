@@ -1,6 +1,6 @@
 # Explicit configuration and initialization (A03)
 
-A03 adds setup and configuration loading. SQLite opening, MCP serving and browser installation/launch remain A04 or later work. Configuration is a local version 1 setup format, not the A05 public tool contract.
+A03 adds setup and configuration loading. A04 adds [feasibility-only runtime probes](runtime-feasibility.md); graph persistence and public tools remain later work. Configuration is a local version 1 setup format, not the A05 public tool contract.
 
 Build with `npm run build`. Prepare an operator-authored settings JSON file using nonidentifying synthetic/local aliases and reviewed product labels. Do not generate configuration from page text or include credentials, real account identifiers, personal record labels or input values.
 
@@ -62,6 +62,6 @@ Setup/load reject relative paths, tilde expansion, traversal components, symlink
 
 CLI success output contains status and generated IDs; failure stderr contains only a configuration error code, never paths, raw settings or filesystem error details. Current setup codes are `INVALID_CONFIG`, `INVALID_PATH`, `ALREADY_INITIALIZED` and `CONFIG_IO`; these do not define A05 MCP errors. `check-config` reports configuration validity, not runtime availability.
 
-Host settings, ignore files and unrelated repository files are never edited. Keep the dedicated directory outside version control, or explicitly add its location to your own ignore rules. Nothing is stored in a default home folder or cwd. There is no automatic discovery, browser launch, authentication profile or database creation.
+Host settings, ignore files and unrelated repository files are never edited. Keep the dedicated directory outside version control, or explicitly add its location to your own ignore rules. Nothing is stored in a default home folder or cwd. Initialization/loading has no automatic discovery, browser launch, authentication profile or database creation.
 
 `npm test` builds before running the focused synthetic configuration and CLI tests. `npm run check` also runs typecheck, lint and formatting. Historical A01/A02 receipts identify their own artifacts and do not attest these later bytes.
