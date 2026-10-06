@@ -48,3 +48,21 @@ write the WAL database; maintenance refuses while any peer owns a lifetime lock.
 Closing the owning connections releases it; a persisted PID is never lock
 ownership proof. The scoped tests include a separate-process peer. Controlled
 private parent directories and local filesystems remain prerequisites.
+
+B04 exposes a core `ingest(store, request)` service (public transport integration
+is B05). Every request passes the public size/depth/schema/time checks, scope
+configuration and redaction before entering a short transaction. Screens resolve
+only through a returned ID or an explicitly configured view key within app and
+scope. Equal names/routes alone never merge screens. Unknown names become empty;
+semantic naming remains later annotation work. Complete compatible projections
+reuse immutable states/controls but mint new captures and evidence links.
+Partial captures retain coverage-bearing fragment hashes, have no state/control
+identity and attach evidence only to their screen. They do not confirm a state.
+
+Receipts use a digest of the sanitized request; identical replay returns the
+original receipt even after reopening, without another revision or observation.
+Changed sanitized payloads conflict. Revision guards and reused trace sequence
+numbers fail atomically. Input metadata must be nonidentifying; unknown values are
+never hashed as a retention workaround. Only redacted structure enters SQLite,
+WAL and receipt rows. This slice does not yet implement freshness, graph
+annotations, actions, transitions, query, changes or cap remediation.
