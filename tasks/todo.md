@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -28,7 +28,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] B01 — Build synthetic UI and privacy fixtures — verified
 - [x] B02 — Implement redaction and normalization — verified
 - [x] B03 — Implement schema and basic transactional store — verified
-- [ ] B04 — Implement complete and partial capture ingestion — pending
+- [x] B04 — Implement complete and partial capture ingestion — verified
 - [ ] B05 — Expose status and evidence retrieval — pending
 - [ ] B06 — Capture checkpoint — pending
 
@@ -208,3 +208,14 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Artifact: initial normalized schema, private fixed-path SQLite store and lifetime coordination, focused synthetic rollback/peer/version tests and guide.
 - Verification: writer and independent Node 26.5.0 npm run check PASS; independent Node 24.21.0 PASS, 44 tests each. Independent /root/b03_review accepted exact artifact without Required findings. Additional probes passed initial-migration backup integrity/private mode, cross-scope/kind FK rollback, and injected mid-migration schema/version rollback. Exact identities/results in evidence/b03/review.md.
 - Remaining limits: initial schema migration only; E03 owns public backup/restore, E05 owns full migration/crash matrix. Local filesystems/private controlled parents required; no cross-platform attestation.
+
+
+### B04 — Implement complete and partial capture ingestion
+
+- Status: verified.
+- Authorized scope: selected Phase B batch and shipping, 7 October 2026.
+- Dependencies: B03 verified, independent evidence/b03/review.md, commit db598f8.
+- Acceptance: repeated captures preserve history, compatible state identity reused, partial captures remain fragments, identical replay has one effect.
+- Artifact: atomic redacted ingest core, synthetic identity/scope/replay/partial/disk-privacy/rollback tests and guide.
+- Verification: writer and independent Node 26.5.0 npm run check PASS; independent Node 24.21.0 PASS, 51 tests each. Independent /root/b04_review accepted artifact with no Critical/Required findings. Extra maximum-node/depth, input immutability, before-write rejection and receipt-insert rollback probes PASS on both runtimes. Exact identities and results in evidence/b04/review.md.
+- Remaining limits: public transport integration is B05; annotations/actions/transitions/freshness/query/changes and cap remediation remain later tasks. No product behavior or browser mapping claim.
