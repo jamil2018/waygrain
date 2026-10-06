@@ -12,3 +12,8 @@ A04 adds stdio handshake/EOF and disposable disk SQLite/WAL probes.
 installs/launches blank headed Chromium. See the [probe guide](../docs/runtime-feasibility.md).
 These checks do not prove graph persistence, product browser/privacy behavior,
 redaction enforcement or host compatibility. Playwright Test is reserved for later browser scenarios.
+
+A05 adds contract fixtures for all seven knowledge and six browser tools. Both
+Zod and the SDK AJV validator check generated JSON Schema. Boundary tests cover
+unknown fields, limits, partial captures, typed operations, live bindings and
+uncertain receipts. These schema examples do not attest implemented tool behavior.

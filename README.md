@@ -6,7 +6,9 @@ Waygrain is being designed as a local plugin with a stdio MCP server, SQLite kno
 
 ## Current status
 
-A01–A03 are verified. A04 adds packed-runtime feasibility probes; see the [task register](tasks/todo.md) for its current verification status, [setup guide](docs/configuration.md) and [runtime probe guide](docs/runtime-feasibility.md). Public product tools, graph persistence and browser sessions arrive in later tasks. Host support remains unverified.
+A01–A05 are verified. The foundation includes explicit private configuration, packed MCP/SQLite/headed Chromium probes and all 13 public contract definitions. The A06 foundation checkpoint verdict, evidence and limitations are recorded in the [task register](tasks/todo.md). See the [setup guide](docs/configuration.md), [runtime probe guide](docs/runtime-feasibility.md) and [contract guide](docs/contracts.md).
+
+The MCP endpoint remains a feasibility scaffold with no product tools. Graph persistence, redaction and live browser sessions arrive in later tasks. Coding-host integration and cross-platform support remain unverified.
 
 ## Development setup
 
