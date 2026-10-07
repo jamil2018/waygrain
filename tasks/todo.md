@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -38,7 +38,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] C02 — Implement sanitized structured snapshots — verified
 - [x] C03 — Implement current target resolution and navigation — verified
 - [x] C04 — Implement bounded browser actions and attempt receipts — verified
-- [ ] C05 — Browser checkpoint — pending
+- [x] C05 — Browser checkpoint — verified
 
 ## Stage D — Evidence graph and recall
 
@@ -292,3 +292,16 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: final writer Node26 npm run check PASS (61 tests); headed actions and lifecycle PASS. Independent final quality PASS Node24.20.0/26.5.0 (61 each); Node24 action matrix with credential/option/mid-dispatch interruption regressions PASS; Node26 navigation/lifecycle PASS. Independent label/autocomplete/value/replacement/disabled-group probes and both-runtime synthetic controller before-dispatch marker, scoped close, cancellation, replay and value-absence probes PASS.
 - Independent verifier/reviewer: /root/c01_review (C04 assignment); PASS, no unresolved Critical/Required findings. All five historical Required findings repaired; exact hashes/results/limits in [review.md](evidence/c04/review.md). Final register/README accepted separately.
 - Remaining limits: no application rollback/business guarantee, graph transitions, coding-host or cross-platform claim. Unknown outcomes require inspection and separate authorization for a new execution.
+
+
+### C05 — Browser checkpoint
+
+- Status: verified.
+- Authorized scope: selected remaining Phase C batch and continued shipping, 7 October 2026. This checkpoint is read-only browser/privacy acceptance and recording; no later phase or package publication.
+- Dependencies: C01–C04 verified with distinct historical receipts. C04 implementation accepted at 642cfb5 and shipped in PR13; source bytes remain unchanged for this checkpoint.
+- Acceptance: independent browser/privacy review covers redirects, scope changes, cancellation, stale targets and uncertain outcomes.
+- Artifact: unchanged final C04 implementation plus this checkpoint record; final document identities and packed artifacts recorded separately.
+- Verification: fresh /root/c05_checkpoint npm run check PASS on Node24.20.0 and Node26.5.0 (61 tests each). Both-runtime headed lifecycle/login, snapshots, navigation, actions and 32-fixture matrices PASS. Own both-runtime real-store synthetic controller/journal marker-before-dispatch, cancellation, foreign-close refusal, unknown replay/reopen and DB/WAL input-absence probes PASS. Expanded redirected navigation/image/page-fetch/worker-fetch proofs saw zero forbidden-origin requests. Initial clean packed smoke PASS on both runtimes (62 files); initial Node24 archive fded1650f1c2589a73e16d2cd4e573881c441f261e350dd0e8734097f91dc25f, Node26 archive 28249adb68f827a783c2ecb30d413dadad270b3cd9659e20e5d0d656b03429c4. Final documentation packed/worker checks are recorded separately in the receipt.
+- Independent verifier/reviewer: /root/c05_checkpoint; PASS, no unresolved Critical/Required findings or assigned browser checkpoint blockers. Exact artifacts, generated-schema identity, commands/probes and later final documentation/packed identities in [review.md](evidence/c05/review.md). C04 source at 642cfb5 remains byte-identical.
+- Remaining limits: local macOS arm64 only. Driver/journal positive capture/action paths and synthetic transport cancellation are qualified; positive full MCP capture/action after initial human navigation and actual coding-host cancellation remain unverified. Initial blank bootstrap is human-owned. Backend privileges/business outcomes, disguised credentials, cross-platform/host integration and guaranteed cleanup after simultaneous hard worker/owner loss are not attested. Unknown/unconfirmed outcomes remain non-replaying and do not authorize persisted-PID cleanup. No later graph/recall/recovery gate or package publication.
+- Next eligible task: D01 — Implement guarded annotations and identity reconciliation; not selected by this Phase C batch and not started.
