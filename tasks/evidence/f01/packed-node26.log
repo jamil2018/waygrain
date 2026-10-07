@@ -1,0 +1,6 @@
+
+> waygrain@0.0.0 smoke:packed
+> node scripts/smoke-packed.mjs
+
+npm warn rebuild 1 package has install scripts not yet covered by allowScripts. Run `npm approve-scripts --allow-scripts-pending` to review.
+{"status":"runtime_smoke_passed","node":"v26.5.0","platform":"darwin","arch":"arm64","tarball_sha256":"6d56edf7baaec289e90cd02dc59289381f6f40216da8d7d5226e57534f00e2b5","packed_files":94,"install":"ignore_scripts","stdio":"initialize_ping_eof","contracts":"thirteen_public_exports_and_generated_schemas","sqlite":"disk_wal","browser":"headed_chromium_blank","status_packed":"passed"}

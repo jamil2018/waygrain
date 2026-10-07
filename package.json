@@ -11,7 +11,13 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "plugin.json",
+    "mcp.json",
+    ".mcp.json",
+    ".codex-plugin",
+    "skills",
+    "PLUGIN_SETUP.md"
   ],
   "exports": {
     ".": {
@@ -25,7 +31,7 @@
     "./contracts/schemas.json": "./dist/contracts/schemas.json"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json && node scripts/export-contracts.mjs",
+    "build": "tsc -p tsconfig.json && node scripts/export-contracts.mjs && node scripts/package-plugin.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint . --max-warnings=0",
     "format:check": "prettier --check .",

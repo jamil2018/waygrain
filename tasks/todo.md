@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02–F04 remain `pending`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -60,7 +60,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 ## Stage F — Plugin and Blogen pilot
 
-- [ ] F01 — Package plugin skills and setup workflow — pending
+- [x] F01 — Package plugin skills and setup workflow — verified
 - [ ] F02 — Add Blogen profile and pilot fixtures — pending
 - [ ] F03 — Verify three Blogen journeys — pending
 - [ ] F04 — Verify new-session recall in Codex — pending
@@ -438,3 +438,17 @@ Copy this template when a task starts; replace every placeholder with observed i
 
 - Phase E result: E01–E06 verified; selected implementation phase is complete. Shipping is tracked through individual E01–E06 PRs; completion report waits for merge and local base sync.
 - Next eligible task: F01 — Package plugin skills and setup workflow; unselected and not started.
+
+### Phase F authorization
+
+- User selected all F01–F06 and individual shipping on 7 October 2026, overriding the default one-task stop rule within this phase. E06 independently verified and shipped at f2db1d9. No Phase G or public publication is selected.
+- On 8 October the user selected Codex for this run and deferred Claude compatibility (F05) until later. F06 full two-host acceptance remains open; do not waive F05 or claim full Phase F completion.
+- Blogen runs at http://localhost:3000. User confirmed the local instance/data are disposable and all actions are authorized. Authentication remains manual, with no retained credentials or auth state.
+
+### F01 — Package plugin skills and setup workflow
+
+- Status: verified; E06 verified at f2db1d9.
+- Scope: portable manifests, generated Codex compatibility files, three evidence workflows, explicit startup configuration, diagnostic and packed setup checks.
+- Verification: writer Node26.5.0 check PASS (99). Independent /root/f_review Node24.20.0/26.5.0 checks PASS (99 each), own diagnostic/privacy/env probes PASS, clean packed consumers PASS on both (94 files), all 13 contracts/tools, explicit native SQLite rebuild, explicit Chromium install and headed smoke. All three skills pass the bundled skill validator.
+- Review: PASS with no unresolved Required findings. Unintended directory README packing and absent native rebuild corrected before acceptance. Exact implementation/generated compatibility/skill/setup identities and distinct packed archive hashes in [independent-review.md](evidence/f01/independent-review.md) and [artifact-sha256.json](evidence/f01/artifact-sha256.json). Final register accepted separately.
+- Limits: no actual plugin-host installation, Blogen journey, new-chat recall, Claude compatibility or public publication claim.

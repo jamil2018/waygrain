@@ -1,0 +1,20 @@
+{
+  "verdict": "ACCEPT",
+  "task": "F01",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-08",
+  "scope": "Final F01 register and independent evidence, supplementing preserved implementation review",
+  "implementation_files_unchanged": 15,
+  "evidence_and_register_sha256": {
+    "tasks/evidence/f01/artifact-sha256.json": "c38a93910c2e1888ac7f2ede58db34d1d0c8fa9cc075f61dbce0b9be7a587479",
+    "tasks/evidence/f01/checks.json": "7fa0bbb18a0f473b6c38faf3dee772e2e640ce0be757b1db67ab9f1a568c312a",
+    "tasks/evidence/f01/independent-probes.mjs": "ebc9e0873ae3895411365ea289721bfd72584a9d6ec3faa13011e56d43788241",
+    "tasks/evidence/f01/independent-review.md": "612e208fe97d55696c6f4f8e54d098487f220f0c09d26decc5fc04aaea1a9cf7",
+    "tasks/evidence/f01/packed-node24.log": "bced09e8a3d8a4a2ca440fd3ffd087ce839216dcec7834da4cd7ea0da028e0ea",
+    "tasks/evidence/f01/packed-node26.log": "cc8acbec17f50d0f2cd8485f3af2a099e4f7bdfa9bd6af72a502ab4b924f72c2",
+    "tasks/evidence/f01/probes-node24.json": "3530b086bdcddfa5894eb8028430da2b9a44f5a6d64dd62bda0821ce1496847e",
+    "tasks/evidence/f01/probes-node26.json": "5b49ae7de17462e757c9de2cd36445286510c94c633062e10fef219a79478b12",
+    "tasks/todo.md": "22ab4f2c8a8f12f95f2786686c7dbe905efc765c772cd7423b1e2211ad63c62a"
+  },
+  "limits": "F01 packaging only; F02-F04 pending, user deferred F05, full F06 remains open; no host compatibility or public publication claims."
+}

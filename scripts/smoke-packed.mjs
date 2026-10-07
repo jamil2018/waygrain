@@ -43,7 +43,9 @@ try {
   );
   assert(
     pack.files.every((file) =>
-      /^(dist\/|LICENSE$|README.md$|package.json$)/.test(file.path),
+      /^(dist\/|skills\/|\.codex-plugin\/plugin.json$|\.mcp.json$|plugin.json$|mcp.json$|PLUGIN_SETUP.md$|LICENSE$|README.md$|package.json$)/.test(
+        file.path,
+      ),
     ),
   );
   const tarball = join(directory, pack.filename);
@@ -59,6 +61,7 @@ try {
     }),
   );
   run('npm', ['install', '--ignore-scripts', '--no-audit', '--no-fund']);
+  run('npm', ['rebuild', 'better-sqlite3', '--offline']);
   assert(
     pack.files.some((file) => file.path === 'dist/contracts/schemas.json'),
   );
@@ -75,6 +78,20 @@ try {
   `,
   ]);
   const cli = join(directory, 'node_modules/waygrain/dist/cli.js');
+  for (const path of [
+    'plugin.json',
+    'mcp.json',
+    '.mcp.json',
+    '.codex-plugin/plugin.json',
+    'skills/understand-product/SKILL.md',
+    'skills/explore-and-remember/SKILL.md',
+    'skills/explain-changes/SKILL.md',
+    'PLUGIN_SETUP.md',
+  ])
+    assert(
+      pack.files.some((file) => file.path === path),
+      path,
+    );
   const settingsPath = join(directory, 'settings.json');
   await writeFile(
     settingsPath,
@@ -117,6 +134,14 @@ try {
     'initialized',
   );
   await probeStdio(cli, config);
+  await probeStdio(cli, config, undefined, {
+    args: ['serve-env'],
+    env: { ...env, WAYGRAIN_CONFIG: config },
+  });
+  assert.equal(
+    JSON.parse(run(bin, ['doctor', '--config', config])).status,
+    'needs_browser_install',
+  );
   assert.deepEqual((await readdir(join(directory, 'private/storage'))).sort(), [
     'coordination.sqlite',
     'knowledge.sqlite',
@@ -126,6 +151,10 @@ try {
     'browser_installed',
   );
   const smoke = JSON.parse(run(bin, ['smoke-runtime', '--config', config]));
+  assert.equal(
+    JSON.parse(run(bin, ['doctor', '--config', config])).status,
+    'ready_for_runtime_probe',
+  );
   assert.equal(smoke.status, 'runtime_smoke_passed');
   assert.deepEqual((await readdir(join(directory, 'private/storage'))).sort(), [
     'coordination.sqlite',

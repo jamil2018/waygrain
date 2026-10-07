@@ -1,0 +1,17 @@
+{
+  ".codex-plugin/plugin.json": "e007ee89eead06e98d89a264d14b179de787c2f1104bec8cb3ca632455459412",
+  ".mcp.json": "d07a26cb09f1af2cb3ce7b2e1f89b07620411aa1b69fe03ce825aa130dbff6ac",
+  "PLUGIN_SETUP.md": "32016992824d50cecc4be02b73e18b958a6587beedf6d25d862e9d1b5a1bd7b7",
+  "mcp.json": "5ad78f636272530838df29befca7fdaa996ec3f5ee28dc8f0f66da2f887f7692",
+  "package.json": "73d7aec9f5011b3503a2a31fd44312023e7bd3ba51a2b5794a3aa6cee99120b6",
+  "plugin.json": "a1e4a7e5b338fed453893d7355c0927a218d0a64c730608224a26c112044a100",
+  "scripts/package-plugin.mjs": "99e6b391d111f138a512f9c4ba2a94b319f3f35b665db7b7e50b08da714f54d8",
+  "scripts/protocol-probe.mjs": "94e324528b300010319205e1fcc7a8753b53b45c185ec7292816a64ccf05e748",
+  "scripts/smoke-packed.mjs": "a14f0e3cb2535ef721ef5d17a30b68b1781c5edc0e05585245d2bda99dca1968",
+  "skills/explain-changes/SKILL.md": "3a1280142b1babaec2cf5732566f1c0be35f5edd10342c252d0429038df3817c",
+  "skills/explore-and-remember/SKILL.md": "0bb973d14f2a01b8a9c8be963ee59891e816e9d16210bf7811b230d682aff1a9",
+  "skills/understand-product/SKILL.md": "2eef95c6d112d7c961bce8b4d96a7e17a3187cbb50ecf93b4fd6729e8ac7869d",
+  "src/cli.ts": "fd7321bb504c5ae9334ba677f28707caf8b427aa69953670b32b75fe7677d6d2",
+  "src/runtime/diagnostics.ts": "3079c235efe3e305ca481d07ad2691cc3506d441fa7149f3fa2291f29dacb4b1",
+  "tests/plugin.test.mjs": "9f8f2fb92e2d39d5a695e2f315f084c34ead7dedd4c9f2a43444afe2f014b425"
+}
