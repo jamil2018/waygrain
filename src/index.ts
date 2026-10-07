@@ -21,3 +21,5 @@ export { query } from './core/query.js';
 export { changes } from './core/changes.js';
 
 export { planRefresh } from './core/refresh.js';
+
+export { backup, exportArchive, restore } from './store/recovery.js';

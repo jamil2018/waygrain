@@ -1,3 +1,4 @@
+import { readFileSync, existsSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { open, stat } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -78,12 +79,62 @@ function integrity(db: Database) {
     throw new KnowledgeError('STORE_CORRUPT');
 }
 type Location = Awaited<ReturnType<typeof loadConfiguration>>;
+async function openCoordination(location: Location): Promise<Database> {
+  await privateFile(location.coordinationPath);
+  const coordination = connect(location.coordinationPath);
+  try {
+    const coordinationVersion = coordination.pragma('user_version', {
+      simple: true,
+    });
+    if (coordinationVersion !== 0 && coordinationVersion !== 1)
+      throw new KnowledgeError('UNSUPPORTED_SCHEMA');
+    if (coordinationVersion === 0) {
+      coordination.exec('BEGIN EXCLUSIVE');
+      try {
+        if (coordination.pragma('user_version', { simple: true }) === 0)
+          coordination.exec(
+            'CREATE TABLE lifetime_lock (singleton INTEGER PRIMARY KEY CHECK(singleton=1)); INSERT INTO lifetime_lock VALUES(1); PRAGMA user_version=1;',
+          );
+        coordination.exec('COMMIT');
+      } catch (error) {
+        coordination.exec('ROLLBACK');
+        throw error;
+      }
+    }
+    if (coordination.pragma('journal_mode', { simple: true }) !== 'delete')
+      throw new KnowledgeError('STORE_CORRUPT');
+    integrity(coordination);
+    return coordination;
+  } catch (error) {
+    coordination.close();
+    throw error;
+  }
+}
+/** Holds exclusive lifetime authority without opening a possibly corrupt knowledge file. */
+export async function offlineMaintenance<T>(
+  configPath: string,
+  callback: (location: Location) => Promise<T>,
+): Promise<T> {
+  const location = await loadConfiguration(configPath);
+  let coordination: Database | undefined;
+  try {
+    coordination = await openCoordination(location);
+    coordination.exec('BEGIN EXCLUSIVE');
+    coordination.prepare('SELECT singleton FROM lifetime_lock').get();
+    return await callback(location);
+  } catch (error) {
+    throw sqliteError(error);
+  } finally {
+    coordination?.close();
+  }
+}
 export class Store {
   private closed = false;
   private constructor(
     readonly location: Location,
     readonly db: Database,
     private readonly coordination: Database,
+    readonly cursorEpoch: string,
   ) {}
 
   static async open(
@@ -94,37 +145,22 @@ export class Store {
     let coordination: Database | undefined;
     let db: Database | undefined;
     try {
-      await privateFile(location.coordinationPath);
-      coordination = connect(location.coordinationPath);
-      const coordinationVersion = coordination.pragma('user_version', {
-        simple: true,
-      });
-      if (coordinationVersion !== 0 && coordinationVersion !== 1)
-        throw new KnowledgeError('UNSUPPORTED_SCHEMA');
-      if (coordinationVersion === 0) {
-        coordination.exec('BEGIN EXCLUSIVE');
-        try {
-          if (coordination.pragma('user_version', { simple: true }) === 0)
-            coordination.exec(
-              'CREATE TABLE lifetime_lock (singleton INTEGER PRIMARY KEY CHECK(singleton=1)); INSERT INTO lifetime_lock VALUES(1); PRAGMA user_version=1;',
-            );
-          coordination.exec('COMMIT');
-        } catch (error) {
-          coordination.exec('ROLLBACK');
-          throw error;
-        }
-      }
-      if (coordination.pragma('journal_mode', { simple: true }) !== 'delete')
-        throw new KnowledgeError('STORE_CORRUPT');
-      integrity(coordination);
+      coordination = await openCoordination(location);
+      coordination.exec(mode === 'maintenance' ? 'BEGIN EXCLUSIVE' : 'BEGIN');
+      coordination.prepare('SELECT singleton FROM lifetime_lock').get();
       await privateFile(location.databasePath);
       db = connect(location.databasePath);
       let version = db.pragma('user_version', { simple: true });
       if (typeof version !== 'number' || version > STORE_SCHEMA_VERSION)
         throw new KnowledgeError('UNSUPPORTED_SCHEMA');
       if (version !== STORE_SCHEMA_VERSION || mode === 'maintenance') {
-        coordination.exec('BEGIN EXCLUSIVE');
-        coordination.prepare('SELECT singleton FROM lifetime_lock').get();
+        if (mode === 'normal') {
+          db.close();
+          coordination.exec('ROLLBACK');
+          coordination.exec('BEGIN EXCLUSIVE');
+          coordination.prepare('SELECT singleton FROM lifetime_lock').get();
+          db = connect(location.databasePath);
+        }
         // Recheck after acquiring maintenance authority; another migrator may have finished.
         version = db.pragma('user_version', { simple: true });
         if (version === 0) {
@@ -217,12 +253,16 @@ export class Store {
           db.pragma('user_version', { simple: true }) !== STORE_SCHEMA_VERSION
         )
           throw new KnowledgeError('UNSUPPORTED_SCHEMA');
-        if (mode === 'normal') coordination.exec('ROLLBACK');
+        if (mode === 'normal') {
+          db.close();
+          coordination.exec('ROLLBACK');
+          coordination.exec('BEGIN');
+          coordination.prepare('SELECT singleton FROM lifetime_lock').get();
+          db = connect(location.databasePath);
+        }
       }
-      if (mode === 'normal') {
-        coordination.exec('BEGIN');
-        coordination.prepare('SELECT singleton FROM lifetime_lock').get();
-      }
+      if (db.pragma('user_version', { simple: true }) !== STORE_SCHEMA_VERSION)
+        throw new KnowledgeError('UNSUPPORTED_SCHEMA');
       integrity(db);
       const meta = db
         .prepare('SELECT project_id FROM meta WHERE singleton=1')
@@ -251,7 +291,13 @@ export class Store {
         location.databasePath + '-shm',
       ])
         await checkPrivateEntry(path, false);
-      return new Store(location, db, coordination);
+      const epochPath = join(location.storageDirectory, 'cursor-epoch');
+      const cursorEpoch = existsSync(epochPath)
+        ? readFileSync(epochPath, 'utf8')
+        : '';
+      if (cursorEpoch && !/^[a-f0-9-]{36}$/.test(cursorEpoch))
+        throw new KnowledgeError('STORE_CORRUPT');
+      return new Store(location, db, coordination, cursorEpoch);
     } catch (error) {
       db?.close();
       coordination?.close();

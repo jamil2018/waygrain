@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -53,7 +53,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 - [x] E01 — Implement capture and revision comparisons — verified
 - [x] E02 — Implement freshness and refresh plans — verified
-- [ ] E03 — Implement export, backup, and restore — pending
+- [x] E03 — Implement export, backup, and restore — verified
 - [ ] E04 — Implement scoped deletion, undo, purge, and storage cap — pending
 - [ ] E05 — Verify concurrency, crash, and migration recovery — pending
 - [ ] E06 — Recovery checkpoint — pending
@@ -402,3 +402,11 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer Node26 check PASS (87). Independent /root/e_review Node24/26 checks PASS (87 each) and own chronological precision, partial-volume, historical endpoint, flow assertion/conflict, scope/budget and fresh CLI/MCP probes PASS.
 - Review: PASS, no unresolved Required findings; timestamp ordering and flow-owned assertion/conflict findings repaired. Exact identities in [review.md](evidence/e02/review.md).
 - Limits: declarative plans only; passed reports caller-attested; partial/read/replay never reverify states/edges/flows. Missing records and step cutoffs remain explicit.
+
+### E03 — Implement export, backup, and restore
+
+- Status: verified; depends on E02 at b050c47. All Phase E/shipping authorized 7 October 2026.
+- Artifact: private archival export, consistent online backup, verified offline staged restore, pre-image retention and restore-bound cursor epochs. Lifetime lock acquired before database connection.
+- Verification: writer Node26 check PASS (89). Independent /root/e_review Node24/26 checks PASS (89 each); own full query round trip, CLI maintenance, privacy/permissions, schema/hash/WAL overlay refusals, live-peer and all-cursor epoch probes PASS.
+- Review: PASS, no unresolved Required findings. Checkpoint/standalone archive/epoch/cleanup feedback addressed before freeze. Exact artifacts/results: [review.md](evidence/e03/review.md).
+- Limits: exports archival only, no import/encryption; previous corrupt images retained as forensic sets, not certified backups. Process crash/migration stress belongs to E05, hardware failure and other platforms unverified.

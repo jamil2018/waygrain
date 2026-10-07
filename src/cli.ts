@@ -13,6 +13,7 @@ import {
   readJsonFile,
 } from './config/filesystem.js';
 import { ConfigurationError } from './config/schema.js';
+import { backup, exportArchive, restore } from './store/recovery.js';
 import { Store } from './store/database.js';
 import { dispatch } from './core/retrieval.js';
 import { KnowledgeError, errorResponse } from './core/normalize.js';
@@ -120,6 +121,31 @@ async function main(args: string[]): Promise<void> {
     } finally {
       store.close();
     }
+  } else if (
+    args.length === 3 &&
+    (command === 'backup' || command === 'export')
+  ) {
+    const store = await Store.open(configPath);
+    try {
+      process.stdout.write(
+        JSON.stringify(
+          command === 'backup'
+            ? await backup(store)
+            : await exportArchive(store),
+        ) + '\n',
+      );
+    } finally {
+      store.close();
+    }
+  } else if (
+    command === 'restore' &&
+    args.length === 7 &&
+    settingsFlag === '--backup' &&
+    args[5] === '--sha256'
+  ) {
+    process.stdout.write(
+      JSON.stringify(await restore(configPath, settingsPath, args[6])) + '\n',
+    );
   } else if (args.length === 3 && command === 'serve') {
     await serve(configPath);
   } else if (args.length === 3 && command === 'install-browser') {
