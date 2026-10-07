@@ -4,6 +4,7 @@ import { validateRequest, validateResponse } from '../contracts/validation.js';
 import { Store } from '../store/database.js';
 import { digest, KnowledgeError } from './normalize.js';
 import { selectedApp } from './ingest.js';
+import { traverse } from './traversal.js';
 import { record, scopeId } from './graph.js';
 import { summary, visible, visibleSql, activeAnnotations } from './summary.js';
 
@@ -161,8 +162,6 @@ export function query(
 ): Responses['wg_query'] {
   const q = validateRequest('wg_query', input, now) as Query;
   const app = selectedApp(store, q);
-  if (q.mode !== 'search' && q.mode !== 'neighbors')
-    throw new KnowledgeError('INVALID_INPUT');
   return store.transaction(() => {
     const scope = scopeId(store, app, q.scope, true),
       revision = store.revision;
@@ -186,9 +185,44 @@ export function query(
     const selected =
       q.mode === 'search'
         ? search(store, q, scope, offset)
-        : neighbors(store, q, scope);
-    if (q.mode === 'neighbors' && offset > selected.ids.length)
+        : q.mode === 'neighbors'
+          ? neighbors(store, q, scope)
+          : traverse(store, q, scope);
+    if (q.mode !== 'search' && offset > selected.ids.length)
       throw new KnowledgeError('INVALID_INPUT');
+    const changed: string[] = [];
+    if (q.mode === 'path' || q.mode === 'flow') {
+      for (const id of selected.ids) {
+        const row = record(store, q.app_id, id);
+        if (row.kind === 'state') {
+          const state = store.db
+            .prepare('SELECT screen_id FROM states WHERE id=?')
+            .get(id) as { screen_id: string };
+          const latest = store.db
+            .prepare(
+              `SELECT c.state_id FROM captures c JOIN records r ON r.id=c.id WHERE c.screen_id=? AND c.coverage='complete' AND ${visibleSql('c')} ORDER BY c.captured_at DESC,r.created_revision DESC,c.id LIMIT 1`,
+            )
+            .get(state.screen_id) as { state_id: string } | undefined;
+          if (latest && latest.state_id !== id) changed.push(id);
+        }
+        const evidence = summary(
+          store,
+          q.app_id,
+          id,
+          now,
+          q.max_age_seconds,
+        ).evidence;
+        if (
+          evidence.freshness.status === 'stale' ||
+          evidence.freshness.status === 'unknown' ||
+          evidence.freshness.status === 'contradicted'
+        )
+          if (selected.applicability === 'unconditional')
+            selected.applicability = 'requires_check';
+      }
+      if (changed.length && selected.applicability === 'unconditional')
+        selected.applicability = 'requires_check';
+    }
     const ids = q.mode === 'search' ? selected.ids : selected.ids.slice(offset);
     if (q.cursor && (!offset || !ids.length))
       throw new KnowledgeError('INVALID_INPUT');
@@ -196,7 +230,16 @@ export function query(
       Responses['wg_query']['data'],
       { status: 'complete' }
     >['records'] = [];
-    const warnings: Responses['wg_query']['warnings'] = [];
+    const warnings: Responses['wg_query']['warnings'] = changed.length
+      ? [
+          {
+            code: 'STATE_CHANGED',
+            message:
+              'A referenced historical state has newer complete evidence.',
+            affected_ids: changed.slice(0, 50),
+          },
+        ]
+      : [];
     const envelope = (complete: boolean, next?: number) => ({
       schema_version: 1,
       store_revision: revision,

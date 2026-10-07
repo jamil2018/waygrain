@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -46,7 +46,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] D02 — Implement actions, events, and observed transitions — verified
 - [x] D03 — Implement flows and test-run evidence — verified
 - [x] D04 — Implement lexical search and neighbors — verified
-- [ ] D05 — Implement path and flow retrieval — pending
+- [x] D05 — Implement path and flow retrieval — verified
 - [ ] D06 — Recall checkpoint — pending
 
 ## Stage E — Changes and recovery
@@ -353,3 +353,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer final Node26 check PASS (80 tests). Independent final Node24.20.0/Node26.5.0 checks PASS (80 each); both-runtime old-complete/new-partial freshness, 26-record warning boundary, 600-control node/hop pagination, revision and actual v2→v3 migration probes PASS. Freshness and warning-cap findings repaired with regressions.
 - Independent verifier/reviewer: /root/d_review; PASS, no unresolved Critical/Required findings. Exact identities, repaired history and limits in [review.md](evidence/d04/review.md); final verified register accepted separately.
 - Remaining limits: lexical substring matching, no embeddings; local macOS evidence only. Tombstone commands, freshness/change comparisons and recovery stress remain Phase E; path/flow retrieval D05.
+
+
+### D05 — Implement path and flow retrieval
+
+- Status: verified.
+- Authorized scope: all Phase D and shipping selected on 7 October 2026.
+- Dependencies: D04 independently verified at 83e2183, exact commit uploaded through API after Git receive 5xx (all blob/tree/commit hashes identical), submitted PR18.
+- Acceptance: bounded directed traversal excludes inferred/hidden evidence; unevaluated guards/preconditions remain conditional; no-path and incomplete searches differ; exact flow order preserved.
+- Artifact: path/flow selectors, explicit depth/node/edge cutoffs, pagination, conditional guards and historical changed-state applicability checks.
+- Verification: writer final Node26 check PASS (83 tests). Independent final Node24.20.0/Node26.5.0 checks PASS (83 each); both-runtime two-edge/shortcut shortest BFS, directed conditional guards/preconditions, depth/visit/no-path distinction, exact flow array, hidden dependency fallback, pagination and stale-cursor probes PASS.
+- Independent verifier/reviewer: /root/d_review; PASS, no unresolved Critical/Required findings. Exact identities/results/limits in [review.md](evidence/d05/review.md); final verified register accepted separately.
+- Remaining limits: declarative evidence only; no executable path/guard evaluation, application action or browser refresh. Phase E and host/cross-platform/public release remain unselected.
