@@ -256,7 +256,7 @@ test('D01 v1 migration retains captures/receipts and backup under exclusive auth
   old.pragma('foreign_keys=ON');
   for (const [table, values] of Object.entries(rows))
     for (const row of values) {
-      if (table === 'migrations' && row.version === 2) continue;
+      if (table === 'migrations' && row.version > 1) continue;
       old
         .prepare(
           `INSERT INTO ${table} VALUES(${Object.keys(row)

@@ -5,6 +5,8 @@ import { Store } from '../store/database.js';
 import { validateRequest, validateResponse } from '../contracts/validation.js';
 import { LIMITS, type Responses } from '../contracts/index.js';
 import { digest, KnowledgeError, type Capture } from './normalize.js';
+import { visible } from './summary.js';
+import { query } from './query.js';
 import { commit } from './commit.js';
 import { graphPayload, type Annotation } from './graph.js';
 import { selectedApp, ingest } from './ingest.js';
@@ -15,6 +17,7 @@ export const IMPLEMENTED_TOOLS = [
   'wg_ingest',
   'wg_evidence',
   'wg_commit',
+  'wg_query',
 ] as const;
 export type ImplementedTool = (typeof IMPLEMENTED_TOOLS)[number];
 const recordKinds = [
@@ -59,7 +62,7 @@ export function status(store: Store, input: unknown): Responses['wg_status'] {
       data: {
         store_schema_version: STORE_SCHEMA_VERSION,
         supported_schema_versions: [1],
-        capabilities: ['ingest', 'evidence'],
+        capabilities: ['ingest', 'evidence', 'query'],
         counts: recordKinds.map((kind) => ({
           kind,
           count: rows.find((r) => r.kind === kind)?.count ?? 0,
@@ -121,6 +124,7 @@ export function evidence(
     }
     const missing = ids.filter(
       (id) =>
+        !visible(store, id) ||
         !store.db
           .prepare(
             "SELECT id FROM records WHERE id=? AND app_id=? AND kind IN ('capture','annotation')",
@@ -299,6 +303,8 @@ export function dispatch(
       return status(store, input);
     case 'wg_ingest':
       return ingest(store, input, now);
+    case 'wg_query':
+      return query(store, input, now);
     case 'wg_commit':
       return commit(store, input, now);
     case 'wg_evidence':

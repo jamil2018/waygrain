@@ -49,6 +49,7 @@ export function scopeId(
   store: Store,
   app: AppConfiguration,
   value: Scope,
+  allowEmpty = false,
 ): string {
   const json = canonical(value);
   if (
@@ -67,8 +68,8 @@ export function scopeId(
   const row = store.db
     .prepare('SELECT id FROM scopes WHERE app_id=? AND scope_json=?')
     .get(app.app_id, json) as { id: string } | undefined;
-  if (!row) throw new KnowledgeError('NOT_FOUND');
-  return row.id;
+  if (!row && !allowEmpty) throw new KnowledgeError('NOT_FOUND');
+  return row?.id ?? '';
 }
 // All retained prose must be explicitly reviewed by the operator, like capture labels.
 export function safeProse(app: AppConfiguration, value: string): string {

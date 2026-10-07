@@ -7,6 +7,7 @@ import { KnowledgeError } from '../core/normalize.js';
 import {
   initialSchema,
   graphMigration,
+  visibilityMigration,
   STORE_SCHEMA_VERSION,
 } from './schema.js';
 
@@ -186,6 +187,30 @@ export class Store {
             throw error;
           } finally {
             db.pragma('foreign_keys = ON');
+          }
+        }
+        if (db.pragma('user_version', { simple: true }) === 2) {
+          if (version === 2) {
+            const backup = join(
+              location.storageDirectory,
+              'pre-migration-v2-' + Date.now() + '.sqlite',
+            );
+            const file = await open(backup, 'wx', 0o600);
+            await file.close();
+            await db.backup(backup);
+            await checkPrivateEntry(backup, false);
+          }
+          db.exec('BEGIN IMMEDIATE');
+          try {
+            db.exec(visibilityMigration);
+            db.prepare('INSERT INTO migrations VALUES(3,?)').run(
+              new Date().toISOString(),
+            );
+            integrity(db);
+            db.exec('COMMIT');
+          } catch (error) {
+            db.exec('ROLLBACK');
+            throw error;
           }
         }
         if (
