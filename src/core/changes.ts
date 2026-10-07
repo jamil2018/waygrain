@@ -68,7 +68,13 @@ function compare(
       evidence_ids: [a.id, b.id],
       changes: [],
     };
-  if (before.coverage.subtree !== after.coverage.subtree)
+  // Feature variants describe UI configuration, never an observed action outcome.
+  // The v1 change subject vocabulary cannot express this comparison precisely.
+  if (
+    before.coverage.subtree !== after.coverage.subtree ||
+    canonical(before.view.feature_variants) !==
+      canonical(after.view.feature_variants)
+  )
     return {
       status: 'incomparable',
       reason: 'coverage',
@@ -127,7 +133,6 @@ function compare(
   for (const [field, subject] of [
     ['selected_tabs', 'tab'],
     ['modal_stack', 'modal'],
-    ['feature_variants', 'outcome'],
   ] as const) {
     if (canonical(before.view[field]) !== canonical(after.view[field]))
       changes.push({
