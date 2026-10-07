@@ -61,7 +61,7 @@ async function main(args: string[]): Promise<void> {
       }) + '\n',
     );
   } else if (
-    ['ingest', 'evidence', 'commit', 'query'].includes(command!) &&
+    ['ingest', 'evidence', 'commit', 'query', 'changes'].includes(command!) &&
     args.length === 3
   ) {
     const input = await stdinRequest();
@@ -75,9 +75,11 @@ async function main(args: string[]): Promise<void> {
               ? 'wg_ingest'
               : command === 'commit'
                 ? 'wg_commit'
-                : command === 'query'
-                  ? 'wg_query'
-                  : 'wg_evidence',
+                : command === 'changes'
+                  ? 'wg_changes'
+                  : command === 'query'
+                    ? 'wg_query'
+                    : 'wg_evidence',
             input,
           ),
         ) + '\n',

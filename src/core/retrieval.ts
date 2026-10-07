@@ -7,6 +7,7 @@ import { LIMITS, type Responses } from '../contracts/index.js';
 import { digest, KnowledgeError, type Capture } from './normalize.js';
 import { visible } from './summary.js';
 import { query } from './query.js';
+import { changes } from './changes.js';
 import { commit } from './commit.js';
 import { graphPayload, type Annotation } from './graph.js';
 import { selectedApp, ingest } from './ingest.js';
@@ -18,6 +19,7 @@ export const IMPLEMENTED_TOOLS = [
   'wg_evidence',
   'wg_commit',
   'wg_query',
+  'wg_changes',
 ] as const;
 export type ImplementedTool = (typeof IMPLEMENTED_TOOLS)[number];
 const recordKinds = [
@@ -62,7 +64,7 @@ export function status(store: Store, input: unknown): Responses['wg_status'] {
       data: {
         store_schema_version: STORE_SCHEMA_VERSION,
         supported_schema_versions: [1],
-        capabilities: ['ingest', 'evidence', 'query'],
+        capabilities: ['ingest', 'evidence', 'query', 'changes'],
         counts: recordKinds.map((kind) => ({
           kind,
           count: rows.find((r) => r.kind === kind)?.count ?? 0,
@@ -299,6 +301,8 @@ export function dispatch(
   now = Date.now(),
 ) {
   switch (tool) {
+    case 'wg_changes':
+      return changes(store, input);
     case 'wg_status':
       return status(store, input);
     case 'wg_ingest':
