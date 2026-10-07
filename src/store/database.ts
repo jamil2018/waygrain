@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, statSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { open, stat } from 'node:fs/promises';
 import { join } from 'node:path';
@@ -9,6 +9,7 @@ import {
   initialSchema,
   graphMigration,
   visibilityMigration,
+  deletionMigration,
   STORE_SCHEMA_VERSION,
 } from './schema.js';
 
@@ -135,6 +136,7 @@ export class Store {
     readonly db: Database,
     private readonly coordination: Database,
     readonly cursorEpoch: string,
+    readonly maintenance: boolean,
   ) {}
 
   static async open(
@@ -249,6 +251,30 @@ export class Store {
             throw error;
           }
         }
+        if (db.pragma('user_version', { simple: true }) === 3) {
+          if (version === 3) {
+            const backup = join(
+              location.storageDirectory,
+              'pre-migration-v3-' + Date.now() + '.sqlite',
+            );
+            const file = await open(backup, 'wx', 0o600);
+            await file.close();
+            await db.backup(backup);
+            await checkPrivateEntry(backup, false);
+          }
+          db.exec('BEGIN IMMEDIATE');
+          try {
+            db.exec(deletionMigration);
+            db.prepare('INSERT INTO migrations VALUES(4,?)').run(
+              new Date().toISOString(),
+            );
+            integrity(db);
+            db.exec('COMMIT');
+          } catch (error) {
+            db.exec('ROLLBACK');
+            throw error;
+          }
+        }
         if (
           db.pragma('user_version', { simple: true }) !== STORE_SCHEMA_VERSION
         )
@@ -297,7 +323,13 @@ export class Store {
         : '';
       if (cursorEpoch && !/^[a-f0-9-]{36}$/.test(cursorEpoch))
         throw new KnowledgeError('STORE_CORRUPT');
-      return new Store(location, db, coordination, cursorEpoch);
+      return new Store(
+        location,
+        db,
+        coordination,
+        cursorEpoch,
+        mode === 'maintenance',
+      );
     } catch (error) {
       db?.close();
       coordination?.close();
@@ -346,6 +378,38 @@ export class Store {
       const revision = this.advanceRevision();
       return callback(revision);
     });
+  }
+  requireStorageCapacity() {
+    const size = (path: string) => {
+      try {
+        return statSync(path).size;
+      } catch (error) {
+        if (
+          error &&
+          typeof error === 'object' &&
+          'code' in error &&
+          error.code === 'ENOENT'
+        )
+          return 0;
+        throw error;
+      }
+    };
+    const pages = this.db.pragma('page_count', { simple: true }) as number;
+    const pageSize = this.db.pragma('page_size', { simple: true }) as number;
+    const actual =
+      size(this.location.databasePath) +
+      size(this.location.databasePath + '-wal');
+    // Reserve an upper bound for a transaction that dirties every database page.
+    const projected =
+      Math.max(size(this.location.databasePath), pages * pageSize) +
+      size(this.location.databasePath + '-wal') +
+      32 +
+      pages * (pageSize + 24);
+    if (
+      Math.max(actual, projected) >
+      this.location.configuration.storage_limit_bytes
+    )
+      throw new KnowledgeError('STORAGE_LIMIT');
   }
   close() {
     if (this.closed) return;

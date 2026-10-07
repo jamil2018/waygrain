@@ -4,6 +4,7 @@ import { validateRequest, validateResponse } from '../contracts/validation.js';
 import { contracts } from '../contracts/index.js';
 import { requireTraceSlot } from './traces.js';
 import type { TreeNode } from '../contracts/capture.js';
+import { visible } from './summary.js';
 import { Store } from '../store/database.js';
 import {
   KnowledgeError,
@@ -109,6 +110,7 @@ function resolveScreen(
       .get(app.app_id, scopeId, ref.view_key) as Screen | undefined;
   }
   if (screen) {
+    if (!visible(store, screen.id)) throw new KnowledgeError('CONFLICT');
     if (screen.route_template !== request.capture.view.route_template)
       throw new KnowledgeError('INCOMPATIBLE_CAPTURE');
     return screen.id;
@@ -199,9 +201,16 @@ export function ingest(
     if (replay) {
       if (replay.tool !== 'wg_ingest' || replay.digest !== requestDigest)
         throw new KnowledgeError('IDEMPOTENCY_CONFLICT');
-      return validateResponse('wg_ingest', JSON.parse(replay.receipt_json));
+      const result = validateResponse(
+        'wg_ingest',
+        JSON.parse(replay.receipt_json),
+      );
+      if (!visible(store, result.data.capture_id))
+        throw new KnowledgeError('NOT_FOUND');
+      return result;
     }
     store.requireRevision(parsed.expected_store_revision);
+    store.requireStorageCapacity();
     const revision = store.advanceRevision();
     const scopeId = resolveScope(store, app.app_id, capture.scope);
     requireTraceSlot(store, app.app_id, scopeId, capture);
@@ -336,6 +345,7 @@ export function ingest(
         requestDigest,
         canonical(result),
       );
+    store.requireStorageCapacity();
     return result;
   });
 }
