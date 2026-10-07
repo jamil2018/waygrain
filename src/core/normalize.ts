@@ -138,7 +138,11 @@ export function normalizeCapture(input: Capture, app: AppConfiguration) {
   ]) {
     if (!allowed.has(value)) throw new KnowledgeError('INCOMPATIBLE_CAPTURE');
   }
-  if (input.coverage.kind === 'partial' && !allowed.has(input.coverage.subtree))
+  if (
+    input.coverage.kind === 'partial' &&
+    input.coverage.subtree !== 'root' &&
+    !allowed.has(input.coverage.subtree)
+  )
     throw new KnowledgeError('INCOMPATIBLE_CAPTURE');
   const ignored = new Set(profile.ignored_fields);
   // Fields that can change UI meaning cannot be silently removed by a redaction rule.

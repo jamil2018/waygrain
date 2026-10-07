@@ -1,12 +1,19 @@
 import { rm } from 'node:fs/promises';
 import { basename, isAbsolute } from 'node:path';
 import type { Browser, Page } from 'playwright';
+import { randomUUID } from 'node:crypto';
+import { snapshotPage } from './snapshot.js';
+import { BrowserError } from './protocol.js';
 import { openBrowser } from './engine.js';
 import type { WorkerRequest, WorkerReply } from './protocol.js';
 
 let browser: Browser | undefined;
 let page: Page | undefined;
 let stopping = false;
+let app: WorkerRequest['app'];
+let binding: WorkerRequest['page'];
+const trace = randomUUID();
+let sequence = 0;
 let opening: Promise<void> | undefined;
 const temporaryRoot = process.env.TMPDIR ?? '';
 // A direct standalone invocation has no owned IPC/root and must never delete
@@ -68,6 +75,8 @@ async function handle(request: WorkerRequest): Promise<WorkerReply> {
   }
   if (stopping) return { id: request.id, error: 'SESSION_CLOSED' };
   if (request.command === 'open' && request.page && !opening) {
+    app = request.app;
+    binding = request.page;
     opening = openBrowser(request.page, () => {
       void stop();
     }).then((opened) => {
@@ -81,6 +90,17 @@ async function handle(request: WorkerRequest): Promise<WorkerReply> {
       await cleanup();
       return { id: request.id, error: 'BROWSER_UNAVAILABLE' };
     }
+  }
+  if (request.command === 'snapshot') {
+    if (!page || !app || !binding || page.isClosed())
+      throw new BrowserError('SESSION_CLOSED');
+    return {
+      id: request.id,
+      data: {
+        status: 'open',
+        snapshot: await snapshotPage(page, app, binding, trace, ++sequence),
+      },
+    };
   }
   return {
     id: request.id,
@@ -96,11 +116,18 @@ process.on('message', (message: WorkerRequest) => {
     let reply: WorkerReply;
     try {
       reply = await handle(message);
-    } catch {
-      reply = { id: message.id, error: 'BROWSER_UNAVAILABLE' };
+    } catch (error) {
+      reply = {
+        id: message.id,
+        error:
+          error instanceof BrowserError ? error.code : 'BROWSER_UNAVAILABLE',
+      };
     }
     if (process.connected) process.send?.(reply);
-    if (message.command === 'close' || reply.error) {
+    if (
+      message.command === 'close' ||
+      (reply.error && message.command === 'open')
+    ) {
       await stop();
       if (process.connected) process.disconnect();
     }

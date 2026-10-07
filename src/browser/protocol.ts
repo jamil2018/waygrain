@@ -1,9 +1,10 @@
 import type { Responses } from '../contracts/index.js';
-import type { Capture } from '../core/normalize.js';
+import type { AppConfiguration, Capture } from '../core/normalize.js';
 
 export const LIFECYCLE_TOOLS = [
   'wg_browser_open',
   'wg_browser_status',
+  'wg_browser_snapshot',
   'wg_browser_close',
 ] as const;
 export type LifecycleTool = (typeof LIFECYCLE_TOOLS)[number];
@@ -17,13 +18,9 @@ export const capabilities = {
 };
 export class BrowserError extends Error {
   constructor(
-    readonly code:
-      | 'BROWSER_UNAVAILABLE'
-      | 'SESSION_CLOSED'
-      | 'CONFLICT'
-      | 'IDEMPOTENCY_CONFLICT'
-      | 'LIMIT_EXCEEDED'
-      | 'UNKNOWN_SCOPE',
+    readonly code: import('zod').z.output<
+      typeof import('../contracts/common.js').errorCode
+    >,
   ) {
     super(code);
   }
@@ -40,13 +37,18 @@ export class BrowserError extends Error {
 }
 export interface WorkerRequest {
   id: number;
-  command: 'open' | 'status' | 'close';
+  command: 'open' | 'status' | 'close' | 'snapshot';
+  app?: AppConfiguration;
   page?: PageBinding;
 }
 export interface WorkerReply {
   id: number;
-  data?: { status: 'open' | 'closed'; cleanup?: 'complete' | 'unconfirmed' };
-  error?: 'BROWSER_UNAVAILABLE' | 'SESSION_CLOSED';
+  data?: {
+    status: 'open' | 'closed';
+    cleanup?: 'complete' | 'unconfirmed';
+    snapshot?: Responses['wg_browser_snapshot']['data'];
+  };
+  error?: BrowserError['code'];
 }
 // Type-only boundary: raw browser observations may never be sent through IPC.
 export type SanitizedCapture = Capture;
