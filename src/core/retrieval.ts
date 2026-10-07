@@ -5,6 +5,8 @@ import { Store } from '../store/database.js';
 import { validateRequest, validateResponse } from '../contracts/validation.js';
 import { LIMITS, type Responses } from '../contracts/index.js';
 import { digest, KnowledgeError, type Capture } from './normalize.js';
+import { commit } from './commit.js';
+import { graphPayload, type Annotation } from './graph.js';
 import { selectedApp, ingest } from './ingest.js';
 import { STORE_SCHEMA_VERSION } from '../store/schema.js';
 
@@ -12,6 +14,7 @@ export const IMPLEMENTED_TOOLS = [
   'wg_status',
   'wg_ingest',
   'wg_evidence',
+  'wg_commit',
 ] as const;
 export type ImplementedTool = (typeof IMPLEMENTED_TOOLS)[number];
 const recordKinds = [
@@ -119,7 +122,9 @@ export function evidence(
     const missing = ids.filter(
       (id) =>
         !store.db
-          .prepare('SELECT id FROM captures WHERE id=? AND app_id=?')
+          .prepare(
+            "SELECT id FROM records WHERE id=? AND app_id=? AND kind IN ('capture','annotation')",
+          )
           .get(id, request.app_id),
     );
     const envelope = (data: unknown, next?: number) => ({
@@ -153,6 +158,64 @@ export function evidence(
           'SELECT id,screen_id,state_id,request_id,received_at,capture_json FROM captures WHERE id=? AND app_id=?',
         )
         .get(ids[index], request.app_id) as EvidenceRow;
+      if (!row) {
+        const a = graphPayload<Annotation>(store, ids[index]!);
+        const stored = store.db
+          .prepare('SELECT recorded_at FROM graph_records WHERE id=?')
+          .get(ids[index]) as { recorded_at: string };
+        const item =
+          request.projection === 'structured'
+            ? {
+                projection: 'structured_annotation',
+                id: ids[index],
+                ...a,
+                kind: 'annotation',
+                annotation_kind: a.kind,
+              }
+            : {
+                projection: 'summary',
+                id: ids[index],
+                kind: 'annotation',
+                scope: a.scope,
+                source_summary: {
+                  evidence_ids: a.evidence_ids,
+                  provenance: a.provenance,
+                  coverage: {
+                    kind: 'partial',
+                    subtree: 'root',
+                    reason: 'unsupported',
+                  },
+                  freshness: {
+                    observed_at: stored.recorded_at,
+                    last_checked_at: null,
+                    application_version: null,
+                    age_seconds: Math.max(
+                      0,
+                      (now - Date.parse(stored.recorded_at)) / 1000,
+                    ),
+                    scope_match: true,
+                    status: 'unknown',
+                  },
+                },
+              };
+        const next = index + 1;
+        const candidate =
+          next === ids.length
+            ? envelope({ status: 'available', items: [...items, item] })
+            : envelope(
+                {
+                  status: 'incomplete',
+                  items: [...items, item],
+                  missing_ids: [],
+                  reason: 'BUDGET_EXCEEDED',
+                },
+                next,
+              );
+        if (!fits(candidate)) break;
+        items.push(item as (typeof items)[number]);
+        index = next;
+        continue;
+      }
       const capture = JSON.parse(row.capture_json) as Capture;
       const item =
         request.projection === 'structured'
@@ -236,6 +299,8 @@ export function dispatch(
       return status(store, input);
     case 'wg_ingest':
       return ingest(store, input, now);
+    case 'wg_commit':
+      return commit(store, input, now);
     case 'wg_evidence':
       return evidence(store, input, now);
     default:

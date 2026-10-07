@@ -61,7 +61,7 @@ async function main(args: string[]): Promise<void> {
       }) + '\n',
     );
   } else if (
-    (command === 'ingest' || command === 'evidence') &&
+    ['ingest', 'evidence', 'commit'].includes(command!) &&
     args.length === 3
   ) {
     const input = await stdinRequest();
@@ -71,7 +71,11 @@ async function main(args: string[]): Promise<void> {
         JSON.stringify(
           dispatch(
             store,
-            command === 'ingest' ? 'wg_ingest' : 'wg_evidence',
+            command === 'ingest'
+              ? 'wg_ingest'
+              : command === 'commit'
+                ? 'wg_commit'
+                : 'wg_evidence',
             input,
           ),
         ) + '\n',

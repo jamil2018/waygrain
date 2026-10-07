@@ -13,3 +13,5 @@ export { Store } from './store/database.js';
 export { ingest } from './core/ingest.js';
 export { status, evidence, dispatch } from './core/retrieval.js';
 export { KnowledgeError, errorResponse } from './core/normalize.js';
+
+export { commit } from './core/commit.js';
