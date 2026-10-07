@@ -51,3 +51,11 @@ Independently accepted final README.md and tasks/todo.md after coordinator recor
 | --- | --- |
 | `README.md` | `a06e6a5a8784b70176d298c9603f8d366696932cfd5fd9d1cf964598ee3a620e` |
 | `tasks/todo.md` | `716474b1eeb693d670a82d23a41a316a216055c1b114de5eba7842c63afa7823` |
+
+## Later scope clarification register
+
+Independently accepted the later tasks/todo.md authority clarification: this run implements and ships C01 as the first eligible Phase C task under the repository one-task-per-run rule. C02 through C05 remain pending; C02 is next eligible and not started. This replaces the earlier register interpretation of an all-phase override without rewriting its historical acceptance above. Implementation, tests, package, lifecycle guide, protocol harness and final README hashes were recomputed and remain unchanged. The C01 implementation verdict remains PASS. Delivery and current-head CI are separate.
+
+| File | Later SHA-256 |
+| --- | --- |
+| `tasks/todo.md` | `65a462e29c25e8343344d6c1d6d90f67b88f0cf2186cda9b89760f33f8267224` |

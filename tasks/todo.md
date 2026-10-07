@@ -247,10 +247,12 @@ Copy this template when a task starts; replace every placeholder with observed i
 ### C01 — Implement browser session lifecycle
 
 - Status: verified.
-- Authorized scope: user selected Phase C and shipping on 7 October 2026. This overrides the one-task-per-run default for C01–C05 only; each dependency must be verified before the next task starts. Individual PRs will keep browser tasks reviewable. No later phase or package publication.
+- Authorized scope: user asked to start Phase C and ship individually on 7 October 2026. This run implements and ships its first eligible task, C01, under the repository one-task-per-run rule. C02–C05 remain pending; no later phase or package publication.
 - Dependencies: B06 verified and shipped at a08fe16; historical receipt tasks/evidence/b06/review.md remains unchanged.
 - Acceptance: explicit open/status/close owns one headed ephemeral session; manual login works; shutdown and parent-loss cleanup are tested.
 - Artifact: isolated browser engine/worker/controller, three MCP lifecycle tools, runtime shutdown integration, deterministic and explicit headed synthetic tests, protocol harness and lifecycle guide.
 - Verification: writer final Node 26 npm run check PASS (57 tests). Independent final npm run check PASS on Node 24.20.0 and Node 26.5.0 (57 tests each); final Node 24 headed lifecycle/login suite PASS including open/status/replay/conflict/close, signal and killed-parent cleanup, three startup IPC-loss timings, synthetic same-origin form login and fresh-context isolation. Independent final Node 26 active-MCP EOF and startup-loss probes PASS. The historical concurrent cleanup finding was repaired with shared cleanup and truthful exit status.
 - Independent verifier/reviewer: /root/c01_review; PASS with no unresolved Critical/Required findings. Exact hashes and actual evidence are in [tasks/evidence/c01/review.md](evidence/c01/review.md); later final register/README bytes are accepted separately in that receipt. Historical authority and review evidence preserved.
 - Remaining limits: no C02 snapshots, C03 target/navigation or C04 actions/attempts. Human login qualification uses synthetic form-entry simulation only. Real credentials/MFA, host/cross-platform support and complete cleanup after simultaneous worker/owner loss are unverified.
+
+- Next eligible task: C02 — Implement sanitized structured snapshots; not started in this C01 run.
