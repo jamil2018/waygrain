@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -34,7 +34,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 ## Stage C — Bundled browser
 
-- [ ] C01 — Implement browser session lifecycle — pending
+- [x] C01 — Implement browser session lifecycle — verified
 - [ ] C02 — Implement sanitized structured snapshots — pending
 - [ ] C03 — Implement current target resolution and navigation — pending
 - [ ] C04 — Implement bounded browser actions and attempt receipts — pending
@@ -242,3 +242,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: fresh independent /root/b06_checkpoint npm run check PASS on Node 24.21.0 and 26.5.0, 54 tests each; headed fixture matrix PASS, 32 cases. Independent current packed smoke PASS on both runtimes, 46 packed files, with disposable explicit setup. Both-runtime identity/noise/order, app/environment/role separation and unknown-role refusal, partial no-state/evidence, replay/history/rollback, retrieval and private SQLite API backup/DB/WAL seeded-marker absence probes PASS. Exact identities, reproducible checker and artifact-specific archive hashes in evidence/b06/review.md. No Critical/Required findings or unresolved capture checkpoint blockers.
 - Remaining limits: no unresolved Phase B blocker. Phase B does not prove browser mapping/ownership, actions/transitions, recall/change/freshness semantics, full recovery/cap remediation, coding-host or cross-platform support. Backup probe uses the SQLite API and does not attest later backup/restore CLI behavior. Opaque nonidentifying provenance and reviewed operator labels remain prerequisites. Publication remains excluded.
 - Next eligible task: C01 — Implement browser session lifecycle. Not authorized by this Phase B request and not started.
+
+
+### C01 — Implement browser session lifecycle
+
+- Status: verified.
+- Authorized scope: user selected Phase C and shipping on 7 October 2026. This overrides the one-task-per-run default for C01–C05 only; each dependency must be verified before the next task starts. Individual PRs will keep browser tasks reviewable. No later phase or package publication.
+- Dependencies: B06 verified and shipped at a08fe16; historical receipt tasks/evidence/b06/review.md remains unchanged.
+- Acceptance: explicit open/status/close owns one headed ephemeral session; manual login works; shutdown and parent-loss cleanup are tested.
+- Artifact: isolated browser engine/worker/controller, three MCP lifecycle tools, runtime shutdown integration, deterministic and explicit headed synthetic tests, protocol harness and lifecycle guide.
+- Verification: writer final Node 26 npm run check PASS (57 tests). Independent final npm run check PASS on Node 24.20.0 and Node 26.5.0 (57 tests each); final Node 24 headed lifecycle/login suite PASS including open/status/replay/conflict/close, signal and killed-parent cleanup, three startup IPC-loss timings, synthetic same-origin form login and fresh-context isolation. Independent final Node 26 active-MCP EOF and startup-loss probes PASS. The historical concurrent cleanup finding was repaired with shared cleanup and truthful exit status.
+- Independent verifier/reviewer: /root/c01_review; PASS with no unresolved Critical/Required findings. Exact hashes and actual evidence are in [tasks/evidence/c01/review.md](evidence/c01/review.md); later final register/README bytes are accepted separately in that receipt. Historical authority and review evidence preserved.
+- Remaining limits: no C02 snapshots, C03 target/navigation or C04 actions/attempts. Human login qualification uses synthetic form-entry simulation only. Real credentials/MFA, host/cross-platform support and complete cleanup after simultaneous worker/owner loss are unverified.

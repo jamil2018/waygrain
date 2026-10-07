@@ -64,7 +64,14 @@ export async function probeStdio(cli, configPath, exercise) {
     const tools = await request(3, 'tools/list', {});
     assert.deepEqual(
       tools.result.tools.map((t) => t.name),
-      ['wg_status', 'wg_ingest', 'wg_evidence'],
+      [
+        'wg_status',
+        'wg_ingest',
+        'wg_evidence',
+        'wg_browser_open',
+        'wg_browser_status',
+        'wg_browser_close',
+      ],
     );
     const config = JSON.parse(await readFile(configPath, 'utf8'));
     const base = {
