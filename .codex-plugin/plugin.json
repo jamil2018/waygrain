@@ -1,0 +1,12 @@
+{
+  "name": "waygrain",
+  "version": "0.0.0",
+  "description": "Local evidence-backed product knowledge and explicit browser exploration",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Waygrain",
+    "shortDescription": "Remember product journeys with scoped evidence",
+    "category": "Developer Tools"
+  }
+}

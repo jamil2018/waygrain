@@ -24,6 +24,7 @@ import { Store } from './store/database.js';
 import { dispatch } from './core/retrieval.js';
 import { KnowledgeError, errorResponse } from './core/normalize.js';
 import { ContractError } from './contracts/validation.js';
+import { diagnose } from './runtime/diagnostics.js';
 
 async function stdinRequest(): Promise<unknown> {
   const chunks: Buffer[] = [];
@@ -174,6 +175,8 @@ async function main(args: string[]): Promise<void> {
     process.stdout.write(
       JSON.stringify(await restore(configPath, settingsPath, args[6])) + '\n',
     );
+  } else if (args.length === 3 && command === 'doctor') {
+    process.stdout.write(JSON.stringify(await diagnose(configPath)) + '\n');
   } else if (args.length === 3 && command === 'serve') {
     await serve(configPath);
   } else if (args.length === 3 && command === 'install-browser') {
@@ -189,7 +192,12 @@ async function main(args: string[]): Promise<void> {
 }
 
 try {
-  await main(process.argv.slice(2));
+  const args = process.argv.slice(2);
+  await main(
+    args.length === 1 && args[0] === 'serve-env'
+      ? ['serve', '--config', process.env.WAYGRAIN_CONFIG ?? '']
+      : args,
+  );
 } catch (error) {
   // No raw filesystem errors, settings content or caller arguments in diagnostics.
   process.stderr.write(

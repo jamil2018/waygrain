@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "node": "v24.20.0",
+  "checks": [
+    "initialized_doctor_no_graph_or_configuration_mutation",
+    "no_host_path_output",
+    "absent_browser_report",
+    "env_fail_closed",
+    "invalid_config_no_contents_output"
+  ]
+}

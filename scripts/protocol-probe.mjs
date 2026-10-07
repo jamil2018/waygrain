@@ -5,11 +5,11 @@ import { createInterface } from 'node:readline';
 import process from 'node:process';
 import { readFile } from 'node:fs/promises';
 
-export async function probeStdio(cli, configPath, exercise) {
+export async function probeStdio(cli, configPath, exercise, launch = {}) {
   const child = spawn(
     process.execPath,
-    [cli, 'serve', '--config', configPath],
-    { stdio: ['pipe', 'pipe', 'pipe'] },
+    [cli, ...(launch.args ?? ['serve', '--config', configPath])],
+    { stdio: ['pipe', 'pipe', 'pipe'], env: launch.env },
   );
   let diagnostics = '';
   child.stderr.on('data', (chunk) => {
