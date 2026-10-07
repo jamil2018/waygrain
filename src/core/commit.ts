@@ -4,6 +4,7 @@ import { contracts } from '../contracts/index.js';
 import { validateRequest, validateResponse } from '../contracts/validation.js';
 import { Store } from '../store/database.js';
 import { canonical, digest, KnowledgeError } from './normalize.js';
+import { traceOperation } from './traces.js';
 import { selectedApp } from './ingest.js';
 import {
   graphPayload,
@@ -29,7 +30,12 @@ export function commit(store: Store, input: unknown, now = Date.now()) {
         op.annotation.rationale = safeProse(app, op.annotation.rationale);
     } else if (op.op === 'alias_identity')
       op.rationale = safeProse(app, op.rationale);
-    else throw new KnowledgeError('INVALID_INPUT');
+    else if (op.op === 'create_action')
+      op.preconditions = op.preconditions.map((p) => safeProse(app, p));
+    else if (op.op === 'create_transition')
+      op.guards = op.guards.map((p) => safeProse(app, p));
+    else if (op.op !== 'record_action_event')
+      throw new KnowledgeError('INVALID_INPUT');
   }
   const requestDigest = digest(request);
   return store.transaction(() => {
@@ -139,7 +145,7 @@ export function commit(store: Store, input: unknown, now = Date.now()) {
             canonical(op.evidence_ids),
             revision,
           );
-      } else throw new KnowledgeError('INVALID_INPUT');
+      } else id = traceOperation(store, app, op, resolve, revision, now);
       created.push(id);
       if (op.client_ref) refs.set(op.client_ref, id);
     }

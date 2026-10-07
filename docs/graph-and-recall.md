@@ -1,6 +1,6 @@
 # Evidence graph and recall
 
-D01 adds `wg_commit` through core, stdio MCP and `waygrain commit --config /absolute/config.json` (JSON request on stdin). It currently accepts annotations, supersession and explicit identity aliases. Other operation kinds remain rejected until their assigned task.
+D01 adds `wg_commit` through core, stdio MCP and `waygrain commit --config /absolute/config.json` (JSON request on stdin). It accepts annotations, supersession, explicit identity aliases, actions, action events and observed transitions. Flows and test-run operations remain rejected until D03.
 
 Commits require the current store revision. A batch is atomic; successful writes advance once. Request keys share the existing receipt namespace. Identical sanitized replay returns its original receipt even after a later write; changed payloads conflict. Request-local references resolve earlier operations only; missing/forward references reject the entire batch.
 
@@ -11,3 +11,5 @@ Observed annotations require direct capture support for their target. Inferred a
 Aliases are audited same-kind, same-app, same-scope links with capture evidence covering both endpoints. Both histories remain intact; self-links, cycles and a second alias for one source fail. Ingestion and stored flows do not silently retarget aliases.
 
 Store schema v2 preserves v1 IDs, revisions, evidence and receipts. Migration requires exclusive coordination authority, takes a private consistent backup of an existing v1 store, rebuilds the record-kind constraint transactionally and checks integrity/foreign keys before commit. The historical v1 schema is unchanged. Migration tests use an actual v1 database; later recovery gates remain separate.
+
+D02 validates a before/action/after trace atomically. An action belongs to its source state and optional source control. Events require identical app, scope, session, tab and trace, strictly increasing sequence numbers, ordered timestamps, and complete capture endpoints. Capture and event sequences share a collision check in both write paths. Successful events require an after capture; failed/cancelled/timeout attempts can retain a null after ID but cannot establish a transition. Transitions must match the exact event, endpoint captures, states, action and outcome. Guards are reviewed safe phrases, never executed. Application effects and graph writes remain separate; an accepted report is a caller attestation.

@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -43,7 +43,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 ## Stage D — Evidence graph and recall
 
 - [x] D01 — Implement guarded annotations and identity reconciliation — verified
-- [ ] D02 — Implement actions, events, and observed transitions — pending
+- [x] D02 — Implement actions, events, and observed transitions — verified
 - [ ] D03 — Implement flows and test-run evidence — pending
 - [ ] D04 — Implement lexical search and neighbors — pending
 - [ ] D05 — Implement path and flow retrieval — pending
@@ -317,3 +317,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer Node26 npm run check PASS (66 tests), including actual v1 migration and CLI/MCP replay. Independent Node24.20.0 and Node26.5.0 checks PASS (66 tests each); own privacy/provenance/cursor/revision/migration refusal and rollback probes PASS on both.
 - Independent verifier/reviewer: /root/d_review; PASS, no unresolved Critical/Required findings. Exact hashes, commands and limits in [review.md](evidence/d01/review.md). Final verified register bytes accepted separately.
 - Remaining limits: arbitrary prose is refused unless explicitly reviewed in configuration labels. Partial evidence supports only annotations on that capture. Local references require earlier operations. Claims remain caller-attested. Later graph/recall/recovery tasks and coding-host/cross-platform qualification remain separate.
+
+
+### D02 — Implement actions, events, and observed transitions
+
+- Status: verified.
+- Authorized scope: all Phase D tasks and shipping selected on 7 October 2026.
+- Dependencies: D01 verified at a2bd25f, PR15 submitted; source-artifact review preserved.
+- Acceptance: complete ordered before/action/after traces succeed; scope/session/tab/trace/sequence/time mismatch, incomplete endpoints, unrelated visits and source-control mismatch reject atomically.
+- Artifact: typed action/event/transition services, capture/event sequence collision checks, typed relations, reviewed guards/preconditions and synthetic trace matrix.
+- Verification: writer final Node26 npm run check PASS (69 tests). Independent final Node24.20.0/Node26.5.0 checks PASS (69 each), plus own both-runtime trace integrity, source-control, sequence, atomicity, guard privacy and graph-support probes.
+- Independent verifier/reviewer: /root/d_review; PASS, no unresolved Critical/Required findings. Exact identities and limitations in [review.md](evidence/d02/review.md); final verified register accepted separately.
+- Remaining limits: caller-attested reports; no application rollback, arbitrary input values, executable graph controls, flows or test-verification claim.
