@@ -37,7 +37,8 @@
     "test:fixtures": "node tests/browser/fixtures.mjs",
     "test:browser:lifecycle": "npm run build && node tests/browser/lifecycle.mjs && node tests/browser/login.mjs",
     "test:browser:snapshots": "npm run build && node tests/browser/snapshots.mjs",
-    "test:browser:navigation": "npm run build && node tests/browser/navigation.mjs"
+    "test:browser:navigation": "npm run build && node tests/browser/navigation.mjs",
+    "test:browser:actions": "npm run build && node tests/browser/actions.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.3.1",

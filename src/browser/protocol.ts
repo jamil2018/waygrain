@@ -6,6 +6,7 @@ export const LIFECYCLE_TOOLS = [
   'wg_browser_status',
   'wg_browser_snapshot',
   'wg_browser_navigate',
+  'wg_browser_act',
   'wg_browser_close',
 ] as const;
 export type LifecycleTool = (typeof LIFECYCLE_TOOLS)[number];
@@ -14,8 +15,12 @@ export const capabilities = {
   ownership: 'ephemeral_owned' as const,
   headed: true as const,
   persistent_authentication: false as const,
-  actions: [],
-  navigation_keys: [],
+  actions: ['click', 'fill', 'select', 'check', 'uncheck', 'scroll', 'key'] as (
+    'click' | 'fill' | 'select' | 'check' | 'uncheck' | 'scroll' | 'key'
+  )[],
+  navigation_keys: ['Tab', 'Shift+Tab', 'ArrowUp', 'ArrowDown', 'Escape'] as (
+    'Tab' | 'Shift+Tab' | 'ArrowUp' | 'ArrowDown' | 'Escape'
+  )[],
 };
 export class BrowserError extends Error {
   constructor(
@@ -39,7 +44,16 @@ export class BrowserError extends Error {
 export interface WorkerRequest {
   id: number;
   command:
-    'open' | 'status' | 'close' | 'snapshot' | 'prepare_navigate' | 'navigate';
+    | 'open'
+    | 'status'
+    | 'close'
+    | 'snapshot'
+    | 'prepare_navigate'
+    | 'navigate'
+    | 'prepare_act'
+    | 'act'
+    | 'cancel';
+  action?: Requests['wg_browser_act'];
   navigation?: Requests['wg_browser_navigate'];
   execution_id?: string;
   app?: AppConfiguration;

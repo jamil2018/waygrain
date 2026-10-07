@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -37,7 +37,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] C01 — Implement browser session lifecycle — verified
 - [x] C02 — Implement sanitized structured snapshots — verified
 - [x] C03 — Implement current target resolution and navigation — verified
-- [ ] C04 — Implement bounded browser actions and attempt receipts — pending
+- [x] C04 — Implement bounded browser actions and attempt receipts — verified
 - [ ] C05 — Browser checkpoint — pending
 
 ## Stage D — Evidence graph and recall
@@ -280,3 +280,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer final npm run check PASS Node26.5.0 (60 tests); headed navigation/target/redirect harness PASS. Independent final quality checks PASS Node24.20.0 and Node26.5.0 (60 tests each), headed navigation PASS on both; Node26 lifecycle/login regression PASS. Independent redirected navigation/image/fetch/worker-fetch tests saw zero forbidden-origin requests after repair; durable pending markers reopen as unknown with nondispatching replay.
 - Independent verifier/reviewer: /root/c03_review; PASS, no unresolved Critical/Required findings. Historical redirect failure, repaired exact artifact hashes and limits in [review.md](evidence/c03/review.md); final register/README accepted separately.
 - Remaining limits: no C04 actions. Initial navigation from blank is human-owned; snapshots and scope aliases describe observations/operator context, not backend authorization. No host/platform claim.
+
+
+### C04 — Implement bounded browser actions and attempt receipts
+
+- Status: verified.
+- Authorized scope: remaining Phase C batch and continued shipping, 7 October 2026.
+- Dependencies: C03 verified and shipped PR12 at 693958b; historical evidence preserved.
+- Acceptance: seven supported actions against current targets; credentials fail closed; duplicate/interrupted execution cannot silently replay.
+- Artifact: worker-local action policy/dispatch, safe option mapping, capability reporting, durable journal integration, close/MCP cancellation and synthetic action matrix.
+- Verification: final writer Node26 npm run check PASS (61 tests); headed actions and lifecycle PASS. Independent final quality PASS Node24.20.0/26.5.0 (61 each); Node24 action matrix with credential/option/mid-dispatch interruption regressions PASS; Node26 navigation/lifecycle PASS. Independent label/autocomplete/value/replacement/disabled-group probes and both-runtime synthetic controller before-dispatch marker, scoped close, cancellation, replay and value-absence probes PASS.
+- Independent verifier/reviewer: /root/c01_review (C04 assignment); PASS, no unresolved Critical/Required findings. All five historical Required findings repaired; exact hashes/results/limits in [review.md](evidence/c04/review.md). Final register/README accepted separately.
+- Remaining limits: no application rollback/business guarantee, graph transitions, coding-host or cross-platform claim. Unknown outcomes require inspection and separate authorization for a new execution.

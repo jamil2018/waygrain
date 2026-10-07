@@ -34,13 +34,14 @@ export function knowledgeServer(
         readOnlyHint:
           name === 'wg_status' ||
           name === 'wg_evidence' ||
-          name === 'wg_browser_status',
-        destructiveHint: false,
+          name === 'wg_browser_status' ||
+          name === 'wg_browser_snapshot',
+        destructiveHint: name === 'wg_browser_act',
         openWorldHint: name.startsWith('wg_browser_'),
       },
     })),
   }));
-  server.server.setRequestHandler('tools/call', async (request) => {
+  server.server.setRequestHandler('tools/call', async (request, extra) => {
     let result;
     try {
       if (
@@ -55,6 +56,7 @@ export function knowledgeServer(
         ? await browser.dispatch(
             request.params.name as LifecycleTool,
             request.params.arguments,
+            extra.mcpReq.signal,
           )
         : dispatch(
             store,

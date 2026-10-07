@@ -31,6 +31,8 @@ export class BrowserSession {
   private sequence = 0;
   private queue = Promise.resolve();
   private stopping = false;
+  private activeExecution: string | undefined;
+  private closingRequested = false;
   private disposed = false;
   private disposal: Promise<void> | undefined;
   private cleanup: 'complete' | 'unconfirmed' = 'complete';
@@ -143,17 +145,48 @@ export class BrowserSession {
   dispatch<K extends LifecycleTool>(
     tool: K,
     input: unknown,
+    signal?: AbortSignal,
   ): Promise<Responses[K]> {
+    if (tool === 'wg_browser_close') {
+      try {
+        const q = validateRequest('wg_browser_close', input);
+        const app = selectedApp(this.store, q);
+        if (
+          this.child?.connected &&
+          this.ownerApp === app.app_id &&
+          q.session_id === this.page?.session_id
+        ) {
+          this.closingRequested = true;
+          if (this.activeExecution)
+            this.child.send(
+              { id: ++this.sequence, command: 'cancel' },
+              () => undefined,
+            );
+        }
+      } catch (error) {
+        return Promise.reject(error);
+      }
+    }
     // Serialize all lifecycle mutations so concurrent open/close cannot orphan resources.
-    const run = this.queue.then(() => this.handle(tool, input));
+    const run = this.queue.then(() => this.handle(tool, input, signal));
     this.queue = run.then(
       () => undefined,
       () => undefined,
     );
     return run as Promise<Responses[K]>;
   }
-  private async handle(tool: LifecycleTool, input: unknown) {
+  private async handle(
+    tool: LifecycleTool,
+    input: unknown,
+    signal?: AbortSignal,
+  ) {
     if (this.disposed) throw new BrowserError('SESSION_CLOSED');
+    if (
+      signal?.aborted ||
+      (this.closingRequested &&
+        !['wg_browser_close', 'wg_browser_status'].includes(tool))
+    )
+      throw new BrowserError('ACTION_CANCELLED');
     const request = validateRequest(tool, input);
     const app = selectedApp(this.store, request);
     const envelope = (data: unknown) =>
@@ -202,6 +235,60 @@ export class BrowserSession {
       this.opens.set(replayKey, { scope: canonical(scope), page });
       return envelope({ status: 'open', page, capabilities });
     }
+    if (tool === 'wg_browser_act') {
+      const q = validateRequest('wg_browser_act', input);
+      const action = q.action;
+      const metadata =
+        action.kind === 'fill'
+          ? {
+              kind: action.kind,
+              session_id: action.session_id,
+              page_id: action.page_id,
+              snapshot_id: action.snapshot_id,
+              target_id: action.target_id,
+            }
+          : action;
+      const journal = new AttemptJournal(this.store, app.app_id);
+      const replay = journal.replay(q.execution_id, tool, metadata);
+      if (replay) return envelope(replay);
+      if (
+        !this.child?.connected ||
+        this.stopping ||
+        this.ownerApp !== app.app_id
+      )
+        throw new BrowserError('SESSION_CLOSED');
+      const pending = (
+        await this.rpc('prepare_act', undefined, undefined, { action: q })
+      ).receipt;
+      if (!pending) throw new BrowserError('BROWSER_UNAVAILABLE');
+      if (signal?.aborted || this.closingRequested)
+        throw new BrowserError('ACTION_CANCELLED');
+      journal.reserve(q.request_id, tool, metadata, pending);
+      this.activeExecution = q.execution_id;
+      const cancel = () => this.cancel(q.execution_id);
+      signal?.addEventListener('abort', cancel, { once: true });
+      let final;
+      try {
+        final = (
+          await this.rpc('act', undefined, undefined, {
+            execution_id: q.execution_id,
+          })
+        ).receipt;
+      } catch {
+        final = {
+          ...pending,
+          state: 'unknown' as const,
+          dispatch: 'uncertain' as const,
+          error_code: 'UNKNOWN_OUTCOME' as const,
+        };
+      } finally {
+        this.activeExecution = undefined;
+        signal?.removeEventListener('abort', cancel);
+      }
+      if (!final) throw new BrowserError('UNKNOWN_OUTCOME');
+      journal.finish(q.request_id, final);
+      return envelope(final);
+    }
     if (tool === 'wg_browser_navigate') {
       const q = validateRequest('wg_browser_navigate', input);
       const metadata = {
@@ -226,7 +313,12 @@ export class BrowserSession {
         })
       ).receipt;
       if (!pending) throw new BrowserError('BROWSER_UNAVAILABLE');
+      if (signal?.aborted || this.closingRequested)
+        throw new BrowserError('ACTION_CANCELLED');
       journal.reserve(q.request_id, tool, metadata, pending);
+      this.activeExecution = q.execution_id;
+      const cancel = () => this.cancel(q.execution_id);
+      signal?.addEventListener('abort', cancel, { once: true });
       let final;
       try {
         final = (
@@ -242,6 +334,8 @@ export class BrowserSession {
           error_code: 'UNKNOWN_OUTCOME' as const,
         };
       }
+      this.activeExecution = undefined;
+      signal?.removeEventListener('abort', cancel);
       if (!final) throw new BrowserError('UNKNOWN_OUTCOME');
       journal.finish(q.request_id, final);
       return envelope(final);
@@ -301,6 +395,13 @@ export class BrowserSession {
       cleanup: this.cleanup,
     });
   }
+  cancel(execution: string) {
+    if (this.activeExecution === execution && this.child?.connected)
+      this.child.send(
+        { id: ++this.sequence, command: 'cancel' },
+        () => undefined,
+      );
+  }
   private ownerApp?: string;
   dispose(): Promise<void> {
     this.disposed = true;
@@ -315,17 +416,30 @@ export class BrowserSession {
     } catch {
       this.cleanup = 'unconfirmed';
     }
-    // Reopen only after confirmed worker exit. Never signal a persisted PID.
+    // Wait only on this live owned child; bounded exit confirmation is not PID authority.
     const child = this.child;
-    if (child && this.cleanup === 'complete') {
+    if (child && (this.cleanup === 'complete' || !child.connected)) {
       await new Promise<void>((resolve) => {
-        if (child.exitCode !== null) resolve();
-        else child.once('exit', () => resolve());
+        if (child.exitCode !== null || child.signalCode !== null) {
+          resolve();
+          return;
+        }
+        const exited = () => {
+          clearTimeout(timer);
+          resolve();
+        };
+        const timer = setTimeout(() => {
+          child.removeListener('exit', exited);
+          this.cleanup = 'unconfirmed';
+          resolve();
+        }, 5000);
+        child.once('exit', exited);
       });
     }
     if (!this.child && this.cleanup === 'complete') {
       if (this.root) await rm(this.root, { recursive: true, force: true });
       this.stopping = false;
+      this.closingRequested = false;
     }
   }
 }
