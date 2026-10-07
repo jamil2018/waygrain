@@ -73,3 +73,39 @@ test('revision comparisons are bounded, cursor-bound and read only', async (t) =
     { code: 'BUDGET_EXCEEDED' },
   );
 });
+
+test('feature variant changes never become observed application outcomes', async (t) => {
+  const f = await storageFixture(t);
+  const before = f.request();
+  before.capture.view.feature_variants = [
+    { name: 'members', variant: 'active' },
+  ];
+  const a = ingest(f.store, before, fixtureNow).data;
+  const after = f.request();
+  after.capture.view.feature_variants = [
+    { name: 'members', variant: 'pending' },
+  ];
+  const b = ingest(f.store, after, fixtureNow).data;
+  const q = {
+    ...f.base,
+    mode: 'captures',
+    before_capture_id: a.capture_id,
+    after_capture_id: b.capture_id,
+  };
+  assert.deepEqual(changes(f.store, q).data, {
+    status: 'incomparable',
+    reason: 'coverage',
+    evidence_ids: [a.capture_id, b.capture_id],
+    changes: [],
+  });
+  assert.equal(
+    changes(f.store, {
+      ...f.base,
+      mode: 'revisions',
+      scope: before.capture.scope,
+      from_revision: 1,
+      to_revision: 2,
+    }).data.status,
+    'incomparable',
+  );
+});
