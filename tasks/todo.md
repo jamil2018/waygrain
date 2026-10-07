@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -47,7 +47,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] D03 — Implement flows and test-run evidence — verified
 - [x] D04 — Implement lexical search and neighbors — verified
 - [x] D05 — Implement path and flow retrieval — verified
-- [ ] D06 — Recall checkpoint — pending
+- [x] D06 — Recall checkpoint — verified
 
 ## Stage E — Changes and recovery
 
@@ -365,3 +365,18 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer final Node26 check PASS (83 tests). Independent final Node24.20.0/Node26.5.0 checks PASS (83 each); both-runtime two-edge/shortcut shortest BFS, directed conditional guards/preconditions, depth/visit/no-path distinction, exact flow array, hidden dependency fallback, pagination and stale-cursor probes PASS.
 - Independent verifier/reviewer: /root/d_review; PASS, no unresolved Critical/Required findings. Exact identities/results/limits in [review.md](evidence/d05/review.md); final verified register accepted separately.
 - Remaining limits: declarative evidence only; no executable path/guard evaluation, application action or browser refresh. Phase E and host/cross-platform/public release remain unselected.
+
+
+### D06 — Recall checkpoint
+
+- Status: verified.
+- Authorized scope: complete Phase D and shipping selected on 7 October 2026. Read-only acceptance/recording; no Phase E or package publication.
+- Dependencies: D01–D05 independently verified with distinct historical receipts; final implementation at 882de1b. All implementation tasks shipped PR15–PR19, main at f4db1d2 before this checkpoint.
+- Acceptance: fresh independent final-artifact review verifies trace integrity, provenance, conditional paths and bounded queries.
+- Artifact: unchanged final D05 implementation plus checkpoint evidence and final documentation identities recorded separately.
+- Verification: fresh /root/d_checkpoint final npm run check PASS on Node24.20.0 and Node26.5.0 (83 tests each). Both-runtime actual headed sanitized snapshot→ingest→durable marker before one click→after ingest→targeted graph/test commit→closed browser/store→fresh CLI/MCP recall PASS. Own 510-edge cutoff, populated v2→v3 migration, tombstone/cursor/prose privacy probes PASS on both. Clean packed consumers PASS on both (76 files each), including explicit disposable browser installation, headed SQLite smoke and installed-package actual browser/graph/fresh-process recall. Runtime manifests match built bytes. Strict whole-envelope budget assertion repaired after separate harness review; affected source and clean installed checks rerun PASS on both.
+- Independent verifier/reviewer: fresh /root/d_checkpoint; PASS, no unresolved Critical/Required production findings. /root/d_review independently reviewed verifier harnesses and final artifact and identified the strict-budget evidence weakness; /root/d_checkpoint repaired the harness and reran all four affected checks. Exact source/generated-schema/runtime/archive identities, actual commands, repair history and limits in [review.md](evidence/d06/review.md) and [artifact-review.md](evidence/d06/artifact-review.md); final documentation identities accepted separately.
+- Remaining limits: caller-attested reports; local macOS arm64 only. C05 actual coding-host/full MCP browser/cancellation and simultaneous hard-loss cleanup limitations remain. Later freshness/recovery/host/pilot/release evaluation gates remain unselected.
+
+- Phase D result: D01–D06 verified; this checkpoint completes the selected phase. No Phase E task or public package release started.
+- Next eligible task: E01 — Implement capture and revision comparisons; unselected and not started.
