@@ -70,6 +70,7 @@ export async function probeStdio(cli, configPath, exercise) {
         'wg_evidence',
         'wg_browser_open',
         'wg_browser_status',
+        'wg_browser_snapshot',
         'wg_browser_close',
       ],
     );

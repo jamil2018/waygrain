@@ -43,7 +43,11 @@ export class BrowserSession {
   >();
   constructor(private readonly store: Store) {}
 
-  private async rpc(command: WorkerRequest['command'], page?: PageBinding) {
+  private async rpc(
+    command: WorkerRequest['command'],
+    page?: PageBinding,
+    app?: WorkerRequest['app'],
+  ) {
     const child = this.child;
     if (!child?.connected) throw new BrowserError('SESSION_CLOSED');
     const id = ++this.sequence;
@@ -65,13 +69,16 @@ export class BrowserSession {
         reject,
         timer,
       });
-      child.send({ id, command, ...(page ? { page } : {}) }, (error) => {
-        if (error) {
-          clearTimeout(timer);
-          this.pending.delete(id);
-          reject(new BrowserError('BROWSER_UNAVAILABLE'));
-        }
-      });
+      child.send(
+        { id, command, ...(page ? { page } : {}), ...(app ? { app } : {}) },
+        (error) => {
+          if (error) {
+            clearTimeout(timer);
+            this.pending.delete(id);
+            reject(new BrowserError('BROWSER_UNAVAILABLE'));
+          }
+        },
+      );
     });
   }
   private async start(page: PageBinding) {
@@ -114,7 +121,13 @@ export class BrowserSession {
       }
       this.pending.clear();
     });
-    const result = await this.rpc('open', page);
+    const result = await this.rpc(
+      'open',
+      page,
+      this.store.location.configuration.apps.find(
+        (a) => a.app_id === this.ownerApp,
+      ),
+    );
     if (result.status !== 'open') throw new BrowserError('BROWSER_UNAVAILABLE');
     this.page = page;
   }
@@ -179,6 +192,20 @@ export class BrowserSession {
       await this.start(page);
       this.opens.set(replayKey, { scope: canonical(scope), page });
       return envelope({ status: 'open', page, capabilities });
+    }
+    if (tool === 'wg_browser_snapshot') {
+      const q = validateRequest('wg_browser_snapshot', input);
+      if (
+        !this.child?.connected ||
+        this.stopping ||
+        q.session_id !== this.page?.session_id ||
+        q.page_id !== this.page.page_id ||
+        this.ownerApp !== app.app_id
+      )
+        throw new BrowserError('SESSION_CLOSED');
+      const result = await this.rpc('snapshot');
+      if (!result.snapshot) throw new BrowserError('BROWSER_UNAVAILABLE');
+      return envelope(result.snapshot);
     }
     if (tool === 'wg_browser_status') {
       const q = validateRequest('wg_browser_status', input);

@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -35,7 +35,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 ## Stage C — Bundled browser
 
 - [x] C01 — Implement browser session lifecycle — verified
-- [ ] C02 — Implement sanitized structured snapshots — pending
+- [x] C02 — Implement sanitized structured snapshots — verified
 - [ ] C03 — Implement current target resolution and navigation — pending
 - [ ] C04 — Implement bounded browser actions and attempt receipts — pending
 - [ ] C05 — Browser checkpoint — pending
@@ -256,3 +256,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Remaining limits: no C02 snapshots, C03 target/navigation or C04 actions/attempts. Human login qualification uses synthetic form-entry simulation only. Real credentials/MFA, host/cross-platform support and complete cleanup after simultaneous worker/owner loss are unverified.
 
 - Next eligible task: C02 — Implement sanitized structured snapshots; not started in this C01 run.
+
+
+### C02 — Implement sanitized structured snapshots
+
+- Status: verified.
+- Authorized scope: user explicitly requested continuation until all Phase C tasks are done and continued shipping, overriding one-task-per-run for C02–C05. No later phases or package publication.
+- Dependencies: C01 verified and shipped in PR10, f72f58d; historical exact-artifact review preserved.
+- Acceptance: public Playwright JSON snapshots map to ingest schema; raw observations remain worker-local; unsupported coverage explicit.
+- Artifact: worker-local public JSON mapper, scoped route projection, snapshot MCP integration, root partial coverage ingestion, synthetic deterministic/live checks and guide.
+- Verification: final writer npm run check PASS Node26.5.0 (59 tests). Independent final npm run check PASS Node24.20.0 and Node26.5.0 (59 tests each); final headed public JSON/redaction/ingestion/modal/unsupported editing harness PASS, plus independent same-URL navigation and newly appearing editing-host probes.
+- Independent verifier/reviewer: /root/c02_review; PASS, no unresolved Critical/Required findings. Exact artifact hashes, historical findings/repairs and limitations in [review.md](evidence/c02/review.md); final register/README bytes accepted separately.
+- Remaining limits: no executable target resolution/navigation/actions; frames and unsupported state yield partial captures. One reviewed profile required; aliases remain operator-declared. No host/cross-platform or backend authorization claim.

@@ -35,7 +35,8 @@
     "prepack": "npm run build",
     "smoke:packed": "node scripts/smoke-packed.mjs",
     "test:fixtures": "node tests/browser/fixtures.mjs",
-    "test:browser:lifecycle": "npm run build && node tests/browser/lifecycle.mjs && node tests/browser/login.mjs"
+    "test:browser:lifecycle": "npm run build && node tests/browser/lifecycle.mjs && node tests/browser/login.mjs",
+    "test:browser:snapshots": "npm run build && node tests/browser/snapshots.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.3.1",
