@@ -74,6 +74,34 @@ export class BrowserDriver {
     this.snapshotGeneration = generation;
     return current;
   }
+  receipt(
+    execution: string,
+    snapshot: string,
+    kind: Receipt['action_kind'],
+    target: string | null,
+  ): Receipt {
+    return {
+      execution_id: execution,
+      session_id: this.binding.session_id,
+      page_id: this.binding.page_id,
+      snapshot_id: snapshot,
+      target_id: target,
+      trace_id: this.trace,
+      trace_seq: ++this.sequence,
+      action_kind: kind,
+      occurred_at: new Date().toISOString(),
+      after_snapshot_id: null,
+      state: 'pending',
+      dispatch: 'not_dispatched',
+      error_code: null,
+    };
+  }
+  cached(target: string) {
+    return this.handles.get(target) ?? null;
+  }
+  consume() {
+    this.latest = undefined;
+  }
   async invalidate() {
     const unique = new Set(this.handles.values());
     this.handles.clear();

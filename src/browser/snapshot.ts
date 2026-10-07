@@ -161,13 +161,18 @@ export function mapSnapshot(
     if (role === 'tab' && node.selected) stateAlias(name, tabs);
     if (role === 'dialog') stateAlias(name, modals);
     // Text/children of editable controls may be their input value. They are never read into the safe tree.
-    if (!['textbox', 'combobox', 'spinbutton', 'slider'].includes(role)) {
-      if (v.text !== undefined && role !== 'text') {
+    if (!['textbox', 'spinbutton', 'slider'].includes(role)) {
+      if (v.text !== undefined && role !== 'text' && role !== 'combobox') {
         const child = visit(v.text, depth + 1);
         if (child) node.children.push(child);
       }
       if (Array.isArray(v.children))
         for (const child of v.children) {
+          if (
+            role === 'combobox' &&
+            (!child || typeof child !== 'object' || child.role !== 'option')
+          )
+            continue;
           const mapped = visit(child, depth + 1);
           if (mapped) node.children.push(mapped);
           if (truncated) break;

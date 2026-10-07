@@ -1,6 +1,7 @@
 import { rm } from 'node:fs/promises';
 import { basename, isAbsolute } from 'node:path';
 import type { Browser, Page } from 'playwright';
+import { BrowserActions } from './actions.js';
 import { BrowserDriver } from './driver.js';
 import { BrowserError } from './protocol.js';
 import { openBrowser } from './engine.js';
@@ -12,6 +13,7 @@ let stopping = false;
 let app: WorkerRequest['app'];
 let binding: WorkerRequest['page'];
 let driver: BrowserDriver | undefined;
+let actions: BrowserActions | undefined;
 let opening: Promise<void> | undefined;
 const temporaryRoot = process.env.TMPDIR ?? '';
 // A direct standalone invocation has no owned IPC/root and must never delete
@@ -80,7 +82,10 @@ async function handle(request: WorkerRequest): Promise<WorkerReply> {
     }).then((opened) => {
       browser = opened.browser;
       page = opened.page;
-      if (app && binding) driver = new BrowserDriver(page, app, binding);
+      if (app && binding) {
+        driver = new BrowserDriver(page, app, binding);
+        actions = new BrowserActions(driver);
+      }
     });
     try {
       await opening;
@@ -93,14 +98,23 @@ async function handle(request: WorkerRequest): Promise<WorkerReply> {
   if (request.command === 'snapshot') {
     if (!page || !app || !binding || page.isClosed())
       throw new BrowserError('SESSION_CLOSED');
+    const snapshot = await driver!.snapshot();
+    await actions!.decorate(snapshot);
+    return { id: request.id, data: { status: 'open', snapshot } };
+  }
+  if (request.command === 'prepare_act' && request.action && actions)
+    return {
+      id: request.id,
+      data: { status: 'open', receipt: await actions.prepare(request.action) },
+    };
+  if (request.command === 'act' && request.execution_id && actions)
     return {
       id: request.id,
       data: {
         status: 'open',
-        snapshot: await driver!.snapshot(),
+        receipt: await actions.act(request.execution_id),
       },
     };
-  }
   if (request.command === 'prepare_navigate' && request.navigation && driver)
     return {
       id: request.id,
@@ -127,6 +141,10 @@ async function handle(request: WorkerRequest): Promise<WorkerReply> {
 }
 let queue = Promise.resolve();
 process.on('message', (message: WorkerRequest) => {
+  if (message.command === 'cancel') {
+    void stop();
+    return;
+  }
   queue = queue.then(async () => {
     let reply: WorkerReply;
     try {
