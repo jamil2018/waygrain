@@ -34,6 +34,7 @@ export function knowledgeServer(
         readOnlyHint:
           name === 'wg_status' ||
           name === 'wg_evidence' ||
+          name === 'wg_query' ||
           name === 'wg_browser_status' ||
           name === 'wg_browser_snapshot',
         destructiveHint: name === 'wg_browser_act',

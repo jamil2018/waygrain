@@ -69,6 +69,7 @@ export async function probeStdio(cli, configPath, exercise) {
         'wg_ingest',
         'wg_evidence',
         'wg_commit',
+        'wg_query',
         'wg_browser_open',
         'wg_browser_status',
         'wg_browser_snapshot',
@@ -91,6 +92,7 @@ export async function probeStdio(cli, configPath, exercise) {
     assert.deepEqual(status.result.structuredContent.data.capabilities, [
       'ingest',
       'evidence',
+      'query',
     ]);
     const rejected = await request(5, 'tools/call', {
       name: 'wg_status',

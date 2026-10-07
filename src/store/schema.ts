@@ -1,4 +1,4 @@
-export const STORE_SCHEMA_VERSION = 2;
+export const STORE_SCHEMA_VERSION = 3;
 // Initial migration only. Later schema upgrades require new numbered migrations.
 export const initialSchema = `
 CREATE TABLE meta (singleton INTEGER PRIMARY KEY CHECK(singleton=1), project_id TEXT NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));
@@ -95,4 +95,15 @@ CREATE TABLE identity_aliases (
 CREATE TRIGGER immutable_graph BEFORE UPDATE ON graph_records BEGIN SELECT RAISE(ABORT,'immutable'); END;
 CREATE TRIGGER immutable_aliases BEFORE UPDATE ON identity_aliases BEGIN SELECT RAISE(ABORT,'immutable'); END;
 PRAGMA user_version = 2;
+`;
+
+// Visibility only; scoped deletion/undo/purge commands belong to Phase E.
+export const visibilityMigration = `
+CREATE TABLE tombstones (
+ record_id TEXT NOT NULL REFERENCES records(id), deletion_batch TEXT NOT NULL,
+ revision INTEGER NOT NULL, undone_revision INTEGER,
+ PRIMARY KEY(record_id,deletion_batch)
+);
+CREATE INDEX tombstone_visibility ON tombstones(record_id,undone_revision);
+PRAGMA user_version=3;
 `;
