@@ -14,6 +14,7 @@ import {
   initialSchema,
   graphMigration,
   visibilityMigration,
+  deletionMigration,
   STORE_SCHEMA_VERSION,
 } from './schema.js';
 import { checkPrivateEntry } from '../config/filesystem.js';
@@ -53,7 +54,9 @@ function verify(db: Database, configuration: Configuration) {
     throw new KnowledgeError('UNKNOWN_SCOPE');
   const expected = new Sqlite(':memory:');
   try {
-    expected.exec(initialSchema + graphMigration + visibilityMigration);
+    expected.exec(
+      initialSchema + graphMigration + visibilityMigration + deletionMigration,
+    );
     if (canonical(schemaRows(db)) !== canonical(schemaRows(expected)))
       throw new KnowledgeError('STORE_CORRUPT');
   } finally {
@@ -140,6 +143,7 @@ export async function exportArchive(store: Store) {
       'relations',
       'identity_aliases',
       'tombstones',
+      'deletion_batches',
     ];
     return {
       export_version: 1,

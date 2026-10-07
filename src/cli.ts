@@ -13,6 +13,12 @@ import {
   readJsonFile,
 } from './config/filesystem.js';
 import { ConfigurationError } from './config/schema.js';
+import {
+  deleteScope,
+  undoDelete,
+  previewPurge,
+  purge,
+} from './store/deletion.js';
 import { backup, exportArchive, restore } from './store/recovery.js';
 import { Store } from './store/database.js';
 import { dispatch } from './core/retrieval.js';
@@ -118,6 +124,28 @@ async function main(args: string[]): Promise<void> {
           }),
         ) + '\n',
       );
+    } finally {
+      store.close();
+    }
+  } else if (
+    args.length === 3 &&
+    ['delete-scope', 'undo-delete', 'purge-preview', 'purge'].includes(command!)
+  ) {
+    const input = await stdinRequest();
+    const store = await Store.open(
+      configPath,
+      command === 'purge' ? 'maintenance' : 'normal',
+    );
+    try {
+      const result =
+        command === 'delete-scope'
+          ? deleteScope(store, input)
+          : command === 'undo-delete'
+            ? undoDelete(store, input)
+            : command === 'purge-preview'
+              ? previewPurge(store, input)
+              : purge(store, input);
+      process.stdout.write(JSON.stringify(result) + '\n');
     } finally {
       store.close();
     }

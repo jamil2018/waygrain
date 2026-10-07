@@ -1,4 +1,4 @@
-export const STORE_SCHEMA_VERSION = 3;
+export const STORE_SCHEMA_VERSION = 4;
 // Initial migration only. Later schema upgrades require new numbered migrations.
 export const initialSchema = `
 CREATE TABLE meta (singleton INTEGER PRIMARY KEY CHECK(singleton=1), project_id TEXT NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));
@@ -106,4 +106,12 @@ CREATE TABLE tombstones (
 );
 CREATE INDEX tombstone_visibility ON tombstones(record_id,undone_revision);
 PRAGMA user_version=3;
+`;
+
+export const deletionMigration = `
+CREATE TABLE deletion_batches (
+ id TEXT PRIMARY KEY, app_id TEXT NOT NULL REFERENCES apps(id), scope_id TEXT NOT NULL REFERENCES scopes(id),
+ revision INTEGER NOT NULL, record_count INTEGER NOT NULL, undone_revision INTEGER, purged_revision INTEGER
+);
+PRAGMA user_version=4;
 `;

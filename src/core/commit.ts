@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import type { z } from 'zod';
 import { contracts } from '../contracts/index.js';
 import { validateRequest, validateResponse } from '../contracts/validation.js';
+import { visible } from './summary.js';
 import { Store } from '../store/database.js';
 import { canonical, digest, KnowledgeError } from './normalize.js';
 import {
@@ -59,7 +60,13 @@ export function commit(store: Store, input: unknown, now = Date.now()) {
     if (replay) {
       if (replay.tool !== 'wg_commit' || replay.digest !== requestDigest)
         throw new KnowledgeError('IDEMPOTENCY_CONFLICT');
-      return validateResponse('wg_commit', JSON.parse(replay.receipt_json));
+      const result = validateResponse(
+        'wg_commit',
+        JSON.parse(replay.receipt_json),
+      );
+      if (result.data.created_ids.some((id) => !visible(store, id)))
+        throw new KnowledgeError('NOT_FOUND');
+      return result;
     }
     store.requireRevision(request.expected_store_revision);
     const revision = store.advanceRevision();
@@ -75,6 +82,7 @@ export function commit(store: Store, input: unknown, now = Date.now()) {
     const deferred = (ref: Reference) => {
       if (ref.kind === 'existing') {
         record(store, app.app_id, ref.id);
+        if (!visible(store, ref.id)) throw new KnowledgeError('NOT_FOUND');
         return ref.id;
       }
       const id = plannedRefs.get(ref.client_ref);
@@ -86,6 +94,7 @@ export function commit(store: Store, input: unknown, now = Date.now()) {
       const id = ref.kind === 'existing' ? ref.id : refs.get(ref.client_ref);
       if (!id) throw new KnowledgeError('NOT_FOUND');
       record(store, app.app_id, id);
+      if (!visible(store, id)) throw new KnowledgeError('NOT_FOUND');
       return id;
     };
     for (const op of request.operations) {
@@ -141,6 +150,12 @@ export function commit(store: Store, input: unknown, now = Date.now()) {
         );
         relate(store, app.app_id, id, target, 'describes');
       } else if (op.op === 'alias_identity') {
+        if (
+          ![op.from_id, op.to_id, ...op.evidence_ids].every((id) =>
+            visible(store, id),
+          )
+        )
+          throw new KnowledgeError('NOT_FOUND');
         const from = record(store, app.app_id, op.from_id, op.record_kind),
           to = record(store, app.app_id, op.to_id, op.record_kind);
         if (from.scope_id !== to.scope_id || from.id === to.id)
