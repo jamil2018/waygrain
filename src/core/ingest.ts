@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import type { z } from 'zod';
 import { validateRequest, validateResponse } from '../contracts/validation.js';
 import { contracts } from '../contracts/index.js';
+import { requireTraceSlot } from './traces.js';
 import type { TreeNode } from '../contracts/capture.js';
 import { Store } from '../store/database.js';
 import {
@@ -203,6 +204,7 @@ export function ingest(
     store.requireRevision(parsed.expected_store_revision);
     const revision = store.advanceRevision();
     const scopeId = resolveScope(store, app.app_id, capture.scope);
+    requireTraceSlot(store, app.app_id, scopeId, capture);
     const screenId = resolveScreen(store, sanitized, app, scopeId, revision);
     const projection = stateProjection(capture, screenId);
     const stateHash = digest(projection);

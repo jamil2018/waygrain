@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import type { z } from 'zod';
 import { scope, recordKind, reference } from '../contracts/common.js';
 import { annotation, RELATION_ENDPOINTS } from '../contracts/operations.js';
+import type { Action, ActionEvent, Transition } from './traces.js';
 import { Store } from '../store/database.js';
 import {
   canonical,
@@ -137,6 +138,31 @@ export function supports(
     t = record(store, app, target);
   if (e.scope_id !== t.scope_id) return false;
   if (e.id === t.id && e.kind === 'capture') return true;
+  if (e.kind === 'annotation')
+    return graphPayload<Annotation>(store, evidence).target_id === target;
+
+  if (t.kind === 'action')
+    return supports(
+      store,
+      app,
+      evidence,
+      graphPayload<Action>(store, target).state_id,
+    );
+  if (t.kind === 'action_event') {
+    const event = graphPayload<ActionEvent>(store, target);
+    return (
+      e.kind === 'capture' &&
+      [event.before_capture_id, event.after_capture_id].includes(evidence)
+    );
+  }
+  if (t.kind === 'transition') {
+    const transition = graphPayload<Transition>(store, target);
+    return [
+      transition.before_capture_id,
+      transition.after_capture_id,
+      transition.action_event_id,
+    ].includes(evidence);
+  }
   if (e.kind === 'capture') {
     const capture = store.db
       .prepare('SELECT coverage FROM captures WHERE id=?')
@@ -148,7 +174,5 @@ export function supports(
       )
       .get(evidence, target);
   }
-  if (e.kind === 'annotation')
-    return graphPayload<Annotation>(store, evidence).target_id === target;
   return false;
 }
