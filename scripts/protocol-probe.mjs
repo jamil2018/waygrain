@@ -68,6 +68,7 @@ export async function probeStdio(cli, configPath, exercise) {
         'wg_status',
         'wg_ingest',
         'wg_evidence',
+        'wg_commit',
         'wg_browser_open',
         'wg_browser_status',
         'wg_browser_snapshot',

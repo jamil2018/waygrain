@@ -9,6 +9,7 @@ import { once } from 'node:events';
 import { setTimeout, clearTimeout } from 'node:timers';
 import { initializeConfiguration } from '../dist/config/index.js';
 import { Store, BUSY_TIMEOUT_MS } from '../dist/store/database.js';
+import { STORE_SCHEMA_VERSION } from '../dist/store/schema.js';
 import { fixtureSettings } from './fixtures/ui/index.mjs';
 const require = createRequire(import.meta.url);
 const Sqlite = require('better-sqlite3');
@@ -25,7 +26,10 @@ test('B03 initial schema, WAL, private files, revisions and failed writes are at
   t.after(() => store.close());
   assert.equal(store.db.pragma('foreign_keys', { simple: true }), 1);
   assert.equal(store.db.pragma('journal_mode', { simple: true }), 'wal');
-  assert.equal(store.db.pragma('user_version', { simple: true }), 1);
+  assert.equal(
+    store.db.pragma('user_version', { simple: true }),
+    STORE_SCHEMA_VERSION,
+  );
   assert.equal(store.db.pragma('quick_check', { simple: true }), 'ok');
   assert.equal(store.revision, 0);
   assert.throws(

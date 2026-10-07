@@ -1,4 +1,4 @@
-export const STORE_SCHEMA_VERSION = 1;
+export const STORE_SCHEMA_VERSION = 2;
 // Initial migration only. Later schema upgrades require new numbered migrations.
 export const initialSchema = `
 CREATE TABLE meta (singleton INTEGER PRIMARY KEY CHECK(singleton=1), project_id TEXT NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));
@@ -54,4 +54,45 @@ CREATE TRIGGER immutable_states BEFORE UPDATE ON states BEGIN SELECT RAISE(ABORT
 CREATE TRIGGER immutable_controls BEFORE UPDATE ON controls BEGIN SELECT RAISE(ABORT,'immutable'); END;
 CREATE TRIGGER immutable_captures BEFORE UPDATE ON captures BEGIN SELECT RAISE(ABORT,'immutable'); END;
 PRAGMA user_version = 1;
+`;
+
+// Version 2 rebuilds only the record-kind constraint; child IDs and histories survive.
+// Run with foreign_keys disabled outside the transaction and verify before commit.
+export const graphMigration = `
+CREATE TABLE records_next (
+ id TEXT PRIMARY KEY, app_id TEXT NOT NULL, scope_id TEXT NOT NULL,
+ kind TEXT NOT NULL CHECK(kind IN ('screen','state','control','capture','action','action_event','transition','flow','test_run','annotation')),
+ created_revision INTEGER NOT NULL CHECK(created_revision>0),
+ FOREIGN KEY(scope_id,app_id) REFERENCES scopes(id,app_id), UNIQUE(id,app_id,scope_id), UNIQUE(id,kind)
+);
+INSERT INTO records_next SELECT * FROM records;
+DROP TABLE records;
+ALTER TABLE records_next RENAME TO records;
+CREATE INDEX record_app_kind ON records(app_id,kind);
+CREATE TABLE graph_records (
+ id TEXT PRIMARY KEY, app_id TEXT NOT NULL, scope_id TEXT NOT NULL, kind TEXT NOT NULL,
+ payload_json TEXT NOT NULL, recorded_at TEXT NOT NULL,
+ FOREIGN KEY(id,kind) REFERENCES records(id,kind),
+ FOREIGN KEY(id,app_id,scope_id) REFERENCES records(id,app_id,scope_id),
+ CHECK(kind IN ('action','action_event','transition','flow','test_run','annotation'))
+);
+CREATE TABLE relations (
+ source_id TEXT NOT NULL, target_id TEXT NOT NULL, app_id TEXT NOT NULL, scope_id TEXT NOT NULL,
+ type TEXT NOT NULL CHECK(type IN ('contains','offers','transitions_to','part_of','describes')),
+ FOREIGN KEY(source_id,app_id,scope_id) REFERENCES records(id,app_id,scope_id),
+ FOREIGN KEY(target_id,app_id,scope_id) REFERENCES records(id,app_id,scope_id),
+ PRIMARY KEY(source_id,target_id,type)
+);
+INSERT INTO relations SELECT screen_id,id,app_id,scope_id,'contains' FROM states;
+INSERT INTO relations SELECT state_id,id,app_id,scope_id,'contains' FROM controls;
+CREATE TABLE identity_aliases (
+ id TEXT PRIMARY KEY, from_id TEXT NOT NULL UNIQUE, to_id TEXT NOT NULL,
+ app_id TEXT NOT NULL, scope_id TEXT NOT NULL, kind TEXT NOT NULL,
+ rationale TEXT NOT NULL, evidence_json TEXT NOT NULL, revision INTEGER NOT NULL,
+ FOREIGN KEY(from_id,app_id,scope_id) REFERENCES records(id,app_id,scope_id),
+ FOREIGN KEY(to_id,app_id,scope_id) REFERENCES records(id,app_id,scope_id), CHECK(from_id<>to_id)
+);
+CREATE TRIGGER immutable_graph BEFORE UPDATE ON graph_records BEGIN SELECT RAISE(ABORT,'immutable'); END;
+CREATE TRIGGER immutable_aliases BEFORE UPDATE ON identity_aliases BEGIN SELECT RAISE(ABORT,'immutable'); END;
+PRAGMA user_version = 2;
 `;

@@ -4,7 +4,11 @@ import { join } from 'node:path';
 import { loadConfiguration } from '../config/index.js';
 import { checkPrivateEntry } from '../config/filesystem.js';
 import { KnowledgeError } from '../core/normalize.js';
-import { initialSchema, STORE_SCHEMA_VERSION } from './schema.js';
+import {
+  initialSchema,
+  graphMigration,
+  STORE_SCHEMA_VERSION,
+} from './schema.js';
 
 export interface Statement {
   get(...params: unknown[]): unknown;
@@ -156,7 +160,37 @@ export class Store {
             db.exec('ROLLBACK');
             throw error;
           }
-        } else if (version !== STORE_SCHEMA_VERSION)
+        }
+        if (db.pragma('user_version', { simple: true }) === 1) {
+          if (version === 1) {
+            const backup = join(
+              location.storageDirectory,
+              'pre-migration-v1-' + Date.now() + '.sqlite',
+            );
+            const file = await open(backup, 'wx', 0o600);
+            await file.close();
+            await db.backup(backup);
+            await checkPrivateEntry(backup, false);
+          }
+          db.pragma('foreign_keys = OFF');
+          db.exec('BEGIN IMMEDIATE');
+          try {
+            db.exec(graphMigration);
+            db.prepare('INSERT INTO migrations VALUES(2,?)').run(
+              new Date().toISOString(),
+            );
+            integrity(db);
+            db.exec('COMMIT');
+          } catch (error) {
+            db.exec('ROLLBACK');
+            throw error;
+          } finally {
+            db.pragma('foreign_keys = ON');
+          }
+        }
+        if (
+          db.pragma('user_version', { simple: true }) !== STORE_SCHEMA_VERSION
+        )
           throw new KnowledgeError('UNSUPPORTED_SCHEMA');
         if (mode === 'normal') coordination.exec('ROLLBACK');
       }

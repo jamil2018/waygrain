@@ -254,6 +254,15 @@ export function ingest(
         );
       }
     }
+    if (stateId) {
+      for (const [source, target] of [
+        [screenId, stateId],
+        ...controlIds.map((id) => [stateId, id]),
+      ])
+        store.db
+          .prepare("INSERT OR IGNORE INTO relations VALUES(?,?,?,?,'contains')")
+          .run(source, target, app.app_id, scopeId);
+    }
     const captureId = newRecord(
       store,
       app.app_id,

@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -42,7 +42,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 ## Stage D — Evidence graph and recall
 
-- [ ] D01 — Implement guarded annotations and identity reconciliation — pending
+- [x] D01 — Implement guarded annotations and identity reconciliation — verified
 - [ ] D02 — Implement actions, events, and observed transitions — pending
 - [ ] D03 — Implement flows and test-run evidence — pending
 - [ ] D04 — Implement lexical search and neighbors — pending
@@ -305,3 +305,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Independent verifier/reviewer: /root/c05_checkpoint; PASS, no unresolved Critical/Required findings or assigned browser checkpoint blockers. Exact artifacts, generated-schema identity, commands/probes and later final documentation/packed identities in [review.md](evidence/c05/review.md). C04 source at 642cfb5 remains byte-identical.
 - Remaining limits: local macOS arm64 only. Driver/journal positive capture/action paths and synthetic transport cancellation are qualified; positive full MCP capture/action after initial human navigation and actual coding-host cancellation remain unverified. Initial blank bootstrap is human-owned. Backend privileges/business outcomes, disguised credentials, cross-platform/host integration and guaranteed cleanup after simultaneous hard worker/owner loss are not attested. Unknown/unconfirmed outcomes remain non-replaying and do not authorize persisted-PID cleanup. No later graph/recall/recovery gate or package publication.
 - Next eligible task: D01 — Implement guarded annotations and identity reconciliation; not selected by this Phase C batch and not started.
+
+
+### D01 — Implement guarded annotations and identity reconciliation
+
+- Status: verified.
+- Authorized scope: user selected all Phase D tasks and shipping on 7 October 2026, overriding the one-task-per-run stop rule for D01–D06. No Phase E or package publication.
+- Dependencies: C05 verified and shipped in PR14 at 325eff1; historical evidence retained.
+- Acceptance: atomic guarded annotations preserve provenance, conflicts and supersession history; aliases explicit and audited; revision conflicts reject without mutation.
+- Artifact: schema v2 migration, guarded commit service, CLI/MCP dispatch, annotation evidence projection, synthetic tests and graph guide.
+- Verification: writer Node26 npm run check PASS (66 tests), including actual v1 migration and CLI/MCP replay. Independent Node24.20.0 and Node26.5.0 checks PASS (66 tests each); own privacy/provenance/cursor/revision/migration refusal and rollback probes PASS on both.
+- Independent verifier/reviewer: /root/d_review; PASS, no unresolved Critical/Required findings. Exact hashes, commands and limits in [review.md](evidence/d01/review.md). Final verified register bytes accepted separately.
+- Remaining limits: arbitrary prose is refused unless explicitly reviewed in configuration labels. Partial evidence supports only annotations on that capture. Local references require earlier operations. Claims remain caller-attested. Later graph/recall/recovery tasks and coding-host/cross-platform qualification remain separate.
