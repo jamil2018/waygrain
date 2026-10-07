@@ -7,6 +7,7 @@ import { promisify } from 'node:util';
 import { StdioServerTransport } from '@modelcontextprotocol/server/stdio';
 import { loadConfiguration } from '../config/index.js';
 import { Store } from '../store/database.js';
+import { BrowserSession } from '../browser/session.js';
 import { knowledgeServer } from '../mcp/index.js';
 
 const execute = promisify(execFile);
@@ -99,22 +100,29 @@ export async function smokeRuntime(configPath: string) {
 
 export async function serve(configPath: string): Promise<void> {
   const store = await Store.open(configPath);
-  const server = knowledgeServer(store);
+  const browser = new BrowserSession(store);
+  const server = knowledgeServer(store, browser);
   server.server.onerror = () =>
     process.stderr.write('{"error":"MCP_FAILED"}\n');
-  server.server.onclose = () => store.close();
+  server.server.onclose = () => {
+    void browser.dispose().finally(() => store.close());
+  };
   const transport = new StdioServerTransport(process.stdin, process.stdout, {
     maxBufferSize: 1024 * 1024 + 64 * 1024,
   });
   try {
     await server.connect(transport);
   } catch (error) {
+    await browser.dispose();
     store.close();
     throw error;
   }
   for (const signal of ['SIGINT', 'SIGTERM'] as const) {
     process.once(signal, () => {
-      void server.close().finally(() => store.close());
+      void browser
+        .dispose()
+        .finally(() => server.close())
+        .finally(() => store.close());
     });
   }
 }
