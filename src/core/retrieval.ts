@@ -118,10 +118,13 @@ export function evidence(
       projection: request.projection,
     };
     const token = (offset: number) =>
-      `${offset}_${digest({ filter, revision, offset })}`;
+      `${offset}_${store.cursorEpoch || 'initial'}_${digest({ filter, revision, offset, epoch: store.cursorEpoch })}`;
     let offset = 0;
     if (request.cursor) {
-      if (request.cursor.store_revision !== revision)
+      if (
+        request.cursor.store_revision !== revision ||
+        request.cursor.token.split('_')[1] !== (store.cursorEpoch || 'initial')
+      )
         throw new KnowledgeError('CURSOR_STALE');
       offset = Number(request.cursor.token.split('_')[0]);
       if (

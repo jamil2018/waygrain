@@ -174,10 +174,13 @@ export function changes(store: Store, input: unknown): Responses['wg_changes'] {
     const revision = store.revision;
     const filter = { ...q, cursor: undefined, budget: undefined };
     const token = (offset: number) =>
-      `${offset}_${digest({ filter, revision, offset })}`;
+      `${offset}_${store.cursorEpoch || 'initial'}_${digest({ filter, revision, offset, epoch: store.cursorEpoch })}`;
     let offset = 0;
     if (q.cursor) {
-      if (q.cursor.store_revision !== revision)
+      if (
+        q.cursor.store_revision !== revision ||
+        q.cursor.token.split('_')[1] !== (store.cursorEpoch || 'initial')
+      )
         throw new KnowledgeError('CURSOR_STALE');
       offset = Number(q.cursor.token.split('_')[0]);
       if (

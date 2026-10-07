@@ -101,6 +101,7 @@ export async function loadConfiguration(configPath: string) {
       'coordination.sqlite',
       'coordination.sqlite-wal',
       'coordination.sqlite-shm',
+      'cursor-epoch',
     ]) {
       const path = join(location.storageDirectory, name);
       try {
