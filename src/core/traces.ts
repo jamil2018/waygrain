@@ -144,6 +144,8 @@ export function traceOperation(
   resolve: (ref: Reference) => string,
   revision: number,
   now: number,
+  id: string,
+  deferred: (ref: Reference) => string,
 ): string {
   if (op.op === 'create_action') {
     const state = record(store, app.app_id, resolve(op.state_id), 'state');
@@ -171,7 +173,7 @@ export function traceOperation(
     } as const;
     if (op.input_schema.kind !== expected[op.verb])
       throw new KnowledgeError('INVALID_INPUT');
-    const id = putGraph(
+    const createdId = putGraph(
       store,
       app.app_id,
       state.scope_id,
@@ -185,9 +187,10 @@ export function traceOperation(
       },
       revision,
       now,
+      id,
     );
-    relate(store, app.app_id, state.id, id, 'offers');
-    return id;
+    relate(store, app.app_id, state.id, createdId, 'offers');
+    return createdId;
   }
   if (op.op === 'record_action_event') {
     const event: ActionEvent = {
@@ -209,6 +212,7 @@ export function traceOperation(
       event,
       revision,
       now,
+      id,
     );
   }
   if (op.op === 'create_transition') {
@@ -238,8 +242,7 @@ export function traceOperation(
       event.after_capture_id !== after.id ||
       event.action_id !== action.id ||
       event.outcome !== op.outcome ||
-      op.provenance !== 'observed' ||
-      op.test_run_id
+      (op.provenance === 'observed' && op.test_run_id)
     )
       throw new KnowledgeError('INCOMPATIBLE_CAPTURE');
     const payload: Transition = {
@@ -251,9 +254,10 @@ export function traceOperation(
       action_event_id: eventRecord.id,
       outcome: op.outcome,
       guards: op.guards,
-      provenance: 'observed',
+      provenance: op.provenance,
+      ...(op.test_run_id ? { test_run_id: deferred(op.test_run_id) } : {}),
     };
-    const id = putGraph(
+    const createdId = putGraph(
       store,
       app.app_id,
       source.scope_id,
@@ -261,9 +265,10 @@ export function traceOperation(
       payload,
       revision,
       now,
+      id,
     );
     relate(store, app.app_id, source.id, target.id, 'transitions_to');
-    return id;
+    return createdId;
   }
   throw new KnowledgeError('INVALID_INPUT');
 }

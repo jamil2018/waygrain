@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import type { z } from 'zod';
 import { scope, recordKind, reference } from '../contracts/common.js';
 import { annotation, RELATION_ENDPOINTS } from '../contracts/operations.js';
+import type { Flow } from './test-evidence.js';
 import type { Action, ActionEvent, Transition } from './traces.js';
 import { Store } from '../store/database.js';
 import {
@@ -98,7 +99,7 @@ export function putGraph(
   payload: unknown,
   revision: number,
   now: number,
-  id = randomUUID(),
+  id: string = randomUUID(),
 ): string {
   store.db
     .prepare('INSERT INTO records VALUES(?,?,?,?,?)')
@@ -141,6 +142,20 @@ export function supports(
   if (e.kind === 'annotation')
     return graphPayload<Annotation>(store, evidence).target_id === target;
 
+  if (t.kind === 'flow')
+    return graphPayload<Flow>(store, target).transition_ids.some((id) =>
+      supports(store, app, evidence, id),
+    );
+  if (e.kind === 'action_event' && t.kind !== 'transition') {
+    const event = graphPayload<ActionEvent>(store, evidence);
+    if (t.kind === 'action') return event.action_id === target;
+    if (t.kind === 'action_event') return evidence === target;
+    if (t.kind === 'capture')
+      return [event.before_capture_id, event.after_capture_id].includes(target);
+    return [event.before_capture_id, event.after_capture_id]
+      .filter((id): id is string => id !== null)
+      .some((id) => supports(store, app, id, target));
+  }
   if (t.kind === 'action')
     return supports(
       store,
