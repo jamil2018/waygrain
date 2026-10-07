@@ -1,8 +1,7 @@
 import { rm } from 'node:fs/promises';
 import { basename, isAbsolute } from 'node:path';
 import type { Browser, Page } from 'playwright';
-import { randomUUID } from 'node:crypto';
-import { snapshotPage } from './snapshot.js';
+import { BrowserDriver } from './driver.js';
 import { BrowserError } from './protocol.js';
 import { openBrowser } from './engine.js';
 import type { WorkerRequest, WorkerReply } from './protocol.js';
@@ -12,8 +11,7 @@ let page: Page | undefined;
 let stopping = false;
 let app: WorkerRequest['app'];
 let binding: WorkerRequest['page'];
-const trace = randomUUID();
-let sequence = 0;
+let driver: BrowserDriver | undefined;
 let opening: Promise<void> | undefined;
 const temporaryRoot = process.env.TMPDIR ?? '';
 // A direct standalone invocation has no owned IPC/root and must never delete
@@ -82,6 +80,7 @@ async function handle(request: WorkerRequest): Promise<WorkerReply> {
     }).then((opened) => {
       browser = opened.browser;
       page = opened.page;
+      if (app && binding) driver = new BrowserDriver(page, app, binding);
     });
     try {
       await opening;
@@ -98,10 +97,26 @@ async function handle(request: WorkerRequest): Promise<WorkerReply> {
       id: request.id,
       data: {
         status: 'open',
-        snapshot: await snapshotPage(page, app, binding, trace, ++sequence),
+        snapshot: await driver!.snapshot(),
       },
     };
   }
+  if (request.command === 'prepare_navigate' && request.navigation && driver)
+    return {
+      id: request.id,
+      data: {
+        status: 'open',
+        receipt: await driver.prepareNavigation(request.navigation),
+      },
+    };
+  if (request.command === 'navigate' && request.execution_id && driver)
+    return {
+      id: request.id,
+      data: {
+        status: 'open',
+        receipt: await driver.navigate(request.execution_id),
+      },
+    };
   return {
     id: request.id,
     data: {

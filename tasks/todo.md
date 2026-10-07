@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -36,7 +36,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 - [x] C01 — Implement browser session lifecycle — verified
 - [x] C02 — Implement sanitized structured snapshots — verified
-- [ ] C03 — Implement current target resolution and navigation — pending
+- [x] C03 — Implement current target resolution and navigation — verified
 - [ ] C04 — Implement bounded browser actions and attempt receipts — pending
 - [ ] C05 — Browser checkpoint — pending
 
@@ -268,3 +268,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: final writer npm run check PASS Node26.5.0 (59 tests). Independent final npm run check PASS Node24.20.0 and Node26.5.0 (59 tests each); final headed public JSON/redaction/ingestion/modal/unsupported editing harness PASS, plus independent same-URL navigation and newly appearing editing-host probes.
 - Independent verifier/reviewer: /root/c02_review; PASS, no unresolved Critical/Required findings. Exact artifact hashes, historical findings/repairs and limitations in [review.md](evidence/c02/review.md); final register/README bytes accepted separately.
 - Remaining limits: no executable target resolution/navigation/actions; frames and unsupported state yield partial captures. One reviewed profile required; aliases remain operator-declared. No host/cross-platform or backend authorization claim.
+
+
+### C03 — Implement current target resolution and navigation
+
+- Status: verified.
+- Authorized scope: remaining Phase C batch and continued shipping selected by user, 7 October 2026.
+- Dependencies: C02 verified and shipped PR11 at 60fecea; historical evidence preserved.
+- Acceptance: allowed navigation; strict current temporary target resolution; changed/ambiguous UI cannot use stale targets.
+- Artifact: worker-local snapshot driver/element identities, guarded navigation and sanitized durable attempt journal in existing receipts, MCP integration, focused deterministic/headed tests and guide.
+- Verification: writer final npm run check PASS Node26.5.0 (60 tests); headed navigation/target/redirect harness PASS. Independent final quality checks PASS Node24.20.0 and Node26.5.0 (60 tests each), headed navigation PASS on both; Node26 lifecycle/login regression PASS. Independent redirected navigation/image/fetch/worker-fetch tests saw zero forbidden-origin requests after repair; durable pending markers reopen as unknown with nondispatching replay.
+- Independent verifier/reviewer: /root/c03_review; PASS, no unresolved Critical/Required findings. Historical redirect failure, repaired exact artifact hashes and limits in [review.md](evidence/c03/review.md); final register/README accepted separately.
+- Remaining limits: no C04 actions. Initial navigation from blank is human-owned; snapshots and scope aliases describe observations/operator context, not backend authorization. No host/platform claim.

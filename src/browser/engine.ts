@@ -28,6 +28,44 @@ export async function openBrowser(value: PageBinding, onLost: () => void) {
       if (page && extra !== page) void extra.close().catch(() => undefined);
     });
     page = await context.newPage();
+    // Playwright routing alone does not intercept each redirect. Chromium Fetch
+    // pauses every HTTP request (including each redirect hop) before egress.
+    const network = await context.newCDPSession(page);
+    network.on(
+      'Fetch.requestPaused',
+      (event: { requestId: string; request: { url: string } }) => {
+        void (async () => {
+          try {
+            const url = new URL(event.request.url);
+            const allowed =
+              ['http:', 'https:'].includes(url.protocol) &&
+              url.origin === value.scope.origin &&
+              !url.username &&
+              !url.password;
+            await network.send(
+              allowed ? 'Fetch.continueRequest' : 'Fetch.failRequest',
+              allowed
+                ? { requestId: event.requestId }
+                : {
+                    requestId: event.requestId,
+                    errorReason: 'BlockedByClient',
+                  },
+            );
+          } catch {
+            await network
+              .send('Fetch.failRequest', {
+                requestId: event.requestId,
+                errorReason: 'BlockedByClient',
+              })
+              .catch(() => undefined);
+          }
+        })();
+      },
+    );
+    await network.send('Fetch.enable', {
+      patterns: [{ urlPattern: '*', requestStage: 'Request' }],
+    });
+
     page.on('dialog', (dialog) => {
       void dialog.dismiss().catch(() => undefined);
     });
