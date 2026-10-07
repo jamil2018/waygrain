@@ -17,3 +17,5 @@ export { KnowledgeError, errorResponse } from './core/normalize.js';
 export { commit } from './core/commit.js';
 
 export { query } from './core/query.js';
+
+export { changes } from './core/changes.js';

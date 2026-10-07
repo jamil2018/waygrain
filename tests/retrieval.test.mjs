@@ -25,7 +25,12 @@ test('B05 status/evidence share contracts, declare only implemented capabilities
   const two = ingest(store, partial, fixtureNow);
   const snapshot = status(store, base);
   assert.equal(snapshot.store_revision, 2);
-  assert.deepEqual(snapshot.data.capabilities, ['ingest', 'evidence', 'query']);
+  assert.deepEqual(snapshot.data.capabilities, [
+    'ingest',
+    'evidence',
+    'query',
+    'changes',
+  ]);
   assert.equal(snapshot.data.counts.find((c) => c.kind === 'capture').count, 2);
   assert(snapshot.data.byte_usage.database > 0);
   assert(snapshot.data.byte_usage.wal > 0);

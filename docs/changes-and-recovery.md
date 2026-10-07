@@ -1,0 +1,5 @@
+# Changes and recovery
+
+`wg_changes` (CLI `changes`) compares two visible retained captures or a scoped inclusive end revision range `(from_revision, to_revision]`. Only matching screens/scopes, normalizer versions and redaction profiles are comparable. Subtree mismatches are explicit. Incomplete observations cannot establish removal. Results cite evidence IDs and paginate with revision/filter-bound cursors and whole-envelope byte limits.
+
+Control comparison uses structural positions, not an identity inference: reordering or inserting a node can produce altered positions. Noninteractive structural changes also use the control subject. Tabs, modals and feature variants compare descriptive view state. Revision comparisons include new annotations/supersessions and recorded action outcomes. A range containing an incompatible observation returns incomparable rather than claiming complete coverage. Range work stops at 500 captures and 500 graph records; cutoffs and invalidated-reference limits set `complete: false`. Historical edges retain their original endpoints.

@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -51,7 +51,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 ## Stage E — Changes and recovery
 
-- [ ] E01 — Implement capture and revision comparisons — pending
+- [x] E01 — Implement capture and revision comparisons — verified
 - [ ] E02 — Implement freshness and refresh plans — pending
 - [ ] E03 — Implement export, backup, and restore — pending
 - [ ] E04 — Implement scoped deletion, undo, purge, and storage cap — pending
@@ -380,3 +380,17 @@ Copy this template when a task starts; replace every placeholder with observed i
 
 - Phase D result: D01–D06 verified; this checkpoint completes the selected phase. No Phase E task or public package release started.
 - Next eligible task: E01 — Implement capture and revision comparisons; unselected and not started.
+
+
+### Phase E authorization
+
+- User selected all E01–E06 and shipping on 7 October 2026, overriding the default one-task stop rule within this phase. D06 is verified at 6b29af9; Phase F and package publication remain outside scope.
+
+### E01 — Implement capture and revision comparisons
+
+- Status: verified.
+- Authorization: entire Phase E and shipping selected 7 October 2026; D06 verified at 6b29af9.
+- Artifact: evidence-backed scoped capture/revision comparisons, reference invalidation, bounded CLI/MCP dispatch and guide.
+- Verification: writer Node26 check PASS (85 tests). Independent /root/e_review Node24/26 checks PASS (85 each), independent reordered/partial/incompatible-normalizer/annotation/cursor/budget and fresh CLI/MCP probes PASS.
+- Review: PASS, no unresolved Required findings. Byte-limit bypass and shared coverage-object findings repaired. Exact artifacts and results: [review.md](evidence/e01/review.md).
+- Limits: positional comparisons do not infer identity across reordered controls; 500-capture/graph-record range cutoff and 50-reference output cap remain explicitly incomplete. Historical edges preserved; no browser action or publication.
