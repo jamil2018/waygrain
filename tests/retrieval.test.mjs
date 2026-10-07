@@ -30,6 +30,7 @@ test('B05 status/evidence share contracts, declare only implemented capabilities
     'evidence',
     'query',
     'changes',
+    'refresh_plan',
   ]);
   assert.equal(snapshot.data.counts.find((c) => c.kind === 'capture').count, 2);
   assert(snapshot.data.byte_usage.database > 0);

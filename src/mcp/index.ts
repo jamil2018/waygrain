@@ -36,6 +36,7 @@ export function knowledgeServer(
           name === 'wg_evidence' ||
           name === 'wg_query' ||
           name === 'wg_changes' ||
+          name === 'wg_plan_refresh' ||
           name === 'wg_browser_status' ||
           name === 'wg_browser_snapshot',
         destructiveHint: name === 'wg_browser_act',

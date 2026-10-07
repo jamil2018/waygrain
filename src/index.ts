@@ -19,3 +19,5 @@ export { commit } from './core/commit.js';
 export { query } from './core/query.js';
 
 export { changes } from './core/changes.js';
+
+export { planRefresh } from './core/refresh.js';
