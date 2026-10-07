@@ -1,0 +1,207 @@
+[
+  {
+    "task": "E01",
+    "ref": "codex/phase-e-comparisons",
+    "commit": "8240debc47db4a83a1358077165cc50fd7b11738",
+    "checks": [
+      {
+        "node": "24.20.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "24.20.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      }
+    ],
+    "src": {
+      "files": 37,
+      "sha256": "57616c9ead2bd077b495779f775965d224a769630b910c1f7356d7ab110e38e1"
+    },
+    "tests": {
+      "files": 29,
+      "sha256": "1760efd6f3f1e64177aade3226c8815653b54db9d7d6135696e8aa64051303ff"
+    },
+    "dist": {
+      "files": 75,
+      "sha256": "679d0f36c1e8cd5aeca5359355c121de204eaba56cb008080b140189ce913482"
+    },
+    "src/core/changes.ts": "9fa19560757d5b1ba105919ba8309239c4698d57b67e99d68388b6a93e938c57",
+    "tests/changes.test.mjs": "3529e071d7e6da4b18007c60a3f9d31c2bb96dfbcffe75e4c7e113632e6df345"
+  },
+  {
+    "task": "E02",
+    "ref": "codex/phase-e-refresh",
+    "commit": "964afc45bad957930c4df27f221fec0fdcf02940",
+    "checks": [
+      {
+        "node": "24.20.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "24.20.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      }
+    ],
+    "src": {
+      "files": 38,
+      "sha256": "d01ba05bc0cce8e85f582cb8f9c49260e78a1802e6071e12e9eb69347e218ed2"
+    },
+    "tests": {
+      "files": 30,
+      "sha256": "2dd2f631518e2b02acf913847c261b2984ca90f45cbbea4adb678654c8b358fb"
+    },
+    "dist": {
+      "files": 77,
+      "sha256": "f6fbe29e8069f905af43f0bd6378ca1edd5449baf99d256a1217ec26a96e9e9c"
+    },
+    "src/core/changes.ts": "9fa19560757d5b1ba105919ba8309239c4698d57b67e99d68388b6a93e938c57",
+    "tests/changes.test.mjs": "3529e071d7e6da4b18007c60a3f9d31c2bb96dfbcffe75e4c7e113632e6df345"
+  },
+  {
+    "task": "E03",
+    "ref": "codex/phase-e-recovery",
+    "commit": "e0ee469ace2eff0c6ddd85d97809b070d6349774",
+    "checks": [
+      {
+        "node": "24.20.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "24.20.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      }
+    ],
+    "src": {
+      "files": 39,
+      "sha256": "d1b11f38b4b244cc625c0cd866a792526d4fc17a75366dfc9becd87dc8e6b63b"
+    },
+    "tests": {
+      "files": 31,
+      "sha256": "eedd56b099e08af58b955a7073c493e3b9b369247811cba8ce7581a5f36717a5"
+    },
+    "dist": {
+      "files": 79,
+      "sha256": "d7176962b90f40ac45ab8b33d0f1ee578df82687e052d82120fa411ea1646dc3"
+    },
+    "src/core/changes.ts": "21c060576ecd10068c22ab015d5a4f68bd475d0986fdb5944cd8d15dff79fc6d",
+    "tests/changes.test.mjs": "3529e071d7e6da4b18007c60a3f9d31c2bb96dfbcffe75e4c7e113632e6df345"
+  },
+  {
+    "task": "E04",
+    "ref": "codex/phase-e-deletion",
+    "commit": "7803f509ca20bf733002a21e20b6434a51aed36c",
+    "checks": [
+      {
+        "node": "24.20.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "24.20.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      }
+    ],
+    "src": {
+      "files": 40,
+      "sha256": "e916d678f1ab52b4da0eb44dc125d9a79aa2164fd9352bdf2ed04329d61eb58d"
+    },
+    "tests": {
+      "files": 32,
+      "sha256": "160c6408229f493ed277386d54da72c6caca97fdc7d8be29b3f9f9fe238ad0e4"
+    },
+    "dist": {
+      "files": 81,
+      "sha256": "3ed5b5db44b5001fc9a89b33349bd4a910dcfa16e60fbfd5322bb610847f1c12"
+    },
+    "src/core/changes.ts": "21c060576ecd10068c22ab015d5a4f68bd475d0986fdb5944cd8d15dff79fc6d",
+    "tests/changes.test.mjs": "3529e071d7e6da4b18007c60a3f9d31c2bb96dfbcffe75e4c7e113632e6df345"
+  },
+  {
+    "task": "E05",
+    "ref": "codex/phase-e-crash",
+    "commit": "cd855b64af973508769f569e89676734cfaf093c",
+    "checks": [
+      {
+        "node": "24.20.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "24.20.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "npm run check",
+        "exit_code": 0
+      },
+      {
+        "node": "26.5.0",
+        "command": "node --test tasks/evidence/e06/semantic-correction.mjs",
+        "exit_code": 0
+      }
+    ],
+    "src": {
+      "files": 40,
+      "sha256": "e916d678f1ab52b4da0eb44dc125d9a79aa2164fd9352bdf2ed04329d61eb58d"
+    },
+    "tests": {
+      "files": 34,
+      "sha256": "d53bfeab40103a5f9380a7844ce5c2a515ed6d2f3568e85c2c869e5bb7c7fa1d"
+    },
+    "dist": {
+      "files": 81,
+      "sha256": "3ed5b5db44b5001fc9a89b33349bd4a910dcfa16e60fbfd5322bb610847f1c12"
+    },
+    "src/core/changes.ts": "21c060576ecd10068c22ab015d5a4f68bd475d0986fdb5944cd8d15dff79fc6d",
+    "tests/changes.test.mjs": "3529e071d7e6da4b18007c60a3f9d31c2bb96dfbcffe75e4c7e113632e6df345"
+  }
+]

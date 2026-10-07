@@ -10,6 +10,8 @@
 | [Implementation plan](../tasks/plan.md) | Ordered tasks, dependencies, acceptance criteria and release gates |
 | [Runtime feasibility](runtime-feasibility.md) | A04 packed installation and explicit stdio/SQLite/headed Chromium probes |
 | [Public contracts](contracts.md) | A05 strict versioned schemas, generated JSON Schema, fixtures and enforcement boundaries |
+| [Changes and recovery](changes-and-recovery.md) | Comparisons, freshness, declarative plans, backup/restore, scoped deletion and cap semantics |
+| [E06 recovery checkpoint](../tasks/evidence/e06/review.md) | Independent integrated and packed recovery acceptance with exact artifacts and limits |
 | [Task register](../tasks/todo.md) | Current task states, results and evidence links |
 | [A01 independent review](../tasks/evidence/a01/review.md) | Exact reviewed hashes, verification commands and limits for A01 |
 | [Contributing](../CONTRIBUTING.md) | Scope, verification, independent review and change delivery |

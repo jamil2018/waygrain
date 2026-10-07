@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -56,7 +56,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] E03 — Implement export, backup, and restore — verified
 - [x] E04 — Implement scoped deletion, undo, purge, and storage cap — verified
 - [x] E05 — Verify concurrency, crash, and migration recovery — verified
-- [ ] E06 — Recovery checkpoint — pending
+- [x] E06 — Recovery checkpoint — verified
 
 ## Stage F — Plugin and Blogen pilot
 
@@ -426,3 +426,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer final Node26 check PASS (95). Independent /root/e_review Node24/26 checks PASS (95 each), own competing-process ingestion, killed write and killed real migration probes PASS. Reviewed writer harness confirms bounded busy, failed migration rollback, future-schema exact bytes, live-peer migration/restore refusal and actual SIGKILL before/after real restore rename; whole query results preserved.
 - Review: PASS, no unresolved Required findings. Exact source/runtime/test identities, actual kill signals and harness correction history in [review.md](evidence/e05/review.md).
 - Limits: deterministic test-only native/builtin barriers, no production hooks. Actual local macOS process crash evidence; no hardware power loss or cross-platform attestation. Migration pre-images remain distinct from public current-schema backups.
+
+### E06 — Recovery checkpoint
+
+- Status: verified. Authorized scope: finish E01–E06 and ship, selected 7 October 2026. Phase F/public package publication not selected.
+- Dependencies: E01–E05 independently verified with historical exact-artifact receipts; implementation/task commits f6e26dc, b050c47, 52c79bf, 376c2f4, a78eae9 preserved.
+- Artifact: final source correction at ea70ac0 plus separately identified checkpoint evidence/documentation. Final review found feature variants incorrectly classified as action outcomes; the corrected comparison reports explicit incomparable coverage because the unchanged v1 vocabulary lacks a precise variant subject. Regression and additive corrected task snapshots preserve historical evidence; see [corrected-task-artifacts.md](evidence/e06/corrected-task-artifacts.md).
+- Verification: writer final Node26 check PASS (96 tests). Fresh /root/e_checkpoint Node24.20.0/26.5.0 checks PASS (96 each), own integrated scope/changes/refresh/graph/deletion/undo/backup/export/purge/restore/closed-store fresh CLI and stdio MCP all-seven-knowledge-tool probes PASS. Clean packed installed consumers PASS on both, all runtime bytes equal reviewed dist, exact query envelopes/IDs/revisions/FKs round-trip and all cursor generations invalidate after restore.
+- Independent review: /root/e_checkpoint PASS; /root/e_review separately reviewed checkpoint evidence assertions and independently reran integrated lifecycle on both runtimes; /root/e_checkpoint repaired the identified harness assertions and reran before acceptance. No unresolved Critical/Required findings. Exact source/generated-schema/runtime/archive/harness identities, actual commands and initial harness repair history in [review.md](evidence/e06/review.md) and [artifact-review.md](evidence/e06/artifact-review.md). Final documentation acceptance recorded separately.
+- Limits: local macOS arm64 process crashes, no hardware power-loss or cross-platform claim. Caller-attested product/test reports and earlier C05 coding-host/browser/cancellation/cleanup limits remain. Archival export has no import; backups/forensic sets/safe attempt receipts retain separately described data. Conservative cap can refuse early. No plugin pilot, host portability, performance/release evaluation or publication claim.
+
+- Phase E result: E01–E06 verified; selected implementation phase is complete. Shipping is tracked through individual E01–E06 PRs; completion report waits for merge and local base sync.
+- Next eligible task: F01 — Package plugin skills and setup workflow; unselected and not started.
