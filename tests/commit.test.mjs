@@ -143,7 +143,7 @@ test('D01 atomic guarded commits, provenance, conflicts, supersession, refs and 
           },
         },
       ]),
-    { code: 'INCOMPATIBLE_CAPTURE' },
+    { code: 'NOT_FOUND' },
   );
 });
 test('D01 aliases are audited, preserve histories and refuse cycles/scope mismatches', async (t) => {

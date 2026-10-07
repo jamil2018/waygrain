@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -44,7 +44,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 - [x] D01 — Implement guarded annotations and identity reconciliation — verified
 - [x] D02 — Implement actions, events, and observed transitions — verified
-- [ ] D03 — Implement flows and test-run evidence — pending
+- [x] D03 — Implement flows and test-run evidence — verified
 - [ ] D04 — Implement lexical search and neighbors — pending
 - [ ] D05 — Implement path and flow retrieval — pending
 - [ ] D06 — Recall checkpoint — pending
@@ -329,3 +329,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer final Node26 npm run check PASS (69 tests). Independent final Node24.20.0/Node26.5.0 checks PASS (69 each), plus own both-runtime trace integrity, source-control, sequence, atomicity, guard privacy and graph-support probes.
 - Independent verifier/reviewer: /root/d_review; PASS, no unresolved Critical/Required findings. Exact identities and limitations in [review.md](evidence/d02/review.md); final verified register accepted separately.
 - Remaining limits: caller-attested reports; no application rollback, arbitrary input values, executable graph controls, flows or test-verification claim.
+
+
+### D03 — Implement flows and test-run evidence
+
+- Status: verified.
+- Authorized scope: all Phase D and shipping selected on 7 October 2026.
+- Dependencies: D02 verified at 5fb2db6 and shipped PR16; historical evidence retained.
+- Acceptance: flows preserve ordered scoped transitions; only matching passed assertions in passed runs confer test-verified provenance; failed runs remain evidence.
+- Artifact: flow/test-run operations, deferred atomic test-run links and assertion targets, target/trace/time evidence validators, reviewed assertion/version text and synthetic matrix.
+- Verification: writer final Node26 check PASS (73 tests). Independent final Node24.20.0/Node26.5.0 checks PASS (73 each); both-runtime multi-edge flow, forward refs, time bounds, failed/unrelated assertion, atomicity and prose-privacy probes PASS. Per-item unrelated-evidence finding repaired and regression added.
+- Independent verifier/reviewer: /root/d_review; PASS with no unresolved Critical/Required findings. Exact identities, repaired findings and limitations in [review.md](evidence/d03/review.md); final verified register accepted separately.
+- Remaining limits: caller attests runner/application version and reports. No independently certified UI business rule, host compatibility or later recall/recovery gate.
