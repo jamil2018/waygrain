@@ -200,7 +200,7 @@ export function query(
             .get(id) as { screen_id: string };
           const latest = store.db
             .prepare(
-              `SELECT c.state_id FROM captures c JOIN records r ON r.id=c.id WHERE c.screen_id=? AND c.coverage='complete' AND ${visibleSql('c')} ORDER BY c.captured_at DESC,r.created_revision DESC,c.id LIMIT 1`,
+              `SELECT c.state_id FROM captures c JOIN records r ON r.id=c.id WHERE c.screen_id=? AND c.coverage='complete' AND ${visibleSql('c')} ORDER BY julianday(c.captured_at) DESC,r.created_revision DESC,c.id LIMIT 1`,
             )
             .get(state.screen_id) as { state_id: string } | undefined;
           if (latest && latest.state_id !== id) changed.push(id);

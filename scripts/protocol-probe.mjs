@@ -71,6 +71,7 @@ export async function probeStdio(cli, configPath, exercise) {
         'wg_commit',
         'wg_query',
         'wg_changes',
+        'wg_plan_refresh',
         'wg_browser_open',
         'wg_browser_status',
         'wg_browser_snapshot',
@@ -95,6 +96,7 @@ export async function probeStdio(cli, configPath, exercise) {
       'evidence',
       'query',
       'changes',
+      'refresh_plan',
     ]);
     const rejected = await request(5, 'tools/call', {
       name: 'wg_status',

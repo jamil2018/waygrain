@@ -37,7 +37,7 @@ function captureIds(store: Store, id: string): string[] {
     return (
       store.db
         .prepare(
-          `SELECT c.id FROM captures c JOIN evidence_links e ON c.id=e.capture_id WHERE e.target_id=? AND ${visibleSql('c')} ORDER BY c.captured_at DESC,c.id LIMIT 51`,
+          `SELECT c.id FROM captures c JOIN evidence_links e ON c.id=e.capture_id WHERE e.target_id=? AND ${visibleSql('c')} ORDER BY julianday(c.captured_at) DESC,c.id LIMIT 51`,
         )
         .all(id) as { id: string }[]
     ).map((r) => r.id);
@@ -121,11 +121,26 @@ export function summary(
         ).capture_json,
       ) as Capture,
   );
-  const dates = captures.map((c) => c.captured_at).sort();
-  const completeDates = captures
-    .filter((c) => c.coverage.kind === 'complete')
+  const dates = captures
     .map((c) => c.captured_at)
-    .sort();
+    .sort((a, b) => Date.parse(a) - Date.parse(b));
+  // Check time comes from all qualifying observations, independent of summary caps.
+  const completeDates = ['screen', 'state', 'control'].includes(r.kind)
+    ? ((
+        store.db
+          .prepare(
+            `SELECT c.captured_at AS at FROM captures c JOIN evidence_links e ON c.id=e.capture_id WHERE e.target_id=? AND c.coverage='complete' AND ${visibleSql('c')} ORDER BY julianday(c.captured_at) DESC,c.id LIMIT 1`,
+          )
+          .get(id) as { at: string } | undefined
+      )?.at ?? null)
+    : null;
+  const checkedDates = completeDates
+    ? [completeDates]
+    : captures
+        .filter((c) => c.coverage.kind === 'complete')
+        .map((c) => c.captured_at)
+        .sort((a, b) => Date.parse(a) - Date.parse(b));
+
   let at = dates.at(-1) ?? graph?.recorded_at ?? new Date(0).toISOString();
   let coverage: Capture['coverage'] =
     captures.length && captures.every((c) => c.coverage.kind === 'complete')
@@ -260,7 +275,8 @@ export function summary(
       break;
     }
   }
-  if (r.kind === 'screen' && completeDates.length) at = completeDates.at(-1)!;
+  if (['screen', 'state', 'control'].includes(r.kind) && checkedDates.length)
+    at = checkedDates.at(-1)!;
   const active = activeAnnotations(store, id);
 
   const contradicted = ['name', 'description', 'interpretation'].some(
@@ -284,7 +300,7 @@ export function summary(
     coverage = { kind: 'partial', subtree: 'root', reason: 'truncated' };
   const unknown =
     !captures.length ||
-    (r.kind === 'screen' && !completeDates.length) ||
+    (r.kind === 'screen' && !checkedDates.length) ||
     (r.kind === 'annotation' && provenance === 'inferred');
   const age = Math.max(0, (now - Date.parse(at)) / 1000);
   return {
@@ -298,7 +314,7 @@ export function summary(
       provenance,
       coverage,
       freshness: {
-        observed_at: at,
+        observed_at: dates.at(-1) ?? at,
         last_checked_at:
           unknown ||
           [
@@ -310,7 +326,7 @@ export function summary(
           ].includes(r.kind)
             ? null
             : r.kind === 'screen'
-              ? (completeDates.at(-1) ?? null)
+              ? (checkedDates.at(-1) ?? null)
               : at,
         application_version: version,
         age_seconds: age,
