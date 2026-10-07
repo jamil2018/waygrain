@@ -4,6 +4,8 @@ import { mkdtemp, chmod, rm } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
+import { AttemptJournal } from './attempts.js';
+import { mappedRoute } from './snapshot.js';
 import { Store } from '../store/database.js';
 import { selectedApp } from '../core/ingest.js';
 import { canonical } from '../core/normalize.js';
@@ -47,6 +49,7 @@ export class BrowserSession {
     command: WorkerRequest['command'],
     page?: PageBinding,
     app?: WorkerRequest['app'],
+    extra: Partial<WorkerRequest> = {},
   ) {
     const child = this.child;
     if (!child?.connected) throw new BrowserError('SESSION_CLOSED');
@@ -70,7 +73,13 @@ export class BrowserSession {
         timer,
       });
       child.send(
-        { id, command, ...(page ? { page } : {}), ...(app ? { app } : {}) },
+        {
+          id,
+          command,
+          ...(page ? { page } : {}),
+          ...(app ? { app } : {}),
+          ...extra,
+        },
         (error) => {
           if (error) {
             clearTimeout(timer);
@@ -193,6 +202,50 @@ export class BrowserSession {
       this.opens.set(replayKey, { scope: canonical(scope), page });
       return envelope({ status: 'open', page, capabilities });
     }
+    if (tool === 'wg_browser_navigate') {
+      const q = validateRequest('wg_browser_navigate', input);
+      const metadata = {
+        session_id: q.session_id,
+        page_id: q.page_id,
+        snapshot_id: q.snapshot_id,
+        scope: q.scope,
+        route: mappedRoute(q.url, app, q.scope.origin),
+      };
+      const journal = new AttemptJournal(this.store, app.app_id);
+      const replay = journal.replay(q.execution_id, tool, metadata);
+      if (replay) return envelope(replay);
+      if (
+        !this.child?.connected ||
+        this.stopping ||
+        this.ownerApp !== app.app_id
+      )
+        throw new BrowserError('SESSION_CLOSED');
+      const pending = (
+        await this.rpc('prepare_navigate', undefined, undefined, {
+          navigation: q,
+        })
+      ).receipt;
+      if (!pending) throw new BrowserError('BROWSER_UNAVAILABLE');
+      journal.reserve(q.request_id, tool, metadata, pending);
+      let final;
+      try {
+        final = (
+          await this.rpc('navigate', undefined, undefined, {
+            execution_id: q.execution_id,
+          })
+        ).receipt;
+      } catch {
+        final = {
+          ...pending,
+          state: 'unknown' as const,
+          dispatch: 'uncertain' as const,
+          error_code: 'UNKNOWN_OUTCOME' as const,
+        };
+      }
+      if (!final) throw new BrowserError('UNKNOWN_OUTCOME');
+      journal.finish(q.request_id, final);
+      return envelope(final);
+    }
     if (tool === 'wg_browser_snapshot') {
       const q = validateRequest('wg_browser_snapshot', input);
       if (
@@ -211,7 +264,22 @@ export class BrowserSession {
       const q = validateRequest('wg_browser_status', input);
       if (q.session_id && q.session_id !== this.page?.session_id)
         throw new BrowserError('SESSION_CLOSED');
-      if (q.execution_id) throw new BrowserError('SESSION_CLOSED');
+      if (q.execution_id) {
+        const receipt = new AttemptJournal(this.store, app.app_id).read(
+          q.execution_id,
+        );
+        if (!receipt) throw new BrowserError('NOT_FOUND');
+        const open =
+          this.child?.connected &&
+          !this.stopping &&
+          (await this.rpc('status')).status === 'open';
+        return envelope({
+          status: open ? 'open' : 'closed',
+          page: open ? this.page : null,
+          capabilities,
+          attempts: [receipt],
+        });
+      }
       const open =
         this.child?.connected &&
         !this.stopping &&

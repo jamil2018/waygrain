@@ -1,10 +1,11 @@
-import type { Responses } from '../contracts/index.js';
+import type { Responses, Requests } from '../contracts/index.js';
 import type { AppConfiguration, Capture } from '../core/normalize.js';
 
 export const LIFECYCLE_TOOLS = [
   'wg_browser_open',
   'wg_browser_status',
   'wg_browser_snapshot',
+  'wg_browser_navigate',
   'wg_browser_close',
 ] as const;
 export type LifecycleTool = (typeof LIFECYCLE_TOOLS)[number];
@@ -37,7 +38,10 @@ export class BrowserError extends Error {
 }
 export interface WorkerRequest {
   id: number;
-  command: 'open' | 'status' | 'close' | 'snapshot';
+  command:
+    'open' | 'status' | 'close' | 'snapshot' | 'prepare_navigate' | 'navigate';
+  navigation?: Requests['wg_browser_navigate'];
+  execution_id?: string;
   app?: AppConfiguration;
   page?: PageBinding;
 }
@@ -47,6 +51,7 @@ export interface WorkerReply {
     status: 'open' | 'closed';
     cleanup?: 'complete' | 'unconfirmed';
     snapshot?: Responses['wg_browser_snapshot']['data'];
+    receipt?: Responses['wg_browser_navigate']['data'];
   };
   error?: BrowserError['code'];
 }
