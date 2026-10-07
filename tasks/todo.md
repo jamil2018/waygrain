@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 and later tasks remain `pending`. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -55,7 +55,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] E02 — Implement freshness and refresh plans — verified
 - [x] E03 — Implement export, backup, and restore — verified
 - [x] E04 — Implement scoped deletion, undo, purge, and storage cap — verified
-- [ ] E05 — Verify concurrency, crash, and migration recovery — pending
+- [x] E05 — Verify concurrency, crash, and migration recovery — verified
 - [ ] E06 — Recovery checkpoint — pending
 
 ## Stage F — Plugin and Blogen pilot
@@ -418,3 +418,11 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer Node26 check PASS (92). Independent /root/e_review Node24/26 checks PASS (92 each), own scope/history/replay/CLI/preview/peer/privacy/backup retention and post-write cap rollback probes PASS.
 - Review: PASS, no unresolved Required findings. Exact identities and separately accepted E01–E03 register: [review.md](evidence/e04/review.md).
 - Limits: cap reserves conservative WAL upper bound and can reject early; actual DB+WAL reported. Purge does not erase separate backups/exports/forensic sets or safe request/attempt markers; physical-media erasure unclaimed. Reclaim verdict distinct from committed deletion. Other scopes/history preserved.
+
+### E05 — Verify concurrency, crash, and migration recovery
+
+- Status: verified; depends on E04 at 376c2f4. Whole Phase E/shipping authorized 7 October 2026.
+- Artifact: process stress harness and recovery guide; production bytes unchanged from E04.
+- Verification: writer final Node26 check PASS (95). Independent /root/e_review Node24/26 checks PASS (95 each), own competing-process ingestion, killed write and killed real migration probes PASS. Reviewed writer harness confirms bounded busy, failed migration rollback, future-schema exact bytes, live-peer migration/restore refusal and actual SIGKILL before/after real restore rename; whole query results preserved.
+- Review: PASS, no unresolved Required findings. Exact source/runtime/test identities, actual kill signals and harness correction history in [review.md](evidence/e05/review.md).
+- Limits: deterministic test-only native/builtin barriers, no production hooks. Actual local macOS process crash evidence; no hardware power loss or cross-platform attestation. Migration pre-images remain distinct from public current-schema backups.
