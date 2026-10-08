@@ -1,0 +1,24 @@
+{
+  "verdict": "ACCEPT_FOR_NEW_LIVE_RUN",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "controller_sha256": "189f6f3e0126b2408c070d9deb1b85bc13e3d722d4734d33bfdac616c36b784b",
+  "preserved_v1_sha256": "b077b5a7d7db22c9c30905994986ad18404ba9fa035f06e42ff99e44cf226a25",
+  "preserved_first_live_receipt_sha256": "5b029ca8f4c5301b4bbc12d05911cf9af8cff7c76158fda43b88b3c6f2b0c25e",
+  "checks": [
+    "Node24 actual startup/malformed-synthetic-input/quit passed with13tools,UUID run,empty stderr and no input echo",
+    "all request/execution identifiers include fresh run UUID",
+    "per-run receipt filenames preserve prior evidence",
+    "tool errors restricted to published errorCode enum or static fallback; malformed commands remain generic",
+    "snapshot invalidation and uncertain-execution gate remain fail closed",
+    "independent authoritative prior AttemptJournal.read(pilot_execution_4) absent with two captures after confirmed prior closure",
+    "all9 applied Blogen source hashes equal accepted overlay manifest"
+  ],
+  "prior_run_assessment": "Two partial fragments with null state IDs, zero durable attempts and public close cleanup complete are preserved. Core reserves attempt journal before dispatch; absent exact prior journal after completed rejected call/closure supports no dispatch. This does not establish a completed journey.",
+  "limits": [
+    "F03 live journey and application outcome acceptance still pending",
+    "Synthetic local overlay remains temporary; native Supabase auth/permissions/persistence not qualified",
+    "Verifier opened no browser and dispatched no application action",
+    "Overlay typecheck and changed-file lint reported passed; whole app lint remains failed in unchanged preexisting source"
+  ]
+}

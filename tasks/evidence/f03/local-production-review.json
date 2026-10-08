@@ -1,0 +1,29 @@
+{
+  "verdict": "ACCEPT_TEMPORARY_PRODUCTION_FIXTURE_AND_PUBLIC_FALLBACK",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "production_patch_sha256": "24c1f4ffeb1beef0a563b8a141297548068dc7936356a577993c449011531b46",
+  "production_manifest_sha256": "c136533b5efb44fa6eb93ea44a60da5d6f221cb1880b15c931b2d8e85ff670ca",
+  "public_fallback_patch_sha256": "183833a9fa4eb3710cde4b983989628606f3e30ea8f214410ef57151249eb57a",
+  "public_fallback_manifest_sha256": "cd75fe21c54d5b9bc0db736c969344fcfa1db23ea328a50986604327cbe427df",
+  "independent_checks": [
+    "Repaired production patch replayed in isolated temp directory from exact2interim-before hashes to exact2after hashes",
+    "Policy checked in development/production: requires flag1 and exact localhost3000 or127.0.0.1:3000; wrongport/foreignhost/emptyhost rejected",
+    "Actual server source transpiled with instrumented dependency stubs: flag1 refuses before pilotheaders,cookies,getSupabaseEnv,or backendclient calls",
+    "PublicRouteFallbacks exactly use-client directive+blankline+original bytes",
+    "All12 accepted prior-source identities match after applying only documented2production transitions; fallback is13th source",
+    "Full Blogen TypeScript noEmit incrementalfalse PASS0",
+    "ESLint3modified files policy/server/PublicRouteFallbacks PASS0"
+  ],
+  "build": "Production webpack build passed per writer report; not independently rerun in this review",
+  "findings_resolved": [
+    "Archived production patch originally omitted policy transition and used inconsistent server baseline; now exact historical before-to-after replay verified"
+  ],
+  "limits": [
+    "Diagnostic websocketcomparison and direct driver dialog observation are troubleshooting only; no publicMCP journey qualification inferred",
+    "Browser websocket restriction remains unchanged; production build is temporary application setup",
+    "Synthetic backend/authprofile does not qualify native Supabaseauth,backendauthorization,persistence or hostportability",
+    "Blank build-time backend variables are writer-declared setup; no environment contents read or retained by reviewer",
+    "Restore13source files/new-fileabsences and remove nonsecret pilot flag after capture; retain original historical manifests"
+  ]
+}

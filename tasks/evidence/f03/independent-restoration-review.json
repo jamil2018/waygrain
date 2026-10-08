@@ -1,0 +1,25 @@
+{
+  "verdict": "ACCEPT_SOURCE_RESTORATION",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "restored_original_sha256_or_absence": {
+    "src/lib/waygrain-pilot-policy.ts": null,
+    "src/lib/waygrain-pilot.ts": null,
+    "src/lib/supabase/middleware.ts": "0e0714e8e447545eeebfc671059aa2aea337945e34636fd9f56e9a36f3bc90c2",
+    "src/lib/db/auth.ts": "b22a07287db221e49655891d6478392986cd4e351c4b90052888b643ed0c0909",
+    "src/lib/db/categories.ts": "0ec1cd26ef3df88517449bbd9b81790c302db1f6f7315a00893706577add663e",
+    "src/actions/categories.ts": "81a039dc25438971004a35b8be3ce610d677d867cde870055fe764c57c4397dc",
+    "src/actions/posts.ts": "4855c727dc06469790495bb9dfa2a2c10fbaa492eda474fe7169b45c834ecc9f",
+    "src/actions/follows.ts": "c1d43b212bdcea36e0a52ec32e80847d9be314e3774597c1ef9957f1202ab43a",
+    "src/lib/supabase/server.ts": "1921f52084074704ba8b605ba23af4638c9a4dcae7d2096f80bff993f7ad0bd2",
+    "src/components/feedback/StudioSkeleton.tsx": "2957e0d054247bb9ff367733dfe275c2ad220022789ba31963e12cb0c7ac8f0a",
+    "src/components/feedback/PageSkeleton.tsx": "0a8c8f87cfa10f0f4518c8798aeccf3e77fe6255345bc0ab44bc9f81f625fa02",
+    "next.config.ts": "12aa774478e5b304d7fe5584e63a72639442cb159f39f4b4aa8b2c4b31f82a35",
+    "src/components/feedback/PublicRouteFallbacks.tsx": "72a0f8210a4adff26057a38e353a64ff0f0abea80c879574aa42054c6a105e96",
+    "src/components/studio/AdminCategoriesView.tsx": "cb4f2488ae7254e7a6e7056a53aa910d8f9fed9593e42410b5a5c277f517e692"
+  },
+  "own_flag_file": "absent",
+  "loopback127001_port3000": "connection_refused_by_independent_network_authorized_socket_probe",
+  "unrelated_work": "Parent reports preserved preexisting dirty entries; reviewer verified exact14selected originals/new-fileabsences, not a full pre-pilot checkout inventory",
+  "limits": "Port refusal attests no loopback listener at probe time; no claim about every host process/profile. Browser cleanup is reported by final publicclose receipt."
+}

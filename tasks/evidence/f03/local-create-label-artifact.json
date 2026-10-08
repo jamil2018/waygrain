@@ -1,0 +1,6 @@
+{
+  "path": "src/components/studio/AdminCategoriesView.tsx",
+  "before_sha256": "cb4f2488ae7254e7a6e7056a53aa910d8f9fed9593e42410b5a5c277f517e692",
+  "after_sha256": "de13c3ba792d7f7755c56c08e43f3057fa52598a5acbd95faeb644d2e24a9fa1",
+  "reason": "Unique specific submit label already allowed by reviewed pilot profile; preserve strict target ambiguity refusal."
+}

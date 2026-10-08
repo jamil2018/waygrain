@@ -1,0 +1,27 @@
+{
+  "verdict": "ACCEPT_TEMPORARY_OVERLAY_PREFLIGHT",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "patch_sha256": "76eb742e8e6c7f506cf7a96c686cf839f5af9f8a43881202896eb2993074ce40",
+  "identity_manifest_sha256": "bd93eaac3ee67d7b1a19c737653fd491eb83c605d71ad2ed3f0a80793aee3017",
+  "pre_apply_identity_check": "all9 files match recorded original hashes or absence",
+  "source_checks": [
+    "development-only explicit flag and exact loopback host/port guard",
+    "pure middleware policy avoids server-only imports/circular dependencies",
+    "only two category routes accepted in fixture mode",
+    "process-local invented category records; no native credentials or authentication cookies",
+    "intended category reads/create/update/delete and post-count/follow reads intercepted",
+    "unsupported follow mutation refuses",
+    "shared server Supabase client fails closed before cookies/env/client creation",
+    "Category/User shape compatibility inspected against actual source types",
+    "public/admin category UI components remain unchanged"
+  ],
+  "required_finding_resolved": "path-only middleware did not prevent other server actions calling hosted backend; shared createClient guard now refuses in fixture context",
+  "acceptance_boundary": "May prove Waygrain public-MCP interactions with actual unchanged category UI over synthetic process-local backend; cannot qualify native Supabase authentication, backend roles/permissions, native storage persistence, production Blogen or full host portability. Live3journey evidence acceptance remains pending.",
+  "conditions": [
+    "Apply only exact9source files plus separately tracked nonsecret development flag",
+    "Actual modified application typecheck/lint before feature actions; no compile pass claimed by this source inspection",
+    "Restore all9 source originals/new-file absence and remove pilot flag after capture, preserving existing environment and unrelated dirty work",
+    "Record overlay/bootstrap disclosure with actual live evidence; partial captures never promoted to transitions"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "src/lib/waygrain-pilot-policy.ts": {
+    "before_sha256": null,
+    "after_sha256": "8faf040acdbcc0dda7c2f812964a461db7457a7dc916524d1923574a49444e9f"
+  },
+  "src/lib/waygrain-pilot.ts": {
+    "before_sha256": null,
+    "after_sha256": "815c3fef97f0db5b65cd90a04710bf8c6c16c613fa622e62c3b3612474ab3ee5"
+  },
+  "src/lib/supabase/middleware.ts": {
+    "before_sha256": "0e0714e8e447545eeebfc671059aa2aea337945e34636fd9f56e9a36f3bc90c2",
+    "after_sha256": "67e4c365b31cc562689971986b787698ec3c0f3950700d3956da5c2f3d9ae160"
+  },
+  "src/lib/db/auth.ts": {
+    "before_sha256": "b22a07287db221e49655891d6478392986cd4e351c4b90052888b643ed0c0909",
+    "after_sha256": "0fb045218aa5947cfef9cea219313dda8893be7d23e28fe47245162730640a9d"
+  },
+  "src/lib/db/categories.ts": {
+    "before_sha256": "0ec1cd26ef3df88517449bbd9b81790c302db1f6f7315a00893706577add663e",
+    "after_sha256": "4328f4c654372abd08d471676eb4f9818a87b66c00915aef1182458d1aeedf4a"
+  },
+  "src/actions/categories.ts": {
+    "before_sha256": "81a039dc25438971004a35b8be3ce610d677d867cde870055fe764c57c4397dc",
+    "after_sha256": "f93cc185a75971861aa7dfa69cf7d48d1d59437a9154f89363d5e91444e13939"
+  },
+  "src/actions/posts.ts": {
+    "before_sha256": "4855c727dc06469790495bb9dfa2a2c10fbaa492eda474fe7169b45c834ecc9f",
+    "after_sha256": "9d5dceb84f71bd1e90ea9a328d4d648891595a9932727bb096bdd895e5da005c"
+  },
+  "src/actions/follows.ts": {
+    "before_sha256": "c1d43b212bdcea36e0a52ec32e80847d9be314e3774597c1ef9957f1202ab43a",
+    "after_sha256": "2c5dcf8d6eebac683ab9c0de2f33ea88711f54c9d2808e7aac75a61045070c7e"
+  },
+  "src/lib/supabase/server.ts": {
+    "before_sha256": "1921f52084074704ba8b605ba23af4638c9a4dcae7d2096f80bff993f7ad0bd2",
+    "after_sha256": "ec2d6b4754d49fbd2195f7fc214dde839459c29b1008b643458085cd65625c4f"
+  }
+}

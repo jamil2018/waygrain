@@ -1,0 +1,931 @@
+{
+  "verdict": "ACCEPT_F03_SCOPED_PARTIAL_OBSERVATION_PILOT",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "receipt_file": "pilot-receipt-79d5cb30-e224-4a71-aa60-1795796e193d.json",
+  "receipt_sha256": "792328fba039bf783cf0d0b944a105d4fa18552518f8a3cdce56b318c02088f6",
+  "scope": {
+    "environment": "local",
+    "origin": "http://localhost:3000",
+    "role": "admin",
+    "account_scope": "synthetic",
+    "locale": "en-US"
+  },
+  "project_id": "1488d02f-8bbd-4d13-80e3-c2e1ffd505b5",
+  "app_id": "bbdf02c9-185b-4157-ab9a-596ecb20f3a8",
+  "run_id": "79d5cb30-e224-4a71-aa60-1795796e193d",
+  "runtime": {
+    "node": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "read_mode": "SQLite readonly; no application actions or graph mutations",
+  "checks": [
+    "13captureIDs and immutable sanitized payloads match authoritative same-app/scope database rows",
+    "8actual attempt receipts match AttemptJournal exact bytes/fields; all succeeded/dispatched",
+    "one session/page/trace with contiguous ordered1to21capture/actionsequence and nondecreasing timestamps",
+    "known reviewed safe labels only; strict capture schema excludes value fields",
+    "all13partial captures have null state IDs and no graph controls",
+    "zero graph records/actions/events/transitions/flows committed"
+  ],
+  "observations": [
+    {
+      "capture_id": "fb69ecba-00fb-4236-be7d-1a35f00cf59c",
+      "trace_seq": 1,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        }
+      ],
+      "authoritative_capture_sha256": "3ee7475f7f8317d2627b8c161584ec7611aa03780ef17da8eed72493edbc7d4c"
+    },
+    {
+      "capture_id": "f07667af-6c3c-4066-afde-c79d36079741",
+      "trace_seq": 3,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [
+        "create_category"
+      ],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        },
+        {
+          "role": "dialog",
+          "name": "Create category"
+        },
+        {
+          "role": "heading",
+          "name": "Create category"
+        },
+        {
+          "role": "text",
+          "name": "Title"
+        },
+        {
+          "role": "textbox",
+          "name": "Title"
+        },
+        {
+          "role": "button",
+          "name": "Create category"
+        }
+      ],
+      "authoritative_capture_sha256": "00cb479154a4dfb6c17b95049993f2bd65411dacb514ec74d3ccb7696ee21ae0"
+    },
+    {
+      "capture_id": "88f79073-eebe-4a5d-a8d6-0d4d1b15bbe8",
+      "trace_seq": 4,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [
+        "create_category"
+      ],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        },
+        {
+          "role": "dialog",
+          "name": "Create category"
+        },
+        {
+          "role": "heading",
+          "name": "Create category"
+        },
+        {
+          "role": "text",
+          "name": "Title"
+        },
+        {
+          "role": "textbox",
+          "name": "Title"
+        },
+        {
+          "role": "button",
+          "name": "Create category"
+        }
+      ],
+      "authoritative_capture_sha256": "cecab42c63f4dc8fdf08b85f997236830166e6e409a3654fe46be94705764b43"
+    },
+    {
+      "capture_id": "bbb2abe3-c86f-4302-a0df-e3667686203f",
+      "trace_seq": 6,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        }
+      ],
+      "authoritative_capture_sha256": "db52c286e70a0cf149a54c9cb26fb83294231b176013da882d4ac9fd861fbfc3"
+    },
+    {
+      "capture_id": "44e292f7-1bb4-409e-a44f-400635897571",
+      "trace_seq": 8,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [
+        "create_category"
+      ],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        },
+        {
+          "role": "dialog",
+          "name": "Create category"
+        },
+        {
+          "role": "heading",
+          "name": "Create category"
+        },
+        {
+          "role": "text",
+          "name": "Title"
+        },
+        {
+          "role": "textbox",
+          "name": "Title"
+        },
+        {
+          "role": "button",
+          "name": "Create category"
+        }
+      ],
+      "authoritative_capture_sha256": "65afee2f08e2364457e58c0fdd860611a5b28bf3dc3786ad0006f9c33f57a42e"
+    },
+    {
+      "capture_id": "2ceb9dd2-1bbf-4e1a-a5d2-b0cfaa9194f2",
+      "trace_seq": 10,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [
+        "create_category"
+      ],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        },
+        {
+          "role": "dialog",
+          "name": "Create category"
+        },
+        {
+          "role": "heading",
+          "name": "Create category"
+        },
+        {
+          "role": "text",
+          "name": "Title"
+        },
+        {
+          "role": "textbox",
+          "name": "Title"
+        },
+        {
+          "role": "button",
+          "name": "Create category"
+        }
+      ],
+      "authoritative_capture_sha256": "7973397a5f2262c7860345b1cdf0514f5cc62ffc6376e2816b03546b9ee9aba8"
+    },
+    {
+      "capture_id": "8b56ac60-3df3-4ef4-a253-6930a87b5f1e",
+      "trace_seq": 12,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        },
+        {
+          "role": "row",
+          "name": "waygrain pilot category"
+        },
+        {
+          "role": "generic",
+          "name": "waygrain pilot category"
+        }
+      ],
+      "authoritative_capture_sha256": "61329d234f786b7d470329a8d735ff88963f1ccf3be9c40faaa8dabac7cbca6f"
+    },
+    {
+      "capture_id": "7b1e19cf-3a38-4d67-bfa8-b9bfa3abecbc",
+      "trace_seq": 13,
+      "route": "/admin/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories"
+        },
+        {
+          "role": "text",
+          "name": "Categories"
+        },
+        {
+          "role": "link",
+          "name": "Posts"
+        },
+        {
+          "role": "text",
+          "name": "Posts"
+        },
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "button",
+          "name": "Create"
+        },
+        {
+          "role": "text",
+          "name": "Create"
+        },
+        {
+          "role": "button",
+          "name": "Delete"
+        },
+        {
+          "role": "text",
+          "name": "Delete"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "generic",
+          "name": "Categories"
+        },
+        {
+          "role": "generic",
+          "name": "Category"
+        },
+        {
+          "role": "generic",
+          "name": "Posts"
+        },
+        {
+          "role": "generic",
+          "name": "Created"
+        },
+        {
+          "role": "row",
+          "name": "waygrain pilot category"
+        },
+        {
+          "role": "generic",
+          "name": "waygrain pilot category"
+        }
+      ],
+      "authoritative_capture_sha256": "0ff2c07b11382b3320892867bfabfee0b71d0559419e644b370b35f645370a4b"
+    },
+    {
+      "capture_id": "a998c041-9929-4522-8da8-a1f2f9aec5bd",
+      "trace_seq": 15,
+      "route": "/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "heading",
+          "name": "waygrain pilot category"
+        }
+      ],
+      "authoritative_capture_sha256": "df694d52b1fdf71efec78a6d1315966990a7128a0adac65bc64c77cd6a58b8e6"
+    },
+    {
+      "capture_id": "1bc624d8-4c8b-4210-a577-a117c1383798",
+      "trace_seq": 16,
+      "route": "/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "heading",
+          "name": "waygrain pilot category"
+        }
+      ],
+      "authoritative_capture_sha256": "8d1deacc59afba004762440bdea56ff5439a807eff656fca020a0949c0423532"
+    },
+    {
+      "capture_id": "4131fed5-bb81-4f9d-a709-df8f048f13c6",
+      "trace_seq": 18,
+      "route": "/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "text",
+          "name": "No categories match your search."
+        }
+      ],
+      "authoritative_capture_sha256": "6063593de81037a0637844465792f8d58503c5259636a15e94023e5ba415f46a"
+    },
+    {
+      "capture_id": "ff56435f-396a-45cc-acc0-09b0c374369e",
+      "trace_seq": 19,
+      "route": "/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "text",
+          "name": "No categories match your search."
+        }
+      ],
+      "authoritative_capture_sha256": "b3c88ec0efa347a2b9bce7b8586f82e974d0b566d04b6ab52670fa0b9e7f2234"
+    },
+    {
+      "capture_id": "a024bf6b-1588-4408-aa56-88d469bf4b32",
+      "trace_seq": 21,
+      "route": "/categories",
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "heading",
+          "name": "Categories"
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories"
+        },
+        {
+          "role": "heading",
+          "name": "waygrain pilot category"
+        }
+      ],
+      "authoritative_capture_sha256": "029c714527c8e877086311e1e3bb3579c728551c5f8cdeb5b5cf3807179c185e"
+    }
+  ],
+  "attempts": [
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_3",
+      "trace_seq": 2,
+      "kind": "click",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "fb69ecba-00fb-4236-be7d-1a35f00cf59c"
+    },
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_6",
+      "trace_seq": 5,
+      "kind": "key",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "88f79073-eebe-4a5d-a8d6-0d4d1b15bbe8"
+    },
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_8",
+      "trace_seq": 7,
+      "kind": "click",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "bbb2abe3-c86f-4302-a0df-e3667686203f"
+    },
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_10",
+      "trace_seq": 9,
+      "kind": "fill",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "44e292f7-1bb4-409e-a44f-400635897571"
+    },
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_12",
+      "trace_seq": 11,
+      "kind": "click",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "2ceb9dd2-1bbf-4e1a-a5d2-b0cfaa9194f2"
+    },
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_15",
+      "trace_seq": 14,
+      "kind": "navigate",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "7b1e19cf-3a38-4d67-bfa8-b9bfa3abecbc"
+    },
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_18",
+      "trace_seq": 17,
+      "kind": "fill",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "1bc624d8-4c8b-4210-a577-a117c1383798"
+    },
+    {
+      "execution_id": "79d5cb30-e224-4a71-aa60-1795796e193d_pilot_execution_21",
+      "trace_seq": 20,
+      "kind": "fill",
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "before_capture_id": "ff56435f-396a-45cc-acc0-09b0c374369e"
+    }
+  ],
+  "closure": {
+    "status": "closed",
+    "session_id": "e33816fa-574c-4456-8406-e559a8ee7b65",
+    "cleanup": "complete"
+  },
+  "journeys": {
+    "open_cancel": {
+      "before": 1,
+      "opened": 3,
+      "before_cancel": 4,
+      "closed": 6
+    },
+    "create_disposable": {
+      "opened": 8,
+      "before_submit": 10,
+      "created_row": [
+        12,
+        13
+      ]
+    },
+    "browse_filter": {
+      "browse": [
+        15,
+        16
+      ],
+      "no_match": [
+        18,
+        19
+      ],
+      "restored": 21
+    }
+  },
+  "limits": [
+    "Partial coverage prevents canonical state/transition/flow claims; successful driver receipts alone are not outcome proof",
+    "UI observations over temporary process-local synthetic backend and adjusted unique submit label; native Supabaseauth/roles/backendpermissions/persistence and originalduplicate-label behavior unqualified",
+    "Generic privacy/schema checks attest only retained sanitized output; they cannot prove every dropped raw page datum without separate browser-gate evidence",
+    "Codexnew-session recall/Claudeportability and fullF06 still separate gates"
+  ]
+}

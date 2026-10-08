@@ -1,0 +1,27 @@
+{
+  "verdict": "ACCEPT_F03_SHIPMENT_ARTIFACT",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "scope": "tasks/todo.md and entire tasks/evidence/f03 directory; F04 excluded",
+  "artifact_manifest_sha256": "3ae13006fa2e9999f7ec013a3af49cf277d6c7f85e51c13d146bd850014ed4de",
+  "bound_files": 36,
+  "independent_live_verdict": "ACCEPT_F03_SCOPED_PARTIAL_OBSERVATION_PILOT",
+  "authoritative_checks": "Readonly database validates13 scoped immutable sanitized captures,8exact durable attempts,contiguous1to21same-session/page/trace; observed modal open/cancel,synthetic row and filter/clear outputs; allpartial/nullstates/no graphrecords.",
+  "source_restoration": "Independent14beforehashes/newfileabsence+removedownflag; independent authorized socket connectionrefused on127.0.0.1:3000.",
+  "artifact_checks": [
+    "AllF03 JSON parse",
+    "Final controller,package,profile,configuration,receipt,local-app artifact references match exact hashes",
+    "All83 installed runtime files equal source dist",
+    "Historicalwait,v1controllers,unsuccessful runs and laterfixes preserved separately",
+    "Results/register state observed partialscopequalification and adaptedUI/backendlimits truthfully",
+    "git diff --check PASS; evidence-only change requires no further broad implementation tests beyond already passed writer Node24check101 and focused independent live/source checks"
+  ],
+  "required_findings_remaining": [],
+  "limits": [
+    "Accept adapted synthetic production pilot observations, not originalduplicate-label UI/nativeSupabaseauth/backendroles/persistence/fullstates/transitions/flows/testverification",
+    "NoCodexnewsession/Claudehost/fullF06/publicrelease claim",
+    "FullBlogenlint unchanged preexisting failure remains disclosed",
+    "Unrelateddirtywork preservation attested by parent; independentrestorationcheck confined14selected paths",
+    "Receipt/publicclose reports completecleanup; socketprobe doesnot certifyallhostprocesses"
+  ]
+}

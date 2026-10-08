@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "packed_sha256": "a973fcddb28bfb0dbf1f653e643fffa7eb420874e0ed2f353178e293574e0d5c",
+  "runtime_manifest_sha256": "ca155f6c87fcf38a9f6860119c109f512948c2392fa8e93f32a12120000e9310",
+  "runtime_files": 83,
+  "profile_sha256": "c907e5d1f243c69789b2d28ec80a893e361ac749bea2806503de073ca08286ea",
+  "controller_sha256": "b077b5a7d7db22c9c30905994986ad18404ba9fa035f06e42ff99e44cf226a25",
+  "configuration_sha256": "1ec7b211cd81628d13121f8303d1d4f63924249767e997df50f7bc6933075a9c",
+  "source_runtime_equal": true,
+  "pilot_node": "24.20.0",
+  "platform": "darwin",
+  "arch": "arm64"
+}

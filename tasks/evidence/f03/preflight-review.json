@@ -1,0 +1,29 @@
+{
+  "verdict": "ACCEPT_FOR_LIVE_PILOT",
+  "reviewer": "/root/f_review",
+  "scope": "Harness preflight only; no live F03 journey acceptance",
+  "pilot_sha256": "b077b5a7d7db22c9c30905994986ad18404ba9fa035f06e42ff99e44cf226a25",
+  "checks": [
+    "13-tool stdio initialization and clean zero-browser-action quit passed independently",
+    "malformed synthetic command produces fixed error without input echo",
+    "startup protected by owned shutdown finally",
+    "successful snapshot ingestion precedes actions; all command errors clear snapshot",
+    "strict current target match and advertised action required",
+    "local snapshot invalidated and exact uncertain execution marked before dispatch",
+    "uncertain outcome blocks subsequent action/navigation; exact-ID status available",
+    "partial ingest requires null state ID; no transition commits invented",
+    "explicit close uses strict session/request fields; shutdown timeout reports unconfirmed"
+  ],
+  "findings_resolved": [
+    "raw error message echo",
+    "snapshot retained on action/ingestion failures",
+    "startup outside cleanup ownership",
+    "piped input iterator lost early commands"
+  ],
+  "limits": [
+    "Application journeys and outcome assertions remain untested",
+    "No browser opened by independent verifier",
+    "Current harness status does not clear uncertain outcomes automatically, conservatively preventing retries",
+    "Explicit SIGTERM/SIGKILL target only this spawned owned child; forced shutdown does not attest browser cleanup"
+  ]
+}

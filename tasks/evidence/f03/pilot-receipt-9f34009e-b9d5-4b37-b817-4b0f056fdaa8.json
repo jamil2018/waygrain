@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "application": "blogen",
+  "run_id": "9f34009e-b9d5-4b37-b817-4b0f056fdaa8",
+  "runtime": {
+    "node": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "base": {
+    "schema_version": 1,
+    "project_id": "1488d02f-8bbd-4d13-80e3-c2e1ffd505b5",
+    "app_id": "bbdf02c9-185b-4157-ab9a-596ecb20f3a8"
+  },
+  "scope": {
+    "environment": "local",
+    "origin": "http://localhost:3000",
+    "role": "admin",
+    "account_scope": "synthetic",
+    "locale": "en-US"
+  },
+  "captures": [
+    {
+      "screen_id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "capture_id": "13a5c90c-39b4-4f3c-a6c1-0ce4b49d1463",
+      "control_ids": [],
+      "redaction_summary": {
+        "dropped_fields": 0,
+        "dropped_texts": 0,
+        "profile": {
+          "alias": "blogen-pilot-labels",
+          "version": 1
+        }
+      },
+      "coverage": "partial",
+      "state_id": null,
+      "state_hash": null,
+      "fragment_hash": "4ef0f267c48ac38821c19633a6ecdebe3416a51861baa89ddf02bef102047b95",
+      "route": "/admin/categories",
+      "modal_stack": [],
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 1,
+      "captured_at": "2026-10-08T18:26:18.198Z"
+    },
+    {
+      "screen_id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "capture_id": "51938429-36f7-4ac5-afdf-018f814e55fe",
+      "control_ids": [],
+      "redaction_summary": {
+        "dropped_fields": 0,
+        "dropped_texts": 0,
+        "profile": {
+          "alias": "blogen-pilot-labels",
+          "version": 1
+        }
+      },
+      "coverage": "partial",
+      "state_id": null,
+      "state_hash": null,
+      "fragment_hash": "4ef0f267c48ac38821c19633a6ecdebe3416a51861baa89ddf02bef102047b95",
+      "route": "/admin/categories",
+      "modal_stack": [],
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 3,
+      "captured_at": "2026-10-08T18:26:26.444Z"
+    },
+    {
+      "screen_id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "capture_id": "da204fee-da71-49e8-90bf-45ba22762989",
+      "control_ids": [],
+      "redaction_summary": {
+        "dropped_fields": 0,
+        "dropped_texts": 0,
+        "profile": {
+          "alias": "blogen-pilot-labels",
+          "version": 1
+        }
+      },
+      "coverage": "complete",
+      "state_id": "feb5a04e-0e1c-4a67-9763-23343b88f9ad",
+      "state_hash": "2de1c2bdb8a092933ddcfa587a98f3ec9c2b26680c7a314059088a51e7d02e40",
+      "fragment_hash": null,
+      "route": "/admin/categories",
+      "modal_stack": [],
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 4,
+      "captured_at": "2026-10-08T18:36:20.693Z"
+    },
+    {
+      "screen_id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "capture_id": "47cd5296-acc2-4685-b7ac-067eba4390ce",
+      "control_ids": [],
+      "redaction_summary": {
+        "dropped_fields": 0,
+        "dropped_texts": 0,
+        "profile": {
+          "alias": "blogen-pilot-labels",
+          "version": 1
+        }
+      },
+      "coverage": "partial",
+      "state_id": null,
+      "state_hash": null,
+      "fragment_hash": "4ef0f267c48ac38821c19633a6ecdebe3416a51861baa89ddf02bef102047b95",
+      "route": "/admin/categories",
+      "modal_stack": [],
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 6,
+      "captured_at": "2026-10-08T18:39:14.806Z"
+    },
+    {
+      "screen_id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "capture_id": "6fcb65a5-1750-4bdb-9579-2df589145326",
+      "control_ids": [],
+      "redaction_summary": {
+        "dropped_fields": 0,
+        "dropped_texts": 0,
+        "profile": {
+          "alias": "blogen-pilot-labels",
+          "version": 1
+        }
+      },
+      "coverage": "partial",
+      "state_id": null,
+      "state_hash": null,
+      "fragment_hash": "4ef0f267c48ac38821c19633a6ecdebe3416a51861baa89ddf02bef102047b95",
+      "route": "/admin/categories",
+      "modal_stack": [],
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 8,
+      "captured_at": "2026-10-08T18:45:06.087Z"
+    }
+  ],
+  "attempts": [
+    {
+      "execution_id": "9f34009e-b9d5-4b37-b817-4b0f056fdaa8_pilot_execution_3",
+      "session_id": "ae382bf5-5e63-452a-a04b-e6e5e3267690",
+      "page_id": "37e15e16-9a92-4ed9-9579-45c883df085b",
+      "snapshot_id": "5c5020bb-caf0-4edf-bf17-0951f9eec15e",
+      "target_id": "8bf66f8f-b5ca-487d-ac32-46bd6fc21b7e",
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 2,
+      "action_kind": "click",
+      "occurred_at": "2026-10-08T18:26:18.319Z",
+      "after_snapshot_id": null,
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "error_code": null,
+      "before_capture_id": "13a5c90c-39b4-4f3c-a6c1-0ce4b49d1463"
+    },
+    {
+      "execution_id": "9f34009e-b9d5-4b37-b817-4b0f056fdaa8_pilot_execution_6",
+      "session_id": "ae382bf5-5e63-452a-a04b-e6e5e3267690",
+      "page_id": "37e15e16-9a92-4ed9-9579-45c883df085b",
+      "snapshot_id": "0ba99956-9db9-4f5d-aa9a-3229cb0d6900",
+      "target_id": null,
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 5,
+      "action_kind": "navigate",
+      "occurred_at": "2026-10-08T18:36:20.762Z",
+      "after_snapshot_id": null,
+      "state": "failed",
+      "dispatch": "dispatched",
+      "error_code": "APPLICATION_ERROR",
+      "before_capture_id": "da204fee-da71-49e8-90bf-45ba22762989"
+    },
+    {
+      "execution_id": "9f34009e-b9d5-4b37-b817-4b0f056fdaa8_pilot_execution_8",
+      "session_id": "ae382bf5-5e63-452a-a04b-e6e5e3267690",
+      "page_id": "37e15e16-9a92-4ed9-9579-45c883df085b",
+      "snapshot_id": "0fc06b47-394f-449e-a421-285e1c5921a4",
+      "target_id": null,
+      "trace_id": "1b3fddff-25e8-4646-976d-8b8a9d22ea22",
+      "trace_seq": 7,
+      "action_kind": "navigate",
+      "occurred_at": "2026-10-08T18:39:14.896Z",
+      "after_snapshot_id": null,
+      "state": "succeeded",
+      "dispatch": "dispatched",
+      "error_code": null,
+      "before_capture_id": "47cd5296-acc2-4685-b7ac-067eba4390ce"
+    }
+  ],
+  "closure": {
+    "status": "closed",
+    "session_id": "ae382bf5-5e63-452a-a04b-e6e5e3267690",
+    "cleanup": "complete"
+  }
+}

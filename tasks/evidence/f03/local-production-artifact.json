@@ -1,0 +1,15 @@
+{
+  "changes": [
+    {
+      "path": "src/lib/waygrain-pilot-policy.ts",
+      "before_sha256": "8faf040acdbcc0dda7c2f812964a461db7457a7dc916524d1923574a49444e9f",
+      "after_sha256": "d833ab918e7fc1717bd3c58d6009e2e38fe96c11186bae93e2618199fe5bd556"
+    },
+    {
+      "path": "src/lib/supabase/server.ts",
+      "before_sha256": "ec2d6b4754d49fbd2195f7fc214dde839459c29b1008b643458085cd65625c4f",
+      "after_sha256": "95cbf390edfb5fd3fbb1ebb6f856942de95c9944a08d17ee6c4f4c6645f2d062"
+    }
+  ],
+  "reason": "Keep exact loopback host and explicit flag; allow production-mode pilot to avoid blocked HMR. Server backend sink refuses all hosts whenever pilot flag enabled."
+}
