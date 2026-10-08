@@ -1,0 +1,20 @@
+{
+  "verdict": "ACCEPT_TEMPORARY_CLIENT_BOUNDARY_FIX",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "patch_sha256": "dd19895fbc1832cbfed2017e91021d2a1439852a49a7e6066b61d285db8fec4a",
+  "manifest_sha256": "41d4c6799140f026b3e0fa059371ed224646838aef712f7f3c2424b5ce1d52db",
+  "independent_checks": [
+    "Each of2 applied files is exactly use-client directive+blankline+original recorded bytes",
+    "all9 accepted fixture-isolation source after-hashes remain unchanged",
+    "full Blogen node node_modules/typescript/bin/tsc --noEmit --incremental false PASS exit0",
+    "node node_modules/eslint/bin/eslint.js src/components/feedback/StudioSkeleton.tsx src/components/feedback/PageSkeleton.tsx PASS exit0"
+  ],
+  "reason": "HeroUI components require client boundary when skeleton modules are imported from server loading boundaries; directives establish that boundary without altering feature markup or event handlers.",
+  "limits": [
+    "No live click/dialog/category outcome or hydration success inferred from source/type checks",
+    "Full repository lint prior preexisting failure remains documented separately",
+    "Restore2additional originals alongside9fixture files and remove development flag after pilot",
+    "Diagnostic successful counters are distinct from publicMCP journey evidence; diagnose-app uncaught Playwright failures must be sanitized before rerun"
+  ]
+}

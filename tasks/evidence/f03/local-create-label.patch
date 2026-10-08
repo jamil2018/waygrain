@@ -1,0 +1,13 @@
+diff --git a/src/components/studio/AdminCategoriesView.tsx b/src/components/studio/AdminCategoriesView.tsx
+index 94f0a85..1732a51 100644
+--- a/src/components/studio/AdminCategoriesView.tsx
++++ b/src/components/studio/AdminCategoriesView.tsx
+@@ -216,7 +216,7 @@ export default function AdminCategoriesView() {
+                     />
+                   </TextField>
+                   <Button type="submit" className="mt-4 rounded-full">
+-                    Create
++                    Create category
+                   </Button>
+                 </form>
+               </Modal.Body>

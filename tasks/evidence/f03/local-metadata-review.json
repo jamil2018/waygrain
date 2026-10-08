@@ -1,0 +1,25 @@
+{
+  "verdict": "ACCEPT_TEMPORARY_METADATA_LOADER_FIX",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "patch_sha256": "91c8528e90665e919f516da1873f19dd172e2d7820c69eb077031994fbeca616",
+  "manifest_sha256": "9aac1881ce5da3de916f38e0c173f9d8d54213c0123156ae8e60dd326ee2b92d",
+  "cause_evidence": [
+    "Sanitized runtime stack points to metadata.icon default call via collectStaticImagesFiles/resolveStaticMetadata/collectMetadata",
+    "Independent bounded compiled-module inventory found next-metadata-image-loader icon request with actual src/app/icon.svg?__next_metadata__ resource query",
+    "Existing webpack svg asset/resource rule matches that same SVG request without a query exclusion",
+    "Installed Next metadata loader source emits a callable default export for static metadata, consistent with stack expecting a function"
+  ],
+  "independent_checks": [
+    "Applied next.config.ts delta is exactly resourceQuery not __next_metadata regex; original hash reconstructed and matches manifest",
+    "All11 prior fixture/client-boundary after-hashes unchanged",
+    "Full app TypeScript noEmit incrementalfalse PASS exit0",
+    "next.config.ts eslint PASS exit0"
+  ],
+  "boundary": "Exclusion leaves ordinary SVG asset handling in place and preserves the Next metadata loader path; category UI and fixture isolation unchanged. No runtime recovery inferred from compile/source checks alone.",
+  "limits": [
+    "Actual successful SSR/hydration and three journey outcomes require live evidence",
+    "Restore next.config.ts original alongside11 other source files and remove nonsecret flag after pilot",
+    "No Waygrain core or native backend qualification established"
+  ]
+}

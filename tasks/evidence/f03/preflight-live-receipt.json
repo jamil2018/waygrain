@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "application": "blogen",
+  "runtime": {
+    "node": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "base": {
+    "schema_version": 1,
+    "project_id": "1488d02f-8bbd-4d13-80e3-c2e1ffd505b5",
+    "app_id": "bbdf02c9-185b-4157-ab9a-596ecb20f3a8"
+  },
+  "scope": {
+    "environment": "local",
+    "origin": "http://localhost:3000",
+    "role": "admin",
+    "account_scope": "synthetic",
+    "locale": "en-US"
+  },
+  "captures": [
+    {
+      "screen_id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "capture_id": "b24930d2-00bd-4afb-a834-c3aef6c3e0ca",
+      "control_ids": [],
+      "redaction_summary": {
+        "dropped_fields": 0,
+        "dropped_texts": 0,
+        "profile": {
+          "alias": "blogen-pilot-labels",
+          "version": 1
+        }
+      },
+      "coverage": "partial",
+      "state_id": null,
+      "state_hash": null,
+      "fragment_hash": "4ef0f267c48ac38821c19633a6ecdebe3416a51861baa89ddf02bef102047b95",
+      "route": "/admin/categories",
+      "modal_stack": [],
+      "trace_id": "7d1c823d-c02f-4a9e-975a-9ef71522cd49",
+      "trace_seq": 2,
+      "captured_at": "2026-10-08T18:17:48.249Z"
+    },
+    {
+      "screen_id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "capture_id": "52bfc8a2-62d7-49d5-90c8-2f5872adbb86",
+      "control_ids": [],
+      "redaction_summary": {
+        "dropped_fields": 0,
+        "dropped_texts": 0,
+        "profile": {
+          "alias": "blogen-pilot-labels",
+          "version": 1
+        }
+      },
+      "coverage": "partial",
+      "state_id": null,
+      "state_hash": null,
+      "fragment_hash": "4ef0f267c48ac38821c19633a6ecdebe3416a51861baa89ddf02bef102047b95",
+      "route": "/admin/categories",
+      "modal_stack": [],
+      "trace_id": "7d1c823d-c02f-4a9e-975a-9ef71522cd49",
+      "trace_seq": 3,
+      "captured_at": "2026-10-08T18:18:50.251Z"
+    }
+  ],
+  "attempts": [],
+  "closure": {
+    "status": "closed",
+    "session_id": "0d8fad62-a8c0-47d2-8ab6-852ea57cf957",
+    "cleanup": "complete"
+  }
+}

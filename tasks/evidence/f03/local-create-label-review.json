@@ -1,0 +1,22 @@
+{
+  "verdict": "ACCEPT_TEMPORARY_SUBMIT_LABEL_ADAPTATION",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "patch_sha256": "a51013762c037baca3de5518bb7c8c6f6b4576581ccd4c42076a4a54b96c2e45",
+  "manifest_sha256": "bad3ffc7201cc819c8fb7ccbd081eea37779e5923887acd56fca7828cf82de75",
+  "independent_checks": [
+    "Current AdminCategoriesView afterhash matches manifest; replacing exactly one submit label with original reconstructs exact beforehash",
+    "All13 prior overlay afterhashes unchanged",
+    "New button label Create category already in reviewed profile allowlist",
+    "Full app TypeScript noEmit incrementalfalse PASS0",
+    "AdminCategoriesView eslint PASS0"
+  ],
+  "reason": "Disambiguate the modal submit label from the header Create button while retaining Waygrain strict target uniqueness. No handlers, form fields, structure or backend code changed.",
+  "limits": [
+    "This is an adapted category UI, superseding earlier unchanged-category-UI descriptions for subsequent runs",
+    "Preserve original ambiguity rejection as unsupported original-UI behavior; adapted submit success cannot qualify original duplicate-label handling",
+    "Actual creation outcome still requires after evidence; driver success alone is not application success",
+    "All captures remain subject to actual coverage; partial fragments cannot establish graph transitions",
+    "Restore this14th source original with other13 changes/newfileabsences and nonsecret flag after pilot"
+  ]
+}

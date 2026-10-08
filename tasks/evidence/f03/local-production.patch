@@ -1,0 +1,22 @@
+--- a/src/lib/waygrain-pilot-policy.ts
++++ b/src/lib/waygrain-pilot-policy.ts
+@@ -1,6 +1,5 @@
+-// Temporary Waygrain pilot: explicit development flag and loopback host only.
++// Temporary Waygrain pilot: explicit local pilot flag and loopback host only.
+ export function localPilotEnabled(host: string): boolean {
+-  return process.env.NODE_ENV === "development" &&
+-    process.env.WAYGRAIN_LOCAL_PILOT === "1" &&
++  return process.env.WAYGRAIN_LOCAL_PILOT === "1" &&
+     ["localhost:3000", "127.0.0.1:3000"].includes(host);
+ }
+--- a/src/lib/supabase/server.ts
++++ b/src/lib/supabase/server.ts
+@@ -5,7 +5,7 @@
+ import { getSupabaseEnv } from "./env";
+ 
+ export async function createClient() {
+-  if (await pilotEnabled()) throw new Error("Hosted backend disabled during local pilot");
++  if (process.env.WAYGRAIN_LOCAL_PILOT === "1" || await pilotEnabled()) throw new Error("Hosted backend disabled during local pilot");
+   const cookieStore = await cookies();
+   const { url, publishableKey } = getSupabaseEnv();
+ 

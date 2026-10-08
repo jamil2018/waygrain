@@ -1,0 +1,10 @@
+{
+  "src/components/feedback/StudioSkeleton.tsx": {
+    "before_sha256": "2957e0d054247bb9ff367733dfe275c2ad220022789ba31963e12cb0c7ac8f0a",
+    "after_sha256": "605e54d16cd1d896bd53e273ae055a6c009f6e4b849bbb4aa27d81e87cb5d04a"
+  },
+  "src/components/feedback/PageSkeleton.tsx": {
+    "before_sha256": "0a8c8f87cfa10f0f4518c8798aeccf3e77fe6255345bc0ab44bc9f81f625fa02",
+    "after_sha256": "b2ad594992e9d2eb509892fba06e607f4cc3e71457d9ee01738081159fc51dd6"
+  }
+}

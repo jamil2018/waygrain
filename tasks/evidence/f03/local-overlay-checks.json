@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "typecheck": "passed",
+  "full_lint": "failed_unchanged_ExplorePageView_setState_in_effect",
+  "unrelated_error_source_equals_HEAD": true,
+  "applied_files_equal_reviewed_manifest": true,
+  "status_only_route_results": {
+    "/categories": 200,
+    "/admin/categories": 200,
+    "/admin/users": 404
+  }
+}

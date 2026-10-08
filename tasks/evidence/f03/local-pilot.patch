@@ -1,0 +1,242 @@
+--- /dev/null
++++ b/src/lib/waygrain-pilot-policy.ts
+@@ -0,0 +1,6 @@
++// Temporary Waygrain pilot: explicit development flag and loopback host only.
++export function localPilotEnabled(host: string): boolean {
++  return process.env.NODE_ENV === "development" &&
++    process.env.WAYGRAIN_LOCAL_PILOT === "1" &&
++    ["localhost:3000", "127.0.0.1:3000"].includes(host);
++}
+--- /dev/null
++++ b/src/lib/waygrain-pilot.ts
+@@ -0,0 +1,48 @@
++import "server-only";
++import { headers } from "next/headers";
++import { localPilotEnabled } from "./waygrain-pilot-policy";
++import type { Category } from "../types/category";
++import type { User } from "../types/user";
++
++export async function pilotEnabled(): Promise<boolean> {
++  return localPilotEnabled((await headers()).get("host") ?? "");
++}
++
++// Synthetic, process-local fixture identities; no credentials or auth cookies.
++export const pilotAdmin: User = {
++  id: "00000000-0000-4000-8000-000000000001",
++  name: "Waygrain synthetic admin", email: "", isAdmin: true,
++};
++const memory = globalThis as typeof globalThis & { __waygrainPilotCategories?: Category[] };
++function categories(): Category[] {
++  return memory.__waygrainPilotCategories ??= [{
++    id: "00000000-0000-4000-8000-000000000002",
++    title: "waygrain baseline category", createdAt: "2026-10-07T00:00:00Z",
++  }];
++}
++export function pilotListCategories(): Category[] {
++  return categories().map((row) => ({ ...row }));
++}
++function fixtureTitle(title: string) {
++  if (title !== "waygrain pilot category") throw new Error("Unsupported pilot fixture title");
++}
++export function pilotCreateCategory(title: string): Category {
++  fixtureTitle(title);
++  if (categories().some((row) => row.title === title)) throw new Error("Category already exists");
++  const row = { id: crypto.randomUUID(), title, createdAt: new Date().toISOString() };
++  categories().push(row);
++  return { ...row };
++}
++export function pilotUpdateCategory(id: string, title: string): Category {
++  fixtureTitle(title);
++  const row = categories().find((row) => row.id === id);
++  if (!row) throw new Error("Category not found");
++  row.title = title;
++  return { ...row };
++}
++export function pilotDeleteCategories(ids: string[]) {
++  const before = categories().length;
++  memory.__waygrainPilotCategories = categories().filter((row) => !ids.includes(row.id));
++  if (before === categories().length) throw new Error("No categories matched the query");
++  return { message: "All categories have been deleted" };
++}
+--- a/src/lib/supabase/middleware.ts
++++ b/src/lib/supabase/middleware.ts
+@@ -1,3 +1,4 @@
++import { localPilotEnabled } from "../waygrain-pilot-policy";
+ import { createServerClient } from "@supabase/ssr";
+ import { NextResponse, type NextRequest } from "next/server";
+ import type { Database } from "./database.types";
+@@ -7,6 +8,12 @@
+   let supabaseResponse = NextResponse.next({ request });
+ 
+   const pathname = request.nextUrl.pathname;
++  if (localPilotEnabled(request.nextUrl.host)) {
++    // Isolate this temporary pilot from every other route/backend operation.
++    return ["/categories", "/admin/categories"].includes(pathname)
++      ? supabaseResponse
++      : new NextResponse(null, { status: 404 });
++  }
+   const isUserRoute = pathname.startsWith("/user");
+   const isAdminRoute = pathname.startsWith("/admin");
+   const isLibraryRoute =
+--- a/src/lib/db/auth.ts
++++ b/src/lib/db/auth.ts
+@@ -1,3 +1,4 @@
++import { pilotEnabled, pilotAdmin } from "../waygrain-pilot";
+ import type { User } from "@supabase/supabase-js";
+ import { createClient } from "../supabase/server";
+ import { isSupabaseConfigured } from "../supabase/env";
+@@ -27,6 +28,7 @@
+ }
+ 
+ export async function getCurrentUser(): Promise<AppUser | null> {
++  if (await pilotEnabled()) return { ...pilotAdmin };
+   if (!isSupabaseConfigured()) return null;
+   const supabase = await createClient();
+   const { data } = await supabase.auth.getUser();
+--- a/src/lib/db/categories.ts
++++ b/src/lib/db/categories.ts
+@@ -1,9 +1,11 @@
++import { pilotEnabled, pilotListCategories } from "../waygrain-pilot";
+ import { createClient } from "../supabase/server";
+ import { isSupabaseConfigured } from "../supabase/env";
+ import type { Category } from "../../types/category";
+ import { mapCategory, type CategoryRow } from "./mappers";
+ 
+ export async function listCategories(): Promise<Category[]> {
++  if (await pilotEnabled()) return pilotListCategories();
+   if (!isSupabaseConfigured()) return [];
+   try {
+     const supabase = await createClient();
+@@ -19,6 +21,7 @@
+ }
+ 
+ export async function getCategoryById(id: string): Promise<Category | undefined> {
++  if (await pilotEnabled()) return pilotListCategories().find((row) => row.id === id);
+   if (!id || !isSupabaseConfigured()) return undefined;
+   try {
+     const supabase = await createClient();
+@@ -35,6 +38,7 @@
+ }
+ 
+ export async function getCategoryCount() {
++  if (await pilotEnabled()) return { count: pilotListCategories().length };
+   if (!isSupabaseConfigured()) return { count: 0 };
+   const supabase = await createClient();
+   const { count, error } = await supabase
+@@ -45,6 +49,7 @@
+ }
+ 
+ export async function listCuratedCategories() {
++  if (await pilotEnabled()) return pilotListCategories();
+   if (!isSupabaseConfigured()) return [];
+   const supabase = await createClient();
+   const { data, error } = await supabase
+--- a/src/actions/categories.ts
++++ b/src/actions/categories.ts
+@@ -1,4 +1,6 @@
+ "use server";
++
++import { pilotEnabled, pilotListCategories, pilotCreateCategory, pilotUpdateCategory, pilotDeleteCategories } from "../lib/waygrain-pilot";
+ 
+ import { revalidatePath } from "next/cache";
+ import {
+@@ -21,16 +23,19 @@
+ }
+ 
+ export async function getCategoryCount() {
++  if (await pilotEnabled()) return { count: pilotListCategories().length };
+   await requireAdmin();
+   return getCategoryCountQuery();
+ }
+ 
+ export async function getCuratedCategories() {
++  if (await pilotEnabled()) return pilotListCategories();
+   await requireAdmin();
+   return listCuratedCategories();
+ }
+ 
+ export async function createCategory(categoryData: { title: string }) {
++  if (await pilotEnabled()) return pilotCreateCategory(categoryData.title);
+   const { supabase } = await requireAdmin();
+   const { data: existing } = await supabase
+     .from("categories")
+@@ -53,6 +58,7 @@
+ }
+ 
+ export async function updateCategory(id: string, values: { title: string }) {
++  if (await pilotEnabled()) return pilotUpdateCategory(id, values.title);
+   const { supabase } = await requireAdmin();
+   const { data, error } = await supabase
+     .from("categories")
+@@ -73,6 +79,7 @@
+ }
+ 
+ export async function deleteCategoriesByIds(ids: string[]) {
++  if (await pilotEnabled()) return pilotDeleteCategories(ids);
+   const { supabase } = await requireAdmin();
+   const { error, count } = await supabase
+     .from("categories")
+--- a/src/actions/posts.ts
++++ b/src/actions/posts.ts
+@@ -1,4 +1,6 @@
+ "use server";
++
++import { pilotEnabled } from "../lib/waygrain-pilot";
+ 
+ import { revalidatePath } from "next/cache";
+ import {
+@@ -191,6 +193,7 @@
+ }
+ 
+ export async function getAllPosts() {
++  if (await pilotEnabled()) return [];
+   return listAllPosts({ includeNonPublic: true });
+ }
+ 
+@@ -294,6 +297,7 @@
+ }
+ 
+ export async function getPublicCategoryPostCounts() {
++  if (await pilotEnabled()) return [];
+   return getCategoryPostCounts();
+ }
+ 
+--- a/src/actions/follows.ts
++++ b/src/actions/follows.ts
+@@ -1,4 +1,6 @@
+ "use server";
++
++import { pilotEnabled } from "../lib/waygrain-pilot";
+ 
+ import { revalidatePath } from "next/cache";
+ import { requireUser } from "../lib/db/auth";
+@@ -21,6 +23,7 @@
+   targetType: FollowTargetType,
+   targetId: string
+ ) {
++  if (await pilotEnabled()) return false;
+   try {
+     const { user } = await requireUser();
+     return isFollowing(user.id, targetType, targetId);
+@@ -33,6 +36,7 @@
+   targetType: FollowTargetType,
+   targetId: string
+ ) {
++  if (await pilotEnabled()) throw new Error("Unsupported pilot action");
+   const { user } = await requireUser();
+   try {
+     const following = await isFollowing(user.id, targetType, targetId);
+--- a/src/lib/supabase/server.ts
++++ b/src/lib/supabase/server.ts
+@@ -1,9 +1,11 @@
++import { pilotEnabled } from "../waygrain-pilot";
+ import { createServerClient } from "@supabase/ssr";
+ import { cookies } from "next/headers";
+ import type { Database } from "./database.types";
+ import { getSupabaseEnv } from "./env";
+ 
+ export async function createClient() {
++  if (await pilotEnabled()) throw new Error("Hosted backend disabled during local pilot");
+   const cookieStore = await cookies();
+   const { url, publishableKey } = getSupabaseEnv();
+ 

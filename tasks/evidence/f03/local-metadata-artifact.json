@@ -1,0 +1,6 @@
+{
+  "file": "next.config.ts",
+  "before_sha256": "12aa774478e5b304d7fe5584e63a72639442cb159f39f4b4aa8b2c4b31f82a35",
+  "after_sha256": "d0ce49e90f43c7e2d9fa305dbd2d257432719ad93cc9f5326f31bdf3eca2f5ac",
+  "reason": "Exclude Next metadata SVG loader queries from generic asset/resource rule; metadata loader exports callable default."
+}

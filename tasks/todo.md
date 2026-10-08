@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03–F04 remain `pending`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03 is `verified`; F04 remains `pending`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -62,7 +62,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 - [x] F01 — Package plugin skills and setup workflow — verified
 - [x] F02 — Add Blogen profile and pilot fixtures — verified
-- [ ] F03 — Verify three Blogen journeys — pending
+- [x] F03 — Verify three Blogen journeys — verified
 - [ ] F04 — Verify new-session recall in Codex — pending
 - [ ] F05 — Verify Claude Code portability on macOS — pending
 - [ ] F06 — Pilot checkpoint — pending
@@ -465,3 +465,14 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer Node26 check PASS (101). Independent /root/f_review Node24.20.0/26.11.0 checks PASS (101 each); own privacy/modal/partial-ingestion/scope/origin probes PASS both; actual packed profile bytes/schema/initialization/load PASS both (95 intended files).
 - Review: PASS, no unresolved Required findings. Exact profile/fixtures/package/smoke/documentation identities and static Blogen source review in [independent-review.md](evidence/f02/independent-review.md) and [artifact-sha256.json](evidence/f02/artifact-sha256.json); final register accepted separately.
 - Limits: invented fixtures do not attest live Blogen coverage or outcomes. Unsupported table roles stay partial; partial captures cannot support transitions. Scope aliases are operator declarations, not backend authorization proof. Actual journeys, coding-host installation/recall and Claude compatibility remain unverified.
+
+
+### F03 — Verify three Blogen journeys
+
+- Status: verified; dependency F02 independently verified at a72b1ef and shipped PR28, main a67a469.
+- Artifact: actual packed F02 runtime/profile in a dedicated private disposable prefix, Node24.20.0/macOS arm64, with explicit native rebuild and Chromium installation. All 83 installed runtime files equal source build bytes; hashes in [pilot-artifact.json](evidence/f03/pilot-artifact.json).
+- Independent harness preflight accepted at b077b5a7d7db22c9c30905994986ad18404ba9fa035f06e42ff99e44cf226a25; [preflight-review.json](evidence/f03/preflight-review.json). Startup/malformed-input/privacy/EOF probe PASS without opening a browser. Error echo, uncertain dispatch reuse, startup/finally/timeout and piped-input handling corrected before live execution.
+- Historical preflight and manual-login wait remain preserved; the user subsequently authorized all modifications to the disposable local Blogen instance.
+- Final run `79d5cb30-e224-4a71-aa60-1795796e193d` observed open/cancel, disposable category creation, and public browse/filter/clear through public MCP. Thirteen partial scoped captures and eight durable dispatched attempts; complete browser cleanup and MCP EOF shutdown. No complete states, graph transitions, backend/authentication claims or retained input values. [Results and limits](evidence/f03/RESULTS.md), [final artifact](evidence/f03/final-pilot-artifact.json).
+- Actual Blogen UI used an independently reviewed temporary loopback-only synthetic adapter, production mode, fallback/metadata fixes and a unique submit label. All fourteen source files restored to their exact original bytes, own flag removed and own server stopped; unrelated Blogen work preserved. Original duplicate submit labels remain an unsupported ambiguity, and development HMR requires a blocked WebSocket.
+- Parent Node24 `npm run check` PASS: typecheck, lint, format and 101 tests. [Independent live review](evidence/f03/independent-live-review.json) accepts scoped partial-observation F03: all thirteen immutable capture payloads and eight receipts match the authoritative store, safe labels/schema and ordered trace verified, no graph mutations. Shipment exact-artifact review is recorded separately.
