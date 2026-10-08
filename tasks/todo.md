@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02–F04 remain `pending`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03–F04 remain `pending`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -61,7 +61,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 ## Stage F — Plugin and Blogen pilot
 
 - [x] F01 — Package plugin skills and setup workflow — verified
-- [ ] F02 — Add Blogen profile and pilot fixtures — pending
+- [x] F02 — Add Blogen profile and pilot fixtures — verified
 - [ ] F03 — Verify three Blogen journeys — pending
 - [ ] F04 — Verify new-session recall in Codex — pending
 - [ ] F05 — Verify Claude Code portability on macOS — pending
@@ -452,3 +452,16 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Verification: writer Node26.5.0 check PASS (99). Independent /root/f_review Node24.20.0/26.5.0 checks PASS (99 each), own diagnostic/privacy/env probes PASS, clean packed consumers PASS on both (94 files), all 13 contracts/tools, explicit native SQLite rebuild, explicit Chromium install and headed smoke. All three skills pass the bundled skill validator.
 - Review: PASS with no unresolved Required findings. Unintended directory README packing and absent native rebuild corrected before acceptance. Exact implementation/generated compatibility/skill/setup identities and distinct packed archive hashes in [independent-review.md](evidence/f01/independent-review.md) and [artifact-sha256.json](evidence/f01/artifact-sha256.json). Final register accepted separately.
 - Limits: no actual plugin-host installation, Blogen journey, new-chat recall, Claude compatibility or public publication claim.
+
+
+### Phase F resumption
+
+- User resumed on 8 October 2026 after the explicit F01 pause. F01 shipped PR27 at main 4b74d32. Continue eligible F02–F04 with prior shipping authorization; Claude Code F05 remains deferred and full F06 acceptance remains open. Preserve the historical [pause checkpoint](evidence/f02/PAUSED.md).
+
+### F02 — Add Blogen profile and pilot fixtures
+
+- Status: verified; dependency F01 verified at 6134b56 and shipped at 4b74d32.
+- Scope: source-reviewed localhost Blogen label/route configuration, synthetic structured profile fixtures, packed profile inclusion and pilot instructions. No knowledge/browser core or Blogen source changes.
+- Verification: writer Node26 check PASS (101). Independent /root/f_review Node24.20.0/26.11.0 checks PASS (101 each); own privacy/modal/partial-ingestion/scope/origin probes PASS both; actual packed profile bytes/schema/initialization/load PASS both (95 intended files).
+- Review: PASS, no unresolved Required findings. Exact profile/fixtures/package/smoke/documentation identities and static Blogen source review in [independent-review.md](evidence/f02/independent-review.md) and [artifact-sha256.json](evidence/f02/artifact-sha256.json); final register accepted separately.
+- Limits: invented fixtures do not attest live Blogen coverage or outcomes. Unsupported table roles stay partial; partial captures cannot support transitions. Scope aliases are operator declarations, not backend authorization proof. Actual journeys, coding-host installation/recall and Claude compatibility remain unverified.

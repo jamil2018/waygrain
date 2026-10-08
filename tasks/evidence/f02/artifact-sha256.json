@@ -1,0 +1,7 @@
+{
+  "assets/pilot/blogen-settings.json": "c907e5d1f243c69789b2d28ec80a893e361ac749bea2806503de073ca08286ea",
+  "docs/blogen-pilot.md": "8f664affa3bd7620315776c114664aa3d507cdaf61b9315a8e2e43b451a6cd4b",
+  "package.json": "69d67abe50884b36c93f510791ee3fcdd17974105cc1b22ce4ee1fc49954d299",
+  "scripts/smoke-packed.mjs": "2cd3b16eb49eebe80e00da297f85748e6433f34844ca732c71c2b234cb5c50a6",
+  "tests/blogen-profile.test.mjs": "fe34e81cd4035ea0c8284183cb9fb4590daea2909d2e69264bba933503c873b3"
+}

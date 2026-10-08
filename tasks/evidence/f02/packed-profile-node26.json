@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "node": "v26.11.0",
+  "packed_files": 95,
+  "tarball_sha256": "a973fcddb28bfb0dbf1f653e643fffa7eb420874e0ed2f353178e293574e0d5c",
+  "profile_sha256": "c907e5d1f243c69789b2d28ec80a893e361ac749bea2806503de073ca08286ea",
+  "checks": [
+    "intended_packed_file_allowlist",
+    "profile_identical_to_reviewed_source",
+    "packed_schema_validation",
+    "packed_config_initialization_and_loading"
+  ],
+  "dependencies": "existing_checkout_reused_for_profile_probe",
+  "clean_install": "not_retested_F02",
+  "browser": "not_opened",
+  "host_integration": "not_tested"
+}

@@ -17,6 +17,7 @@
     ".mcp.json",
     ".codex-plugin",
     "skills",
+    "assets/pilot",
     "PLUGIN_SETUP.md"
   ],
   "exports": {
