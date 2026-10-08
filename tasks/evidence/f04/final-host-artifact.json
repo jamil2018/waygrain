@@ -1,0 +1,27 @@
+{
+  "recall-prompt.txt": "69264c12eccb91c7328837a16c85105569b737bc1acb6b7f091a468461173dea",
+  "recall-schema.json": "aa0289cb67196b73a81fe12f207fcbd2a4950fbdda6814ecf72b2ecb3d9fa09b",
+  "marketplace.json": "e15ca1cc0feb4aadfae3b5ac7b05fedddf7a9c7508ad2dc3580c28101d9a1ce2",
+  "recall.mjs": "52bdc9a78297cc5d1ef71478487d89a9019ae8f7df369b0d9d97736138a00036",
+  "host_binary": "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex",
+  "host_binary_sha256": "cb4e4994627e770800a940b42969c77855a3fc09a6e60b02aa6319f670d6b6ab",
+  "source_main": "0691d229d2f309d8086d411821791312219969b9",
+  "prior_browser_closed": true,
+  "plugins_feature_explicitly_enabled": true,
+  "supersedes_harness": "recall-preflight-v2.mjs",
+  "explicit_stdio_registration": true,
+  "enabled_tools": [
+    "wg_status",
+    "wg_query",
+    "wg_evidence",
+    "wg_changes",
+    "wg_plan_refresh",
+    "wg_browser_status"
+  ],
+  "host_version": "codex-cli 0.162.0-alpha.2",
+  "run_id": "0b9b66a2-ed04-4ce1-b44c-78e58e36c2b0",
+  "thread_id": "01a11cf0-5a8a-79d3-8071-3dbb945d3700",
+  "receipt_sha256": "17128dbeebb71397788244980c8004630176b0ab39c8b3b8e1e668f95af47d80",
+  "setup_path": "explicit session-scoped stdio registration",
+  "automatic_plugin_mcp_discovery": "unqualified"
+}

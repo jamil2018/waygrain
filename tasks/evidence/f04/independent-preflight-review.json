@@ -1,0 +1,45 @@
+{
+  "verdict": "ACCEPT_FOR_F04_LIVE_HOST_RECALL",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "harness_sha256": "faf9c430f058ef5e5873e204fd6546c0a0f6d651d5df2bbe1f440e8bc58fe470",
+  "prompt_sha256": "69264c12eccb91c7328837a16c85105569b737bc1acb6b7f091a468461173dea",
+  "output_schema_sha256": "aa0289cb67196b73a81fe12f207fcbd2a4950fbdda6814ecf72b2ecb3d9fa09b",
+  "mock_event_checks": {
+    "status": "passed",
+    "harness_sha256": "faf9c430f058ef5e5873e204fd6546c0a0f6d651d5df2bbe1f440e8bc58fe470",
+    "cases": [
+      "progress_discarded_valid_final_and_three_native_reads_accepted",
+      "exact_skill_read_classified_without_raw_command_retention",
+      "forbidden_shell_refused_and_final_discarded",
+      "browser_tool_refused_and_final_discarded",
+      "other_server_refused_and_final_discarded",
+      "web_search_refused_and_final_discarded",
+      "invalid_id_rejected",
+      "wrong_scope_rejected",
+      "browser_true_rejected",
+      "unretrieved_id_rejected"
+    ],
+    "execution": "actual_harness_source_with_mocked_CLI_events_and_memory_only_IO",
+    "live_model_calls": 0,
+    "browser_calls": 0
+  },
+  "source_checks": [
+    "Fresh exec;ephemeral;ignore-user-config;read-only sandbox;explicit localmarketplace/plugin;noauthcopy orglobalconfigedit",
+    "Onlydeclaredproject/app/scope andquestion inprompt; nooutcomes/captureIDs/receiptcontents",
+    "StrictboundedZodfinal withUUIDcitations,ISOtimes,exactscope,partialcoverage andbrowserfalse",
+    "Exact permittedMCPservers/readtools/statuses;allunexpectednativeitemtypesrefusequalification",
+    "Shell commandaudited onlyexact packaged-understand-product skillread;rawcommands/results notpersisted",
+    "ReturnedUUIDIDs audited fromnativeMCPserialized result text;finalcitations mustbe retrieved",
+    "Unvalidated/progress textdiscarded;last completedmessage mustpass;anyqualification error discardsfinal beforepersistence/emission",
+    "Childclose awaited forstdoutdrain;boundedSIGTERM/SIGKILL cleanup ontimeout/error;timerscleared;stderrretainedonly bytecount"
+  ],
+  "official_guidance": "Official OpenAI skill-evaluation guidance supports --json event-trace auditing and --output-schema final output: https://developers.openai.com/blog/eval-skills",
+  "limits": [
+    "MockCLIeventtests only; noactualhost/model/browsercall byreviewer",
+    "CLIeventresult/toolnamespace may differ;actual mismatch mustfail andremain documented",
+    "Final featurefacts,timestamps,UUIDscope andfreshness stillrequire independent authoritative evidence review after livehostrun",
+    "Noactual desktoppluginUI installation,Claudeportability,fullF06 orrelease claim",
+    "BaselineSQLitevarycoordination revisions notfreshbrowserpermission; nohostPID-basedcleanupauthority"
+  ]
+}

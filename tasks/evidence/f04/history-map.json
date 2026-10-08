@@ -1,0 +1,26 @@
+[
+  {
+    "version": "v1",
+    "archived_controller": "recall-preflight-v1.mjs",
+    "sha256": "faf9c430f058ef5e5873e204fd6546c0a0f6d651d5df2bbe1f440e8bc58fe470",
+    "historical_artifact": "preflight-artifact-v1.json",
+    "independent_review": "independent-preflight-review.json",
+    "note": "Historical artifact controller key records its then-current filename; archived bytes preserve that identity."
+  },
+  {
+    "version": "v2",
+    "archived_controller": "recall-preflight-v2.mjs",
+    "sha256": "713d248e8015bf1e56b6d7f2d1584e5dd391a60b52439eec599e24318e3b1018",
+    "historical_artifact": "preflight-artifact-v2.json",
+    "independent_review": "independent-preflight-review-v2.json",
+    "note": "Historical artifact controller key records its then-current filename; archived bytes preserve that identity."
+  },
+  {
+    "version": "v3",
+    "archived_controller": "recall.mjs",
+    "sha256": "52bdc9a78297cc5d1ef71478487d89a9019ae8f7df369b0d9d97736138a00036",
+    "historical_artifact": "preflight-artifact.json",
+    "independent_review": "independent-preflight-review-v3.json",
+    "note": "Historical artifact controller key records its then-current filename; archived bytes preserve that identity."
+  }
+]

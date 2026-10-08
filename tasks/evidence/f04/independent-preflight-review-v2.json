@@ -1,0 +1,42 @@
+{
+  "verdict": "ACCEPT_FOR_THIRD_FRESH_HOST_ATTEMPT",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "controller_sha256": "713d248e8015bf1e56b6d7f2d1584e5dd391a60b52439eec599e24318e3b1018",
+  "historical_controller_sha256": "faf9c430f058ef5e5873e204fd6546c0a0f6d651d5df2bbe1f440e8bc58fe470",
+  "delta": [
+    "Add session-local global --enable plugins flag",
+    "Classify stderr into only5fixed true/absent booleans; retainbytecounts,never rawtext"
+  ],
+  "independent_checks": [
+    "node --check PASS",
+    "All10actual-source mockedCLIvalidation/auditcases PASS afterdelta",
+    "Synthetic stderr containing secret sentinel classified only into5fixedbooleans and count; sentinel absent from anyretained/emitted receipt",
+    "Installed-but-no-native-reads secondrun48d8 truthfully rejected and preserved"
+  ],
+  "mock_checks": {
+    "status": "passed",
+    "harness_sha256": "713d248e8015bf1e56b6d7f2d1584e5dd391a60b52439eec599e24318e3b1018",
+    "cases": [
+      "progress_discarded_valid_final_and_three_native_reads_accepted",
+      "exact_skill_read_classified_without_raw_command_retention",
+      "forbidden_shell_refused_and_final_discarded",
+      "browser_tool_refused_and_final_discarded",
+      "other_server_refused_and_final_discarded",
+      "web_search_refused_and_final_discarded",
+      "invalid_id_rejected",
+      "wrong_scope_rejected",
+      "browser_true_rejected",
+      "unretrieved_id_rejected"
+    ],
+    "execution": "actual_harness_source_with_mocked_CLI_events_and_memory_only_IO",
+    "live_model_calls": 0,
+    "browser_calls": 0
+  },
+  "limits": [
+    "Noactualhost/model/browsercall byreviewer; pluginfeature effectiveness unverifieduntil actualnativeMCPcalls",
+    "Both earlierfailedsessionsremain historical failures,notrecallqualification",
+    "Sessionfeatureflag is explicit/ephemeral; noauthcopy ornewglobalsetting bythisharness",
+    "Actualfinalcitation/timestamp/factgroundingstillneeds independentreview"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "verdict": "ACCEPT_EXPLICIT_STDIO_FALLBACK_FOR_F04_HOST_RUN",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "controller_sha256": "52bdc9a78297cc5d1ef71478487d89a9019ae8f7df369b0d9d97736138a00036",
+  "preserved_v2_controller_sha256": "713d248e8015bf1e56b6d7f2d1584e5dd391a60b52439eec599e24318e3b1018",
+  "delta": "Only3session-local mcp_servers.waygrain overrides: absoluteNode24command,reviewed installedCLI serve--configarguments,6read-tool allowlist. Existingpluginfeature/skillconfiguration retained.",
+  "independent_checks": [
+    "node --check PASS",
+    "All10actual-source mockedCLIvalidation/auditcases PASS",
+    "Syntheticstderrsecret-sentinel classified only into fixedbooleans/count; no rawtextpersisted/emitted",
+    "Absolutecommand/structuredTOMLargument list confines sameinstalledruntime/config; enabledtools excludes browseropen/action/navigation/close and knowledgewrites",
+    "Third rejected03dbc hostrun preserved with no nativeMCPreads/finalnull; diagnostics do not establish rootcause"
+  ],
+  "mock_checks": {
+    "status": "passed",
+    "harness_sha256": "52bdc9a78297cc5d1ef71478487d89a9019ae8f7df369b0d9d97736138a00036",
+    "cases": [
+      "progress_discarded_valid_final_and_three_native_reads_accepted",
+      "exact_skill_read_classified_without_raw_command_retention",
+      "forbidden_shell_refused_and_final_discarded",
+      "browser_tool_refused_and_final_discarded",
+      "other_server_refused_and_final_discarded",
+      "web_search_refused_and_final_discarded",
+      "invalid_id_rejected",
+      "wrong_scope_rejected",
+      "browser_true_rejected",
+      "unretrieved_id_rejected"
+    ],
+    "execution": "actual_harness_source_with_mocked_CLI_events_and_memory_only_IO",
+    "live_model_calls": 0,
+    "browser_calls": 0
+  },
+  "acceptance_boundary": "F04 can qualify fresh native Codex CLI recall through documented explicitstdio setup using same package/schema and packagedskill afteroriginalbrowserclose. This fallback cannot qualify automaticpluginMCPdiscovery or desktopplugininstallation.",
+  "limits": [
+    "Noactualhost/model/browsercall byreviewer; nativeMCPevent compatibility and citations still require actualrunverification",
+    "Prior3missing-native-read sessions remain rejected; their unknown diagnosticcause is not resolved by inference",
+    "No change to Waygrainruntime/schema orhostglobalMCPsettings; command overrides ephemeral",
+    "ClaudeF05/fullF06 and publicrelease remain separate"
+  ]
+}

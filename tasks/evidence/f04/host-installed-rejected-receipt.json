@@ -1,0 +1,39 @@
+{
+  "run_id": "48d8ad7c-b6dd-4658-aa7d-397972a4415c",
+  "started_at": "2026-10-08T19:09:14.207Z",
+  "ephemeral": true,
+  "tools": [
+    {
+      "event": "item.started",
+      "tool": "shell",
+      "command_class": "exact_packaged_skill_read",
+      "status": "in_progress"
+    },
+    {
+      "event": "item.completed",
+      "tool": "shell",
+      "command_class": "exact_packaged_skill_read",
+      "status": "completed"
+    }
+  ],
+  "events": {
+    "thread.started": 1,
+    "turn.started": 1,
+    "item.completed": 3,
+    "item.started": 1,
+    "turn.completed": 1
+  },
+  "stderr_bytes": 1748,
+  "final": null,
+  "exit": {
+    "code": 0,
+    "signal": null
+  },
+  "qualification_errors": [
+    "NO_VALID_FINAL",
+    "REQUIRED_NATIVE_READS_MISSING"
+  ],
+  "thread_id": "01a11ceb-70a1-7202-a19e-e83fbc0a2e3c",
+  "discarded_agent_messages": 2,
+  "finished_at": "2026-10-08T19:09:36.354Z"
+}

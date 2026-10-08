@@ -1,0 +1,12 @@
+{
+  "pilot_selector": "waygrain@waygrain-pilot",
+  "originally_installed": false,
+  "new_cache_removed": true,
+  "prior_uninstalled_state_restored": true,
+  "blogen_original_source_hashes_verified": 14,
+  "pilot_flag_absent": true,
+  "port_free_before_original_dev_restart": true,
+  "original_blogen_dev_service_restored": true,
+  "restored_service_mode": "original-source Next Turbopack development, loopback only",
+  "service_probe": "TCP only; no HTTP/application/browser action"
+}

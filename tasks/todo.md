@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03 is `verified`; F04 remains `pending`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03 is `verified`; F04 is `verified`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -63,7 +63,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] F01 — Package plugin skills and setup workflow — verified
 - [x] F02 — Add Blogen profile and pilot fixtures — verified
 - [x] F03 — Verify three Blogen journeys — verified
-- [ ] F04 — Verify new-session recall in Codex — pending
+- [x] F04 — Verify new-session recall in Codex — verified
 - [ ] F05 — Verify Claude Code portability on macOS — pending
 - [ ] F06 — Pilot checkpoint — pending
 
@@ -476,3 +476,12 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Final run `79d5cb30-e224-4a71-aa60-1795796e193d` observed open/cancel, disposable category creation, and public browse/filter/clear through public MCP. Thirteen partial scoped captures and eight durable dispatched attempts; complete browser cleanup and MCP EOF shutdown. No complete states, graph transitions, backend/authentication claims or retained input values. [Results and limits](evidence/f03/RESULTS.md), [final artifact](evidence/f03/final-pilot-artifact.json).
 - Actual Blogen UI used an independently reviewed temporary loopback-only synthetic adapter, production mode, fallback/metadata fixes and a unique submit label. All fourteen source files restored to their exact original bytes, own flag removed and own server stopped; unrelated Blogen work preserved. Original duplicate submit labels remain an unsupported ambiguity, and development HMR requires a blocked WebSocket.
 - Parent Node24 `npm run check` PASS: typecheck, lint, format and 101 tests. [Independent live review](evidence/f03/independent-live-review.json) accepts scoped partial-observation F03: all thirteen immutable capture payloads and eight receipts match the authoritative store, safe labels/schema and ordered trace verified, no graph mutations. Shipment exact-artifact review is recorded separately.
+- Shipped commit `e953fad` through PR29, merged at `0691d22`; reviewed bytes unchanged, Node24/26 CI and security checks passed, local main synchronized before F04.
+
+### F04 — Verify new-session recall in Codex
+
+- Status: verified; dependency F03 verified and shipped at `0691d22`.
+- Used the declared project/app/admin synthetic scope in a fresh ephemeral Codex CLI session after browser/original MCP closure and local Blogen source restoration. No prior journey outcome facts or evidence IDs were supplied; product recall used native MCP reads and cited scoped evidence.
+- Actual ephemeral Codex CLI `0.162.0-alpha.2` run `0b9b66a2-ed04-4ce1-b44c-78e58e36c2b0` used native status, two queries and two evidence reads through explicit session-scoped stdio registration. Six final citations (two screens/four partial captures), times, scope and revision independently verified; no browser, writes or direct evidence-file reads. [Results](evidence/f04/RESULTS.md), [independent live review](evidence/f04/independent-live-review.json), [final host artifact](evidence/f04/final-host-artifact.json).
+- Three earlier CLI discovery probes were rejected and preserved; automatic plugin MCP discovery and desktop UI installation remain unqualified. Temporary host selector/cache removed to restore prior uninstalled state; original-source local Blogen dev service restored with no application actions. F05 remains user-deferred and full F06 remains open.
+- Historical Node24 check passed 101 tests; this evidence/setup documentation slice has no runtime changes. Independent exact shipment review and CI are recorded separately.
