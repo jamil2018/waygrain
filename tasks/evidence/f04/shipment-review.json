@@ -1,0 +1,25 @@
+{
+  "verdict": "ACCEPT_F04_SHIPMENT_ARTIFACT",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "scope": "PLUGIN_SETUP.md,tasks/todo.md and entire tasks/evidence/f04; no runtime/source changes",
+  "artifact_manifest_sha256": "557c947fc906a75572c6853bb5b3cf557d97f775cf308cc1900305aac00c3c0f",
+  "bound_files": 23,
+  "live_verdict": "ACCEPT_F04_FRESH_CODEX_CLI_RECALL_EXPLICIT_STDIO",
+  "source_checks": [
+    "Finalhostreceipt6citations/4times/scope/revision and UIclaims independently grounded in readonly authoritativeDB",
+    "Actualnativeaudit onlyexactpackagedskillread/status/query2/evidence2 with successfulfreshthread and no browser/writes/otherdirectdatareads",
+    "Allhistory-map v1/v2/v3controller+artifact identities match;3rejected autodiscovery probes preserved with discardedfinals",
+    "Setup and Results disclose manual sessionstdio path,alphaCLIversion,unknown discoverycause,partial/adaptedUI/nativebackendlimits",
+    "Installedcache absent; all14 selected originalsource hashes/new-fileabsence restored; ownflagabsent; laterTCPserviceavailable without HTTPrequest",
+    "No knownsuccessfulhostthread sessionfilename in standard2026-10-08/09folders; noauth/sessioncontents read",
+    "AllJSONparse,node syntax checks andgitdiffcheckPASS; meaningfulharness mockedcases/sourceguard/livechecks passed,prior101tests/CI recorded separately"
+  ],
+  "required_findings_remaining": [],
+  "limits": [
+    "F04 qualifies explicit Codex CLI nativeMCP recall only; automaticpluginMCPdiscovery,desktopUIinstallation,ClaudeF05,fullF06/fullPhaseF/releasepublication unqualified",
+    "Operator devservice identity/mode and CLIselectedinstalledfalse flags are authorobservations; independentchecks scopedcache/source/TCP",
+    "No exhaustivehostprocess/log/account/network/privacyattestation; nativeprovidercommunication inherent",
+    "F03historical partialobservations/cleanup/sourceadaptations remain unchanged; lateroperatoravailability restoration is not newqualification"
+  ]
+}

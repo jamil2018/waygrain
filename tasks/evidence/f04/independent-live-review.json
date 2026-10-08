@@ -1,0 +1,416 @@
+{
+  "verdict": "ACCEPT_F04_FRESH_CODEX_CLI_RECALL_EXPLICIT_STDIO",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "host_run_id": "0b9b66a2-ed04-4ce1-b44c-78e58e36c2b0",
+  "host_thread_id": "01a11cf0-5a8a-79d3-8071-3dbb945d3700",
+  "host_receipt_sha256": "17128dbeebb71397788244980c8004630176b0ab39c8b3b8e1e668f95af47d80",
+  "host_artifact_sha256": "4df63a646bf9b330d92c437b737a0bb87f87ce5453c565e28c89e863767be3e8",
+  "read_mode": "SQLite readonly; no source/application/graph mutation",
+  "native_completed_tools": [
+    {
+      "tool": "shell",
+      "server": null,
+      "command_class": "exact_packaged_skill_read"
+    },
+    {
+      "tool": "wg_status",
+      "server": "waygrain",
+      "command_class": null
+    },
+    {
+      "tool": "wg_query",
+      "server": "waygrain",
+      "command_class": null
+    },
+    {
+      "tool": "wg_query",
+      "server": "waygrain",
+      "command_class": null
+    },
+    {
+      "tool": "wg_evidence",
+      "server": "waygrain",
+      "command_class": null
+    },
+    {
+      "tool": "wg_evidence",
+      "server": "waygrain",
+      "command_class": null
+    }
+  ],
+  "scope": {
+    "environment": "local",
+    "origin": "http://localhost:3000",
+    "role": "admin",
+    "account_scope": "synthetic",
+    "locale": "en-US"
+  },
+  "citations": [
+    {
+      "id": "6f63448e-4466-4912-9fea-29fcf4e5b179",
+      "kind": "screen",
+      "route": "/admin/categories",
+      "view_key": "admin-categories"
+    },
+    {
+      "id": "a1cb1641-a67f-4ad0-adbd-e95fbfce46e2",
+      "kind": "screen",
+      "route": "/categories",
+      "view_key": "categories"
+    },
+    {
+      "id": "fb69ecba-00fb-4236-be7d-1a35f00cf59c",
+      "kind": "capture",
+      "route": "/admin/categories",
+      "captured_at": "2026-10-08T18:51:42.643Z",
+      "trace_seq": 1,
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "state_id": null,
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "link",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "heading",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "button",
+          "name": "Create",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Create",
+          "enabled": true
+        },
+        {
+          "role": "button",
+          "name": "Delete",
+          "enabled": false
+        },
+        {
+          "role": "text",
+          "name": "Delete",
+          "enabled": true
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Category",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Created",
+          "enabled": true
+        }
+      ],
+      "authoritative_sha256": "3ee7475f7f8317d2627b8c161584ec7611aa03780ef17da8eed72493edbc7d4c"
+    },
+    {
+      "id": "88f79073-eebe-4a5d-a8d6-0d4d1b15bbe8",
+      "kind": "capture",
+      "route": "/admin/categories",
+      "captured_at": "2026-10-08T18:51:49.350Z",
+      "trace_seq": 4,
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "state_id": null,
+      "modal_stack": [
+        "create_category"
+      ],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "link",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "heading",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "button",
+          "name": "Create",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Create",
+          "enabled": true
+        },
+        {
+          "role": "button",
+          "name": "Delete",
+          "enabled": false
+        },
+        {
+          "role": "text",
+          "name": "Delete",
+          "enabled": true
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Category",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Created",
+          "enabled": true
+        },
+        {
+          "role": "dialog",
+          "name": "Create category",
+          "enabled": true
+        },
+        {
+          "role": "heading",
+          "name": "Create category",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Title",
+          "enabled": true
+        },
+        {
+          "role": "textbox",
+          "name": "Title",
+          "enabled": true
+        },
+        {
+          "role": "button",
+          "name": "Create category",
+          "enabled": true
+        }
+      ],
+      "authoritative_sha256": "cecab42c63f4dc8fdf08b85f997236830166e6e409a3654fe46be94705764b43"
+    },
+    {
+      "id": "8b56ac60-3df3-4ef4-a253-6930a87b5f1e",
+      "kind": "capture",
+      "route": "/admin/categories",
+      "captured_at": "2026-10-08T18:52:10.065Z",
+      "trace_seq": 12,
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "state_id": null,
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "link",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "link",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "heading",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "button",
+          "name": "Create",
+          "enabled": true
+        },
+        {
+          "role": "text",
+          "name": "Create",
+          "enabled": true
+        },
+        {
+          "role": "button",
+          "name": "Delete",
+          "enabled": false
+        },
+        {
+          "role": "text",
+          "name": "Delete",
+          "enabled": true
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Category",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Posts",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "Created",
+          "enabled": true
+        },
+        {
+          "role": "row",
+          "name": "waygrain pilot category",
+          "enabled": true
+        },
+        {
+          "role": "generic",
+          "name": "waygrain pilot category",
+          "enabled": true
+        }
+      ],
+      "authoritative_sha256": "61329d234f786b7d470329a8d735ff88963f1ccf3be9c40faaa8dabac7cbca6f"
+    },
+    {
+      "id": "a024bf6b-1588-4408-aa56-88d469bf4b32",
+      "kind": "capture",
+      "route": "/categories",
+      "captured_at": "2026-10-08T18:52:52.925Z",
+      "trace_seq": 21,
+      "coverage": {
+        "kind": "partial",
+        "subtree": "root",
+        "reason": "unsupported"
+      },
+      "state_id": null,
+      "modal_stack": [],
+      "labels": [
+        {
+          "role": "heading",
+          "name": "Categories",
+          "enabled": true
+        },
+        {
+          "role": "textbox",
+          "name": "Search categories",
+          "enabled": true
+        },
+        {
+          "role": "heading",
+          "name": "waygrain pilot category",
+          "enabled": true
+        }
+      ],
+      "authoritative_sha256": "029c714527c8e877086311e1e3bb3579c728551c5f8cdeb5b5cf3807179c185e"
+    }
+  ],
+  "independent_checks": [
+    "Fresh ephemeral exec completed exit0; distinct actualhostthread/run afteroriginal publicclose",
+    "All6citationUUIDs returned by successful nativewg_evidence and resolve to same-app/scope authoritative4partialcaptures/2screens",
+    "All4ISO observedtimes exactly equal citedcapturetimestamps",
+    "ActualdisabledDelete/listlabels/dialogTitle/submit/categoryrow/publicheading andsearchcontrol grounded in sanitized retainedtrees",
+    "Store revision62 and zero graph actions/events/transitions/flows/testrecords agree with model limits",
+    "Complete native audit onlyexactskillread,status,query2,evidence2; no browser/writes/directDB/receiptread/othernativeitems",
+    "Strictfinalschema+exactscope+partialcoverage+browserfalse; allartifact prompt/schema/marketplace/controller/hostbinary hashes match",
+    "Freshness approxages are consistent with hosttimebracket; no exacttiming inference from UUID-only audit"
+  ],
+  "freshness_age_bounds_seconds": {
+    "latest_at_host_start_seconds": 1303.307,
+    "earliest_at_host_end_seconds": 1421.369
+  },
+  "semantic_assessment": "Feature explanation distinguishes remembered observations from inferred creation, unsupported search/deletion/backend/auth/persistence and partialcoverage. It does not claim verified transitions or fulljourney behavior. This session did not retrieve the no-match capture and correctly leaves searchbehavior unsupported.",
+  "limitations": [
+    "Actual Codex CLI0.162.0-alpha.2 nativeMCP recall qualifies documented explicitstdio path only; automaticpluginMCP discovery anddesktopUI install remain unqualified",
+    "Prior3missing-native-read host attempts remain rejected",
+    "Synthetic adaptedBlogen origin/backend,partial captures and originalduplicate-submit/developmentWebSocket limitations remain",
+    "UUID-only audit proves citations were returned, not exact toolresultbyte completeness or requestpayload retention; factgrounding independently confirmed from authoritative store",
+    "Shell/read audit and browserfalse reflect inspected harness/nativeeventreceipt, not an exhaustive allhostprocess/network attestation",
+    "NoClaudeF05/fullF06/publication qualification"
+  ]
+}
