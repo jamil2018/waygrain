@@ -1,0 +1,10 @@
+{"status":"passed","node":"v26.11.0","checks":["unknown_text_and_counts_dropped","allowlisted_editable_value_dropped","unknown_modal_partial","unsupported_table_partial_without_state","origin_route_and_scope_refusals","URL_query_fragment_not_retained"]}
+✔ independent Blogen profile scope, modal, privacy and partial-ingest boundaries (27.870792ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 197.460833

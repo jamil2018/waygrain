@@ -1,0 +1,18 @@
+{
+  "node24": {
+    "version": "v24.20.0",
+    "command": "PATH=/Users/jamil/.nvm/versions/node/v24.20.0/bin:$PATH npm run check",
+    "exit": 0,
+    "tests": 101,
+    "pass": 101,
+    "fail": 0
+  },
+  "node26": {
+    "version": "v26.11.0",
+    "command": "npm run check",
+    "exit": 0,
+    "tests": 101,
+    "pass": 101,
+    "fail": 0
+  }
+}

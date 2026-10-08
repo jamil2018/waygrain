@@ -1,0 +1,75 @@
+{
+  "project_alias": "blogen-pilot",
+  "apps": [
+    {
+      "alias": "blogen",
+      "allowed_origins": ["http://localhost:3000"],
+      "scopes": [
+        {
+          "alias": "local-admin",
+          "environment": "local",
+          "origin": "http://localhost:3000",
+          "role": "admin",
+          "account_scope": "synthetic",
+          "locale": "en-US"
+        },
+        {
+          "alias": "local-viewer",
+          "environment": "local",
+          "origin": "http://localhost:3000",
+          "role": "viewer",
+          "account_scope": "synthetic",
+          "locale": "en-US"
+        }
+      ],
+      "route_mappings": [
+        {
+          "view_key": "categories",
+          "origin": "http://localhost:3000",
+          "route_template": "/categories"
+        },
+        {
+          "view_key": "admin-categories",
+          "origin": "http://localhost:3000",
+          "route_template": "/admin/categories"
+        },
+        {
+          "view_key": "login",
+          "origin": "http://localhost:3000",
+          "route_template": "/login"
+        },
+        {
+          "view_key": "admin-home",
+          "origin": "http://localhost:3000",
+          "route_template": "/admin"
+        }
+      ],
+      "redaction_profiles": [
+        {
+          "alias": "blogen-pilot-labels",
+          "version": 1,
+          "allowed_labels": [
+            "Categories",
+            "Category",
+            "Posts",
+            "Created",
+            "Create",
+            "Delete",
+            "Search categories",
+            "Title",
+            "Create category",
+            "create_category",
+            "Close",
+            "Cancel",
+            "Category created",
+            "No categories match your search.",
+            "waygrain pilot category"
+          ],
+          "ignored_fields": [],
+          "unknown_text": "drop"
+        }
+      ]
+    }
+  ],
+  "storage_limit_bytes": 104857600
+}

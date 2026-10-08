@@ -43,7 +43,7 @@ try {
   );
   assert(
     pack.files.every((file) =>
-      /^(dist\/|skills\/|\.codex-plugin\/plugin.json$|\.mcp.json$|plugin.json$|mcp.json$|PLUGIN_SETUP.md$|LICENSE$|README.md$|package.json$)/.test(
+      /^(dist\/|skills\/|assets\/pilot\/blogen-settings.json$|\.codex-plugin\/plugin.json$|\.mcp.json$|plugin.json$|mcp.json$|PLUGIN_SETUP.md$|LICENSE$|README.md$|package.json$)/.test(
         file.path,
       ),
     ),

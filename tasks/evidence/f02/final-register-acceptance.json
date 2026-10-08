@@ -1,0 +1,22 @@
+{
+  "verdict": "ACCEPT",
+  "task": "F02",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-08",
+  "scope": "Final F02 register/evidence and unchanged five-file implementation artifact",
+  "implementation_files_unchanged": 5,
+  "files_sha256": {
+    "tasks/evidence/f02/PAUSED.md": "aa241c6a213fac332cc525ec7229a7c740312e8920772dd85b8e36c4cbdfcd7e",
+    "tasks/evidence/f02/artifact-sha256.json": "fee3b81043859513e16817c6c64eed67de8e0ef8841c879323614808c5a3f896",
+    "tasks/evidence/f02/checks.json": "e1ae3a3a0110f089122cb7f967ce9fb0cd8d994eec64976c099a1eeb3daf07a7",
+    "tasks/evidence/f02/independent-probes.mjs": "f279b0139f78dc13e11e2e5e855542cf0be550b267162fbe0104a06866e969df",
+    "tasks/evidence/f02/independent-review.md": "9f543c7f165d644040b48a31ddb6adf263ebf340b236a5a899631e6175aa1325",
+    "tasks/evidence/f02/packed-profile-node24.json": "f4acb16f8a62a809c8cb9c63ea2d04caa7f66f8081a0d6446784f34ef1403fe5",
+    "tasks/evidence/f02/packed-profile-node26.json": "1488be24527b18a6aa7200c63d1e6d90c9fb85aa6bd25a345865f59d0de6735c",
+    "tasks/evidence/f02/packed-profile.mjs": "69f63c8eb0347d57c62629d62b2dd89b9a4f49fffdbc24991d89d22eb5998d4e",
+    "tasks/evidence/f02/probes-node24.log": "a24f3859429bae9d0191d62d8b4b87002c520d52e028cd363bb55f31ddc8cad2",
+    "tasks/evidence/f02/probes-node26.log": "2ee8f33e30e1a1b66d74efae12f6b9acb28be47f760174e6ff590fb129fa0a3d",
+    "tasks/todo.md": "4681a5437bc601ce2dfdc9a1020657b695f13d2afb6a7bcefe826f0e5ccd8bbf"
+  },
+  "limits": "Synthetic profile/fixtures and packed profile validation only; no live journey, browser launch, clean dependency reinstall, host recall or Claude compatibility claim."
+}
