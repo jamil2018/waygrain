@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "host": {
+    "model": "gpt-6.1-sol",
+    "reasoning": "low",
+    "ephemeral": true
+  },
+  "repetitions": 1,
+  "batch_size": 10,
+  "results": [
+    {
+      "condition": "browser-only",
+      "case": "cold",
+      "repetition": 1,
+      "browser_calls": 0,
+      "knowledge_calls": 0,
+      "setup_ms": 0,
+      "priming_ms": 0,
+      "retained_bytes": 0,
+      "error": "trial_failed",
+      "task_results": [
+        {
+          "id": "invite-label",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "viewer-invite",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "active-tab",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "admin-save",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "viewer-save",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "invite-preparation",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "remove-preparation",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "persistence-proof",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "rename-change",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "remove-change",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        }
+      ],
+      "total_ms": 3.196374999999989
+    },
+    {
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 1,
+      "browser_calls": 0,
+      "knowledge_calls": 0,
+      "setup_ms": 0,
+      "priming_ms": 0,
+      "retained_bytes": 0,
+      "error": "trial_failed",
+      "task_results": [
+        {
+          "id": "invite-label",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "viewer-invite",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "active-tab",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "admin-save",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "viewer-save",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "invite-preparation",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "remove-preparation",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "persistence-proof",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "rename-change",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "remove-change",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        }
+      ],
+      "total_ms": 0.5864159999999856
+    },
+    {
+      "condition": "waygrain",
+      "case": "cold",
+      "repetition": 1,
+      "browser_calls": 0,
+      "knowledge_calls": 0,
+      "setup_ms": 0,
+      "priming_ms": 0,
+      "retained_bytes": 0,
+      "error": "trial_failed",
+      "task_results": [
+        {
+          "id": "invite-label",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "viewer-invite",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "active-tab",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "admin-save",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "viewer-save",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "invite-preparation",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "remove-preparation",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "persistence-proof",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "rename-change",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        },
+        {
+          "id": "remove-change",
+          "correct": false,
+          "grounded": false,
+          "failure": "invalid_response"
+        }
+      ],
+      "total_ms": 0.5127919999999904
+    }
+  ],
+  "distributions": [
+    {
+      "condition": "browser-only",
+      "case": "cold",
+      "total_ms": [
+        3.196374999999989
+      ],
+      "task_batch_ms": [
+        null
+      ],
+      "browser_calls": [
+        0
+      ],
+      "retained_bytes": [
+        0
+      ],
+      "median_total_ms": 3.196374999999989
+    },
+    {
+      "condition": "notes-folder",
+      "case": "cold",
+      "total_ms": [
+        0.5864159999999856
+      ],
+      "task_batch_ms": [
+        null
+      ],
+      "browser_calls": [
+        0
+      ],
+      "retained_bytes": [
+        0
+      ],
+      "median_total_ms": 0.5864159999999856
+    },
+    {
+      "condition": "waygrain",
+      "case": "cold",
+      "total_ms": [
+        0.5127919999999904
+      ],
+      "task_batch_ms": [
+        null
+      ],
+      "browser_calls": [
+        0
+      ],
+      "retained_bytes": [
+        0
+      ],
+      "median_total_ms": 0.5127919999999904
+    }
+  ]
+}
