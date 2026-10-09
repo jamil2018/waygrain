@@ -1,0 +1,26 @@
+{
+  "reviewer": "/root/g_verify",
+  "date_local": "2026-10-10",
+  "verdict": "ACCEPT_G04_REVIEWED_PRIVATE_CANDIDATE_HOLD_PUBLIC_RELEASE",
+  "artifact_manifest_sha256": "8380cecfd699553b1071750a8bce3625d73e4fb13c89ce38f21b337fad0c1a00",
+  "candidate_sha256": "86f7b1cae0431f8ffa4161e85efa49b051b933087e6a97d37b10204bd2e301a9",
+  "checks": [
+    "All sixteen final manifest file hashes match",
+    "Exact tarball ninety-five content hashes match saved candidate and current checkout",
+    "All 107 dependency/license records and six notice hashes match current lockfile/local notice files",
+    "Fresh exact candidate Node24/26 packed receipts bind the same tarball",
+    "Independent Node26.11.0 npm run check passed 103 tests",
+    "Independent exact packed guide example init/ingest/scoped Invite query passed with existing locked dependencies; temporary prefix removed",
+    "All 154 tracked historical evidence files remain byte-identical to base818ce841",
+    "Package remains private true/version0.0.0; final docs/register correctly record failed efficiency and all original unmet/unqualified gates"
+  ],
+  "required_findings_remaining": [],
+  "public_release_verdict": "HOLD",
+  "limitations": [
+    "Constrained study does not qualify agent-directed efficiency, open-ended correctness, UI actions or autonomous freshness",
+    "Assisted personas do not pass original unfamiliar-human gate",
+    "Second application unverified; Claude Code and Cursor second-host support deferred/unverified",
+    "No automatic plugin discovery/desktop, cross-platform, exhaustive native-license or hidden-host privacy attestation",
+    "No npm publication, plugin listing, tag or deployment"
+  ]
+}

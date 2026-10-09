@@ -46,4 +46,35 @@ Three earlier isolated CLI probes, including an installed/enabled plugin and exp
 
 For troubleshooting, confirm `waygrain` resolves to this artifact, `WAYGRAIN_CONFIG` is absolute, `doctor` passes and the host advertises seven knowledge and six browser tools. Keep protocol stdout separate from sanitized stderr. Never retain credentials, environment dumps, raw host transcripts or browser observations. A stdio probe proves transport behavior only; record actual host discovery/invocation separately. The current pilot is Codex-only. Claude Code and Cursor compatibility are deferred under F05; neither has been qualified.
 
+## Supplied synthetic fixture through the CLI
+
+The [G03 settings](https://github.com/jamil2018/waygrain/blob/main/tasks/evidence/g03/settings.json) and [capture](https://github.com/jamil2018/waygrain/blob/main/tasks/evidence/g03/capture.json) form a reviewed synthetic example. Save them in a dedicated temporary directory, initialize a new private configuration from those settings, and select the installed `waygrain` executable on PATH. No MCP-client dependency or separate service is needed for CLI ingestion and recall. Use only sanitized synthetic captures; never provide raw browser snapshots, credentials or field values.
+
+Set `WAYGRAIN_CONFIG` to that initialized absolute configuration path. In the temporary directory containing `capture.json`, create the requests:
+
+```sh
+node --input-type=module - "$WAYGRAIN_CONFIG" <<'JS'
+import { readFile, writeFile } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
+const config = JSON.parse(await readFile(process.argv[2], 'utf8'));
+const app = config.apps.find(app => app.alias === 'fixture');
+if (!app) throw new Error('fixture application not configured');
+const capture = JSON.parse(await readFile('capture.json', 'utf8'));
+const base = { schema_version: 1, project_id: config.project_id, app_id: app.app_id };
+await writeFile('ingest-request.json', JSON.stringify({
+  ...base, request_id: randomUUID(),
+  screen_ref: { kind: 'new', name: 'Members', view_key: 'members' }, capture,
+}), { mode: 0o600 });
+await writeFile('query-request.json', JSON.stringify({
+  ...base, mode: 'search', scope: capture.scope,
+  filters: { kinds: ['control'], terms: ['Invite'] },
+  budget: { records: 10, bytes: 16384 },
+}), { mode: 0o600 });
+JS
+waygrain ingest --config "$WAYGRAIN_CONFIG" < ingest-request.json
+waygrain query --config "$WAYGRAIN_CONFIG" < query-request.json
+```
+
+The fixture returns a control named `Invite`; its 7 October observation is historical and may be stale/requires_check. Query evidence IDs point to captures. `wg_evidence` accepts capture and annotation IDs, not control IDs; retrieve a cited capture with `projection: "structured"`. A query does not prove application persistence or current UI behavior. Remove the temporary requests, private store and installation prefix after the exercise. CLI commands require explicit configuration; `--help` currently returns `INVALID_CONFIG` rather than usage, so use the documented commands.
+
 The skills support scoped recall, authorized snapshot → ingest → action → ingest → commit exploration, and evidence-backed comparisons. Recall works after browser closure. Historical controls are descriptions, never executable handles. Installing a plugin grants no application action permissions.

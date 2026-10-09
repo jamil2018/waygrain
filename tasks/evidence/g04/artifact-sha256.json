@@ -1,0 +1,21 @@
+{
+  "base_commit": "818ce8413f4231029f3f7a6a032b1f0347870e6e",
+  "files": {
+    "PLUGIN_SETUP.md": "2ad7f15b2ecc7f135f2748cddad9d8a3dba1de5bff7ba3b0f71d18b97aff5f69",
+    "README.md": "ff62abe65fe13f06a2a50fe6682a5a3bf2f274ddba15a61eb758fe691486e801",
+    "docs/README.md": "e1fa5155bca054f01ddc287599a74b2007e8c544d1f5c16b2b0fb6b77e6dd6a6",
+    "docs/release-readiness.md": "c6521ec857d20134cbdc19f8816ac8d9165a21e45ffa8731db7e5905eaaf9f44",
+    "scripts/smoke-packed.mjs": "45beea4b8e39f7baf6923d33c2ecafad5bcf9476147c02454708fafb47757d6d",
+    "tasks/evidence/g04/RESULTS.md": "dac70a701c4591701e7ac5d5b6bf07ae1bd58b9153650dc51c1ab3e215bc9004",
+    "tasks/evidence/g04/candidate.json": "e6bac720354c246e3542cc8d3cbb5025446fb8aabd765df46366db50e474da97",
+    "tasks/evidence/g04/check-documentation.mjs": "2476f2105c0a6c4b1d08981f806cc99f8d6445291c8985a508c9454c8aad8f1b",
+    "tasks/evidence/g04/dependency-license-inventory.json": "d3fa747a3b44b4910b4a2e0b5535d2617b652f1d4c0bd588ed7da2ec71ecaff4",
+    "tasks/evidence/g04/documentation-check.json": "c6f949d894b2b1e5cb9525646998be00668e1852702a6c37c1b90a51843aa6dc",
+    "tasks/evidence/g04/earlier-regenerated-packed26.json": "f6d88718b2ea7091c0ec751403100e0fedca91a159f2fbe7d648dc059f3680ff",
+    "tasks/evidence/g04/packed-content-sha256.json": "854dae1a71e8955fc0ffba2c8ff2fb108830cf515acc2a13ff5c82f6656bea5a",
+    "tasks/evidence/g04/packed24.json": "ed966fdaaa2ce0cbbcd6ae9c3fbf08dc5bfd4db9f3d3b1f94f504b36416afaf3",
+    "tasks/evidence/g04/packed26.json": "9abc0b40b3aa3eb84b82277094c480d45044552084bb171ae6aae1f592150ec7",
+    "tasks/plan.md": "fbfc70575a69443782962b0d1582917cb31fe51821a90a9bd11727f396346bf2",
+    "tasks/todo.md": "2d8844b15e5dda50de1360c6f96c866914ffbeb8bc5cffd0f35ddbb8fda0c92f"
+  }
+}

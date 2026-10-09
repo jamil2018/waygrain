@@ -1,0 +1,489 @@
+{
+  "id": "waygrain-private-rc-20261010",
+  "tarball": "waygrain-0.0.0.tgz",
+  "sha256": "86f7b1cae0431f8ffa4161e85efa49b051b933087e6a97d37b10204bd2e301a9",
+  "size_bytes": 144527,
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "size": 357,
+      "mode": 420
+    },
+    {
+      "path": ".mcp.json",
+      "size": 107,
+      "mode": 420
+    },
+    {
+      "path": "LICENSE",
+      "size": 11358,
+      "mode": 420
+    },
+    {
+      "path": "PLUGIN_SETUP.md",
+      "size": 8382,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "size": 7412,
+      "mode": 420
+    },
+    {
+      "path": "assets/pilot/blogen-settings.json",
+      "size": 1920,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/actions.d.ts",
+      "size": 592,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/actions.js",
+      "size": 9903,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/attempts.d.ts",
+      "size": 686,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/attempts.js",
+      "size": 2833,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/driver.d.ts",
+      "size": 4068,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/driver.js",
+      "size": 7953,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/engine.d.ts",
+      "size": 290,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/engine.js",
+      "size": 3360,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/protocol.d.ts",
+      "size": 2360,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/protocol.js",
+      "size": 830,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/session.d.ts",
+      "size": 909,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/session.js",
+      "size": 15679,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/snapshot.d.ts",
+      "size": 895,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/snapshot.js",
+      "size": 9440,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/worker.d.ts",
+      "size": 11,
+      "mode": 420
+    },
+    {
+      "path": "dist/browser/worker.js",
+      "size": 5133,
+      "mode": 420
+    },
+    {
+      "path": "dist/cli.d.ts",
+      "size": 31,
+      "mode": 420
+    },
+    {
+      "path": "dist/cli.js",
+      "size": 6485,
+      "mode": 420
+    },
+    {
+      "path": "dist/config/filesystem.d.ts",
+      "size": 452,
+      "mode": 420
+    },
+    {
+      "path": "dist/config/filesystem.js",
+      "size": 3205,
+      "mode": 420
+    },
+    {
+      "path": "dist/config/index.d.ts",
+      "size": 1451,
+      "mode": 420
+    },
+    {
+      "path": "dist/config/index.js",
+      "size": 4449,
+      "mode": 420
+    },
+    {
+      "path": "dist/config/schema.d.ts",
+      "size": 3526,
+      "mode": 420
+    },
+    {
+      "path": "dist/config/schema.js",
+      "size": 4004,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/browser.d.ts",
+      "size": 58162,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/browser.js",
+      "size": 5855,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/capture.d.ts",
+      "size": 5867,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/capture.js",
+      "size": 2454,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/common.d.ts",
+      "size": 7108,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/common.js",
+      "size": 4865,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/index.d.ts",
+      "size": 355486,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/index.js",
+      "size": 932,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/knowledge.d.ts",
+      "size": 131005,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/knowledge.js",
+      "size": 8890,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/operations.d.ts",
+      "size": 27383,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/operations.js",
+      "size": 4540,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/records.d.ts",
+      "size": 21042,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/records.js",
+      "size": 3549,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/schemas.json",
+      "size": 798392,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/validation.d.ts",
+      "size": 927,
+      "mode": 420
+    },
+    {
+      "path": "dist/contracts/validation.js",
+      "size": 9145,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/changes.d.ts",
+      "size": 190,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/changes.js",
+      "size": 11700,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/commit.d.ts",
+      "size": 548,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/commit.js",
+      "size": 9507,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/graph.d.ts",
+      "size": 1637,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/graph.js",
+      "size": 4778,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/ingest.d.ts",
+      "size": 480,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/ingest.js",
+      "size": 9632,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/normalize.d.ts",
+      "size": 4838,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/normalize.js",
+      "size": 6154,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/query.d.ts",
+      "size": 1451,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/query.js",
+      "size": 13616,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/refresh.d.ts",
+      "size": 213,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/refresh.js",
+      "size": 7583,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/retrieval.d.ts",
+      "size": 47515,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/retrieval.js",
+      "size": 10807,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/summary.d.ts",
+      "size": 589,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/summary.js",
+      "size": 10366,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/test-evidence.d.ts",
+      "size": 1202,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/test-evidence.js",
+      "size": 4701,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/traces.d.ts",
+      "size": 2037,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/traces.js",
+      "size": 6899,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/traversal.d.ts",
+      "size": 392,
+      "mode": 420
+    },
+    {
+      "path": "dist/core/traversal.js",
+      "size": 5606,
+      "mode": 420
+    },
+    {
+      "path": "dist/index.d.ts",
+      "size": 822,
+      "mode": 420
+    },
+    {
+      "path": "dist/index.js",
+      "size": 802,
+      "mode": 420
+    },
+    {
+      "path": "dist/mcp/index.d.ts",
+      "size": 252,
+      "mode": 420
+    },
+    {
+      "path": "dist/mcp/index.js",
+      "size": 2986,
+      "mode": 420
+    },
+    {
+      "path": "dist/runtime/browser-probe.d.ts",
+      "size": 11,
+      "mode": 420
+    },
+    {
+      "path": "dist/runtime/browser-probe.js",
+      "size": 543,
+      "mode": 420
+    },
+    {
+      "path": "dist/runtime/diagnostics.d.ts",
+      "size": 357,
+      "mode": 420
+    },
+    {
+      "path": "dist/runtime/diagnostics.js",
+      "size": 1117,
+      "mode": 420
+    },
+    {
+      "path": "dist/runtime/index.d.ts",
+      "size": 604,
+      "mode": 420
+    },
+    {
+      "path": "dist/runtime/index.js",
+      "size": 3642,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/database.d.ts",
+      "size": 1460,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/database.js",
+      "size": 15204,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/deletion.d.ts",
+      "size": 1083,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/deletion.js",
+      "size": 8036,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/recovery.d.ts",
+      "size": 816,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/recovery.js",
+      "size": 11162,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/schema.d.ts",
+      "size": 7357,
+      "mode": 420
+    },
+    {
+      "path": "dist/store/schema.js",
+      "size": 7541,
+      "mode": 420
+    },
+    {
+      "path": "mcp.json",
+      "size": 202,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "size": 2082,
+      "mode": 420
+    },
+    {
+      "path": "plugin.json",
+      "size": 471,
+      "mode": 420
+    },
+    {
+      "path": "skills/explain-changes/SKILL.md",
+      "size": 1285,
+      "mode": 420
+    },
+    {
+      "path": "skills/explore-and-remember/SKILL.md",
+      "size": 2054,
+      "mode": 420
+    },
+    {
+      "path": "skills/understand-product/SKILL.md",
+      "size": 1162,
+      "mode": 420
+    }
+  ],
+  "bundled": [],
+  "private": true,
+  "version": "0.0.0",
+  "source_base": "818ce8413f4231029f3f7a6a032b1f0347870e6e",
+  "status": "held_from_public_release",
+  "local_tarball": "/private/tmp/waygrain-g04-rc/waygrain-0.0.0.tgz"
+}

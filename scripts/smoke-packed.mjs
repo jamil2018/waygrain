@@ -3,6 +3,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import {
   mkdtemp,
+  copyFile,
   readFile,
   readdir,
   realpath,
@@ -31,13 +32,36 @@ const run = (command, args, cwd = directory, timeout = 240_000) =>
     maxBuffer: 1024 * 1024,
   });
 try {
-  const [pack] = JSON.parse(
-    run(
-      'npm',
-      ['pack', '--json', '--silent', '--pack-destination', directory],
-      resolve('.'),
-    ),
-  );
+  let pack;
+  if (process.argv[2]) {
+    const supplied = resolve(process.argv[2]);
+    const filename = 'waygrain-candidate.tgz';
+    await copyFile(supplied, join(directory, filename));
+    const entries = run('tar', ['-tf', join(directory, filename)])
+      .trim()
+      .split('\n');
+    assert(
+      entries.every(
+        (entry) => entry.startsWith('package/') && !entry.includes('..'),
+      ),
+    );
+    pack = {
+      filename,
+      files: entries.map((entry) => ({ path: entry.slice(8) })),
+    };
+    assert.equal(
+      new Set(pack.files.map((file) => file.path)).size,
+      pack.files.length,
+    );
+  } else {
+    [pack] = JSON.parse(
+      run(
+        'npm',
+        ['pack', '--json', '--silent', '--pack-destination', directory],
+        resolve('.'),
+      ),
+    );
+  }
   assert(
     pack.files.some((file) => file.path === 'dist/runtime/browser-probe.js'),
   );

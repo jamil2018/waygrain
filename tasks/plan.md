@@ -206,3 +206,11 @@ Release evaluation uses the same browser driver and host/model configuration acr
 Defaults remain: one headed session per MCP process; manual login; browser launches only on request; external structured ingestion stays supported; 24-hour retrieval freshness policy; specification limits for ingestion, queries, commits, and storage; macOS pilot support without untested cross-platform claims.
 
 **First eligible implementation task: A01.**
+
+## Phase G execution scope — 9 October 2026
+
+The user selected G01–G04 in dependency order, with independent verification, exact-artifact review and individual shipping. This overrides the default one-task stop only for the selected phase. G01/G02 use a documented constrained Codex observation/answer study; broader agent-directed efficiency, open-ended correctness, wrong-action and automatic freshness requirements retain their own unqualified verdicts. The measured efficiency threshold failed.
+
+The user explicitly substituted three separate subagent personas for unavailable human developers in G03. The assisted agent proxy is recorded as its own completed procedure; the original three unfamiliar-human adoption requirement remains unmet. Codex-only scope preserves Claude Code and Cursor as deferred/unverified, and does not waive the original second-host or second-application release requirements.
+
+G04 completes the release-readiness review even when requirements fail or remain unmet, and ends at a reviewed **private release candidate held from public release**. The package remains private at 0.0.0. No npm publication, plugin listing, release tag or later implementation is authorized. Source summaries and proxy successes cannot mark original release requirements passed.

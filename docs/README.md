@@ -17,6 +17,8 @@
 | [Contributing](../CONTRIBUTING.md) | Scope, verification, independent review and change delivery |
 | [Security](../SECURITY.md) | Reporting guidance and intended privacy boundaries |
 | [Agent instructions](../AGENTS.md) | Repository workflow for coding agents |
+| [Codex evaluation](evaluation.md) | Reproducible matched constrained-study methodology and limits |
+| [Release readiness](release-readiness.md) | Private candidate review and explicit unmet public release requirements |
 
 ## Authority and history
 
