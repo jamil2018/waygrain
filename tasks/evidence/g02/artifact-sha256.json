@@ -1,0 +1,10 @@
+{
+  "base_commit": "755068d",
+  "files": {
+    "tasks/evidence/g02/RESULTS.md": "5703f4dc803773d296c66960346bc4a188fed1f198ee1a57f9f276909523e471",
+    "tasks/evidence/g02/analyze.mjs": "97753df2ccab6aa4b761fcfd92adb882e42bff6b110a6291a9ed135d9ca787b8",
+    "tasks/evidence/g02/matrix.json": "7857ec5d35e02bba4df54fb836c4cbdc94afe3ee3437f093ecf1ff01c35cfc06",
+    "tasks/evidence/g02/summary.json": "21d5db0f56d83c910a70c94681559f8542996970e7ed858dc9c5409c27c4a5f9",
+    "tasks/todo.md": "1888ae89d53c4d2fc03185e4835870feed0a871e6f33483fe49135af68ae6f37"
+  }
+}

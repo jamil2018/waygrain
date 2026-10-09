@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/g_verify",
+  "date_local": "2026-10-10",
+  "verdict": "ACCEPT_G02_EXACT_ARTIFACT_WITH_FAILED_EFFICIENCY_GATE",
+  "artifact_manifest_sha256": "de6d979ae4f896793732516748f7d74b7f96a4eae228c78b1582e43fc36f93c5",
+  "checks": [
+    "All five manifest file hashes match; rerunning assessor produces byte-identical summary",
+    "Independently recomputed all 27 batches and 270 correct grounded answers; matched contexts and no errors",
+    "Confirmed zero warm call gain, 7.81 percent time regression and 0.035 percent token regression",
+    "Confirmed bounded cold overhead 3.24 percent and changed answers after forced refresh",
+    "Temporary fault probes confirm failed cleanup excludes answers, missing token remains unmeasured and absent context is retained as unavailable",
+    "Exact docs/register retain failed efficiency and all unqualified original release requirements"
+  ],
+  "required_findings_remaining": [],
+  "limitations": [
+    "Constrained answer study with scripted driver; broader efficiency/correctness, UI-action and autonomous-change gates unqualified",
+    "Human adoption and second-application/second-host requirements remain unmet or deferred"
+  ]
+}

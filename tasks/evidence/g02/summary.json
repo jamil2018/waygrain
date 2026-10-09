@@ -1,0 +1,475 @@
+{
+  "comparability": [
+    {
+      "case": "cold",
+      "repetition": 1,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "cold",
+      "repetition": 2,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "cold",
+      "repetition": 3,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "warm",
+      "repetition": 1,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "warm",
+      "repetition": 2,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "warm",
+      "repetition": 3,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "changed",
+      "repetition": 1,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "changed",
+      "repetition": 2,
+      "available": 3,
+      "identical": true
+    },
+    {
+      "case": "changed",
+      "repetition": 3,
+      "available": 3,
+      "identical": true
+    }
+  ],
+  "matrix_sha256": "7857ec5d35e02bba4df54fb836c4cbdc94afe3ee3437f093ecf1ff01c35cfc06",
+  "attempted_answers": 270,
+  "measurements": [
+    {
+      "condition": "browser-only",
+      "case": "cold",
+      "total_ms": [
+        10050.714542,
+        8812.098542000007,
+        10067.988542000006
+      ],
+      "batch_ms": [
+        9367.784375,
+        8191.211791999987,
+        9467.430374999996
+      ],
+      "priming_ms": [
+        0,
+        0,
+        0
+      ],
+      "browser_calls": [
+        12,
+        12,
+        12
+      ],
+      "retained_bytes": [
+        0,
+        0,
+        0
+      ],
+      "tokens": [
+        17033,
+        17032,
+        17029
+      ],
+      "median_total_ms": 10050.714542,
+      "median_batch_ms": 9367.784375,
+      "median_browser_calls": 12,
+      "median_tokens": 17032,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "browser-only",
+      "case": "warm",
+      "total_ms": [
+        9549.184375,
+        9389.768917000009,
+        11198.871875000012
+      ],
+      "batch_ms": [
+        8862.284874999998,
+        8671.18091699999,
+        10503.205000000016
+      ],
+      "priming_ms": [
+        151.46487500000148,
+        142.63816600001883,
+        146.0852920000034
+      ],
+      "browser_calls": [
+        22,
+        22,
+        22
+      ],
+      "retained_bytes": [
+        0,
+        0,
+        0
+      ],
+      "tokens": [
+        17032,
+        17025,
+        17041
+      ],
+      "median_total_ms": 9549.184375,
+      "median_batch_ms": 8862.284874999998,
+      "median_browser_calls": 22,
+      "median_tokens": 17032,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "browser-only",
+      "case": "changed",
+      "total_ms": [
+        8742.161124999999,
+        9223.991875000007,
+        8937.93216700002
+      ],
+      "batch_ms": [
+        8034.668874999996,
+        8530.888124999998,
+        8197.33129099998
+      ],
+      "priming_ms": [
+        141.1918749999968,
+        149.15849999999045,
+        129.736917000002
+      ],
+      "browser_calls": [
+        22,
+        22,
+        22
+      ],
+      "retained_bytes": [
+        0,
+        0,
+        0
+      ],
+      "tokens": [
+        17012,
+        17016,
+        17013
+      ],
+      "median_total_ms": 8937.93216700002,
+      "median_batch_ms": 8197.33129099998,
+      "median_browser_calls": 22,
+      "median_tokens": 17013,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "notes-folder",
+      "case": "cold",
+      "total_ms": [
+        9707.260624999999,
+        8444.495416999998,
+        10609.712375000003
+      ],
+      "batch_ms": [
+        9096.117665999998,
+        7876.787916999994,
+        10051.08241600002
+      ],
+      "priming_ms": [
+        0,
+        0,
+        0
+      ],
+      "browser_calls": [
+        12,
+        12,
+        12
+      ],
+      "retained_bytes": [
+        7057,
+        7057,
+        7057
+      ],
+      "tokens": [
+        17034,
+        17030,
+        17029
+      ],
+      "median_total_ms": 9707.260624999999,
+      "median_batch_ms": 9096.117665999998,
+      "median_browser_calls": 12,
+      "median_tokens": 17030,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "notes-folder",
+      "case": "warm",
+      "total_ms": [
+        9966.938541000003,
+        10298.051667000007,
+        10256.331000000006
+      ],
+      "batch_ms": [
+        9246.750958999997,
+        9610.469540999999,
+        9567.885125
+      ],
+      "priming_ms": [
+        124.37829099999362,
+        125.91108299999905,
+        148.64362499999697
+      ],
+      "browser_calls": [
+        12,
+        12,
+        12
+      ],
+      "retained_bytes": [
+        7057,
+        7057,
+        7057
+      ],
+      "tokens": [
+        17028,
+        17027,
+        17032
+      ],
+      "median_total_ms": 10256.331000000006,
+      "median_batch_ms": 9567.885125,
+      "median_browser_calls": 12,
+      "median_tokens": 17028,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "notes-folder",
+      "case": "changed",
+      "total_ms": [
+        10985.669000000009,
+        9709.087583000015,
+        9807.527375000005
+      ],
+      "batch_ms": [
+        10295.213457999998,
+        8970.543417000008,
+        9053.994040999998
+      ],
+      "priming_ms": [
+        125.06974999999511,
+        149.25454200000968,
+        145.6313749999972
+      ],
+      "browser_calls": [
+        22,
+        22,
+        22
+      ],
+      "retained_bytes": [
+        6980,
+        6980,
+        6980
+      ],
+      "tokens": [
+        17019,
+        17015,
+        17012
+      ],
+      "median_total_ms": 9807.527375000005,
+      "median_batch_ms": 9053.994040999998,
+      "median_browser_calls": 22,
+      "median_tokens": 17015,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "waygrain",
+      "case": "cold",
+      "total_ms": [
+        9381.357,
+        10022.255250000002,
+        11060.816791999998
+      ],
+      "batch_ms": [
+        8828.302208999998,
+        9427.948457999999,
+        10506.289874999988
+      ],
+      "priming_ms": [
+        0,
+        0,
+        0
+      ],
+      "browser_calls": [
+        12,
+        12,
+        12
+      ],
+      "retained_bytes": [
+        962672,
+        962672,
+        962672
+      ],
+      "tokens": [
+        17021,
+        17033,
+        17134
+      ],
+      "median_total_ms": 10022.255250000002,
+      "median_batch_ms": 9427.948457999999,
+      "median_browser_calls": 12,
+      "median_tokens": 17033,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "waygrain",
+      "case": "warm",
+      "total_ms": [
+        10646.624499999998,
+        10294.661042000007,
+        9339.940999999992
+      ],
+      "batch_ms": [
+        9959.864999999998,
+        9572.24758299999,
+        8622.980707999988
+      ],
+      "priming_ms": [
+        133.4253749999989,
+        130.12045799999032,
+        155.92179100000067
+      ],
+      "browser_calls": [
+        12,
+        12,
+        12
+      ],
+      "retained_bytes": [
+        962672,
+        962672,
+        962672
+      ],
+      "tokens": [
+        17035,
+        17034,
+        17022
+      ],
+      "median_total_ms": 10294.661042000007,
+      "median_batch_ms": 9572.24758299999,
+      "median_browser_calls": 12,
+      "median_tokens": 17034,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    },
+    {
+      "condition": "waygrain",
+      "case": "changed",
+      "total_ms": [
+        9372.558583000005,
+        10514.915042000008,
+        9952.61508399999
+      ],
+      "batch_ms": [
+        8640.176250000004,
+        9731.155874999997,
+        9214.080209000007
+      ],
+      "priming_ms": [
+        132.48812499998894,
+        170.69412500000908,
+        132.22595900000306
+      ],
+      "browser_calls": [
+        22,
+        22,
+        22
+      ],
+      "retained_bytes": [
+        1432352,
+        1428232,
+        1428232
+      ],
+      "tokens": [
+        17016,
+        17020,
+        17004
+      ],
+      "median_total_ms": 9952.61508399999,
+      "median_batch_ms": 9214.080209000007,
+      "median_browser_calls": 22,
+      "median_tokens": 17016,
+      "success": 30,
+      "attempts": 30,
+      "failed_batches": 0
+    }
+  ],
+  "failures": [],
+  "batch_errors": [],
+  "unsupported_constrained_answers": 0,
+  "invalid_response_answers": 0,
+  "ui_actions": {
+    "executed": 0,
+    "wrong_action_release_gate": "unmeasured"
+  },
+  "bounded_gates": {
+    "warm_efficiency": {
+      "call_baseline": "notes-folder",
+      "time_baseline": "browser-only",
+      "token_baseline": "notes-folder",
+      "call_improvement": 0,
+      "time_improvement": -0.07806705135484476,
+      "token_improvement": -0.00035236081747709656,
+      "pass": false
+    },
+    "constrained_correctness_no_regression": {
+      "counts": {
+        "browser-only": 90,
+        "notes-folder": 90,
+        "waygrain": 90
+      },
+      "pass": true
+    },
+    "cold_overhead": {
+      "fraction": 0.032449383731262806,
+      "within_15_percent": true,
+      "break_even": "not_established"
+    },
+    "changed_answers_correct": {
+      "pass": true
+    }
+  },
+  "original_release_gates": {
+    "agent_directed_efficiency": "unqualified_scripted_driver",
+    "open_ended_correctness": "unmeasured",
+    "wrong_ui_actions": "unmeasured_no_actions",
+    "autonomous_change_detection": "unmeasured_forced_refresh",
+    "human_adoption": "unmet_agent_proxy_only",
+    "second_application": "unverified",
+    "second_host": "deferred_unverified"
+  }
+}

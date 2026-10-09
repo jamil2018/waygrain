@@ -70,7 +70,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 ## Stage G — Evaluation and release readiness
 
 - [x] G01 — Build reproducible evaluation harness — verified
-- [ ] G02 — Run efficiency and correctness evaluation — pending
+- [x] G02 — Run efficiency and correctness evaluation — verified (bounded study; efficiency threshold failed)
 - [ ] G03 — Run unfamiliar-developer installation trial — pending
 - [ ] G04 — Complete release-readiness review — pending
 
@@ -512,3 +512,10 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Status: verified for the documented constrained observation/answer harness. Dependency F06 verified at main `7ba2f63`. Independent verification and exact-artifact acceptance by `/root/g_verify` are recorded in [results](evidence/g01/RESULTS.md) and [review](evidence/g01/independent-review.json).
 - Scope: matched synthetic observation comparison with real headed Playwright and actual Codex model answers. See [methodology](../docs/evaluation.md). Scripted refresh, constrained answer vocabulary and batch timing do not qualify autonomous scout, wrong-action or stale-evidence release claims.
 - Historical failed smoke setup is retained separately in [receipt](evidence/g01/failed-parent-directory.json); no product or earlier evidence changed.
+
+### G02 — Efficiency and correctness evaluation
+
+- Status: verified for the documented constrained Codex study; the efficiency release threshold **failed**. G01 dependency independently verified and shipped PR32 at `755068d`.
+- Run: 270 individual answers in 27 actual Codex sessions, ten tasks with three repetitions per arm and cold/warm/changed case. All 270 constrained answers correct and grounded, no invalid answers or batch errors. Full distributions and individual records retained in [matrix](evidence/g02/matrix.json), with reproducible [analysis](evidence/g02/analyze.mjs), [summary](evidence/g02/summary.json) and [results](evidence/g02/RESULTS.md).
+- Warm call reduction against notes: 0%; warm total wall time 7.81% worse against browser-only; tokens 0.035% worse against notes. Cold overhead 3.24% in this constrained study. No repeated-use break-even established.
+- Independent verification and exact-artifact review by `/root/g_verify` are recorded in [review](evidence/g02/independent-review.json). Original agent-directed scout efficiency, open-ended correctness, wrong-action, autonomous freshness, human adoption and portability gates remain unqualified or unmet.
