@@ -1,0 +1,21 @@
+{
+  "reviewer": "/root/g_verify",
+  "date_local": "2026-10-10",
+  "verdict": "ACCEPT_G03_USER_AMENDED_ASSISTED_AGENT_PROXY",
+  "artifact_manifest_sha256": "b5558811f71910e398886dd452f64589bb349c267fdc36e566162cfe486fabda",
+  "checks": [
+    "All nine manifest hashes and three packet hashes match",
+    "Packed README/setup/three skills/public schemas present; thirteen tools; source docs absent",
+    "Packed evidence implementation accepts capture/annotation IDs only",
+    "Fixture Invite/admin-staging/date consistent with three receipts; UUIDs valid and disjoint",
+    "Timestamp durations 236/216/196 seconds within600; JavaScript reports 236.2 seconds precision",
+    "All three trial prefixes independently absent",
+    "Final protocol/results/register retain assistance/friction and unmet human/host/browser/portability requirements"
+  ],
+  "required_findings_remaining": [],
+  "limitations": [
+    "Per-run IDs, stages and timing are agent trial observations, not post-cleanup live database attestation",
+    "Assisted simulated personas do not pass original unfamiliar-human adoption gate",
+    "No browser launch or native host discovery qualification"
+  ]
+}

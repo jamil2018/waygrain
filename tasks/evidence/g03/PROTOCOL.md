@@ -1,0 +1,11 @@
+# G03 user-amended agent installation proxy
+
+On 9 October 2026 the user stated that no human developers were available and requested three separate subagent personas. These isolated agent runs satisfy that selected proxy procedure; they cannot pass the original unfamiliar-human-developer adoption requirement.
+
+Three agents receive no parent history or implementation source: JavaScript application developer, Python backend developer and platform engineer. Each receives the same exact packed Waygrain artifact, synthetic settings/capture and a ten-minute task: install, initialize, ingest the fixture and query which invitation button appears for admin Members. Each timer begins before packaged documentation inspection. No browser, separate service or host registration is needed. Agents use only packaged documentation, skills and public schemas; they may assemble temporary synthetic requests using the initialized IDs.
+
+Operator assistance is explicit: the packet supplies valid settings and a ready fixture; the Node24 absolute path and private npm-cache/browser-download suppression guidance are given. This measures a supplied-fixture install/ingest/query exercise, not discovery of mappings from an unfamiliar application or an unassisted clean-machine installation. All run on the same macOS arm64 host with existing toolchain/network configuration and shared external environment; simulated personas do not establish human unfamiliarity or behavioral diversity.
+
+Each agent owns a separate temporary prefix and cache, records actual times/stages/error classes/answer/evidence identities, and removes its trial resources. Installation scripts remain disabled except the documented explicit native rebuild. No source changes, credentials, authentication state, raw host logs, raw snapshots, screenshots, input values, publication or host-setting edits are allowed. The writer preserves the bounded final receipts separately and obtains independent exact-artifact review. Network/environment failures remain trial friction and do not become product or human-adoption passes.
+
+`trial-packet-sha256.json` binds the tarball and two supplied JSON fixtures. The tarball is a local private 0.0.0 artifact, not a published package or a release-qualified candidate. Its identity is separate from any later G04 candidate.

@@ -1,0 +1,89 @@
+{
+  "reviewer": "/root/g03_javascript",
+  "persona": "JavaScript application developer familiar with npm, unfamiliar with Waygrain/MCP/SQLite",
+  "evidence_class": "assisted agent proxy, not human evidence",
+  "result": "completed",
+  "started_utc": "2026-10-09T18:04:39Z",
+  "finished_utc": "2026-10-09T18:08:35Z",
+  "elapsed_seconds": 236.2,
+  "limit_seconds": 600,
+  "tarball_sha256": "92c15a0430ed9081bb91d9d967ed7157bb64b27d53e7c36d9d1aca5dd4224082",
+  "hash_verified": true,
+  "runtime": { "node": "v24.20.0", "npm": "11.19.0" },
+  "stages": [
+    "Timer before packaged docs",
+    "Read README/setup/skills/public schemas",
+    "Private-prefix/cache ignore-scripts install with no browser download",
+    "Explicit offline native rebuild",
+    "Fixture init and doctor",
+    "Synthetic requests using returned IDs",
+    "Installed stdio initialize/ingest/query/status/evidence",
+    "Removed prefix and verified absence"
+  ],
+  "command_classes": [
+    "tar document/schema inspection",
+    "SHA256",
+    "npm ignore-scripts install",
+    "npm offline better-sqlite3 rebuild",
+    "waygrain init/doctor",
+    "Built-in Node JSON-RPC against packaged stdio server"
+  ],
+  "answer": {
+    "name": "Invite",
+    "enabled": true,
+    "visible": true,
+    "scope": {
+      "environment": "staging",
+      "origin": "https://fixture.test",
+      "role": "admin",
+      "account_scope": "synthetic",
+      "locale": "en"
+    },
+    "observed_at": "2026-10-07T00:00:00Z",
+    "query_status": "complete",
+    "scope_match": true,
+    "freshness": "stale",
+    "applicability": "requires_check",
+    "provenance": "observed synthetic capture"
+  },
+  "evidence": {
+    "project_id": "468093de-d113-42b9-9c17-bf9d8705ab49",
+    "app_id": "c291cdc3-bfcd-4a5f-ba69-74254419dc07",
+    "request_id": "js_trial_ingest",
+    "revision": 1,
+    "screen_id": "b3438a7f-60c6-4868-a61f-66ca892191e0",
+    "state_id": "f6166b37-ff16-4ca9-bdf8-989cc12df733",
+    "capture_id": "bf3b66e1-ea15-4580-8c9e-f5d47e32bb46",
+    "control_id": "51635fb4-2b47-4d7d-becb-fadf0811562b"
+  },
+  "friction": [
+    "Restricted network stalled with ENOTFOUND; authorized escalation",
+    "Network install about two minutes; bounded retry redundant because preceding process completed around cancellation",
+    "Offline rebuild allowScripts warning; SQLite worked",
+    "--help returned INVALID_CONFIG",
+    "Several README guides absent from tarball",
+    "No copy-ready external fixture ingest/query transport example",
+    "MCP client import ERR_MODULE_NOT_FOUND; used inline JSON-RPC",
+    "Control+capture evidence request unavailable; capture-only available"
+  ],
+  "assistance": [
+    "Operator supplied tarball/runtime/fixtures/constraints",
+    "General agent MCP/JSON-RPC knowledge beyond packaged instructions",
+    "No repository source/tests/evidence/other persona access"
+  ],
+  "limits": [
+    "Assisted agent execution does not establish unaided human adoption",
+    "No browser install/launch; doctor existence is not launch evidence",
+    "No native host/plugin discovery/new-chat or production/backend behavior",
+    "Historical observation only"
+  ],
+  "cleanup": {
+    "prefix": "/private/tmp/waygrain-g03-js-ocbyiF",
+    "removed_and_verified": true,
+    "repository_edits": false,
+    "host_setting_edits": false,
+    "commit_push_publication": false,
+    "credentials_or_auth_used": false,
+    "retained_trial_files": false
+  }
+}

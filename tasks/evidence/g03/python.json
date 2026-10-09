@@ -1,0 +1,77 @@
+{
+  "reviewer": "/root/g03_python",
+  "persona": "Python backend developer with basic npm knowledge, unfamiliar with Waygrain/MCP",
+  "evidence_class": "assisted agent proxy, not human evidence",
+  "result": "completed",
+  "started_utc": "2026-10-09T18:04:49Z",
+  "first_answer_elapsed_seconds": 192,
+  "trial_elapsed_before_cleanup_seconds": 214,
+  "cleanup_completed_utc": "2026-10-09T18:08:25Z",
+  "elapsed_including_cleanup_from_timestamps_seconds": 216,
+  "limit_seconds": 600,
+  "tarball_sha256": "92c15a0430ed9081bb91d9d967ed7157bb64b27d53e7c36d9d1aca5dd4224082",
+  "hash_verified": true,
+  "node": "v24.20.0",
+  "stages": [
+    "Read packaged README/setup/skills/public schemas/declaration files/metadata",
+    "Isolated ignore-scripts install and offline native rebuild",
+    "Explicit fixture init and doctor",
+    "Temporary Python stdio JSON-RPC client using packaged serve command",
+    "wg_ingest, scoped wg_query and capture wg_evidence",
+    "Removed prefix and verified absence"
+  ],
+  "results": {
+    "install": "Sandbox attempt silent/cancelled about 70 seconds; escalated retry added eight packages in reported 59 seconds",
+    "native_rebuild": "Succeeded with allowScripts warning",
+    "init": "initialized",
+    "doctor": "ready_for_runtime_probe; disk_wal; browser launch and host not tested",
+    "mcp_protocol": "2025-11-25",
+    "ingest": "complete, revision1, no warnings/redaction drops",
+    "query": "complete, scope_match, stale/requires_check",
+    "evidence": "structured capture available"
+  },
+  "evidence": {
+    "project_id": "e1edba46-f36f-4e61-b0b6-6ec06aa0d46a",
+    "app_id": "f49d107a-a672-43ac-9262-f3991357599c",
+    "request_id": "python_trial_ingest",
+    "screen_id": "57e1d7a1-64ad-473a-926b-63422699f220",
+    "state_id": "057da2ad-f094-4022-95fe-49156dbf79ec",
+    "capture_id": "d4321084-9bc1-4042-b3d6-52d65fc1c6ab",
+    "control_id": "a0dc78fc-f94e-479c-866e-2a040aae6d95"
+  },
+  "answer": {
+    "name": "Invite",
+    "enabled": true,
+    "visible": true,
+    "scope": {
+      "environment": "staging",
+      "origin": "https://fixture.test",
+      "role": "admin",
+      "account_scope": "synthetic",
+      "locale": "en"
+    },
+    "route": "/members",
+    "observed_at": "2026-10-07T00:00:00Z",
+    "freshness": "stale",
+    "applicability": "requires_check"
+  },
+  "friction_assistance": [
+    "Setup sufficient for install/init",
+    "No packaged executable ingest/query example; inspected public schemas",
+    "--help returns INVALID_CONFIG",
+    "Temporary Python transport harness required general agent MCP knowledge beyond instructions",
+    "wg_evidence control+capture IDs unavailable; capture-only succeeded",
+    "No human/other persona or repository source/tests/evidence accessed"
+  ],
+  "limits": [
+    "Historical synthetic fixture only; no current product behavior proof",
+    "No browser/service/host registration/fresh-chat/human usability qualification",
+    "No source/host/Git/publication changes"
+  ],
+  "cleanup": {
+    "prefix": "/private/tmp/waygrain-g03-python-186449",
+    "removed_and_absence_verified": true,
+    "server_processes_terminated": true,
+    "trial_packet_preserved": true
+  }
+}

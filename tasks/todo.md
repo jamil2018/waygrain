@@ -71,7 +71,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 - [x] G01 — Build reproducible evaluation harness — verified
 - [x] G02 — Run efficiency and correctness evaluation — verified (bounded study; efficiency threshold failed)
-- [ ] G03 — Run unfamiliar-developer installation trial — pending
+- [x] G03 — Run installation trial — verified for user-amended assisted agent proxy; human gate unmet
 - [ ] G04 — Complete release-readiness review — pending
 
 ## Task record template
@@ -519,3 +519,10 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Run: 270 individual answers in 27 actual Codex sessions, ten tasks with three repetitions per arm and cold/warm/changed case. All 270 constrained answers correct and grounded, no invalid answers or batch errors. Full distributions and individual records retained in [matrix](evidence/g02/matrix.json), with reproducible [analysis](evidence/g02/analyze.mjs), [summary](evidence/g02/summary.json) and [results](evidence/g02/RESULTS.md).
 - Warm call reduction against notes: 0%; warm total wall time 7.81% worse against browser-only; tokens 0.035% worse against notes. Cold overhead 3.24% in this constrained study. No repeated-use break-even established.
 - Independent verification and exact-artifact review by `/root/g_verify` are recorded in [review](evidence/g02/independent-review.json). Original agent-directed scout efficiency, open-ended correctness, wrong-action, autonomous freshness, human adoption and portability gates remain unqualified or unmet.
+
+### G03 — User-amended installation proxy
+
+- Status: verified for the explicitly selected three-subagent proxy procedure. Original three unfamiliar human developers criterion remains unmet. G02 independently verified and shipped PR33 at `5555b04`.
+- Three isolated personas installed the same packed artifact, initialized, ingested the supplied synthetic fixture and queried Invite in 236.2 / 216 / 196 seconds including cleanup. Each needed general protocol expertise; assistance/friction and stale-fixture limits remain in separate [receipts and results](evidence/g03/RESULTS.md).
+- Actual npm network friction, invalid CLI help, absent packed source docs, schema/transport example gaps and capture-only evidence retrieval are recorded. No browser or extra service was needed; no human, native host discovery, fresh-chat or portability gate passed.
+- Independent packet/receipt verification and exact-artifact review are recorded in [review](evidence/g03/independent-review.json). Historical evidence and deferred Claude/Cursor status remain unchanged.
