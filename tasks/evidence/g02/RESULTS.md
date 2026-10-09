@@ -1,0 +1,19 @@
+# G02 Codex evaluation results
+
+The complete G01 harness ran 27 actual ephemeral Codex sessions: ten questions × three repetitions × three conditions × three cases = **270 individual constrained answers**. Dependency G01 was independently verified and shipped in PR32 at `755068d`. The immutable run is `matrix.json`; `analyze.mjs` validates/recomputes `summary.json`. No repetition was retried or discarded. All nine matched repetition/case groups have equal evidence projections across their three arms.
+
+All conditions returned 90/90 correct, grounded constrained answers; all 27 batches completed with no driver/host/cleanup error. There were zero unsupported constrained enum answers and zero invalid responses. Open-ended unsupported-claim rates and model-selected wrong UI actions remain unmeasured; no UI action was executed. Changed answers were correct after mandatory driver refresh, which does not qualify autonomous stale-evidence detection.
+
+| Condition    | Cold median total seconds | Warm median total seconds | Changed median total seconds | Warm logical calls including priming/lifecycle |
+| ------------ | ------------------------: | ------------------------: | ---------------------------: | ---------------------------------------------: |
+| Browser only |                     10.05 |                      9.55 |                         8.94 |                                             22 |
+| Notes folder |                      9.71 |                     10.26 |                         9.81 |                                             12 |
+| Waygrain     |                     10.02 |                     10.29 |                         9.95 |                                             12 |
+
+Every distribution, individual answer, token count and retained-byte measurement is published in the JSON artifacts. Total times include setup, version-one priming where applicable, capture/retention/query/refresh, the model session and per-arm cleanup. They are measured batch times, not invented individual task times. Browser calls are the documented logical operations, not internal mapper/CDP calls. The actual Codex usage events measured tokens; warm medians were 17,032 browser-only, 17,028 notes-folder and 17,034 Waygrain total input+output tokens. No model/provider hidden costs were estimated.
+
+**Efficiency threshold failed in this bounded study.** Waygrain has zero call reduction against the stronger notes baseline, is 7.81% slower than the stronger warm-time browser baseline, and uses 0.035% more tokens than the stronger notes-token baseline. Selecting the stronger baseline separately for each metric is conservative. Notes and Waygrain both make zero additional observation calls in the warm task window; published aggregate call counts include the same ten priming calls and two lifecycle calls. There is no justified repeated-use break-even from this matrix.
+
+Cold total overhead was 3.24% against the stronger cold baseline, inside the proposed 15% bound **for this constrained fixture study only**. Constrained correctness did not regress. These two bounded passes do not qualify the original general scout-efficiency, open-ended correctness, wrong-action or autonomous-change release requirements. The specification's recommendation applies: retain as a private local helper pending a stronger study or simplification; no public release qualification is claimed.
+
+Independent verification/review binds the exact final artifact in `artifact-sha256.json` and `independent-review.json`. Node24 build/typecheck/focused tests and the existing 103-test quality suite passed; Node24/26 provider CI is checked separately for shipment. Human adoption, second application, and Claude/Cursor compatibility remain original unmet/deferred gates. No package or listing was published.
