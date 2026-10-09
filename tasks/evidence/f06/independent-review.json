@@ -1,0 +1,35 @@
+{
+  "verdict": "ACCEPT_F06_CODEX_ONLY_CHECKPOINT_EXACT_ARTIFACT",
+  "reviewer": "/root/f_review",
+  "date_local": "2026-10-09",
+  "base_commit": "344d4661f453bbc60fc7e6eff9406077370f1d8c",
+  "artifact_manifest_sha256": "c64869ad72a3bbbab93f74b57d27e1cdcacddd72da5811808b4eb1a42d80a73c",
+  "scope": "Five documentation files in artifact-sha256.json; no runtime changes",
+  "independent_checks": [
+    "All five document hashes and manifest match the final artifact",
+    "F01-F04 implementation commits are ancestors of base main; all historical evidence bytes unchanged",
+    "Final F06 verified status applies only to amended Codex CLI/Blogen pilot; F05 deferred not passed",
+    "Original second-host and second-application release criteria retained; Phase G and publication unselected",
+    "Documentation links resolve after this review record is saved; git diff check passed",
+    "Claims preserve explicit stdio CLI version, partial adapted Blogen evidence and unqualified discovery/desktop/backend/graph limits"
+  ],
+  "writer_checks": {
+    "runtime": "Node 24.20.0",
+    "command": "npm run check",
+    "result": "PASS",
+    "tests": 101,
+    "additional": [
+      "documentation formatting",
+      "local links",
+      "git diff --check"
+    ]
+  },
+  "required_findings_remaining": [],
+  "limits": [
+    "No new runtime, browser, product mutation, host installation or model session qualification",
+    "Codex CLI 0.162.0-alpha.2 explicit stdio recall path only; automatic plugin discovery and desktop UI installation unqualified",
+    "Claude Code and Cursor compatibility remain deferred and unverified; the original second-host and second-application release requirements remain unsatisfied",
+    "Historical F03 partial adapted UI evidence does not establish complete states, graph transitions, native backend/authentication or persistence",
+    "No Phase G evaluation, public release, exhaustive host privacy or hidden-session attestation"
+  ]
+}

@@ -1,0 +1,17 @@
+# F06 Codex-only pilot checkpoint
+
+On 9 October 2026 the user requested completion with Codex support only. The amended plan defers F05 and bounds F06 to the shipped F01–F04 Blogen/Codex pilot. Claude Code and Cursor have not been tested. This is not the original two-host/two-application acceptance or release readiness; both remain requirements for a later release checkpoint.
+
+| Area | Accepted evidence | Boundary |
+| --- | --- | --- |
+| Packed setup | [F01 review](../f01/independent-review.md), [F02 review](../f02/independent-review.md) | Three skills, manifests, setup/diagnostics, explicit native rebuild and Chromium installation tested from packed consumers on Node 24/26 |
+| Blogen journeys | [F03 results](../f03/RESULTS.md), [independent live review](../f03/independent-live-review.json) | Thirteen partial captures and eight durable attempts; temporary synthetic adapter and UI adjustments; no complete states or graph transitions, native backend/authentication or persistence qualification |
+| Codex support | [F04 results](../f04/RESULTS.md), [independent live review](../f04/independent-live-review.json) | Actual Codex CLI `0.162.0-alpha.2` on macOS arm64 with explicit session-scoped stdio registration to the packed server; desktop UI installation and automatic plugin discovery unqualified |
+| Fresh-session recall | [F04 host artifact](../f04/final-host-artifact.json), [receipt](../f04/host-recall-receipt.json) | Browser and original MCP closed before fresh ephemeral session; native status/query/evidence reads and six independently grounded citations; partial evidence and inferred creation explicitly qualified |
+| Restoration | [F03 restoration review](../f03/independent-restoration-review.json), [F04 cleanup](../f04/operator-cleanup.json) | All fourteen temporary Blogen source changes restored; pilot flag removed; temporary host selector/cache removed; original local service restored; synthetic runtime/database retained for operator follow-up |
+
+These existing independently reviewed records attest the recorded artifacts and runs, not a new live check of today's application or unrestricted support for every Codex version. Prior Node 24/26 checks and shipment CI passed for their exact F01–F04 heads. This checkpoint changes only planning/status documentation; no runtime or host settings change. Parent Node 24.20.0 `npm run check` passed on 9 October 2026: typecheck, lint, formatting, build and 101/101 tests. Local documentation links and `git diff --check` passed.
+
+The explicit setup path is documented in [PLUGIN_SETUP.md](../../../PLUGIN_SETUP.md). Failed discovery probes remain preserved. Product evidence came through native MCP after the prior browser closed; no prior outcome facts or evidence IDs were supplied. Existing operator authentication was used without copying credentials. No exhaustive host privacy, network or session independence claim is made.
+
+Independent reviewer `/root/f_review` accepted the Codex-only checkpoint after checking shipped dependency ancestry, preserved historical evidence, resolving documentation links and bounded claims. No Required finding remains. Final file identities and exact-artifact acceptance are recorded in `artifact-sha256.json` and `independent-review.json`. Second-host portability, second-application validation, automatic plugin discovery, desktop installation, evaluation thresholds and public release remain unverified. Phase G is unselected; no package or listing publication is authorized.

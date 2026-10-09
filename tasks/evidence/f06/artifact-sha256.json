@@ -1,0 +1,11 @@
+{
+  "base_commit": "344d4661f453bbc60fc7e6eff9406077370f1d8c",
+  "scope": "Codex-only Phase F documentation checkpoint; no runtime changes",
+  "files": {
+    "README.md": "070377d18abeed72ec7f167ac3248f927c4a9c14da0e1e3a94a64f1f76aeef47",
+    "PLUGIN_SETUP.md": "db2ab000a4acbb835d61b0daca616f794be9beef184cc5c93c2efdd776d86776",
+    "tasks/plan.md": "7daeb7de3917e8de1b50ce8f28ea167e22056c4af453515214dfe8036cf0e22e",
+    "tasks/todo.md": "cdfc70ac9096c688e00250ec3b60d2ca7c6ba9369a6728851eafc4e9bc4d8e18",
+    "tasks/evidence/f06/RESULTS.md": "a1d1f387d1cbd1c11218b3f6051e02434e123a3ac8a9d89d00ce2742beae2749"
+  }
+}

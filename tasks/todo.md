@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03 is `verified`; F04 is `verified`; F05 is deferred by the user and F06 awaits its dependencies. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03 is `verified`; F04 is `verified`; F05 is deferred by the user; F06 is verified for the amended Codex-only checkpoint. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -64,8 +64,8 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] F02 — Add Blogen profile and pilot fixtures — verified
 - [x] F03 — Verify three Blogen journeys — verified
 - [x] F04 — Verify new-session recall in Codex — verified
-- [ ] F05 — Verify Claude Code portability on macOS — pending
-- [ ] F06 — Pilot checkpoint — pending
+- [ ] F05 — Second-host portability — deferred (Claude Code and Cursor)
+- [x] F06 — Codex-only pilot checkpoint — verified
 
 ## Stage G — Evaluation and release readiness
 
@@ -485,3 +485,18 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Actual ephemeral Codex CLI `0.162.0-alpha.2` run `0b9b66a2-ed04-4ce1-b44c-78e58e36c2b0` used native status, two queries and two evidence reads through explicit session-scoped stdio registration. Six final citations (two screens/four partial captures), times, scope and revision independently verified; no browser, writes or direct evidence-file reads. [Results](evidence/f04/RESULTS.md), [independent live review](evidence/f04/independent-live-review.json), [final host artifact](evidence/f04/final-host-artifact.json).
 - Three earlier CLI discovery probes were rejected and preserved; automatic plugin MCP discovery and desktop UI installation remain unqualified. Temporary host selector/cache removed to restore prior uninstalled state; original-source local Blogen dev service restored with no application actions. F05 remains user-deferred and full F06 remains open.
 - Historical Node24 check passed 101 tests; this evidence/setup documentation slice has no runtime changes. Independent exact shipment review and CI are recorded separately.
+
+
+### Phase F Codex-only scope amendment — 9 October 2026
+
+- User requested: “update note. finish with codex support only for now.” This supersedes the earlier full two-host checkpoint for the current pilot. No Cursor test is selected; Claude Code and Cursor compatibility remain unverified follow-up work.
+- F05 is deferred, not passed. The amended F06 depends on verified F01–F04 and accepts only the documented Blogen/Codex CLI pilot. The original second-host and second-application requirements remain release requirements; automatic plugin discovery and desktop installation are unqualified.
+- Historical authorization, pauses, failed discovery probes and earlier gate limits above describe their original checkpoints and remain preserved. This amendment does not authorize Phase G or public publication.
+
+### F06 — Codex-only pilot checkpoint
+
+- Status: verified for the amended Codex-only scope; independent reviewer `/root/f_review` accepted the dependency evidence and checkpoint, with no unresolved Required findings.
+- Dependencies: F01–F04 independently verified and shipped through PR27–PR30; current main base `344d4661f453bbc60fc7e6eff9406077370f1d8c`.
+- Accepted scope and exclusions are collected in [checkpoint](evidence/f06/RESULTS.md). No new browser, product mutation, host installation or model session is required for this evidence review.
+- Verification: parent Node24.20.0 check PASS (typecheck, lint, formatting, build and 101 tests); independent documentation links, historical evidence preservation, dependency ancestry and bounded claims PASS. Exact final documentation review recorded in [review](evidence/f06/independent-review.json).
+- Current Codex-only Phase F scope is complete. F05 remains deferred; the original two-host/two-application release acceptance is not claimed. Phase G remains unselected.
