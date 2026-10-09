@@ -1,0 +1,515 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "node": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "codex": "codex-cli 0.162.0-alpha.17.2",
+    "playwright": "1.63.0",
+    "harness_sha256": "ff9a170de386440a517b2f47125c469fa46deae91e2a0cd29aaefe8df5d5b9c4",
+    "started_at": "2026-10-09T17:54:30.074Z"
+  },
+  "host": {
+    "model": "gpt-6.1-sol",
+    "reasoning": "low",
+    "ephemeral": true
+  },
+  "repetitions": 1,
+  "batch_size": 10,
+  "results": [
+    {
+      "condition": "browser-only",
+      "case": "cold",
+      "repetition": 1,
+      "browser_calls": 12,
+      "knowledge_calls": 0,
+      "setup_ms": 558.006292,
+      "priming_ms": 0,
+      "retained_bytes": 0,
+      "error": null,
+      "context_sha256": "18688b0262feedb08c2a4e0350b4548e68dc9dc1b9aaf490a7ec11d10da74cad",
+      "pre_model_ms": 131.3265,
+      "host": {
+        "wall_ms": 9661.374958,
+        "tokens": {
+          "input": 16838,
+          "output": 189,
+          "cached_input": 0
+        },
+        "stderr_bytes": 268,
+        "error": null,
+        "answers": {
+          "answers": [
+            {
+              "id": "invite-label",
+              "value": "Invite",
+              "observation": 0
+            },
+            {
+              "id": "viewer-invite",
+              "value": "no",
+              "observation": 1
+            },
+            {
+              "id": "active-tab",
+              "value": "Active",
+              "observation": 0
+            },
+            {
+              "id": "admin-save",
+              "value": "enabled",
+              "observation": 2
+            },
+            {
+              "id": "viewer-save",
+              "value": "disabled",
+              "observation": 3
+            },
+            {
+              "id": "invite-preparation",
+              "value": "Invite",
+              "observation": 0
+            },
+            {
+              "id": "remove-preparation",
+              "value": "yes",
+              "observation": 4
+            },
+            {
+              "id": "persistence-proof",
+              "value": "unproven",
+              "observation": 2
+            },
+            {
+              "id": "rename-change",
+              "value": "no",
+              "observation": 0
+            },
+            {
+              "id": "remove-change",
+              "value": "no",
+              "observation": 4
+            }
+          ]
+        }
+      },
+      "task_results": [
+        {
+          "id": "invite-label",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "viewer-invite",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "active-tab",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "admin-save",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "viewer-save",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "invite-preparation",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "remove-preparation",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "persistence-proof",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "rename-change",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "remove-change",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        }
+      ],
+      "task_batch_ms": 9793.236499999999,
+      "cleanup": {
+        "store": "complete",
+        "context": "complete",
+        "browser": "complete",
+        "files": "complete"
+      },
+      "total_ms": 10437.935458
+    },
+    {
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 1,
+      "browser_calls": 12,
+      "knowledge_calls": 0,
+      "setup_ms": 433.67295899999954,
+      "priming_ms": 0,
+      "retained_bytes": 7057,
+      "error": null,
+      "context_sha256": "18688b0262feedb08c2a4e0350b4548e68dc9dc1b9aaf490a7ec11d10da74cad",
+      "pre_model_ms": 158.31079200000022,
+      "host": {
+        "wall_ms": 9044.332584000002,
+        "tokens": {
+          "input": 16838,
+          "output": 183,
+          "cached_input": 0
+        },
+        "stderr_bytes": 268,
+        "error": null,
+        "answers": {
+          "answers": [
+            {
+              "id": "invite-label",
+              "value": "Invite",
+              "observation": 0
+            },
+            {
+              "id": "viewer-invite",
+              "value": "no",
+              "observation": 1
+            },
+            {
+              "id": "active-tab",
+              "value": "Active",
+              "observation": 0
+            },
+            {
+              "id": "admin-save",
+              "value": "enabled",
+              "observation": 2
+            },
+            {
+              "id": "viewer-save",
+              "value": "disabled",
+              "observation": 3
+            },
+            {
+              "id": "invite-preparation",
+              "value": "Invite",
+              "observation": 0
+            },
+            {
+              "id": "remove-preparation",
+              "value": "yes",
+              "observation": 4
+            },
+            {
+              "id": "persistence-proof",
+              "value": "unproven",
+              "observation": 2
+            },
+            {
+              "id": "rename-change",
+              "value": "no",
+              "observation": 0
+            },
+            {
+              "id": "remove-change",
+              "value": "no",
+              "observation": 4
+            }
+          ]
+        }
+      },
+      "task_results": [
+        {
+          "id": "invite-label",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "viewer-invite",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "active-tab",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "admin-save",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "viewer-save",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "invite-preparation",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "remove-preparation",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "persistence-proof",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "rename-change",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "remove-change",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        }
+      ],
+      "task_batch_ms": 9202.721292,
+      "cleanup": {
+        "store": "complete",
+        "context": "complete",
+        "browser": "complete",
+        "files": "complete"
+      },
+      "total_ms": 9719.967541999999
+    },
+    {
+      "condition": "waygrain",
+      "case": "cold",
+      "repetition": 1,
+      "browser_calls": 12,
+      "knowledge_calls": 15,
+      "setup_ms": 566.5865420000009,
+      "priming_ms": 0,
+      "retained_bytes": 962672,
+      "error": null,
+      "context_sha256": "18688b0262feedb08c2a4e0350b4548e68dc9dc1b9aaf490a7ec11d10da74cad",
+      "pre_model_ms": 158.15600000000268,
+      "host": {
+        "wall_ms": 8657.901125,
+        "tokens": {
+          "input": 16838,
+          "output": 189,
+          "cached_input": 0
+        },
+        "stderr_bytes": 268,
+        "error": null,
+        "answers": {
+          "answers": [
+            {
+              "id": "invite-label",
+              "value": "Invite",
+              "observation": 0
+            },
+            {
+              "id": "viewer-invite",
+              "value": "no",
+              "observation": 1
+            },
+            {
+              "id": "active-tab",
+              "value": "Active",
+              "observation": 0
+            },
+            {
+              "id": "admin-save",
+              "value": "enabled",
+              "observation": 2
+            },
+            {
+              "id": "viewer-save",
+              "value": "disabled",
+              "observation": 3
+            },
+            {
+              "id": "invite-preparation",
+              "value": "Invite",
+              "observation": 0
+            },
+            {
+              "id": "remove-preparation",
+              "value": "yes",
+              "observation": 4
+            },
+            {
+              "id": "persistence-proof",
+              "value": "unproven",
+              "observation": 0
+            },
+            {
+              "id": "rename-change",
+              "value": "no",
+              "observation": 0
+            },
+            {
+              "id": "remove-change",
+              "value": "no",
+              "observation": 4
+            }
+          ]
+        }
+      },
+      "task_results": [
+        {
+          "id": "invite-label",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "viewer-invite",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "active-tab",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "admin-save",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "viewer-save",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "invite-preparation",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "remove-preparation",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "persistence-proof",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "rename-change",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        },
+        {
+          "id": "remove-change",
+          "correct": true,
+          "grounded": true,
+          "failure": null
+        }
+      ],
+      "task_batch_ms": 8816.129208000002,
+      "cleanup": {
+        "store": "complete",
+        "context": "complete",
+        "browser": "complete",
+        "files": "complete"
+      },
+      "total_ms": 9548.279959000003
+    }
+  ],
+  "distributions": [
+    {
+      "condition": "browser-only",
+      "case": "cold",
+      "total_ms": [
+        10437.935458
+      ],
+      "task_batch_ms": [
+        9793.236499999999
+      ],
+      "browser_calls": [
+        12
+      ],
+      "retained_bytes": [
+        0
+      ],
+      "median_total_ms": 10437.935458
+    },
+    {
+      "condition": "notes-folder",
+      "case": "cold",
+      "total_ms": [
+        9719.967541999999
+      ],
+      "task_batch_ms": [
+        9202.721292
+      ],
+      "browser_calls": [
+        12
+      ],
+      "retained_bytes": [
+        7057
+      ],
+      "median_total_ms": 9719.967541999999
+    },
+    {
+      "condition": "waygrain",
+      "case": "cold",
+      "total_ms": [
+        9548.279959000003
+      ],
+      "task_batch_ms": [
+        8816.129208000002
+      ],
+      "browser_calls": [
+        12
+      ],
+      "retained_bytes": [
+        962672
+      ],
+      "median_total_ms": 9548.279959000003
+    }
+  ]
+}

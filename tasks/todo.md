@@ -69,7 +69,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 
 ## Stage G — Evaluation and release readiness
 
-- [ ] G01 — Build reproducible evaluation harness — pending
+- [x] G01 — Build reproducible evaluation harness — verified
 - [ ] G02 — Run efficiency and correctness evaluation — pending
 - [ ] G03 — Run unfamiliar-developer installation trial — pending
 - [ ] G04 — Complete release-readiness review — pending
@@ -500,3 +500,15 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Accepted scope and exclusions are collected in [checkpoint](evidence/f06/RESULTS.md). No new browser, product mutation, host installation or model session is required for this evidence review.
 - Verification: parent Node24.20.0 check PASS (typecheck, lint, formatting, build and 101 tests); independent documentation links, historical evidence preservation, dependency ancestry and bounded claims PASS. Exact final documentation review recorded in [review](evidence/f06/independent-review.json).
 - Current Codex-only Phase F scope is complete. F05 remains deferred; the original two-host/two-application release acceptance is not claimed. Phase G remains unselected.
+
+### Phase G authorization — 9 October 2026
+
+- User selected G01–G04 in dependency order with independent verification, exact-artifact review and individual shipping; this overrides the default one-task stop only within Phase G. G04 stops at a reviewed release candidate; npm and plugin listing publication are excluded.
+- F06 is verified under the existing Codex-only amendment. F05 Claude Code and Cursor status remains deferred and unverified; original portability requirements are preserved.
+- User replaced the unavailable G03 human trial with three separate subagent personas. Record proxy results separately; the original unfamiliar-human-developer adoption release threshold remains unmet.
+
+### G01 — Reproducible evaluation harness
+
+- Status: verified for the documented constrained observation/answer harness. Dependency F06 verified at main `7ba2f63`. Independent verification and exact-artifact acceptance by `/root/g_verify` are recorded in [results](evidence/g01/RESULTS.md) and [review](evidence/g01/independent-review.json).
+- Scope: matched synthetic observation comparison with real headed Playwright and actual Codex model answers. See [methodology](../docs/evaluation.md). Scripted refresh, constrained answer vocabulary and batch timing do not qualify autonomous scout, wrong-action or stale-evidence release claims.
+- Historical failed smoke setup is retained separately in [receipt](evidence/g01/failed-parent-directory.json); no product or earlier evidence changed.

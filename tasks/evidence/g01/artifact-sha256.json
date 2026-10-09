@@ -1,0 +1,16 @@
+{
+  "base_commit": "7ba2f63",
+  "files": {
+    "docs/evaluation.md": "471b660f6fc370fa92bc7a59f5805567a5905701dfc5fdf27fe4a5d02fc5db48",
+    "scripts/evaluation/codex.mjs": "fa471adf4b69e7f2a286ea9590fda5997a34b9c89b375b9a240ce3ddbb72e69e",
+    "scripts/evaluation/protocol.mjs": "a05a1dfca74f2662497a533ac3e5dce5ae24623e69d644c9fd78baa3bb2585d3",
+    "scripts/evaluation/run.mjs": "ff9a170de386440a517b2f47125c469fa46deae91e2a0cd29aaefe8df5d5b9c4",
+    "tasks/evidence/g01/RESULTS.md": "3603cb16f1e5e9d1065fe1a9ab85ab0e9deb309dc6fdc5d5c4cda721d264af9a",
+    "tasks/evidence/g01/accepted-smoke.json": "061694cdadd56edf26c44deb84f6957fc7291f879883c7d1a235e6c38ddb73bf",
+    "tasks/evidence/g01/failed-parent-directory.json": "8972bb2b2d5f721b7e5c80cd9551e06dfece2cae3ec5fd264ac5736a2e202b54",
+    "tasks/evidence/g01/smoke-before-cleanup-guard.json": "7e25df4fc9f4131b64374cc74f029a0f8b5ba6de74e4f887f1c573879f8f587b",
+    "tasks/evidence/g01/smoke.json": "0968449293a0a7a919b24477f90e33bb8691eb54796e9e4a04856d5da46bc438",
+    "tasks/todo.md": "0ec10cb37d700cda1d007f1e9f530c2a17d3269d1908170eb88548c31c60d3ab",
+    "tests/evaluation.test.mjs": "8305ac6902a25904d4d6be9d605679fd9b3b7713c87356a91fc27ce366427635"
+  }
+}

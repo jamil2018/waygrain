@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/g_verify",
+  "verdict": "ACCEPT_G01_EXACT_ARTIFACT",
+  "date_local": "2026-10-09",
+  "artifact_manifest_sha256": "478abfbc0f7479d6a5b8aa820cf56780ac4b83e3185c92d3bb88589c4ef4abeb",
+  "checks": [
+    "All eleven manifest file hashes match",
+    "Node26.11.0 npm run check passed all 103 tests; two focused grading tests passed",
+    "Independent actual headed oracle passed twelve fixture combinations",
+    "Accepted smoke has 30 correct grounded answers, equal context hashes, positive actual token counts and complete cleanup",
+    "Final docs/results/register preserve historical evidence and distinguish constrained evaluation from original release gates"
+  ],
+  "required_findings_remaining": [],
+  "limitations": [
+    "Scripted refresh and constrained model answers do not qualify autonomous browser scouting or wrong UI actions",
+    "Original unfamiliar-human, second-application and second-host release gates remain unmet",
+    "Local macOS arm64 only; CLI requested model configuration is recorded, no provider-internal model attestation"
+  ]
+}
