@@ -1,0 +1,97 @@
+{
+  "project_alias": "fixture",
+  "apps": [
+    {
+      "alias": "fixture",
+      "allowed_origins": [
+        "https://fixture.test"
+      ],
+      "scopes": [
+        {
+          "alias": "admin-staging",
+          "environment": "staging",
+          "origin": "https://fixture.test",
+          "role": "admin",
+          "account_scope": "synthetic",
+          "locale": "en"
+        },
+        {
+          "alias": "admin-production",
+          "environment": "production",
+          "origin": "https://fixture.test",
+          "role": "admin",
+          "account_scope": "synthetic",
+          "locale": "en"
+        },
+        {
+          "alias": "viewer-staging",
+          "environment": "staging",
+          "origin": "https://fixture.test",
+          "role": "viewer",
+          "account_scope": "synthetic",
+          "locale": "en"
+        },
+        {
+          "alias": "viewer-production",
+          "environment": "production",
+          "origin": "https://fixture.test",
+          "role": "viewer",
+          "account_scope": "synthetic",
+          "locale": "en"
+        }
+      ],
+      "route_mappings": [
+        {
+          "view_key": "home",
+          "origin": "https://fixture.test",
+          "route_template": "/home"
+        },
+        {
+          "view_key": "settings",
+          "origin": "https://fixture.test",
+          "route_template": "/settings"
+        },
+        {
+          "view_key": "members",
+          "origin": "https://fixture.test",
+          "route_template": "/members"
+        },
+        {
+          "view_key": "detail",
+          "origin": "https://fixture.test",
+          "route_template": "/members/:member"
+        }
+      ],
+      "redaction_profiles": [
+        {
+          "alias": "fixture",
+          "version": 1,
+          "allowed_labels": [
+            "Home",
+            "Settings",
+            "Members",
+            "Member detail",
+            "Invite",
+            "Invite member",
+            "Cancel",
+            "Email",
+            "Password",
+            "Save",
+            "General",
+            "Security",
+            "Remove member",
+            "Active",
+            "Pending",
+            "Fixture",
+            "active",
+            "pending",
+            "invite",
+            "members"
+          ],
+          "ignored_fields": [],
+          "unknown_text": "drop"
+        }
+      ]
+    }
+  ]
+}

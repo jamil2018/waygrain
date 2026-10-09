@@ -1,0 +1,84 @@
+{
+  "reviewer": "/root/g03_platform",
+  "persona": "platform engineer cautious about install scripts and local permissions",
+  "evidence_class": "agent proxy, not unfamiliar-human evidence",
+  "result": "completed",
+  "start_utc": "2026-10-09T18:05:00Z",
+  "answer_confirmed_utc": "2026-10-09T18:08:00Z",
+  "cleanup_complete_utc": "2026-10-09T18:08:16Z",
+  "total_elapsed_seconds": 196,
+  "limit_seconds": 600,
+  "tarball_sha256": "92c15a0430ed9081bb91d9d967ed7157bb64b27d53e7c36d9d1aca5dd4224082",
+  "hash_verified": true,
+  "runtime": {
+    "node": "v24.20.0",
+    "npm": "11.19.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "stages": [
+    "Read packaged README/PLUGIN_SETUP/skill/public schemas",
+    "Isolated ignore-scripts install and explicit offline native rebuild",
+    "Initialized synthetic fixture configuration and checked 0700 directory/0600 config",
+    "Doctor validated Node/config/disk_wal",
+    "Packaged stdio server advertised 13 tools",
+    "Ingested, queried scoped controls, retrieved capture evidence",
+    "Removed prefix and verified absence"
+  ],
+  "evidence": {
+    "project_id": "6529a621-20fa-47bf-81d8-797259125b96",
+    "app_id": "1af9dcd0-5568-4004-9ea1-a522f6ab3a7c",
+    "screen_id": "f8c2fc0f-12fc-4b87-a470-0b0c7cc700d7",
+    "state_id": "d8077022-6e87-4faf-b0a8-13e411d90b20",
+    "capture_id": "ddd8825f-0246-4106-8116-d48385d3429f",
+    "invitation_control_id": "454d9ff7-fbe8-410c-9493-314f06a37c4d",
+    "revision": 1,
+    "ingest_request_id": "g03-platform-ingest"
+  },
+  "answer": {
+    "name": "Invite",
+    "role": "button",
+    "enabled": true,
+    "visible": true,
+    "query_status": "complete",
+    "evidence_status": "available",
+    "observed_at": "2026-10-07T00:00:00Z",
+    "coverage": "complete",
+    "freshness": "stale",
+    "applicability": "requires_check",
+    "scope": {
+      "environment": "staging",
+      "origin": "https://fixture.test",
+      "role": "admin",
+      "account_scope": "synthetic",
+      "locale": "en"
+    }
+  },
+  "friction": [
+    "Initial sandbox install ENOTFOUND; escalated install succeeded in reported 58 seconds",
+    "Offline native rebuild allowScripts warning",
+    "CLI --help returned INVALID_CONFIG",
+    "Lexical invitation search returned no_matches; scoped controls exposed Invite",
+    "Control IDs unavailable in wg_evidence; capture ID available",
+    "Auxiliary ps check denied by sandbox",
+    "Source documentation links absent from tarball; packaged setup and schemas sufficed"
+  ],
+  "assistance": [
+    "Operator supplied tarball, Node path, synthetic settings/capture and installation constraints",
+    "No human or other persona help",
+    "Temporary generic built-in Node JSON-RPC client; requests selected from packaged public schemas"
+  ],
+  "limits": [
+    "No separate service or browser needed",
+    "Doctor browser existence does not prove browser launch",
+    "No actual native Codex discovery/desktop or human usability qualification",
+    "No repository source/tests/evidence/other persona access",
+    "No repo/Git/host changes or publication"
+  ],
+  "cleanup": {
+    "prefix": "/private/tmp/waygrain-g03-platform.l8KN4M",
+    "removed": true,
+    "absence_verified": true,
+    "credentials_auth_raw_snapshots_input_values_retained": false
+  }
+}

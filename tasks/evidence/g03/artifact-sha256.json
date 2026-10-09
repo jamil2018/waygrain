@@ -1,0 +1,14 @@
+{
+  "base_commit": "5555b04",
+  "files": {
+    "tasks/evidence/g03/PROTOCOL.md": "07344f498bf02975dfe43ee6e9881e494e7d8e259cf30e08a1f6291f75976f4b",
+    "tasks/evidence/g03/RESULTS.md": "a44854917a93b9a5e3cdd486418297f257e4dada92026d3ea48600a0c7832275",
+    "tasks/evidence/g03/capture.json": "b79ef9f1f96f2e629086cda1b904390dc861b811866b2c20b4599ac9790984e7",
+    "tasks/evidence/g03/javascript.json": "6087285cdd2bea3eaa14c9e81b994c754e33a14fcd37b069e84af978428ae1cc",
+    "tasks/evidence/g03/platform.json": "5d0638dddea9fc7ef453615d18d0960fdff90ff4dc6c4a0ad08c7c59b73a82a3",
+    "tasks/evidence/g03/python.json": "1e98632c107b5444bfe0f6b3d26d956cc5dc746a51cde1b166316715e374f94f",
+    "tasks/evidence/g03/settings.json": "b2d49c339bfda2d797a41698b2a8e083058038d1e9a111c979397aea006998b4",
+    "tasks/evidence/g03/trial-packet-sha256.json": "e04e849efdc1c9bf4b841884e46d45482023162329f505539b583f718d6f2ae5",
+    "tasks/todo.md": "e92a86ff47ad0ba11c448ce7aa7c59ecd6444c74e340532b1e75ef28d0e6888e"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "captured_at": "2026-10-07T00:00:00Z",
+  "trace_id": "fixture_trace",
+  "trace_seq": 1,
+  "session_id": "fixture_session",
+  "tab_id": "fixture_tab",
+  "source": {
+    "producer": "synthetic",
+    "producer_version": "1",
+    "format": "structured_accessibility",
+    "format_version": "1"
+  },
+  "scope": {
+    "environment": "staging",
+    "origin": "https://fixture.test",
+    "role": "admin",
+    "account_scope": "synthetic",
+    "locale": "en"
+  },
+  "view": {
+    "route_template": "/members",
+    "selected_tabs": [
+      "active"
+    ],
+    "modal_stack": [],
+    "feature_variants": []
+  },
+  "tree": {
+    "role": "document",
+    "name": "Fixture",
+    "enabled": true,
+    "visible": true,
+    "children": [
+      {
+        "role": "heading",
+        "name": "Members",
+        "enabled": true,
+        "visible": true,
+        "children": []
+      },
+      {
+        "role": "tab",
+        "name": "Active",
+        "enabled": true,
+        "visible": true,
+        "selected": true,
+        "children": []
+      },
+      {
+        "role": "tab",
+        "name": "Pending",
+        "enabled": true,
+        "visible": true,
+        "selected": false,
+        "children": []
+      },
+      {
+        "role": "button",
+        "name": "Invite",
+        "enabled": true,
+        "visible": true,
+        "children": []
+      }
+    ]
+  },
+  "coverage": {
+    "kind": "complete",
+    "subtree": "root"
+  },
+  "redaction_profile": {
+    "alias": "fixture",
+    "version": 1
+  }
+}
