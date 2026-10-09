@@ -2,7 +2,7 @@
 
 Source of task definitions, dependencies, acceptance criteria, and verification requirements: [plan.md](plan.md).
 
-A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03 is `verified`; F04 is `verified`; F05 is deferred by the user; F06 is verified for the amended Codex-only checkpoint. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
+A01 is `verified`; A02 is `verified`; A03 is `verified`; A04 is `verified`; A05 is `verified`; A06 is `verified`; B01 is `verified`; B02 is `verified`; B03 is `verified`; B04 is `verified`; B05 is `verified`; B06 is `verified`; C01 is `verified`; C02 is `verified`; C03 is `verified`; C04 is `verified`; C05 is `verified`; D01 is `verified`; D02 is `verified`; D03 is `verified`; D04 is `verified`; D05 is `verified`; D06 is `verified`; E01 is `verified`; E02 is `verified`; E03 is `verified`; E04 is `verified`; E05 is `verified`; E06 is `verified`; F01 is `verified`; F02 is `verified`; F03 is `verified`; F04 is `verified`; F05 is deferred by the user; F06 is verified for the amended Codex-only checkpoint. G01–G04 selected procedures are verified with the recorded bounded-study/proxy limits; G04 is a reviewed private candidate with public release held. Saving the plan alone does not verify a task. Task definitions below incorporate the dependencies, scope, acceptance criteria, and verification requirements in [plan.md](plan.md), section 4; sections 3 and 5 govern execution and checks.
 
 Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md) plus [ADR-001 amendment](../docs/decisions/001-bundled-browser.md).
 
@@ -72,7 +72,7 @@ Specification authority: [v0.2 baseline snapshot](../docs/specification-v0.2.md)
 - [x] G01 — Build reproducible evaluation harness — verified
 - [x] G02 — Run efficiency and correctness evaluation — verified (bounded study; efficiency threshold failed)
 - [x] G03 — Run installation trial — verified for user-amended assisted agent proxy; human gate unmet
-- [ ] G04 — Complete release-readiness review — pending
+- [x] G04 — Release-readiness review — verified; reviewed private candidate, public release HOLD
 
 ## Task record template
 
@@ -526,3 +526,11 @@ Copy this template when a task starts; replace every placeholder with observed i
 - Three isolated personas installed the same packed artifact, initialized, ingested the supplied synthetic fixture and queried Invite in 236.2 / 216 / 196 seconds including cleanup. Each needed general protocol expertise; assistance/friction and stale-fixture limits remain in separate [receipts and results](evidence/g03/RESULTS.md).
 - Actual npm network friction, invalid CLI help, absent packed source docs, schema/transport example gaps and capture-only evidence retrieval are recorded. No browser or extra service was needed; no human, native host discovery, fresh-chat or portability gate passed.
 - Independent packet/receipt verification and exact-artifact review are recorded in [review](evidence/g03/independent-review.json). Historical evidence and deferred Claude/Cursor status remain unchanged.
+
+### G04 — Reviewed private release candidate
+
+- Status: verified release-readiness **review**, not release approval. Dependency G03 user-amended proxy independently verified and shipped PR34 at `818ce84`. [Gate verdicts](../docs/release-readiness.md) and [review evidence](evidence/g04/RESULTS.md) record failed/unmet requirements.
+- Candidate `waygrain-private-rc-20261010`, private 0.0.0, tarball SHA256 `86f7b1cae0431f8ffa4161e85efa49b051b933087e6a97d37b10204bd2e301a9`; all 95 packed contents bound separately. Exact saved tarball passed fresh Node24/26 stdio/schema/SQLite/explicit headed Chromium packed checks on macOS arm64. Earlier regenerated Node26 identity retained separately.
+- Current dependency/license inventory covers all 107 resolved packages and available notice hashes. Packed setup's exact synthetic CLI example passed; README online-source links explicit. Original CLI help and unassisted adoption friction remain. No runtime dependency/core behavior changed.
+- Independent exact-artifact review and verification by `/root/g_verify` recorded in [review](evidence/g04/independent-review.json). Original historical evidence and Claude/Cursor deferral preserved.
+- Public release **HOLD**: efficiency failed; broader correctness/wrong-action/autonomous freshness unqualified; original human adoption unmet; second application and second host unverified. Selected G01–G04 procedures complete with these truthful verdicts. No npm publication, plugin listing, release tag or later task executed.

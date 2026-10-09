@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "node": "v24.20.0",
+  "candidate_sha256": "86f7b1cae0431f8ffa4161e85efa49b051b933087e6a97d37b10204bd2e301a9",
+  "exact_packaged_guide_code_executed": true,
+  "existing_locked_dependencies": true,
+  "fresh_install_claim": false,
+  "ingest_capture_id": "d7987a9a-e391-4634-95fe-c97c560e2746",
+  "query_status": "complete",
+  "answer": "Invite",
+  "scope": "admin-staging-synthetic",
+  "cleanup": "temporary_prefix_removed"
+}
