@@ -6,7 +6,7 @@ Saved: 6 October 2026. This document records the agreed plan; saving it does not
 
 Build a standalone local plugin that combines persistent product knowledge with bundled browser capture and agent-directed interaction. The [product specification](https://chatgpt.com/space/page_262002eefff08191b791867eb0eb32f2) remains the baseline; document bundled browser functionality as an explicit amendment.
 
-**Agreed choices:** Blogen with local disposable data; Codex first and Claude Code second on macOS; coordinator with specialist reviews; local pilot followed by gated public packaging; Apache-2.0.
+**Agreed choices:** Blogen with local disposable data; Codex CLI on macOS for the current pilot; Claude Code and Cursor compatibility deferred; coordinator with specialist reviews; local pilot followed by gated public packaging; Apache-2.0.
 
 | Area | Choice |
 |---|---|
@@ -174,8 +174,10 @@ Each row is a separate implementation task. Dependencies enforce ordering; check
 | F02 | Add Blogen profile and pilot fixtures | F01 | Reviewed label/route rules support synthetic local accounts; Blogen integration requires no core changes or unrelated repository edits |
 | F03 | Verify three Blogen journeys | F02 | Browse/filter categories, open/cancel creation, and create a disposable category produce valid scoped evidence |
 | F04 | Verify new-session recall in Codex | F03 | A fresh chat explains a feature and retrieves evidence after the original browser session is closed |
-| F05 | Verify Claude Code portability on macOS | F04 | Same server/schema works through the second host; setup and unsupported behavior are documented |
-| F06 | Pilot checkpoint | F01–F05 | Independent acceptance covers plugin installation, both applications, both hosts, and absence of hidden session assumptions |
+| F05 | Deferred second-host portability | F04 | Outside the current Codex-only pilot; retain Claude Code and Cursor compatibility as unverified follow-up work |
+| F06 | Codex-only pilot checkpoint | F01–F04 | Independent acceptance covers packed setup, the documented explicit Codex CLI connection, Blogen scoped observations, fresh-session recall and their limitations; automatic plugin discovery remains unqualified |
+
+**9 October 2026 scope amendment:** The user requested completion with Codex support only. F05 is deferred, not verified, and is no longer a dependency of this bounded F06 checkpoint. This closes only the Blogen/Codex pilot: the original second-host and second-application criteria remain release requirements under section 5 and G04. Historical evidence and failed plugin discovery probes remain unchanged. This amendment does not select Phase G or authorize public publication.
 
 ### Stage G — Evaluation and release readiness
 
