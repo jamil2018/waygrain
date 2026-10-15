@@ -8,6 +8,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { join } from 'node:path';
 import { Store, ingest, backup, restore, query } from '../dist/index.js';
+import { STORE_SCHEMA_VERSION } from '../dist/store/schema.js';
 import { storageFixture, fixtureNow } from './fixtures/storage.mjs';
 import { traceFixture, local } from './fixtures/graph.mjs';
 const require = createRequire(import.meta.url),
@@ -37,7 +38,7 @@ async function message(child, type) {
 function legacy(path, conflict = false) {
   const db = new Sqlite(path);
   db.exec(
-    'DROP TABLE deletion_batches;DELETE FROM migrations WHERE version=4;PRAGMA user_version=3;',
+    'DROP TABLE descriptor_heads;DROP TABLE descriptor_revisions;DROP TABLE deletion_batches;DELETE FROM migrations WHERE version>=4;PRAGMA user_version=3;',
   );
   if (conflict) db.exec('CREATE TABLE deletion_batches (synthetic INTEGER)');
   db.close();
@@ -131,7 +132,10 @@ test(
     );
     db.close();
     const success = await Store.open(f.configPath);
-    assert.equal(success.db.pragma('user_version', { simple: true }), 4);
+    assert.equal(
+      success.db.pragma('user_version', { simple: true }),
+      STORE_SCHEMA_VERSION,
+    );
     assert.equal(success.revision, 1);
     success.close();
     legacy(path, true);

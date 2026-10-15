@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00–W01 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W02. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00–W02 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W03. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -19,7 +19,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | --- | --- | --- | --- | --- |
 | W00 | A | Baseline and freeze implementation choices | None | verified |
 | W01 | A | Semantic identity and claim contracts | W00 | verified |
-| W02 | A | Transactional descriptor persistence | W01 | pending |
+| W02 | A | Transactional descriptor persistence | W01 | verified |
 | W03 | A | Trusted scoped retrieval | W02 | pending |
 | W04 | A | Synthetic Calculate fixture and evidence | W03 | pending |
 | W05 | A | Phase A independent checkpoint | W04 | pending |
@@ -100,7 +100,7 @@ Acceptance: [W01 exact artifact and independent review](evidence/w01/review.json
 
 ### W02 — Transactional descriptor persistence
 
-**Status:** pending. **Dependencies:** W01. **Phase:** A. **Size:** M.
+**Status:** verified. **Dependencies:** W01. **Phase:** A. **Size:** M.
 
 Add versioned storage for semantic targets, sources, claims, mappings and documentation revisions, reusing suitable existing transaction/locking primitives.
 
@@ -108,11 +108,13 @@ Add versioned storage for semantic targets, sources, claims, mappings and docume
 
 **Acceptance:**
 
-- [ ] Fresh and upgraded synthetic stores retain stable IDs/history and pass integrity checks; old data remains readable under its supported interface.
-- [ ] Expected-revision writes are atomic; concurrent/stale writes fail explicitly; supersession never deletes earlier evidence.
-- [ ] Failed/interrupted migration or write leaves a consistent store; unsupported future schemas fail closed and private-file behavior is retained.
+- [x] Fresh and upgraded synthetic stores retain stable IDs/history and pass integrity checks; old data remains readable under its supported interface.
+- [x] Expected-revision writes are atomic; concurrent/stale writes fail explicitly; supersession never deletes earlier evidence.
+- [x] Failed/interrupted migration or write leaves a consistent store; unsupported future schemas fail closed and private-file behavior is retained.
 
 **Verification:** Temporary SQLite migration/restart/rollback/concurrent-write tests, legacy store tests, npm run check and build. Never migrate a real user store for qualification.
+
+Acceptance: [W02 exact artifact and independent review](evidence/w02/review.json).
 
 ### W03 — Trusted scoped retrieval
 

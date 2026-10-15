@@ -10,6 +10,7 @@ import {
   graphMigration,
   visibilityMigration,
   deletionMigration,
+  descriptorMigration,
   STORE_SCHEMA_VERSION,
 } from './schema.js';
 
@@ -266,6 +267,30 @@ export class Store {
           try {
             db.exec(deletionMigration);
             db.prepare('INSERT INTO migrations VALUES(4,?)').run(
+              new Date().toISOString(),
+            );
+            integrity(db);
+            db.exec('COMMIT');
+          } catch (error) {
+            db.exec('ROLLBACK');
+            throw error;
+          }
+        }
+        if (db.pragma('user_version', { simple: true }) === 4) {
+          if (version === 4) {
+            const backup = join(
+              location.storageDirectory,
+              'pre-migration-v4-' + Date.now() + '.sqlite',
+            );
+            const file = await open(backup, 'wx', 0o600);
+            await file.close();
+            await db.backup(backup);
+            await checkPrivateEntry(backup, false);
+          }
+          db.exec('BEGIN IMMEDIATE');
+          try {
+            db.exec(descriptorMigration);
+            db.prepare('INSERT INTO migrations VALUES(5,?)').run(
               new Date().toISOString(),
             );
             integrity(db);

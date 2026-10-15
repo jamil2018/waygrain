@@ -1,0 +1,13 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "REQUEST_CHANGES",
+  "manifest_file_sha256": "e15d897690a69a061c7087c15bbcfcbc0d714e2303e26bf44a4fd48da3e2ab31",
+  "checks": [
+    "npm run check PASS148/148",
+    "focused store tests PASS4/4",
+    "git diff --check PASS"
+  ],
+  "required_findings": [
+    "Move state-dependent successor/history/ownership validation inside write transaction; expected revision must be checked against same transaction snapshot."
+  ]
+}

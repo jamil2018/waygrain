@@ -15,6 +15,7 @@ import {
   graphMigration,
   visibilityMigration,
   deletionMigration,
+  descriptorMigration,
   STORE_SCHEMA_VERSION,
 } from './schema.js';
 import { checkPrivateEntry } from '../config/filesystem.js';
@@ -55,7 +56,11 @@ function verify(db: Database, configuration: Configuration) {
   const expected = new Sqlite(':memory:');
   try {
     expected.exec(
-      initialSchema + graphMigration + visibilityMigration + deletionMigration,
+      initialSchema +
+        graphMigration +
+        visibilityMigration +
+        deletionMigration +
+        descriptorMigration,
     );
     if (canonical(schemaRows(db)) !== canonical(schemaRows(expected)))
       throw new KnowledgeError('STORE_CORRUPT');

@@ -1,0 +1,55 @@
+{
+  "task": "W02",
+  "dependency": {
+    "W01": "1988932",
+    "review_manifest": "2d3a6dd97de5c842562120c3248428b4a0fb6ace4cf1d36e02391c62babac6da"
+  },
+  "status": "implemented; pending independent acceptance",
+  "environment": "Node26.11.0/npm11.20.0 macOS arm64",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "exit": 0
+    },
+    {
+      "command": "npm run build && node --test tests/descriptor/store.test.mjs",
+      "exit": 0,
+      "result": "4 focused cases PASS"
+    },
+    {
+      "command": "npm run check (r1)",
+      "exit": 1,
+      "result": "New test undeclared structuredClone/URL; fixed imports/JSON clone"
+    },
+    {
+      "command": "npm run check (r2)",
+      "exit": 1,
+      "result": "144 pass,4 recovery failures: canonical backup schema lacked migration5; fixed shared verifier"
+    },
+    {
+      "command": "npm run check (r3)",
+      "exit": 0,
+      "result": "148 PASS,0 fail/skip, typecheck/lint/format/build PASS"
+    },
+    {
+      "command": "npm run build && node --test tests/descriptor/store.test.mjs (concurrency fix)",
+      "exit": 0,
+      "result": "5 PASS"
+    },
+    {
+      "command": "npm run check (r4)",
+      "exit": 0,
+      "result": "149 PASS,0 fail/skip"
+    }
+  ],
+  "scope": "Additive schema5 snapshots/heads with immutable history; reuse existing exclusive migration coordination, private v4 backup and optimistic transactions. Current recovery simulation drops only added tables to reproduce prior v3 database; assertion tracks current schema constant. Historical evidence unchanged.",
+  "limitations": [
+    "Synthetic stores only",
+    "Node26 local qualification",
+    "No descriptor transport/UI implemented",
+    "Internal store reads require W03 authorization before exposure"
+  ],
+  "review_corrections": [
+    "State-dependent validation now inside Store.write after expected revision; forced interleaving future-expected regression rejects stale branch"
+  ]
+}

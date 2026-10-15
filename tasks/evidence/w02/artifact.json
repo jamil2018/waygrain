@@ -1,0 +1,13 @@
+{
+  "src/descriptor/store.ts": "a1ca7e6806212cdafd66b9a1ddb0335ca576b399795478ae63d2679fd875f4b8",
+  "src/store/database.ts": "2304467ce4211fc1af8213a5de79318f67ea77927ca086419cfa085e3cdeeeb0",
+  "src/store/recovery.ts": "dbb9143583aabe3598767ceaa83ef7a8bec99831b066009454dfa31ec6deb833",
+  "src/store/schema.ts": "6211ba98dd248909aefc38cdb02297e5119e509368f245c7f62e2d94d7f6da1a",
+  "tasks/evidence/w02/RESULTS.json": "d914417cf4029170b05db69eed3f4ddacf5e284bdc93b3ee28299e407a6e148d",
+  "tasks/evidence/w02/artifact-r1.json": "e15d897690a69a061c7087c15bbcfcbc0d714e2303e26bf44a4fd48da3e2ab31",
+  "tasks/evidence/w02/review-r1.json": "cd5ed560770ae67765482f0fcb13dfef5f111a50e41b108966c937b1952d2b05",
+  "tasks/todo.md": "c0c42a781dd9285469986f6d21f1aaabdb5e636e85a0cd6d6579ce890c214bb5",
+  "tests/descriptor/store-worker.mjs": "f42a5bcc41d3f8259325d49e7b0b703a38d60b206b8bc042610ba05507d0266a",
+  "tests/descriptor/store.test.mjs": "a34db5a436bd4e27d8f7f86982ca39f47c7cdc17e0dd467ab479852e56f5a20c",
+  "tests/recovery-process.test.mjs": "804a44e624a2a7f8e2f39ca279fe420d602ee1a063cb6e98326f216bccfbfed8"
+}

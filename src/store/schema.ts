@@ -1,4 +1,4 @@
-export const STORE_SCHEMA_VERSION = 4;
+export const STORE_SCHEMA_VERSION = 5;
 // Initial migration only. Later schema upgrades require new numbered migrations.
 export const initialSchema = `
 CREATE TABLE meta (singleton INTEGER PRIMARY KEY CHECK(singleton=1), project_id TEXT NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));
@@ -114,4 +114,21 @@ CREATE TABLE deletion_batches (
  revision INTEGER NOT NULL, record_count INTEGER NOT NULL, undone_revision INTEGER, purged_revision INTEGER
 );
 PRAGMA user_version=4;
+`;
+
+// Semantic descriptor snapshots remain distinct from legacy observed graph IDs.
+export const descriptorMigration = `
+CREATE TABLE descriptor_revisions (
+ revision_id TEXT PRIMARY KEY, app_id TEXT NOT NULL REFERENCES apps(id),
+ store_revision INTEGER NOT NULL UNIQUE, schema_version INTEGER NOT NULL CHECK(schema_version=1),
+ supersedes_revision_id TEXT REFERENCES descriptor_revisions(revision_id),
+ bundle_json TEXT NOT NULL, UNIQUE(revision_id,app_id)
+);
+CREATE TABLE descriptor_heads (
+ app_id TEXT PRIMARY KEY REFERENCES apps(id), revision_id TEXT NOT NULL UNIQUE,
+ FOREIGN KEY(revision_id,app_id) REFERENCES descriptor_revisions(revision_id,app_id)
+);
+CREATE TRIGGER immutable_descriptor_revisions BEFORE UPDATE ON descriptor_revisions BEGIN SELECT RAISE(ABORT,'immutable'); END;
+CREATE TRIGGER retain_descriptor_revisions BEFORE DELETE ON descriptor_revisions BEGIN SELECT RAISE(ABORT,'immutable'); END;
+PRAGMA user_version=5;
 `;

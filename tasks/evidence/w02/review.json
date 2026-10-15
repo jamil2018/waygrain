@@ -1,0 +1,15 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "7bcbdd57d10e357c212b22281a0e66c06f6bf638528157460e2f69bc608851ab",
+  "checks": [
+    "All11 manifest hashes match",
+    "Original interleaving probe now CONFLICT; revision2/peer head/history2 preserved",
+    "npm run check EXIT0 PASS149/149 no fail/skip",
+    "git diff --check EXIT0"
+  ],
+  "limits": [
+    "Synthetic Node26/macOS only",
+    "Internal reads require W03 authorization; transport/UI later"
+  ]
+}
