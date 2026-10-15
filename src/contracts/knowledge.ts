@@ -61,6 +61,7 @@ const queryInput = z.discriminatedUnion('mode', [
   z.strictObject({
     ...queryBase,
     mode: z.literal('search'),
+    projection: z.literal('compact').optional(),
     filters: z.strictObject({
       ids: ids.optional(),
       kinds: z.array(recordKind).max(10).optional(),

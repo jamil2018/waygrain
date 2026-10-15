@@ -1,0 +1,12 @@
+{
+  "node": "v24.20.0",
+  "command": "npm run check",
+  "typecheck": true,
+  "lint": true,
+  "format": true,
+  "build": true,
+  "tests": 132,
+  "failures": 0,
+  "log_sha256": "23273de2c91d35638a140ac6b39c5df2b9cdfba42dc8768e8d78d1a37cb31a93",
+  "attribution": "implementation writer"
+}

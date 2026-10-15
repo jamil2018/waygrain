@@ -1,0 +1,119 @@
+{
+  "reviewer": "/root/g07_review",
+  "stage": "independent original nine-session smoke semantic verification",
+  "smoke_file_sha256": "0d05bc69aacfd5329b1eccd26ac4026b3b99b1ae9623c2780eefbcd2ce86cf9f",
+  "preflight_manifest_sha256": "0a584e3f8a28a8bc66ab31b9b7b08f5e31c37db396c8fbac34cd2f9eda5c8b2d",
+  "verdict": "accepted_as_separate_smoke_evidence_with_one_notes_grounding_failure; renewed_preflight_needed_after_receipt_lineage_amendment",
+  "rows": [
+    {
+      "key": "settings-compare|compact-waygrain|changed|1",
+      "final_sha256": "74de70f0fe064330629c3718f243fc4c849788fa0a3df51229cac12aad3b9539",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    },
+    {
+      "key": "settings-compare|notes-folder|changed|1",
+      "final_sha256": "1145a6d657e5a6b0682426d6cb1806748dfbc083d38c968bc49ece402318707a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|changed|1",
+      "final_sha256": "ce39d1b10545416cab72a3136be854b667e15822b48c4f539304f8e9fdd10299",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|changed|1",
+      "final_sha256": "8e0d74969572fddd216be80b0f0384c879e138cd4d1f9bf2b2dae4a0ed08d878",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|changed|1",
+      "final_sha256": "6ce32afc48dcfa631ea0de75217b8ad7193792e644cedcf597c36b8c7a69a8af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    },
+    {
+      "key": "invite-cancel|notes-folder|changed|1",
+      "final_sha256": "e216913e12eef45edecb62388e5713a7b67d12192a989120d4b6881e94a9a3cd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    },
+    {
+      "key": "detail-change|notes-folder|changed|1",
+      "final_sha256": "a67d92f501982c548085d24e44bce7618a0cd631133a4694b6ff92e92330c22d",
+      "correct": true,
+      "grounded": false,
+      "freshness": false,
+      "unsupported_claims": [
+        "remove_changed"
+      ],
+      "notes": "Semantically true remove-change claim lacks mandatory explicit references; prose references cannot waive per-claim rule."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|changed|1",
+      "final_sha256": "eed1e089d35feb63ce13ba95e5df571b24c1659fd4cd3abc6f9925ca323233cb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    },
+    {
+      "key": "detail-change|compact-waygrain|changed|1",
+      "final_sha256": "86313cde7128b895bda9737261ccb82d12c6d3df526e199f9756e2c635db17e1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose and claims substantively correct and explicitly supported by exposed scoped evidence; current-v2 relevant claims and actual authorized action intermediate/final states verified."
+    }
+  ],
+  "checks": {
+    "actual_sessions": 9,
+    "all_headless": true,
+    "all_cleanup_complete": true,
+    "all_runtime_errors_null": true,
+    "all_tokens_measured": true,
+    "max_workers": 3,
+    "three_triad_overlap_ms": [
+      18594.116875,
+      21199.11662499999,
+      20086.050375000006
+    ],
+    "correct_scoped_clicks": 6,
+    "wrong_clicks": 0,
+    "semantically_correct": 9,
+    "grounded_success": 8
+  },
+  "exposure_notes": [
+    "detail-change compact arm returned compact source with exact Remove node path; full evidence fallback not used",
+    "legacy detail-change exposed summaries then actual full evidence",
+    "notes detail-change full search exposes original capture; one explicit empty-ref claim remains failed",
+    "all three settings and invitation tasks opted for current browser rather than memory"
+  ],
+  "limitations": [
+    "Smoke excluded from270 full cohort; no efficiency gate verdict.",
+    "Notes-prose source-lineage receipt/scorer amendment requires renewed exact preflight and deterministic actual tool-path probe; original smoke outputs and source identities must remain archived."
+  ]
+}

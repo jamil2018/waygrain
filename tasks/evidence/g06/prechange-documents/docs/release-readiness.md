@@ -1,0 +1,33 @@
+# Reviewed private release candidate
+
+The G04 review ends at a private candidate **held from public release**. G01–G04's selected procedures are complete: the constrained Codex study, the user-amended assisted persona proxy, and the release-readiness assessment have independently reviewed evidence. Completing this review does not pass the original release gates.
+
+| Requirement           | Actual verdict                                                                                                                                                                                       |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Warm efficiency       | **Failed** in the bounded study: zero call reduction versus notes; 7.81% slower warm total time; 0.035% more tokens than the stronger baselines                                                      |
+| Correctness           | 270/270 constrained answers correct and grounded; 103 functional tests passed. Open-ended agent correctness and unsupported-claim rates remain unmeasured                                            |
+| Wrong UI actions      | Unmeasured: no model-selected UI actions executed in G02                                                                                                                                             |
+| Changed UI            | Correct answers after forced driver refresh; autonomous detection before obsolete evidence use remains unqualified                                                                                   |
+| Cold overhead         | 3.24% in this bounded study, within 15%; general scout overhead and repeated-use break-even not established                                                                                          |
+| Adoption              | Three assisted agent personas completed in 196–236.2 seconds; **original three unfamiliar-human requirement unmet**                                                                                  |
+| Second application    | **Unverified**; synthetic unit fixtures do not substitute for this portability trial                                                                                                                 |
+| Second host           | **Deferred/unverified**; Claude Code and Cursor remain deferred. Existing Codex explicit stdio pilot is preserved                                                                                    |
+| Runtime/packing       | Exact private candidate passed fresh Node24 and Node26 installation, SQLite WAL, public schemas, stdio and blank headed Chromium probes on macOS arm64                                               |
+| Documentation         | Online source links are explicit; packed setup/skills/schemas available; supplied-fixture CLI example tested. CLI help and unassisted adoption remain open friction                                  |
+| Dependencies/licenses | All 107 resolved lockfile entries have declared licenses; direct pins and local notice hashes checked. This is metadata/notices evidence, not legal or all-native/browser redistribution attestation |
+
+The saved candidate is `waygrain-private-rc-20261010`, private package `waygrain@0.0.0`, tarball SHA256 `86f7b1cae0431f8ffa4161e85efa49b051b933087e6a97d37b10204bd2e301a9`. Its 95 packed file hashes, exact Node24/26 receipts, current dependency/license inventory, documentation check and independent review are in [G04 evidence](../tasks/evidence/g04/RESULTS.md). The local tarball is retained separately from Git at `/private/tmp/waygrain-g04-rc/waygrain-0.0.0.tgz`; the hash/content inventory identifies it even if temporary host storage is later removed. Do not substitute a later regenerated tarball without new artifact checks.
+
+The [evaluation methodology](evaluation.md), [G02 results](../tasks/evidence/g02/RESULTS.md) and [G03 proxy results](../tasks/evidence/g03/RESULTS.md) describe what was measured and supplied. Codex CLI's explicit stdio pilot remains the qualified host path; automatic plugin discovery and desktop installation remain unqualified. Historical browser/privacy, cross-platform, hardware-power-loss and host-internals limits remain in their original checkpoints. No new global privacy or compatibility claim is made.
+
+The specification calls for simplification or stopping when the stronger ordinary browser/notes baseline is not beaten. Keep this candidate as a private local helper pending authorized simplification or a stronger evaluation. Public release remains held until the measured efficiency failure and original correctness/action/freshness/adoption/portability requirements are resolved with their assigned evidence. No npm publication, plugin listing, release tag, deployment or later roadmap work is included.
+
+## Later G05 evaluation — 12 October 2026
+
+G05 is an authorized Codex-only representative evaluation follow-up under its [separate protocol](../tasks/evidence/g05/PROTOCOL.md), currently in progress. The G04 candidate identity, historical gate table and public release HOLD above remain unchanged. Claude Code/Cursor stay deferred/unverified; original human-adoption and second-application requirements remain unmet/unverified. G05 does not authorize publication, product simplification or another roadmap task.
+
+G05's user-selected headless/parallel amendment is a separate cohort and method. Its per-session timings include three-worker contention, and its headless adapter does not qualify production headed-browser behavior. Original partial headed results and reviews remain historical; no release requirement is waived by the execution-mode change.
+
+### G05 later measured verdict
+
+G05's complete headless three-worker cohort failed warm efficiency (0% browser-call reduction, 1.218% more time and 7.303% more tokens than notes) and success/grounding/current-claim qualification (Waygrain 86/90, ordinary baselines 90/90). All 135 scoped reversible clicks had correct outcomes; cold overhead 5.946% was within 15%, with no break-even. The three citation gaps concern true claims lacking their explicit references, not false facts or observed stale dispatch. [Later G05 results](../tasks/evidence/g05/RESULTS.md) retain all distributions, individual failures, prior headed partial/qualification history and limits. Public release remains HOLD; Claude Code/Cursor, original human adoption, second application and production-headed/native-host qualifications are unchanged. No subsequent task or delivery/publication is authorized.

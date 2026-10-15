@@ -1,0 +1,8 @@
+{
+  "command": "npm run check",
+  "stage": "lint",
+  "typecheck_pass": true,
+  "errors": 7,
+  "cause": "new benchmark/test omitted explicit Node Buffer/process/console imports required by repository ESLint",
+  "fix": "explicit imports; no lint rule or acceptance criterion changed"
+}

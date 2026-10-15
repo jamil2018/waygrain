@@ -1,0 +1,427 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "incremental independent semantic review; final report binding pending",
+  "investigations": [],
+  "answers": [
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q1",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "3e8970fb3074468c1010025bd20ea946ac241f6957af370246feaf6ea3c266b7",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": false,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": false
+      },
+      "grounding_route": "direct_evidence_with_uncited_owner_specific_next_check",
+      "notes": "Q1 required policy facts correct and cited, but next_check specifically names security-owner approval while own source_ids contain only17/08, which omit approval identity/TBD. Actual owner response was exposed and Q3 cites it; frozen per-answer citation support is incomplete. Correct but uncited supplemental claim, not false certainty."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q2",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "667808bee6b59a06273690d691467ff4ff951ac3ea30ce4479ca58fa9715a2e3",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q3",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "7bae116461e12f95e9bb67ac0a142d3c7100b35f7f74df01132b2305a06af518",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q4",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "752dbc716c2c4b9f2593f17b4d7e8bfd80d1143e8071784b5b1c957689782705",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q5",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "a4fd0b6cd98651a9173773944d0065e14a8f43cc20ae47eddd0a220056bd2330",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q6",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "d40e16a9feda1ed8e628eb4be4c883a2be6e943244674e76f96ebe4d5b56367c",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q7",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "92adfa49f3a5007db3a4044cdfc47cddcb0e41484f438962a336dc6e33eb217a",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q8",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "9cfce3aee42161a44f1e600eda13d9c599604c566f971a7617fc75ae2c2d6134",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q9",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "9f303d824e0e971b02f4781118237c01e65de6dd094ba657566072f038604949",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_raw",
+      "question_id": "Q10",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "9664c9bc2c8c6f35719237479c00bcce193efe28fb12c16bce06a300f799c437",
+      "exposure_sha256": "704029a90911930d5ad0cf1c8b38cb02412be0aaac97b203b25fc9651a534ebb",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q1",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "5c41e533afa113434d0ede7fc4d0d4b97bd2555be0dd8feaae25e2d343297dea",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": false,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": false
+      },
+      "grounding_route": "direct_evidence_with_uncited_owner_specific_next_check",
+      "notes": "Q1 required policy facts correct and cited, but next_check specifically names security-owner approval while own source_ids contain only17/08, which omit approval identity/TBD. Actual owner response was exposed and Q3 cites it; frozen per-answer citation support is incomplete. Correct but uncited supplemental claim, not false certainty."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q2",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "9250849835c832834e56dd15558927edf1e9d823a37a43888d906ec490cd76fd",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q3",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "bfdb161c542eb75f796ab081cf409df19f7a18d18ab6ed94088b256d5f169508",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q4",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "8ce3a6d0885aa65a185acae365233b84417bb03b41f85f927e34892b2d791fb0",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q5",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "d0ef135d41e04e98f6a803f26896e742db415f4ebb9d5569d3ec94bb5abd99a5",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q6",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "6ddc6c2371ffaf68403f6e636175d0cd1c8278e9b6d6a60287326c8bd2bd691d",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q7",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "592e43a47b004d7d2e659d47429a301ce5b121cbacdf942ecc01b59fc944880a",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q8",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "b085a76ddf9c77fd7f24870a742e436b8db8aace51d6fe69340c07c1b1bb34e1",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q9",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "5b541ec9537f3eb43ca45448978b80244d7db6da3ce6fc318611f726d72ace07",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    },
+    {
+      "session_id": "amber_3_organized",
+      "question_id": "Q10",
+      "world": "amber",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "fccd308a038220906cde538ac3f6070205058b4da0315ba67cf2b9b1dab7ecfe",
+      "exposure_sha256": "8947306fc11c89313eced80ed0c42e6e14edb67fab55ef0c2e2942f4cbd7c8ee",
+      "investigator_final_sha256": "3c08af309e9aa50766f464deb97f328e7e731821909907b2a94060129f5cf7c7",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Read whole answer/uncertainty/next-check with original documentary lines, exact owner statements and app facts; required policy/source authority/version/UI/unknown distinctions supported."
+    }
+  ]
+}

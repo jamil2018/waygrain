@@ -1,0 +1,176 @@
+
+> waygrain@0.0.0 check
+> npm run typecheck && npm run lint && npm run format:check && npm test
+
+
+> waygrain@0.0.0 typecheck
+> tsc -p tsconfig.json --noEmit
+
+
+> waygrain@0.0.0 lint
+> eslint . --max-warnings=0
+
+
+> waygrain@0.0.0 format:check
+> prettier --check .
+
+Checking formatting...
+All matched files use Prettier code style!
+
+> waygrain@0.0.0 pretest
+> npm run build
+
+
+> waygrain@0.0.0 build
+> tsc -p tsconfig.json && node scripts/export-contracts.mjs && node scripts/package-plugin.mjs
+
+
+> waygrain@0.0.0 test
+> node --test 'tests/**/*.test.mjs'
+
+✔ Blogen profile sanitizes synthetic unknown content and preserves category/dialog structure (35.720792ms)
+✔ Blogen unsupported table semantics stay partial without extending core contracts (20.817625ms)
+✔ C03 durable attempt markers precede dispatch, survive reopen as unknown and reject conflicting execution metadata (51.489ms)
+✔ C04 public action dispatch replays without a browser and never hashes changed fill text (39.892458ms)
+✔ C01 closed lifecycle reads never start a worker; invalid scope and foreign sessions fail closed (58.50375ms)
+✔ C01 unavailable explicit browser emits only a safe error and cleans launch scratch (504.521833ms)
+✔ C01 internal worker refuses standalone invocation without deleting caller temporary storage (345.623083ms)
+✔ C02 public JSON mapping removes values/URLs/refs, preserves order and ingests compatible identity (69.582ms)
+✔ C02 unmapped/ambiguous routes fail and unsupported/truncated coverage is ingestible partial root (43.32325ms)
+✔ capture comparisons cite both captures, preserve coverage and reject incompatible scope (66.792ms)
+✔ revision comparisons are bounded, cursor-bound and read only (44.416625ms)
+✔ feature variant changes never become observed application outcomes (47.455709ms)
+✔ CLI uses only explicit paths, creates no host settings and emits bounded receipts (2570.901416ms)
+✔ CLI rejects named-pipe config and settings files without waiting for a writer (521.229958ms)
+✔ D01 atomic guarded commits, provenance, conflicts, supersession, refs and replay (75.375084ms)
+✔ D01 aliases are audited, preserve histories and refuse cycles/scope mismatches (43.180666ms)
+✔ D01 rejected prose and unrelated or partial evidence leave no records/secret bytes (48.428834ms)
+✔ D01 v1 migration retains captures/receipts and backup under exclusive authority (133.147709ms)
+✔ D01 CLI/MCP commits use the same guarded service and bounded annotation projections (944.618041ms)
+✔ G06 compact citations resolve exactly, preserve defaults and do not write (72.749667ms)
+✔ G06 stale and partial captures retain source freshness and cannot imply currentness (40.848875ms)
+✔ G06 older captures never inherit later observation age (50.474584ms)
+✔ G06 conflicts remain contradicted with unchanged warnings (98.379792ms)
+✔ G06 scope, missing and tombstoned captures expose no snippets (48.495166ms)
+✔ G06 unsupported kind/mode combinations fail closed (18.841208ms)
+✔ G06 node and UTF8 name omissions are explicit, exact and deterministic (23.488459ms)
+✔ G06 byte/record limits preserve citations and bind projection/revision cursors (36.372209ms)
+✔ init and reload mint stable UUIDs, explicit scopes and restricted fixed storage (36.185084ms)
+✔ strict validation rejects caller IDs, storage overrides, duplicates and origin mismatches before writes (4.248542ms)
+✔ relative, traversal, symlink, missing parent and existing directories are refused without neighbor edits (12.652916ms)
+✔ load refuses unsafe permissions, file links, storage symlinks and invalid schema (28.458667ms)
+✔ concurrent init admits one writer and never remints an initialized location (7.336709ms)
+✔ wg_status: strict versioned request/response fixtures validate in Zod and generated JSON Schema (32.530791ms)
+✔ wg_ingest: strict versioned request/response fixtures validate in Zod and generated JSON Schema (6.106208ms)
+✔ wg_commit: strict versioned request/response fixtures validate in Zod and generated JSON Schema (44.048791ms)
+✔ wg_query: strict versioned request/response fixtures validate in Zod and generated JSON Schema (21.115791ms)
+✔ wg_evidence: strict versioned request/response fixtures validate in Zod and generated JSON Schema (7.480459ms)
+✔ wg_changes: strict versioned request/response fixtures validate in Zod and generated JSON Schema (5.672042ms)
+✔ wg_plan_refresh: strict versioned request/response fixtures validate in Zod and generated JSON Schema (1.93225ms)
+✔ wg_browser_open: strict versioned request/response fixtures validate in Zod and generated JSON Schema (1.789667ms)
+✔ wg_browser_snapshot: strict versioned request/response fixtures validate in Zod and generated JSON Schema (2.742875ms)
+✔ wg_browser_navigate: strict versioned request/response fixtures validate in Zod and generated JSON Schema (3.365042ms)
+✔ wg_browser_act: strict versioned request/response fixtures validate in Zod and generated JSON Schema (3.399417ms)
+✔ wg_browser_status: strict versioned request/response fixtures validate in Zod and generated JSON Schema (6.272459ms)
+✔ wg_browser_close: strict versioned request/response fixtures validate in Zod and generated JSON Schema (0.97375ms)
+✔ all seven knowledge and six browser tools are covered and JSON schemas serialize (1.099958ms)
+✔ query modes, defaults, limits, cursors and explicit incomplete results (2.446167ms)
+✔ partial ingestion never reports a state identity or executable control (1.614458ms)
+✔ tree node/depth, Unicode byte, total ingest byte and future timestamp bounds fail closed (71.555417ms)
+✔ commit operations are typed/bounded, local references are explicit, and no input values or untyped edges are accepted (2.573334ms)
+✔ browser targets are live bindings and actions exclude selectors, code, credentials and dangerous keys (2.026583ms)
+✔ browser receipts distinguish rejection, pending, success, failed and unknown without action values (0.760167ms)
+✔ version failures and malformed/cyclic/executable objects produce only sanitized error paths (0.716667ms)
+✔ built JSON Schema artifact exactly matches the public schema source (14.377666ms)
+✔ all record kinds and remaining result variants validate and nested unknown fields are rejected (28.264791ms)
+✔ structured evidence and capture summaries enforce tree bounds and coverage-specific state identities (31.126791ms)
+✔ structured annotations retain kind, author and provenance-specific evidence (2.065541ms)
+✔ deep invalid field paths remain within the public error envelope (0.925792ms)
+✔ scoped deletion hides only selected records; guarded undo restores graph links and replay is bounded (80.27475ms)
+✔ purge needs exclusive access and a fresh scoped preview; backups retain separately recoverable data (195.701458ms)
+✔ lowering storage cap refuses ingestion atomically and preserves existing history (56.172958ms)
+✔ evaluation oracle rejects obsolete answers, wrong citations, duplicate tasks and invalid text (2.310083ms)
+✔ any supplied screen supports a qualified lack of backend proof (0.182917ms)
+✔ G05 changed evidence must substantiate each fact, not merely contain any new snapshot (0.786333ms)
+✔ G05 citation identity cannot establish semantic entailment or complete-coverage absence (0.138708ms)
+✔ G05 rejected and dispatched wrong clicks remain failures rather than zero-action passes (0.146958ms)
+✔ G05 missing tokens and missing allocations cannot pass efficiency (0.729292ms)
+✔ G05 each authorized click needs its own correct observed intermediate state (0.126042ms)
+✔ G05 270 duplicated sessions cannot masquerade as the frozen allocation (5.121917ms)
+✔ G05 independent semantic review binds the exact final answer and preserves automated score (0.29825ms)
+✔ G05 parallel triad starts all three isolated arms and waits for every result after a failure (12.941375ms)
+✔ G05 missing browser call receipts remain unmeasured rather than invented zero-cost workers (0.338625ms)
+✔ G07 changed evidence must substantiate each fact, not merely contain any new snapshot (0.863375ms)
+✔ G07 citation identity cannot establish semantic entailment or complete-coverage absence (0.146542ms)
+✔ G07 rejected and dispatched wrong clicks remain failures rather than zero-action passes (0.16375ms)
+✔ G07 missing tokens and missing allocations cannot pass efficiency (0.842709ms)
+✔ G07 each authorized click needs its own correct observed intermediate state (0.129792ms)
+✔ G07 270 duplicated sessions cannot masquerade as the frozen allocation (4.699208ms)
+✔ G07 independent semantic review binds the exact final answer and preserves automated score (0.354625ms)
+✔ G07 parallel triad starts all three isolated arms and waits for every result after a failure (13.634416ms)
+✔ G07 missing browser call receipts remain unmeasured rather than invented zero-cost workers (0.466708ms)
+✔ G07 hidden prime and summary-only UI citations cannot ground an answer (0.234416ms)
+✔ G07 compact omissions and invalid source paths cannot prove absence (0.078125ms)
+✔ G07 notes-specific overall benefit cannot pass without complete semantic acceptance (0.138584ms)
+✔ G07 agent-written prose-note citations resolve exposed source lineage with guards (0.079167ms)
+✔ sources contain no hidden approval answers; owner rejects unexposed/vague evidence (0.825709ms)
+✔ unsupported packet reference cannot become exposure-grounded (0.152584ms)
+✔ failed pair blocks positive performance and keeps answer allocation (0.408875ms)
+✔ discrepant synthetic viewer UI is intentional and isolated (0.307042ms)
+✔ full allocations and semantic bindings reject duplicate or unbound evidence (0.722125ms)
+✔ B04 distinct captures preserve history while compatible identity and controls are reused (56.441375ms)
+✔ B04 screen names/routes alone never merge; explicit IDs and configured view keys constrain identity (40.3965ms)
+✔ B04 partial fragments have no state/control identity and cannot confirm complete evidence (28.166667ms)
+✔ B04 scope/application separation, revision conflicts and sequence reuse fail atomically (22.952625ms)
+✔ B04 privacy repeats on disk/WAL/receipts and sanitized replay has exactly one effect (29.927541ms)
+✔ B04 replay survives reopening and numeric control order remains stable beyond ten children (27.630417ms)
+✔ B04 failure after screen/state/control creation rolls every record and receipt back (17.545666ms)
+✔ B02 allowlisted structure and hashes are deterministic without losing UI order (10.810208ms)
+✔ B02 forbidden fields fail before output; unreviewed routes, variants, roles and profiles fail closed (3.461833ms)
+✔ plugin diagnostics report availability without browser launch or graph mutation (487.980708ms)
+✔ plugin env launch exposes all tools and refuses missing or relative configuration (958.746625ms)
+✔ portable and generated compatibility manifests preserve identity and server launch (0.81275ms)
+✔ D04 scoped deterministic lexical search ranks IDs/names/tags and returns provenance (83.12075ms)
+✔ D04 record/byte budgets, cursor filters and mutation are explicit; empty stores have no matches (63.373542ms)
+✔ D04 bounded typed neighbors respect hops/tombstones and expose annotation conflicts (64.284125ms)
+✔ D04 lexical rank precedes stable ties; flow/test summaries preserve exact verification (42.190917ms)
+✔ D04 public MCP and CLI return the same scoped query without mutation (872.427417ms)
+✔ D04 recent partial captures cannot advance whole-screen recall freshness (15.48125ms)
+✔ D04 warning groups remain bounded without discarding affected record identities (61.405916ms)
+✔ E05 concurrent process writers serialize effects; busy refusal is bounded and killed writes roll back (752.643167ms)
+✔ E05 killed real migration and failed migration preserve legacy rows and verified pre-migration backup (589.034417ms)
+✔ E05 peers refuse migration/restore; actual restore kills leave the old or verified new query image (1573.145333ms)
+✔ consistent backup and offline restore preserve graph IDs, revisions, evidence and query results (482.733041ms)
+✔ restore rejects corrupt backups and restores a corrupt live image under offline authority (79.756208ms)
+✔ freshness follows new complete observations, not reads, replay or partial fragment volume (140.283625ms)
+✔ screen refresh never reverifies historical transitions or flows; plans are scoped and bounded (61.781459ms)
+✔ B05 status/evidence share contracts, declare only implemented capabilities and preserve freshness/revision (63.683084ms)
+✔ B05 evidence budgets, continuation/filter binding and stale revision cannot hide incompleteness (52.635583ms)
+✔ B05 CLI/core and MCP/core status, ingest, structured evidence and errors agree (1683.818542ms)
+✔ B05 stdio advertises implemented tools, rejects private arguments and closes storage on EOF (512.89875ms)
+✔ SQLite opens a private disposable disk database in WAL mode and removes it (9.503708ms)
+✔ missing explicitly installed browser fails with sanitized code and no retained probe database (520.703375ms)
+✔ B03 initial schema, WAL, private files, revisions and failed writes are atomic (44.940666ms)
+✔ B03 lifetime readers admit peers but refuse exclusive maintenance until all close (884.470167ms)
+✔ B03 failed migration and future schema are refused without changing knowledge bytes (7.099583ms)
+✔ B03 competing writer busy timeout and read snapshot revision are bounded (298.435584ms)
+✔ B03 coordination lifetime lock is honored by a separate process (383.861291ms)
+✔ D03 atomic flows and matching passed assertions confer only targeted test verification (94.487292ms)
+✔ D03 failed/skipped/unrelated/timing/scope evidence cannot promote a target and rolls back the batch (125.415ms)
+✔ D03 failed runs retain evidence; disconnected/reversed flow order rejects (24.165459ms)
+✔ D03 every cited item must support the assertion target (30.919042ms)
+✔ D02 atomic source action, ordered event and observed transition survive reopening (52.395958ms)
+✔ D02 mismatched trace/scope/session/tab/sequence/time and source control reject whole batch (229.184042ms)
+✔ D02 missing/incomplete after evidence can retain failed event but never invent a transition (21.403625ms)
+✔ D05 paths retain exact observed edges and unevaluated guards/preconditions are conditional (76.029709ms)
+✔ D05 traversal budgets and missing/tombstoned evidence differ from a completed no-path search (30.404708ms)
+✔ D05 inferred edge cannot create a usable path; bounded flow retrieval preserves order (26.929666ms)
+✔ B01 corpus covers four screens, scopes, tab/modal and changed UI version (10.96225ms)
+ℹ tests 138
+ℹ suites 0
+ℹ pass 138
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3432.840125

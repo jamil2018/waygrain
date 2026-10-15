@@ -1,0 +1,335 @@
+{
+  "reviewer": "/root/g05_review",
+  "cohort": "headless_three_workers",
+  "checkpoint": "06",
+  "reviewed_zero_based_indices": [
+    150,
+    179
+  ],
+  "prefix_sha256": "b18b77f197ebd50d27d2e77bebbd3fc5420886a5b8c9889ba3bb4a4bb083a512",
+  "rows": [
+    {
+      "key": "members-explain|notes-folder|changed|2",
+      "final_sha256": "0eb2264e5276ce7e227447d8cb604d8fd07be9c2d660667cdf62580999f7f60c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 150
+    },
+    {
+      "key": "members-explain|waygrain|changed|2",
+      "final_sha256": "e549b45cb7f665e9a421014d10afaf24c99b23b01f36ee0d647b29a344b03182",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 151
+    },
+    {
+      "key": "members-explain|browser-only|changed|2",
+      "final_sha256": "a4e9054a7ac5d8ad3977e29d0d8011253cb99e8a7a32704209f683b3cbfa280b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 152
+    },
+    {
+      "key": "viewer-policy|waygrain|changed|2",
+      "final_sha256": "aec0603cc4be4cbc664a42f516c1f396b59a571788c5b11b4eb92b83cf13af2f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 153
+    },
+    {
+      "key": "viewer-policy|browser-only|changed|2",
+      "final_sha256": "c8e260226e93bd55dc0d27d9c2421f9aab12f75a7e52ab8ec5503df4d7861d01",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 154
+    },
+    {
+      "key": "viewer-policy|notes-folder|changed|2",
+      "final_sha256": "b8e3b432ab0455d8bfa75a4d87e0ed175909f1e2ffa4581dad7bfdf624d8a032",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 155
+    },
+    {
+      "key": "settings-compare|browser-only|changed|2",
+      "final_sha256": "023bb555d8b0e6f8d1b6ba15a9224092c10c2fd3dd24dd5c35432375632bdd20",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 156
+    },
+    {
+      "key": "settings-compare|notes-folder|changed|2",
+      "final_sha256": "6d5877dc9276a2ead8da39a9bf5c255b5672e03e132c0d6d1cdd32797732eda8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 157
+    },
+    {
+      "key": "settings-compare|waygrain|changed|2",
+      "final_sha256": "3a06b899bb257f5a6ba52c1508b53e562ec815f88b9ff801a7679d34f963f26d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 158
+    },
+    {
+      "key": "detail-preparation|notes-folder|changed|2",
+      "final_sha256": "ddced65470324673ba51cbac37f95e969700ad620013b7a45b57d830708f71db",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 159
+    },
+    {
+      "key": "detail-preparation|waygrain|changed|2",
+      "final_sha256": "73fec22e0d234299a9760712c0daf8c48b02413b452c3e2cc3a035a48d39cd97",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 160
+    },
+    {
+      "key": "detail-preparation|browser-only|changed|2",
+      "final_sha256": "d0c3692b4ce35e4d4d49955457b82f3f05a9e5d7ec44261df4837a9af52becd1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 161
+    },
+    {
+      "key": "invite-cancel|waygrain|changed|2",
+      "final_sha256": "2adc46d1a35936adda6f32d08e27aa35c521bd01c2c5f47039b56093ccc9a61f",
+      "correct": true,
+      "grounded": false,
+      "freshness": false,
+      "unsupported_claims": [
+        "dialog_open:missing_explicit_evidence_reference"
+      ],
+      "basis": "Full answer truthful and includes backend uncertainty; dialog_open structured claim evidence empty, frozen grounding/current applicability criterion unmet; actions and current intermediate/final states correct",
+      "zero_based_index": 162
+    },
+    {
+      "key": "invite-cancel|browser-only|changed|2",
+      "final_sha256": "f46857c63670ad3f4287b64d3be1b3192fc81cbfcfecce707c68c525c0925e8a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 163
+    },
+    {
+      "key": "invite-cancel|notes-folder|changed|2",
+      "final_sha256": "78500975e534325b6c44a8cdbb5ddcbd432f04cf505621c649bbe134c029d05e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 164
+    },
+    {
+      "key": "pending-switch|browser-only|changed|2",
+      "final_sha256": "6849b2ee477ba281d406a2096c79709861e7f8cb6109638ffff3f8e0a306a4ea",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 165
+    },
+    {
+      "key": "pending-switch|notes-folder|changed|2",
+      "final_sha256": "30c7d925e54e576ba967f9f986aae950786b311d302a83574260e880f361fc9d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 166
+    },
+    {
+      "key": "pending-switch|waygrain|changed|2",
+      "final_sha256": "6c16511867b882f9fccbcf4ed197401d2d59f042e81533345591006cdcaeb132",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 167
+    },
+    {
+      "key": "active-return|notes-folder|changed|2",
+      "final_sha256": "bc4ebb27d702f71eb42fed8c9b3ad16846c50e7ec3b984637c241a32ab21a869",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 168
+    },
+    {
+      "key": "active-return|waygrain|changed|2",
+      "final_sha256": "fe0f0f99be32ea9ae8e3de9a1f380a10cfc435d0ab5f275d0c4e02eade7429a0",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 169
+    },
+    {
+      "key": "active-return|browser-only|changed|2",
+      "final_sha256": "80f5d53d34d4e0afcede9533b14e7600647746fb9b7012fdef887348983a0fe8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 170
+    },
+    {
+      "key": "viewer-no-act|waygrain|changed|2",
+      "final_sha256": "0f4e3847e2cf3b83e669673bbd06df8630520a0d05dc092ada7c813558e62cf4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 171
+    },
+    {
+      "key": "viewer-no-act|browser-only|changed|2",
+      "final_sha256": "ef41e08f59189b61163e453b1ca1a073fcbd2ae041ef8807e95573632decd517",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 172
+    },
+    {
+      "key": "viewer-no-act|notes-folder|changed|2",
+      "final_sha256": "82bac91c3e933ddac6a449f2e0725ec2b2dc4f8f8164d74e560f8c136b6bbcf1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 173
+    },
+    {
+      "key": "invite-change|browser-only|changed|2",
+      "final_sha256": "e2ab2109a261b12014c86c3132a369fc7d897fd441049f2ee30236e0add2cb76",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 174
+    },
+    {
+      "key": "invite-change|notes-folder|changed|2",
+      "final_sha256": "f5898a8f6bd19e363bae2403c5add51e4834ec94e48bbaa82fa6953ebfb58ed4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 175
+    },
+    {
+      "key": "invite-change|waygrain|changed|2",
+      "final_sha256": "4daf04a761d22a8dfc21f39af50502a922fece2efcb4bb6898c0b51492d6a509",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 176
+    },
+    {
+      "key": "detail-change|notes-folder|changed|2",
+      "final_sha256": "1e5ab4a5bd6d3cb6052fe64729191df475f7c6501794ed1aa67d06d2f84db873",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 177
+    },
+    {
+      "key": "detail-change|waygrain|changed|2",
+      "final_sha256": "d588ba0183a0113d8f71d6ea013ebe7c168bba0ae1b721d66b31a5574070ef77",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 178
+    },
+    {
+      "key": "detail-change|browser-only|changed|2",
+      "final_sha256": "6e64c737856742fb022f18bf651a1b25024b524e03c11ace63d2c09aed413d86",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/allclaimrefs read; scoped currentv2 subjects and matched historical comparisons substantiate required/extra assertions; currentv2 before every allowed click, correct observed intermediate/final states",
+      "zero_based_index": 179
+    }
+  ],
+  "findings": [
+    {
+      "index": 162,
+      "key": "invite-cancel|waygrain|changed|2",
+      "kind": "uncited_true_claim",
+      "detail": "dialog_open evidence empty; full prose truthful and action outcome correct, grounding/currentcitation criterion fails"
+    }
+  ],
+  "summary": {
+    "semantic_correct": 30,
+    "correct_and_grounded": 29,
+    "uncited_true_claims": 1,
+    "freshness_failures": 1,
+    "wrong_attempts": 0,
+    "wrong_dispatched": 0,
+    "false_assertions": 0
+  },
+  "limitations": [
+    "Citation/applicability failure is not stale wrong action; correct observed journey preserved",
+    "Changedrep2 checkpoint only"
+  ]
+}

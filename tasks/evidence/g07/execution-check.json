@@ -1,0 +1,14 @@
+{
+  "allocation": 270,
+  "unique_keys": 270,
+  "headless_confirmed": 270,
+  "all_cleanup_confirmed": true,
+  "actions": 135,
+  "triads": 90,
+  "triads_overlapped": 90,
+  "minimum_overlap_seconds": 12.451,
+  "maximum_workers": 3,
+  "cohort_elapsed_minutes": 44.656621034033336,
+  "tokens_measured_sessions": 270,
+  "notes_written": 0
+}

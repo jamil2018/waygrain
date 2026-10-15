@@ -94,6 +94,30 @@ export const recordSummary = z.discriminatedUnion('kind', [
     received_at: timestamp,
     source,
     redaction_profile: profile,
+    compact: z
+      .strictObject({
+        source_id: id,
+        view_path: z.literal('/view'),
+        view,
+        nodes: z
+          .array(
+            z.strictObject({
+              source_path: z
+                .string()
+                .max(1024)
+                .regex(/^\/tree(?:\/children\/\d+)*$/),
+              role: key,
+              name: text,
+              enabled: z.boolean(),
+              visible: z.boolean(),
+              selected: z.boolean().optional(),
+            }),
+          )
+          .max(16),
+        omitted_nodes: z.number().int().nonnegative().max(5000),
+        omission_reasons: z.array(z.enum(['NODE_LIMIT', 'TEXT_LIMIT'])).max(2),
+      })
+      .optional(),
   }),
   z.strictObject({
     ...common,

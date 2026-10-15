@@ -1,0 +1,22 @@
+{
+  "reviewer": "/root/g07_review",
+  "stage": "independent final status-document and exact final artifact review",
+  "verdict": "accepted_verified_G07_study_with_failed_gates_preserved",
+  "final_manifest_sha256": "dd414ae9a897ac997d552f1382f323b68199d60ffa40cc1c628d8e5c62e864a1",
+  "final_manifest_files": 605,
+  "hash_mismatches": 0,
+  "implemented_manifest_sha256": "cd3e9c212c7a88b9075c280f74cbe9a070685b11b5cc90de9930bfa9908f1758",
+  "implemented_review": "independent-review.json",
+  "preserved_archives": [
+    "implemented-artifact-sha256.json",
+    "implemented-artifact/RESULTS.md",
+    "implemented-artifact/todo.md"
+  ],
+  "status_only_changes": [
+    "RESULTS.md verified procedure status and independent review/preservation links",
+    "tasks/todo.md append-only G07 verified closure"
+  ],
+  "runtime_code_data_unchanged_from_implemented_review": true,
+  "gate_and_boundary_check": "Verified procedure does not pass notes-specific benefit/original efficiency/no-regression/currentclaim gates.16sourcequalifications and3hostevents remain;267usablecorrect,135scopedcorrectclicks, tokens/headless/cleanup270.Coldwithin15percent only scoped. Historical evidence,G05failures,Claude/Cursor deferrals, human adoption/secondapplication, private0.0.0,G04candidate/publicHOLD remain unchanged; stop/no later task/delivery.",
+  "findings": []
+}

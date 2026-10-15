@@ -1,0 +1,78 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "independent verification and exact implemented artifact review",
+  "verdict": "ACCEPT_COMPLETED_STUDY_PROCEDURE_WITH_FAILED_QUALITY_AND_UNQUALIFIED_BENEFIT",
+  "manifest_path": "tasks/evidence/g08/implemented-manifest.json",
+  "manifest_sha256": "9df0515cf48f43edcb99372c37d1e9755eeb127b9ae5a1d36b32fc2509bd5d7c",
+  "manifest_files": 135,
+  "required_findings": [],
+  "artifact_bindings": {
+    "tasks/evidence/g08/full.json": "8a4e11348cb6c5b7dcb557435dc226c4553307c5fb448f13e9d1eeac58e14812",
+    "tasks/evidence/g08/final-semantic-bindings.json": "01a8b30f12f0aac43bd34052dc1e1514176c915b08845c043e4a703f3cd0d7e6",
+    "tasks/evidence/g08/summary.json": "1cba24c176d8c43bba74a6f57fa6e06c4baa69352b0565f5fe4249eb07501b9b",
+    "tasks/evidence/g08/RESULTS.md": "d6459b15d9463795fbb2b2bf81421ec658934aafd3492bdb0a24626884fe9a79"
+  },
+  "independent_verification": {
+    "manifest_mismatches": 0,
+    "historical_preserved_files_or_prefixes": 607,
+    "historical_mismatches": 0,
+    "frozen_execution_inputs": 99,
+    "frozen_input_drift": 0,
+    "focused_tests": {
+      "command": "node --test tests/g08-evaluation.test.mjs",
+      "pass": 5,
+      "fail": 0
+    },
+    "writer_quality_log": "npm run check138/138 retained; independently read terminal result, not claimed as reviewer rerun of whole suite",
+    "metric_replay": "Hash-bound semantic validation and exact JSON recomputation matches summary; separately recomputed Python arm medians/token sums/browser calls/all9pair ratios and quality counts",
+    "allocation": 27,
+    "answer_allocation": 180,
+    "shared_bundle_parity": "All nine raw/organized hashes match exact originating actual owner/observation bundle",
+    "cleanup": "All27 receipts complete;15 opened Chromium detected headless,12 lazy work sessions no browser",
+    "actions": "32 allowed actions succeeded; no Save/Remove/typing/provisioning; no critical source/host tool violations",
+    "semantic_review": "All9 packets/clarification transcripts/source-map/open questions and180 answers independently inspected;170 accepted prose substantively correct,168 fully grounded, ten safe unaccepted host-qualified prose answers also read but not reinstated.598 actual documentary line ranges verified."
+  },
+  "actual_verdicts": {
+    "investigation_success": "7/9; amber1/2 request bundles fail focused approval criterion while correct factual resolutions retained",
+    "raw_grounded_success": "79/90",
+    "organized_grounded_success": "89/90",
+    "grounding_misses": "Both amber3Q1 next_check cites security-owner approval without own owner source reference; actual fact true and exposed elsewhere but per-answer support incomplete",
+    "host_failure": "cobalt2raw host_turn_failed; ten missing accepted answers scorezero, usage/cleanup/unaccepted prose preserved; no retry",
+    "critical_events": 0,
+    "no_regression": "PASS overall and each world; raw deficit largely hostqualification, not quality superiority",
+    "absolute_quality": "FAIL",
+    "paired_reuse_benefit": "UNQUALIFIED/FAIL because one incomplete pair; overall/cobalt paired ratiosnull, no eligible-subset promotion"
+  },
+  "independent_python_metrics": {
+    "investigate": {
+      "median_total_ms": 91301.593666,
+      "median_tokens": 156017,
+      "sum_tokens": 1424200,
+      "browser_calls": 146
+    },
+    "raw": {
+      "median_total_ms": 58984.08529099997,
+      "median_tokens": 51593,
+      "sum_tokens": 773544,
+      "browser_calls": 48
+    },
+    "organized": {
+      "median_total_ms": 53762.37058299995,
+      "median_tokens": 54668,
+      "sum_tokens": 644520,
+      "browser_calls": 16
+    }
+  },
+  "documentation_review": "Results/register/evaluation/release/ADR003 accurately distinguish verified procedure pending this acceptance from failed gates, source-first evidence reuse from packet-only claim, measured investigator cost from unavailable author/review preparation and production-capability design gaps. Historic release HOLD and deferrals preserved. No next task execution or delivery authority.",
+  "limitations": [
+    "Evaluation-only source/owner/packet facade; no arbitrary-source production ingestion, graph redesign or migration shipped.",
+    "Packet projection overwrites original kind with agent_packet_claim; original packet keeps kinds and actual answers maintain provenance. Typed retrieval metadata and packet-only one-call support unqualified.",
+    "All organized sessions searched original/acquired source evidence as well as packet; no answer needed packet-only inherited proof.",
+    "Three related synthetic worlds and nine correlated ten-answer batch pairs; owner replies scripted, not humanadoption/real-app portability.",
+    "Preparation/review author tokens/spend unavailable, notzero;1,424,200 investigation tokens visible. No amortization/break-even/from-zero product superiority.",
+    "Shared worker timing and first investigator concurrent qualitycheck limit isolated latency; no global hidden-host privacy claim."
+  ],
+  "preservation": "607 input hashes/prefixes preserved; G01-G07 histories/failed gates and G08 original review/failure identities retained; Claude/Cursor deferred/unverified, human/second-real-app requirements unmet, private0.0.0/G04candidate/public HOLD. No commit,push,publication.",
+  "closure_permission": "May append verified completed study procedure closure and update RESULTS status with archive of original implemented manifest/report/register; narrow later exact-document review still required before final handoff. This receipt remains unchanged.",
+  "changes_made": "Only reviewer receipts/checkpoints/semantic bindings; no implementation/modeloutputs/runtime changed."
+}

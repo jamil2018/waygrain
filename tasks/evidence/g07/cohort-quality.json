@@ -1,0 +1,12 @@
+{
+  "node": "v24.20.0",
+  "command": "npm run check",
+  "tests": 133,
+  "failures": 0,
+  "typecheck": true,
+  "lint": true,
+  "format": true,
+  "build": true,
+  "attribution": "writer after receipt-only lineage amendment",
+  "log_sha256": "5765c77d1eda1d66dccc5e8709acf6e1b771d158fa5f856c0f7494c94d70a181"
+}

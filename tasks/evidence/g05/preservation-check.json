@@ -1,0 +1,11 @@
+{
+  "base_commit": "b40745ca36a27e10d33c8a6e38e17b76ce68da0a",
+  "unchanged_original_inputs": 83,
+  "authorized_append_only_docs": [
+    "docs/evaluation.md",
+    "docs/release-readiness.md"
+  ],
+  "runtime_files": 83,
+  "frozen_harness_files": 8,
+  "pass": true
+}

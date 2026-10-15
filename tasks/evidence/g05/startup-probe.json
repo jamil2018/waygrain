@@ -1,0 +1,27 @@
+{
+  "initial": {
+    "error": "EPERM",
+    "operation": "listen",
+    "address": "127.0.0.1",
+    "sandbox": "restricted"
+  },
+  "escalated": {
+    "tool_calls": [],
+    "observations": [],
+    "actions": [],
+    "browser_calls": 4,
+    "knowledge_calls": 0,
+    "setup_ms": 1513.464375,
+    "priming_ms": 0,
+    "retained_bytes": 0,
+    "cleanup": {
+      "driver": "complete",
+      "context": "complete",
+      "browser": "complete",
+      "store": "complete",
+      "server": "complete"
+    },
+    "error": null,
+    "server_total_ms": 1777.4763750000002
+  }
+}

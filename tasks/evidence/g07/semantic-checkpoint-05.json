@@ -1,0 +1,286 @@
+{
+  "reviewer": "/root/g07_review",
+  "packet_sha256": "74699c80d4b5e1a2f26f85a5fa2cf859ab21eceedf71881c76695510e110d8e0",
+  "range_zero_based": [
+    120,
+    149
+  ],
+  "review": "30 substantivelycorrect,28grounded; one unresolvable action-ID qualification and one empty-ref coverage gap; actual clicks correct, no false factual assertions.",
+  "rows": [
+    {
+      "key": "members-explain|legacy-waygrain|warm|2",
+      "final_sha256": "6f06bdd4ed98a88a72827537248d09cb0fc00623cb2bf6157b550b71c8fc8b58",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "members-explain|compact-waygrain|warm|2",
+      "final_sha256": "30b699401513de149025826e5c6fdf70a51d5542d226ecb3baacf0953f140a04",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "members-explain|notes-folder|warm|2",
+      "final_sha256": "a94651aa73f07268bd133e2a70f302e62dd93349daf69558a196c1a3f26139bf",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|compact-waygrain|warm|2",
+      "final_sha256": "2ff9be95213751e0dfc0c7e5a929a909f7b22487a80c737fd5a0f7208bb07bee",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|notes-folder|warm|2",
+      "final_sha256": "bab696a71a70f54c8899220aec9436ff057bebf5a172dbff5ec80c5c548df1f5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|legacy-waygrain|warm|2",
+      "final_sha256": "3a7f43a4039c1f2f67511195d3cbdbf1179da5d0ef281cb515f511d688f7a831",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "settings-compare|notes-folder|warm|2",
+      "final_sha256": "eb525d1708041c6ac23d5ba0493637887888b9dba0e8db44d30af10afdb4d038",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|warm|2",
+      "final_sha256": "f67e707f5a5244a4564bea6599c6641387ad2dbb2701534f19b490f674bbc2e6",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "settings-compare|compact-waygrain|warm|2",
+      "final_sha256": "fc42589ed7853328a672900235d4f700b5e3160acd584c6d488513005adbec97",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|legacy-waygrain|warm|2",
+      "final_sha256": "63f6da73c7c5ae50b600c6f8ac85b89f0cad8097acd9bad594c1f5f1124cc323",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|compact-waygrain|warm|2",
+      "final_sha256": "09d6cc893f863b6fc7c2063b7c462d8d48fac41bbca475884ed399c347acd698",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|notes-folder|warm|2",
+      "final_sha256": "9a7ee32459e9720d76ae67408fb8c3b61bbda8bb7a255ae03a9952fd95986dce",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|warm|2",
+      "final_sha256": "9262d0ceade53b0500db127ae5ed8431b5898b32203a41850362e3806c8547e4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|notes-folder|warm|2",
+      "final_sha256": "f45a1e1bf5d6d8d070fc198b02bca3edcd769769de01555616b90bde52bd8166",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|warm|2",
+      "final_sha256": "dd4151ac82b019b0ee14a8a86a3c90ed15ce6306e36071525b4d6807def31ff0",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "values_entered",
+        "backend_proven"
+      ],
+      "notes": "Actual Invite/Cancel only, no input; UUID claim refs may name returned action executions but frozen reduced ledger omits execution IDs, so references are independently unresolved, not proven invented or false facts."
+    },
+    {
+      "key": "pending-switch|notes-folder|warm|2",
+      "final_sha256": "b0642a408ccd960df7bea11b0efd635fa12147c067f54701f7c44b9f08692ab3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "pending-switch|legacy-waygrain|warm|2",
+      "final_sha256": "b89a9d0d0c2814a3beb5cf3ef4eff82768d508b9ce7b37fe51082bfd829f62af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "pending-switch|compact-waygrain|warm|2",
+      "final_sha256": "b89a9d0d0c2814a3beb5cf3ef4eff82768d508b9ce7b37fe51082bfd829f62af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "active-return|legacy-waygrain|warm|2",
+      "final_sha256": "5e80536eac95f2ef779dbe668a809d6bc3b06d8127a4ef9213abb132982f1dc9",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "active-return|compact-waygrain|warm|2",
+      "final_sha256": "8b3117f69fa1ff74cb8d056fcd031e5cc2cb30c2d9b0545910949ef356dfba15",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "active-return|notes-folder|warm|2",
+      "final_sha256": "ceee10b1037a0026edfcac933e87e8483c62ec8feeeb1c83d18f101cf60f36a2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|compact-waygrain|warm|2",
+      "final_sha256": "f5977ee68be71111309cb5233b224601d13a9098566a2051e56c184a840c2fee",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|notes-folder|warm|2",
+      "final_sha256": "9cb701a5848a54a9095a0b0cc9e6dcf454cd08e7faa12000ca445ace8c93291d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|legacy-waygrain|warm|2",
+      "final_sha256": "e8a471e72580be9f9639a8463b4679296e242884ebc61b9386c4e34d8f2d9abe",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "invite-change|notes-folder|warm|2",
+      "final_sha256": "6bbdb4d0d978b336fda3b08291894b9e85688fdde3e0191f5e8d75e142516008",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "invite-change|legacy-waygrain|warm|2",
+      "final_sha256": "9d2995759bcc8c8421bd045cc5c44111ad3e5731d526f6c8a2e2ad7467581b7d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "invite-change|compact-waygrain|warm|2",
+      "final_sha256": "d8f2c4f5a65a16fc2faa29d6ad95a1daa4a94b376648a371c6cb6a4e4fb363a4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|warm|2",
+      "final_sha256": "097408c08794f3beb2dfa57c4f6ad039bbc553e52b5f9005d395d47ea1edaf7c",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "coverage_limits"
+      ],
+      "notes": "True coverage-limit claim has explicit evidence:[]; nearby prose source references cannot waive per-claim requirement."
+    },
+    {
+      "key": "detail-change|compact-waygrain|warm|2",
+      "final_sha256": "fc0f63c4f5edd447f05a92c60f2b6ae6dfbbe015de625e200eb6dd2b91bca750",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    },
+    {
+      "key": "detail-change|notes-folder|warm|2",
+      "final_sha256": "58c55af6f1a17fb1e1f8c37be68ef222d10a5912d69a05e1a9eaed64ac07df47",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims independently read against actually exposed scoped observations; correct authorized action intermediate/final states, source/path eligibility and coverage limits checked. Extra supported subjects accepted; strict diagnostics separate."
+    }
+  ]
+}

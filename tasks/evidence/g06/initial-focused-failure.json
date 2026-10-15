@@ -1,0 +1,11 @@
+{
+  "stage": "first focused test run after implementation",
+  "pass": 6,
+  "fail": 2,
+  "failures": [
+    {"test": "partial capture", "error": "INCOMPATIBLE_CAPTURE", "cause": "writer test fixture used undeclared subtree fixture; use existing allowed members subtree"},
+    {"test": "UTF8 omission", "error": "object is not extensible", "cause": "writer test tried mutating frozen runtime configuration; declare synthetic allowlisted label before fixture initialization"}
+  ],
+  "production_validation_weakened": false,
+  "criteria_changed": false
+}

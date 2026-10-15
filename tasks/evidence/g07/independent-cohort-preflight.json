@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/g07_review",
+  "stage": "renewed exact cohort preflight after receipt-only notes lineage correction",
+  "verdict": "accepted_for_frozen270_session_full_cohort",
+  "manifest_sha256": "73eeea7b3f82906b113ec7da168815f5f460b1e814160dd0b5933a8dab5482b0",
+  "preflight_files_match": 9,
+  "independent_focused_tests_pass": 13,
+  "actual_stdio_notes_probe": "independent-notes-lineage-probe.json",
+  "original_smoke_review": "independent-smoke-review.json",
+  "original_smoke_sha256": "0d05bc69aacfd5329b1eccd26ac4026b3b99b1ae9623c2780eefbcd2ce86cf9f",
+  "amendment_review": "Only safe receipt notes text/source_ids and recursive citation lineage scoring changed; prompt/tool schema/descriptions/outputs, product runtime, browser and model session behavior unchanged. Guarded missing/cyclic/depth-limited lineage. Actual write/read/search probe verified exact source lineage and full cleanup. Independent semantic review must also check prose-note entailment, not merely source existence.",
+  "findings": [],
+  "limits": [
+    "Full cohort must retain all failures/no retries and270 semantic answer bindings with independent recomputation/exact-final-artifact review.",
+    "Original smoke includes one true-but-uncited notes claim; remains failed and never pooled.",
+    "No general privacy/native-host/production-headed qualification; public HOLD and Claude/Cursor deferrals unchanged."
+  ]
+}

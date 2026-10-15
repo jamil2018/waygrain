@@ -1,0 +1,286 @@
+{
+  "reviewer": "/root/g07_review",
+  "packet_sha256": "fec8e0c038d3dcf58f39acd6563b13247f65a2faf20bf3e5310100378416f96f",
+  "range_zero_based": [
+    210,
+    239
+  ],
+  "review": "29usable substantivelycorrect,27grounded. One legacy hostevent failure, legacy pending invalidpath and compactdetail invalidpaths. Nofalsefacts/wrongactions.",
+  "rows": [
+    {
+      "key": "members-explain|compact-waygrain|warm|3",
+      "final_sha256": "d58d7588b499bb2d6c15af40b8561ac1d9fe4b5f7805638c90b6e97d80a0e84b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "members-explain|notes-folder|warm|3",
+      "final_sha256": "9ab231aeb605b91f2a930b16df62cfe9cfc7dff15fdd3f41ed1a3c3cfa65ae17",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "members-explain|legacy-waygrain|warm|3",
+      "final_sha256": "cef6b933ab00cecd1b34ee7e3632211559a17bfe1a8d09e9561300b17360dc97",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|notes-folder|warm|3",
+      "final_sha256": "ee8a59b0959f5f0b7cbd8bddcf03e1882a5ca8afbb5572147dfbba0bae8e7be4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|legacy-waygrain|warm|3",
+      "final_sha256": "322ba5e96850f996e6b131b08fa51ddd985ed92f4a5c831e64e00ff088e9c672",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|compact-waygrain|warm|3",
+      "final_sha256": "53bd6f40988a60791d206ae93d5bc273d86c96fea5f9fc22a1b4012b52c2412f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|warm|3",
+      "final_sha256": "1c97d2d0dacd90f35392d1586d35973654f0bdc7c25b603f2c422d0647e219b3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "settings-compare|compact-waygrain|warm|3",
+      "final_sha256": "74de70f0fe064330629c3718f243fc4c849788fa0a3df51229cac12aad3b9539",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "settings-compare|notes-folder|warm|3",
+      "final_sha256": "7e191bdbf29c5ec0a2c87fb915bb1ea2aa1378ea125014b4734a0e58682d476f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|compact-waygrain|warm|3",
+      "final_sha256": "92a02afba20c61e1467536f81b95df36dd865084193639b454c706ab114b75bd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|notes-folder|warm|3",
+      "final_sha256": "1c5676c82944ad81aceb5d1545ab09a96ca96a63028e538d3cd6c6943f274f41",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|legacy-waygrain|warm|3",
+      "final_sha256": "3f2e2d25ef24d170ff66de7e301ead6ceeeead7b268cc0c70acbfc54d188a1db",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|notes-folder|warm|3",
+      "final_sha256": "e20c961a77c5ec78c16242294ad0b55f535578a7cff4eb2cb00c3e4bce78f1f7",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|warm|3",
+      "final_sha256": "fa6eebf954ed510334dbb035934e90491d7f565873a1ff662747ada7f163e18c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|warm|3",
+      "final_sha256": "e823ea95cf0d3b3e997e58cfcfec7f1c6c18fc6f1eba5eb6a4c39d976c7a06f0",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "pending-switch|legacy-waygrain|warm|3",
+      "final_sha256": "ce8c9076564679c4d206f83eba622f6344fd517237db99ba0b8992d88c9a01e6",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "selected_tab"
+      ],
+      "notes": "True facts but invalid dot/bracket optional source paths; nearby prose bareIDs cannot waive explicit per-claim grounding."
+    },
+    {
+      "key": "pending-switch|compact-waygrain|warm|3",
+      "final_sha256": "06501b3da5f6be5f688703f77d132b4d64d349a56a666e5a5c81bf24ba1e9321",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "pending-switch|notes-folder|warm|3",
+      "final_sha256": "b89a9d0d0c2814a3beb5cf3ef4eff82768d508b9ce7b37fe51082bfd829f62af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "active-return|compact-waygrain|warm|3",
+      "final_sha256": "cf8b93f89aea3a878cc737276d2ae3ac816323dccd04bdf45db08c79b060973a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "active-return|notes-folder|warm|3",
+      "final_sha256": "931fc7b803441576304b258f35119a17102d5810d32fa9e38f56a712d5dcb701",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "active-return|legacy-waygrain|warm|3",
+      "final_sha256": "05069652ad41e6e8d49c527ff8166f6b8d8e8148f21c09de4bda27c691aa0886",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|notes-folder|warm|3",
+      "final_sha256": "9a2904881ed775530f966edb43946b810a75a3418d8b5fc5b7cd6f0a1af92613",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|legacy-waygrain|warm|3",
+      "final_sha256": "d18831159bc275f16b3b30abf7140be4430ef79d8995d75128758f55f6128690",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|compact-waygrain|warm|3",
+      "final_sha256": "7e55ff7d7065ee1ec31058ca831ed458e9a2c695a8377e14425e204b55704961",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "invite-change|legacy-waygrain|warm|3",
+      "final_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "correct": false,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Conservative host error-event failure discards final; no usable answer to score; underlying event/answer unknown, measured usage and actual UI/cleanup preserved."
+    },
+    {
+      "key": "invite-change|compact-waygrain|warm|3",
+      "final_sha256": "9d85fd3d4151509bbe3008e423f9fd113a8f74028c15ecb661cc67277e8e5cab",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "invite-change|notes-folder|warm|3",
+      "final_sha256": "a67171988530cae1ac5c0ba34bbbe15b3a7032face9ab70c27409a06e4385828",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "detail-change|compact-waygrain|warm|3",
+      "final_sha256": "05e6943ff44319bcc6c5be90596bbbc5860b5cba76ac018132cc39407ac48bbd",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "remove_visible",
+        "coverage_limits"
+      ],
+      "notes": "True facts but invalid dot/bracket optional source paths; nearby prose bareIDs cannot waive explicit per-claim grounding."
+    },
+    {
+      "key": "detail-change|notes-folder|warm|3",
+      "final_sha256": "5135ce796e0a9b5aa3744ee5e9eaaba9127afcee2159727b1d1b82e3a823bd4b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|warm|3",
+      "final_sha256": "1249296d3c57f70760b159325c6f59dfb243a587448f143ff05228273461428f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently inspected against scoped actual observations and retrieved full note/legacy captures, correct authorized intermediate/final action outcomes; supported extras/prose accepted with strict diagnostics separate."
+    }
+  ]
+}

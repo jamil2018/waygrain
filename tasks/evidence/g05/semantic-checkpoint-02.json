@@ -1,0 +1,335 @@
+{
+  "reviewer": "/root/g05_review",
+  "checkpoint": "02",
+  "date_local": "2026-10-12",
+  "reviewed_zero_based_indices": [
+    30,
+    59
+  ],
+  "immutable_prefix_sha256": "70ee14a7c787bf6c578a049efed514db3ba15da09acaf57678908818b1c4a807",
+  "rows": [
+    {
+      "key": "members-explain|browser-only|warm|1",
+      "final_sha256": "c84fc23c93723e7baaf932790a5cd01c8ae3e1eacd80e567d65c751280f186c7",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 30
+    },
+    {
+      "key": "members-explain|notes-folder|warm|1",
+      "final_sha256": "dd23405daede8b1c4223f422f6d290cf758be83a80520cf57c4163c1e839d069",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 31
+    },
+    {
+      "key": "members-explain|waygrain|warm|1",
+      "final_sha256": "457565136b68763ee81ab3cdcd34f0775fa494a1c36716cb671c22cdae329373",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 32
+    },
+    {
+      "key": "viewer-policy|notes-folder|warm|1",
+      "final_sha256": "27939eed7ec7a1f6ff6484af6f1b7a69f0ad590b8c538a625704b77e6c29c685",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 33
+    },
+    {
+      "key": "viewer-policy|waygrain|warm|1",
+      "final_sha256": "b40024a002d22f943b7bbe843e5c1cf3b040b6a4c049e5797edeafe6e7820c8e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 34
+    },
+    {
+      "key": "viewer-policy|browser-only|warm|1",
+      "final_sha256": "3c73ed26be67917bd5106b271ec345d3a5b15533dc0ffe822ab9889dd9ee4c91",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 35
+    },
+    {
+      "key": "settings-compare|waygrain|warm|1",
+      "final_sha256": "6d5877dc9276a2ead8da39a9bf5c255b5672e03e132c0d6d1cdd32797732eda8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 36
+    },
+    {
+      "key": "settings-compare|browser-only|warm|1",
+      "final_sha256": "a83af2dd71376613501f7e1b28b19d505a95dcf67156c8d696026438a6cdf601",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 37
+    },
+    {
+      "key": "settings-compare|notes-folder|warm|1",
+      "final_sha256": "6d5877dc9276a2ead8da39a9bf5c255b5672e03e132c0d6d1cdd32797732eda8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 38
+    },
+    {
+      "key": "detail-preparation|browser-only|warm|1",
+      "final_sha256": "42c79a2846f7fbf2050ab6210038084a38f96942131a42feee6e416a70a95994",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 39
+    },
+    {
+      "key": "detail-preparation|notes-folder|warm|1",
+      "final_sha256": "e2ddcb0d26d7cf09600d0bc87c15ae98510bc5eb507e56f8a25f7370661ff3c4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 40
+    },
+    {
+      "key": "detail-preparation|waygrain|warm|1",
+      "final_sha256": "a5cc7938bc4d76f72bff90cc42d02ab7b6e1c9fcf3a260ed682126c730715040",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 41
+    },
+    {
+      "key": "invite-cancel|notes-folder|warm|1",
+      "final_sha256": "0d37497b5a76dd7924cfa41c3a8266e5f5e5a3a66bef79d93c10750f11f8ca1a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 42
+    },
+    {
+      "key": "invite-cancel|waygrain|warm|1",
+      "final_sha256": "aa9306ddc7f6e93aa2f92111bef531fa4e7808a80cb5732c23c63c9c44af0fe6",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 43
+    },
+    {
+      "key": "invite-cancel|browser-only|warm|1",
+      "final_sha256": "6aa2ca76fac6dc4b6a43156a261c170bd270b22bfad3812ce6bcfc38dc471be2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 44
+    },
+    {
+      "key": "pending-switch|waygrain|warm|1",
+      "final_sha256": "fa717558d6e02b2cc8ca9d37bd086f6acf8967234b9dd1eb8a6cf3f3b82a06ec",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 45
+    },
+    {
+      "key": "pending-switch|browser-only|warm|1",
+      "final_sha256": "125b78d4192cb3ee658b647c2e24aa844ac5d0f2e59c229a9cbedd4d91076141",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 46
+    },
+    {
+      "key": "pending-switch|notes-folder|warm|1",
+      "final_sha256": "8082ce1f79693171fb2cbdd5c5e1385e70f9243adf8a2d936ab8a26a0de7d7af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 47
+    },
+    {
+      "key": "active-return|browser-only|warm|1",
+      "final_sha256": "25b6fe69cbef8b1beb585fae4ec054abe028084ce0f390b138338e88fdb14499",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 48
+    },
+    {
+      "key": "active-return|notes-folder|warm|1",
+      "final_sha256": "feaf47f883a667bed73ef1c9950338f0360290c25d6de967ea3283270ea414c1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 49
+    },
+    {
+      "key": "active-return|waygrain|warm|1",
+      "final_sha256": "5fec54be8d3224fe265960c210b9c87aef7b7f33b81b40b71446275c5f83ebc0",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 50
+    },
+    {
+      "key": "viewer-no-act|notes-folder|warm|1",
+      "final_sha256": "5cbda0e77b4bc91e1fc4664c9155f6c8fda3ee22a499da004902979409180386",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 51
+    },
+    {
+      "key": "viewer-no-act|waygrain|warm|1",
+      "final_sha256": "9adb9344a336472671493777c49b5e45cf5359a22c4af155aca83187cf643387",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 52
+    },
+    {
+      "key": "viewer-no-act|browser-only|warm|1",
+      "final_sha256": "5e83de8f895a2bc3ff4d673f9e6b3a1d2c53b1e2be804ab3e263dc291a6ac630",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 53
+    },
+    {
+      "key": "invite-change|waygrain|warm|1",
+      "final_sha256": "06ac919b9e7d8e3bb3f76bcdd12faa111092331edff9326ff1b64f31395705cc",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 54
+    },
+    {
+      "key": "invite-change|browser-only|warm|1",
+      "final_sha256": "0334497aaf8fa4b1ad3a875e9c452a8b9fd510d0c71dc1cabcff2122d259737b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 55
+    },
+    {
+      "key": "invite-change|notes-folder|warm|1",
+      "final_sha256": "cd717749357505221d58e9551d4f9fd3455f06b229f7172446500797959b5ff8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 56
+    },
+    {
+      "key": "detail-change|browser-only|warm|1",
+      "final_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "correct": false,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "No final retained due cleanup_failed context; unscorable failure remains denominator, no unsupported prose allegation",
+      "zero_based_index": 57
+    },
+    {
+      "key": "detail-change|notes-folder|warm|1",
+      "final_sha256": "5939037684304757acf8a5abcc4f006ea426291d4ddb4b1b15b3ae3bc4a2823b",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "coverage_limits:missing_explicit_evidence_reference"
+      ],
+      "basis": "Substantively true coverage_limits assertion has empty structured evidence IDs; explicit per-claim grounding requirement unmet, not a false coverage claim",
+      "zero_based_index": 58
+    },
+    {
+      "key": "detail-change|waygrain|warm|1",
+      "final_sha256": "c5cdf0f81813a807af0c7324f6ae61df75036a09c73e72152fcfb47881c16642",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims independently read; scoped matching v1 facts and task outcome supported; reversible clicks/intermediate states checked; no unsupported backend claim",
+      "zero_based_index": 59
+    }
+  ],
+  "findings": [
+    {
+      "index": 58,
+      "key": "detail-change|notes-folder|warm|1",
+      "kind": "claim_citation_gap",
+      "detail": "coverage_limits evidence array is empty; substantive assertion true, explicit claim citation missing"
+    }
+  ],
+  "summary": {
+    "semantic_correct": 29,
+    "correct_and_grounded": 28,
+    "failed_unscorable": 1,
+    "uncited_true_claims": 1,
+    "wrong_attempts": 0,
+    "wrong_dispatched": 0,
+    "false_prose_claims": 0
+  },
+  "limitations": [
+    "Warm version-one checkpoint only; not full evaluation",
+    "Grounding gaps retained independently of factual truth and machine canonical-value diagnostic"
+  ]
+}

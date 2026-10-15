@@ -1,0 +1,286 @@
+{
+  "reviewer": "/root/g07_review",
+  "packet_sha256": "e4a5def1d81c0a13a74401e6e2f88835879854efe5b6983693ced29e704786ee",
+  "range_zero_based": [
+    90,
+    119
+  ],
+  "review": "28 usable substantively correct finals;26grounded. Two host failures and two compact citation-path gaps; actual actions correct, no false factual assertion.",
+  "rows": [
+    {
+      "key": "members-explain|legacy-waygrain|cold|2",
+      "final_sha256": "22e497e2615cdc78746e3e214d52afd02bb124c385fbc78ea6c9c30475e107ab",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "members-explain|compact-waygrain|cold|2",
+      "final_sha256": "51e301486d9703ed35c99860673ed5c167693a8838d668f6749224dd1d7caa35",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "invite_label",
+        "selected_tab"
+      ],
+      "notes": "True UI facts but invalid dot/bracket optional citation paths; explicit per-claim grounding fails despite nearby prose bareIDs."
+    },
+    {
+      "key": "members-explain|notes-folder|cold|2",
+      "final_sha256": "6e678981341f334db81b2896f7109ea66f5d93f61c08cb6d228d6f69264a78de",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "viewer-policy|compact-waygrain|cold|2",
+      "final_sha256": "e5fb42647a80e741b654b5975688d02fb066a707073562c58fe503d6cfd36ef8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "viewer-policy|notes-folder|cold|2",
+      "final_sha256": "445be22cb477651c7b4c1dd04d4a2d2536d5f3a4eba68d1c3f0fbab5aba38142",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "viewer-policy|legacy-waygrain|cold|2",
+      "final_sha256": "9fb58911363cad095bf49da8cd76332092e5cf332228b0b0d48a7442c6b7aad3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "settings-compare|notes-folder|cold|2",
+      "final_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "correct": false,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Host turn failure, no usable final; correctness/grounding cannot pass. Actual observed actions and cleanup preserved, no false factual assertion inferred."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|cold|2",
+      "final_sha256": "0460f6de3a28a278ce9a4eb16391144add4dd179d758c700aae177fa8f9bf70d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "settings-compare|compact-waygrain|cold|2",
+      "final_sha256": "5d503bc62eaf53092b69cf5fe46ac1173feed36b69625302342d2956cf262b0f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "detail-preparation|legacy-waygrain|cold|2",
+      "final_sha256": "7f6f0a542e07da9e6aea8c5c4fc73c0b5af9d85e6f7812f9ed34810c74bf27e8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "detail-preparation|compact-waygrain|cold|2",
+      "final_sha256": "5df11dab62d69fd200b91ceef4862924c2a7577add97ef716a22ca47640b94a4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "detail-preparation|notes-folder|cold|2",
+      "final_sha256": "cef65adeb79d6eb0213cbeb5f05409fb65a4295a75361f4d0b7fe9fb61ed89c0",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|cold|2",
+      "final_sha256": "1b8123005a88f7592d6d17aa05cd39848a5f408c3e910327a2bb5bdf3b748156",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "invite-cancel|notes-folder|cold|2",
+      "final_sha256": "b223a2f4310afeb6b7c727720757a70e6a8f57f864f97ec50e82a846c9b5246b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|cold|2",
+      "final_sha256": "dfd539cb7b428c5f052a0af8ac235896b9bd188e5ca58edc67ada00be35eb855",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "pending-switch|notes-folder|cold|2",
+      "final_sha256": "5e987b34a651dd5c5a49a1b7e0c26827d8ef3f48feb274cc7d4fa623f7bee784",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "pending-switch|legacy-waygrain|cold|2",
+      "final_sha256": "e49856fb8ec15ded1ac2664f05ec5c3de6a842f0302838474d7b21bf9ed89f93",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "pending-switch|compact-waygrain|cold|2",
+      "final_sha256": "dd3bf932127ced017e144791311e46bd34053ac5ec8bb4edcb26c1480dd5258e",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "open_dialog"
+      ],
+      "notes": "True UI facts but invalid dot/bracket optional citation paths; explicit per-claim grounding fails despite nearby prose bareIDs."
+    },
+    {
+      "key": "active-return|legacy-waygrain|cold|2",
+      "final_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "correct": false,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Host turn failure, no usable final; correctness/grounding cannot pass. Actual observed actions and cleanup preserved, no false factual assertion inferred."
+    },
+    {
+      "key": "active-return|compact-waygrain|cold|2",
+      "final_sha256": "b202258083bbe4cda6a0f0295d4927c8bc9cef90fdb5fead97ea8482d7c80c2d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "active-return|notes-folder|cold|2",
+      "final_sha256": "19cef7557b861bdda5e009f084f332aa522ff71a9646d34cfb45965262c1a13a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "viewer-no-act|compact-waygrain|cold|2",
+      "final_sha256": "da069dd2d9df489be51fd6781a4706acbae46c7bc4a9e2dcbe506820bac618c7",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "viewer-no-act|notes-folder|cold|2",
+      "final_sha256": "c055a60bce2f57b63bbff0eee1f5e10cea4b72dfd0591c903a8169fa66927290",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "viewer-no-act|legacy-waygrain|cold|2",
+      "final_sha256": "85c33ba1063be260ada76c1c9dab4eff943e862da508bd702ede936172ccf800",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "invite-change|notes-folder|cold|2",
+      "final_sha256": "7bf39d56db6ab15b64153d7099cb9343b29b11cda43bafd3a44929bf51b78f4d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "invite-change|legacy-waygrain|cold|2",
+      "final_sha256": "c626c9e8d03de994c07189832ac6703fea90dd8fda95f29170a508d58d3cc72a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "invite-change|compact-waygrain|cold|2",
+      "final_sha256": "748479f8b80d032527be601cf869d316d831f80a3bdad8e7b49b036ce7f28cd2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|cold|2",
+      "final_sha256": "3651558333c1bda97b5d751edc8610252e4cfdc582159fedd9e680e0df63bc39",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "detail-change|compact-waygrain|cold|2",
+      "final_sha256": "1518a5a0e453567b7b6da2e11e6767621e354e5db564fd113230ae22fb5313e5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    },
+    {
+      "key": "detail-change|notes-folder|cold|2",
+      "final_sha256": "adfde0fb30f7ac0e94e2bd4deb166c1836bb500e629d952043cde09fda2a959e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Full prose/claims individually inspected against scoped actual task observations and authorized intermediate/final actions; substantive truths supported, ordinary prose/canonical diagnostics distinct."
+    }
+  ]
+}

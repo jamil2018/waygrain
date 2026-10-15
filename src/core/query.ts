@@ -7,6 +7,7 @@ import { selectedApp } from './ingest.js';
 import { traverse } from './traversal.js';
 import { record, scopeId } from './graph.js';
 import { summary, visible, visibleSql, activeAnnotations } from './summary.js';
+import { compactCapture } from './compact.js';
 
 type Query = z.output<typeof contracts.wg_query.input>;
 export interface Selection {
@@ -161,6 +162,12 @@ export function query(
   now = Date.now(),
 ): Responses['wg_query'] {
   const q = validateRequest('wg_query', input, now) as Query;
+  if (
+    q.mode === 'search' &&
+    q.projection === 'compact' &&
+    (q.filters.kinds?.length !== 1 || q.filters.kinds[0] !== 'capture')
+  )
+    throw new KnowledgeError('INVALID_INPUT');
   const app = selectedApp(store, q);
   return store.transaction(() => {
     const scope = scopeId(store, app, q.scope, true),
@@ -296,6 +303,10 @@ export function query(
         now,
         q.max_age_seconds,
       );
+      if (q.mode === 'search' && q.projection === 'compact') {
+        if (item.kind !== 'capture') throw new KnowledgeError('INVALID_INPUT');
+        item.compact = compactCapture(store, item);
+      }
       const oldWarnings = warnings.length;
       if (item.evidence.freshness.status === 'contradicted')
         warnings.push({

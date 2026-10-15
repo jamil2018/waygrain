@@ -1,0 +1,87 @@
+{
+  "reviewer": "/root/g05_review",
+  "matrix_file_sha256": "b47713bd60e9d5ad55005d699fa2d2c117a4e80aaa9cbbf0453f0633d37c5ffe",
+  "rows": [
+    {
+      "key": "settings-compare|waygrain|changed|1",
+      "final_sha256": "1b99633b3cbd616c0209e6f9da56109975f2299ef867d0402a0d690f8af5355d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "settings-compare|browser-only|changed|1",
+      "final_sha256": "0381fc4cb4224793d09b3e5daa58fbccfb33deebeb7ba16ce6d194c480b154ca",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "settings-compare|notes-folder|changed|1",
+      "final_sha256": "038f100de3a495b49a88ec73c9da6e2bb12b23ecd99fd89a395eb6f25eea2c14",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "invite-cancel|notes-folder|changed|1",
+      "final_sha256": "306d5284c49fc42a7b5c3968bac859a01f70cdb191657cc9e4b7a99b8823d1e8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "invite-cancel|waygrain|changed|1",
+      "final_sha256": "2d65719573f9b4fcce81be4bdb2e9950667e8e91b24a12529a64c8e6cd7c7c64",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "invite-cancel|browser-only|changed|1",
+      "final_sha256": "8b4332c293404172c879ed85d9d1d1703048e37c7bdce1ca2647d8c64228191e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "detail-change|browser-only|changed|1",
+      "final_sha256": "e0c52aa458cc7b92351daf305368472cbc0983bab5a5811ecb320839dea58db4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "detail-change|notes-folder|changed|1",
+      "final_sha256": "f05d4914461fed00629285ad6643438d6d0e35ea3bc7389d5b02bed6c8974ca7",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    },
+    {
+      "key": "detail-change|waygrain|changed|1",
+      "final_sha256": "f7245c06e0db15f9a704e112b19f4015cd039ed3a6eabe9d992abad935a64e66",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full answer and all claims, current scoped version-two citations, matched historical comparisons and observed permitted action intermediate/final states"
+    }
+  ]
+}

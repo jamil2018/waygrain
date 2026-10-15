@@ -1,0 +1,20 @@
+{
+  "reviewer": "/root/g07_review",
+  "probe": "actual stdio MCP headless notes write/read/full-content search with source-lineage scoring",
+  "pass": true,
+  "checks": {
+    "headless": true,
+    "cleanup": {
+      "driver": "complete",
+      "context": "complete",
+      "browser": "complete",
+      "store": "complete",
+      "server": "complete"
+    },
+    "notes_write_read_search": true,
+    "note_and_text_path_citations": true,
+    "exact_live_source_lineage": true,
+    "tool_calls": 5
+  },
+  "note": "One synthetic safe prose string retained only as deliberate evidence; no raw browser or host output retained."
+}

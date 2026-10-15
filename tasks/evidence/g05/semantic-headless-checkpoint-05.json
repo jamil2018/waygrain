@@ -1,0 +1,323 @@
+{
+  "reviewer": "/root/g05_review",
+  "cohort": "headless_three_workers",
+  "checkpoint": "05",
+  "reviewed_zero_based_indices": [
+    120,
+    149
+  ],
+  "prefix_sha256": "1a7e692c1e4100244f00b74a8f80fb87981b0a20582e79d39612bfea53fa6e1c",
+  "rows": [
+    {
+      "key": "members-explain|notes-folder|warm|2",
+      "final_sha256": "b66ea719da1e3d9dc363e06dba9376f593704c20ea6c0e6b1a81c6216d29d613",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 120
+    },
+    {
+      "key": "members-explain|waygrain|warm|2",
+      "final_sha256": "54c3ffdc8ce95156bfff177d1005809ff88b73edb5d0686fb1fe4d1aa0cd6d34",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 121
+    },
+    {
+      "key": "members-explain|browser-only|warm|2",
+      "final_sha256": "36ab52c77c4d7b7f70c0a9f350c8ffc40880bd3023082b3706718cd76c56adce",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 122
+    },
+    {
+      "key": "viewer-policy|waygrain|warm|2",
+      "final_sha256": "d04f1059329fbd0fc039080fd92c3c50ff4842af34bf212ba198b614cfb45c08",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 123
+    },
+    {
+      "key": "viewer-policy|browser-only|warm|2",
+      "final_sha256": "8da2e63cc668129234c6360f2b6f405bfd7ed74db4e10f210bb8a94c19aa8ee2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 124
+    },
+    {
+      "key": "viewer-policy|notes-folder|warm|2",
+      "final_sha256": "7c8d5efd432c7a042c24390e93771cc239609b7250f49fb379ee27283cc7f532",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 125
+    },
+    {
+      "key": "settings-compare|browser-only|warm|2",
+      "final_sha256": "afc17e1a964efba514a56c9c8fd90c274535f6e0f8c733cfb47411e901673ea2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 126
+    },
+    {
+      "key": "settings-compare|notes-folder|warm|2",
+      "final_sha256": "377b7dfef5810cb7a39116f4891453482ba0ba07e915eec39032ada148a80f9f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 127
+    },
+    {
+      "key": "settings-compare|waygrain|warm|2",
+      "final_sha256": "ed6b901ee26c7f64dabdaf674178db98cc16913b6d9deb640695f8745a44b950",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 128
+    },
+    {
+      "key": "detail-preparation|notes-folder|warm|2",
+      "final_sha256": "e9aad37a25e731aad4ba36300caf9a6b9cb1e6e67fdfbd1bdea09255d1256ac5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 129
+    },
+    {
+      "key": "detail-preparation|waygrain|warm|2",
+      "final_sha256": "ae93a44130e3f2b28dfd72cc9a378822315545ac5ebd59a048a92646d4eb863b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 130
+    },
+    {
+      "key": "detail-preparation|browser-only|warm|2",
+      "final_sha256": "7efd7f0c75354a73df7d1adce76688b5e0332e9bb34b9b4905c4ca307115fd06",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 131
+    },
+    {
+      "key": "invite-cancel|waygrain|warm|2",
+      "final_sha256": "b7ef38666736f3e963ac928d5bd5ab939480e55f48011d69663f8c585ce5f4fb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 132
+    },
+    {
+      "key": "invite-cancel|browser-only|warm|2",
+      "final_sha256": "bba41c1a25cebf96f85a249c087a3266717bc0d593cf8fa04d5be83b0f0bfdfb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 133
+    },
+    {
+      "key": "invite-cancel|notes-folder|warm|2",
+      "final_sha256": "25e7d91007327f0537e947bf0f291a13b00a0933b57a5900b9eadd82321d6319",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 134
+    },
+    {
+      "key": "pending-switch|browser-only|warm|2",
+      "final_sha256": "136ef254803a942a657fda8b20b51e6aba2f3a357e33c7d52b4a9af63f6ee671",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 135
+    },
+    {
+      "key": "pending-switch|notes-folder|warm|2",
+      "final_sha256": "fa717558d6e02b2cc8ca9d37bd086f6acf8967234b9dd1eb8a6cf3f3b82a06ec",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 136
+    },
+    {
+      "key": "pending-switch|waygrain|warm|2",
+      "final_sha256": "d413614d5f74fa73e8eb3b826a941dc70d790ebbf54c51d523f08a6a49f1e09b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 137
+    },
+    {
+      "key": "active-return|notes-folder|warm|2",
+      "final_sha256": "c870e3eadf84c58841c2766fb2b88de6fd211e3dbbd2eb4ea15e30ed5ae8670a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 138
+    },
+    {
+      "key": "active-return|waygrain|warm|2",
+      "final_sha256": "90825560f451a6a90ce85c4897f9a279e7955817da520ca33de97a2ff7b04307",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 139
+    },
+    {
+      "key": "active-return|browser-only|warm|2",
+      "final_sha256": "59714badb1e9d1c454fe71fc32550d564c61dc6f550f0fb74e1ca5b0c5feb9ca",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 140
+    },
+    {
+      "key": "viewer-no-act|waygrain|warm|2",
+      "final_sha256": "e211569dd78856112a6907774684ccbfa576a51660cd56e4ac6e2d2925a7bece",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 141
+    },
+    {
+      "key": "viewer-no-act|browser-only|warm|2",
+      "final_sha256": "56f256e2ac99aabd57820ceed56e1282e314b135d7ef0f7309a13202cf0f5621",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 142
+    },
+    {
+      "key": "viewer-no-act|notes-folder|warm|2",
+      "final_sha256": "5d1a350bb5c8e9db507444fc68c6dd2ddf7da55ef55379aa899c8d86c912e689",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 143
+    },
+    {
+      "key": "invite-change|browser-only|warm|2",
+      "final_sha256": "44f942f38ba0f78fe3cdae715ed8a54b50630e55646d58f4a19309052419bddf",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 144
+    },
+    {
+      "key": "invite-change|notes-folder|warm|2",
+      "final_sha256": "a8c11af9466584147e0697db3d26a4c66947601a7b4631dff69e61e33e66a8f6",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 145
+    },
+    {
+      "key": "invite-change|waygrain|warm|2",
+      "final_sha256": "c0377247193d6556d6d8d293f5bfd4b355506426b83a1271ebff4515c2b3c398",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 146
+    },
+    {
+      "key": "detail-change|notes-folder|warm|2",
+      "final_sha256": "8feadbdaa301984c85c450c66d4349d16e91e5cadd6e00e873ccf77c0a1b2d64",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 147
+    },
+    {
+      "key": "detail-change|waygrain|warm|2",
+      "final_sha256": "4693aba3a20337ac7e7c8e2c3fba05c8628e07d056b9c96e0f000e37e14883a8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 148
+    },
+    {
+      "key": "detail-change|browser-only|warm|2",
+      "final_sha256": "bdcfc3d86411b15bfe70acac31ca63de4b62810189eea255c2c2e9f987fc8dca",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all explicit claimrefs read; matched current/historicalv1 scopes, role/button-state comparisons and coverage limits supported; named reversible click before/intermediate/final states checked",
+      "zero_based_index": 149
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "semantic_correct": 30,
+    "correct_and_grounded": 30,
+    "wrong_attempts": 0,
+    "wrong_dispatched": 0,
+    "unsupported_claims": 0
+  },
+  "limitations": [
+    "Warm repetition2 checkpoint only; no efficacy conclusions or headed pooling"
+  ]
+}

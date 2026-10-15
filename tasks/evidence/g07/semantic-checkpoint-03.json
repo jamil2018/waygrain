@@ -1,0 +1,291 @@
+{
+  "reviewer": "/root/g07_review",
+  "packet_sha256": "d205b522fb2d3321b9f9ec9837aff512bbbb7ce543e201e8b2d6dc1481eaf91a",
+  "range_zero_based": [
+    60,
+    89
+  ],
+  "review": "30substantively correct;26grounded/current-claim-qualified;4invalidpathfailures; no false facts or wrong/stale actions.",
+  "rows": [
+    {
+      "key": "members-explain|notes-folder|changed|1",
+      "final_sha256": "e746f9d537dd07fb4d50d93d21d8195a6989766c972b62f99129425faf28f2bb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "members-explain|legacy-waygrain|changed|1",
+      "final_sha256": "da20be5f85c78196095d60c36a9b2520873a1fd34e344715e90ba65d6419205f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "members-explain|compact-waygrain|changed|1",
+      "final_sha256": "f40c6f49e6f8286a764ef27dbc5ea632d15ecb5a7b9bcb7081e7d3256a900517",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|legacy-waygrain|changed|1",
+      "final_sha256": "1713f819dd5caf65116d20403bec2519715fa2a041726d5bb55e5cc444e156c3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|compact-waygrain|changed|1",
+      "final_sha256": "de70dc3ae6dd3e1f20f5c37da4a5f323bbbe9b485204677d9bc407d5206f4e38",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "viewer-policy|notes-folder|changed|1",
+      "final_sha256": "80dce9d937fa3379a7ac9b40059bb80112d5a594bd793c5507a6a2df67c19bb3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "settings-compare|compact-waygrain|changed|1",
+      "final_sha256": "7f65f02aa9ae75ad4b55b25fb2e8f5017cc08ad39b21a91321099bdcbb7e8c96",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "settings-compare|notes-folder|changed|1",
+      "final_sha256": "74de70f0fe064330629c3718f243fc4c849788fa0a3df51229cac12aad3b9539",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|changed|1",
+      "final_sha256": "c9a1fc7d8beb5123978f6bb8b71bcfd306a1c4256199b324c8238580e084b756",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|notes-folder|changed|1",
+      "final_sha256": "caf5706e4ccd391dddec7d88d11a6b4d40bd48a92950eb30d206f1c64b680a72",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|legacy-waygrain|changed|1",
+      "final_sha256": "7a0a1da792b09966d751489de1a11ddde7ed3aa56f905fff9292b13c4af86468",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "detail-preparation|compact-waygrain|changed|1",
+      "final_sha256": "f4a37237e9c0bb47d1be3df40267ad0d8f7ace07fe1aee9f11a046892f03f0ce",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|changed|1",
+      "final_sha256": "8c6ffef2befb2613acd944b3be51998dd277ae20a45fef007196a9c757b83f64",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|changed|1",
+      "final_sha256": "ed51659e48ecb5e6e9fe2dc109054ac78a4bc28c6754d348bfcfcbb7d7d78e63",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "invite-cancel|notes-folder|changed|1",
+      "final_sha256": "b4d376e6d40e051ea6d3e817f58cda5a85119b6f26b33940248177fb79ff2ccd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "pending-switch|compact-waygrain|changed|1",
+      "final_sha256": "c9733f6e9cc1af2ad74b7fe9f92f11fd888ffd7ee9490686d413f687b3f3a360",
+      "correct": true,
+      "grounded": false,
+      "freshness": false,
+      "unsupported_claims": [
+        "selected_tab"
+      ],
+      "notes": "True UI facts and correct v2 actions, but mandatory explicit claim references use invalid dot/bracket optionalpaths; fails grounding/current-claim qualification. Not a false fact or observed stale/wrong action."
+    },
+    {
+      "key": "pending-switch|notes-folder|changed|1",
+      "final_sha256": "9f67f1488acd086169a334026bb92491cd95f0c09fc488f1a674fb33dd14bb29",
+      "correct": true,
+      "grounded": false,
+      "freshness": false,
+      "unsupported_claims": [
+        "selected_tab",
+        "open_modal"
+      ],
+      "notes": "True UI facts and correct v2 actions, but mandatory explicit claim references use invalid dot/bracket optionalpaths; fails grounding/current-claim qualification. Not a false fact or observed stale/wrong action."
+    },
+    {
+      "key": "pending-switch|legacy-waygrain|changed|1",
+      "final_sha256": "35c36f984809561b9c771b9f66f945367e9143c96f3e77f671c19018b6a4300c",
+      "correct": true,
+      "grounded": false,
+      "freshness": false,
+      "unsupported_claims": [
+        "selected_tab",
+        "invitation_modal"
+      ],
+      "notes": "True UI facts and correct v2 actions, but mandatory explicit claim references use invalid dot/bracket optionalpaths; fails grounding/current-claim qualification. Not a false fact or observed stale/wrong action."
+    },
+    {
+      "key": "active-return|notes-folder|changed|1",
+      "final_sha256": "6c313fb4c3b81ea6dde225ea5af84df479c545effd22045e0b1f8042048d765a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "active-return|legacy-waygrain|changed|1",
+      "final_sha256": "19e1922ab9c02418c7b91197fec45b46131b8a45f9e703f81c688d686503f400",
+      "correct": true,
+      "grounded": false,
+      "freshness": false,
+      "unsupported_claims": [
+        "selected_tab"
+      ],
+      "notes": "True UI facts and correct v2 actions, but mandatory explicit claim references use invalid dot/bracket optionalpaths; fails grounding/current-claim qualification. Not a false fact or observed stale/wrong action."
+    },
+    {
+      "key": "active-return|compact-waygrain|changed|1",
+      "final_sha256": "749c9f3c6c6f0e65ad9cfc9529f773600622023b6cc6d1ac6b8640e853f05bdb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|legacy-waygrain|changed|1",
+      "final_sha256": "d4fd2e1a577ffc6d7f5d55618331403c51e4ad2db94600e64bead4d1e99d74a9",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|compact-waygrain|changed|1",
+      "final_sha256": "9f13cdee9a666b6722abf817c0528371ff986884a702d7efdbc4877793aa4fc5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "viewer-no-act|notes-folder|changed|1",
+      "final_sha256": "b2f31f3b86f9326393a47d2ac68972a12f8eab6eb2ef0926b40e96b79b8d70be",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "invite-change|compact-waygrain|changed|1",
+      "final_sha256": "7a53e573a3549a1e95b13a690482a41300a019c84351a124d33e9e3d95eac54c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "invite-change|notes-folder|changed|1",
+      "final_sha256": "b25553f07397403803658296a014ef139e9cc6ffce4fe8b88273da0d15491d3c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "invite-change|legacy-waygrain|changed|1",
+      "final_sha256": "ffc3ae1d2336b874d5adbaa199dbc3767a22ee30b7c9bbec66819c637983c815",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "detail-change|notes-folder|changed|1",
+      "final_sha256": "8ef1c10041d1aa2a4695267145ae6e506eb92ed1e9c08f36de0fb84efcffe00e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|changed|1",
+      "final_sha256": "dc7a28371ece8577a023ffdf7089929a0b3b799c373f36cf2f9f2799f6fdf1ad",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    },
+    {
+      "key": "detail-change|compact-waygrain|changed|1",
+      "final_sha256": "e17abdc8515320da872601cde61125a4e7aa0ca4f63424f3fb0c0015bd864f25",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims inspected against exposed evidence; relevant currentv2 citations and action intermediate/final states substantiate claims. History comparison sources exposed (full notes/legacy or compact exact Remove path). Strict canonical diagnostics separate."
+    }
+  ]
+}

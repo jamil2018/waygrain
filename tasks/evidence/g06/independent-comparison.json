@@ -1,0 +1,2567 @@
+{
+  "runtime": {
+    "node": "v24.20.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "started_at": "2026-10-14T18:03:54.944Z",
+  "finished_at": "2026-10-14T18:03:55.173Z",
+  "method": "30 alternating sequential pairs per case after 5 paired warmups; latency includes core execution+JSON serialization; no MCP transport, model or browser",
+  "tokens": null,
+  "tokens_reason": "no model session; tokens unmeasured",
+  "setups": [
+    {
+      "case": "admin-members",
+      "setup_ingest_ms": 27.83775
+    },
+    {
+      "case": "viewer-settings",
+      "setup_ingest_ms": 7.5002500000000225
+    },
+    {
+      "case": "admin-detail",
+      "setup_ingest_ms": 7.330791999999974
+    },
+    {
+      "case": "invite-dialog",
+      "setup_ingest_ms": 7.185584000000006
+    }
+  ],
+  "rows": [
+    {
+      "case": "admin-members",
+      "repetition": 1,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.620082999999994,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.7252499999999884,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 2,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.6686660000000018,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5755829999999946,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 3,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.6439160000000186,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.8747500000000059,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 4,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.9455420000000174,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.548041000000012,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 5,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.523916000000014,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.6322090000000173,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 6,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5794999999999959,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4612499999999784,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 7,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4663330000000201,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5679169999999942,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 8,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5516660000000115,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.48724999999998886,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 9,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.46154200000000856,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.567167000000012,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 10,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.6667910000000177,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.525749999999988,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 11,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.5424580000000105,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.937375000000003,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 12,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5878340000000151,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5174169999999947,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 13,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4787910000000011,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.615667000000002,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 14,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5659169999999847,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4635419999999897,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 15,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.47416599999999676,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5654999999999859,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 16,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5312089999999898,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.46716700000001765,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 17,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.43737500000000296,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.6021670000000086,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 18,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.616250000000008,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5113330000000076,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 19,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.5157500000000255,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5596250000000111,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 20,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5558749999999861,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.46000000000000796,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 21,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.48799999999999955,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5529579999999896,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 22,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5282080000000065,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4339170000000081,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 23,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.42191700000000765,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.551290999999992,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 24,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.8410829999999976,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5086670000000026,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 25,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.46895800000001486,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.9387919999999781,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 26,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 1.0216660000000104,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5881249999999909,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 27,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4945409999999981,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.6062499999999886,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 28,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.618707999999998,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4921250000000157,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 29,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.43891700000000355,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5518329999999878,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-members",
+      "repetition": 30,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5314160000000072,
+        "response_bytes": 2612,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4492919999999856,
+        "response_bytes": 2023,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 1,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4020840000000021,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.98112500000002,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 2,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.642957999999993,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.46070899999998005,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 3,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4300829999999962,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.4993750000000148,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 4,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5229160000000093,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.43274999999999864,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 5,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4086250000000007,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.491375000000005,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 6,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.4898340000000019,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4576670000000149,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 7,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4089999999999918,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.49712500000001114,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 8,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.49320799999998144,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.42133400000000165,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 9,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4207499999999982,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.48791700000001015,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 10,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5676660000000027,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4795419999999808,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 11,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.41458299999999326,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5189589999999953,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 12,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5000830000000178,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.41687500000000455,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 13,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.42037500000000705,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5360830000000192,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 14,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.49833300000000236,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4142920000000174,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 15,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4238339999999994,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5087919999999997,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 16,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5102919999999926,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.444958999999983,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 17,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4157910000000129,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5137079999999798,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 18,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5237089999999966,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4563750000000084,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 19,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.7745829999999785,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.6418329999999912,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 20,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5407910000000129,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4845420000000047,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 21,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4840420000000165,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5495420000000024,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 22,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5229999999999961,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.44633299999998144,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 23,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4192090000000235,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5124590000000069,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 24,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5162090000000035,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.42491700000002197,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 25,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.40912499999998886,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5009579999999971,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 26,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.48533299999999713,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4119999999999777,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 27,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4385000000000048,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.6005000000000109,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 28,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5396250000000009,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.44991600000000176,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 29,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4213750000000118,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.501749999999987,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "viewer-settings",
+      "repetition": 30,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5028749999999889,
+        "response_bytes": 2284,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.43462500000001114,
+        "response_bytes": 1618,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 1,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4242500000000007,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5061660000000074,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 2,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.4906660000000045,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.45754199999998946,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 3,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.40537499999999227,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5172920000000261,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 4,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5214170000000138,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.44879099999999994,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 5,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4459589999999878,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5039170000000013,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 6,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5435840000000098,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4511669999999981,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 7,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4051249999999982,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.49583300000000463,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 8,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5228339999999889,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.40687500000001364,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 9,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4085839999999905,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5161249999999882,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 10,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.4754999999999825,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.3982079999999826,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 11,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4117920000000197,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.49150000000000205,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 12,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.501749999999987,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.45241699999999696,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 13,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.41133400000001075,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5014590000000112,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 14,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.47833300000002055,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.48733400000000415,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 15,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.49079100000000153,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.545583999999991,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 16,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.49654200000000515,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.43216700000002106,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 17,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.39825000000001864,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.4959169999999915,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 18,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.8549580000000105,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.417082999999991,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 19,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.41266600000000153,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.4788330000000087,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 20,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5012090000000171,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.415458000000001,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 21,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.411707999999976,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.47570799999999736,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 22,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.4786250000000223,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.47695899999996527,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 23,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4318749999999909,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5073749999999677,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 24,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.509584000000018,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.42687499999999545,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 25,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.422916999999984,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.4825000000000159,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 26,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.4947080000000028,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.42500000000001137,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 27,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4588749999999777,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.4911250000000109,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 28,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5119159999999852,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.40100000000001046,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 29,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.3852080000000342,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.48225000000002183,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "admin-detail",
+      "repetition": 30,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.4923329999999737,
+        "response_bytes": 2307,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4105840000000285,
+        "response_bytes": 1642,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 1,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.43216699999999264,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5750830000000065,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 2,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.585790999999972,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.49604199999998855,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 3,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.47816700000004175,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5866249999999695,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 4,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5649999999999977,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5132500000000277,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 5,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4965419999999767,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.6600419999999758,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 6,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5559999999999832,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5033750000000055,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 7,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.458582999999976,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5417500000000359,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 8,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5348749999999995,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.43720799999999826,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 9,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4325829999999655,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5744579999999928,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 10,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 1.340750000000014,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5793750000000273,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 11,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.5399580000000128,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5872909999999933,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 12,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5239169999999831,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4656669999999963,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 13,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4565830000000233,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.528665999999987,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 14,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5098330000000146,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.43962499999997817,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 15,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.42837499999996,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5287910000000124,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 16,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5299579999999651,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.46691599999996924,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 17,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.5374160000000074,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.675166000000047,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 18,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5583340000000021,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.5518340000000421,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 19,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4680420000000254,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5606249999999591,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 20,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5696669999999813,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.47075000000000955,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 21,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.440291000000002,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5651249999999663,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 22,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5335420000000113,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4950410000000147,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 23,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.47766699999999673,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 1.892499999999984,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 24,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.6912919999999758,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4945419999999672,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 25,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.46079199999996945,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5465839999999957,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 26,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5273329999999987,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.46058400000003985,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 27,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.4492909999999597,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5137499999999591,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 28,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5281659999999988,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.4720829999999978,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 29,
+      "order": [
+        "compact",
+        "legacy"
+      ],
+      "compact": {
+        "ms": 0.45179200000001174,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "legacy": {
+        "ms": 0.5427500000000123,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "evidence_equivalent": true,
+      "error": null
+    },
+    {
+      "case": "invite-dialog",
+      "repetition": 30,
+      "order": [
+        "legacy",
+        "compact"
+      ],
+      "legacy": {
+        "ms": 0.5427090000000021,
+        "response_bytes": 2934,
+        "calls": 2
+      },
+      "compact": {
+        "ms": 0.476333000000011,
+        "response_bytes": 2455,
+        "calls": 1
+      },
+      "evidence_equivalent": true,
+      "error": null
+    }
+  ],
+  "per_case": [
+    {
+      "case": "admin-members",
+      "samples": 30,
+      "legacy": {
+        "ms": {
+          "min": 0.5282080000000065,
+          "median": 0.5950005000000118,
+          "max": 1.0216660000000104
+        },
+        "response_bytes": {
+          "min": 2612,
+          "median": 2612,
+          "max": 2612
+        },
+        "calls": 2
+      },
+      "compact": {
+        "ms": {
+          "min": 0.42191700000000765,
+          "median": 0.4876249999999942,
+          "max": 0.6439160000000186
+        },
+        "response_bytes": {
+          "min": 2023,
+          "median": 2023,
+          "max": 2023
+        },
+        "calls": 1
+      }
+    },
+    {
+      "case": "viewer-settings",
+      "samples": 30,
+      "legacy": {
+        "ms": {
+          "min": 0.48533299999999713,
+          "median": 0.5130834999999934,
+          "max": 0.98112500000002
+        },
+        "response_bytes": {
+          "min": 2284,
+          "median": 2284,
+          "max": 2284
+        },
+        "calls": 2
+      },
+      "compact": {
+        "ms": {
+          "min": 0.4020840000000021,
+          "median": 0.4243755000000107,
+          "max": 0.7745829999999785
+        },
+        "response_bytes": {
+          "min": 1618,
+          "median": 1618,
+          "max": 1618
+        },
+        "calls": 1
+      }
+    },
+    {
+      "case": "admin-detail",
+      "samples": 30,
+      "legacy": {
+        "ms": {
+          "min": 0.4754999999999825,
+          "median": 0.49887550000001113,
+          "max": 0.8549580000000105
+        },
+        "response_bytes": {
+          "min": 2307,
+          "median": 2307,
+          "max": 2307
+        },
+        "calls": 2
+      },
+      "compact": {
+        "ms": {
+          "min": 0.3852080000000342,
+          "median": 0.4199999999999875,
+          "max": 0.49079100000000153
+        },
+        "response_bytes": {
+          "min": 1642,
+          "median": 1642,
+          "max": 1642
+        },
+        "calls": 1
+      }
+    },
+    {
+      "case": "invite-dialog",
+      "samples": 30,
+      "legacy": {
+        "ms": {
+          "min": 0.5098330000000146,
+          "median": 0.5571669999999926,
+          "max": 1.892499999999984
+        },
+        "response_bytes": {
+          "min": 2934,
+          "median": 2934,
+          "max": 2934
+        },
+        "calls": 2
+      },
+      "compact": {
+        "ms": {
+          "min": 0.42837499999996,
+          "median": 0.46939600000001747,
+          "max": 0.5793750000000273
+        },
+        "response_bytes": {
+          "min": 2455,
+          "median": 2455,
+          "max": 2455
+        },
+        "calls": 1
+      }
+    }
+  ],
+  "aggregate": {
+    "legacy_response_bytes": 2459.5,
+    "compact_response_bytes": 1832.5,
+    "response_byte_reduction_percent": 25.492986379345396,
+    "legacy_ms": 0.535125249999993,
+    "compact_ms": 0.44688575000001407
+  },
+  "acceptance": {
+    "all_four_useful_and_equivalent": true,
+    "calls_reduced_2_to_1": true,
+    "median_combined_bytes_lower": true
+  },
+  "cleanup": "all four synthetic stores closed and temporary roots removed"
+}

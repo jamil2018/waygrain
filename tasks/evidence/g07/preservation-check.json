@@ -1,0 +1,14 @@
+{
+  "input_files": 542,
+  "unchanged_files": 538,
+  "append_only_document_prefixes": [
+    "docs/evaluation.md",
+    "docs/release-readiness.md",
+    "tasks/plan.md",
+    "tasks/todo.md"
+  ],
+  "unexpected_changes": [],
+  "cohort_preflight_mismatches": [],
+  "runtime_files": 85,
+  "historical_evidence_and_product_runtime_preserved": true
+}

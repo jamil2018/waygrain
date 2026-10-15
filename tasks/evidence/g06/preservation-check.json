@@ -1,0 +1,35 @@
+{
+  "unchanged_files": 341,
+  "authorized_original_edits": [
+    "skills/understand-product/SKILL.md",
+    "src/contracts/knowledge.ts",
+    "src/contracts/records.ts",
+    "src/core/query.ts"
+  ],
+  "append_only_prefixes": [
+    {
+      "file": "docs/evaluation.md",
+      "bytes": 7278,
+      "sha256": "5686c65c549ca5973304411f200e4d0dc97628948ef706cbc3ae82237cfec288"
+    },
+    {
+      "file": "docs/release-readiness.md",
+      "bytes": 6686,
+      "sha256": "bdb9cb231b6d82d79d9a3f656135863b1939f128100de5b39437bbeb166727dc"
+    },
+    {
+      "file": "tasks/plan.md",
+      "bytes": 20087,
+      "sha256": "b61981baa7aea474a468070fb588db5930033bcd931ecfe8c051c5b8078466bd"
+    },
+    {
+      "file": "tasks/todo.md",
+      "bytes": 77404,
+      "sha256": "d5a72caff6b28139d6c114ac176143e0de5a0c601b6c67edb53cda843d40b7df"
+    }
+  ],
+  "unexpected_changes": [],
+  "archived_g05_runtime_mismatches": [],
+  "historical_evidence_and_g05_source_unchanged": true,
+  "note": "current compiled dist is later G06 runtime; original G05 runtime hash identities resolve to archived prechange-runtime/dist"
+}

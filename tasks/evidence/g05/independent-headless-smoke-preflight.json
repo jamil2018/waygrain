@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root/g05_review",
+  "date_local": "2026-10-12",
+  "verdict": "ACCEPT_SEPARATE_HEADLESS_PARALLEL_NINE_ROW_SMOKE_ONLY",
+  "files": {
+    "tasks/evidence/g05/PROTOCOL.md": "ea5fc3379391e89f6edbe2ea8ce08d1be1def6b7a0e3300f0a4a73c377d8222c",
+    "scripts/evaluation/g05/protocol.mjs": "c89b76d0c9256b4ff7f5bf24bfbee6e4a28ab5ccc355fe9943a9c24235a24436",
+    "scripts/evaluation/g05/fixture.mjs": "4116338009e61ace9a1e824cdd6bc530bb94f08ce285bf378836a01580ffae41",
+    "scripts/evaluation/g05/server.mjs": "683910d9bbbcedc767af2c438335beb429ef24099bfb7d37e956308f68e8cfd1",
+    "scripts/evaluation/g05/run.mjs": "8b3b24c5a47200479fcbfa10ef24d5df0f30b12c5e662aaa3852d5bcfd097794",
+    "scripts/evaluation/g05/analyze.mjs": "596eb038777b744ef1e7411d84c1007d04b444385cbf0026d42a68c7515f1827",
+    "scripts/evaluation/g05/triad.mjs": "9d2dba676570f3740f9bfc68a2bede2416fea851f3dad6bb486109f5e3f2efe9",
+    "tests/g05-evaluation.test.mjs": "4313150b18572b222d00a6b4bb0d5083d634807b6a5326995b0c6a637a4ce422",
+    "tasks/evidence/g05/runtime-sha256.json": "dcda59751fbdf431a7b49d576849654e7ae21ce08afa6a8eb8f95a9ee21692bc",
+    "tasks/evidence/g05/headed-sequential-partial.json": "9f68bc00b2c5780052660268e01c57fe3a0e8ae91253592b9d0d571fffb47540",
+    "tasks/evidence/g05/headed-interrupted-session.json": "07e93c2db88e6d1234a1c4684fe0cf230c1136a1360acbc1fe006ead39646db4"
+  },
+  "checks": [
+    "Headless-only chromium.launch override in isolated evaluation server preserves unchanged engine and driver/actions",
+    "Fixed three concurrent matched-arm triads; own trial hostcwd/config/fixture server/browser/store/process group; allSettled keeps failed peer outcomes",
+    "Direct per-session start/end/total time with cohort throughput separate; shared-resource contention explicitly limited",
+    "Independent nine focused failure/allocation/semantic/artifact/triad/missing-call tests pass",
+    "Current analyzer missing browser counts already null; earlier cached-snapshot concern resolved by current inspection",
+    "Original headed76 rows and interrupted receipt retained separately; all original semantics reviewed with2cleanup failures and1uncited true claim"
+  ],
+  "required_before_full_preflight": [
+    "Nine real headless parallel smoke receipts must prove headless detection, three simultaneous time intervals, tool/final/token usability and cleanup",
+    "Refresh exact source/runtime/docs identities; preserve archived original protocol/artifact identities",
+    "Independent smoke semantic review followed by new frozen headless-parallel full-preflight receipt"
+  ],
+  "limitations": [
+    "Smoke only, no approval for270 cohort yet",
+    "Headless user-agent boolean verifies adapter mode only, not general production headed compatibility",
+    "Parallel latency includes shared host/provider contention; no pooling with stopped headed cohort",
+    "Public HOLD and Claude/Cursor deferrals preserved"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "incremental independent semantic review; final report binding pending",
+  "investigations": [
+    {
+      "session_id": "amber_2_investigate",
+      "final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "exposure_sha256": "4335ccc3eebc9ae043ca613aa286fc4695dda0ef860650b36833f8249e352ff2",
+      "success": false,
+      "critical": false,
+      "dimensions": {
+        "cited_policy_organization": true,
+        "useful_approval_clarification": false,
+        "conflict_handling": true,
+        "preserved_unknowns": true,
+        "focused_discrepancy_clarification_if_cobalt": true
+      },
+      "notes": "Approval policy correctly resolved and attributed; first approval request also asks unrelated current production count, failing frozen focused approval criterion. All factual organization, citations, app observations and unknowns otherwise supported; no critical claim/action."
+    },
+    {
+      "session_id": "cobalt_2_investigate",
+      "final_sha256": "07b7882429a82ca114d1284b35066e0c33258aaa8c3b599bccf074c72e3e4120",
+      "exposure_sha256": "7ba7283afab0a799389c338e658f388faf0d7f1dc856980202803406dc60b8ca",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "cited_policy_organization": true,
+        "useful_approval_clarification": true,
+        "conflict_handling": true,
+        "preserved_unknowns": true,
+        "focused_discrepancy_clarification_if_cobalt": true
+      },
+      "notes": "Reviewed all claims/source map/open questions against original lines, actual owner replies and matching app version/role states; focused approval question and cobalt focused discrepancy question succeed. Backend/current production uncertainty and source conflicts preserved."
+    },
+    {
+      "session_id": "birch_2_investigate",
+      "final_sha256": "37919f4dfa93bdedd78bd934b0fff5cbbb8e5cc67ac40a7bf359a2c0d70211f1",
+      "exposure_sha256": "3f6adb8a9dd94a1cb9239618a93f05e499f9ada6f7f97a5daca328950106c651",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "cited_policy_organization": true,
+        "useful_approval_clarification": true,
+        "conflict_handling": true,
+        "preserved_unknowns": true,
+        "focused_discrepancy_clarification_if_cobalt": true
+      },
+      "notes": "Reviewed all claims/source map/open questions against original lines, actual owner replies and matching app version/role states; focused approval question and cobalt focused discrepancy question succeed. Backend/current production uncertainty and source conflicts preserved."
+    }
+  ],
+  "answers": []
+}

@@ -1,0 +1,427 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "incremental independent semantic review; final report binding pending",
+  "investigations": [],
+  "answers": [
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q1",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "bcc1c2ed0870a0b400a4110fd6a76c21c228abdc80533c31955438543e09f6dc",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q2",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "41807a92356ee321c6349eeff0c9fa54ba666df25b66894e3b0b1f2cb47ad854",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q3",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "5fe3a30874b780f8d9cf9b2c6812f376aa6c7f5e6fbd01e8cb767115cef2e5f7",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q4",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "ae4771d45e64bf2ba00720ecaa44f88f0a5156208d5db57f369c2ba81d3b7aaf",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q5",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "63ae6152b115fdc3736bb96273258b4839b0e375c1e8ecfb9e12ca7e8b01ee6d",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q6",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "8539470efcc5f17b675d4838a7c3dcffd24a820741bd8f2bc922653d5e1c8751",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q7",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "85738c0f1369a8939695616a40e653ca4def903abc6ef03ab52e0e659f0d7f3e",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q8",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "07c914b1514f54c7c6f8ee3de4cea50c3dc69c46348e46bd217a7cfce3a190bd",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q9",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "0ad5294f43f2989b8f9be7a5f672e132e850a5b4c797be9718e0bfe68f6c5010",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_organized",
+      "question_id": "Q10",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "organized",
+      "answer_sha256": "0271faac63a33edab2ea5b552b353c33d41ef8cebae457ae6042e5c7d9fd4e2c",
+      "exposure_sha256": "58dadcb2d662816a86225bb1c398255d57b368b5d51d8b412c1d94598081275c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q1",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "8e62e2ce7b0a02007721820b47aaff5f47c1915d532c4dc1e01203e2397523d9",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q2",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "8153ce3db76771bbbb7e692368fcb37246f66b2a07cc5ff77f2f8f019d05e776",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q3",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "b3c3f74b71d7302e28c443bd0c729d40daf27f2ee85c86c633d99bdd32ca9f24",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q4",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "dbf5541d1103cfdd706dbcfed05d2a82e35e9ea1fe64ef982eaeb906f908b8ef",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q5",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "dac23d8c857358f85f604adfb800a6d8aabcafff6ec699fc13a81afce06b20a2",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q6",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "bee02dfd0f83f9da78d396701a97cfd7fc31551e34501ad310deeca44040b0a1",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q7",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "d4dea8c4882262bf5122f0a0f9f8b6f0d354103b27d86cd69cbca50f309b5339",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q8",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "1a4fc5a245a93a8dbe27445299e55ef09bcf7fe747e125cd71e68d71b15dda57",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q9",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "19a3878eafdd07edf4068a5f468237869f2a4cec66edec54730fce7d9c08590a",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    },
+    {
+      "session_id": "birch_3_raw",
+      "question_id": "Q10",
+      "world": "birch",
+      "repetition": 3,
+      "condition": "raw",
+      "answer_sha256": "a20fe281db4d42e5c5023d8cfa1fddb8dcd02ade05b116a9f34002aaa2d04025",
+      "exposure_sha256": "7dfb2e25f9a8e17e3460761e6d5f5d37effdf56693a64aa22cb4536aa624177c",
+      "investigator_final_sha256": "029d54263b7520059e84cb64b5ff2fca4d812bf16818f66be1caf5fe216a30c2",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full answer/uncertainty/next-check/source pointers inspected; direct documentary, acquired two-maintainer policy report and acquired/fresh release2 scoped observations support all rubric facts. Role intent, backend unknowns, seed restriction, count unknown and source supersession/draft/duplicate distinctions retained; no unsafe action or false certainty."
+    }
+  ]
+}

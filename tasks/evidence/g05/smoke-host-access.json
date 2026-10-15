@@ -1,0 +1,1838 @@
+{
+  "schema_version": 1,
+  "smoke": true,
+  "runtime": {
+    "node": "v24.20.0",
+    "codex": "codex-cli 0.162.0-alpha.17.2",
+    "model": "gpt-6.1-sol",
+    "reasoning": "low",
+    "started_at": "2026-10-11T18:44:57.690Z",
+    "platform": "darwin",
+    "arch": "arm64",
+    "protocol_sha256": "c89b76d0c9256b4ff7f5bf24bfbee6e4a28ab5ccc355fe9943a9c24235a24436",
+    "finished_at": "2026-10-11T18:47:33.504Z"
+  },
+  "results": [
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "waygrain",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 22008.587458,
+      "tokens": {
+        "input": 89376,
+        "output": 320,
+        "cached_input": 60800
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "I couldn’t observe Save in either role: the study tools required approval, but the current approval policy forbids it. No evidence IDs were returned. Save was not clicked, and backend permissions remain unproven.",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Unknown; live Settings inspection was blocked.",
+            "evidence": []
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Unknown; no live Settings evidence was available.",
+            "evidence": []
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Not proven; no backend permissions were tested or inferred.",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:44:59.782Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "923a0cc0-883c-4991-8e8c-a43f2c6f463d",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:44:59.782Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:44:59.958Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "dc863631-cf4e-4a13-84a8-f111e856e22d",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:44:59.958Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:00.054Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "e87f3a2b-7884-4dd0-8ea3-d88ea6e7600a",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:00.054Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:00.155Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "444fb2d9-b006-40cd-b15a-155c5372db07",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:00.155Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:00.245Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "c6479bde-4d94-44a6-a462-1b8275b168d4",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:00.245Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 5,
+        "setup_ms": 920.367291,
+        "priming_ms": 567.9770839999999,
+        "retained_bytes": 970912,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 5,
+        "server_total_ms": 20175.191416
+      },
+      "residual_host_ms": 20520.243083000005,
+      "total_ms": 22037.657833
+    },
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "browser-only",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 17581.345457999996,
+      "tokens": {
+        "input": 80340,
+        "output": 291,
+        "cached_input": 54528
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "I could not compare Save’s enabled state: the study navigation and snapshot calls were blocked because they require approval while the approval policy is never. No live UI evidence was obtained, and Save was not clicked. Backend permissions remain unproven.",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Unknown; live Settings inspection was blocked.",
+            "evidence": []
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Unknown; no live viewer Settings evidence was obtained.",
+            "evidence": []
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No; backend behavior was not tested or observed.",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:21.256Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:21.404Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:21.502Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_4",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:21.616Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:21.775Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 0,
+        "setup_ms": 736.3313329999999,
+        "priming_ms": 608.543541,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 16172.862583000002
+      },
+      "residual_host_ms": 16236.470583999999,
+      "total_ms": 17583.838958999997
+    },
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "notes-folder",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 17544.604874999997,
+      "tokens": {
+        "input": 53331,
+        "output": 254,
+        "cached_input": 33664
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "I could not compare Save’s current enabled state: the study tools rejected navigation and snapshot access because approval is required but the approval policy is set to never. No UI evidence was obtained, and Save was not clicked. Backend permissions remain unproven.",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Unknown; current admin Settings could not be observed.",
+            "evidence": []
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Unknown; current viewer Settings could not be observed.",
+            "evidence": []
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No; no backend behavior was tested or observed.",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:38.567Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_1",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:38.567Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:38.639Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_3",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:38.639Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:38.704Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_5",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:38.704Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:38.755Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_7",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:38.755Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:38.808Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_9",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:38.808Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 0,
+        "setup_ms": 640.38375,
+        "priming_ms": 294.276166,
+        "retained_bytes": 8096,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 15806.403917
+      },
+      "residual_host_ms": 16609.944958999997,
+      "total_ms": 17549.201875
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "notes-folder",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 15051.564665999991,
+      "tokens": {
+        "input": 53368,
+        "output": 237,
+        "cached_input": 33664
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The study tools blocked navigation and live inspection because they require approval while the approval policy is never. No clicks were dispatched or values entered. I could not observe the invitation label, open or cancel the dialog, or verify the final UI state. No evidence IDs were returned.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Unknown; live inspection was blocked.",
+            "evidence": []
+          },
+          {
+            "fact": "dialog_open",
+            "value": "Unknown; the dialog could not be inspected or opened.",
+            "evidence": []
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No backend behavior was proven.",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:55.831Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_1",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:55.831Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:55.898Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_3",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:55.898Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:55.959Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_5",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:55.959Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:56.009Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_7",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:56.009Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:45:56.059Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_9",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:45:56.059Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 0,
+        "setup_ms": 493.159583,
+        "priming_ms": 279.2595409999999,
+        "retained_bytes": 8096,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 13890.670875000002
+      },
+      "residual_host_ms": 14279.145541999991,
+      "total_ms": 15053.730290999993
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "waygrain",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 14662.928541999994,
+      "tokens": {
+        "input": 53194,
+        "output": 228,
+        "cached_input": 33664
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The study tools rejected navigation and inspection because approval is required while the approval policy is never. I could not observe the current invitation label, open or cancel the dialog, or verify the final state. No clicks or value entry occurred.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Unknown; live inspection was blocked.",
+            "evidence": []
+          },
+          {
+            "fact": "dialog_open",
+            "value": "Unknown; no live snapshot was available and no click occurred.",
+            "evidence": []
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No backend behavior was proven.",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:10.925Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "600d12e5-d8e4-4652-97c4-2ad7fcb42212",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:10.925Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:10.995Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "2ec234fe-853d-4976-8e30-60743735c177",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:10.995Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:11.048Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "db67d730-bd9f-4487-a85a-7e5bbd1c52c6",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:11.048Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:11.098Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "b357cf08-96ac-41bf-9031-675ff7eaae12",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:11.098Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:11.147Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "bd38debe-bde3-49b0-bbe3-32a4c1130863",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:11.147Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 5,
+        "setup_ms": 551.140334,
+        "priming_ms": 273.892333,
+        "retained_bytes": 970912,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 5,
+        "server_total_ms": 13519.290459
+      },
+      "residual_host_ms": 13837.895874999995,
+      "total_ms": 14665.49341699999
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "browser-only",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 14797.540834,
+      "tokens": {
+        "input": 45480,
+        "output": 225,
+        "cached_input": 44544
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The study tools blocked navigation and live inspection because approval is required while the approval policy is never. I made no clicks and entered no values. The invitation label, dialog state, and final UI state remain unverified.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Unknown; live inspection was blocked.",
+            "evidence": []
+          },
+          {
+            "fact": "dialog_open",
+            "value": "Unknown; no live snapshot was available and no clicks were made.",
+            "evidence": []
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No backend behavior was proven.",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:25.540Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:25.602Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:25.653Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_4",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:25.698Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:25.744Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 0,
+        "setup_ms": 503.217167,
+        "priming_ms": 255.717584,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 13672.846583999999
+      },
+      "residual_host_ms": 14038.606082999999,
+      "total_ms": 14799.985625000001
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "browser-only",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 19293.327667000005,
+      "tokens": {
+        "input": 90660,
+        "output": 296,
+        "cached_input": 61568
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "I could not verify whether Remove member remains visible or changed from version one. Both study navigation and live snapshot requests were blocked because they require approval while the approval policy is never. No UI evidence IDs were returned, and no controls were clicked. Coverage is therefore limited: current visibility, differences, and backend behavior remain unobserved.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Unknown; the current admin Member detail could not be observed.",
+            "evidence": []
+          },
+          {
+            "fact": "remove_changed",
+            "value": "Unknown; no current snapshot or retained version-one evidence was available for comparison.",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:40.373Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:40.443Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:40.496Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_4",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:40.544Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:40.589Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 0,
+        "setup_ms": 529.791209,
+        "priming_ms": 267.38870800000007,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 18150.261042000002
+      },
+      "residual_host_ms": 18496.147750000007,
+      "total_ms": 19294.789292
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "notes-folder",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 15361.763915999996,
+      "tokens": {
+        "input": 46127,
+        "output": 245,
+        "cached_input": 30080
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "I could not compare the current admin Member detail with version one: the registered study tools rejected memory access, navigation, and snapshot requests because approval is required but the approval policy is never. No evidence IDs were obtained. Visibility and change remain unverified; no controls were clicked.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Unknown: current admin Member detail could not be observed.",
+            "evidence": []
+          },
+          {
+            "fact": "remove_changed",
+            "value": "Unknown: neither the historical version-one evidence nor the current UI could be retrieved for thisC",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:59.695Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_1",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:59.695Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:59.772Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_3",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:59.772Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:59.827Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_5",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:59.827Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:59.874Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_7",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:59.874Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:46:59.920Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_9",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:46:59.920Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 0,
+        "setup_ms": 562.3733340000001,
+        "priming_ms": 276.90545900000006,
+        "retained_bytes": 8096,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 14159.399292
+      },
+      "residual_host_ms": 14522.485122999997,
+      "total_ms": 15363.09666700002
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "waygrain",
+      "case": "changed",
+      "repetition": 1,
+      "host_ms": 19419.682249999983,
+      "tokens": {
+        "input": 72449,
+        "output": 258,
+        "cached_input": 52736
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "I could not verify whether Remove member remains visible or changed from version one. The study tools blocked navigation, memory search, and live snapshot because approval is required while the approval policy is never. No evidence IDs were returned. No controls were clicked or values entered; current UI and historical coverage remain unavailable.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Unknown: no current admin Member detail observation was available.",
+            "evidence": []
+          },
+          {
+            "fact": "remove_changed",
+            "value": "Unknown: neither current UI evidence nor version-one historical evidence could be retrieved for the1",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:47:15.039Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "c70e4bb8-8d58-4963-b237-eec26ca7f905",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:47:15.039Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:47:15.117Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "eb38b44b-106a-4017-9758-55ca22b85a43",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:47:15.117Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:47:15.173Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "aef486d3-6b7d-477f-a193-3ae6d1dc641d",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:47:15.173Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:47:15.224Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "31597837-772c-4bc6-aa8e-45482acd8ef0",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:47:15.224Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T18:47:15.272Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "69bcdb81-4c28-40b7-99f7-cd8d69d7d031",
+            "phase": "retained",
+            "captured_at": "2026-10-11T18:47:15.272Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          }
+        ],
+        "actions": [],
+        "browser_calls": 14,
+        "knowledge_calls": 5,
+        "setup_ms": 522.558708,
+        "priming_ms": 306.1692079999999,
+        "retained_bytes": 970912,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 5,
+        "server_total_ms": 18301.202416
+      },
+      "residual_host_ms": 18590.954333999984,
+      "total_ms": 19421.552792000002
+    }
+  ]
+}

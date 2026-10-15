@@ -1,0 +1,45 @@
+{
+  "reviewer": "/root/g05_review",
+  "date_local": "2026-10-12",
+  "verdict": "ACCEPT_FROZEN_G05_270_SESSION_PREFLIGHT",
+  "files": {
+    "tasks/evidence/g05/PROTOCOL.md": "98d39435e81627f8628ebc907701edc7cefc855f3c2366bd9c1734a3608aa486",
+    "scripts/evaluation/g05/protocol.mjs": "c89b76d0c9256b4ff7f5bf24bfbee6e4a28ab5ccc355fe9943a9c24235a24436",
+    "scripts/evaluation/g05/fixture.mjs": "4116338009e61ace9a1e824cdd6bc530bb94f08ce285bf378836a01580ffae41",
+    "scripts/evaluation/g05/server.mjs": "97f1a5f975125d919362d7a1552de597e0bdbce487dc5e12fa5ceefcd9c41bb4",
+    "scripts/evaluation/g05/run.mjs": "013a6f494dddc42c7386a8a837f78d197dddb5f9b6eb523b93b15306b988d6ba",
+    "scripts/evaluation/g05/analyze.mjs": "596eb038777b744ef1e7411d84c1007d04b444385cbf0026d42a68c7515f1827",
+    "tests/g05-evaluation.test.mjs": "6017744cea5e7b8a880b7d791ecacc9c99d76ab34d6363d0065cc7f2e8edec20",
+    "tasks/evidence/g05/runtime-sha256.json": "dcda59751fbdf431a7b49d576849654e7ae21ce08afa6a8eb8f95a9ee21692bc",
+    "tasks/evidence/g05/preserved-inputs-sha256.json": "226040deb39cec87915a44a7d87a92c71d8a1fa03f6a5a51d7c2eb1d115cb89f",
+    "tasks/evidence/g05/smoke-approved-tools.json": "f7dd5cb2f249cf95a4881ac4b2ef2885285694b587235898c09c5d8e31c5b237",
+    "tasks/evidence/g05/smoke-initial.json": "f0ad9301b31b7e88646edbc62d93c27daf79d926ca7e87827e9ec5a3c9c53f6b",
+    "tasks/evidence/g05/smoke-host-access.json": "6739b812e26950aab49ee8a40f19781cce5c9d98edc54d310a9f5e21c39aa192",
+    "tasks/evidence/g05/smoke-semantic-bindings.json": "648e41a6a8705a749b6ffca1ed2af5a781ce051e49b2369102d62197f87a13c9",
+    "tasks/plan.md": "d630875a2c773812a96829320191ef2682e715859df36a03f5c69ac28329a6d0",
+    "tasks/todo.md": "3215b0cb7f3f1aecbc0db6a20bd2892485d5a005549efdf85e019c50fcd99c5f",
+    "docs/evaluation.md": "9c80da65eeaed050b05116082a311bd433ea397cbfc0079daaa6ed8285a6a4b3",
+    "docs/release-readiness.md": "4a66ae40ff9e34a4745b55013b0868a91da74deb0468c9bef6405cd64f85f6fc"
+  },
+  "checks": [
+    "Reviewed protocol, ten tasks, three repetitions/arms/cases, strict no-retry allocation",
+    "Independently inspected nine successful smoke prose/claims/actions/current evidence; all nine semantically accepted; tokens actual and cleanup complete",
+    "Independent node --test tests/g05-evaluation.test.mjs passed all seven meaningful grader failure/artifact tests",
+    "All 83 compiled runtime identities match runtime manifest",
+    "All 85 preserved input files match original hashes or authorized append-only docs",
+    "All 165 tracked historical evidence files byte-identical to base b40745ca36a27e10d33c8a6e38e17b76ce68da0a",
+    "Plan/todo/evaluation/release original bytes remain prefixes; additive G05 authorization only",
+    "Exact same browser engine/mapper/action policy across arms; practical full-capture notes vs summary-then-read Waygrain query documented",
+    "Reviewed scoped ephemeral study-tool approval configuration and owned-process/temp-storage cleanup; three smoke artifacts retained separately"
+  ],
+  "required_findings_remaining": [],
+  "limitations": [
+    "Author/host-reported Node24 broad suite; reviewer independently ran focused tests only",
+    "Representative of synthetic capture-memory and reversible UI journeys, not rich preverified graphs or wider product workloads",
+    "Priming capture-only scripted; task observations/actions agent selected",
+    "Residual host time includes startup/serialization/cleanup; total per-session elapsed is main wall-time metric",
+    "Canonical scorer is diagnostic; independent semantic adjudication binds exact final answers and preserves original machine score",
+    "Approval mode tool usability qualified by third smoke, no host internals/privacy attestation",
+    "Claude/Cursor deferred/unverified; public release HOLD; no commit/push/publication authority"
+  ]
+}

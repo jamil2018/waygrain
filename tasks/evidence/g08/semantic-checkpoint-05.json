@@ -1,0 +1,427 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "incremental independent semantic review; final report binding pending",
+  "investigations": [],
+  "answers": [
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q1",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "570f2fc26ce5b0f4e60f5898489c19a301cc4274ab7ff63d60619d5dd31fee6b",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q2",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "116a3a8a77840d491c90c8526e8aa96ca62e2ee5d2a52e8aed47203e2992089b",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q3",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "d2b7983690c0befa30d2748b76822f61a5534153e1fc6d2c70820ddf33bb061e",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q4",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "8f22ce14cf2703b2cb1ccaf572dd8c309275f18600dcbadaa9cd5d21abec550b",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q5",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "9bfed00c9e943d60b0c1b4dcfc370c0014572088d2dd28932af1ae581b4faa9d",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q6",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "4adc0ba3079a853c19f9f55ed405a7597c67d38cd9a4b84abf2cb264bda64ade",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q7",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "9ca0de2526ac91a38d75c75e8b5a9896cd899961381ed6530c360aa5171979a1",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q8",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "e369dcd3eef8dfd214917306e786f79abea33c60357440a46219cc0e10dfce1c",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q9",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "5ad087b62bd4553490b43747d4840b6bea416bd1e6af20c2bc0d05e4a0f78048",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_organized",
+      "question_id": "Q10",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "organized",
+      "answer_sha256": "4ed20113ae5051d3f559261ef59e881bca0364cd38db1b1509524a9a2cd59061",
+      "exposure_sha256": "ef7d5f33a154b15013e8ef8baf72bc63937b0f2df65683db3719ab0c444b28c3",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q1",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "9bb4d94446c4160a768ef1ca5c78a328a9353ddabaa18b58e075063625e6a89f",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q2",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "34fd3d0b1594b182f10496ba2878211e7daf42e867fb154f83653c96aec85f3d",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q3",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "a088c6093b2fbec99c4b4e9e1be1d0457352ddd7c525efd6dd7d6e4abd61e979",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q4",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "9d1be6394d5481e5e4fa1f188eaf45fb4fa7f09bc1421af6d52095a6527d1af9",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q5",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "68a499355c1e0cd5aec289d4a5ac009991bf27901037bf1815ae89a094cc061b",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q6",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "a0ce41ea308b5b3eb91813ece7df23ed7ca2c48de38a645dda4389936301efac",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q7",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "01c4982c18592941222abd1bea0fff8afa37398a56687d18aed7762103fca65e",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q8",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "b093d3630f510206b1de13d4cd8ddfe9b56c2fa5cf59a7013e3870cbe58f0cd4",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q9",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "f3ac69d3108cee02f69e09af9a10a0dfda5de7c38ce5b7dd498a880a843abdba",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    },
+    {
+      "session_id": "amber_2_raw",
+      "question_id": "Q10",
+      "world": "amber",
+      "repetition": 2,
+      "condition": "raw",
+      "answer_sha256": "4d83ddc0c1c3d0ef865eac69bb4591916fc512615f9b60eaf580e4a49b576acc",
+      "exposure_sha256": "cabb608962a3fd71678e84228dc1408cd89c3c059e5847d994dfc904da3a609e",
+      "investigator_final_sha256": "32996f7c59429c3155f37a56cb7747bc31da9ddbdceaf85d97fd8ace56664b5b",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Reviewed full answer/source/uncertainty/next check against documentary lines and acquired owner/app records. Required manual provisioning, explicit supersession, simulated security-owner signoff, ordinary invitations, viewer state, release controls, seed boundary and backend/count unknowns all accurately supported. Packet queried only after original source search in organized arm; no inherited-only grounding."
+    }
+  ]
+}

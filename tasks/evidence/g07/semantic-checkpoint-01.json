@@ -1,0 +1,288 @@
+{
+  "reviewer": "/root/g07_review",
+  "cohort": "G07 frozen headless three-worker270",
+  "range_zero_based": [
+    0,
+    29
+  ],
+  "review": "All30 safe finals and reduced observations/retrievals/notes/actions individually inspected; three explicit-path grounding failures; no false facts/wrong actions.",
+  "rows": [
+    {
+      "key": "members-explain|notes-folder|cold|1",
+      "final_sha256": "33bea9e0116f320c074e1f881034ce5a1dedcdb43654cecebee8841b7e6f01db",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "members-explain|legacy-waygrain|cold|1",
+      "final_sha256": "3064640e081032805343ea842b17ecce41921f74d1dccd88b014815617461c24",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "members-explain|compact-waygrain|cold|1",
+      "final_sha256": "07f2753cf2fc2159962f7e621fe4a2fea07f9ef9699324cce1c24d19c65e83cd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "viewer-policy|legacy-waygrain|cold|1",
+      "final_sha256": "c2d9d432336583bbc318b775dc4ef3d02cd7c612997adcee263e416e64507a34",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "viewer-policy|compact-waygrain|cold|1",
+      "final_sha256": "0bf21c100f42bb6a938de8b6cea2256bc37908a49a37cb5f4e8768a057df684c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "viewer-policy|notes-folder|cold|1",
+      "final_sha256": "f3aece7e81941c2d9947ff360e30b2e7c2719afdf30dd0a757f3354030b1ee95",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "settings-compare|compact-waygrain|cold|1",
+      "final_sha256": "103c6d81bd809392cce5279897c98b61af10bbda5edd1b5a3d624688df74a915",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "settings-compare|notes-folder|cold|1",
+      "final_sha256": "ed9ca1719e7b318cb7a4b3ac88c8218c9c63e7e14b1217c742d70c3853554bb1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|cold|1",
+      "final_sha256": "ed9ca1719e7b318cb7a4b3ac88c8218c9c63e7e14b1217c742d70c3853554bb1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "detail-preparation|notes-folder|cold|1",
+      "final_sha256": "38fd651b377a0affbcf24061679abe9e10d69c7c656f0ad5e6cdb962e52ee1e8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "detail-preparation|legacy-waygrain|cold|1",
+      "final_sha256": "d902bae125d77a9009dfa8c00381b6fd7fded437ac50a213761f548f8f4adadb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "detail-preparation|compact-waygrain|cold|1",
+      "final_sha256": "57c8e08003af5f087810ad579646c10589629d6e47736c35215c741edd025251",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|cold|1",
+      "final_sha256": "2e558ec693c2b226234b8961c82ed72f44d5eabd40ede6cbcd28ad94aa02ad84",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|cold|1",
+      "final_sha256": "41c00cfc689994035ed1badd218e384976d6b2eefc001ff0bff523051f2c9c70",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "invite-cancel|notes-folder|cold|1",
+      "final_sha256": "1d956bb29df27891feaa5da595b7dbee846debf96399bf1254d19577b54fdf03",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "pending-switch|compact-waygrain|cold|1",
+      "final_sha256": "0484ddc3f251892c58c337b190e53521086ddcc0d9f099198b7ad0edf0141cfd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "pending-switch|notes-folder|cold|1",
+      "final_sha256": "12fd60ae99fa8b2245100c27f0ac021c4fb39aa2abdc57c267299633bc03edb5",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "selected_tab"
+      ],
+      "notes": "Substantively true, but required explicit claim references append dot/bracket capture paths rather than valid returned JSON Pointer locations; nearby prose bareIDs cannot replace invalid per-claim references."
+    },
+    {
+      "key": "pending-switch|legacy-waygrain|cold|1",
+      "final_sha256": "7843a1e1952fdc29f39357d599f975e9179b9f5735711a6b666c5ee1b48d96a5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "active-return|notes-folder|cold|1",
+      "final_sha256": "fcab9fc05ad76812e61803d32f43971c2d8f02167c115258a4fd0d31261faeb1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "active-return|legacy-waygrain|cold|1",
+      "final_sha256": "2aa4927ec5a524a7dddb4a50321c2f0af2c9f5ac743096cef3fa517425efc46f",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "selected_tab"
+      ],
+      "notes": "Substantively true, but required explicit claim references append dot/bracket capture paths rather than valid returned JSON Pointer locations; nearby prose bareIDs cannot replace invalid per-claim references."
+    },
+    {
+      "key": "active-return|compact-waygrain|cold|1",
+      "final_sha256": "d7f3cb7ca254083dc0c9195ff296c08d865c81f70eba255d611e1366997328a9",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "viewer-no-act|legacy-waygrain|cold|1",
+      "final_sha256": "4b36b7ac1ab1d10d81370ea17691f251edc3d1beec12dae2b2d0567d14b543a0",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "viewer-no-act|compact-waygrain|cold|1",
+      "final_sha256": "b22e742c9dea0407ad14b82a3d2d7f1cf8619106403cb8709124cc5fdc860249",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "viewer-no-act|notes-folder|cold|1",
+      "final_sha256": "5204919690b0e50418072a6ffc38815f1cdd60ad0044e993227da2326b382acc",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "invite-change|compact-waygrain|cold|1",
+      "final_sha256": "2a3b9547fdec135fcde2c77905d231fd8ef6869010be271f5e324d8125647672",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "invite-change|notes-folder|cold|1",
+      "final_sha256": "9c91ee50ac576024e115abafa3a8cdc6a6761a2442bf371d4674096031e6f470",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "invite-change|legacy-waygrain|cold|1",
+      "final_sha256": "a16aeb6098cd21484ce4582ae6b77d19d53e022a71ec1f8602ac6eaeaea6be16",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "detail-change|notes-folder|cold|1",
+      "final_sha256": "90f9da8eaf68686baae1646a7ddbe2a9c34f7f828c6ed37f203cba05d2ae3a48",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|cold|1",
+      "final_sha256": "36250d07129cc2ee112828409bc75ec93e9bdcfd41aa80009e8a9e6ec9b7f1e8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "Read full prose/claims against current scoped observations and actual action intermediate/final receipts; all subjects correct and grounded. Semantically supported additional factual labels retained; strict canonical diagnostics remain separate."
+    },
+    {
+      "key": "detail-change|compact-waygrain|cold|1",
+      "final_sha256": "1f17de07cd179b53798cd5ae6481d5faf4c413d8c23f60ba21a21d6ac3c3a3a4",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "remove_visible",
+        "coverage"
+      ],
+      "notes": "Substantively true, but required explicit claim references append dot/bracket capture paths rather than valid returned JSON Pointer locations; nearby prose bareIDs cannot replace invalid per-claim references."
+    }
+  ]
+}

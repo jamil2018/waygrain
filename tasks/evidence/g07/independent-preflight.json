@@ -1,0 +1,36 @@
+{
+  "reviewer": "/root/g07_review",
+  "stage": "independent exact protocol and harness preflight before smoke",
+  "verdict": "accepted_for_separate_nine_session_smoke_only",
+  "manifest_sha256": "0a584e3f8a28a8bc66ab31b9b7b08f5e31c37db396c8fbac34cd2f9eda5c8b2d",
+  "independent_checks": {
+    "preflight_files": 9,
+    "preflight_mismatches": 0,
+    "runtime_files": 85,
+    "runtime_mismatches": 0,
+    "preserved_inputs": 542,
+    "unchanged": 540,
+    "authorized_append_only_document_prefixes": 2,
+    "focused_tests": 12,
+    "focused_tests_pass": 12,
+    "node": "24.20.0"
+  },
+  "reviewed": [
+    "same frozen G06 runtime with only query projection difference for legacy/compact",
+    "unrestricted ordinary notes full-content search/read and free-text writes",
+    "unchanged ten tasks and actual 270 fresh CLI allocation; no retries",
+    "headless isolated triads, rotating order, all overhead and contention qualification",
+    "no forced memory use/current observations; explicit tool guidance across arms",
+    "actual exposed-fact and path-subject ledger prevents hidden prime/summary/omitted absence evidence",
+    "strict diagnostic and independent semantic separation, exact answer hash bindings",
+    "notes-specific benefit joins measured threshold with browser/success/grounding/action/freshness acceptance",
+    "safe numeric byte counts and missing token measurements retained null",
+    "historical preservation, Claude/Cursor deferrals, release HOLD and no delivery"
+  ],
+  "findings": [],
+  "limits": [
+    "Full cohort requires independent semantic and cleanup/exposure/concurrency acceptance of separate smoke.",
+    "No native-host/global privacy or general production-headed qualification.",
+    "Shared host latency and small synthetic capture-only priming cannot demonstrate rich graph or arbitrary autonomous freshness."
+  ]
+}

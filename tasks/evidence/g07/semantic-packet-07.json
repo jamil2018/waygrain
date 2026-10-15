@@ -1,0 +1,3840 @@
+{
+  "start_index": 180,
+  "end_exclusive": 210,
+  "rows": [
+    {
+      "task": "members-explain",
+      "group": "feature",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:04:54.306Z",
+      "offset_ms": 1716085.9738339998,
+      "host_ms": 22111.81783399987,
+      "tokens": {
+        "input": 75267,
+        "output": 207,
+        "cached_input": 68224
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Members screen shows a visible, enabled “Invite” button. The “Active” tab is selected (obs_1). The snapshot does not establish what clicking Invite would do (obs_1).",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite; the invitation control is a visible, enabled button.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "selected_tab",
+            "value": "Active",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 12.56066699999974,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 54.94341600000007,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:05:08.177Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 224.505208,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 232.699875,
+        "task_window_ms": 20799.782457999998,
+        "cleanup_ms": 29.738541999999143,
+        "server_total_ms": 21062.223833
+      },
+      "residual_host_ms": 21887.31262599987,
+      "total_ms": 22114.22375000012,
+      "finished_at": "2026-10-14T19:05:16.420Z",
+      "final_sha256": "7c7983f4644e06a250c4f9bb8acb12740417f15d1ab50763ef19800e39b74888"
+    },
+    {
+      "task": "members-explain",
+      "group": "feature",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:04:54.306Z",
+      "offset_ms": 1716086.095334,
+      "host_ms": 30646.63649999979,
+      "tokens": {
+        "input": 75427,
+        "output": 203,
+        "cached_input": 68352
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Members screen shows a visible, enabled “Invite” button, and “Active” is the selected tab (obs_1). The snapshot does not establish what clicking Invite would do.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite; the invitation control is a visible, enabled button.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "selected_tab",
+            "value": "Active",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.501709000000119,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 49.231541000001016,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:05:15.953Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 225.803083,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 234.1075,
+        "task_window_ms": 29346.766917,
+        "cleanup_ms": 24.126290999996854,
+        "server_total_ms": 29605.006417
+      },
+      "residual_host_ms": 30420.83341699979,
+      "total_ms": 30649.909624999855,
+      "finished_at": "2026-10-14T19:05:24.956Z",
+      "final_sha256": "72eb64d1fe1e0068a5a569500ab051c3f7c580b34f72b3acca05499bf847eeb1"
+    },
+    {
+      "task": "members-explain",
+      "group": "feature",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:04:54.306Z",
+      "offset_ms": 1716086.068459,
+      "host_ms": 20560.65558299981,
+      "tokens": {
+        "input": 75250,
+        "output": 201,
+        "cached_input": 68224
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Members screen shows a visible, enabled “Invite” button, and “Active” is the selected tab (obs_1). The button’s resulting behavior was not tested.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite; the invitation control is a visible, enabled button.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "selected_tab",
+            "value": "Active",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 14.199374999998327,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 55.722499999999854,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:05:05.600Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 220.72170800000004,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 228.11116600000003,
+        "task_window_ms": 19114.163334,
+        "cleanup_ms": 30.466583000001265,
+        "server_total_ms": 19372.746958
+      },
+      "residual_host_ms": 20339.93387499981,
+      "total_ms": 20566.478707999922,
+      "finished_at": "2026-10-14T19:05:14.873Z",
+      "final_sha256": "e4d5c7f4d9235050203987817a7244ac2bd8cea39fa0cfad089e2db215dda2ba"
+    },
+    {
+      "task": "viewer-policy",
+      "group": "feature",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:05:24.966Z",
+      "offset_ms": 1746746.3020839998,
+      "host_ms": 24652.86462499993,
+      "tokens": {
+        "input": 75383,
+        "output": 231,
+        "cached_input": 68352
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Invitation is not visible in the current viewer Members screen with Active selected (obs_1). This UI observation does not establish whether the backend authorizes or rejects invitations; backend authorization remains unproven (obs_1).",
+        "claims": [
+          {
+            "fact": "invite_visible",
+            "value": "No invitation control is visible in the complete current viewer Members snapshot with Activeselected",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The evidence is a UI snapshot, which does not establish backend authorization behavior.",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 7.1784999999999854,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 42.631750000000466,
+            "error": null,
+            "response_bytes": 2653,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:05:40.537Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 220.06291699999997,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 229.5775,
+        "task_window_ms": 23198.826834,
+        "cleanup_ms": 20.141083000002254,
+        "server_total_ms": 23448.547416999998
+      },
+      "residual_host_ms": 24432.80170799993,
+      "total_ms": 24654.101790999994,
+      "finished_at": "2026-10-14T19:05:49.621Z",
+      "final_sha256": "663f17fb2bd55599e66af0379529b85c368a2fb3cc7036132286d5d7fed926ce"
+    },
+    {
+      "task": "viewer-policy",
+      "group": "feature",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:05:24.966Z",
+      "offset_ms": 1746746.264,
+      "host_ms": 24088.060124999844,
+      "tokens": {
+        "input": 75204,
+        "output": 222,
+        "cached_input": 47616
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Invitation is not visible in the current viewer Members screen with Active selected (obs_1). This UI capture does not establish backend authorization; server-side enforcement remains unknown (obs_1).",
+        "claims": [
+          {
+            "fact": "invite_visible",
+            "value": "No invitation control is visible in the complete current viewer Members capture with Active selected",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The evidence is a UI observation and does not demonstrate backend authorization enforcement",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 12.157583999998678,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 50.30479100000048,
+            "error": null,
+            "response_bytes": 2653,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:05:38.533Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 219.33058400000002,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 228.282167,
+        "task_window_ms": 22775.191625,
+        "cleanup_ms": 22.109208000001672,
+        "server_total_ms": 23025.585875
+      },
+      "residual_host_ms": 23868.729540999844,
+      "total_ms": 24092.80299999984,
+      "finished_at": "2026-10-14T19:05:49.059Z",
+      "final_sha256": "29dd3499e52b938633f4309b2de8ee8de83efcd44f156878e0ce60a3181e0c90"
+    },
+    {
+      "task": "viewer-policy",
+      "group": "feature",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:05:24.966Z",
+      "offset_ms": 1746746.1593749998,
+      "host_ms": 16820.36770800012,
+      "tokens": {
+        "input": 75212,
+        "output": 231,
+        "cached_input": 68224
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Invitation is not visible in the current viewer Members screen with Active selected (obs_1). This UI observation does not establish backend authorization; hidden invitation controls do not prove server-side enforcement (obs_1).",
+        "claims": [
+          {
+            "fact": "invite_visible",
+            "value": "No invitation control is visible in the complete current viewer Members snapshot, with Active tab選択.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The snapshot provides UI evidence only and does not demonstrate backend authorization checks.",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 7.2737079999988055,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 42.789582999999766,
+            "error": null,
+            "response_bytes": 2653,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:05:34.172Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 222.252208,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 231.16162500000002,
+        "task_window_ms": 15572.572083,
+        "cleanup_ms": 20.180083999999624,
+        "server_total_ms": 15823.916375
+      },
+      "residual_host_ms": 16598.11550000012,
+      "total_ms": 16823.760709000053,
+      "finished_at": "2026-10-14T19:05:41.790Z",
+      "final_sha256": "7a6d151792ffeddfeae581bd395bf7cff96287ecaa9344156ac0a9c535ab76c1"
+    },
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:05:49.629Z",
+      "offset_ms": 1771409.182,
+      "host_ms": 25752.91720899986,
+      "tokens": {
+        "input": 103146,
+        "output": 292,
+        "cached_input": 95104
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Save is enabled in admin Settings (obs_1) and disabled in viewer Settings (obs_2). These UI observations do not establish backend permissions (obs_1, obs_2).",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Save is visible and enabled in the live admin Settings snapshot.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Save is visible and disabled in the live viewer Settings snapshot.",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Backend permissions are not proven by these UI snapshots; Save was not clicked.",
+            "evidence": [
+              "obs_1",
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.65954199999942,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 40.81949999999961,
+            "error": null,
+            "response_bytes": 2358,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 11.147917000002053,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 33.81524999999965,
+            "error": null,
+            "response_bytes": 2338,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:03.790Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:07.189Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 8,
+        "knowledge_calls": 0,
+        "setup_ms": 234.25433399999997,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 243.420792,
+        "task_window_ms": 24414.64825,
+        "cleanup_ms": 29.42291699999987,
+        "server_total_ms": 24687.494709
+      },
+      "residual_host_ms": 25518.66287499986,
+      "total_ms": 25754.40249999985,
+      "finished_at": "2026-10-14T19:06:15.384Z",
+      "final_sha256": "3bde49efe11dac2e73f70b4b5ede9816b50c7d7c121057311a980e11f65a3966"
+    },
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:05:49.629Z",
+      "offset_ms": 1771409.292625,
+      "host_ms": 19509.482874999987,
+      "tokens": {
+        "input": 103157,
+        "output": 281,
+        "cached_input": 95104
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Save is enabled in admin Settings (obs_1) and disabled in viewer Settings (obs_2). These live UI observations do not prove backend permissions (obs_1, obs_2).",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Enabled in the current admin Settings UI.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Disabled in the current viewer Settings UI.",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Not proven; the evidence shows UI enabled states only.",
+            "evidence": [
+              "obs_1",
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 7.1695829999989655,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 41.163291000000754,
+            "error": null,
+            "response_bytes": 2358,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 7.465415999999095,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 33.21195799999987,
+            "error": null,
+            "response_bytes": 2338,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:05:59.645Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:03.100Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 8,
+        "knowledge_calls": 0,
+        "setup_ms": 238.45625,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 248.666084,
+        "task_window_ms": 17858.606041,
+        "cleanup_ms": 21.681499999998778,
+        "server_total_ms": 18128.956041999998
+      },
+      "residual_host_ms": 19271.026624999988,
+      "total_ms": 19513.73933399981,
+      "finished_at": "2026-10-14T19:06:09.143Z",
+      "final_sha256": "1f37865c7e4c98be4a56bd8ee40e18cf763d2a733e1dbd4f00f42151cfb433fe"
+    },
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:05:49.629Z",
+      "offset_ms": 1771409.2759999998,
+      "host_ms": 22143.455375000136,
+      "tokens": {
+        "input": 91842,
+        "output": 276,
+        "cached_input": 87680
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Save is enabled in admin Settings (obs_1) and disabled in viewer Settings (obs_2). These UI observations do not establish backend permissions (obs_1, obs_2).",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Enabled in the current admin Settings snapshot.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Disabled in the current viewer Settings snapshot.",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Not proven; the evidence shows UI enabled states only.",
+            "evidence": [
+              "obs_1",
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 14.387665999998717,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 40.36945799999921,
+            "error": null,
+            "response_bytes": 2358,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 7.977915999999823,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 32.418415999998615,
+            "error": null,
+            "response_bytes": 2338,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:00.610Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:05.500Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 8,
+        "knowledge_calls": 0,
+        "setup_ms": 234.04379199999994,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 243.397292,
+        "task_window_ms": 20722.098292000002,
+        "cleanup_ms": 26.42199999999866,
+        "server_total_ms": 20991.919792
+      },
+      "residual_host_ms": 21909.411583000136,
+      "total_ms": 22146.624291999964,
+      "finished_at": "2026-10-14T19:06:11.776Z",
+      "final_sha256": "1c3acdb387d1c56265acd8d5f6dcf250c6d94cb8884038adf24fa563e6a133e1"
+    },
+    {
+      "task": "detail-preparation",
+      "group": "journey",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:06:15.393Z",
+      "offset_ms": 1797172.392917,
+      "host_ms": 28825.59349999996,
+      "tokens": {
+        "input": 75161,
+        "output": 246,
+        "cached_input": 68352
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The live admin Member detail screen shows an enabled, visible “Remove member” button (obs_1). I did not click it. This establishes UI availability only; removal behavior and backend enforcement remain unproven (obs_1).",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Yes. The current admin Member detail screen contains a visible, enabled “Remove member” button.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The snapshot provides UI evidence only; it does not establish what removal does or whether the​​",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 13.347290999998222,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 49.3466669999998,
+            "error": null,
+            "response_bytes": 2388,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:28.636Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 233.71533300000002,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 241.862542,
+        "task_window_ms": 27436.67225,
+        "cleanup_ms": 30.62199999999939,
+        "server_total_ms": 27709.159916999997
+      },
+      "residual_host_ms": 28591.87816699996,
+      "total_ms": 28830.553166999947,
+      "finished_at": "2026-10-14T19:06:44.223Z",
+      "final_sha256": "c0daf06284f8ae96c64b3dcb57f165d784deacf2bcb12c5d91f8bbffdfd45e86"
+    },
+    {
+      "task": "detail-preparation",
+      "group": "journey",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:06:15.393Z",
+      "offset_ms": 1797172.3155419999,
+      "host_ms": 14061.598332999973,
+      "tokens": {
+        "input": 75314,
+        "output": 232,
+        "cached_input": 47744
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Member detail screen shows an enabled “Remove member” button (obs_1). I did not click it. This UI evidence establishes visibility only; backend removal behavior remains unproven (obs_1).",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Yes. The live admin Member detail snapshot shows “Remove member” as visible and enabled.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The snapshot provides UI evidence only and does not demonstrate backend removal behavior.",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 12.349416999999448,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 49.84150000000045,
+            "error": null,
+            "response_bytes": 2388,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:24.924Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 228.35070800000003,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 237.141,
+        "task_window_ms": 12592.707625000001,
+        "cleanup_ms": 21.06195800000023,
+        "server_total_ms": 12850.912791
+      },
+      "residual_host_ms": 13833.247624999973,
+      "total_ms": 14064.880707999924,
+      "finished_at": "2026-10-14T19:06:29.457Z",
+      "final_sha256": "f5cd72e7ce8bc2f6f6827e815db0d3edcaf362c0f58fe1fe4834758dc02b79a7"
+    },
+    {
+      "task": "detail-preparation",
+      "group": "journey",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:06:15.393Z",
+      "offset_ms": 1797172.4124999999,
+      "host_ms": 35693.1801659998,
+      "tokens": {
+        "input": 75118,
+        "output": 235,
+        "cached_input": 68224
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Member detail screen shows a visible, enabled “Remove member” button [obs_1]. I did not click it. This UI evidence establishes its presence only; backend removal behavior remains unproven [obs_1].",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Yes. The live admin Member detail snapshot shows “Remove member” as visible and enabled.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The snapshot provides UI evidence only and does not demonstrate a removal request or backend or–",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 14.37079200000153,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 49.125167000001966,
+            "error": null,
+            "response_bytes": 2388,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:06:36.565Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 227.876958,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 236.8295,
+        "task_window_ms": 34402.020000000004,
+        "cleanup_ms": 27.875,
+        "server_total_ms": 34666.72829100001
+      },
+      "residual_host_ms": 35465.3032079998,
+      "total_ms": 35695.51629199996,
+      "finished_at": "2026-10-14T19:06:51.088Z",
+      "final_sha256": "bec516b834debf790f357e5365a40ca2a2cf16dd2af0a519bd16a0720e6c786c"
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:06:51.101Z",
+      "offset_ms": 1832881.048667,
+      "host_ms": 51868.962124999845,
+      "tokens": {
+        "input": 134578,
+        "output": 510,
+        "cached_input": 102656
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The available button was “Invite” (obs_1). Clicking it opened the Invite dialog with an Email textbox and Cancel button (obs_2). After Cancel, admin Members remained on Active with no dialog visible (obs_3). No values were entered. Backend behavior is unproven by these UI observations (obs_1, obs_2, obs_3).",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite",
+            "evidence": [
+              "obs_1",
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "dialog_open",
+            "value": "The Invite dialog was open after Invite; after Cancel, no dialog was visible and the modal stack was",
+            "evidence": [
+              "obs_2",
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "final_state",
+            "value": "Admin Members, Active tab selected, Invite button visible, modal stack empty.",
+            "evidence": [
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. These captures show UI state only and do not establish backend behavior.",
+            "evidence": [
+              "obs_1",
+              "obs_2",
+              "obs_3"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 12.145708000000013,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 48.88133300000118,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 38.570334,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 52.9754589999975,
+            "error": null,
+            "response_bytes": 3414,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 33.72608300000138,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 19.632541999999376,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:09.270Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:20.230Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": true
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:29.521Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Invite",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Cancel",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_2",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 10,
+        "knowledge_calls": 0,
+        "setup_ms": 245.30295800000002,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 255.11995800000003,
+        "task_window_ms": 49027.082666999995,
+        "cleanup_ms": 18.26733300000342,
+        "server_total_ms": 49300.47225
+      },
+      "residual_host_ms": 51623.659166999845,
+      "total_ms": 51871.85554199992,
+      "finished_at": "2026-10-14T19:07:42.973Z",
+      "final_sha256": "5041535bf6a7a75af08c175bbbcd9ccf163ed0964570b9ba2b1d967b20abc977"
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:06:51.101Z",
+      "offset_ms": 1832880.946334,
+      "host_ms": 51878.49695900013,
+      "tokens": {
+        "input": 134192,
+        "output": 492,
+        "cached_input": 93568
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Opened Invite and canceled it, inspecting before and after each click (obs_1, obs_2, obs_3). Final UI shows admin Members with Active selected and no dialog open (obs_3). Backend behavior is not proven by these UI observations (obs_1, obs_2, obs_3).",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite",
+            "evidence": [
+              "obs_1",
+              "obs_2",
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "dialog_open",
+            "value": "Closed initially, open after Invite, and closed after Cancel.",
+            "evidence": [
+              "obs_1",
+              "obs_2",
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "final_state",
+            "value": "Admin Members screen; Active tab selected; Invite button visible and enabled; modal stack empty.",
+            "evidence": [
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Not proven; the returned snapshots provide UI evidence only.",
+            "evidence": [
+              "obs_1",
+              "obs_2",
+              "obs_3"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.868207999999868,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 51.29179199999999,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 51.65366699999868,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 47.359166000002006,
+            "error": null,
+            "response_bytes": 3414,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 31.918541999999434,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 18.380624999997963,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:09.126Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:20.101Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": true
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:29.527Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Invite",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Cancel",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_2",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 10,
+        "knowledge_calls": 0,
+        "setup_ms": 238.519792,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 248.57270800000003,
+        "task_window_ms": 49276.483416999996,
+        "cleanup_ms": 18.948374999999942,
+        "server_total_ms": 49544.006667
+      },
+      "residual_host_ms": 51639.97716700013,
+      "total_ms": 51879.86912499997,
+      "finished_at": "2026-10-14T19:07:42.981Z",
+      "final_sha256": "b97febe126fad9e8f37ce99bfcc8b7af8d52b40b8d3422b7a3056ef514edf912"
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:06:51.101Z",
+      "offset_ms": 1832881.026167,
+      "host_ms": 37920.10720800003,
+      "tokens": {
+        "input": 134236,
+        "output": 503,
+        "cached_input": 115328
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The available button was “Invite” (obs_1). Clicking it opened the Invite dialog (obs_2); clicking Cancel closed it. The final admin Members screen has Active selected and no dialog open (obs_3). No values were entered. These UI observations do not prove backend behavior (obs_1, obs_2, obs_3).",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite",
+            "evidence": [
+              "obs_1",
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "dialog_open",
+            "value": "The Invite dialog opened after Invite was clicked and was closed after Cancel; the final modal stack",
+            "evidence": [
+              "obs_2",
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "final_state",
+            "value": "Admin Members screen, Active tab selected, Invite button visible, no dialog open.",
+            "evidence": [
+              "obs_3"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The returned evidence establishes visible UI states only.",
+            "evidence": [
+              "obs_1",
+              "obs_2",
+              "obs_3"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 18.488124999999854,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 58.620875000000524,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 52.99645899999814,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 45.923750000001746,
+            "error": null,
+            "response_bytes": 3414,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 39.02975000000151,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 18.049999999999272,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:08.968Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:13.154Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": true
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:20.234Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Invite",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Cancel",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_2",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 10,
+        "knowledge_calls": 0,
+        "setup_ms": 245.48341700000003,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 255.801959,
+        "task_window_ms": 36651.194083,
+        "cleanup_ms": 20.018792000002577,
+        "server_total_ms": 36927.017459
+      },
+      "residual_host_ms": 37674.62379100003,
+      "total_ms": 37924.52345800004,
+      "finished_at": "2026-10-14T19:07:29.026Z",
+      "final_sha256": "7f522d8b03b1ea2f09c232410efab63702ccc837139a78ff9ffad5929110f02f"
+    },
+    {
+      "task": "pending-switch",
+      "group": "journey",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:07:42.991Z",
+      "offset_ms": 1884770.074542,
+      "host_ms": 23920.353166999994,
+      "tokens": {
+        "input": 103869,
+        "output": 268,
+        "cached_input": 95360
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Pending is selected on admin Members, verified in the live snapshot (obs_2). No modal is open (obs_2).",
+        "claims": [
+          {
+            "fact": "selected_tab",
+            "value": "Pending",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "open_modal",
+            "value": "None",
+            "evidence": [
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.030000000000655,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 48.16100000000006,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 46.256375000000844,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 17.770500000002357,
+            "error": null,
+            "response_bytes": 2861,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:56.827Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:00.402Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Pending",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Pending",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 8,
+        "knowledge_calls": 0,
+        "setup_ms": 249.60991699999994,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 262.417084,
+        "task_window_ms": 22201.835708,
+        "cleanup_ms": 21.982292000000598,
+        "server_total_ms": 22486.2385
+      },
+      "residual_host_ms": 23670.743249999992,
+      "total_ms": 23925.872999999905,
+      "finished_at": "2026-10-14T19:08:06.917Z",
+      "final_sha256": "7843a1e1952fdc29f39357d599f975e9179b9f5735711a6b666c5ee1b48d96a5"
+    },
+    {
+      "task": "pending-switch",
+      "group": "journey",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:07:42.991Z",
+      "offset_ms": 1884770.149792,
+      "host_ms": 18080.87154199998,
+      "tokens": {
+        "input": 103851,
+        "output": 241,
+        "cached_input": 95360
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Pending is selected on admin Members (obs_2).",
+        "claims": [
+          {
+            "fact": "selected_tab",
+            "value": "Pending",
+            "evidence": [
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 7.639124999999694,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 44.762957999999344,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 48.31354199999987,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 36.69025000000147,
+            "error": null,
+            "response_bytes": 2861,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:52.329Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:55.256Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Pending",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Pending",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 8,
+        "knowledge_calls": 0,
+        "setup_ms": 250.59533399999998,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 262.48137499999996,
+        "task_window_ms": 14639.176459,
+        "cleanup_ms": 25.05829099999937,
+        "server_total_ms": 14926.719375
+      },
+      "residual_host_ms": 17830.276207999977,
+      "total_ms": 18085.282582999906,
+      "finished_at": "2026-10-14T19:08:01.076Z",
+      "final_sha256": "62f2fa6c8e55a6ebd51f870777cb58405a590831346702c3904bc0e236924f86"
+    },
+    {
+      "task": "pending-switch",
+      "group": "journey",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:07:42.991Z",
+      "offset_ms": 1884770.1674169998,
+      "host_ms": 26994.195124999853,
+      "tokens": {
+        "input": 92542,
+        "output": 272,
+        "cached_input": 87808
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Pending is selected on admin Members, verified in the live snapshot (obs_2). No invitation dialog is open (obs_2).",
+        "claims": [
+          {
+            "fact": "selected_tab",
+            "value": "Pending",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "open_dialog",
+            "value": "No invitation dialog is open; the modal stack is empty.",
+            "evidence": [
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.565500000000611,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 51.72087499999907,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 46.97041700000045,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 18.6595419999976,
+            "error": null,
+            "response_bytes": 2861,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:07:57.644Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:02.485Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Pending",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Pending",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 8,
+        "knowledge_calls": 0,
+        "setup_ms": 250.51608299999992,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 262.36545799999993,
+        "task_window_ms": 25611.940125,
+        "cleanup_ms": 25.013707999998587,
+        "server_total_ms": 25899.321375
+      },
+      "residual_host_ms": 26743.679041999854,
+      "total_ms": 26995.541167000076,
+      "finished_at": "2026-10-14T19:08:09.986Z",
+      "final_sha256": "4669b6e5b492582d59dc99db8653c41b166f4cb41cf7e4ac881dc0015e321b15"
+    },
+    {
+      "task": "active-return",
+      "group": "journey",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:08:09.994Z",
+      "offset_ms": 1911773.391834,
+      "host_ms": 22009.263582999818,
+      "tokens": {
+        "input": 133702,
+        "output": 369,
+        "cached_input": 103168
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Verified Pending was selected on admin Members (obs_2), then returned to Active and verified the final selection (obs_3).",
+        "claims": [
+          {
+            "fact": "selected_tab",
+            "value": "Pending after selecting Pending.",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "selected_tab",
+            "value": "Active in the final admin Members view.",
+            "evidence": [
+              "obs_3"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 11.198416999999608,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 55.41691600000013,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 59.83912500000042,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 22.148957999999766,
+            "error": null,
+            "response_bytes": 2861,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 36.96170799999891,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 24.55924999999843,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:20.370Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:24.083Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Pending",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:27.021Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Pending",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Active",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_2",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 10,
+        "knowledge_calls": 0,
+        "setup_ms": 255.27008300000006,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 265.580708,
+        "task_window_ms": 20523.748625,
+        "cleanup_ms": 31.455541999999696,
+        "server_total_ms": 20820.788666
+      },
+      "residual_host_ms": 21753.99349999982,
+      "total_ms": 22014.648250000086,
+      "finished_at": "2026-10-14T19:08:32.009Z",
+      "final_sha256": "331bdaf479e16a07d24e0963b6c279673c0a2bd1f8d56f7ef3fed3bb77a1fe7c"
+    },
+    {
+      "task": "active-return",
+      "group": "journey",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:08:09.994Z",
+      "offset_ms": 1911773.30125,
+      "host_ms": 32187.223958000075,
+      "tokens": {
+        "input": 118756,
+        "output": 370,
+        "cached_input": 112512
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Pending was verified as selected on admin Members (obs_2). After returning to Active, the final live snapshot verified Active as selected (obs_3).",
+        "claims": [
+          {
+            "fact": "selected_tab",
+            "value": "Pending after the first click.",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "selected_tab",
+            "value": "Active in the final state on admin Members.",
+            "evidence": [
+              "obs_3"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 11.839375000001382,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 50.62287500000093,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 57.883834000000206,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 18.63483400000041,
+            "error": null,
+            "response_bytes": 2861,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 40.94804199999999,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 18.347666999998182,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:22.201Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:28.145Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Pending",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:35.720Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Pending",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Active",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_2",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 10,
+        "knowledge_calls": 0,
+        "setup_ms": 252.68366600000002,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 262.659,
+        "task_window_ms": 30466.988708,
+        "cleanup_ms": 29.001416999999492,
+        "server_total_ms": 30758.652458
+      },
+      "residual_host_ms": 31934.540292000074,
+      "total_ms": 32189.467999999877,
+      "finished_at": "2026-10-14T19:08:42.183Z",
+      "final_sha256": "9408d4092955e8ece2b7bc7e23bd2917d16d1cb12ad2c4da1d7b10e4c47c33b7"
+    },
+    {
+      "task": "active-return",
+      "group": "journey",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:08:09.994Z",
+      "offset_ms": 1911773.3735,
+      "host_ms": 31062.778166999808,
+      "tokens": {
+        "input": 133686,
+        "output": 372,
+        "cached_input": 123776
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Pending was verified as selected (obs_2), then Active was restored and verified as the final selected tab on admin Members (obs_3).",
+        "claims": [
+          {
+            "fact": "selected_tab",
+            "value": "Pending was selected after the first click.",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "selected_tab",
+            "value": "Active is selected in the final admin Members state.",
+            "evidence": [
+              "obs_3"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 10.540208000000348,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 51.58533299999908,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 56.32745799999975,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 18.101332999998704,
+            "error": null,
+            "response_bytes": 2861,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_click",
+            "ms": 42.41645800000333,
+            "error": null,
+            "response_bytes": 474,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 19.819666999999754,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:22.487Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:28.329Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Pending",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:32.256Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [
+          {
+            "name": "Pending",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_1",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Active",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_2",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 10,
+        "knowledge_calls": 0,
+        "setup_ms": 253.126458,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 264.01104200000003,
+        "task_window_ms": 29474.893500000002,
+        "cleanup_ms": 32.849874999999884,
+        "server_total_ms": 29771.759
+      },
+      "residual_host_ms": 30809.65170899981,
+      "total_ms": 31067.15533400001,
+      "finished_at": "2026-10-14T19:08:41.061Z",
+      "final_sha256": "b080b053f63e5ffa3182cc22965dd67f271ae4b251f76cc253a764b27eb25a72"
+    },
+    {
+      "task": "viewer-no-act",
+      "group": "journey",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:08:42.196Z",
+      "offset_ms": 1943975.60325,
+      "host_ms": 37556.68012500019,
+      "tokens": {
+        "input": 91600,
+        "output": 268,
+        "cached_input": 86528
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Save cannot be used in the current viewer Settings UI because it is visible but disabled and has no permitted actions. The snapshot provides no explanation for that disabled state and does not prove backend enforcement. [obs_2]",
+        "claims": [
+          {
+            "fact": "save_viewer",
+            "value": "On viewer Settings, Save is visible, enabled=false, and has no permitted actions.",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Backend behavior is not proven by this UI snapshot; the underlying reason for disabling Save is not’",
+            "evidence": [
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_snapshot",
+            "ms": 40.17625000000044,
+            "error": null,
+            "response_bytes": 2146,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 9.272166999999172,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 36.679958000000624,
+            "error": null,
+            "response_bytes": 2338,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:58.781Z",
+            "facts": {
+              "route": "/home",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:04.751Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 7,
+        "knowledge_calls": 0,
+        "setup_ms": 228.212042,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 239.54362499999996,
+        "task_window_ms": 36211.196791999995,
+        "cleanup_ms": 19.819917000000714,
+        "server_total_ms": 36470.563041999994
+      },
+      "residual_host_ms": 37328.46808300019,
+      "total_ms": 37558.02062499989,
+      "finished_at": "2026-10-14T19:09:19.754Z",
+      "final_sha256": "5ac5095623039fa8836f55b21c6244f5c233883db817ca4f63db1188fa856036"
+    },
+    {
+      "task": "viewer-no-act",
+      "group": "journey",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:08:42.196Z",
+      "offset_ms": 1943975.722084,
+      "host_ms": 25432.140958000207,
+      "tokens": {
+        "input": 102879,
+        "output": 276,
+        "cached_input": 68224
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "In the current viewer Settings UI, Save is visible but disabled and has no permitted actions, so it cannot be used (obs_2). The capture gives no explanation for the disabled state and does not prove backend enforcement (obs_2).",
+        "claims": [
+          {
+            "fact": "save_viewer",
+            "value": "Save is visible, disabled (enabled=false), and has an empty permitted_actions list in the current /‌",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The observed UI establishes only that Save is disabled; it does not establish why or prove that ",
+            "evidence": [
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_snapshot",
+            "ms": 54.111417000000074,
+            "error": null,
+            "response_bytes": 2146,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 8.47516700000051,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 34.715291000000434,
+            "error": null,
+            "response_bytes": 2338,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:55.269Z",
+            "facts": {
+              "route": "/home",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:59.646Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 7,
+        "knowledge_calls": 0,
+        "setup_ms": 229.071166,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 240.155625,
+        "task_window_ms": 24076.046708,
+        "cleanup_ms": 22.055082999999286,
+        "server_total_ms": 24338.259375
+      },
+      "residual_host_ms": 25203.069792000206,
+      "total_ms": 25437.564957999857,
+      "finished_at": "2026-10-14T19:09:07.634Z",
+      "final_sha256": "05837e849cb925af562484c22c97e771f799796cca045281c7a569a3ff5a0528"
+    },
+    {
+      "task": "viewer-no-act",
+      "group": "journey",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:08:42.196Z",
+      "offset_ms": 1943975.697834,
+      "host_ms": 27294.096249999944,
+      "tokens": {
+        "input": 102922,
+        "output": 277,
+        "cached_input": 95104
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Save cannot be used in the observed viewer Settings because it is disabled and has no permitted actions. The UI provides no explanation for that state, so its underlying cause and backend enforcement remain unproven (obs_2).",
+        "claims": [
+          {
+            "fact": "save_viewer",
+            "value": "Save is visible but disabled (enabled=false), with an empty permitted_actions list in the current •͡",
+            "evidence": [
+              "obs_2"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No. The snapshot establishes only the UI state; it supplies neither a reason for disabling Save nor証",
+            "evidence": [
+              "obs_2"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_snapshot",
+            "ms": 48.596707999999126,
+            "error": null,
+            "response_bytes": 2146,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 15.349665999998251,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 38.68449999999939,
+            "error": null,
+            "response_bytes": 2338,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:08:57.426Z",
+            "facts": {
+              "route": "/home",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:01.056Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 7,
+        "knowledge_calls": 0,
+        "setup_ms": 227.37316699999997,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 236.89887499999998,
+        "task_window_ms": 25847.746333000003,
+        "cleanup_ms": 22.35095899999942,
+        "server_total_ms": 26106.998333
+      },
+      "residual_host_ms": 27066.723082999943,
+      "total_ms": 27298.08491600002,
+      "finished_at": "2026-10-14T19:09:09.495Z",
+      "final_sha256": "7298adfa96b60d214a8ac7b00bd822044a34952b880464afcbca2e579ea80376"
+    },
+    {
+      "task": "invite-change",
+      "group": "change",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:09:19.762Z",
+      "offset_ms": 1981541.238834,
+      "host_ms": 13884.661291999975,
+      "tokens": {
+        "input": 75280,
+        "output": 199,
+        "cached_input": 47616
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Members screen shows “Invite” (obs_1). It matches the declared version-one label, so no label change is observed (obs_1).",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "label_changed",
+            "value": "No. The currently observed label matches the declared version-one label “Invite”.",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 11.338041000000885,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 54.057833000000755,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:29.111Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 243.72875000000005,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 251.11329100000006,
+        "task_window_ms": 12423.210708999999,
+        "cleanup_ms": 20.772249999999985,
+        "server_total_ms": 12695.098541
+      },
+      "residual_host_ms": 13640.932541999975,
+      "total_ms": 13889.526707999874,
+      "finished_at": "2026-10-14T19:09:33.652Z",
+      "final_sha256": "04d4783bb3e23e83ce3d30e72a2191162381333fe7133b5567d5b90478e75732"
+    },
+    {
+      "task": "invite-change",
+      "group": "change",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:09:19.762Z",
+      "offset_ms": 1981541.297,
+      "host_ms": 18324.40845800005,
+      "tokens": {
+        "input": 75313,
+        "output": 209,
+        "cached_input": 68224
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Members invitation button is labeled “Invite” (obs_1). It matches the declared version-one label, so the label has not changed in this observed view (obs_1).",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "label_changed",
+            "value": "No. The observed current label matches the declared version-one label Invite.",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 10.215792000000874,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 51.24295799999891,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:30.524Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 226.78866699999998,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 235.21520800000002,
+        "task_window_ms": 17032.264249999997,
+        "cleanup_ms": 19.272584000002098,
+        "server_total_ms": 17286.755
+      },
+      "residual_host_ms": 18097.61979100005,
+      "total_ms": 18328.004124999978,
+      "finished_at": "2026-10-14T19:09:38.090Z",
+      "final_sha256": "2ba7b0a54ffe0998e7bc974f8d7c4ded190dceb0928990c850f0640464a90c47"
+    },
+    {
+      "task": "invite-change",
+      "group": "change",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:09:19.762Z",
+      "offset_ms": 1981541.347084,
+      "host_ms": 24386.669416000135,
+      "tokens": {
+        "input": 101868,
+        "output": 216,
+        "cached_input": 94592
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current admin Members invitation label is “Invite” (obs_1). It matches the declared version-one label, so no label change is observed (obs_1).",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "label_changed",
+            "value": "No; the current label matches the task’s declared version-one label, Invite.",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 7.6006670000006125,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 47.521334000000934,
+            "error": null,
+            "response_bytes": 2860,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:38.191Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 0,
+        "setup_ms": 228.92008299999992,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 237.42916699999995,
+        "task_window_ms": 23030.753041,
+        "cleanup_ms": 20.481583999997383,
+        "server_total_ms": 23288.666250000002
+      },
+      "residual_host_ms": 24157.749333000134,
+      "total_ms": 24388.724958000006,
+      "finished_at": "2026-10-14T19:09:44.151Z",
+      "final_sha256": "10f69d87267cbd22db401d5843e840e26d2d78e57b229a7cf6e49fda2e4bc353"
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "compact-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:09:44.161Z",
+      "offset_ms": 2005939.7847499999,
+      "host_ms": 41446.84487499995,
+      "tokens": {
+        "input": 117906,
+        "output": 322,
+        "cached_input": 84864
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Remove member remains visible and enabled in the current admin Member detail; the live capture has complete root coverage (obs_1). Its label and visibility match the task’s declared version-one control, but no historical baseline was returned to verify other changes. No control was clicked.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Visible and enabled on the current admin Member detail.",
+            "evidence": [
+              "obs_1#capture.tree.children[2].children[1]"
+            ]
+          },
+          {
+            "fact": "remove_changed",
+            "value": "No label or visibility difference from the declared version-one control is apparent. Other changes,’",
+            "evidence": []
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "memory_search",
+            "ms": 3.0944579999995767,
+            "error": null,
+            "response_bytes": 142,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 9.975125000000844,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 50.657250000000204,
+            "error": null,
+            "response_bytes": 2388,
+            "compact_fallback": false
+          },
+          {
+            "tool": "memory_search",
+            "ms": 1.2867909999986296,
+            "error": null,
+            "response_bytes": 142,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:59.537Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 2,
+        "setup_ms": 265.120375,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 276.70249999999993,
+        "task_window_ms": 40090.868834,
+        "cleanup_ms": 22.307458000002953,
+        "server_total_ms": 40389.881584
+      },
+      "residual_host_ms": 41181.72449999995,
+      "total_ms": 41450.51012500003,
+      "finished_at": "2026-10-14T19:10:25.611Z",
+      "final_sha256": "7136d5f7a60bfbe18b61de073398caedc738c0961ed0939ce539d2010048c837"
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "notes-folder",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:09:44.161Z",
+      "offset_ms": 2005939.7042089999,
+      "host_ms": 24554.088082999922,
+      "tokens": {
+        "input": 102684,
+        "output": 354,
+        "cached_input": 95360
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Remove member remains visible and enabled in the current admin Member detail snapshot, which labels the UI “Revision one” (obs_1). No change is apparent relative to the declared version-one control, but no retained baseline was returned for independent comparison. Coverage is complete for this snapshot’s root only; backend behavior was not tested (obs_1). No controls were clicked.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Yes. The current admin Member detail shows a visible, enabled Remove member button.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "remove_changed",
+            "value": "No change is apparent relative to the declared version-one control. The live UI says Revision one; a",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "coverage",
+            "value": "Complete root coverage for the current admin Member detail snapshot. Other roles, screens, and the -",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "memory_search",
+            "ms": 0.7069589999991877,
+            "error": null,
+            "response_bytes": 14,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 11.830500000000029,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 48.89208300000064,
+            "error": null,
+            "response_bytes": 2388,
+            "compact_fallback": false
+          },
+          {
+            "tool": "memory_search",
+            "ms": 0.13795800000116287,
+            "error": null,
+            "response_bytes": 14,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:54.782Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 2,
+        "setup_ms": 260.947792,
+        "priming_ms": 0,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 270.908125,
+        "task_window_ms": 23147.772042,
+        "cleanup_ms": 20.962916999997105,
+        "server_total_ms": 23439.64525
+      },
+      "residual_host_ms": 24293.140290999923,
+      "total_ms": 24555.20766600012,
+      "finished_at": "2026-10-14T19:10:08.716Z",
+      "final_sha256": "e97cbbccd3a98ac4a0a86d3fbf3bd4a6a6d988ada108968b470be72cab427314"
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "legacy-waygrain",
+      "case": "cold",
+      "repetition": 3,
+      "started_at": "2026-10-14T19:09:44.161Z",
+      "offset_ms": 2005939.8004589998,
+      "host_ms": 30122.3997500001,
+      "tokens": {
+        "input": 90960,
+        "output": 301,
+        "cached_input": 87552
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Remove member remains visible and enabled in the current admin Member detail snapshot, which displays “Revision one” (obs_1). Its visibility matches the declared version-one control. No historical capture was returned, so other changes cannot be established. Coverage is complete for this captured root only; backend behavior is unverified (obs_1). No controls were clicked.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Yes. The current admin Member detail contains a visible, enabled Remove member button.",
+            "evidence": [
+              "obs_1"
+            ]
+          },
+          {
+            "fact": "remove_changed",
+            "value": "No visibility change relative to the declared version-one control is evident. Other historical or BE",
+            "evidence": [
+              "obs_1"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "memory_search",
+            "ms": 2.9200000000000728,
+            "error": null,
+            "response_bytes": 142,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 7.06445899999926,
+            "error": null,
+            "response_bytes": 18,
+            "compact_fallback": false
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 40.46195799999987,
+            "error": null,
+            "response_bytes": 2388,
+            "compact_fallback": false
+          },
+          {
+            "tool": "memory_search",
+            "ms": 0.5379160000011325,
+            "error": null,
+            "response_bytes": 142,
+            "compact_fallback": false
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "task",
+            "captured_at": "2026-10-14T19:09:58.345Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          }
+        ],
+        "retrievals": [],
+        "notes": [],
+        "actions": [],
+        "browser_calls": 6,
+        "knowledge_calls": 2,
+        "setup_ms": 260.02391600000004,
+        "priming_ms": 0,
+        "retained_bytes": 245760,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "task_ready_ms": 270.03566600000005,
+        "task_window_ms": 28701.176125,
+        "cleanup_ms": 23.42374999999811,
+        "server_total_ms": 28994.637791
+      },
+      "residual_host_ms": 29862.3758340001,
+      "total_ms": 30124.978833000176,
+      "finished_at": "2026-10-14T19:10:14.286Z",
+      "final_sha256": "63bf5bbb6b8ad5c391c360d87842ff08d7afbabc36a64343f2037092cbe92673"
+    }
+  ]
+}

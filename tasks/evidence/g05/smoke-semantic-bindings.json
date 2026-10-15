@@ -1,0 +1,87 @@
+{
+  "reviewer": "/root/g05_review",
+  "matrix_file_sha256": "f7dd5cb2f249cf95a4881ac4b2ef2885285694b587235898c09c5d8e31c5b237",
+  "rows": [
+    {
+      "key": "settings-compare|waygrain|changed|1",
+      "final_sha256": "345f70f57847202bcc36721866771f7aee281a19234f0cd3fdbcec665d93f06f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "settings-compare|browser-only|changed|1",
+      "final_sha256": "e33296684a611ec1efc0490a100cc7e6ca7f47a5ab68c699ef8903601a48d482",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "settings-compare|notes-folder|changed|1",
+      "final_sha256": "57d570b7a0a3ddcf522773c434cca8aa7d9b3e3613ff73c2dadeea29b6f6f179",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "invite-cancel|notes-folder|changed|1",
+      "final_sha256": "a23b232b19df51ab5b0bc0071ed7ad776274fa2b69c679f2d3a4ca0d2e661f2f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "invite-cancel|waygrain|changed|1",
+      "final_sha256": "1d9e5082b16d4451016263b9496a52ee570c099c5d5a69571997839e402b9523",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "invite-cancel|browser-only|changed|1",
+      "final_sha256": "300e1177b19c5b3060a4b448a24992a22daba076aaf7d4a1d5b11da4ba15efb4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "detail-change|browser-only|changed|1",
+      "final_sha256": "2ca48dc638e8abbb99a396911f8672cc8c8245a8770c45f459355effe1101faa",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "detail-change|notes-folder|changed|1",
+      "final_sha256": "619cf4463c8a14d77aea56173ff83281fa27c96f269e478235d60d7ba66650bc",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    },
+    {
+      "key": "detail-change|waygrain|changed|1",
+      "final_sha256": "a69301d5987e37d2e8af91f49cad966b9c3c40312882833ad2e93b73dee4efce",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose, claims, citations, observations and action sequence; current scoped facts and complete coverage substantiate answer; no unsupported backend claim"
+    }
+  ]
+}

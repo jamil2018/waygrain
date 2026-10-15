@@ -1,0 +1,11 @@
+{
+  "node": "v24.20.0",
+  "command": "npm run check",
+  "pass": true,
+  "tests": 110,
+  "output_sha256": "fac72ee944008fb8229b70909a768c4d27e58c8f44e26afcbfc196f4d802b5b0",
+  "changed_preserved_inputs": [
+    "docs/evaluation.md",
+    "docs/release-readiness.md"
+  ]
+}

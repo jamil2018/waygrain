@@ -1,0 +1,27 @@
+{
+  "task": "G06",
+  "reviewer": "/root/g06_review",
+  "role": "independent preflight reviewer; no implementation authored",
+  "reviewed_at_utc": "2026-10-14T17:58:51.004805+00:00",
+  "protocol_sha256": "aa0856f40df522ba53e10f847ad6f44573a62b505be41b7309bb6e6622204250",
+  "verdict": "ACCEPT",
+  "required_findings": [],
+  "accepted_scope": [
+    "Opt-in compact projection on capture-only search; unchanged default search/ranking, other query modes and wg_evidence",
+    "Exact stored preorder fields with source capture ID and JSON Pointer paths, 16-node and 256 UTF-8 byte name bounds, explicit omissions",
+    "Exact capture summary scope/coverage/provenance/freshness; no newer record metadata borrowed; requires_check remains",
+    "Whole-envelope budgets with atomic cited records and existing bounded pagination/cursor invalidation",
+    "Four frozen cases, five paired warmups and thirty alternating paired repetitions; complete old two-call envelopes vs new one-call envelope; same ingested data/time/budgets",
+    "Independent source resolution, edge-case and compatibility verification, exact final artifact hashes and separately reviewed status closure"
+  ],
+  "limitations": [
+    "Capture-only first slice; does not cover graph/annotation excerpt retrieval or full-tree text search",
+    "Retrieval-only core timing/bytes and 2-to-1 tool path cannot establish agent task latency, measured tokens, reduced browsing or superiority over notes",
+    "G05 failures, release HOLD, historical evidence, Claude/Cursor deferrals and other unqualified release properties remain unchanged"
+  ],
+  "review_notes": [
+    "Existing summary freshness and tombstone visibility reviewed; implementation must preserve exact capture metadata rather than recomputing optimistic freshness",
+    "The final reviewer must test partial/missing/tombstoned sources, contradiction metadata, source paths, UTF-8/node loss, budgets and stale/projection-bound cursors; no inferential absence assertions",
+    "Separate ADR and appended plan entry must explicitly authorize this contract amendment before verified closure"
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "allocated_sessions": 27,
+  "allocated_answers": 180,
+  "arms": {
+    "investigate": {
+      "allocated": 9,
+      "errors": [],
+      "median_ms": 91301.593666,
+      "median_tokens": 156017,
+      "measured_tokens_sum": 1424200,
+      "missing_usage": 0,
+      "browser_calls": [
+        14,
+        14,
+        14,
+        20,
+        20,
+        18,
+        14,
+        18,
+        14
+      ],
+      "source_calls": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "owner_calls": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ]
+    },
+    "raw": {
+      "allocated": 9,
+      "errors": [
+        {
+          "session_id": "cobalt_2_raw",
+          "error": "host_turn_failed"
+        }
+      ],
+      "median_ms": 58984.08529099997,
+      "median_tokens": 51593,
+      "measured_tokens_sum": 773544,
+      "missing_usage": 0,
+      "browser_calls": [
+        12,
+        12,
+        12,
+        0,
+        0,
+        0,
+        0,
+        12,
+        0
+      ],
+      "source_calls": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "owner_calls": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "organized": {
+      "allocated": 9,
+      "errors": [],
+      "median_ms": 53762.37058299995,
+      "median_tokens": 54668,
+      "measured_tokens_sum": 644520,
+      "missing_usage": 0,
+      "browser_calls": [
+        0,
+        0,
+        0,
+        0,
+        12,
+        0,
+        4,
+        0,
+        0
+      ],
+      "source_calls": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "owner_calls": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "world": "birch",
+      "repetition": 1,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 0.9574060639194155,
+      "token_ratio": 0.4031644720163443,
+      "raw_ms": 64322.79162500001,
+      "organized_ms": 61583.030750000005,
+      "raw_tokens": 134114,
+      "organized_tokens": 54070
+    },
+    {
+      "world": "cobalt",
+      "repetition": 1,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 0.8985339137171718,
+      "token_ratio": 0.6662658166287923,
+      "raw_ms": 66569.13487499999,
+      "organized_ms": 59814.62529200001,
+      "raw_tokens": 113093,
+      "organized_tokens": 75350
+    },
+    {
+      "world": "amber",
+      "repetition": 1,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 0.695169711815134,
+      "token_ratio": 0.5566890467000007,
+      "raw_ms": 69481.037167,
+      "organized_ms": 48301.112584,
+      "raw_tokens": 134197,
+      "organized_tokens": 74706
+    },
+    {
+      "world": "amber",
+      "repetition": 2,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 0.7318073327072213,
+      "token_ratio": 1.0527760473446504,
+      "raw_ms": 52871.790582999995,
+      "organized_ms": 38691.96404200001,
+      "raw_tokens": 51368,
+      "organized_tokens": 54079
+    },
+    {
+      "world": "cobalt",
+      "repetition": 2,
+      "complete": false,
+      "identical_shared": true,
+      "time_ratio": null,
+      "token_ratio": null,
+      "raw_ms": 47080.237292000034,
+      "organized_ms": 53762.37058299995,
+      "raw_tokens": 51593,
+      "organized_tokens": 54668
+    },
+    {
+      "world": "birch",
+      "repetition": 2,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 1.8501206880981422,
+      "token_ratio": 2.874574424622089,
+      "raw_ms": 38054.54987499997,
+      "organized_ms": 70405.51000000001,
+      "raw_tokens": 51401,
+      "organized_tokens": 147756
+    },
+    {
+      "world": "amber",
+      "repetition": 3,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 1.6984843170455277,
+      "token_ratio": 1.4684637478652383,
+      "raw_ms": 37915.665958,
+      "organized_ms": 64399.16399999999,
+      "raw_tokens": 51528,
+      "organized_tokens": 75667
+    },
+    {
+      "world": "birch",
+      "repetition": 3,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 0.4736640934667094,
+      "token_ratio": 0.39895946817262157,
+      "raw_ms": 67886.73658300005,
+      "organized_ms": 32155.509542000014,
+      "raw_tokens": 134931,
+      "organized_tokens": 53832
+    },
+    {
+      "world": "cobalt",
+      "repetition": 3,
+      "complete": true,
+      "identical_shared": true,
+      "time_ratio": 0.7032617259443933,
+      "token_ratio": 1.0598803562033554,
+      "raw_ms": 58984.08529099997,
+      "organized_ms": 41481.24962499994,
+      "raw_tokens": 51319,
+      "organized_tokens": 54392
+    }
+  ],
+  "paired": {
+    "time_ratio": null,
+    "token_ratio": null
+  },
+  "worlds": [
+    {
+      "world": "amber",
+      "median_time_ratio": 0.7318073327072213,
+      "median_token_ratio": 1.0527760473446504
+    },
+    {
+      "world": "birch",
+      "median_time_ratio": 0.9574060639194155,
+      "median_token_ratio": 0.4031644720163443
+    },
+    {
+      "world": "cobalt",
+      "median_time_ratio": null,
+      "median_token_ratio": null
+    }
+  ],
+  "quality": {
+    "investigation_success": 7,
+    "raw_success": 79,
+    "organized_success": 89,
+    "critical_raw": 0,
+    "critical_organized": 0,
+    "no_regression": true,
+    "absolute_success": false,
+    "per_world": [
+      {
+        "world": "amber",
+        "raw": 29,
+        "organized": 29
+      },
+      {
+        "world": "birch",
+        "raw": 30,
+        "organized": 30
+      },
+      {
+        "world": "cobalt",
+        "raw": 20,
+        "organized": 30
+      }
+    ]
+  },
+  "descriptive_benefit": false,
+  "interpretation": "Marginal organized-packet reuse over identically acquired evidence; not from-zero or amortized product superiority. Investigation and source curation costs separate. Correlated batches; small nine-pair synthetic sample."
+}

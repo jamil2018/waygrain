@@ -1,0 +1,33 @@
+{
+  "reviewer": "/root/g05_review",
+  "date_local": "2026-10-12",
+  "verdict": "ACCEPT_SEPARATE_HEADLESS_ORDERED_CLEANUP_NINE_ROW_SMOKE_ONLY",
+  "files": {
+    "tasks/evidence/g05/PROTOCOL.md": "9109cea433970fbce57c333ac5300a6847eb4d5e5dcb6515a0b3d19a375d9a3e",
+    "scripts/evaluation/g05/server.mjs": "366fbffd4437cb350c6c954f22bdbcbc30b46a7f724118abe919c8b7a6c93c60",
+    "scripts/evaluation/g05/run.mjs": "8b3b24c5a47200479fcbfa10ef24d5df0f30b12c5e662aaa3852d5bcfd097794",
+    "scripts/evaluation/g05/triad.mjs": "9d2dba676570f3740f9bfc68a2bede2416fea851f3dad6bb486109f5e3f2efe9",
+    "scripts/evaluation/g05/analyze.mjs": "596eb038777b744ef1e7411d84c1007d04b444385cbf0026d42a68c7515f1827",
+    "tests/g05-evaluation.test.mjs": "4313150b18572b222d00a6b4bb0d5083d634807b6a5326995b0c6a637a4ce422",
+    "tasks/evidence/g05/smoke-headless-parallel.json": "226d8f670f6980b0b4a423b6d73bb13110c9769d75d9c6c2933663a01172bc0e",
+    "tasks/evidence/g05/runtime-sha256.json": "dcda59751fbdf431a7b49d576849654e7ae21ce08afa6a8eb8f95a9ee21692bc",
+    "node_modules/playwright-core/lib/coreBundle.js": "549070af3acabb3efcc4f55bfe6210f9f7c2fcf633cf7eaa59bfe60719969171"
+  },
+  "checks": [
+    "Read all9 original headless smoke cleanup_failed/contextfailed receipts; every failure preserved, none waived",
+    "Pinned Playwright launcher registers SIGTERM/SIGINT handlers when enabled; Chromium runs detached process group",
+    "Evaluation-only launch wrapper disables competing SIGTERM/SIGINT browser handlers so adapter owns driver/context/browser/store/server close order",
+    "Existing caller timeout/owned hostgroup TERM/KILL bounded; production engine/action/snapshot files unchanged",
+    "All arms share exact signal ownership adapter and headless mode"
+  ],
+  "required_before_full_preflight": [
+    "Separate smoke must demonstrate every context/browser/store/server cleanup success without waiver",
+    "Verify actual three-way interval overlap, headless detection and final/token/tool observations; independent semantic review",
+    "Refresh exact full manifest identities before270 launch"
+  ],
+  "limitations": [
+    "Signal-race hypothesis source-backed but remediation success not yet observed",
+    "Hard termination without adapter cleanup remains failed/unconfirmed; do not infer complete browser cleanup from killed hostgroup",
+    "No full matrix approval yet; public HOLD and Claude/Cursor deferral preserved"
+  ]
+}

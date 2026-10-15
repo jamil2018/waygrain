@@ -1,0 +1,7 @@
+{
+  "stage": "first copied grader/triad test run",
+  "pass": 8,
+  "fail": 1,
+  "cause": "old test expected notes-folder rejected worker at index1, but new frozen arm order places it at index0",
+  "fix": "derive expected status from actual frozen condition order; no scheduler or criterion weakening"
+}

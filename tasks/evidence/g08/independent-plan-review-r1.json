@@ -1,0 +1,73 @@
+{
+  "reviewer": "/root/g08_plan_review",
+  "stage": "independent iteration-plan review only",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning": "medium",
+  "plan_path": "tasks/evidence/g08/ITERATION-PLAN.md",
+  "plan_sha256": "a291ec6461c5058e4ff362ea3b9fdea46fece3b852d801d7380e8bf16ee1a7b1",
+  "verdict": "REQUEST_CHANGES_BEFORE_STUDY_EXECUTION",
+  "scope": "Plan review only; no corpus/oracle/harness preflight, runtime verification, final artifact acceptance, gate advancement or publication authorization.",
+  "positive_findings": [
+    "Explicit evaluation-only cross-source prototype separates source indexing, owner questions and packets from frozen shipped Waygrain capabilities.",
+    "Shared original sources, actual owner replies and reduced observations make the control a defensible marginal-organization comparator; no from-zero superiority claim.",
+    "Attribution distinguishes documented intent, simulated human reports, observed UI and unknown backend/production facts.",
+    "G07 verified closure is recorded in tasks/todo.md and its final-document-review.json; failed gates and G01-G07 historical evidence remain preserved.",
+    "Codex-only/synthetic variance limitations, Claude/Cursor deferrals, private candidate, public HOLD and no production implementation/publication remain explicit."
+  ],
+  "required_findings": [
+    {
+      "id": "R1",
+      "lines": [
+        15,
+        27
+      ],
+      "title": "Define study-agent isolation from answer-bearing planning and oracle material",
+      "problem": "The plan itself reveals intended answers, conflicts and missing approval policy. Hidden oracle and shell-disabled ephemeral sessions do not expressly prevent this plan, question/oracle files, parent context or fixture implementation from reaching agents through initial prompts, inherited instructions, filesystem access or study MCP search/read endpoints. Investigation question exposure is also undefined, which can turn broad investigation into advance answer preparation.",
+      "change": "Require fresh non-inherited study contexts and allowlisted source/owner/browser/packet surfaces. Exclude this plan, oracle, scoring rules, fixture internals and reviewer records from study-agent reads/tool results. State whether the investigator sees the ten downstream questions; for general future-work claims withhold them. Require preflight to inspect prompts and endpoints for leakage; keep owner answers narrowly topic-bound."
+    },
+    {
+      "id": "R2",
+      "lines": [
+        31,
+        35
+      ],
+      "title": "Freeze executable scoring and comparison rules before smoke",
+      "problem": "Quality success, no regression and the 20-percent descriptive criterion lack fixed aggregation/denominator rules. Nine shared-investigation pairs and ten correlated answers per batch can support materially different verdicts depending on whether results are pooled, world-weighted, paired or filtered after failures. Source-grounding also needs an explicit inherited-packet evidence chain.",
+      "change": "In the preflight protocol freeze per-answer and per-investigation rubric, critical false-certainty/unsafe-action rules, absolute quality success threshold, no-regression aggregation, time/token aggregation and missing-usage/timeout treatment. Report all allocated denominators and per-world/pair distributions without treating 180 correlated answers as independent trials. Define packet grounding as packet claim plus the originating investigator exposure and qualifying source/owner/observation; reading an unsupported packet claim alone cannot ground it. Bind independent semantic reviews to exact packet/answer/exposure hashes."
+    },
+    {
+      "id": "R3",
+      "lines": [
+        21,
+        27
+      ],
+      "title": "Specify failed-investigation propagation and identical evidence transfer",
+      "problem": "The plan requires 27 actual sessions with no retries but does not say whether downstream pairs still run after investigator timeout, missing/invalid packet or partial observations. Dropping such pairs would select successful investigations and change the comparator. Equal access to reduced observations and owner replies also needs a fixed transfer rule rather than author curation.",
+      "change": "Predeclare that all nine downstream pairs remain allocated, how empty/partial/invalid packets are represented, and how shared actual owner replies/observations are transferred without manual repair or injected resolution. Use identical hashed shared-evidence bundles and comparable search/read budgets/interfaces; failed investigators remain failures and cannot be silently replaced. Freeze handling of a work-arm infrastructure failure and benefit claims when paired data are incomplete."
+    }
+  ],
+  "optional_findings": [
+    {
+      "id": "O1",
+      "title": "Clarify safe exploration and cancellation evidence",
+      "detail": "List the bounded browser routes/actions and authoritative observation fields in preflight. A close/cancel UI observation must remain distinct from proving that no backend write occurred, even when fixture code can reveal the implementation."
+    },
+    {
+      "id": "O2",
+      "title": "Avoid overclaiming independent worlds",
+      "detail": "Three variants with a common admin-policy core provide bounded synthetic variance; report this dependence and the small nine-pair sample alongside descriptive benefit."
+    }
+  ],
+  "reviewed_context": [
+    "AGENTS.md",
+    "tasks/plan.md",
+    "tasks/todo.md",
+    "docs/specification-v0.2.md (relevant evidence/evaluation sections)",
+    "docs/decisions/001-bundled-browser.md (relevant invariants/gates)",
+    "docs/evaluation.md",
+    "docs/release-readiness.md",
+    "tasks/evidence/g07/RESULTS.md",
+    "tasks/evidence/g07/final-document-review.json"
+  ],
+  "changes_made": "Only this independent review receipt; plan and implementation untouched."
+}

@@ -1,0 +1,22 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "independent actual smoke and adapter review; full-study preflight",
+  "verdict": "ACCEPT_FULL_27_SESSION_ALLOCATION",
+  "manifest_path": "tasks/evidence/g08/full-study-input-manifest.json",
+  "manifest_sha256": "e1410a1808e2dd1574e12da985a19c61c9f9c1701c83ed8ae280d7b9efc053db",
+  "manifest_files": 116,
+  "manifest_mismatches": 0,
+  "smoke_file_sha256": "ab83579c1a3e95214c09c7f5a7cccc9018d4aed22f8137a27f5b5615bdfabd3c",
+  "probe_file_sha256": "f8c386f0da00c0873881ddfcaf9c1800d956e10941eb71299d300ca02278b097",
+  "findings": [],
+  "checks": {
+    "smoke": "Three separate actual cobalt sessions completed with measured tokens and confirmed cleanup. Investigator explored6 headless scoped observations, asked focused approval and viewer-defect questions with actual relevant sources, opened/canceled Invite safely and preserved current production/backend unknowns. Reviewed full investigator packet and20 work answers against all returned source/owner/app evidence: substantive quality and provenance supported.",
+    "parity": "Both work shared bundle hashes equal and refer exact investigator owner/observation artifacts; raw source_search exposed original documents and all actual acquired reports/observations. Organized chose direct sources/live exploration and did not use packet; preserved as actual behavior, no forced memory sequence.",
+    "packet_adapter": "Separate deterministic actual-stdio probe uses exact smoke packet/shared bundle; raw knowledge endpoint absent/rejected, organized full actual packet and packet_reads returned, original citation pointers preserved, shared data identical, traversal source_read rejected, cleanup confirmed without browser launch. Inspected probe and receipt.",
+    "allocation": "Smoke/probe excluded from full27/180; no replacement or repair. Full sessions use unchanged frozen corpus/oracle/harness. R1/R2 safeguards remain."
+  },
+  "acceptance_boundary": "Authorizes only accepted frozen full27 study procedure to execute. Final semantic/exact-artifact verification still required. Smoke quality not full-study success, packet-use/performance benefit, production capability, human adoption or release qualification.",
+  "limits": "Small correlated synthetic sample; source-author preparation costs unavailable, investigator costs measured separately; lazy browser use correctly distinguishes null headless from actually launched headless; no global hidden-host privacy attestation.",
+  "preservation": "607 historical source/runtime/evidence/prefixes preserved; prior reviews unchanged; Claude/Cursor deferrals, original unmet gates and public HOLD retained; no commit,push,publication.",
+  "changes_made": "Only this independent review receipt."
+}

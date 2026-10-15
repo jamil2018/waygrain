@@ -1,0 +1,14 @@
+{
+  "scope": "G07 protocol/harness/test + frozen production runtime before smoke",
+  "files": {
+    "scripts/evaluation/g07/analyze.mjs": "20b4fa19b83589901e779a35ea4a6843cdf2e5255e0f7c6b0ddb59ba68571220",
+    "scripts/evaluation/g07/fixture.mjs": "4116338009e61ace9a1e824cdd6bc530bb94f08ce285bf378836a01580ffae41",
+    "scripts/evaluation/g07/protocol.mjs": "c60791b65674548d1e6ddb9a4e8fac583eead7c46539805bcc4ad91f1ea799b7",
+    "scripts/evaluation/g07/run.mjs": "427991a7a0caa41e715ee6586ec2012e2f25614b1342898c671764ee62440f3a",
+    "scripts/evaluation/g07/server.mjs": "a4a6a6460690141bc1b189e5164c920eec3e4b0f63ccf5d4df32c21980f003e8",
+    "scripts/evaluation/g07/triad.mjs": "9d2dba676570f3740f9bfc68a2bede2416fea851f3dad6bb486109f5e3f2efe9",
+    "tasks/evidence/g07/PROTOCOL.md": "28b55cb7cdc7e60a97f1d1ad413b9d527f6cf16e7d641e328b8cf289fb2ce248",
+    "tasks/evidence/g07/runtime-sha256.json": "0a08a684712875a55bf660283f22daecfcbe5608812476f589a7517ffa39e8d6",
+    "tests/g07-evaluation.test.mjs": "feb640f5e119100113d73e0092d060f41611b504656912d725e13f08dcaf79f4"
+  }
+}

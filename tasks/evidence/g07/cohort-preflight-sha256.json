@@ -1,0 +1,14 @@
+{
+  "scope": "G07 renewed cohort preflight; receipt-only notes lineage correction; original model smoke separate and unchanged",
+  "files": {
+    "scripts/evaluation/g07/analyze.mjs": "edd11fff1ca6279994a001fde61cab0bb01d1c3cfa988e97622eec9ff3e0d223",
+    "scripts/evaluation/g07/fixture.mjs": "4116338009e61ace9a1e824cdd6bc530bb94f08ce285bf378836a01580ffae41",
+    "scripts/evaluation/g07/protocol.mjs": "c60791b65674548d1e6ddb9a4e8fac583eead7c46539805bcc4ad91f1ea799b7",
+    "scripts/evaluation/g07/run.mjs": "427991a7a0caa41e715ee6586ec2012e2f25614b1342898c671764ee62440f3a",
+    "scripts/evaluation/g07/server.mjs": "26701c40853f2c847506e8c9fc00320dab7393335c6d5d3c38bbef17a9252e07",
+    "scripts/evaluation/g07/triad.mjs": "9d2dba676570f3740f9bfc68a2bede2416fea851f3dad6bb486109f5e3f2efe9",
+    "tasks/evidence/g07/PROTOCOL.md": "ef2295972d0c3954cdfce6eb9525ef8c6343c9de5f9ef1a63f60c6fd510a5ed6",
+    "tasks/evidence/g07/runtime-sha256.json": "0a08a684712875a55bf660283f22daecfcbe5608812476f589a7517ffa39e8d6",
+    "tests/g07-evaluation.test.mjs": "46d86669cc00c697147d2213b9cb17d752d003fc7f4dc567dbb439e76c48743d"
+  }
+}

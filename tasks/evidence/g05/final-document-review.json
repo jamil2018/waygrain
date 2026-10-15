@@ -1,0 +1,25 @@
+{
+  "reviewer": "/root/g05_review",
+  "date_local": "2026-10-12",
+  "verdict": "ACCEPT_G05_FINAL_VERIFIED_DOCUMENTATION_WITH_FAILED_GATES",
+  "artifact_manifest_sha256": "075703ec691f05736f3ba64e5c196417fd20639a9cfcb2d2ebd347573369e737",
+  "implemented_artifact_manifest_sha256": "090cc9908a37050d4a0015e6be42f0bf370b5ee1ddb10db22ffa34bce1b8b531",
+  "implemented_independent_review_sha256": "1bc8b0b5f1131501aa45eefd770396ffee34aed0ed204a61232963238601ef56",
+  "checks": [
+    "All146 current exactmanifest filehashes match",
+    "Original142file implementedmanifest matches independent-review artifact identity",
+    "Archived implemented RESULTS/todo exactbytes match theiroriginal acceptedhashes",
+    "Only RESULTS verification/review/preservation text and appendonly todo closure changed since acceptedimplemented artifact; source/runtime/measurements/bindings unchanged",
+    "Final status verified qualifies selected headlessparallel studyprocedure only; warm efficiency/successgrounding/changedclaim applicability remainFAILED",
+    "269substantivecorrect/266groundedaccepted;1timeout3trueuncitedclaims,0falseassertions/135correctscopedclicks preserved",
+    "PublicHOLD/private0.0.0,Claude/Cursor deferredunverified,humanadoption/secondapp unmet preserved; originalheaded history remainsseparate",
+    "gitdiffcheck passes; no code/runtime alteration orcommit/push/publication performed byreviewer"
+  ],
+  "required_findings_remaining": [],
+  "stop_boundary": "G05 complete; no further task or delivery authorized",
+  "limitations": [
+    "Studyprocedure acceptance not publicrelease approval",
+    "Headless3worker synthetic Codex adapter limits and failedcriteria remain unchanged",
+    "Finalreviewreceipt outside boundmanifest toavoidselfhash recursion; implementedindependentreview preservedunchanged"
+  ]
+}

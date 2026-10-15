@@ -1,0 +1,427 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "incremental independent semantic review; final report binding pending",
+  "investigations": [],
+  "answers": [
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q1",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "2018f80b507d95cd294bf03fd8754055de19362097eb55e6b10771100c1690ba",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q2",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "b978a5ec9a2543fbe57a279f39bef72072989bf225785b910b17d793f6524abf",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q3",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "fb232da2a84131f819044b74d09d9d8c3a12927633dec715e4973b7365c3ee1f",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q4",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "03988801ae078a1cc33f9c1599a951bfcaf71a55e30638ab90b09d9038dea8fd",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q5",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "71405d29650179a62b4f4a369ca6d6a0bdbed37e190c25bcab142cad858e8c97",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q6",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "7cf910d1d391cc4197f1a719084d4dc28ebd74b4afc6d1a5d21c7552d34a7d7e",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q7",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "6abc07d8ddb2b39c09813f1b6a918390b01b5ca422e48805a4516374af7f8ca3",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q8",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "31b20535b42135bdc07ede3a7839b834097af5935d9c183cf96f8586fa04ce20",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q9",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "65b58fa303a726a0acdad11bf6797c1f35682c6a86fffbdb26db129d825c5e9d",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_organized",
+      "question_id": "Q10",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "organized",
+      "answer_sha256": "2d0406224a5b7b3f378e7cd434e97e48a9762185e5aec2ea156ef5e768bcb713",
+      "exposure_sha256": "b8a2caa7d9a6342dedd3622d501b5073e7e19e267c9b85011883675e8a4550f3",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q1",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "76ba00b920cbc36b6f690b8c0805ad88467034df55a225a1662dfffa776ea6c9",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q2",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "3b31c97c48e9918ab034dad08ecb254cbb40379481328306f0128408e0c58999",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q3",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "30273c3f766a9311ccd1cd5dad98ed0c630c1958063e958d05691c664e5413e2",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q4",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "a6a5fdb691cc8dbce129383a9e02ad47e06df278ba7d35fae63e35c9e3296671",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q5",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "7455f51145849cb22f8fc8e3902a728d50d10dc2d6635f100d3d4a75517cf477",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q6",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "0f80c9cea739517c727179f03075c71c2a9a8de67de4107af6baf10e6b4ff572",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q7",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "2a11c2a4166d9a65ab3ded12eb0e0514dcb6476f4709751c1d0dc2b5421f8c60",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q8",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "39ee1cc8534de4dad4a54443c9de4cbd5f167a9f3323c31ad71c90175a50fa67",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q9",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "457dc4e386180dfbda875d10fe93fafbdcf4435d4020c4bfb4e110b0e7ad9544",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    },
+    {
+      "session_id": "cobalt_1_raw",
+      "question_id": "Q10",
+      "world": "cobalt",
+      "repetition": 1,
+      "condition": "raw",
+      "answer_sha256": "0f7d5adc702cf2d5a94546cd92df66716e65868c189a3704f9b4f704ec72e9e4",
+      "exposure_sha256": "97716c0a3e3b31fbe7f123696b7b1d4c705513c6fde1c9936f7000ed5e2f647f",
+      "investigator_final_sha256": "1d79a95079e75a9a8731d0fd1bbaea5adb05a9f52194de8dce7361500247ff7f",
+      "success": true,
+      "critical": false,
+      "dimensions": {
+        "complete": true,
+        "correct": true,
+        "scope_authority": true,
+        "uncertainty": true,
+        "grounded": true
+      },
+      "grounding_route": "direct_original_or_acquired_evidence",
+      "notes": "Full prose/source pointers reviewed against directly returned documentary lines, attributed simulated owner reports and matching scoped observations. Cobalt approval/expiry and viewer UI defect accurately separated from backend enforcement; original authority/source status and unknown count preserved. Organized reasked owner only for absent canonical expiry evidence; out-of-scope reply correctly remained unresolved."
+    }
+  ]
+}

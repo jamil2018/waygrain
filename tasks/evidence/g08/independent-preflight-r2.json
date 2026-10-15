@@ -1,0 +1,31 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "independent frozen corpus/oracle/harness preflight r2",
+  "manifest_path": "tasks/evidence/g08/preflight-manifest-r2.json",
+  "manifest_sha256": "b7c0d325cb9badd116e6a568d802b6bc73b40a85732d8a64391e1c153ae5ed56",
+  "verdict": "ACCEPT_PREFLIGHT_FOR_SEPARATE_SMOKE",
+  "prior_review": "independent-preflight-r1.json",
+  "required_findings": [],
+  "resolutions": {
+    "R1": "Full report requires exactly27 unique session keys; semantic review exact9 investigation/180 answer keys bound to report/finals/exposures/investigator packet hashes, duplicate/missing/stale bindings rejected. Independently inspected validation and tested rejection.",
+    "R2": "Pair metric eligibility now requires successful investigator packet, usage and confirmed cleanup as well as both work arms; failed/unavailable investigator remains allocated and blocks positive benefit."
+  },
+  "checks": {
+    "manifest_files": 111,
+    "manifest_mismatches": 0,
+    "preserved_historical_files_or_prefixes": 607,
+    "historical_mismatches": 0,
+    "independent_focused_tests": {
+      "command": "node --test tests/g08-evaluation.test.mjs",
+      "passed": 5,
+      "failed": 0
+    },
+    "corpus_oracle": "Read all14 sources in each world, policy differences and missing approval owner, hidden oracle/rubric; no hidden approval text in supplied documents. Policy/observed/test/human provenance distinguished.",
+    "harness": "Inspected isolation/prompt/tool lookup/owner routing/action allowlist/packet transfer/scoring/cleanup; raw options contain no packet; full packet responses recorded; no file/traversal endpoint. source_list metadata excluded from supporting exposure. Broad source_search returns only allowlisted source records. No downstream questions in investigator prompt.",
+    "fairness": "Raw/organized get deterministic identical actually acquired owner replies and reduced observations; raw not restricted; organization is additional prototype interpretation not independent source truth.",
+    "privacy": "Reduced safe model/source/app artifacts retained, raw snapshot/host reasoning/profile/input values absent from receipts. Unsafe schema candidates are discarded/privacy failed. Browser headless reported only on actual launch."
+  },
+  "acceptance_boundary": "Accept separately allocated cobalt smoke under this exact artifact. Full27 study still requires smoke verification of actual source/app/owner/packet transfer/cleanup and re-preflight if implementation changes. Not production capability, final artifact/task verification, human adoption, notes superiority or release approval.",
+  "preservation": "G01-G07 failed gates/history/runtime frozen; Claude/Cursor deferred/unverified, human/second-real-app requirements unmet; private0.0.0/public HOLD; no commit,push,publication.",
+  "changes_made": "Only this r2 review receipt; r1 preserved."
+}

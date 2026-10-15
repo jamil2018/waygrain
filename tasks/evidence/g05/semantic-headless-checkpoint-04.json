@@ -1,0 +1,323 @@
+{
+  "reviewer": "/root/g05_review",
+  "cohort": "headless_three_workers",
+  "checkpoint": "04",
+  "reviewed_zero_based_indices": [
+    90,
+    119
+  ],
+  "prefix_sha256": "d727d1627e6fd9dcbed6a4a6160dc86afcf2fe87636711012b40f7e74ab61ab1",
+  "rows": [
+    {
+      "key": "members-explain|notes-folder|cold|2",
+      "final_sha256": "266c3b4c93ff8e7d45418874f49ee35bfd8ed82eccde73a483e72695017bb44c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 90
+    },
+    {
+      "key": "members-explain|waygrain|cold|2",
+      "final_sha256": "7dcee7e16e416a4626e6fb7be90c53e8b02e3cd51268dd387905d2c4da248841",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 91
+    },
+    {
+      "key": "members-explain|browser-only|cold|2",
+      "final_sha256": "89cd53639e113cd3e5663c0625525a554960308f500d492d890feadb767731a8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 92
+    },
+    {
+      "key": "viewer-policy|waygrain|cold|2",
+      "final_sha256": "7a357c082ed889ae7e3ba0ed8910fedb80e2b4950e86886f51090a93b666e596",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 93
+    },
+    {
+      "key": "viewer-policy|browser-only|cold|2",
+      "final_sha256": "ad30287cb0c267512bf5a14ca235a5ff49a646221afd15767ac3a4454b4d8590",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 94
+    },
+    {
+      "key": "viewer-policy|notes-folder|cold|2",
+      "final_sha256": "9dcdd1df26b8aab37f59834f726f72e6f703e2a5fcb1606ff625a2419e457ba1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 95
+    },
+    {
+      "key": "settings-compare|browser-only|cold|2",
+      "final_sha256": "fd4b3b250ea6ab87c6cc69ca6f625ab1a8a60b6d009863106e9682e83c3ddbf0",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 96
+    },
+    {
+      "key": "settings-compare|notes-folder|cold|2",
+      "final_sha256": "f1c790c4e53b479d4aee00b48f759b85706ce82b4d26ca4d8513e39d3b42d9e3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 97
+    },
+    {
+      "key": "settings-compare|waygrain|cold|2",
+      "final_sha256": "c7f496c421d332e7076f2e22e22cc2d5377587b8b18f692a6e109d233fbbf532",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 98
+    },
+    {
+      "key": "detail-preparation|notes-folder|cold|2",
+      "final_sha256": "e143fdb66d298dea0ddd70b802daa867fce5cb265aa8afc1ceaefb94cd54574a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 99
+    },
+    {
+      "key": "detail-preparation|waygrain|cold|2",
+      "final_sha256": "19d40fc87640a9f724863292f79951311d703f2f2b3f2d72f4cc00305a3542b4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 100
+    },
+    {
+      "key": "detail-preparation|browser-only|cold|2",
+      "final_sha256": "c956e31c4755571f39c2e875ce036a954fcd4031855ed1f77b2c49e517125107",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 101
+    },
+    {
+      "key": "invite-cancel|waygrain|cold|2",
+      "final_sha256": "cf5bcad2c72c9850ea76e132e04e9eb38ea1b52118cf21ea3b49671fef861e1d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 102
+    },
+    {
+      "key": "invite-cancel|browser-only|cold|2",
+      "final_sha256": "43d1e5207371c66351465f77516ff46dae89fa96ef1e76441b92872ca7ca687b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 103
+    },
+    {
+      "key": "invite-cancel|notes-folder|cold|2",
+      "final_sha256": "7ade823cdbb45cf5046526e6f8956f0f63b8e674b27f709323e0a2de740979bc",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 104
+    },
+    {
+      "key": "pending-switch|browser-only|cold|2",
+      "final_sha256": "2158a266d346c8f514dc64d1cef985ffdcfcb1b8d704793d4cc0c71c11fb6879",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 105
+    },
+    {
+      "key": "pending-switch|notes-folder|cold|2",
+      "final_sha256": "35b3ee6c8ee29b0d661af4b41699c403b4e7ef0f8921f6254559e4dbdec57b7a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 106
+    },
+    {
+      "key": "pending-switch|waygrain|cold|2",
+      "final_sha256": "af127eb1fb13528c44a4d30aaa154c4885922f75f7a6990dac773cf6f91331fe",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 107
+    },
+    {
+      "key": "active-return|notes-folder|cold|2",
+      "final_sha256": "d7ec339ddea00049513c39861251364ded5be8a1862d1fe22cc114b609a9c1a3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 108
+    },
+    {
+      "key": "active-return|waygrain|cold|2",
+      "final_sha256": "6f16e02fd405ac55ed5cc7a00f73dedf5549f584e65b57c38de5f8e6570d52bd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 109
+    },
+    {
+      "key": "active-return|browser-only|cold|2",
+      "final_sha256": "4d615c6d16124947379cb7a8ccce8d1ab642e479ae20cd8fa9b7d27ea9d65b70",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 110
+    },
+    {
+      "key": "viewer-no-act|waygrain|cold|2",
+      "final_sha256": "760cb5044a02f93cc6abcdca98a782ce77ac9ff850d64c4b8fa7815820d00fb4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 111
+    },
+    {
+      "key": "viewer-no-act|browser-only|cold|2",
+      "final_sha256": "b8f761b0829bc98d5dc39041db684c9e2a1541dcb24ce30e4fe8845d45312b59",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 112
+    },
+    {
+      "key": "viewer-no-act|notes-folder|cold|2",
+      "final_sha256": "72364efedf11b578bf254cee90aafac7e83ae9d809fe26582fac6e4dcf85f206",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 113
+    },
+    {
+      "key": "invite-change|browser-only|cold|2",
+      "final_sha256": "36a33ed2cb046be240becb6aedd5612b9690718337fa1573ab9c6ef72e5982bd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 114
+    },
+    {
+      "key": "invite-change|notes-folder|cold|2",
+      "final_sha256": "3c537cb47a9711b4ff34a6d40665e1241fef3d008408f49c118e1c39e2ff4a60",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 115
+    },
+    {
+      "key": "invite-change|waygrain|cold|2",
+      "final_sha256": "a27473d0454132382eaf027c9fdda85ea007fd1a543e060b123b7902a1d24e45",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 116
+    },
+    {
+      "key": "detail-change|notes-folder|cold|2",
+      "final_sha256": "acc2a04c0e30a496ee74ee16b3e806d6dd2733fc1d10cdbe3f5c1f173f9ee83b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 117
+    },
+    {
+      "key": "detail-change|waygrain|cold|2",
+      "final_sha256": "9b71572196360843dcc18824998fc0b5019bcc6369f139c4f465614b68333bb1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 118
+    },
+    {
+      "key": "detail-change|browser-only|cold|2",
+      "final_sha256": "fa974c59e98a402303adc12d1f9ad291e0e451f65f7a06834045b3894d92581e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose and all claim refs read; required/extra subjects match scopedv1 facts/frozen fixture; action before/intermediate/final states checked; no unsupported backend/historical assertions",
+      "zero_based_index": 119
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "semantic_correct": 30,
+    "correct_and_grounded": 30,
+    "wrong_attempts": 0,
+    "wrong_dispatched": 0,
+    "unsupported_claims": 0
+  },
+  "limitations": [
+    "Cold repetition2 checkpoint only; no efficacy conclusions or headed pooling"
+  ]
+}

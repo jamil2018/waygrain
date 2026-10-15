@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "independent corpus/oracle/harness preflight r1",
+  "manifest_path": "tasks/evidence/g08/preflight-manifest.json",
+  "manifest_sha256": "909c258a5518bd2928e874ece0f5cbd176de76e4ad2bcbf73e8ecda7c6275c85",
+  "verdict": "REVISE_BEFORE_MODEL_EXECUTION",
+  "checks": {
+    "manifest_files": 109,
+    "manifest_mismatches": 0,
+    "historical_preserved_files_or_prefixes": 607,
+    "historical_mismatches": 0,
+    "independent_focused_tests": {
+      "command": "node --test tests/g08-evaluation.test.mjs",
+      "passed": 4,
+      "failed": 0
+    },
+    "corpus": "Three 14-source synthetic worlds, hidden approval absent from dump, accepted/archived/draft/duplicate/untrusted content differentiated; scripted owner attributed and scoped",
+    "isolation": "Fresh CLI read-only/shell-disabled/ignore-user-config sessions; source ID lookup no arbitrary files; raw options packet:null; downstream questions absent investigator prompt",
+    "evidence": "Full returned packet tool result retained; original exposure chains and shared bundle hashes available; reduced observations and safe actions separate from backend assertions"
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "Required",
+      "message": "Full analysis must validate exactly27 distinct allocated session keys across3 worlds/3 repetitions/3 conditions. Semantic input must bind exactly9 investigation and180 distinct answer entries to exact session/final hashes; reject duplicates, missing keys or stale hashes rather than allowing inflated counts or unrelated adjudication."
+    },
+    {
+      "id": "R2",
+      "severity": "Required",
+      "message": "A positive organized-reuse performance verdict must require a successful available investigator packet for every comparison pair, in addition to completed work/usage/cleanup. A pair with failed or unavailable packet must remain allocated but cannot establish organized-packet benefit."
+    }
+  ],
+  "acceptance_boundary": "No model smoke or full study accepted yet; these safeguards must be corrected, artifact re-frozen and independently preflighted. No production capability or release approval.",
+  "limits": "Four focused checks are independent deterministic evidence, not live model/browser/host privacy attestation. Headless applies only to opened browsers; lazy no-browser work is explicit. Source author preparation costs unavailable, not zero.",
+  "preservation": "Historical evidence and failed gates, Claude/Cursor deferrals, unmet human/second-real-app requirements, private0.0.0/public HOLD retained. No commit,push,publication.",
+  "changes_made": "Only this review receipt."
+}

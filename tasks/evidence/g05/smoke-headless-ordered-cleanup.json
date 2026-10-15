@@ -1,0 +1,2544 @@
+{
+  "schema_version": 1,
+  "smoke": true,
+  "runtime": {
+    "node": "v24.20.0",
+    "codex": "codex-cli 0.162.0-alpha.17.2",
+    "model": "gpt-6.1-sol",
+    "reasoning": "low",
+    "started_at": "2026-10-11T19:27:32.866Z",
+    "platform": "darwin",
+    "arch": "arm64",
+    "execution_mode": {
+      "headless": true,
+      "workers": 3,
+      "scheduling": "matched_arm_triads"
+    },
+    "protocol_sha256": "c89b76d0c9256b4ff7f5bf24bfbee6e4a28ab5ccc355fe9943a9c24235a24436",
+    "finished_at": "2026-10-11T19:28:40.858Z",
+    "maximum_workers": 3,
+    "cohort_elapsed_ms": 67989.972375
+  },
+  "results": [
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "waygrain",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:27:32.868Z",
+      "offset_ms": 0.5708750000000009,
+      "host_ms": 16984.244749999998,
+      "tokens": {
+        "input": 100727,
+        "output": 277,
+        "cached_input": 93056
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Live Settings snapshots show Save enabled for admin (obs_11) and disabled for viewer (obs_12). Save was not clicked; backend permissions remain unproven.",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Save is visible and enabled in admin Settings.",
+            "evidence": [
+              "obs_11"
+            ]
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Save is visible and disabled in viewer Settings.",
+            "evidence": [
+              "obs_12"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Backend permissions are not proven by these UI observations.",
+            "evidence": [
+              "obs_11",
+              "obs_12"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.31524999999965,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 35.43420800000058,
+            "error": null
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 14.042833999999857,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 44.28112500000134,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.638Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "efc1c0c6-88fe-4f73-80b6-128d9c10d373",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.638Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.718Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "c60e79fa-acbb-4ff4-9107-b2433e185acc",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.718Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.776Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "e348c41d-bdba-43ee-99bc-8ac6b7aef004",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.776Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.826Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "52813fdd-1d9d-43ea-8666-6682caa9a876",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.826Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.878Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "1a931bf7-e7d0-4035-8de4-0e95dbefb01a",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.878Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          },
+          {
+            "id": "obs_11",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:27:42.500Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_12",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:27:44.881Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 18,
+        "knowledge_calls": 5,
+        "setup_ms": 249.33970900000003,
+        "priming_ms": 294.179416,
+        "retained_bytes": 970912,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 5,
+        "server_total_ms": 15857.189917000002
+      },
+      "residual_host_ms": 16440.725625,
+      "total_ms": 16993.172917,
+      "finished_at": "2026-10-11T19:27:49.862Z"
+    },
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "browser-only",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:27:32.868Z",
+      "offset_ms": 0.5314170000000047,
+      "host_ms": 17053.831584,
+      "tokens": {
+        "input": 99984,
+        "output": 283,
+        "cached_input": 92544
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Save is enabled in admin Settings (obs_6) and disabled in viewer Settings (obs_7). Save was not clicked; these UI observations do not prove backend permissions.",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Save is visible and enabled in the current admin Settings snapshot.",
+            "evidence": [
+              "obs_6"
+            ]
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Save is visible and disabled in the current viewer Settings snapshot.",
+            "evidence": [
+              "obs_7"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Backend permissions are not proven by these UI observations.",
+            "evidence": [
+              "obs_6",
+              "obs_7"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 14.353042000000642,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 44.33175000000119,
+            "error": null
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 12.719833000001017,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 37.506124999999884,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.638Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.704Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.757Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_4",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.807Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.859Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_6",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:27:42.200Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_7",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:27:44.938Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 18,
+        "knowledge_calls": 0,
+        "setup_ms": 247.82887499999998,
+        "priming_ms": 274.11787499999997,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 15932.330625
+      },
+      "residual_host_ms": 16531.884834,
+      "total_ms": 17056.027083,
+      "finished_at": "2026-10-11T19:27:49.925Z"
+    },
+    {
+      "task": "settings-compare",
+      "group": "feature",
+      "condition": "notes-folder",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:27:32.868Z",
+      "offset_ms": 0.3649999999999949,
+      "host_ms": 18000.179666999997,
+      "tokens": {
+        "input": 116558,
+        "output": 282,
+        "cached_input": 103808
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Save is enabled in admin Settings (obs_11) and disabled in viewer Settings (obs_12). Save was not clicked; backend permissions remain unverified.",
+        "claims": [
+          {
+            "fact": "save_admin",
+            "value": "Enabled in the current admin Settings snapshot.",
+            "evidence": [
+              "obs_11"
+            ]
+          },
+          {
+            "fact": "save_viewer",
+            "value": "Disabled in the current viewer Settings snapshot.",
+            "evidence": [
+              "obs_12"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Not proven. These observations establish UI state only, not backend permissions.",
+            "evidence": [
+              "obs_11",
+              "obs_12"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.480750000000626,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 38.55895799999962,
+            "error": null
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 10.207833000000392,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 36.84904099999949,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.639Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_1",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.639Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.704Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_3",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.704Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.756Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_5",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.756Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.807Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_7",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.807Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:33.854Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_9",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:33.854Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          },
+          {
+            "id": "obs_11",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:27:42.874Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_12",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:27:45.103Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 18,
+        "knowledge_calls": 0,
+        "setup_ms": 253.38799999999998,
+        "priming_ms": 267.884792,
+        "retained_bytes": 8096,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 16890.969667
+      },
+      "residual_host_ms": 17478.906874999997,
+      "total_ms": 18006.309958,
+      "finished_at": "2026-10-11T19:27:50.875Z"
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "notes-folder",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:27:50.876Z",
+      "offset_ms": 18008.228625,
+      "host_ms": 23503.477458,
+      "tokens": {
+        "input": 131477,
+        "output": 477,
+        "cached_input": 101248
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "The current button was “Invite member” (obs_11). Clicking it opened the “Invite” dialog (obs_12); clicking Cancel closed it. The final screen is admin Members with Active selected and no dialog visible (obs_13). No values were entered. These observations do not prove backend behavior.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite member",
+            "evidence": [
+              "obs_11"
+            ]
+          },
+          {
+            "fact": "dialog_open",
+            "value": "The Invite dialog opened after the invitation click and was closed after Cancel.",
+            "evidence": [
+              "obs_12",
+              "obs_13"
+            ]
+          },
+          {
+            "fact": "final_state",
+            "value": "Admin Members remains visible with Active selected, Invite member available, and an empty modal set.",
+            "evidence": [
+              "obs_13"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "Backend behavior is not proven by the UI observations.",
+            "evidence": [
+              "obs_11",
+              "obs_12",
+              "obs_13"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 12.896582999999737,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 41.876791000000594,
+            "error": null
+          },
+          {
+            "tool": "browser_click",
+            "ms": 45.80383299999994,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 49.101667000000816,
+            "error": null
+          },
+          {
+            "tool": "browser_click",
+            "ms": 46.260167000000365,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 20.040082999999868,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.620Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_1",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.620Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.684Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_3",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.684Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.734Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_5",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.734Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.781Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_7",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.781Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.827Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_9",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.827Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          },
+          {
+            "id": "obs_11",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:27:59.813Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_12",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:04.006Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": true
+            }
+          },
+          {
+            "id": "obs_13",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:07.282Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [
+          {
+            "name": "Invite member",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_11",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Cancel",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_12",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 20,
+        "knowledge_calls": 0,
+        "setup_ms": 235.392375,
+        "priming_ms": 251.48991700000005,
+        "retained_bytes": 8096,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 22499.909832999998
+      },
+      "residual_host_ms": 23016.595166000003,
+      "total_ms": 23506.145458,
+      "finished_at": "2026-10-11T19:28:14.382Z"
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "waygrain",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:27:50.877Z",
+      "offset_ms": 18008.591916999998,
+      "host_ms": 25362.593791,
+      "tokens": {
+        "input": 131116,
+        "output": 465,
+        "cached_input": 121216
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Opened “Invite member” and canceled the “Invite” dialog without entering values. Inspected before and after both clicks (obs_11–obs_13). Final state: admin Members, Active tab selected, no dialog visible (obs_13). Backend behavior was not proven.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "The available invitation button was labeled “Invite member”.",
+            "evidence": [
+              "obs_11",
+              "obs_13"
+            ]
+          },
+          {
+            "fact": "dialog_open",
+            "value": "The “Invite” dialog appeared after opening, with an Email textbox and Cancel button; after Cancel, d",
+            "evidence": [
+              "obs_12",
+              "obs_13"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No backend behavior was proven; the evidence establishes only visible UI states.",
+            "evidence": [
+              "obs_11",
+              "obs_12",
+              "obs_13"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 9.576624999999694,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 43.17354200000045,
+            "error": null
+          },
+          {
+            "tool": "browser_click",
+            "ms": 55.67108300000109,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 52.264124999999694,
+            "error": null
+          },
+          {
+            "tool": "browser_click",
+            "ms": 38.80316600000151,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 20.61554199999955,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.620Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "65b6aea1-6ae6-4bab-b8bb-619299b3c744",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.620Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.690Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "747af36c-b479-447a-ad21-bfaea89ecabd",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.690Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.742Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "3a183936-b79a-487c-a98b-1db50f8d07ae",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.742Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.790Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "3cc8eb4a-96b5-4751-95e7-16ecd43d690d",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.790Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.836Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "d58553e6-bb3a-4571-8dec-73bbc664ea73",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:27:51.836Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          },
+          {
+            "id": "obs_11",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:00.007Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_12",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:03.786Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": true
+            }
+          },
+          {
+            "id": "obs_13",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:08.410Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [
+          {
+            "name": "Invite member",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_11",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Cancel",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_12",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 20,
+        "knowledge_calls": 5,
+        "setup_ms": 229.40333400000003,
+        "priming_ms": 262.30062499999997,
+        "retained_bytes": 970912,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 5,
+        "server_total_ms": 24292.437667000002
+      },
+      "residual_host_ms": 24870.889832,
+      "total_ms": 25369.38,
+      "finished_at": "2026-10-11T19:28:16.246Z"
+    },
+    {
+      "task": "invite-cancel",
+      "group": "journey",
+      "condition": "browser-only",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:27:50.876Z",
+      "offset_ms": 18008.496082999998,
+      "host_ms": 24037.903457999997,
+      "tokens": {
+        "input": 130128,
+        "output": 460,
+        "cached_input": 120576
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Opened “Invite member” and observed the Invite dialog (obs_7), then clicked Cancel. The final admin Members screen has Active selected and no open dialog (obs_8). No values were entered. Backend behavior was not established by these UI observations.",
+        "claims": [
+          {
+            "fact": "invite_label",
+            "value": "Invite member",
+            "evidence": [
+              "obs_6",
+              "obs_8"
+            ]
+          },
+          {
+            "fact": "dialog_open",
+            "value": "The Invite dialog was visible after opening and absent after Cancel.",
+            "evidence": [
+              "obs_7",
+              "obs_8"
+            ]
+          },
+          {
+            "fact": "final_state",
+            "value": "Admin Members screen, Active tab selected, no open modal.",
+            "evidence": [
+              "obs_8"
+            ]
+          },
+          {
+            "fact": "backend_proven",
+            "value": "No; the evidence establishes visible UI states only.",
+            "evidence": [
+              "obs_6",
+              "obs_7",
+              "obs_8"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 10.68054200000006,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 44.70550000000003,
+            "error": null
+          },
+          {
+            "tool": "browser_click",
+            "ms": 60.381375000000844,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 55.37579200000073,
+            "error": null
+          },
+          {
+            "tool": "browser_click",
+            "ms": 45.527500000000146,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 19.70958299999984,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.614Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.676Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.725Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_4",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.770Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:27:51.813Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_6",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:01.107Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_7",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:04.570Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": true
+            }
+          },
+          {
+            "id": "obs_8",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:07.943Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": "Invite member",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [
+          {
+            "name": "Invite member",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_6",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          },
+          {
+            "name": "Cancel",
+            "role": "admin",
+            "screen": "members",
+            "before_evidence": "obs_7",
+            "state": "succeeded",
+            "dispatch": "dispatched",
+            "error": null
+          }
+        ],
+        "browser_calls": 20,
+        "knowledge_calls": 0,
+        "setup_ms": 228.95862499999998,
+        "priming_ms": 243.59445800000003,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 22904.454375
+      },
+      "residual_host_ms": 23565.350374999998,
+      "total_ms": 24042.065042,
+      "finished_at": "2026-10-11T19:28:14.919Z"
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "browser-only",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:28:16.248Z",
+      "offset_ms": 43379.541125,
+      "host_ms": 21866.445708,
+      "tokens": {
+        "input": 102179,
+        "output": 349,
+        "cached_input": 93312
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Remove member is not visible in the current admin Member detail snapshot (obs_6), whose coverage is complete for the root. Compared with the task’s declared version-one control, visibility appears changed. No historical capture was available to verify the baseline independently. This finding covers only this screen and role; it does not establish backend removal behavior or availability elsewhere. No controls were clicked or values entered.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Not visible in the current admin Member detail; the complete-root snapshot contains no Remove member",
+            "evidence": [
+              "obs_6"
+            ]
+          },
+          {
+            "fact": "remove_changed",
+            "value": "Visibility appears changed relative to the task’s declared version-one control; the historical state",
+            "evidence": [
+              "obs_6"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "browser_navigate",
+            "ms": 14.237624999999753,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 40.201209000000745,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.072Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_2",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.140Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.197Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_4",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.251Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.301Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "obs_6",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:27.633Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 16,
+        "knowledge_calls": 0,
+        "setup_ms": 262.91275,
+        "priming_ms": 290.60408299999995,
+        "retained_bytes": 0,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 20722.884083
+      },
+      "residual_host_ms": 21312.928875,
+      "total_ms": 21868.576416999997,
+      "finished_at": "2026-10-11T19:28:38.116Z"
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "notes-folder",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:28:16.248Z",
+      "offset_ms": 43379.737833,
+      "host_ms": 17348.017249999997,
+      "tokens": {
+        "input": 74956,
+        "output": 279,
+        "cached_input": 66944
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Remove member is absent from the current admin Member detail snapshot (obs_11). The version-one capture showed it visible and enabled (note_obs_9), so its observed visibility has changed. Both captures cover the complete root in the same declared scope. This establishes UI absence in that scope, not backend removal or behavior elsewhere. No controls were clicked or values entered.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Not visible in the current admin Member detail complete-root snapshot.",
+            "evidence": [
+              "obs_11"
+            ]
+          },
+          {
+            "fact": "remove_changed",
+            "value": "Observed visibility changed: version one showed a visible, enabled Remove member button; the current",
+            "evidence": [
+              "note_obs_9",
+              "obs_11"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "memory_search",
+            "ms": 1.811333999999988,
+            "error": null
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 15.413292000001093,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 43.110083000001396,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.072Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_1",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.072Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.141Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_3",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.141Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.198Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_5",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.198Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.251Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_7",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.251Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.303Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "note_obs_9",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.303Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          },
+          {
+            "id": "obs_11",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:26.616Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 16,
+        "knowledge_calls": 0,
+        "setup_ms": 260.10016699999994,
+        "priming_ms": 291.00479199999995,
+        "retained_bytes": 8096,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 0,
+        "server_total_ms": 16098.928791999999
+      },
+      "residual_host_ms": 16796.912290999997,
+      "total_ms": 17355.446834000002,
+      "finished_at": "2026-10-11T19:28:33.603Z"
+    },
+    {
+      "task": "detail-change",
+      "group": "change",
+      "condition": "waygrain",
+      "case": "changed",
+      "repetition": 1,
+      "started_at": "2026-10-11T19:28:16.248Z",
+      "offset_ms": 43379.70425,
+      "host_ms": 24603.342417,
+      "tokens": {
+        "input": 104482,
+        "output": 498,
+        "cached_input": 94336
+      },
+      "error": null,
+      "forbidden_items": 0,
+      "final": {
+        "answer": "Remove member no longer appears in the current admin Member detail snapshot (obs_11). The historical revision-one capture shows it visible and enabled (8a5ed4c1-d0a9-422b-b172-3b061f8ae78e). Both captures report complete root coverage in the same scope and route. This establishes a change in the observed UI; it does not establish backend removal capability or availability in other states. No controls were clicked or values entered.",
+        "claims": [
+          {
+            "fact": "remove_visible",
+            "value": "Not visible in the current revision-two admin Member detail capture, which reports complete root UI-",
+            "evidence": [
+              "obs_11"
+            ]
+          },
+          {
+            "fact": "remove_changed",
+            "value": "Observed visibility changed: revision one contained a visible, enabled Remove member button; the-s",
+            "evidence": [
+              "8a5ed4c1-d0a9-422b-b172-3b061f8ae78e",
+              "obs_11"
+            ]
+          },
+          {
+            "fact": "coverage_limits",
+            "value": "Comparison covers the captured admin Member detail state in the same staging, synthetic-account,",
+            "evidence": [
+              "8a5ed4c1-d0a9-422b-b172-3b061f8ae78e",
+              "obs_11"
+            ]
+          }
+        ]
+      },
+      "receipt": {
+        "tool_calls": [
+          {
+            "tool": "memory_search",
+            "ms": 5.87395800000013,
+            "error": null
+          },
+          {
+            "tool": "browser_navigate",
+            "ms": 14.393083000000843,
+            "error": null
+          },
+          {
+            "tool": "browser_snapshot",
+            "ms": 34.41583299999911,
+            "error": null
+          },
+          {
+            "tool": "memory_read",
+            "ms": 4.662500000000364,
+            "error": null
+          },
+          {
+            "tool": "memory_read",
+            "ms": 1.0992909999986296,
+            "error": null
+          },
+          {
+            "tool": "memory_read",
+            "ms": 0.6594590000004246,
+            "error": null
+          }
+        ],
+        "observations": [
+          {
+            "id": "obs_1",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.072Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "1c19f513-ac0e-4727-8052-c1b0a69a2f12",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.072Z",
+            "facts": {
+              "route": "/members",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": "Invite",
+              "invite_visible": true,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_1"
+          },
+          {
+            "id": "obs_3",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.153Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "bf7082e6-cf95-412c-9172-4a379b304d92",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.153Z",
+            "facts": {
+              "route": "/members",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": "Active",
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_3"
+          },
+          {
+            "id": "obs_5",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.212Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "63853525-2b9d-48c6-bcd9-886cd51f6580",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.212Z",
+            "facts": {
+              "route": "/settings",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "enabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_5"
+          },
+          {
+            "id": "obs_7",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.268Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "e05d5718-0b6f-4a2e-af55-09749a6708bd",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.268Z",
+            "facts": {
+              "route": "/settings",
+              "role": "viewer",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": "disabled",
+              "remove_visible": false,
+              "dialog_open": false
+            },
+            "source_id": "obs_7"
+          },
+          {
+            "id": "obs_9",
+            "phase": "prime",
+            "captured_at": "2026-10-11T19:28:17.325Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            }
+          },
+          {
+            "id": "8a5ed4c1-d0a9-422b-b172-3b061f8ae78e",
+            "phase": "retained",
+            "captured_at": "2026-10-11T19:28:17.325Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 1,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": true,
+              "dialog_open": false
+            },
+            "source_id": "obs_9"
+          },
+          {
+            "id": "obs_11",
+            "phase": "task",
+            "captured_at": "2026-10-11T19:28:27.106Z",
+            "facts": {
+              "route": "/members/:member",
+              "role": "admin",
+              "coverage": "complete",
+              "version": 2,
+              "invite_label": null,
+              "invite_visible": false,
+              "selected_tab": null,
+              "save": null,
+              "remove_visible": false,
+              "dialog_open": false
+            }
+          }
+        ],
+        "actions": [],
+        "browser_calls": 16,
+        "knowledge_calls": 9,
+        "setup_ms": 259.99233300000003,
+        "priming_ms": 313.205334,
+        "retained_bytes": 970912,
+        "cleanup": {
+          "driver": "complete",
+          "context": "complete",
+          "browser": "complete",
+          "store": "complete",
+          "server": "complete"
+        },
+        "error": null,
+        "headless_detected": true,
+        "priming_browser_calls": 10,
+        "priming_knowledge_calls": 5,
+        "server_total_ms": 23307.234375
+      },
+      "residual_host_ms": 24030.144750000003,
+      "total_ms": 24608.488458,
+      "finished_at": "2026-10-11T19:28:40.856Z"
+    }
+  ]
+}

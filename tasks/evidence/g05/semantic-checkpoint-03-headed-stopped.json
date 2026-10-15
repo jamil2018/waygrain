@@ -1,0 +1,183 @@
+{
+  "reviewer": "/root/g05_review",
+  "checkpoint": "03-headed-stopped",
+  "date_local": "2026-10-12",
+  "matrix_file_sha256": "9f68bc00b2c5780052660268e01c57fe3a0e8ae91253592b9d0d571fffb47540",
+  "reviewed_zero_based_indices": [
+    60,
+    75
+  ],
+  "rows": [
+    {
+      "key": "members-explain|browser-only|changed|1",
+      "final_sha256": "757d7dc229977e1f0f33576a8cbd273b27b79fe1fd2c00a85e7692f402d247c9",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 60
+    },
+    {
+      "key": "members-explain|notes-folder|changed|1",
+      "final_sha256": "8fcc555f883a1c58b6111b180831696f2b5edc4aeff81084f80611172013a1b2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 61
+    },
+    {
+      "key": "members-explain|waygrain|changed|1",
+      "final_sha256": "89b05699afea990562be1e6bbdc274e5299c2d3d79b5dfa35423c7d972f6b8e5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 62
+    },
+    {
+      "key": "viewer-policy|notes-folder|changed|1",
+      "final_sha256": "dd0a878d4076a51bd6718cc7eaed8b5a8070436c29f15caa873bb580780876e6",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 63
+    },
+    {
+      "key": "viewer-policy|waygrain|changed|1",
+      "final_sha256": "11b62c1b0d7e2d7ebaed69c0b99b2dec72aea8abe38f63fe30a91cd1f6b7db2b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 64
+    },
+    {
+      "key": "viewer-policy|browser-only|changed|1",
+      "final_sha256": "26396e68f52e66e830d5afcf6720b37a8727d7bac7ff59769235e28963f9f3eb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 65
+    },
+    {
+      "key": "settings-compare|waygrain|changed|1",
+      "final_sha256": "57d1de2f1498e45c206855c149b58903a97399cc84780eddee5043f262f27fbd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 66
+    },
+    {
+      "key": "settings-compare|browser-only|changed|1",
+      "final_sha256": "1772c33461bf4a6d09d67cc633fae41d3b19c29003d49e18580c2a37b0a5edbd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 67
+    },
+    {
+      "key": "settings-compare|notes-folder|changed|1",
+      "final_sha256": "0017a3287a1e7cd873f0c0158e0404301c927e15e63a669de27dd81bb7801aa8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 68
+    },
+    {
+      "key": "detail-preparation|browser-only|changed|1",
+      "final_sha256": "de782ee087ac0b376fe28b56c6c1cc6b9b625e02d69fc828936cb9c4e066f147",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 69
+    },
+    {
+      "key": "detail-preparation|notes-folder|changed|1",
+      "final_sha256": "2f37e1df604b6dffc23054ece9e1a99dd95e5a259064586c1895cbe6f821574e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 70
+    },
+    {
+      "key": "detail-preparation|waygrain|changed|1",
+      "final_sha256": "cfea4bbb926d4b9357e75af587418bfcaa17ae1720b16233b9615aed1e6fb387",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 71
+    },
+    {
+      "key": "invite-cancel|notes-folder|changed|1",
+      "final_sha256": "155d2956c9d72133a1fe4116399e1571c540197d0ad24e4f296e38d02bf5023a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 72
+    },
+    {
+      "key": "invite-cancel|waygrain|changed|1",
+      "final_sha256": "1618eb69d3d1f6ef95727da83ddea5e6ca337cf66f97bd70a07cb752da285681",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 73
+    },
+    {
+      "key": "invite-cancel|browser-only|changed|1",
+      "final_sha256": "0cfa320e457d869c746c2cf7744b8b2e56624bc83e72d28f9b9a934ca26f27cc",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 74
+    },
+    {
+      "key": "pending-switch|waygrain|changed|1",
+      "final_sha256": "4eda6a9787aa8bfb42360d1c8410efd2591c38e1b32b877d2e2c4c721408faeb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/claims read; current version-two scoped facts match; absence backed by complete coverage; historical/state-transition clauses interpreted temporally against matching cited observations; observed action intermediate/final states verified",
+      "zero_based_index": 75
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "correct_and_grounded": 16,
+    "wrong_attempts": 0,
+    "wrong_dispatched": 0,
+    "freshness_failures": 0
+  },
+  "limitations": [
+    "Original headed sequential cohort stopped on explicit user method amendment;76 completed sessions plus separate interruption, incomplete and not pooled with new cohort",
+    "No full efficacy/correctness/freshness verdict inferred"
+  ]
+}

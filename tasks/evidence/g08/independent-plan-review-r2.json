@@ -1,0 +1,28 @@
+{
+  "reviewer": "/root/g08_plan_review",
+  "stage": "independent revised iteration-plan review only",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning": "medium",
+  "plan_path": "tasks/evidence/g08/ITERATION-PLAN.md",
+  "plan_sha256": "b00126796444df98f6722c433e5ebcb07632cc31fb905ec6d4a9151d666edf9e",
+  "verdict": "ACCEPT_REVISED_ITERATION_PLAN_ONLY",
+  "prior_review_path": "tasks/evidence/g08/independent-plan-review-r1.json",
+  "prior_review_sha256": "74562bcdb31c4a57fbd5bada62f0ed1e45b4dee5adf60e7107e62fe5e1084f08",
+  "prior_review_preserved": true,
+  "resolution": {
+    "R1": "Resolved: fresh non-inherited contexts, isolated directories, disabled shell/file tools, allowlisted MCP surfaces, downstream questions withheld from investigators, exact prompt/config/endpoint leakage inspection including traversal and broad search.",
+    "R2": "Resolved: frozen per-answer and investigation rubrics, strict absolute success, overall/per-world no-regression counts, correlated batch disclosure, exposure-chain grounding/direct-source repair, exact semantic bindings, predefined paired ratios and incomplete-metric rules.",
+    "R3": "Resolved: all nine downstream pairs allocated; identical deterministic hashed transfer of actual safe replies/observations, no manual repair or packet prose in shared observations; explicit missing/invalid packets, failure preservation, no replacement, incomplete pairs prevent positive performance verdict.",
+    "O1": "Resolved: explicit route/action restrictions and cancel observation distinguished from backend-write absence.",
+    "O2": "Resolved: common policy core and small correlated nine-pair sample disclosed."
+  },
+  "findings": [],
+  "acceptance_boundary": "The revised plan is adequate to prepare the separately reviewed corpus, oracle and harness within authorized evaluation-only scope. This receipt is not corpus/oracle/harness preflight, smoke acceptance, execution evidence, final artifact approval, task verification or release approval.",
+  "remaining_gates": [
+    "Independent exact corpus/oracle/harness preflight before smoke and full sessions.",
+    "Separate smoke evidence for app/owner/packet transfer and privacy/cleanup; changed artifacts need renewed applicable preflight.",
+    "Independent exact final artifact and semantic-scoring review, with later verified-status bytes reviewed separately."
+  ],
+  "preservation": "Frozen production runtime/source, G01-G07 evidence and failed gates, Claude/Cursor deferrals, original human/second-application requirements, private candidate/public HOLD and no commit/push/publication or subsequent task remain explicit.",
+  "changes_made": "Only this r2 review receipt; plan, prior receipt and implementation untouched."
+}

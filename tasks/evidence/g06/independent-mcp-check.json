@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/g06_review",
+  "runtime": "v24.20.0",
+  "verdict": "PASS",
+  "checks": [
+    "generated JSON schema equals runtime schema",
+    "all MCP listed schemas exact runtime identities",
+    "query compact input published, readOnlyHint true",
+    "actual stdio ingest then compact query returns cited Cancel evidence and requires_check"
+  ],
+  "limitations": [
+    "synthetic local stdio; no browser or native-host/discovery qualification"
+  ]
+}

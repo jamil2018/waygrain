@@ -1,0 +1,52 @@
+{
+  "task": "G06",
+  "reviewer": "/root/g06_review",
+  "role": "independent verifier and exact-artifact reviewer; no implementation authored",
+  "reviewed_at_utc": "2026-10-14T18:07:03.254127+00:00",
+  "verdict": "ACCEPT",
+  "required_findings": [],
+  "artifact_manifest": "tasks/evidence/g06/artifact-sha256.json",
+  "artifact_manifest_sha256": "889f01a25b1537b55e9b8ae038e507c5c4ca7ee8eca671d3867c7cf1a739d681",
+  "artifact_files_verified": 536,
+  "protocol_sha256": "aa0856f40df522ba53e10f847ad6f44573a62b505be41b7309bb6e6622204250",
+  "verification": {
+    "runtime": "Node24.20.0/macOS arm64",
+    "final_tests": {
+      "command": "node --test tests/compact-query.test.mjs tests/contracts.test.mjs tests/query.test.mjs tests/retrieval.test.mjs",
+      "tests": 44,
+      "passed": 44,
+      "failed": 0,
+      "log_sha256": "b7ef27ce458ec5d8d0550fe4289f25adb2160fbfa1acfbba398da2f4990f4d17"
+    },
+    "reviewer_benchmark": "independent-comparison.json",
+    "reviewer_mcp_schema_check": "independent-mcp-check.json",
+    "independent_python_recomputation": "PASS all120 unique pairs,30/case,per-case min/median/max and aggregate medians,2-to-1 calls, exact response byte identities",
+    "original_inputs_unchanged": 341,
+    "authorized_original_edits": [
+      "skills/understand-product/SKILL.md",
+      "src/contracts/knowledge.ts",
+      "src/contracts/records.ts",
+      "src/core/query.ts"
+    ],
+    "archived_document_prefixes_verified": 4,
+    "archived_g05_runtime_files_verified": 83,
+    "unexpected_input_mutations": 0
+  },
+  "reviewed_axes": {
+    "correctness": "Exact capture citations/view nodes resolve against unchanged structured sources; freshness uses same matched capture summary, no optimistic age transfer. Default outputs retain archived identities; opt-in search only rejects unsupported kinds/modes. Partial/contradicted/missing/tombstoned scopes retain honest behavior.",
+    "architecture_readability": "Small extraction helper, schema-owned opt-in shape; no new storage/migration/tool/model/graph-ranking feature. Existing query budget/cursor orchestration reused.",
+    "privacy_security": "Only sanitized normalized stored fields copied; source pointers are descriptive, no locator hints/actions/browser calls/writes. No broader privacy/host claim; untrusted evidence warning retained.",
+    "performance": "Four frozen fixtures provide required fields in one call,120 paired repetitions show median combined bytes2459.5->1832.5,25.493percent reduction. Reviewer repeat reproduces bytes; latency distributions separated, local submillisecond core microbenchmark only.",
+    "documentation": "Explicit ADR002/plan amendment, implemented pending verification status and preserved original docs/evidence; G05 failures and Claude/Cursor deferrals/public HOLD retained."
+  },
+  "limitations": [
+    "Capture-only16-node prefix projection, not full-text semantic query or general graph/annotation retrieval",
+    "Tokens unmeasured; no reduced browsing, model cost, end-to-end agent speed, notes superiority or release-gate reversal established",
+    "Existing G04 candidate remains historical; new runtime separately identified, no packed/native-host/browser/platform/globalprivacy qualification"
+  ],
+  "closure_requirements": [
+    "Author may append verified closure after this independent acceptance",
+    "Archive this accepted implemented manifest/report/register before status-only changes; separate final-document-review must bind later exact manifest/document bytes",
+    "Do not commit,push,publish or start later task"
+  ]
+}

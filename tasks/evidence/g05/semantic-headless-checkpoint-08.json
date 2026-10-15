@@ -1,0 +1,323 @@
+{
+  "reviewer": "/root/g05_review",
+  "cohort": "headless_three_workers",
+  "checkpoint": "08",
+  "reviewed_zero_based_indices": [
+    210,
+    239
+  ],
+  "prefix_sha256": "8152aff347d033a2ac04f1a0d1ce8fd45e6cb44350adae931c268b19788f210c",
+  "rows": [
+    {
+      "key": "members-explain|waygrain|warm|3",
+      "final_sha256": "674493c361749bb40e124d3e823f3e337a0bc8de0ef8eafe9804c130f49a3a29",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 210
+    },
+    {
+      "key": "members-explain|browser-only|warm|3",
+      "final_sha256": "e253c80b4235ee5713ff8f8c0974a11229b1d07bc0545fca832ad7a15ef4b748",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 211
+    },
+    {
+      "key": "members-explain|notes-folder|warm|3",
+      "final_sha256": "79b0d659575b72382087124cd03705f30f72f8f2e87b427e052989d98bf9369a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 212
+    },
+    {
+      "key": "viewer-policy|browser-only|warm|3",
+      "final_sha256": "0256ce381d41b5efed7c8ae8048888c7f95adff5dbb3ecb4ed885be7889e5b62",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 213
+    },
+    {
+      "key": "viewer-policy|notes-folder|warm|3",
+      "final_sha256": "76901e3491d1447ebe5c15c738c2e1eed7900157fef708c36f92b6d78cdd43ba",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 214
+    },
+    {
+      "key": "viewer-policy|waygrain|warm|3",
+      "final_sha256": "2317fd1e651eaffb3da1920d1394e17b35b504a2b48aca7a27485128a484b6df",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 215
+    },
+    {
+      "key": "settings-compare|notes-folder|warm|3",
+      "final_sha256": "7abf560e6540d5de8bf7d00591edc3d76b218c5467a794cc65d28d7c36d8d3a2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 216
+    },
+    {
+      "key": "settings-compare|waygrain|warm|3",
+      "final_sha256": "6d5877dc9276a2ead8da39a9bf5c255b5672e03e132c0d6d1cdd32797732eda8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 217
+    },
+    {
+      "key": "settings-compare|browser-only|warm|3",
+      "final_sha256": "54940ba5ad6dd44d141d4515be0061390a1489796afd77e7897fd4314bb9f734",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 218
+    },
+    {
+      "key": "detail-preparation|waygrain|warm|3",
+      "final_sha256": "e0763adc0e3e90e6d6dc09b7f46fc32fbc8e79ce8d57a7f959f4abea7abc9ced",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 219
+    },
+    {
+      "key": "detail-preparation|browser-only|warm|3",
+      "final_sha256": "cb30fb59442ef17ba965b3ac4cac20504b936571599c4a4fc9f0f5a84f3ae095",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 220
+    },
+    {
+      "key": "detail-preparation|notes-folder|warm|3",
+      "final_sha256": "e14c7fdac8dc0207322fbb0bac86dc697b108cd7e74ff51a1d1b8ef699b5e9ad",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 221
+    },
+    {
+      "key": "invite-cancel|browser-only|warm|3",
+      "final_sha256": "eb6cfc9b595a72539af0ab34eeb2df92ffcfaf5d06bf4c1fb3237aed65024a0e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 222
+    },
+    {
+      "key": "invite-cancel|notes-folder|warm|3",
+      "final_sha256": "3f3e42aed8c907893c071fa2f03d41194da6a8fb63c21047dd121cd82299261e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 223
+    },
+    {
+      "key": "invite-cancel|waygrain|warm|3",
+      "final_sha256": "d464213ad827e4e4575ee2d8d90c15078b21b7e0dbe0fe6b7065dfff728fa0c2",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 224
+    },
+    {
+      "key": "pending-switch|notes-folder|warm|3",
+      "final_sha256": "d413614d5f74fa73e8eb3b826a941dc70d790ebbf54c51d523f08a6a49f1e09b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 225
+    },
+    {
+      "key": "pending-switch|waygrain|warm|3",
+      "final_sha256": "8082ce1f79693171fb2cbdd5c5e1385e70f9243adf8a2d936ab8a26a0de7d7af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 226
+    },
+    {
+      "key": "pending-switch|browser-only|warm|3",
+      "final_sha256": "924f745b29744d6b19b0bf2374503373453ffeacc99c83189c18baacd819106c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 227
+    },
+    {
+      "key": "active-return|waygrain|warm|3",
+      "final_sha256": "08f4ed798acbbd47344594be8dcce150234ca2b94f9e22729cf8a09a839e9367",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 228
+    },
+    {
+      "key": "active-return|browser-only|warm|3",
+      "final_sha256": "ea1f519890dcaa58304b27365e8cf82677acf9118570c6b22bfe6369a4528cee",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 229
+    },
+    {
+      "key": "active-return|notes-folder|warm|3",
+      "final_sha256": "2761cafed63d3be871e9a6c990dbc73b961bbe7f86bd23895da679ab6c986c5b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 230
+    },
+    {
+      "key": "viewer-no-act|browser-only|warm|3",
+      "final_sha256": "4bf4bde8dd5d76b21d5ae7c1fd71baf24818851cfe9addb8212d0d0c889f31b8",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 231
+    },
+    {
+      "key": "viewer-no-act|notes-folder|warm|3",
+      "final_sha256": "67b3cf40c3834e9b1624f223f45db11463ae956a2e24a99010ffa3f619d51ceb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 232
+    },
+    {
+      "key": "viewer-no-act|waygrain|warm|3",
+      "final_sha256": "4bca57c47acde154a670ed4c79b05873fc77c59231fd6a6445ac690a2a576d94",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 233
+    },
+    {
+      "key": "invite-change|notes-folder|warm|3",
+      "final_sha256": "c140570d08cf1e8f420834b7deca112dd77491ad18ad7fca9561c3539a81879a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 234
+    },
+    {
+      "key": "invite-change|waygrain|warm|3",
+      "final_sha256": "5b69ed46b3b2b4631a7494ef414799a43f438017b0bd171c49b78bcf2f0993c3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 235
+    },
+    {
+      "key": "invite-change|browser-only|warm|3",
+      "final_sha256": "e9fbe0e2a15bb000fcea91c9cef0d311f274656a5916fd4a1778dcc06f592737",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 236
+    },
+    {
+      "key": "detail-change|waygrain|warm|3",
+      "final_sha256": "ef48bcc4b291d325431c00146b20c3bb917a0d795232a3bed8717d0b6adfaa4e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 237
+    },
+    {
+      "key": "detail-change|browser-only|warm|3",
+      "final_sha256": "2dcacc713ec8eb89b3b952d4e539113b3d69c4ebad1ae42a27328c764583851a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 238
+    },
+    {
+      "key": "detail-change|notes-folder|warm|3",
+      "final_sha256": "bd3ce0328b3f874878422238908c6ec2e1b8b75393b3dbf6a8ca66ddc78a9617",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Full prose/all structured refs independently read; current/historicalv1 scoped facts support required/extra assertions; action before/intermediate/final outcomes verified; no unsupported backend assertions",
+      "zero_based_index": 239
+    }
+  ],
+  "findings": [],
+  "summary": {
+    "semantic_correct": 30,
+    "correct_and_grounded": 30,
+    "wrong_attempts": 0,
+    "wrong_dispatched": 0,
+    "unsupported_claims": 0
+  },
+  "limitations": [
+    "Warmrep3 checkpoint only; formatting fragments assessed alongside complete prose"
+  ]
+}

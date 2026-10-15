@@ -1,0 +1,283 @@
+{
+  "reviewer": "/root/g07_review",
+  "packet_sha256": "55c3577f521ec64835a27852bb2d52961f7a86c2b45d8e4117d599859b3d15bf",
+  "range_zero_based": [
+    30,
+    59
+  ],
+  "review": "30substantively correct,29grounded; one notes invalid optionalpath, no falsefacts/wrongactions. Compact Remove path verified actual source eligibility.",
+  "rows": [
+    {
+      "key": "members-explain|notes-folder|warm|1",
+      "final_sha256": "f28a855c65b8f934aab9aaef25abd22962812b4a05f656d9e316efb31e5fdad4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "members-explain|legacy-waygrain|warm|1",
+      "final_sha256": "f28a855c65b8f934aab9aaef25abd22962812b4a05f656d9e316efb31e5fdad4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "members-explain|compact-waygrain|warm|1",
+      "final_sha256": "901a5638ebe1a0e0510d5cd198f588272acbcf981ed862014311732b1e4ddf6c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "viewer-policy|legacy-waygrain|warm|1",
+      "final_sha256": "aa17ae9d76092a625aa0ad7e3cd9c85023c656c5fc55d3896aafff0f099bccd1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "viewer-policy|compact-waygrain|warm|1",
+      "final_sha256": "f7ab7a5e0c2fea147f140a24e0ad4bb2d0a1c435ad17f4d63deb9b1dc285e01a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "viewer-policy|notes-folder|warm|1",
+      "final_sha256": "bd8b26616515f7f9951026615ac74e8184f7bd8d5627749a52d6027f10137353",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "settings-compare|compact-waygrain|warm|1",
+      "final_sha256": "ebdcee3b0c8196030284e03bcf22a9e9d828b5ff4a22001571e7e51c47e23090",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "settings-compare|notes-folder|warm|1",
+      "final_sha256": "74de70f0fe064330629c3718f243fc4c849788fa0a3df51229cac12aad3b9539",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|warm|1",
+      "final_sha256": "d788ff39c817196954c1372392e2c3d7eb4157f04cec2934a6eff53a620f71c6",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "detail-preparation|notes-folder|warm|1",
+      "final_sha256": "ccb0c23e37a032641b069c890283e163c40287b316a4ae8fcc165d882c84701b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "detail-preparation|legacy-waygrain|warm|1",
+      "final_sha256": "cf30ce9e48d2900ec921d513813696663f6106cf9c6cc2445a692cf4abbd2e7d",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "detail-preparation|compact-waygrain|warm|1",
+      "final_sha256": "d43a700d20a5c58461f36a6e828b1fef91c1bbd5df973231d99420c96e0bfbbd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|warm|1",
+      "final_sha256": "270f6ba3c61f49e7f956b54b7caacc93613bc1274cd8be8f9f45b2b609158468",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|warm|1",
+      "final_sha256": "decdce0afb814865e05e02a578b26de6e0df4368d217dab306aeb59e951a5d58",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "invite-cancel|notes-folder|warm|1",
+      "final_sha256": "23b0364c6de7fbfa67897afe023f422c8e2ccc4a2cf1b78ec09a18d200e7b55b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "pending-switch|compact-waygrain|warm|1",
+      "final_sha256": "a0f9451fe1860ae3eaeb3438da410172ee458b1c2a8fdb2c6a406c8d8dcb0c3a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "pending-switch|notes-folder|warm|1",
+      "final_sha256": "b0642a408ccd960df7bea11b0efd635fa12147c067f54701f7c44b9f08692ab3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "pending-switch|legacy-waygrain|warm|1",
+      "final_sha256": "9a4babffb8b0324986c1f5dd5af22377cb997c8557d154a236445f59e099b05c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "active-return|notes-folder|warm|1",
+      "final_sha256": "f5fc45fb3cdd8efe95f03b7a9c6ad384abd977054c1c25f25b503a92c4266bf8",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "selected_tab"
+      ],
+      "notes": "True intermediate/final tab claims, but dot capture paths appended to evidence IDs are invalid optional JSON Pointer locations; prose bareIDs cannot waive explicit per-claim references."
+    },
+    {
+      "key": "active-return|legacy-waygrain|warm|1",
+      "final_sha256": "a0c4724a250c2170bfcadeae673443fdb5155a72242c6a737a42b83106a45a37",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "active-return|compact-waygrain|warm|1",
+      "final_sha256": "812a6394f639d9dc98a0068d0e3409c9fa4ec1965695c78e861a55f3b5e5f61f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "viewer-no-act|legacy-waygrain|warm|1",
+      "final_sha256": "866606ebd9de117c4d0bd81e97e32afa1b07df0ecd5876b1fda4639263baab8a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "viewer-no-act|compact-waygrain|warm|1",
+      "final_sha256": "915b09d9f7de9aecd6673a5a392679811b526023f37df86fd98b20c08859be96",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "viewer-no-act|notes-folder|warm|1",
+      "final_sha256": "76bfcc83a02041f5084ce64166d12a617deba925e0bda33b7f7f87bc5e85cbeb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "invite-change|compact-waygrain|warm|1",
+      "final_sha256": "54e289c99d33d7e549f843705b23bb051604202a9c04ce81c1556b91d506567b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "invite-change|notes-folder|warm|1",
+      "final_sha256": "f3d07ca46294d025371b242e038e6252be903ce0852a7ba979b87247e67434bb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "invite-change|legacy-waygrain|warm|1",
+      "final_sha256": "13ba786709128cf42bbe8d1ea67bd9cf8c246142e5a63959cbd6dd507fd34dc9",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "detail-change|notes-folder|warm|1",
+      "final_sha256": "66d4f555c2f68be2374b3625a413e943b406e9cf08d54c0bf15b0b402573e201",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|warm|1",
+      "final_sha256": "1707d72b6d6476c9ce6bc25f63844b84b10c39b3315c850e6a791fb10f20e22e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    },
+    {
+      "key": "detail-change|compact-waygrain|warm|1",
+      "final_sha256": "190a9a55db12d1ef20037ac1fecb907f918b34fb4f81b19b9a75a84f2093f727",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims, actual exposure/scoped current observations and authorized intermediate/final actions checked. Semantically supported extra subjects and ordinary prose values accepted; strict canonical diagnostic separate."
+    }
+  ]
+}

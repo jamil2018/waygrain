@@ -1,0 +1,40 @@
+{
+  "reviewer": "/root/g05_review",
+  "date_local": "2026-10-12",
+  "verdict": "ACCEPT_G05_EXACT_IMPLEMENTED_STUDY_ARTIFACT_WITH_FAILED_GATES",
+  "artifact_manifest_sha256": "090cc9908a37050d4a0015e6be42f0bf370b5ee1ddb10db22ffa34bce1b8b531",
+  "matrix_file_sha256": "600a823f5ce3ca8879e3575f57e99927053fd42ea3134e96e3e35f69d806f79c",
+  "semantic_bindings_sha256": "5c73484d85114dcc2e8a3b60297b134427faaf3b2ca60d3b4066b3d4a1140585",
+  "checks": [
+    "All142 exact manifest hashes match",
+    "All83 compiled runtime files match original frozen runtime identities; all7 executable harness/test files unchanged from amended preflight",
+    "All165 original tracked historical evidence files byte-identical baseb40745ca36a27e10d33c8a6e38e17b76ce68da0a; original plan/todo/evaluation/release document bytes remain prefixes",
+    "All270 unique frozen allocation tuples and exact final-answer semantic bindings verified across9 separately preserved independent checkpoints",
+    "Independently read every usable full prose/claim record against matching scoped facts/frozen fixture;269substantivelycorrect,266groundedaccepted,0false assertions;1timeout plus3uncitedtrueclaims retained",
+    "135permitted model-selected clicks observed correct intermediate/final states;0wrong or invalid attempts",
+    "All270 headless booleans true,0unexpected host items,allcleanupcomplete;90 triads actualoverlap minimum12556ms,max3",
+    "Semantic summary byte-equivalent to independent analyzer recomputation; independent Python task-median metric recomputation matches warm0%calls,-1.2180958%time,-7.3033588%tokens andcold5.9456543%overhead",
+    "Independent9 meaningful focused grader/scheduling/artifact tests pass; writer Node24 broad112test quality receipt read with attribution; gitdiffcheckpasses",
+    "Documentation relative links resolve; results retain headlessparallel/synthetic/capture-onlyprompt limits, missing coldtimeout token aggregate, strict-vs-semantic diagnostics and scopedgate verdicts",
+    "Permanent full/partial/smoke matrices contain no rawtree/inputvalue keys or synthetic sensitive marker leaks; no broader hidden-host privacyattestation inferred",
+    "Public HOLD/private0.0.0 andClaude/Cursor deferred/unverified,humanadoption/secondapp unmet preserved; no product implementation,commit,push,publish orlater task authority"
+  ],
+  "required_findings_remaining": [],
+  "gate_verdicts": {
+    "warm_efficiency": "FAILED",
+    "success_grounding_no_regression": "FAILED",
+    "changed_claim_applicability": "FAILED",
+    "additional_wrong_actions": "PASS_SCOPED_SYNTHETIC_REVERSIBLE_CLICKS_ONLY",
+    "cold_overhead": "WITHIN15_PERCENT_BOUNDED_STUDY_ONLY",
+    "break_even": "NOT_ESTABLISHED",
+    "public_release": "HOLD"
+  },
+  "limitations": [
+    "Final documentation status update requires narrow hash-bound acceptance of regenerated manifest; current artifact status implemented",
+    "Headlessthree-worker macOS Codex adapter synthetic evaluation; not productionheaded/nativeplugin/crosshost/isolatedlatency qualification",
+    "Three citationgaps trueassertions lacking explicitrefs; twochangedgaps criterion failure not observedstaledispatch",
+    "Missingtimeout tokens unmeasured and no final semantic claim alleged",
+    "Originalheaded76/inflight interruption and all qualification cohorts separate/unpooled",
+    "No reviewer broadNode24/26fullsuite claim;9focused independenttests only"
+  ]
+}

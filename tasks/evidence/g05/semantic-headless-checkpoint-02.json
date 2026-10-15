@@ -1,0 +1,334 @@
+{
+  "reviewer": "/root/g05_review",
+  "cohort": "headless_three_workers",
+  "checkpoint": "02",
+  "reviewed_zero_based_indices": [
+    30,
+    59
+  ],
+  "prefix_sha256": "f654bdf72eed80f84571b7c9f88fff05829904c15c9d7b7acd2829e4fd5f1296",
+  "rows": [
+    {
+      "key": "members-explain|browser-only|warm|1",
+      "final_sha256": "f18bebb2818f5121b6ad4a3e293607ff22e425a63fc474fdead1ac5d5eba15c5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 30
+    },
+    {
+      "key": "members-explain|notes-folder|warm|1",
+      "final_sha256": "42276bcaf39e4f02c5b3c97b728facd0616108b36a4282c318c5b1dcd5854203",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 31
+    },
+    {
+      "key": "members-explain|waygrain|warm|1",
+      "final_sha256": "bf8684d1a00dede2580aedf1d254178d3a1c33aa4351221d99c9c13379b910c5",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 32
+    },
+    {
+      "key": "viewer-policy|notes-folder|warm|1",
+      "final_sha256": "1740719b7f00db3b96ebf7a4fdf07bac1ccbef2d4c42c4c77b8c83630931885c",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 33
+    },
+    {
+      "key": "viewer-policy|waygrain|warm|1",
+      "final_sha256": "9a63a9d23600f325e9622cf6fced323fffd451c1d4ec137db327128c4bb7a9cb",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 34
+    },
+    {
+      "key": "viewer-policy|browser-only|warm|1",
+      "final_sha256": "520e15685b85d3209ebaf2f94d926d9c88a0e20f27da8452c5953a65a5f8fa14",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 35
+    },
+    {
+      "key": "settings-compare|waygrain|warm|1",
+      "final_sha256": "31fe0eaf022d93a719d234f68c9d71caf95f523dbf086d601fa112acb709649b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 36
+    },
+    {
+      "key": "settings-compare|browser-only|warm|1",
+      "final_sha256": "668f1447915001e9e2e56d118b297b19edc364fd6ec79ea8b34844f6a95cb3c9",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 37
+    },
+    {
+      "key": "settings-compare|notes-folder|warm|1",
+      "final_sha256": "2ce2e1dea5ebd57cc674787ab7bf918621d1b1090957007bd4c15cf680928910",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 38
+    },
+    {
+      "key": "detail-preparation|browser-only|warm|1",
+      "final_sha256": "c48fee2f429819547f9238ca14fdcde924c08b756c8e170dc2d8f13a64cc3d7a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 39
+    },
+    {
+      "key": "detail-preparation|notes-folder|warm|1",
+      "final_sha256": "9eb3fa5589e07aeda1cc6ff7b2a79f9c16ca1e3a84f085e5bafec04c4fb00f23",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 40
+    },
+    {
+      "key": "detail-preparation|waygrain|warm|1",
+      "final_sha256": "0bfc2d9f997be6259d920e51a0efbc59dd27135a616342bb6481ea90aefd4161",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 41
+    },
+    {
+      "key": "invite-cancel|notes-folder|warm|1",
+      "final_sha256": "bc79e276a3823d888855019b52a06b37d54fb298bc2c7c4a3e28375c720920d3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 42
+    },
+    {
+      "key": "invite-cancel|waygrain|warm|1",
+      "final_sha256": "59992c215937732cb07107088e947a1a3ca739f63545013a093bee98a72d7841",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 43
+    },
+    {
+      "key": "invite-cancel|browser-only|warm|1",
+      "final_sha256": "11d96c5a983c5e5afe7ba6e20fccf072bf1ce60aea989e43531031b9bdd2ed66",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 44
+    },
+    {
+      "key": "pending-switch|waygrain|warm|1",
+      "final_sha256": "8082ce1f79693171fb2cbdd5c5e1385e70f9243adf8a2d936ab8a26a0de7d7af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 45
+    },
+    {
+      "key": "pending-switch|browser-only|warm|1",
+      "final_sha256": "13c195f37f074c0ba8a4f6c31c7abbc63a8cb11aa8e74127e4f41dce651d1406",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 46
+    },
+    {
+      "key": "pending-switch|notes-folder|warm|1",
+      "final_sha256": "d413614d5f74fa73e8eb3b826a941dc70d790ebbf54c51d523f08a6a49f1e09b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 47
+    },
+    {
+      "key": "active-return|browser-only|warm|1",
+      "final_sha256": "45b536bdceab3cec6fdcffb1b888fd78a671558933046a560fec5f8645f3bf2e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 48
+    },
+    {
+      "key": "active-return|notes-folder|warm|1",
+      "final_sha256": "dc62106c463a9353d4f054beaa1c3303cc160ab8c384f5a83d138c705af798fd",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 49
+    },
+    {
+      "key": "active-return|waygrain|warm|1",
+      "final_sha256": "2fdb2b599a8a2a0100ac2458dd61c7026928b6ef6b1028172c306903c4f35ab3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 50
+    },
+    {
+      "key": "viewer-no-act|notes-folder|warm|1",
+      "final_sha256": "9994ac71f3ac5636b72848f224df5c592ad4cf608fa8a139643b1a26abadaf00",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 51
+    },
+    {
+      "key": "viewer-no-act|waygrain|warm|1",
+      "final_sha256": "7892cfae3cea3c99471e428101681306dff4a26d7d4db4d9d4efadde34de54ab",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 52
+    },
+    {
+      "key": "viewer-no-act|browser-only|warm|1",
+      "final_sha256": "a89d35c0507104bc0739ef3dc3ac5f5f134a805b43bff67668903a3b7c82c1b4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 53
+    },
+    {
+      "key": "invite-change|waygrain|warm|1",
+      "final_sha256": "8283761ef8dff5066c0ccb446ae02a4b3c8ec64cbfe928298997adbf763c641e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 54
+    },
+    {
+      "key": "invite-change|browser-only|warm|1",
+      "final_sha256": "03429b8bf674662475a216fbe8755f6740a5fb8998970c818406e7752a1991c6",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 55
+    },
+    {
+      "key": "invite-change|notes-folder|warm|1",
+      "final_sha256": "dc48a8171cc6309653378157e0ecbf36dd85c86374ce42ef59bce8a8131d3e1e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 56
+    },
+    {
+      "key": "detail-change|browser-only|warm|1",
+      "final_sha256": "29b1f7361e3b16661500e11c2c1fefe86020e48507869bbcdf29e66c0e000b06",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 57
+    },
+    {
+      "key": "detail-change|notes-folder|warm|1",
+      "final_sha256": "714743bbc9ccc7dcef7a3d82d74ab8ae358627e29a2de42318316eee4a89e0a3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "basis": "Independently read full prose and claims; required/extra facts supported by scoped v1 observations and cited historical comparison; permitted actions/intermediate/final states checked",
+      "zero_based_index": 58
+    },
+    {
+      "key": "detail-change|waygrain|warm|1",
+      "final_sha256": "285b40d6de8ca89cdb7d9502a0ccd014d846eae9bcff3b2b411344dd93ab40fe",
+      "correct": true,
+      "grounded": false,
+      "freshness": true,
+      "unsupported_claims": [
+        "coverage_limits:missing_explicit_evidence_reference"
+      ],
+      "basis": "Substantively true coverage_limits claim has evidence:[]; explicit structured per-claim citation criterion unmet despite nearby prose refs",
+      "zero_based_index": 59
+    }
+  ],
+  "findings": [
+    {
+      "index": 59,
+      "key": "detail-change|waygrain|warm|1",
+      "kind": "uncited_true_claim",
+      "detail": "coverage_limits evidence empty; factual assertion true, grounding fails"
+    }
+  ],
+  "summary": {
+    "semantic_correct": 30,
+    "correct_and_grounded": 29,
+    "uncited_true_claims": 1,
+    "wrong_attempts": 0,
+    "wrong_dispatched": 0,
+    "false_assertions": 0
+  },
+  "limitations": [
+    "Warm checkpoint only; no headed results pooled",
+    "Explicit citation gap retained separately from factual falsehood"
+  ]
+}

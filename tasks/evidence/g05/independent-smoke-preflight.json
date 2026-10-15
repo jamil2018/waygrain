@@ -1,0 +1,43 @@
+{
+  "reviewer": "/root/g05_review",
+  "date_local": "2026-10-12",
+  "verdict": "ACCEPT_SEPARATE_THIRD_SMOKE_SESSION_SCOPED_SYNTHETIC_TOOL_APPROVAL",
+  "files": {
+    "tasks/evidence/g05/PROTOCOL.md": "98d39435e81627f8628ebc907701edc7cefc855f3c2366bd9c1734a3608aa486",
+    "scripts/evaluation/g05/protocol.mjs": "c89b76d0c9256b4ff7f5bf24bfbee6e4a28ab5ccc355fe9943a9c24235a24436",
+    "scripts/evaluation/g05/fixture.mjs": "4116338009e61ace9a1e824cdd6bc530bb94f08ce285bf378836a01580ffae41",
+    "scripts/evaluation/g05/server.mjs": "97f1a5f975125d919362d7a1552de597e0bdbce487dc5e12fa5ceefcd9c41bb4",
+    "scripts/evaluation/g05/run.mjs": "013a6f494dddc42c7386a8a837f78d197dddb5f9b6eb523b93b15306b988d6ba",
+    "tasks/evidence/g05/preserved-inputs-sha256.json": "226040deb39cec87915a44a7d87a92c71d8a1fa03f6a5a51d7c2eb1d115cb89f",
+    "scripts/evaluation/g05/analyze.mjs": "4fd4b5cff90da239dbba71b7988f44aa5b5670e77d04c71eea8504b30c6549b3",
+    "tests/g05-evaluation.test.mjs": "701be97d7438c4c9d4f364c63c9e2019cc5f6bdb32f633d620df3561b41e3f17"
+  },
+  "checks": [
+    "Read G01-G04 exact-review receipts, current plan/register and evaluation/release docs",
+    "Reviewed same runtime browser/action/mapper interfaces across arms; no product changes",
+    "Read-only ignored-user-config ephemeral Codex, shell disabled, study MCP only; synthetic declared route/role browser access",
+    "Owned detached process group TERM/KILL bounded, temporary trial cleanup, no raw host/browser output retained",
+    "All trials flush sanitized observations/actions/metrics; input fields unavailable, historical evidence preserved",
+    "Timing field corrected to residual_host_ms with explicit residual host overhead limitation; priming call deltas itemized",
+    "Initial smoke retained nine failed startup/cleanup-unconfirmed rows; zero final/token/MCP receipts, no results discarded",
+    "Reviewed grader corrections: changed invalid/missing final fails freshness; intermediate observed state required before next action; exact full tuple coverage checked",
+    "Second complete nine-row smoke retained; usable host output and browser cleanup but no executed MCP calls, approval-policy blocked tool use",
+    "Session-only study MCP approval mode and required server inspected; existing synthetic authorization, read-only/shell-disabled scope preserved",
+    "Official reference confirms mcp_servers.<id>.default_tools_approval_mode setting; tool usability still needs third smoke receipt"
+  ],
+  "required_before_full_preflight": [
+    "Independent inspection of successful smoke prose, token receipts, browser cleanup and scoped action/citation support",
+    "Freeze runtime/source/harness hashes and negative assessor tests",
+    "Distinguish canonical-value automated score from semantic reviewer adjudication; retain both without relabeling strict mismatch as semantic error"
+  ],
+  "limitations": [
+    "No approval for full matrix yet",
+    "Smoke does not pass efficiency/correctness/freshness or release gates",
+    "Current-target enforcement is harness safety, not autonomous freshness qualification",
+    "Synthetic MCP adapter only; Claude/Cursor deferred; public release HOLD",
+    "Parent reports direct loopback startup EPERM in sandbox, approved escalated probe successful; reviewer did not independently attest host environment restriction",
+    "Separate smoke is deliberate environment-adjusted harness qualification, not discarded/retried full-matrix evaluation"
+  ],
+  "initial_smoke_sha256": "f0ad9301b31b7e88646edbc62d93c27daf79d926ca7e87827e9ec5a3c9c53f6b",
+  "host_access_smoke_sha256": "6739b812e26950aab49ee8a40f19781cce5c9d98edc54d310a9f5e21c39aa192"
+}

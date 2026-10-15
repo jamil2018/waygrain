@@ -1,0 +1,21 @@
+{
+  "reviewer": "/root/g08_review",
+  "stage": "narrow final verified-status exact-document review",
+  "verdict": "ACCEPT_FINAL_VERIFIED_STUDY_DOCUMENTS",
+  "manifest_path": "tasks/evidence/g08/final-artifact-manifest.json",
+  "manifest_sha256": "a5846327588d78f6846b134fb51b9f058ca379b215417d0498015eb5f49ce1c2",
+  "manifest_files": 142,
+  "manifest_mismatches": 0,
+  "prior_implemented_manifest_sha256": "9df0515cf48f43edcb99372c37d1e9755eeb127b9ae5a1d36b32fc2509bd5d7c",
+  "prior_implementation_review_sha256": "f7e85f73d78943153d465b251a8ddf6eae8c4b4aff230587bf7bc9d68f438bfb",
+  "findings": [],
+  "checks": {
+    "implemented_archives": "Original135-file implemented manifest byte-identical; original RESULTS,todo,evaluation,release copies match prior hashes. Prior review receipts and original evidence retained.",
+    "changes": "Only active RESULTS status/closure and G08-local todo status/review/closure changed after implementation acceptance. All other original135-file members unchanged; current142 hashes verified.",
+    "status": "Verified means completed independently accepted study procedure only; absolute quality FAIL, reuse benefit UNQUALIFIED/FAIL, no-regression PASS and all measured counts/qualifications unchanged.",
+    "preservation": "All607 historical source/runtime/evidence/document prefixes unchanged. Source-first/typed projection/preparation/host/synthetic limitations retained; no production feature, human/second-real-app/Claude/Cursor qualification or release HOLD reversal.",
+    "stop": "No next task or commit,push,publication performed/authorized by closure."
+  },
+  "acceptance_boundary": "Exact final verified-status artifact accepted with same limits as independent-final-review; not product/release/performance superiority approval.",
+  "changes_made": "Only this final-document-review receipt; all earlier receipts unchanged."
+}

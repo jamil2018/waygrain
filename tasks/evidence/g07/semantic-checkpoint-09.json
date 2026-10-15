@@ -1,0 +1,283 @@
+{
+  "reviewer": "/root/g07_review",
+  "packet_sha256": "5b02480d0690e7f8b7b863a131f39d859f26285278cd415bad1ebdb4d201e019",
+  "range_zero_based": [
+    240,
+    269
+  ],
+  "review": "All30substantivelycorrect,29grounded/currentqualified; onelegacyemptyrefs. Nofalsefacts/wrongactions.",
+  "rows": [
+    {
+      "key": "members-explain|compact-waygrain|changed|3",
+      "final_sha256": "a1ab274a11cf8b56606f4642cb0b734d5179434bc6f347cc5277cfa9571c7909",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "members-explain|notes-folder|changed|3",
+      "final_sha256": "594f4002856c43020ca019a2a23f5e4280c56fd111c6ecc249784e8f1a618029",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "members-explain|legacy-waygrain|changed|3",
+      "final_sha256": "900325a915faf8bacf3b3396f820f1bc09c999034a5c4cf9cf3b58fa53c9e8b3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "viewer-policy|notes-folder|changed|3",
+      "final_sha256": "341f3b276ee156070d8f82881cc9a43c6121894684901fe422f9eff2a4542861",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "viewer-policy|legacy-waygrain|changed|3",
+      "final_sha256": "c39a8b7746f5a80f143ceb788e873dc417deeff9565ca595d769321f76b7fb8b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "viewer-policy|compact-waygrain|changed|3",
+      "final_sha256": "a9ca261cb90abc473874478444edb0eb6271dab228664ed15b957962569fb3e9",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "settings-compare|legacy-waygrain|changed|3",
+      "final_sha256": "dedba2b06b6af8f8af9e93538e050fc10fa21481f5450272da78c9d47b8517fc",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "settings-compare|compact-waygrain|changed|3",
+      "final_sha256": "eb525d1708041c6ac23d5ba0493637887888b9dba0e8db44d30af10afdb4d038",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "settings-compare|notes-folder|changed|3",
+      "final_sha256": "bdfa5e4ed7ce16f1a96572f361f16f761dc4bc1bd8b2389f8d8e3c9348eaee24",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "detail-preparation|compact-waygrain|changed|3",
+      "final_sha256": "5afe608225c9b9810e5ebcae4973d1a6d095229709c594384b5abad5a0ba6147",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "detail-preparation|notes-folder|changed|3",
+      "final_sha256": "5172616a40853a6a519e31d1841bf56b3cd44c0836ad17bf8f8b61379b9b3e6f",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "detail-preparation|legacy-waygrain|changed|3",
+      "final_sha256": "c6087cf48f3b84ae4044444e22bc4442d7b8ca7678ac523a10902673453aaec0",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "invite-cancel|notes-folder|changed|3",
+      "final_sha256": "0ed0daf55928e7ac7c20bd39e8678de855fb8d38dcf45b93e2eedab062ae882a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "invite-cancel|legacy-waygrain|changed|3",
+      "final_sha256": "1d4b8f3ee4c323487a76781aa1668e559dc8c2b56f3f4dc7babc65b06dc58961",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "invite-cancel|compact-waygrain|changed|3",
+      "final_sha256": "93d4890a6483fc478161742b526ba129730850fc2c5f99a63d63c161215e826e",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "pending-switch|legacy-waygrain|changed|3",
+      "final_sha256": "1c6fdf766aa481a7b8384b2a20c390ee9e8dc600fe259312aaf7f2d80646b931",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "pending-switch|compact-waygrain|changed|3",
+      "final_sha256": "b89a9d0d0c2814a3beb5cf3ef4eff82768d508b9ce7b37fe51082bfd829f62af",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "pending-switch|notes-folder|changed|3",
+      "final_sha256": "b0642a408ccd960df7bea11b0efd635fa12147c067f54701f7c44b9f08692ab3",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "active-return|compact-waygrain|changed|3",
+      "final_sha256": "25f3a8043b569e1cbb2645151cdb85c4fa64a2f8dfc4ccee6c43d936d04456f4",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "active-return|notes-folder|changed|3",
+      "final_sha256": "da05d21da7231b022e5fda69ba3fabfe4e1584c7de36863cd2ba9979d8d3a177",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "active-return|legacy-waygrain|changed|3",
+      "final_sha256": "96505bcfb648b6949e967175ac0640e7b4820dd066a38becc1ed6193a411411b",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "viewer-no-act|notes-folder|changed|3",
+      "final_sha256": "42a6e35f8cfc9599698e9f0d828650102a1edab43b1cf35cac23649f5b97b3fe",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "viewer-no-act|legacy-waygrain|changed|3",
+      "final_sha256": "3223acc02334a6af407612fa5c41b13b171d90fc6187ca74607f2267d03b92dc",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "viewer-no-act|compact-waygrain|changed|3",
+      "final_sha256": "078415e948e9cb62be7862de4498a8bad37a395a5596ad605d603d0710c3f75a",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "invite-change|legacy-waygrain|changed|3",
+      "final_sha256": "2e51f4f83ae12ec5e9ebe573660601f17a8f06816b26b99b49c68a00ddb6f6ba",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "invite-change|compact-waygrain|changed|3",
+      "final_sha256": "e0ff2d9ec61d1b7a217b9899e97400bfd39fb7cc6cf0c0cae6123673f6899162",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "invite-change|notes-folder|changed|3",
+      "final_sha256": "3d170252d50f597a35b564f7273c194ac3abcfa74121018d0fcd2a9cffd3f384",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "detail-change|compact-waygrain|changed|3",
+      "final_sha256": "e92310dc5ac4db672f915d5dbaf5ffd8efc1629950e5d63941950ad961de00d1",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "detail-change|notes-folder|changed|3",
+      "final_sha256": "a21027851b72d3ce9224a408eedf9fde812711de6d6ce761018f60d8bf002542",
+      "correct": true,
+      "grounded": true,
+      "freshness": true,
+      "unsupported_claims": [],
+      "notes": "All full prose/claims independently read against currentv2 scoped observations and actually exposed retainedv1 full/compactsources; exact Remove path and coveragelimits checked; authorized action intermediate/final states correct."
+    },
+    {
+      "key": "detail-change|legacy-waygrain|changed|3",
+      "final_sha256": "7728338bc345efa77b9a658a3e73ec22a5425c4fa3082c4d4e7231d83869d8e5",
+      "correct": true,
+      "grounded": false,
+      "freshness": false,
+      "unsupported_claims": [
+        "remove_changed"
+      ],
+      "notes": "True visibility change claim has explicit evidence:[]; nearby prose sources cannot waive per-claim refs. Currentclaim qualification fails; actual currentv2capture exists, not falsefact/staleaction."
+    }
+  ]
+}

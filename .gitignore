@@ -1,6 +1,9 @@
 .DS_Store
 node_modules/
 dist/
+# Immutable pre-G06 comparison fixture required by tests and retained evidence.
+!tasks/evidence/g06/prechange-runtime/dist/
+!tasks/evidence/g06/prechange-runtime/dist/**
 coverage/
 __pycache__/
 *.pyc
