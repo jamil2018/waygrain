@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00–W04 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W05. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00–W05 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W06. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -22,7 +22,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | W02 | A | Transactional descriptor persistence | W01 | verified |
 | W03 | A | Trusted scoped retrieval | W02 | verified |
 | W04 | A | Synthetic Calculate fixture and evidence | W03 | verified |
-| W05 | A | Phase A independent checkpoint | W04 | pending |
+| W05 | A | Phase A independent checkpoint | W04 | verified |
 | W06 | B | Local demo service and safe transport | W05 | pending |
 | W07 | B | Page and component authoring editor | W06 | pending |
 | W08 | B | Validated source and bundle import | W07 | pending |
@@ -154,7 +154,7 @@ Acceptance: [W04 exact artifact and independent review](evidence/w04/review.json
 
 ### W05 — Phase A independent checkpoint
 
-**Status:** pending. **Dependencies:** W04. **Phase:** A. **Size:** S.
+**Status:** verified. **Dependencies:** W04. **Phase:** A. **Size:** S.
 
 Verify the foundation as one integrated artifact before web authoring consumes it.
 
@@ -162,11 +162,13 @@ Verify the foundation as one integrated artifact before web authoring consumes i
 
 **Acceptance:**
 
-- [ ] A fresh synthetic store returns the seeded page/component rules with distinct evidence classes and scopes after restart.
-- [ ] Migration, failed writes, access-denial and legacy API tests have actual passing results or an explicit blocking relevant failure.
-- [ ] Independent acceptance binds W00–W04 artifacts; remaining host/platform limitations are stated.
+- [x] A fresh synthetic store returns the seeded page/component rules with distinct evidence classes and scopes after restart.
+- [x] Migration, failed writes, access-denial and legacy API tests have actual passing results or an explicit blocking relevant failure.
+- [x] Independent acceptance binds W00–W04 artifacts; remaining host/platform limitations are stated.
 
 **Verification:** Independent npm run check/build and focused persisted-fixture, migration and isolation probes; no paid providers or historical full model cohorts.
+
+Acceptance: [W05 integrated exact artifact and independent review](evidence/w05/review.json).
 
 ### W06 — Local demo service and safe transport
 

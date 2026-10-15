@@ -1,0 +1,23 @@
+{
+  "task": "W05",
+  "status": "ready for independent integrated checkpoint",
+  "dependencies": {
+    "W00": "922cd23",
+    "W01": "1988932",
+    "W02": "ef91548",
+    "W03": "efd5ef7",
+    "W04": "2ca6835"
+  },
+  "required_replay": [
+    "Verify accepted W00\u2013W04 current implementation bytes and scope-limited review receipts",
+    "npm run check",
+    "npm run build && node --test tests/descriptor/*.test.mjs",
+    "node tests/descriptor/fixture.browser.mjs (loopback permission needed)",
+    "Verify pre-W history/evidence files unchanged relative to baseline52324b7"
+  ],
+  "limits": [
+    "Local synthetic descriptor foundation only; service/editor/panels/providers later",
+    "Public release HOLD; production/runtime portability not established",
+    "No real stores/data or paid providers"
+  ]
+}

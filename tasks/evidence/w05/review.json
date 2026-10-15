@@ -1,0 +1,43 @@
+{
+  "reviewer": "/root/phase_a_checkpoint",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "1ed4bbd7ce5f6c87a3d0c934afba37243512795f524b2bdbff9b7041f119e6c3",
+  "environment": "Node26.11.0 Darwin arm64",
+  "commands": [
+    {
+      "command": "npm run check",
+      "exit": 0,
+      "result": "157/157 no fail/skip"
+    },
+    {
+      "command": "npm run build && node --test tests/descriptor/*.test.mjs",
+      "exit": 0,
+      "result": "19/19"
+    },
+    {
+      "command": "node tests/descriptor/fixture.browser.mjs",
+      "exit": 0,
+      "result": "Real Chromium permitted replay PASS no retained artifacts"
+    },
+    {
+      "command": "Additional inline synthetic integration probe",
+      "exit": 0,
+      "result": "11 scopes \u00d7 page/component retrieval byte-equivalent after restart; four classes retained; forged admin denied before SQL"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "preservation": [
+    "All50 W05 manifest entries match before/after execution",
+    "W00\u2013W04 implementation bytes and acceptance receipts unchanged; only allowed status-only register edits",
+    "440 baseline historical/archive/evidence hashes unchanged since52324b7"
+  ],
+  "findings": [],
+  "limits": [
+    "Synthetic Phase A only",
+    "Service/editor/adapter/panels/provider/production integration/platform portability unqualified",
+    "Public release HOLD"
+  ]
+}
