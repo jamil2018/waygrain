@@ -1,0 +1,51 @@
+{
+  "task": "W00",
+  "status": "implemented, pending independent acceptance",
+  "authorized_scope": "W00\u2013W23; prior work committed/pushed to main first; per-task commits/pushes authorized",
+  "base": "52324b742fa77ee448b489f77f126c802fec7870",
+  "environment": {
+    "node": "26.11.0",
+    "npm": "11.20.0",
+    "platform": "macOS arm64"
+  },
+  "commands": [
+    {
+      "command": "npm run check",
+      "exit": 0,
+      "result": "typecheck/lint/format/build; 138 tests PASS, no fail/skip"
+    },
+    {
+      "command": "npm run build",
+      "exit": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "npm run format:check",
+      "exit": 0,
+      "result": "PASS after narrow historical archive ignore exception"
+    },
+    {
+      "command": "python3 tasks/evidence/descriptor-plan/check-plan.py",
+      "exit": 0,
+      "result": "549 preserved files, exact archive; ran before changing active register status"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0,
+      "result": "PASS pre-W artifact"
+    },
+    {
+      "command": "npm run typecheck && npm run build && git diff --check",
+      "exit": 0,
+      "result": "PASS after W00 documentation/status edits"
+    }
+  ],
+  "preservation": "All preexisting tracked/untracked authorized work committed in 1b401ee and 52324b7. W00 changes only architecture, active status and new receipts. Frozen historical archive83 matches historical hashes.",
+  "choices": "See docs/descriptor-architecture.md",
+  "limitations": [
+    "No new descriptor runtime exists in W00",
+    "Baseline tests use installed dependencies, not fresh npm ci",
+    "Browser commands inspected, no new browser qualification",
+    "CI baseline run pending at W00 start; no public release"
+  ]
+}

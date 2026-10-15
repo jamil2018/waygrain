@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** planning complete; W00–W23 unstarted. **Next eligible task:** W00, once implementation is selected. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W01. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -17,7 +17,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 
 | ID | Phase | Task | Depends on | Status |
 | --- | --- | --- | --- | --- |
-| W00 | A | Baseline and freeze implementation choices | None | pending |
+| W00 | A | Baseline and freeze implementation choices | None | verified |
 | W01 | A | Semantic identity and claim contracts | W00 | pending |
 | W02 | A | Transactional descriptor persistence | W01 | pending |
 | W03 | A | Trusted scoped retrieval | W02 | pending |
@@ -64,7 +64,7 @@ A checked queue item means `verified`, never merely implemented. Append one resu
 
 ### W00 — Baseline and freeze implementation choices
 
-**Status:** pending. **Dependencies:** None. **Phase:** A. **Size:** M.
+**Status:** verified. **Dependencies:** None. **Phase:** A. **Size:** M.
 
 Inspect the working tree, actual store migrations, public exports, CLI/MCP and browser test commands; record current hashes and a keep/extend/bridge map. Freeze the five module boundaries, API access-context contract, limits, frontend/build choice and migration approach without changing product behavior.
 
@@ -72,11 +72,13 @@ Inspect the working tree, actual store migrations, public exports, CLI/MCP and b
 
 **Acceptance:**
 
-- [ ] Record actual Node/npm versions and baseline build/typecheck/lint/format/test results; classify existing failures without weakening tests.
-- [ ] Document additive migration/compatibility strategy, trusted scope origin, read-only versus authoring boundary, safe rendering and proposed command ownership.
-- [ ] Identify unrelated dirty files and historical fixtures; no reset, implicit migration, dependency upgrade or implementation claim.
+- [x] Record actual Node/npm versions and baseline build/typecheck/lint/format/test results; classify existing failures without weakening tests.
+- [x] Document additive migration/compatibility strategy, trusted scope origin, read-only versus authoring boundary, safe rendering and proposed command ownership.
+- [x] Identify unrelated dirty files and historical fixtures; no reset, implicit migration, dependency upgrade or implementation claim.
 
 **Verification:** Run existing npm run check and npm run build with recorded environment; inspect existing browser commands without blindly launching all studies. Independent reviewer checks choices against source and v0.3. Block only on failures relevant to safe implementation; record unrelated baseline regressions.
+
+Acceptance: [W00 exact artifact and independent review](evidence/w00/review.json).
 
 ### W01 — Semantic identity and claim contracts
 

@@ -1,0 +1,20 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "7630a0151f177559bed20c0374b666bef543798ef713ee1ef16b95f1e8ccf310",
+  "checks": [
+    "All4 manifest hashes match",
+    "595 baseline file hashes match base and worktree",
+    "npm run check EXIT0 PASS138/138",
+    "npm run build EXIT0"
+  ],
+  "findings": [],
+  "limits": [
+    "W00 only; descriptor runtime/UI/schema unqualified"
+  ],
+  "baseline_ci": {
+    "run": 38789913058,
+    "head": "52324b742fa77ee448b489f77f126c802fec7870",
+    "result": "PASS Node24/26"
+  }
+}
