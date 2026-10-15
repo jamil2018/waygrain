@@ -1,0 +1,31 @@
+{
+  "task": "W03",
+  "dependency": {
+    "W02": "ef91548",
+    "review_manifest": "7bcbdd57d10e357c212b22281a0e66c06f6bf638528157460e2f69bc608851ab"
+  },
+  "status": "implemented; pending independent acceptance",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "exit": 0
+    },
+    {
+      "command": "npm run build && node --test tests/descriptor/retrieval.test.mjs",
+      "exit": 0,
+      "result": "5 focused cases PASS"
+    },
+    {
+      "command": "npm run check",
+      "exit": 0,
+      "result": "154 PASS,0 fail/skip, typecheck/lint/format/build PASS"
+    }
+  ],
+  "scope": "Trusted context authorization before metadata projection; exact scope including unknowns; deterministic bounded page/component evidence package and source inspector. Retains conflicts/classes/freshness and explicit omissions.",
+  "limitations": [
+    "Internal core API; HTTP trusted-context construction is W06",
+    "No UI/caching/provider implemented",
+    "Node26/macOS synthetic checks only"
+  ],
+  "prior_task_ci": "W02 PASS remote Node24/26"
+}

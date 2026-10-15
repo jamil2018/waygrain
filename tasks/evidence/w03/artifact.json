@@ -1,0 +1,6 @@
+{
+  "src/descriptor/retrieval.ts": "fa11280beba64cad495e05d122134d38bcb9c9fd4afdfcd315873c078405b9d6",
+  "tasks/evidence/w03/RESULTS.json": "9cc3b00a1a4678db88748e7fd414761fdf9014d3bbaffc2f1214ca42e1ccf849",
+  "tasks/todo.md": "8d5cee7d99ec1e391c15408211af8aa6016bf94f1b6012fdd35ae5f51d99c0d1",
+  "tests/descriptor/retrieval.test.mjs": "9bc04700442feb855506eab316d8b13d7d5b28f6e6d1b01cef5e12846263ce5c"
+}

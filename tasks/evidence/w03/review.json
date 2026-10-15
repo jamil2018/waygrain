@@ -1,0 +1,15 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "1785cb762c64fbab9dd6aa10284e502e3779b999842e43f3af096f9505c38ac6",
+  "checks": [
+    "All4 hashes match",
+    "npm run check EXIT0 PASS154/154 no fail/skip",
+    "git diff --check PASS",
+    "Explicit unknown role grant returns only unknown records",
+    "Denied admin request refuses before any SQL (fail-fast db sentinel)"
+  ],
+  "limits": [
+    "Internal configured context only; HTTP/caches/provider/UI later"
+  ]
+}

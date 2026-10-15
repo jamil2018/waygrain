@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00–W02 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W03. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00–W03 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W04. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -20,7 +20,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | W00 | A | Baseline and freeze implementation choices | None | verified |
 | W01 | A | Semantic identity and claim contracts | W00 | verified |
 | W02 | A | Transactional descriptor persistence | W01 | verified |
-| W03 | A | Trusted scoped retrieval | W02 | pending |
+| W03 | A | Trusted scoped retrieval | W02 | verified |
 | W04 | A | Synthetic Calculate fixture and evidence | W03 | pending |
 | W05 | A | Phase A independent checkpoint | W04 | pending |
 | W06 | B | Local demo service and safe transport | W05 | pending |
@@ -118,7 +118,7 @@ Acceptance: [W02 exact artifact and independent review](evidence/w02/review.json
 
 ### W03 — Trusted scoped retrieval
 
-**Status:** pending. **Dependencies:** W02. **Phase:** A. **Size:** M.
+**Status:** verified. **Dependencies:** W02. **Phase:** A. **Size:** M.
 
 Implement deterministic page/component/source retrieval that separates access authorization from claim applicability.
 
@@ -126,11 +126,13 @@ Implement deterministic page/component/source retrieval that separates access au
 
 **Acceptance:**
 
-- [ ] Trusted configured access is enforced before titles, snippets, source locators or claim content leave the service; forged caller roles cannot expand access.
-- [ ] Unknown role is not wildcard; all scope dimensions and targets are matched; bounded ordering/truncation and missing-evidence results are explicit.
-- [ ] Results retain evidence classes, unknowns, conflicts, revision and freshness without upgrading imported observations.
+- [x] Trusted configured access is enforced before titles, snippets, source locators or claim content leave the service; forged caller roles cannot expand access.
+- [x] Unknown role is not wildcard; all scope dimensions and targets are matched; bounded ordering/truncation and missing-evidence results are explicit.
+- [x] Results retain evidence classes, unknowns, conflicts, revision and freshness without upgrading imported observations.
 
 **Verification:** Table-driven allow/deny tests across project/app/role/tenant/environment/version/UI state, unknowns and bounds; sentinel restricted data must be absent from every response field; typecheck/build.
+
+Acceptance: [W03 exact artifact and independent review](evidence/w03/review.json).
 
 ### W04 — Synthetic Calculate fixture and evidence
 
