@@ -1,0 +1,67 @@
+{
+  "task": "W04",
+  "dependency": {
+    "W03": "efd5ef7",
+    "review_manifest": "1785cb762c64fbab9dd6aa10284e502e3779b999842e43f3af096f9505c38ac6"
+  },
+  "status": "implemented; pending independent acceptance",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "exit": 0
+    },
+    {
+      "command": "npm run build && node --test tests/descriptor/fixture.test.mjs",
+      "exit": 0,
+      "result": "3 focused cases PASS"
+    },
+    {
+      "command": "node tests/descriptor/fixture.browser.mjs (sandbox)",
+      "exit": 1,
+      "result": "Loopback listen EPERM; environment restriction"
+    },
+    {
+      "command": "node tests/descriptor/fixture.browser.mjs (permitted execution)",
+      "exit": 0,
+      "result": "Real Chromium calculations/validation,labels,keyboard,4 viewports PASS; no retained artifacts"
+    },
+    {
+      "command": "npm run check (r1)",
+      "exit": 1,
+      "result": "Test URL imports missing; corrected"
+    },
+    {
+      "command": "npm run check (r2)",
+      "exit": 0,
+      "result": "157 PASS,0 fail/skip; typecheck/lint/format/build PASS"
+    },
+    {
+      "command": "npm run check (r3 review corrections)",
+      "exit": 1,
+      "result": "156 pass; duplicate key assertion used component-only context instead of whole-page context; corrected test target"
+    },
+    {
+      "command": "node tests/descriptor/fixture.browser.mjs (review corrections, permitted)",
+      "exit": 0,
+      "result": "PASS including clearing prior discount note"
+    },
+    {
+      "command": "npm run check (r4)",
+      "exit": 0,
+      "result": "157 PASS no fail/skip; typecheck/lint/format/build PASS"
+    }
+  ],
+  "fixture_limits": "Integer quantity0\u201310000; price0\u20131000000 with up to4decimals; integer arithmetic half-up cents. Tax unknown; no real transactions.",
+  "evidence": "Four classes; code source exact file content/hash/revision/symbol and verification method; observed quantities9/10 only. Eleven explicit synthetic scopes include two roles/two versions,tenant/state/unknown/conflict/mapping/freshness cases.",
+  "limitations": [
+    "Synthetic semantics only",
+    "No descriptor authoring/panels/provider yet",
+    "Real-browser semantic/layout assertions, no retained visual artifacts",
+    "Browser requires loopback/browser execution permission in this sandbox"
+  ],
+  "review_corrections": [
+    "Explicit changed-version state at version2 with reason and test",
+    "Concrete duplicate mapping keys and missing-control key",
+    "Invalid input clears old discount note"
+  ]
+}

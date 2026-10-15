@@ -1,0 +1,11 @@
+{
+  "assets/descriptor-demo/app.mjs": "45c30df895bb0683bb623398e34ad00b43f980c210534f9f3a42215f5760511a",
+  "assets/descriptor-demo/calculate.mjs": "9f93d6642e198e285f28afdf84e0bc946469480be7ba46cfbb08100a7ae933fc",
+  "assets/descriptor-demo/index.html": "867c77679963c0db58d7582417166a294cfcfbb7f94d4025062c43d67b875935",
+  "assets/descriptor-demo/style.css": "a3b0dfc0ba0bb6b0876032685964a346892004cd713df27c8cd758440d9b239d",
+  "src/descriptor/fixture.ts": "e05513724b05a01e9694f0dd7db5b12c48611655ab2530a02548b12a840a686c",
+  "tasks/evidence/w04/RESULTS.json": "9bebe67580c8040e6a32ad9200c495db5d5756decd1fbb94bc20fb351e07410c",
+  "tasks/todo.md": "3e25891201ff5476d8ee600af5b0e994d055d62514d1a986747bb4388738d44e",
+  "tests/descriptor/fixture.browser.mjs": "93d789eb1db09996b7491018780aa13a44c6707d8048c791efb2dc4173e2aaa4",
+  "tests/descriptor/fixture.test.mjs": "f85d07217defc14f92a36e2e262c7c9779004bbdf3de10d0ddd4c99be4e1cb0d"
+}

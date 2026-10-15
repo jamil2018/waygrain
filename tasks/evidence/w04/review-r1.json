@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "REQUEST_CHANGES",
+  "manifest_file_sha256": "9ebd6106efe373c9d3c3d078cf09929ed93197c9eb8d865ad12f9c001de222a9",
+  "checks": [
+    "All9 manifest hashes match",
+    "npm run check PASS157/157 no fail/skip",
+    "Real Chromium fixture script PASS no retained artifacts",
+    "git diff --check PASS"
+  ],
+  "required_findings": [
+    "Seed explicit changed-version review case distinct from unknown version"
+  ],
+  "recommended": [
+    "Concrete duplicate mapping keys",
+    "Clear stale discount message on invalid submit"
+  ]
+}

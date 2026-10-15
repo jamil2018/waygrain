@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "a179ccb2931b0d7f936be3d4e4c66406976cb6bc2ecb15a74582c0319acef65d",
+  "checks": [
+    "All11 hashes match; R1 retained",
+    "npm run check EXIT0 PASS157/157 no fail/skip",
+    "Real Chromium fixture final replay EXIT0 PASS no artifacts retained",
+    "git diff --check EXIT0"
+  ],
+  "resolved_findings": [
+    "Explicit changed-version case",
+    "Concrete duplicate/missing keys",
+    "Stale discount note cleared on invalid submit"
+  ],
+  "limits": [
+    "Synthetic fixture only; actual invalidation/adapter/panels/provider/production semantics later"
+  ]
+}

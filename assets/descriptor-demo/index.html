@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Waygrain — Calculate fixture</title>
+    <link rel="stylesheet" href="/assets/descriptor-demo/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/">Waygrain</a><span>Synthetic application · local demo</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">THE APPLICATION</p>
+        <h1>Calculate an order</h1>
+        <p>
+          A small application with rules you can inspect. Nothing here is a real
+          purchase.
+        </p>
+      </section>
+      <div class="workspace">
+        <section aria-labelledby="order-heading" data-waygrain-key="calculator">
+          <h2 id="order-heading">Order details</h2>
+          <form id="calculate-form" novalidate>
+            <label for="quantity">Quantity</label
+            ><input
+              id="quantity"
+              name="quantity"
+              inputmode="numeric"
+              value="10"
+              data-waygrain-key="quantity"
+              aria-describedby="quantity-help"
+            />
+            <p id="quantity-help" class="help">
+              Whole items, from 0 to 10,000.
+            </p>
+            <label for="unit-price">Unit price</label
+            ><input
+              id="unit-price"
+              name="unit-price"
+              inputmode="decimal"
+              value="10"
+              aria-describedby="price-help"
+            />
+            <p id="price-help" class="help">
+              Up to four decimal places. Synthetic units, no currency or tax.
+            </p>
+            <button type="submit" data-waygrain-key="calculate">
+              Calculate
+            </button>
+            <p id="calculation-error" role="alert"></p>
+          </form>
+        </section>
+        <section
+          class="result"
+          aria-labelledby="result-heading"
+          data-waygrain-key="result"
+        >
+          <p class="eyebrow">RESULT</p>
+          <h2 id="result-heading">Order total</h2>
+          <output id="total" aria-live="polite">Not calculated</output>
+          <p id="discount-note">Calculate to see the fixture result.</p>
+          <p class="help">
+            10% discount for quantities of 10 or more. Totals round half up to
+            two decimals. No payment, inventory change or network action.
+          </p>
+        </section>
+      </div>
+      <section
+        id="waygrain-documentation"
+        aria-label="Waygrain documentation"
+      ></section>
+    </main>
+    <script type="module" src="/assets/descriptor-demo/app.mjs"></script>
+  </body>
+</html>

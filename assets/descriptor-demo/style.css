@@ -1,0 +1,139 @@
+:root {
+  color-scheme: light;
+  --paper: #f5f4ef;
+  --surface: #fff;
+  --ink: #222d27;
+  --muted: #525d56;
+  --line: #ccd2c9;
+  --accent: #245541;
+  --error: #9b2525;
+  font:
+    16px/1.5 system-ui,
+    sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding: 1.25rem 5%;
+}
+header a {
+  color: var(--ink);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+header span,
+.help {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+main {
+  max-width: 72rem;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+.intro {
+  max-width: 42rem;
+  margin-bottom: 2.5rem;
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  margin: 0.75rem 0 1rem;
+}
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem;
+}
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.workspace > section {
+  padding: 2rem;
+  min-width: 0;
+}
+.result {
+  border-left: 1px solid var(--line);
+  background: #edf1e9;
+}
+label {
+  display: block;
+  font-weight: 600;
+}
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+.help {
+  margin: 0.5rem 0 1.25rem;
+}
+button {
+  font: inherit;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  border-radius: 0.25rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  min-height: 2.75rem;
+}
+:focus-visible {
+  outline: 3px solid #a75911;
+  outline-offset: 3px;
+}
+output {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 600;
+}
+[role='alert'] {
+  color: var(--error);
+}
+@media (max-width: 40rem) {
+  header {
+    flex-wrap: wrap;
+  }
+  main {
+    padding: 2rem 1rem;
+  }
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  .workspace > section {
+    padding: 1.5rem;
+  }
+  .result {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}

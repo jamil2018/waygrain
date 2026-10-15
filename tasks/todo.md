@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00–W03 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W04. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00–W04 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W05. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -21,7 +21,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | W01 | A | Semantic identity and claim contracts | W00 | verified |
 | W02 | A | Transactional descriptor persistence | W01 | verified |
 | W03 | A | Trusted scoped retrieval | W02 | verified |
-| W04 | A | Synthetic Calculate fixture and evidence | W03 | pending |
+| W04 | A | Synthetic Calculate fixture and evidence | W03 | verified |
 | W05 | A | Phase A independent checkpoint | W04 | pending |
 | W06 | B | Local demo service and safe transport | W05 | pending |
 | W07 | B | Page and component authoring editor | W06 | pending |
@@ -136,7 +136,7 @@ Acceptance: [W03 exact artifact and independent review](evidence/w03/review.json
 
 ### W04 — Synthetic Calculate fixture and evidence
 
-**Status:** pending. **Dependencies:** W03. **Phase:** A. **Size:** M.
+**Status:** verified. **Dependencies:** W03. **Phase:** A. **Size:** M.
 
 Build the small calculation page, result section, editable quantity and Calculate button with explicit target keys and matching knowledge fixtures.
 
@@ -144,11 +144,13 @@ Build the small calculation page, result section, editable quantity and Calculat
 
 **Acceptance:**
 
-- [ ] Fixture computes quantity × unit price, discounts 10% at quantity ≥ 10 and rounds to two decimals; validation/limits are documented and tested.
-- [ ] Seed two roles and two versions plus isolation sentinels for tenant/project/state; fixtures include documented, observed, inferred and supplied code verification with exact revision/method.
-- [ ] Seed unsupported tax, conflicting discount sources, unknown scope, missing/duplicate mappings and changed source/version cases; defaults remain the specified rule and fixtures never claim real-app semantics.
+- [x] Fixture computes quantity × unit price, discounts 10% at quantity ≥ 10 and rounds to two decimals; validation/limits are documented and tested.
+- [x] Seed two roles and two versions plus isolation sentinels for tenant/project/state; fixtures include documented, observed, inferred and supplied code verification with exact revision/method.
+- [x] Seed unsupported tax, conflicting discount sources, unknown scope, missing/duplicate mappings and changed source/version cases; defaults remain the specified rule and fixtures never claim real-app semantics.
 
 **Verification:** Persisted fixture queries assert scope and classes; calculation boundary/decimal/invalid-input tests; exact synthetic source identity checks; typecheck/build. Input values remain only transient demo state.
+
+Acceptance: [W04 exact artifact and independent review](evidence/w04/review.json).
 
 ### W05 — Phase A independent checkpoint
 
