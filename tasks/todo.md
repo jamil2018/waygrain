@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W01. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00–W01 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W02. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -18,7 +18,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | ID | Phase | Task | Depends on | Status |
 | --- | --- | --- | --- | --- |
 | W00 | A | Baseline and freeze implementation choices | None | verified |
-| W01 | A | Semantic identity and claim contracts | W00 | pending |
+| W01 | A | Semantic identity and claim contracts | W00 | verified |
 | W02 | A | Transactional descriptor persistence | W01 | pending |
 | W03 | A | Trusted scoped retrieval | W02 | pending |
 | W04 | A | Synthetic Calculate fixture and evidence | W03 | pending |
@@ -82,7 +82,7 @@ Acceptance: [W00 exact artifact and independent review](evidence/w00/review.json
 
 ### W01 — Semantic identity and claim contracts
 
-**Status:** pending. **Dependencies:** W00. **Phase:** A. **Size:** M.
+**Status:** verified. **Dependencies:** W00. **Phase:** A. **Size:** M.
 
 Define versioned descriptor schemas and the shared read/write envelopes before persistence or UI consumers.
 
@@ -90,11 +90,13 @@ Define versioned descriptor schemas and the shared read/write envelopes before p
 
 **Acceptance:**
 
-- [ ] Stable opaque IDs distinguish project/app/page/component/source/claim/revision from UI state/version; scope includes environment, version, role, tenant and UI variants with explicit unknowns.
-- [ ] Documentation and claims cover every v0.3 field; four evidence classes survive serialization; code verification requires exact revision/locator and method.
-- [ ] Reject malformed references/envelopes, invalid confidence/freshness and unsupported schema versions; limits and errors are explicit.
+- [x] Stable opaque IDs distinguish project/app/page/component/source/claim/revision from UI state/version; scope includes environment, version, role, tenant and UI variants with explicit unknowns.
+- [x] Documentation and claims cover every v0.3 field; four evidence classes survive serialization; code verification requires exact revision/locator and method.
+- [x] Reject malformed references/envelopes, invalid confidence/freshness and unsupported schema versions; limits and errors are explicit.
 
 **Verification:** Focused schema round-trip and negative tests, generated schema/export checks if exposed, typecheck/build and applicable contract regression suite.
+
+Acceptance: [W01 exact artifact and independent review](evidence/w01/review.json).
 
 ### W02 — Transactional descriptor persistence
 

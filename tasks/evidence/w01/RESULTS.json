@@ -1,0 +1,39 @@
+{
+  "task": "W01",
+  "dependency": {
+    "W00": "922cd23",
+    "review_manifest": "7630a0151f177559bed20c0374b666bef543798ef713ee1ef16b95f1e8ccf310"
+  },
+  "status": "implemented; pending independent acceptance",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "exit": 0,
+      "result": "PASS initial schema slice"
+    },
+    {
+      "command": "npm run check",
+      "exit": 0,
+      "result": "typecheck/lint/format/build PASS; 142 tests,0 fail/skip"
+    },
+    {
+      "command": "npm run check (timestamp and locator fixes)",
+      "exit": 0,
+      "result": "PASS143/143"
+    },
+    {
+      "command": "npm run check (UTF-8 byte-limit fix)",
+      "exit": 0,
+      "result": "PASS144/144"
+    }
+  ],
+  "scope": "Internal descriptor schemas; existing public contracts/exports/schema generation unchanged",
+  "findings": [
+    "R1 requested three corrections; corrected parsed timestamp, exact locator and UTF-8 bounds with regressions; resubmitted"
+  ],
+  "limits": [
+    "No persistence/access enforcement/browser UI implemented yet",
+    "Trusted context schema is configuration contract, never accepted from browser body",
+    "Cross-project consistency of stored identities is a W02/W03 boundary"
+  ]
+}

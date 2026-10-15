@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "2d3a6dd97de5c842562120c3248428b4a0fb6ace4cf1d36e02391c62babac6da",
+  "checks": [
+    "All7 hashes match; R1 manifest preserved",
+    "npm run check EXIT0 PASS144/144 no fail/skip",
+    "git diff --check EXIT0"
+  ],
+  "resolved_findings": [
+    "Parsed instants",
+    "Exact source locator",
+    "UTF-8 byte bounds"
+  ],
+  "limits": [
+    "W01 contracts only; store/access/UI unqualified"
+  ]
+}

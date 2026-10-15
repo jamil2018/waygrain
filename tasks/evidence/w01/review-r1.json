@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "REQUEST_CHANGES",
+  "manifest_file_sha256": "64dd797ff6abb0ce8d65ba61c37656fb002db00e942aa0327498903082d2bcb3",
+  "checks": [
+    "npm run check PASS142/142",
+    "all5 artifact hashes match"
+  ],
+  "required_findings": [
+    "Compare ISO timestamps by parsed instant, not lexical order",
+    "Validate source reference locator against retained source",
+    "Enforce UTF-8 bytes, not UTF-16 length for frozen text limits"
+  ]
+}

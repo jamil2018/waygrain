@@ -1,0 +1,7 @@
+{
+  "src/descriptor/contracts.ts": "c455764ee2aa27686dfd1d43d8c27e6a85b2087e4ea2f09f2f7b45126d3c8863",
+  "tasks/evidence/w01/RESULTS.json": "c8aceb95d6e82a721b58690e511185eb5cb7c2b6302fd700c3e92f38f49612f6",
+  "tasks/todo.md": "e948ae7a1c143f0a0c9ba1ece2aaf0ee4ed91a9e25f8d58e24d8c7f0b567368b",
+  "tests/descriptor/contract-fixture.mjs": "cf9c115d6eadd00b38a47e358cdf753f20b6396216b8516a5335566be09c8fb7",
+  "tests/descriptor/contracts.test.mjs": "da346c9f68d92345ed225701b4cec5134ec175f13f3064de1b98b779621a290a"
+}
