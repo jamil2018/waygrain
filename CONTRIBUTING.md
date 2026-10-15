@@ -1,38 +1,31 @@
 # Contributing to Waygrain
 
-Start with the [README](README.md), [implementation plan](tasks/plan.md), and [task register](tasks/todo.md). A02 introduces executable package setup and quality commands; product behavior remains assigned to later tasks.
+Start with the [v0.3 specification](docs/specification-v0.3.md), [implementation plan](tasks/plan.md), and [task register](tasks/todo.md). The current direction is a standalone app descriptor; the existing package supplies reusable foundations, not a finished documentation experience.
 
-## Select a bounded change
+## Select and execute a scope
 
-For roadmap work, have the product owner select one task. Confirm that every dependency is verified before starting. Complete that task's implementation, checks, independent verification and review, record the result, then stop. Documentation and repository maintenance requested separately should remain within that request and should not advance unrelated roadmap tasks.
+The user can select one task, a phase, or a batch. Verify dependencies before starting. For a batch, continue autonomously after each task's independent acceptance; a single-task request ends at that task. Resolve routine implementation choices within the plan without repeated permission. Record actual results and stop at the scope boundary or an actionable blocker. A planning request does not start implementation.
 
-Keep unrelated working-tree changes intact. Commit, push, merge, and publication require user authorization; completing an implementation task does not grant it.
+Preserve unrelated working-tree changes. Commit, push, merge, publication, license changes, paid providers and real-data integrations require scope-specific authorization.
 
-## Specification and decisions
+## Specification and history
 
-The [v0.2 specification snapshot](docs/specification-v0.2.md) defines the baseline. The [browser amendment](docs/decisions/001-bundled-browser.md) and implementation plan supersede it only for their explicit changes. Preserve the remaining knowledge and evidence contracts.
-
-Record consequential design changes in a numbered ADR under `docs/decisions/`. Explain the requirement, decision, alternatives and consequences. Preserve historical decisions and review receipts; use new evidence for later artifacts rather than rewriting a historical verification claim.
+[v0.3](docs/specification-v0.3.md) and [ADR-004](docs/decisions/004-standalone-app-descriptor.md) supersede the old memory-plugin-only roadmap. The [source receipt](docs/specification-v0.3-source.json) pins the supplied Page revision. Preserve historical v0.2, ADRs and review receipts, including the [prechange archive](tasks/history/2026-10-16-v0.2/INDEX.md). Do not turn historical failed gates into new-product success claims.
 
 ## Verification and review
 
-Use the selected task's acceptance criteria and record actual commands and results. Once the package exists, implementation tasks require focused meaningful tests, typecheck and build; checkpoints and shared-contract changes require broader checks. Before A02, document/source consistency and link/task-graph checks are applicable; unavailable runtime checks must not be reported as passed.
-
-Use Node.js 24 LTS and run:
+Use the selected task's acceptance criteria and record actual commands/results. Existing package quality commands include:
 
 ```sh
 npm ci
 npm run check
+npm run build
 ```
 
-The individual typecheck, lint, formatting, test and build commands are documented in the README. Place Node tests in `tests/**/*.test.mjs`. A02's empty harness reports zero tests; later task verification must add meaningful focused assertions. Browser scenarios will use the pinned Playwright Test package at their assigned gates.
+W00 records the current executable baseline. Focused meaningful tests, typecheck and build apply to implementation; shared contracts/storage/build changes and checkpoints require applicable broader regressions. Proposed demo/test commands are introduced later in the register, not already available. Real-browser checks use synthetic fixtures without retained screenshots, video, raw snapshots or traces. Existing unrelated failures remain reported; never weaken assertions to obtain a pass.
 
-The A01 Python checker is historical evidence specific to the original pre-bootstrap artifact, including package absence. Keep it unchanged; do not use it as a gate on later implementation.
+The A01 Python checker is historical evidence for the original pre-bootstrap artifact, including package absence. Keep it unchanged and do not apply it to the current package.
 
-An implementation author cannot approve their own artifact. Independent verification and review must identify the same final files or commit. Record hashes, commands, reviewer identity, findings, verdict and remaining limitations in task evidence. Later implementation changes invalidate review of the earlier bytes. Only a task with accepted checks and review becomes `verified`.
+Use one implementation writer and a separate independent verifier/reviewer. The author cannot approve their own artifact. Record exact file hashes, environment, commands, findings, verdict and limitations under the task evidence directory. Only accepted checks and exact-artifact review permit `verified`. Later substantive changes require renewed review.
 
-## Pull requests
-
-Keep changes focused. Explain the concrete problem, resulting behavior, validation and relevant limitations. Link the task and evidence where applicable. Avoid installation, portability, privacy-enforcement or performance claims before their gates pass. Use synthetic fixtures and sanitized examples; never include real credentials, raw captures, personal data, stores or backups.
-
-Report suspected vulnerabilities through the [security guidance](SECURITY.md).
+Use sanitized fixtures, scoped product knowledge and no paid provider by default. Imported content is data, not instructions. Preserve authorization, evidence-class, freshness and read-only host boundaries. Report suspected vulnerabilities through [security guidance](SECURITY.md).

@@ -10,3 +10,6 @@ docs/decisions/001-bundled-browser.md
 AGENTS.md
 LICENSE
 docs/README.md
+# Preserve the v0.3 source snapshot and pre-pivot working-tree archive exactly.
+docs/specification-v0.3.md
+tasks/history/

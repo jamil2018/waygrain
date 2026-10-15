@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-16",
+  "reviewer": "/root/plan_review",
+  "verdict": "ACCEPT",
+  "original_receipt": "independent-review.json",
+  "change": "Remove exactly one duplicate trailing newline from the source snapshot to match the retrieved Page section. Adding that newline reproduces the original reviewed hash. No content changed; all other 13 manifest entries match.",
+  "manifest_overrides": {
+    "docs/specification-v0.3.md": "401f9f892ac42dcebaf9f53d7a941e08c0b38c217b752a237a0a8eead47dcea6"
+  },
+  "canonical_manifest_sha256": "0897cd1e6ea80464e9b20958ec6af29100c86bdb452277e9a957c4cf2a839fad",
+  "limitations": "Original findings and limitations unchanged. Planning only; no runtime qualification."
+}

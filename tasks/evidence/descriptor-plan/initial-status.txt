@@ -1,0 +1,27 @@
+ M docs/evaluation.md
+ M docs/release-readiness.md
+ M skills/understand-product/SKILL.md
+ M src/contracts/knowledge.ts
+ M src/contracts/records.ts
+ M src/core/query.ts
+ M tasks/plan.md
+ M tasks/todo.md
+?? docs/decisions/002-compact-capture-retrieval.md
+?? docs/decisions/003-product-specialist-study.md
+?? docs/specification-v0.3-source.json
+?? docs/specification-v0.3.md
+?? scripts/evaluation/g05/
+?? scripts/evaluation/g06/
+?? scripts/evaluation/g07/
+?? scripts/evaluation/g08/
+?? src/core/compact.ts
+?? tasks/evidence/descriptor-plan/
+?? tasks/evidence/g05/
+?? tasks/evidence/g06/
+?? tasks/evidence/g07/
+?? tasks/evidence/g08/
+?? tasks/history/
+?? tests/compact-query.test.mjs
+?? tests/g05-evaluation.test.mjs
+?? tests/g07-evaluation.test.mjs
+?? tests/g08-evaluation.test.mjs

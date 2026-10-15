@@ -1,216 +1,112 @@
-# Waygrain architecture and task-by-task implementation plan
+# Waygrain v0.3 implementation plan — standalone app descriptor
 
-Saved: 6 October 2026. This document records the agreed plan; saving it does not execute or verify an implementation task. Track implementation status in [todo.md](todo.md).
+Date: 16 October 2026. Planning artifact only; implementation tasks are unstarted. [Task register](todo.md) is the execution authority.
 
-## 1. Direction and stack
+## 1. Direction and precedence
 
-Build a standalone local plugin that combines persistent product knowledge with bundled browser capture and agent-directed interaction. The [product specification](https://chatgpt.com/space/page_262002eefff08191b791867eb0eb32f2) remains the baseline; document bundled browser functionality as an explicit amendment.
+Build a runnable local app descriptor that explains page/component semantics, supports editable evidence-linked documentation and scoped clarification, and retains authored state across restarts. Memory is infrastructure for this experience. The bounded finish line is the ten acceptance cases in [specification v0.3](../docs/specification-v0.3.md), not a public launch.
 
-**Agreed choices:** Blogen with local disposable data; Codex CLI on macOS for the current pilot; Claude Code and Cursor compatibility deferred; coordinator with specialist reviews; local pilot followed by gated public packaging; Apache-2.0.
+Authority: current user instructions → v0.3 snapshot and its explicit requirements → [ADR-004](../docs/decisions/004-standalone-app-descriptor.md) and this plan's engineering defaults → task register. The [source receipt](../docs/specification-v0.3-source.json) pins the supplied Page, sequence and block hashes. Later Page changes require an explicit scope reconciliation; agents must not silently implement a moving specification. The historical v0.2 section of the Page is not an additional prerequisite.
 
-| Area | Choice |
-|---|---|
-| Runtime | Node.js 24 LTS; Node 26 smoke testing |
-| Language/build | Strict TypeScript, ESM, compiler output without bundling |
-| MCP | Official `@modelcontextprotocol/server` 2.3.1, stdio |
-| Schemas | Zod 4; shared validation, types, and JSON Schemas |
-| Database | `better-sqlite3` 13.0.3, parameterized SQL, WAL |
-| Browser | Playwright 1.63.0, headed Chromium |
-| Tests | Node test runner; Playwright Test for browser scenarios |
-| Tooling | npm lockfile, ESLint, Prettier checks, GitHub Actions |
+This request authorizes replacing planning documents, not starting implementation. The Page's statement that implementation was requested is product context, not an instruction to execute code in this planning turn. No additional design-approval ceremony is required: a subsequent instruction to execute a task or batch selects its scope. Use the ready-to-copy batch prompt in the register.
 
-Use one npm package with internal modules. Pin exact versions during foundation setup and record licenses. Playwright’s public JSON accessibility snapshots avoid a text parser; the official MCP SDK’s stable line is v2. [Playwright releases](https://github.com/microsoft/playwright/releases), [MCP SDK releases](https://github.com/modelcontextprotocol/typescript-sdk/releases).
+The old plan/register and prechange navigation instructions are preserved byte-for-byte in [the history archive](history/2026-10-16-v0.2/INDEX.md). Existing evidence is unchanged. A01–G08 are historical IDs; new work uses W00–W23. Historical failed efficiency/quality/adoption/portability gates remain failed or unqualified. They neither block this local descriptor slice nor become satisfied by it. Public release remains HOLD.
 
-Exclude hosted services, model calls, embeddings, autonomous crawling, dashboards, synchronization, and persistent authentication profiles from v1.
+## 2. Inspected starting point and disposition
 
-## 2. Architecture and interfaces
+This is not a pre-bootstrap repository. Inspection on 16 October found a private `waygrain@0.0.0` package, TypeScript/ESM, Node engine ranges 24/26, pinned Zod, better-sqlite3, MCP SDK and Playwright, schema version 4, CLI/MCP/browser modules, tests and synthetic studies. This is static inspection, not a fresh test pass; W00 records executable baseline results. There is no existing documentation web UI framework in package.json.
 
-```mermaid
-flowchart TD
-    H[Coding host and agent] --> S[Waygrain skills]
-    S --> M[Stdio MCP server]
-    M --> K[Knowledge services]
-    K --> V[Schemas, redaction, normalization]
-    V --> G[Typed graph operations]
-    G --> D[SQLite knowledge store]
-    M --> B[Isolated Playwright worker]
-    B --> C[Ephemeral headed Chromium]
-    C --> O[Sanitized observations]
-    O --> M
-    L[Maintenance CLI] --> K
-```
+| Existing area | Decision for this roadmap |
+| --- | --- |
+| `src/config`, `src/store`, recovery/coordination utilities | Reuse private-file, transactional and lifecycle patterns after W00 checks; extend schema additively with explicit versioning |
+| `src/contracts`, core normalization and provenance | Reuse validation primitives; add descriptor-specific schemas because stable semantic identity and four claim classes are not equivalent to captured state identity |
+| CLI, seven knowledge MCP tools and browser tools | Preserve existing applicable interfaces; the demo does not require browser control or a coding host |
+| Existing graph/flows, compact retrieval | Retain; no rewrite or completion gate for new UX; do not flatten new evidence classes through legacy summaries |
+| G05–G08 harnesses and study packets | Historical evidence and possible test inspiration only; not production app-descriptor implementations |
+| Plugin/Blogen workflows | Maintain compatibility where touched; replace as primary product direction, not delete |
+| Old benchmark/human/second-host/public packaging work | Remove from active critical path; preserve verdicts and evidence; future separately selected work |
+| Existing dirty changes | Preserve source/tests/studies exactly during planning; W00 inventories shared files before implementation; never reset, clean, rebase or restore over them |
 
-### Knowledge core
+## 3. Engineering defaults, not additional product requirements
 
-Keep schemas, normalization, graph operations, persistence, MCP, CLI, and browser integration separate. Core services accept plain JSON and cannot invoke the browser.
+Use one package and current pinned toolchain unless W00 proves a specific blocker. Prefer browser-native TypeScript/DOM and CSS for the small documentation surface, with a small Node loopback HTTP service that serves local static assets and calls the core. No framework/dependency upgrade is required merely by this plan. W00 may select a minimal alternative with rationale and tests if current build conventions demand it. Exact proposed script names below do not exist yet.
 
-Implement the specification’s records, typed relations, evidence classes, trace validation, scope isolation, immutable states, revision guards, idempotency, bounded queries, change detection, and freshness rules.
+Five concerns remain independently testable:
 
-Retain all seven knowledge tools:
+1. **Knowledge schemas/store:** stable project/app/page/component/source/claim/revision IDs; explicit applicability; append-only revisions and source history; transactional writes.
+2. **Scoped retrieval:** trusted access context first, applicability second, deterministic bounded selection with evidence classes, conflicts and freshness intact.
+3. **Authoring/import:** separate writable local editor and preview/validate/commit import boundary; exports preserve IDs/provenance. No write API is exposed by the read-only host adapter.
+4. **Documentation UI/target adapter:** explicit stable application keys, hover/focus summaries, click/touch Details, whole-page panel, source inspector; host interactions remain intact.
+5. **Answer providers:** deterministic fixture adapter behind a vendor-neutral interface; scoped conversation persistence; no tools or application mutation authority.
 
-`wg_status`, `wg_ingest`, `wg_commit`, `wg_query`, `wg_evidence`, `wg_changes`, and `wg_plan_refresh`.
+Proposed additive ownership: `src/descriptor/{contracts,store,retrieval,authoring,freshness,conversation,providers}`, `src/descriptor/http`, `src/descriptor/ui`, `assets/descriptor-demo`, `tests/descriptor`. W00 freezes exact boundaries; this directory sketch does not mandate a rewrite. Shared store migration wiring stays in `src/store` if that avoids duplicate infrastructure. Do not reinterpret or silently migrate old graph IDs into semantic page/component IDs. If bridging old observations, use explicit source references and retain original evidence classes.
 
-Preserve the specified request/response envelopes, limits, stable error codes, and cursor behavior. Partial captures have no state ID; historical flows never silently retarget changed controls.
+### Contracts to freeze early
 
-### Browser component
+- **Identity and scope:** stable semantic IDs independent of observed states, plus environment/version/role/tenant alias/UI-state applicability. Explicit unknowns; unknown role never matches all roles. A trusted configuration or embedded host supplies permissions; request-body role fields cannot grant access.
+- **Documentation and claims:** structured fields can be empty. Claims retain text/rule, target/scope, documented/observed/code-verified/inferred class, precise source locator/hash/revision, recorded and verification times, qualitative confidence/reason, unknown/conflict/freshness flags and supersedes links. Code-verified needs recorded verification method plus exact supplied revision/symbol; importing code is not verification.
+- **Writes/import:** schema version, expected revision, bounded payload, validation receipt and atomic commit. Reject dangling and cross-project references, duplicate/conflicting IDs and older overwrites; preview is not a write. Markdown/text imports require an explicit target/source assignment, not inferred executable instructions. Render untrusted content safely.
+- **Reads/answers:** authorized scope and target, bounded evidence package, stable ordering and explicit missing/truncated results. Answers include text, claim/source citations, scope, evidence classes, unresolved conflict and missing evidence. Every citation must belong to the retrieved authorized package and open a retained excerpt/locator. Valid citation IDs alone do not prove textual grounding: the deterministic provider emits only evidence-derived supported templates, and validation rejects forged/unsupported outputs in adversarial tests.
+- **Conversations:** project/app/target and trusted access/scope binding, bounded turn history, revision awareness. Persist sanitized product questions/answers only; no arbitrary host form values. Reauthorize on reload and before every turn; scope switches cancel or discard stale in-flight responses and clear incompatible view/cache/history. History is not independent evidence.
+- **Freshness:** source-hash, application-version and mapping changes mark affected claims for review. Reads/questions never advance verification time. Manual verification records actor/method/scope; structural similarity cannot certify hidden rules.
 
-Add a separately versioned contract with:
+### Local trust and integration boundary
 
-`wg_browser_open`, `wg_browser_snapshot`, `wg_browser_navigate`, `wg_browser_act`, `wg_browser_status`, and `wg_browser_close`.
+Bind the service to loopback only by default. Validate Host/Origin and reject cross-origin mutations; bound request sizes and server-controlled filesystem locations. Keep local authoring authorization distinct from read-only adapter capabilities. Do not serve raw stores, arbitrary files or unrestricted source bodies. Local fixture role switching selects among trusted preconfigured contexts; it is not a production authentication system. External host access-context integration is a documented contract, not an untested support claim.
 
-Support click, permitted noncredential fill, select, check/uncheck, scroll, and a small navigation-key allowlist. Exclude arbitrary JavaScript, caller-provided selectors, shell execution, file transfer, and automatic dialog acceptance.
+Use explicit registered target keys rather than broad DOM discovery. Reject missing/duplicate/ambiguous keys; display mapping state. The adapter reads only its registered target metadata and never reads live field values. Hover is supplementary; focus/click/touch offer equivalent access. Details triggers must not nest inside or submit host buttons/forms, call Calculate, or steal normal input behavior. Restore focus on dismiss; support Escape and responsive layout.
 
-Temporary targets bind to the current session, page, and snapshot. Resolve strict live locators immediately before acting; stale or ambiguous targets require another snapshot.
+No outbound provider traffic, telemetry, credentials or paid keys in the default demo. Optional future model adapters must be explicitly configured and separately qualify grounding; they are not required for W23 and are not silently added by this plan.
 
-The workflow is:
+## 4. Delivery sequence
 
-**Snapshot → ingest before capture → authorized action → ingest after capture → commit supported trace.**
+Detailed tasks and dependencies are in the register. Each phase yields a testable boundary; no human checkpoint is added between routine tasks in an authorized batch.
 
-Generate trace IDs and increasing sequence numbers in the browser component. Store a sanitized attempt marker before action dispatch. Duplicate execution IDs never repeat an action; interrupted attempts can return `unknown`. Application actions and graph writes are not one transaction.
+| Spec phase | Tasks | Exit |
+| --- | --- | --- |
+| A — foundations and persisted fixture | W00–W05 | Exact baseline, versioned knowledge, trusted scoped queries, two roles/two versions and independent checkpoint |
+| B — authoring and living documentation | W06–W14 | Local editor/import, reusable component/page UI, sources, export/restart durability, freshness and independent checkpoint |
+| C — scoped clarification | W15–W19 | Deterministic provider, persistent follow-ups, cited answers, conflict/unknown/error handling and independent checkpoint |
+| D — integrated delivery | W20–W23 | Regression/accessibility/isolation, restart acceptance, reproducible setup, independently reviewed local demo |
 
-Use manual login in nonpersistent contexts. Never save authentication state, credentials, raw snapshots, screenshots, traces, or input values. Sanitize observations before worker IPC and MCP output. Clean temporary browser resources on shutdown and parent-process loss.
+Checkpoints consolidate broader tests; every implementation task still needs focused checks and independent exact-artifact review. Do not redo accepted checks without a changed dependency or new failure. Historical expensive model studies are not part of the default suite.
 
-### Configuration, storage, and packaging
+## 5. Autonomous execution protocol
 
-Explicit initialization creates project/application IDs, scope aliases, allowed origins, route mappings, versioned redaction profiles, and storage limits. Startup selects an absolute configuration path; tool arguments cannot redirect filesystem writes.
+The user can select one task, a phase, or W00–W23. Single-task requests stop at that task; explicit batch requests continue through eligible tasks without repeat permission. Planning does not itself select implementation. The old blanket one-task stop is superseded for an explicitly selected batch.
 
-Use one knowledge database per project. A separate SQLite coordination file provides shared lifetime locks for normal processes and exclusive maintenance access for migration/restore. It stores no product evidence.
+1. Read the register, authorization scope, source precedence and current working tree. Verify dependency records and artifact identities, not just checkboxes. Resume the earliest unfinished eligible task in the selected batch.
+2. Use one implementation writer. Delegate independent verification/review to a separate agent with read-only ownership. Reviewers may run checks with isolated synthetic scratch stores; they must not approve their own edits. No second implementation writer on shared files.
+3. Implement the bounded task, run meaningful focused checks, record exact commands/exit codes/results. Shared schema/API/build changes also run full applicable regression checks. Failures already present at W00 remain separately reported; never weaken old tests or relabel a skipped check as a pass.
+4. Freeze an artifact manifest including source, tests, relevant docs/config/lockfiles and task receipt. Independent reviewer checks requirements, reruns important checks and accepts or requests changes against those hashes. Fix and re-review changed bytes. Record runtime/environment limitations.
+5. Mark verified only after acceptance. Keep review receipts outside their own manifest; a status-only register update references the accepted immutable artifact and must not change its claims. Any substantive later change needs new acceptance. Append results and continue only inside the selected scope.
+6. At context/time/tool limits, save a durable handoff: active task, authorization, exact artifacts, commands, unresolved findings and next action. Resume that task; do not restart or assume unfinished work passed.
 
-Provide consistent backup, verified offline restore, archival JSON export, recoverable scoped deletion, and separately previewed permanent purge. Defer JSON import.
+Autonomous choices: internal names, local fixture details, refactoring within the task, test selection, defect fixes and task splitting that preserve acceptance/dependencies. Split an overlarge task into suffixed subtasks before implementation; parent stays unverified until all parts pass. Log the reason. Do not silently drop acceptance cases or expand product scope.
 
-Package root `plugin.json`, `mcp.json`, skills, and assets, with a generated Codex compatibility overlay. [Plugin packaging](https://developers.openai.com/plugins/build/plugins).
+Stop only the affected dependency chain for an unresolved product contradiction, unavailable required capability, reproducible unresolved failure, or a requested external/destructive action outside authorization. Record an actionable blocker. Continue independent eligible work only if the selected batch permits it. Never advance a blocked dependency, substitute self-review, or claim a host limitation is product success. Missing optional paid providers, real pilot, packaging and deployment decisions do not block this deterministic local slice.
 
-Ship three skills: **Understand product**, **Explore and remember**, and **Explain changes**. CLI commands cover explicit setup, diagnostics, browser installation, serving, and maintenance. Installation never silently edits host settings or repository ignore rules.
+Commits, pushes, merges, publication, license changes, real customer data, paid network/provider execution and real-host integrations remain outside the default batch. No routine question is needed for local reversible work already authorized.
 
-## 3. Development graph and task execution rules
+## 6. Verification and evidence
 
-```mermaid
-flowchart TD
-    U[Product owner selects task] --> C[Coordinator checks eligibility]
-    C --> I[Assigned implementation specialist]
-    I --> V[Independent verification]
-    V --> R[Independent review of exact artifact]
-    R --> G{Acceptance criteria met?}
-    G -- No --> I
-    G -- Yes --> T[Record task result and stop]
-    T --> U
-```
+Current commands from package.json: `npm run typecheck`, `npm run build`, `npm run lint`, `npm run format:check`, `npm test`, `npm run check`. W00 records actual baseline and applicable historical script behavior. Browser tests must be run in a real browser with synthetic fixtures, but screenshot/video/trace/raw-snapshot persistence stays disabled; retain semantic assertions and sanitized receipts.
 
-**Execute one selected task per run.** Complete its implementation, checks, and review, record the result, then stop. Do not automatically start the next task or complete an entire stage.
+W06/W22 introduce and verify these proposed commands: `npm run demo:descriptor` starts the fixture/editor/documentation experience; `npm run test:descriptor` runs deterministic service/store/UI acceptance and cleans up. A clean checkout may require `npm ci` and an explicit documented Playwright browser installation; neither command silently downloads a browser. Add exact focused commands as suites are implemented. Do not write a command as passed before it exists and has run.
 
-Use these task states:
+Every receipt under `tasks/evidence/wNN/` contains scope, dependency identities, changed-file hashes, environment, commands/exit codes, test totals, actual findings, reviewer identity/verdict and limits. Source inputs and historical reports are not overwritten. Baseline runtime and new UI compatibility remain unqualified until their assigned checks run.
 
-`pending → in_progress → implemented → verified`
+The final acceptance matrix must cover all ten spec cases and negative variants: quantities 9/10 and decimal rounding; tax unknown; conflicting same-scope rules; evidence-class forgery; project/app/role/tenant/version/state separation including explicit unknowns; forged citations; malicious content; persistence and atomic import; source/version/mapping invalidation; no host mutation; unavailable provider; keyboard/touch parity; scope changes during an in-flight answer. Tests must assert visible output and storage effects, not merely mirror helper functions.
 
-A task can become `blocked` with a concrete reason. Only `verified` satisfies a dependency. Implementation and independent review must refer to the same artifact; later changes invalidate that review.
-
-The task register records each task’s dependencies, authorized scope, acceptance criteria, verification commands, artifact identity, review outcome, and remaining limitations.
-
-Use one implementation writer initially. Assign core, storage, browser, or integration specialists as appropriate. Reviewers cannot approve their own implementation. Commit, push, and publication remain separate explicitly authorized actions.
-
-## 4. Ordered task list
-
-Each row is a separate implementation task. Dependencies enforce ordering; checkpoints are separate read-only acceptance tasks.
-
-### Stage A — Foundation
-
-| ID | Task | Depends on | Acceptance and verification |
-|---|---|---|---|
-| A01 | Record specification amendment and task register | — | Documents the agreed browser boundary, stack, architecture, and task execution rules; review for consistency with the product spec |
-| A02 | Bootstrap package and quality commands | A01 | Apache-2.0 package builds; typecheck, lint, and empty test harness run; dependency versions and licenses recorded |
-| A03 | Define explicit configuration and initialization | A02 | Init creates validated project/app configuration and restricted local storage; invalid paths and silent host edits are rejected |
-| A04 | Prove packaging and runtime feasibility | A03 | Packed artifact launches stdio, opens SQLite, and launches headed Chromium through explicit setup; retain reproducible smoke results |
-| A05 | Define public knowledge and browser contracts | A04 | Versioned strict schemas cover tools, envelopes, errors, limits, and browser attempt states; contract fixtures validate |
-| A06 | Foundation checkpoint | A01–A05 | Independent review accepts contracts and packaging evidence; unresolved feasibility issues block later tasks |
-
-### Stage B — Capture and persistence
-
-| ID | Task | Depends on | Acceptance and verification |
-|---|---|---|---|
-| B01 | Build synthetic UI and privacy fixtures | A06 | Four screens, two roles/environments, modal/tab states, changed UI version, and seeded sensitive values provide deterministic fixtures |
-| B02 | Implement redaction and normalization | B01 | Safe structure is deterministic; meaningful order survives; forbidden values disappear before output and persistence |
-| B03 | Implement schema and basic transactional store | B02 | Foreign keys, migrations, revisions, busy limits, and maintenance coordination work; failed writes leave no partial records |
-| B04 | Implement complete and partial capture ingestion | B03 | Repeated captures preserve history; compatible states reuse identity; partial captures remain fragments; replay has one effect |
-| B05 | Expose status and evidence retrieval | B04 | CLI/core/MCP return consistent bounded status and evidence results without leaking rejected values |
-| B06 | Capture checkpoint | B01–B05 | Independent tests verify identity, scope separation, redaction, partial coverage, and stored evidence |
-
-### Stage C — Bundled browser
-
-| ID | Task | Depends on | Acceptance and verification |
-|---|---|---|---|
-| C01 | Implement browser session lifecycle | B06 | Explicit open/status/close owns one headed ephemeral session; manual login works; shutdown and parent-loss cleanup are tested |
-| C02 | Implement sanitized structured snapshots | C01 | Public Playwright JSON snapshots map to the ingest schema; raw data stays inside worker memory; unsupported coverage is explicit |
-| C03 | Implement current target resolution and navigation | C02 | Allowed navigation works; temporary targets resolve strictly; changed or ambiguous UI cannot use stale targets |
-| C04 | Implement bounded browser actions and attempt receipts | C03 | Supported actions work against current targets; credential fields fail closed; duplicate or interrupted attempts cannot silently replay |
-| C05 | Browser checkpoint | C01–C04 | Independent browser/privacy review covers redirects, scope changes, cancellation, stale targets, and uncertain outcomes |
-
-### Stage D — Evidence graph and recall
-
-| ID | Task | Depends on | Acceptance and verification |
-|---|---|---|---|
-| D01 | Implement guarded annotations and identity reconciliation | C05 | Atomic commits preserve provenance, conflicting annotations, supersession history, explicit aliases, and revision conflicts |
-| D02 | Implement actions, events, and observed transitions | D01 | Valid before/action/after traces succeed; mismatched scopes, sessions, sequencing, incomplete endpoints, and unrelated visits fail |
-| D03 | Implement flows and test-run evidence | D02 | Flows preserve ordered scoped transitions; only matching passed assertions confer test-verified status |
-| D04 | Implement lexical search and neighbors | D03 | Ranking is deterministic; scope and tombstones apply; record/byte/hop budgets and stale cursors are explicit |
-| D05 | Implement path and flow retrieval | D04 | Bounded traversal excludes inferred edges; unevaluated guards yield conditional paths; incomplete searches remain distinguishable |
-| D06 | Recall checkpoint | D01–D05 | Independent review verifies trace integrity, provenance, conditional paths, and bounded queries |
-
-### Stage E — Changes and recovery
-
-| ID | Task | Depends on | Acceptance and verification |
-|---|---|---|---|
-| E01 | Implement capture and revision comparisons | D06 | Compatible changes cite evidence; incomplete coverage cannot prove removal; incompatible normalizers are explicit |
-| E02 | Implement freshness and refresh plans | E01 | Only qualifying new observations advance check times; screen captures do not reverify transitions or entire flows |
-| E03 | Implement export, backup, and restore | E02 | Consistent backups preserve IDs/revisions/evidence; exclusive verified restore round-trips query results; JSON export is archival |
-| E04 | Implement scoped deletion, undo, purge, and storage cap | E03 | Delete hides only selected scope; undo restores links; purge previews impact; cap rejects ingestion without silently discarding history |
-| E05 | Verify concurrency, crash, and migration recovery | E04 | Process tests cover competing writers, killed transactions, failed migrations, future schemas, and live-peer maintenance refusal |
-| E06 | Recovery checkpoint | E01–E05 | Independent review accepts durability and maintenance evidence; remaining platform limitations are documented |
-
-### Stage F — Plugin and Blogen pilot
-
-| ID | Task | Depends on | Acceptance and verification |
-|---|---|---|---|
-| F01 | Package plugin skills and setup workflow | E06 | Three skills, manifests, CLI diagnostics, and explicit browser installation work from a packed artifact |
-| F02 | Add Blogen profile and pilot fixtures | F01 | Reviewed label/route rules support synthetic local accounts; Blogen integration requires no core changes or unrelated repository edits |
-| F03 | Verify three Blogen journeys | F02 | Browse/filter categories, open/cancel creation, and create a disposable category produce valid scoped evidence |
-| F04 | Verify new-session recall in Codex | F03 | A fresh chat explains a feature and retrieves evidence after the original browser session is closed |
-| F05 | Deferred second-host portability | F04 | Outside the current Codex-only pilot; retain Claude Code and Cursor compatibility as unverified follow-up work |
-| F06 | Codex-only pilot checkpoint | F01–F04 | Independent acceptance covers packed setup, the documented explicit Codex CLI connection, Blogen scoped observations, fresh-session recall and their limitations; automatic plugin discovery remains unqualified |
-
-**9 October 2026 scope amendment:** The user requested completion with Codex support only. F05 is deferred, not verified, and is no longer a dependency of this bounded F06 checkpoint. This closes only the Blogen/Codex pilot: the original second-host and second-application criteria remain release requirements under section 5 and G04. Historical evidence and failed plugin discovery probes remain unchanged. This amendment does not select Phase G or authorize public publication.
-
-### Stage G — Evaluation and release readiness
-
-| ID | Task | Depends on | Acceptance and verification |
-|---|---|---|---|
-| G01 | Build reproducible evaluation harness | F06 | Matched browser-only, notes-folder, and Waygrain conditions include all overhead and distinguish cold/warm/changed-UI cases |
-| G02 | Run efficiency and correctness evaluation | G01 | At least ten tasks with three repetitions per condition; publish distributions, unsupported claims, wrong actions, and failures |
-| G03 | Run unfamiliar-developer installation trial | G02 | Three developers attempt install, fixture ingestion, and query within ten minutes; record results and friction |
-| G04 | Complete release-readiness review | G03 | Correctness, portability, adoption thresholds, dependency/license inventory, documentation, and packed-artifact checks have truthful verdicts |
-
-**G04 ends at a reviewable release candidate. Publishing npm packages or plugin listings is a later, separately authorized task.**
-
-## 5. Verification gates and defaults
-
-Every implementation task runs focused meaningful tests, typecheck, and build. Run broader suites at checkpoints and whenever shared contracts change.
-
-Release evaluation uses the same browser driver and host/model configuration across all three conditions. Require the specification’s thresholds:
-
-- Warm median browser calls and either wall time or measured tokens improve by at least 20% against the stronger baseline.
-- Task success and evidence-grounded correctness do not regress; no additional wrong UI actions.
-- Changed UI is detected before obsolete evidence is used.
-- Cold-start overhead stays within 15%, or documented repeated-use break-even justifies it.
-- Installation trial, second application, and second host pass.
-- Missing token measurements remain explicitly unmeasured.
-
-Defaults remain: one headed session per MCP process; manual login; browser launches only on request; external structured ingestion stays supported; 24-hour retrieval freshness policy; specification limits for ingestion, queries, commits, and storage; macOS pilot support without untested cross-platform claims.
-
-**First eligible implementation task: A01.**
-
-## Phase G execution scope — 9 October 2026
-
-The user selected G01–G04 in dependency order, with independent verification, exact-artifact review and individual shipping. This overrides the default one-task stop only for the selected phase. G01/G02 use a documented constrained Codex observation/answer study; broader agent-directed efficiency, open-ended correctness, wrong-action and automatic freshness requirements retain their own unqualified verdicts. The measured efficiency threshold failed.
-
-The user explicitly substituted three separate subagent personas for unavailable human developers in G03. The assisted agent proxy is recorded as its own completed procedure; the original three unfamiliar-human adoption requirement remains unmet. Codex-only scope preserves Claude Code and Cursor as deferred/unverified, and does not waive the original second-host or second-application release requirements.
-
-G04 completes the release-readiness review even when requirements fail or remain unmet, and ends at a reviewed **private release candidate held from public release**. The package remains private at 0.0.0. No npm publication, plugin listing, release tag or later implementation is authorized. Source summaries and proxy successes cannot mark original release requirements passed.
+## 7. Risks and deferred decisions
+
+| Risk | Treatment |
+| --- | --- |
+| Legacy capture IDs conflate state with semantic identity | Add explicit semantic entities and bridges; migration/restart tests before UI |
+| Valid-looking citations conceal invented rules | Deterministic grounded templates, adversarial provider tests, source inspection and honest unknowns |
+| Role applicability is mistaken for authorization | Trusted server context; deny before all projections/provider calls; cache/in-flight isolation tests |
+| Overlay triggers host action or captures data | Explicit adapter, separate Details controls, no field reads, event-count and input-sentinel tests |
+| Uncommitted prior work is lost or claimed as new | Baseline inventory and preservation manifests; narrow edits; no cleanup/reset |
+| Old gates quietly become new product claims | Separate W task IDs and local-demo completion from release/benefit/support claims |
+
+Defer first real pilot, production provider, AppraiseJS port, hosted deployment, universal integration, final delivery packaging, license decision and public launch. The existing Apache-2.0 file and private package flags remain unchanged. W23 closes this bounded roadmap and reports actual gaps; it does not automatically select deferred work.

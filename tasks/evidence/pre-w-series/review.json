@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_sha256": "004ceda261434f9b0045711a4af25eef5dde5739dc7d7658178179fb412d6c81",
+  "files": 320,
+  "checks": {
+    "clean_like_npm_run_build": "PASS",
+    "clean_like_compact_tests": "PASS 8",
+    "clean_like_npm_run_check": "PASS 138, 0 fail/skip",
+    "planning_preservation": "PASS 549",
+    "git_diff_check": "PASS"
+  },
+  "resolved_finding": "Exact historical 83-file G06 runtime retained through narrow ignore exception; all hashes match historical manifest.",
+  "limits": [
+    "Scratch reused installed node_modules; no fresh npm ci",
+    "Node 26.11.0 / npm 11.20.0 / macOS only",
+    "No provider cohorts or W implementation accepted"
+  ]
+}
