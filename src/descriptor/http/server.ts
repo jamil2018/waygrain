@@ -16,7 +16,7 @@ import {
   type DescriptorBundle,
 } from '../contracts.js';
 import { authorize, retrieveDescriptor, inspectSource } from '../retrieval.js';
-import { readBundle, writeBundle } from '../store.js';
+import { readBundle, writeBundle, previewBundle } from '../store.js';
 
 const assetRoot = new URL('../../../assets/descriptor-demo/', import.meta.url);
 // dist/descriptor/http -> repository root requires three parents.
@@ -25,7 +25,9 @@ const types: Record<string, string> = {
   '.mjs': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
 };
-const assetNames = ['index.html', 'app.mjs', 'calculate.mjs', 'style.css'];
+const readerAssets = ['index.html', 'app.mjs', 'calculate.mjs', 'style.css'];
+const authorAssets = ['editor.html', 'editor.mjs', 'editor.css', 'style.css'];
+const assetNames = [...new Set([...readerAssets, ...authorAssets])];
 const send = (res: ServerResponse, status: number, data: unknown) => {
   res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8' });
   res.end(JSON.stringify(data));
@@ -156,19 +158,36 @@ export async function startDescriptorService(
           res.writeHead(204).end();
           return;
         }
-        if (req.method === 'GET' && mode === 'read') {
+        if (req.method === 'GET') {
           const assetName =
             url.pathname === '/'
-              ? 'index.html'
+              ? mode === 'read'
+                ? 'index.html'
+                : 'editor.html'
               : url.pathname.startsWith('/assets/descriptor-demo/')
                 ? url.pathname.slice('/assets/descriptor-demo/'.length)
                 : '';
-          if (assets.has(assetName)) {
+          if (
+            (mode === 'read' ? readerAssets : authorAssets).includes(
+              assetName,
+            ) &&
+            assets.has(assetName)
+          ) {
             const type = Object.entries(types).find(([ext]) =>
               assetName.endsWith(ext),
             )![1];
             res.writeHead(200, { 'Content-Type': type });
-            res.end(assets.get(assetName));
+            const content = assets.get(assetName)!;
+            res.end(
+              assetName === 'index.html'
+                ? content
+                    .toString()
+                    .replace(
+                      '</header>',
+                      `<a href="${authorURL}">Edit documentation</a></header>`,
+                    )
+                : content,
+            );
             return;
           }
         }
@@ -230,10 +249,10 @@ export async function startDescriptorService(
         }
         if (
           mode === 'author' &&
-          url.pathname === '/api/bundle' &&
+          ['/api/bundle', '/api/validate'].includes(url.pathname) &&
           !url.search
         ) {
-          if (req.method === 'GET') {
+          if (req.method === 'GET' && url.pathname === '/api/bundle') {
             const bundle = readBundle(store, app);
             if (bundle) authorizeBundle(bundle);
             send(res, 200, { revision: store.revision, bundle });
@@ -249,21 +268,15 @@ export async function startDescriptorService(
             // Validate before checking all supplied scopes; no imported role can become a grant.
             const parsed = parseDescriptor(writeRequestSchema, input);
             authorizeBundle(parsed.bundle);
-            send(res, 200, writeBundle(store, parsed));
+            send(
+              res,
+              200,
+              url.pathname === '/api/validate'
+                ? previewBundle(store, parsed)
+                : writeBundle(store, parsed),
+            );
             return;
           }
-        }
-        if (
-          mode === 'author' &&
-          req.method === 'GET' &&
-          url.pathname === '/' &&
-          !url.search
-        ) {
-          res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-          res.end(
-            '<!doctype html><html lang="en"><meta charset="utf-8"><title>Waygrain authoring</title><h1>Waygrain authoring service</h1><p>The local documentation service is running.</p></html>',
-          );
-          return;
         }
         send(res, 404, { error: 'NOT_FOUND' });
       } catch (error) {

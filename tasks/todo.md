@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00–W06 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W07. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00–W07 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W08. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -24,7 +24,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | W04 | A | Synthetic Calculate fixture and evidence | W03 | verified |
 | W05 | A | Phase A independent checkpoint | W04 | verified |
 | W06 | B | Local demo service and safe transport | W05 | verified |
-| W07 | B | Page and component authoring editor | W06 | pending |
+| W07 | B | Page and component authoring editor | W06 | verified |
 | W08 | B | Validated source and bundle import | W07 | pending |
 | W09 | B | Reusable target adapter | W06 | pending |
 | W10 | B | Component summary and details panel | W09, W07 | pending |
@@ -190,7 +190,7 @@ Acceptance: [W06 exact artifact and independent review](evidence/w06/review.json
 
 ### W07 — Page and component authoring editor
 
-**Status:** pending. **Dependencies:** W06. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W06. **Phase:** B. **Size:** M.
 
 Deliver a complete create/edit/save/reload path for structured documentation and claims with explicit source and target assignment.
 
@@ -198,11 +198,13 @@ Deliver a complete create/edit/save/reload path for structured documentation and
 
 **Acceptance:**
 
-- [ ] Editor supports page/component fields, claims, sources, applicability and mapping review; empty fields stay empty instead of invented text.
-- [ ] Save creates revisions with optimistic conflict feedback; previewed validation errors do not mutate storage and unsafe markup remains inert.
-- [ ] Reload displays the saved content, source provenance and unresolved/conflicting/missing mapping states.
+- [x] Editor supports page/component fields, claims, sources, applicability and mapping review; empty fields stay empty instead of invented text.
+- [x] Save creates revisions with optimistic conflict feedback; previewed validation errors do not mutate storage and unsafe markup remains inert.
+- [x] Reload displays the saved content, source provenance and unresolved/conflicting/missing mapping states.
 
 **Verification:** Service tests and real-browser edit/save/reload, keyboard and conflict tests; source-body/question-free diagnostics; typecheck/build.
+
+Acceptance: [W07 exact artifact and independent review](evidence/w07/review.json).
 
 ### W08 — Validated source and bundle import
 

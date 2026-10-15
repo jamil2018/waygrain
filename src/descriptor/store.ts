@@ -157,6 +157,20 @@ function validateStoredSuccessor(store: Store, b: DescriptorBundle) {
   }
   store.requireStorageCapacity();
 }
+/** Validate an authoring candidate without advancing revision or retaining content. */
+export function previewBundle(store: Store, input: unknown) {
+  const request = parseDescriptor(writeRequestSchema, input);
+  appOwned(store, request.bundle.project_id, request.bundle.app_id);
+  return store.transaction(() => {
+    store.requireRevision(request.expected_revision);
+    validateStoredSuccessor(store, request.bundle);
+    return {
+      valid: true,
+      expected_revision: request.expected_revision,
+      revision_id: request.bundle.revision_id,
+    };
+  }, false);
+}
 export function writeBundle(
   store: Store,
   input: unknown,

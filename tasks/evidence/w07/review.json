@@ -1,0 +1,17 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "068c80d357aa1ae2e35da87ca12271ce05d6c7a4abb3b4e30620eb6accd9c4ac",
+  "checks": [
+    "All8 hashes match",
+    "npm run check EXIT0 PASS160/160 no fail/skip",
+    "editor.browser.mjs EXIT0 PASS1",
+    "Independent two-tab Chromium: stale save reports conflict and preserves peer text/revision2",
+    "Keyboard Tab purpose\u2192inputs",
+    "git diff --check PASS;no retained browser artifacts"
+  ],
+  "limits": [
+    "AdvancedJSON claims/source assignments",
+    "Import/reader panels/provider later"
+  ]
+}

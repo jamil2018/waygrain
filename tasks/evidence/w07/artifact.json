@@ -1,0 +1,10 @@
+{
+  "assets/descriptor-demo/editor.css": "57351c01a8fdf5f7317b90c2cfd347091eb4a7645c9bd0c96ecb49457ee58cbe",
+  "assets/descriptor-demo/editor.html": "daa06a0998a68b1a162fdd2e00949847eaab503a0220e12795a3c1159720ea06",
+  "assets/descriptor-demo/editor.mjs": "5cdc6a69f5c515ad32d6a6edef28fb29972616102bb18973fd5b132ec06e62ed",
+  "src/descriptor/http/server.ts": "880f93efcbaa4fd355ce8165a115659e4e679d0f2eec3c093d99e860a2a27c9d",
+  "src/descriptor/store.ts": "4df6a13e37c33605b3d15a7f4f9f709c9572efe31daa28be1e1b663aff539a54",
+  "tasks/evidence/w07/RESULTS.json": "53560d2c02e4dbfe10b9d9052174d833431abbfacf7b0432a9521569720b4cd6",
+  "tasks/todo.md": "4fff464d88e6d482cc5384cee33ae1b1492ea6d6bfbe1103a1a6b39510918636",
+  "tests/descriptor/editor.browser.mjs": "0700348eb63ce79eabd07daf3fdf5b1fa5edcd90f8e77c6a9f2dfc107c04e3a9"
+}

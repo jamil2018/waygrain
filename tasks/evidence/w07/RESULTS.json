@@ -1,0 +1,49 @@
+{
+  "task": "W07",
+  "dependency": {
+    "W06": "35d2e1b",
+    "review_manifest": "414ff28ee0645eb78d2c96ed2f5de681bfd599c19e682e1dfbd60b443a67e561"
+  },
+  "status": "implemented; pending independent acceptance",
+  "commands": [
+    {
+      "command": "npm run build",
+      "exit": 0
+    },
+    {
+      "command": "npm run check (r1)",
+      "exit": 1,
+      "result": "Browser module missing fetch lint declaration; corrected"
+    },
+    {
+      "command": "npm run check (r2, permitted loopback)",
+      "exit": 0,
+      "result": "160 PASS no fail/skip, typecheck/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/editor.browser.mjs (final, permitted)",
+      "exit": 0,
+      "result": "Real Chromium PASS edit/preview-no-write/save/reload/inert markup/provenance/ambiguous mappings; invalid bundle atomic; creates page/claim/source assignment/missing mapping; empty purpose preserved; zero page errors; expected generic400 only"
+    },
+    {
+      "command": "npm run lint (after final browser test extension)",
+      "exit": 0
+    },
+    {
+      "command": "npx prettier --write tests/descriptor/editor.browser.mjs",
+      "exit": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "scope": "Form editor for all document fields; advanced structured bundle editor for creating records/claims, assigning sources and applicability/mappings. Mapping/evidence review uses textContent. Validation preview runs same successor/schema/scope/revision checks without changing storage. Separate author endpoint only.",
+  "changes_to_accepted_dependencies": "Add previewBundle to Store core and extend HTTP author route/assets; existing write semantics retained and regressions rerun.",
+  "limitations": [
+    "Advanced claims/source assignments use structured JSON, not a rich source wizard; text/bundle import is W08",
+    "Browser fixture script explicit, not yet consolidated under test:descriptor",
+    "No reader adapter/panels/provider yet",
+    "Local synthetic context model, no production auth"
+  ]
+}

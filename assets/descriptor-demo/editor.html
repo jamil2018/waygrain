@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Waygrain — Documentation editor</title>
+    <link rel="stylesheet" href="/assets/descriptor-demo/style.css" />
+    <link rel="stylesheet" href="/assets/descriptor-demo/editor.css" />
+  </head>
+  <body>
+    <header>
+      <strong>Waygrain · Documentation editor</strong
+      ><span>Local synthetic workspace</span>
+    </header>
+    <main>
+      <h1>Describe the application</h1>
+      <p>
+        Write what the page and its components mean. Keep unknowns empty and
+        link claims to their evidence.
+      </p>
+      <p id="editor-status" role="status" aria-live="polite">
+        Loading documentation…
+      </p>
+      <label for="document-choice">Page or component description</label
+      ><select id="document-choice"></select>
+      <section id="document-fields" aria-label="Description fields"></section>
+      <details>
+        <summary>Claims, sources, applicability and mappings</summary>
+        <p>
+          Edit the structured knowledge bundle to create records, assign targets
+          and source references, or review mappings. Source content is treated
+          as plain text. Validate before saving.
+        </p>
+        <label for="bundle-editor">Knowledge bundle (JSON)</label
+        ><textarea id="bundle-editor" spellcheck="false" rows="18"></textarea
+        ><button id="apply-bundle" type="button">
+          Apply bundle changes to draft
+        </button>
+      </details>
+      <section aria-label="Mapping review">
+        <h2>Target mappings</h2>
+        <ul id="mapping-list"></ul>
+      </section>
+      <section aria-label="Evidence review">
+        <h2>Claims and sources</h2>
+        <div id="claim-list"></div>
+      </section>
+      <div class="editor-actions">
+        <button id="validate-document" type="button">Validate draft</button
+        ><button id="save-document" type="button">Save revision</button
+        ><button id="reload-document" type="button">Reload saved</button>
+      </div>
+      <p id="editor-error" role="alert"></p>
+    </main>
+    <script type="module" src="/assets/descriptor-demo/editor.mjs"></script>
+  </body>
+</html>
