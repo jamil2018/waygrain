@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00–W05 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W06. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** W00–W06 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W07. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -23,7 +23,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | W03 | A | Trusted scoped retrieval | W02 | verified |
 | W04 | A | Synthetic Calculate fixture and evidence | W03 | verified |
 | W05 | A | Phase A independent checkpoint | W04 | verified |
-| W06 | B | Local demo service and safe transport | W05 | pending |
+| W06 | B | Local demo service and safe transport | W05 | verified |
 | W07 | B | Page and component authoring editor | W06 | pending |
 | W08 | B | Validated source and bundle import | W07 | pending |
 | W09 | B | Reusable target adapter | W06 | pending |
@@ -172,7 +172,7 @@ Acceptance: [W05 integrated exact artifact and independent review](evidence/w05/
 
 ### W06 — Local demo service and safe transport
 
-**Status:** pending. **Dependencies:** W05. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W05. **Phase:** B. **Size:** M.
 
 Serve the fixture and documentation API locally with separate authoring and read-only capabilities; introduce npm run demo:descriptor.
 
@@ -180,11 +180,13 @@ Serve the fixture and documentation API locally with separate authoring and read
 
 **Acceptance:**
 
-- [ ] Loopback-only default, validated Host/Origin, bounded payloads and controlled filesystem roots prevent cross-origin mutation or arbitrary file access.
-- [ ] Server-selected trusted scope cannot be escalated by query/body fields; the read-only adapter client cannot call authoring operations.
-- [ ] One command starts the fixture and local app shell, reports a usable address and shuts down cleanly; no paid keys, silent browser download or raw-content logs.
+- [x] Loopback-only default, validated Host/Origin, bounded payloads and controlled filesystem roots prevent cross-origin mutation or arbitrary file access.
+- [x] Server-selected trusted scope cannot be escalated by query/body fields; the read-only adapter client cannot call authoring operations.
+- [x] One command starts the fixture and local app shell, reports a usable address and shuts down cleanly; no paid keys, silent browser download or raw-content logs.
 
 **Verification:** HTTP negative tests for forged origins/roles/paths/oversized input, start/stop smoke and npm run check/build. Browser compatibility remains for later UI tasks.
+
+Acceptance: [W06 exact artifact and independent review](evidence/w06/review.json).
 
 ### W07 — Page and component authoring editor
 

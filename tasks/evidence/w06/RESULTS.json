@@ -1,0 +1,50 @@
+{
+  "task": "W06",
+  "dependency": {
+    "W05": "54e962e",
+    "review_manifest": "1ed4bbd7ce5f6c87a3d0c934afba37243512795f524b2bdbff9b7041f119e6c3"
+  },
+  "status": "implemented; pending independent acceptance",
+  "commands": [
+    {
+      "command": "npm run typecheck",
+      "exit": 0
+    },
+    {
+      "command": "npm run build",
+      "exit": 0
+    },
+    {
+      "command": "node --test tests/descriptor/http.test.mjs (permitted loopback)",
+      "exit": 0,
+      "result": "3 focused cases PASS"
+    },
+    {
+      "command": "npm run check (permitted loopback)",
+      "exit": 0,
+      "result": "160 PASS no fail/skip; typecheck/lint/format/build PASS"
+    },
+    {
+      "command": "npm run demo:descriptor",
+      "exit": 0,
+      "result": "Started reader127.0.0.1:4317/author4318; SIGINT clean exit0"
+    },
+    {
+      "command": "Inline Playwright probe of started demo (permitted)",
+      "exit": 0,
+      "result": "Calculate90.00; zero console/page errors; no retained browser artifacts"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "boundary": "Separate loopback read/author listeners; strict Host/Origin and mutation content type,1MiB body,static allowlist,CSP,no-store,no body/question logs. Server-created contexts from static trusted fixture scope list; imported roles cannot grant access; author GET also authorizes all scoped records.",
+  "changes_to_accepted_dependency": "fixture.ts lifts identical11-scope literals into exported fixtureScopes() for trusted server configuration; fixtures/regressions rerun. calculate source and provenance unchanged.",
+  "persistence": "Demo uses distinct ignored owner-private .waygrain-descriptor store; refuses other project/app aliases; seeds only if absent. Generated synthetic state is ignored, not committed.",
+  "limitations": [
+    "Local single-user fixture context switching is not production authentication",
+    "Editor/adapter/clarification UI later tasks",
+    "Node26/macOS runtime; browser requires sandbox permissions"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/baseline_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "414ff28ee0645eb78d2c96ed2f5de681bfd599c19e682e1dfbd60b443a67e561",
+  "checks": [
+    "All8 hashes match",
+    "npm run check EXIT0 PASS160/160 no fail/skip",
+    "Fresh disposable CWD main creates private synthetic fixture;reader4317/author4318 serve",
+    "Ephemeral Chromium Calculate90.00;zero console/page errors",
+    "SIGINT EXIT0; scratch removed;no browser artifacts retained",
+    "fixtureScopes preserves11 scopes/order/sourcehashes",
+    "git diff --check PASS"
+  ],
+  "limits": [
+    "Local fixture capability design only;no production auth/editor/adapter/provider qualification",
+    "Node26/macOS"
+  ]
+}

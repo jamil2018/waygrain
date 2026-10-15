@@ -43,6 +43,22 @@ export function fixtureAccess(
     grants: [{ project_id, app_id, scope }],
   };
 }
+export function fixtureScopes(): DescriptorScope[] {
+  const scopes: DescriptorScope[] = [];
+  for (const role of ['reader', 'editor'])
+    for (const version of ['1', '2'])
+      scopes.push({ ...fixtureScope, role, version });
+  scopes.push(
+    { ...fixtureScope, tenant: 'isolated-tenant' },
+    { ...fixtureScope, state: 'conflict' },
+    { ...fixtureScope, state: 'missing-mapping' },
+    { ...fixtureScope, state: 'ambiguous-mapping' },
+    { ...fixtureScope, state: 'changed-source' },
+    { ...fixtureScope, version: '2', state: 'changed-version' },
+    { ...fixtureScope, role: null, version: null },
+  );
+  return scopes;
+}
 export async function descriptorFixture(
   project_id: string,
   app_id: string,
@@ -76,19 +92,7 @@ export async function descriptorFixture(
     documents: [],
     mappings: [],
   };
-  const scopes: DescriptorScope[] = [];
-  for (const role of ['reader', 'editor'])
-    for (const version of ['1', '2'])
-      scopes.push({ ...fixtureScope, role, version });
-  scopes.push(
-    { ...fixtureScope, tenant: 'isolated-tenant' },
-    { ...fixtureScope, state: 'conflict' },
-    { ...fixtureScope, state: 'missing-mapping' },
-    { ...fixtureScope, state: 'ambiguous-mapping' },
-    { ...fixtureScope, state: 'changed-source' },
-    { ...fixtureScope, version: '2', state: 'changed-version' },
-    { ...fixtureScope, role: null, version: null },
-  );
+  const scopes = fixtureScopes();
   for (const [index, scope] of scopes.entries()) {
     const prefix = `scope-${index}`;
     const fact =

@@ -1,0 +1,10 @@
+{
+  ".gitignore": "21d3409d42fad1882665a284337e5c2efb0c17aebe9e79b344ce60c2949ef3c8",
+  "package.json": "3599a71e8c5cb553f8b84aa39842f016b3be57c63d4b701b73032d62780c3dba",
+  "src/descriptor/fixture.ts": "d38b86eb19966460692ddcbf73a85069a29a3cd64018369e66c5d957a0ee13e9",
+  "src/descriptor/http/main.ts": "eae72578c548b1f59110ef502b038c694de6f7b8135d3293e2c8aef90eaa731e",
+  "src/descriptor/http/server.ts": "a0ed1c64fb894381dec7f83ac9514b877514e8e71b129111c225b91eeddecee1",
+  "tasks/evidence/w06/RESULTS.json": "2f526a187f587d946ab9d846ee84c26fabb5f498e34f5b9c1f42af6b9b8bf423",
+  "tasks/todo.md": "781d4a59d510ac5909ac0578cec3be2d0776893fec37cf4c871c111697b8078f",
+  "tests/descriptor/http.test.mjs": "998b323131f3ea661e2fb3410be8c1ec96ae3cb135a5e5d704ee1d23e4cab12a"
+}
