@@ -1,0 +1,15 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "9201107b85657e5829850a9d90750574243890be84685c42a11a50f7d0ea4cae",
+  "checks": [
+    "All9 hashes matched",
+    "typecheck/build EXIT0",
+    "provider/contract6PASS including13-case matrix",
+    "Independent exact code-only support; altered code hash unknown/no citations; revision unchanged"
+  ],
+  "findings": [],
+  "limitations": [
+    "Finite synthetic grammar; general-purpose AI, real host correctness and UI integration not qualified here"
+  ]
+}

@@ -352,7 +352,7 @@ Acceptance: [W15 exact artifact and independent review](evidence/w15/review.json
 
 ### W16 — Deterministic clarification provider
 
-**Status:** pending. **Dependencies:** W15. **Phase:** C. **Size:** M.
+**Status:** verified. **Dependencies:** W15. **Phase:** C. **Size:** M.
 
 Implement the honest offline fixture provider using only evidence-backed supported templates and the same interface as optional future models.
 
@@ -360,11 +360,13 @@ Implement the honest offline fixture provider using only evidence-backed support
 
 **Acceptance:**
 
-- [ ] The 10 × 10 question cites the applicable discount rule and explains 90; the nine-item case explains 90 without discount using the applicable evidence.
-- [ ] Tax returns specific missing evidence; conflicting discounts surface both sources without invented reconciliation; unsupported questions return an explicit limitation.
-- [ ] UI/result metadata labels deterministic demo behavior; provider is offline, no-key and cannot execute actions or manufacture established facts.
+- [x] The 10 × 10 question cites the applicable discount rule and explains 90; the nine-item case explains 90 without discount using the applicable evidence.
+- [x] Tax returns specific missing evidence; conflicting discounts surface both sources without invented reconciliation; unsupported questions return an explicit limitation.
+- [x] UI/result metadata labels deterministic demo behavior; provider is offline, no-key and cannot execute actions or manufacture established facts.
 
 **Verification:** Frozen supported/unsupported/conflict question matrix, altered/missing evidence tests and no-network/no-action assertions; typecheck/build.
+
+Acceptance: [W16 exact artifact and independent review](evidence/w16/review.json).
 
 ### W17 — Scoped persistent conversations
 

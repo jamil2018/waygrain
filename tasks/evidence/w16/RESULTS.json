@@ -1,0 +1,28 @@
+{
+  "task": "W16",
+  "dependency": {
+    "W15": "eb8837d"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "175 PASS;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/provider.test.mjs tests/descriptor/answer-contract.test.mjs (permitted)",
+      "exit": 0,
+      "result": "6 PASS including frozen13-case matrix, altered/inferred-only rule refusal, network sentinel0 and unchanged store verification/evidence"
+    }
+  ],
+  "findings_fixed": [
+    "Explicit ProviderInput annotation required by Object.freeze inference; build fixed. An initial dependent test was mistakenly run after failed build and reported missing generated module; rerun only after successful build passed.",
+    "Redundant built-in globalThis lint annotation removed."
+  ],
+  "boundary": "Offline pure adapter uses same vendor-neutral input/output validation; exact fixture-derived templates, clearly labeled no-model behavior. Known unsupported tax/action/question cases return gaps/limitations. Same-conversation basis required for What about9. Source conflicts and stale warnings retained; no application/network/store capability.",
+  "limitations": [
+    "Finite synthetic grammar; no general-purpose AI or tax/real-host qualification",
+    "Persistence and UI follow W17/W18; public release HOLD"
+  ]
+}

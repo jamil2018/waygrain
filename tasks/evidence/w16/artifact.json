@@ -1,0 +1,11 @@
+{
+  "docs/descriptor-answers.md": "c3438b27ca55fe54eb9d9f91f75e46270f4b047b64bb95dbca272fd24cc31d63",
+  "src/descriptor/providers/contracts.ts": "194c52f14eac96a0e7633fdcd3e2a902962d066c8f789ae13189770c72b22037",
+  "src/descriptor/providers/deterministic.ts": "379f3b726f6f20d2077f1873cbc726b541c75c59c9b0f17e2cf04054ab280da0",
+  "src/descriptor/providers/evidence.ts": "39e33dacaad99fe208c6b9642513a8c61ced822ddd567373d9a5b75e604bbf9c",
+  "src/descriptor/providers/validation.ts": "18119f10033dc35b4251b10db06299d60c3165402df0c52be431564dbc833764",
+  "tasks/evidence/w16/RESULTS.json": "0a5ee9e9abec20741a5b61ec8fb9fee89ac82427251550bd10a109e0c89475db",
+  "tasks/todo.md": "9fc90656bda270c1b413aac78c95c473fa1bf9cade74fb44ac24367c5c588c64",
+  "tests/descriptor/provider-cases.json": "cfb97edb877c97ea79f2bc60a5b1b1dfb96720d160ccc51d7af93fa9aa97a2a6",
+  "tests/descriptor/provider.test.mjs": "b58577b9d73e7e5110d277e01c20a37da769a7ba46c960735f7902cf893eb42e"
+}
