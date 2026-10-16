@@ -39,7 +39,13 @@ const readerAssets = [
   'reader.mjs',
   'documentation.css',
 ];
-const uiModules = ['adapter.js', 'render.js', 'component-panel.js'];
+const uiModules = [
+  'adapter.js',
+  'render.js',
+  'component-panel.js',
+  'page-panel.js',
+  'source-inspector.js',
+];
 const authorAssets = [
   'editor.html',
   'editor.mjs',

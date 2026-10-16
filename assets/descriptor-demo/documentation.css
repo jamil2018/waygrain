@@ -78,3 +78,16 @@
     width: auto;
   }
 }
+
+.wg-source {
+  z-index: 30;
+}
+.wg-source pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+}
+
+.wg-page {
+  z-index: 15;
+}

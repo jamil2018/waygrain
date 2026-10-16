@@ -1,0 +1,15 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "daa8cf5f992083577a4f599ad48f0ed6d358ba81e55d19dd1bd19d73109e1962",
+  "checks": [
+    "All8 hashes matched",
+    "npm run typecheck && npm run build EXIT0",
+    "Chromium page/component suite EXIT0 PASS4",
+    "Additional probes EXIT0: reset discards delayed source; mismatched source no title; malicious markup inert; unmount cleanup"
+  ],
+  "findings": [],
+  "limitations": [
+    "Synthetic local Chromium; broader host compatibility unqualified"
+  ]
+}

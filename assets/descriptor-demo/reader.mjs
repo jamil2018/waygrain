@@ -1,6 +1,8 @@
 /* global document, fetch */
 import { mountTargetAdapter } from '/ui/adapter.js';
 import { mountComponentPanel } from '/ui/component-panel.js';
+import { mountPagePanel } from '/ui/page-panel.js';
+import { mountSourceInspector } from '/ui/source-inspector.js';
 const root = document.querySelector('#waygrain-documentation');
 const status = document.createElement('p');
 status.setAttribute('role', 'status');
@@ -40,7 +42,39 @@ try {
   targetRoot.className = 'wg-targets';
   root.append(targetRoot, panelRoot);
   const panels = mountComponentPanel(panelRoot, (id) => adapter.describe(id));
-  adapter = mountTargetAdapter(targetRoot, client(), panels);
+  const inspector = mountSourceInspector(
+    panelRoot,
+    async (targetId, sourceId) => {
+      const response = await fetch(
+        `/api/source?context=${encodeURIComponent(context)}&target=${encodeURIComponent(targetId)}&source=${encodeURIComponent(sourceId)}`,
+      );
+      if (!response.ok) throw new Error('SOURCE_UNAVAILABLE');
+      return response.json();
+    },
+  );
+  panels.setCitationHandler(inspector.open);
+  const pagePanel = mountPagePanel(
+    panelRoot,
+    () => client().read(bootstrap.targets.page),
+    (id, trigger) => {
+      inspector.reset();
+      panels.details(id, trigger);
+    },
+    inspector.open,
+    () => {
+      inspector.reset();
+      panels.reset();
+    },
+  );
+  adapter = mountTargetAdapter(targetRoot, client(), {
+    summary: panels.summary,
+    details(id, trigger) {
+      inspector.reset();
+      pagePanel.reset();
+      panels.details(id, trigger);
+    },
+    reset: panels.reset,
+  });
   for (const key of ['calculator', 'quantity', 'calculate', 'result'])
     adapter.register(
       key,
@@ -49,6 +83,8 @@ try {
   async function update() {
     const current = ++generation;
     panels.reset();
+    pagePanel.reset();
+    inspector.reset();
     adapter.update([], client());
     status.textContent = 'Loading documentation scope…';
     try {

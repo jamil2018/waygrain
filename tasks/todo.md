@@ -262,7 +262,7 @@ Acceptance: [W10 exact artifact and independent review](evidence/w10/review.json
 
 ### W11 — Whole-page documentation and source inspection
 
-**Status:** pending. **Dependencies:** W10. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W10. **Phase:** B. **Size:** M.
 
 Add the persistent Page documentation entry, component links and evidence inspector shared by both surfaces.
 
@@ -270,11 +270,13 @@ Add the persistent Page documentation entry, component links and evidence inspec
 
 **Acceptance:**
 
-- [ ] Page overview covers purpose/sections/inputs/workflows/outputs/rules/validation/limitations and links to component documentation.
-- [ ] Documented intent is visibly distinct from observed/code-verified/inferred evidence; conflicts/unknowns are not collapsed into one asserted truth.
-- [ ] Citations open retained excerpts or exact locators after authorization; missing/restricted references expose no source titles or hidden content.
+- [x] Page overview covers purpose/sections/inputs/workflows/outputs/rules/validation/limitations and links to component documentation.
+- [x] Documented intent is visibly distinct from observed/code-verified/inferred evidence; conflicts/unknowns are not collapsed into one asserted truth.
+- [x] Citations open retained excerpts or exact locators after authorization; missing/restricted references expose no source titles or hidden content.
 
 **Verification:** Browser page-to-component-to-source navigation and unauthorized citation tests, keyboard dismiss/focus checks and typecheck/build.
+
+Acceptance: [W11 exact artifact and independent review](evidence/w11/review.json).
 
 ### W12 — Export, import and restart durability
 
