@@ -1,6 +1,6 @@
 # Contributing to Waygrain
 
-Start with the [v0.3 specification](docs/specification-v0.3.md), [implementation plan](tasks/plan.md), and [task register](tasks/todo.md). The current direction is a standalone app descriptor; the existing package supplies reusable foundations, not a finished documentation experience.
+Start with the [v0.3 specification](docs/specification-v0.3.md), [implementation plan](tasks/plan.md), and [task register](tasks/todo.md). The current direction is a standalone app descriptor; the local synthetic demo and reusable foundations have separate acceptance evidence in the register.
 
 ## Select and execute a scope
 
@@ -20,9 +20,11 @@ Use the selected task's acceptance criteria and record actual commands/results. 
 npm ci
 npm run check
 npm run build
+npx playwright install chromium
+npm run test:descriptor
 ```
 
-W00 records the current executable baseline. Focused meaningful tests, typecheck and build apply to implementation; shared contracts/storage/build changes and checkpoints require applicable broader regressions. Proposed demo/test commands are introduced later in the register, not already available. Real-browser checks use synthetic fixtures without retained screenshots, video, raw snapshots or traces. Existing unrelated failures remain reported; never weaken assertions to obtain a pass.
+W00 records the current executable baseline. Focused meaningful tests, typecheck and build apply to implementation; shared contracts/storage/build changes and checkpoints require applicable broader regressions. `npm run demo:descriptor` starts the local fixture. `npm run test:descriptor` includes all existing quality gates and descriptor Chromium suites; browser installation is an explicit prerequisite. See the [descriptor setup guide](docs/descriptor-setup.md). Real-browser checks use synthetic fixtures without retained screenshots, video, raw snapshots or traces. Existing unrelated failures remain reported; never weaken assertions to obtain a pass.
 
 The A01 Python checker is historical evidence for the original pre-bootstrap artifact, including package absence. Keep it unchanged and do not apply it to the current package.
 

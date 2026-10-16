@@ -46,7 +46,8 @@
     "test:browser:snapshots": "npm run build && node tests/browser/snapshots.mjs",
     "test:browser:navigation": "npm run build && node tests/browser/navigation.mjs",
     "test:browser:actions": "npm run build && node tests/browser/actions.mjs",
-    "demo:descriptor": "npm run build && node dist/descriptor/http/main.js"
+    "demo:descriptor": "npm run build && node dist/descriptor/http/main.js",
+    "test:descriptor": "node scripts/test-descriptor.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.3.1",

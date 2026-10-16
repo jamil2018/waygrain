@@ -460,7 +460,7 @@ Acceptance: [W21 exact artifact and independent review](evidence/w21/review.json
 
 ### W22 — Reproducible demo commands and user documentation
 
-**Status:** pending. **Dependencies:** W21. **Phase:** D. **Size:** M.
+**Status:** verified. **Dependencies:** W21. **Phase:** D. **Size:** M.
 
 Finalize one startup command and one complete deterministic test command, including explicit prerequisites and documented limitations.
 
@@ -468,11 +468,13 @@ Finalize one startup command and one complete deterministic test command, includ
 
 **Acceptance:**
 
-- [ ] npm run demo:descriptor and npm run test:descriptor work from a clean disposable checkout with documented npm/browser prerequisites, no paid keys and no silent external effects.
-- [ ] Guide covers editor/import/export, component/page documentation, scoped questions, freshness, reset of disposable fixture only, provider label and failure recovery.
-- [ ] Package scripts/build/CI integration preserve existing applicable quality checks; license/private flags unchanged; broader packaging/host/real-pilot claims remain unqualified.
+- [x] npm run demo:descriptor and npm run test:descriptor work from a clean disposable checkout with documented npm/browser prerequisites, no paid keys and no silent external effects.
+- [x] Guide covers editor/import/export, component/page documentation, scoped questions, freshness, reset of disposable fixture only, provider label and failure recovery.
+- [x] Package scripts/build/CI integration preserve existing applicable quality checks; license/private flags unchanged; broader packaging/host/real-pilot claims remain unqualified.
 
 **Verification:** Independent clean-disposable-install command replay, npm run test:descriptor and npm run check/build; inspect generated assets and exported read-only adapter boundary.
+
+Acceptance: [W22 exact artifact and independent clean-checkout replay](evidence/w22/review.json).
 
 ### W23 — Final independent local-demo acceptance
 

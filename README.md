@@ -1,8 +1,21 @@
 # Waygrain
 
-Waygrain is becoming a standalone app descriptor: living documentation that explains pages, components and hidden business rules, with evidence-backed contextual clarification.
+Waygrain is a local app descriptor: editable, evidence-linked page and component documentation with scoped clarification. The v0.3 demo uses a synthetic calculator and an offline deterministic provider. Public release remains **HOLD**.
 
-The active [v0.3 plan](tasks/plan.md) targets a local synthetic calculation app, documentation editor/import, reusable read-only documentation surface and offline deterministic clarification. These capabilities are planned, not yet implemented. Existing TypeScript/SQLite/MCP/browser foundations remain available; the [task register](tasks/todo.md) tracks new implementation separately from historical work.
+Use Node.js 24 or 26 and npm from a source checkout:
+
+```sh
+npm ci
+npx playwright install chromium
+npm run test:descriptor
+npm run demo:descriptor
+```
+
+Browser installation is an explicit network prerequisite for tests. The demo itself runs without a paid API key or external provider. Open the printed reader address (normally `http://127.0.0.1:4317`) and authoring address (`http://127.0.0.1:4318`). Stop with Ctrl-C; restarting preserves the private synthetic store.
+
+Hover/focus Calculate or use its separate **Details** button, open **Page documentation**, inspect cited sources, and ask “Why is the total 90 for 10 items at 10 each?”, then “What about 9?”. Tax questions report missing evidence. The authoring surface edits, previews imports and exports retained knowledge history.
+
+The [descriptor setup guide](docs/descriptor-setup.md) covers prerequisites, scopes, persistence, import/export, freshness and recovery. This is a bounded synthetic local demo with a finite question vocabulary and configured local roles. Production AI, authentication, universal host integration, public packaging and real-customer use remain unqualified. The [task register](tasks/todo.md) records exact acceptance separately from historical work.
 
 ## Existing implementation and historical status
 
@@ -21,7 +34,7 @@ npm ci
 npm run check
 ```
 
-`check` runs strict typechecking, ESLint, Prettier checks, the Node test harness and the TypeScript build. Individual commands are `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` and `npm run build`. Output goes to `dist/` without bundling. The A03 tests exercise configuration and CLI setup with synthetic fixtures. `npm test` builds the modules before running them. Playwright Test is pinned for later browser scenarios. `npm run smoke:packed` explicitly installs Chromium into a disposable location and launches a blank headed window; ordinary install/check commands do not install or launch browsers.
+`check` runs strict typechecking, ESLint, Prettier checks, the Node test harness and the TypeScript build. Individual commands are `npm run typecheck`, `npm run lint`, `npm run format:check`, `npm test` and `npm run build`. Output goes to `dist/` without bundling. The A03 tests exercise configuration and CLI setup with synthetic fixtures. `npm test` builds the modules before running them. `npm run test:descriptor` includes `check` and all real-Chromium descriptor browser suites, using disposable synthetic stores. `npm run smoke:packed` explicitly installs Chromium into a disposable location and launches a blank headed window; ordinary install/check commands do not install browsers; descriptor tests explicitly launch installed headless Chromium.
 
 Exact dependency pins and declared licenses are recorded in [the dependency inventory](https://github.com/jamil2018/waygrain/blob/main/docs/dependencies.md), with the complete resolved graph in `package-lock.json`. The package is private until separately authorized release work. No install hook edits host settings or repository ignore rules.
 
@@ -40,7 +53,7 @@ Saved controls are descriptions, not executable handles. A fresh screen observat
 
 The package separates schemas, redaction and normalization, graph operations, SQLite persistence, MCP transport, CLI, and the isolated Playwright browser worker. The deterministic knowledge core accepts plain JSON and cannot invoke the browser. External structured ingestion remains supported.
 
-The selected stack is TypeScript/ESM, Node.js 24 with Node 26 smoke testing, the official MCP SDK, Zod, better-sqlite3, and Playwright. Dependency versions and declared licenses are recorded in A02; historical compatibility evidence retains its original limits. The v0.3 UI and service need their own verification. See [ADR-001](https://github.com/jamil2018/waygrain/blob/main/docs/decisions/001-bundled-browser.md) for choices, boundaries, and consequences.
+The selected stack is TypeScript/ESM, Node.js 24 with Node 26 smoke testing, the official MCP SDK, Zod, better-sqlite3, and Playwright. Dependency versions and declared licenses are recorded in A02; historical compatibility evidence retains its original limits. The v0.3 UI and service have separate task-scoped verification in the active register. See [ADR-001](https://github.com/jamil2018/waygrain/blob/main/docs/decisions/001-bundled-browser.md) for choices, boundaries, and consequences.
 
 ## Documentation
 

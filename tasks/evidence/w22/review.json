@@ -1,0 +1,21 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "5dec1587ae152db4577a5056823ace2a28a638ff66a018faae85c0de0eaa0769",
+  "environment": "macOS arm64 Node26.11.0",
+  "checks": [
+    "All10 source and clean candidate hashes match, including after execution",
+    "Clean copy755files excludes.git/node_modules/ignoredstores",
+    "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm ci EXIT0;107added/108audited/0vulnerabilities",
+    "npx playwright install chromium EXIT0;explicit prerequisite reused cache",
+    "npm run test:descriptor EXIT0;type/lint/format/build;183Node+18Chromium PASS;0fail/skip",
+    "Actual npm run demo:descriptor -- --config <unused-parent>/config.json --port 0 --author-port 0 twice;real reader/editor validate/save syntheticpurpose;restart identicalbundle andvisiblecomponentpurpose",
+    "SIGTERM stopped demoprocessgroups;probe EXIT0;browser closed;candidate+syntheticstore removed",
+    "Generated read-onlyadapter and active navigation inspected;dependency pins/lock/engines/private/license unchanged"
+  ],
+  "findings": [],
+  "limitations": [
+    "Wrapper replay checks reader/editor/componentpersistence; source navigation covered browser suite",
+    "Local Node24, otherOS,screenreader/productionintegrations unqualified;publicreleaseHOLD"
+  ]
+}

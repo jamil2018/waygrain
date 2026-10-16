@@ -5,6 +5,8 @@
 | Document | Purpose |
 | --- | --- |
 | [Repository README](../README.md) | Product intent, actual implementation status and available commands |
+| [Descriptor setup](descriptor-setup.md) | Runnable local demo, complete tests, authoring, questions and recovery |
+| [Descriptor history](descriptor-data.md) | Immutable revisions, export and same-identity empty-store restore |
 | [Product specification v0.3](specification-v0.3.md) | Active app-descriptor baseline; exact Page provenance in specification-v0.3-source.json |
 | [ADR-004: standalone app descriptor](decisions/004-standalone-app-descriptor.md) | Pivot, additive reuse and autonomous batch execution |
 | [Product specification v0.2](specification-v0.2.md) | Historical baseline, retained unchanged |
@@ -24,8 +26,8 @@
 
 ## Authority and history
 
-Current user instructions and the v0.3 snapshot govern the app-descriptor slice. Use ADR-004 and the plan for engineering choices, and the register for actual task status. README summaries do not create capabilities or advance gates. W00–W23 are unstarted at planning completion.
+Current user instructions and the v0.3 snapshot govern the app-descriptor slice. Use ADR-004 and the plan for engineering choices, and the register for actual task status. README summaries do not create capabilities or advance gates. The register records independently accepted implementation tasks and exact-artifact receipts.
 
 The [prechange archive](../tasks/history/2026-10-16-v0.2/INDEX.md) preserves the old roadmap and register byte-for-byte, including prior uncommitted results. Historical A01–G08 evidence and ADR-001–003 remain in place. Their failed/unqualified release, benefit and portability verdicts are not erased by the new direction, and do not become prerequisites for the bounded local demo.
 
-Existing setup, contracts and runtime documents describe the older implementation. New descriptor setup and data-format guides are assigned to W12/W22. Do not infer new UI or provider support from historical checks. The A01 checker applies only to its original pre-bootstrap artifact.
+Existing setup, contracts and runtime documents describe the older implementation. Use the descriptor setup and data-format guides above for the new local demo. Do not infer new UI or provider support from historical checks. The A01 checker applies only to its original pre-bootstrap artifact.

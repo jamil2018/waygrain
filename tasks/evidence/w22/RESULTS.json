@@ -1,0 +1,29 @@
+{
+  "task": "W22",
+  "dependency": {
+    "W21": "9d52647"
+  },
+  "status": "independent clean-disposable replay pending",
+  "commands": [
+    {
+      "command": "npm run test:descriptor",
+      "exit": 0,
+      "result": "type/lint/format/build PASS;183 Node tests +18 Chromium tests PASS;0 fail/skip"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "initial_failure": "First command stopped at lint: explicit URL import missing. Corrected import, full command rerun passed.",
+  "required_independent_replay": [
+    "Create clean disposable candidate checkout without ignored stores/node_modules; verify frozen source hashes.",
+    "npm ci with explicit browser-download skip; explicit npx playwright install chromium prerequisite (installed cache may be reused); npm run test:descriptor.",
+    "npm run demo:descriptor -- --config NEW_UNUSED_PARENT/config.json --port 0 --author-port 0: real reader+authoring startup/browser inspection, stop/restart retained state.",
+    "Inspect generated browser assets/read-only adapter boundary; unchanged lockfile/dependency/license/private flags."
+  ],
+  "limits": [
+    "macOS arm64 Node26 local qualification; CI Node24/26 results recorded separately afterpush",
+    "No production provider/auth/customer/pilot/packaging/portability/fullWCAG/publicrelease claim; HOLD"
+  ]
+}

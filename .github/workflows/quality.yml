@@ -17,4 +17,5 @@ jobs:
       - run: npm ci
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
-      - run: npm run check
+      - run: npx playwright install chromium
+      - run: npm run test:descriptor

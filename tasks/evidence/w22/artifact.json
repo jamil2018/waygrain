@@ -1,0 +1,12 @@
+{
+  ".github/workflows/quality.yml": "35d2a45eadc591ceff154685d3dfc8a99b4e55ae3845e64ba31a1cf3bc4ebd45",
+  "CONTRIBUTING.md": "11b7f30b940c2ff394c8b3077b36f4dd7e4158e932232cf90d77793fd3e3f3c4",
+  "README.md": "c1818119e4de48737b2090a8f47fcf8a328bd14e212c08ce0d6290aa709b7a52",
+  "docs/README.md": "85978e4770947aa9fdfeddaf384b7ff39a4de5b34fdba7e6b6249d329ac9e015",
+  "docs/descriptor-setup.md": "3f6826527fe24d22f5b30602047680dcbe653be56f01d183a9f5845f4f7bbef9",
+  "package-lock.json": "94b7eb03dcc322c629dd9e63a142eeb727659524fed94783fb3a89ed648edcd6",
+  "package.json": "b4de95595b1354db729f260d77a73628d64bcee09c0a78887216254812e5eda4",
+  "scripts/test-descriptor.mjs": "29cebd52e0870620e3d54bdbd2816fa69a05c77a2e61fc4af651704aef4965ea",
+  "tasks/evidence/w22/RESULTS.json": "e201fb158428fd5c957f6fccad5630e096ed35dcfc5aec7fe3221b081938ef06",
+  "tasks/todo.md": "2427525a8cd6ad6ba47051b09101f1c7abdd2ecf1df9e5bbd705c89330111d56"
+}
