@@ -424,7 +424,7 @@ Acceptance: [W19 exact artifact and independent checkpoint](evidence/w19/review.
 
 ### W20 — Integrated isolation and adversarial acceptance
 
-**Status:** pending. **Dependencies:** W19. **Phase:** D. **Size:** M.
+**Status:** verified. **Dependencies:** W19. **Phase:** D. **Size:** M.
 
 Close cross-layer security/privacy gaps using hostile imports, provider outputs and scope changes in the actual service and UI.
 
@@ -432,11 +432,13 @@ Close cross-layer security/privacy gaps using hostile imports, provider outputs 
 
 **Acceptance:**
 
-- [ ] Exercise project/app/environment/role/tenant/version/state isolation through API, UI, source inspector, conversation storage, cache and provider boundary, including unknowns.
-- [ ] Injected markup/instructions/citations and fabricated supported assertions are rejected or presented as unsupported; no source/question bodies in diagnostics.
-- [ ] Validate origin/access boundaries, import atomicity and no-action/no-unrelated-input behavior through integrated negative cases; fix only discovered bounded defects.
+- [x] Exercise project/app/environment/role/tenant/version/state isolation through API, UI, source inspector, conversation storage, cache and provider boundary, including unknowns.
+- [x] Injected markup/instructions/citations and fabricated supported assertions are rejected or presented as unsupported; no source/question bodies in diagnostics.
+- [x] Validate origin/access boundaries, import atomicity and no-action/no-unrelated-input behavior through integrated negative cases; fix only discovered bounded defects.
 
 **Verification:** Fresh synthetic sentinel corpus, real service/browser adversarial suite, storage/log inspection with sanitized findings, full npm run check/build.
+
+Acceptance: [W20 exact artifact and independent review](evidence/w20/review.json).
 
 ### W21 — Integrated accessibility, freshness and recovery
 

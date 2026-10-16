@@ -1,0 +1,9 @@
+{
+  "docs/descriptor-security.md": "6e364dfe824570b97b181d9612316aad9989b67d190505e285d272870477568f",
+  "src/descriptor/ui/component-panel.ts": "ad4d55c3ef03f563acbfe0ffaebab895918b2d1bb81766a7fc737f1cf53c7f08",
+  "tasks/evidence/w20/RESULTS.json": "6371d3c315ca027bf7eff25ace4d3eb0cdddf9b36095ddde6cbdf82207db16e6",
+  "tasks/todo.md": "50d9b8cbef1c1d4c5651ecd936b32dec10b21f5d2fe68cd76364900b879b3042",
+  "tests/descriptor/isolation-fixture.mjs": "0e650d70f3fa2d0c247e99e791db1442ce11015608fe3c0afcb4a65003e5b4cb",
+  "tests/descriptor/isolation.browser.mjs": "5c0ba563f3115cdb93633e70656314fc4cafd7301f6b0d42433651c0e98777e2",
+  "tests/descriptor/isolation.test.mjs": "4cba8250062b8254c583f6b0f577ff21a358ecbe942188c5cdc9a09b12f0561d"
+}

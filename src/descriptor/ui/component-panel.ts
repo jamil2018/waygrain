@@ -40,12 +40,23 @@ export function mountComponentPanel(
     body.replaceChildren();
     if (restore && trigger?.isConnected) trigger.focus();
     trigger = null;
+    // Focus restoration can itself request a summary. Dismiss that late request too.
+    summaryGeneration++;
+    summary.hidden = true;
+    summary.replaceChildren();
   };
   close.addEventListener('click', () => dismiss());
   const escape = (event: KeyboardEvent) => {
-    if (event.key === 'Escape' && !panel.hidden && !event.defaultPrevented) {
-      event.preventDefault();
-      dismiss();
+    if (event.key === 'Escape' && !event.defaultPrevented) {
+      if (!panel.hidden) {
+        event.preventDefault();
+        dismiss();
+      } else if (!summary.hidden && summary.hasChildNodes()) {
+        event.preventDefault();
+        summaryGeneration++;
+        summary.hidden = true;
+        summary.replaceChildren();
+      }
     }
   };
   document.addEventListener('keydown', escape);

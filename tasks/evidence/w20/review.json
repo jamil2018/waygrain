@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "d8c36f64efb8743b5917c308aaf00f29f09f916623d93e22e272d66327577ed4",
+  "checks": [
+    "All7 hashes matched",
+    "typecheck/build EXIT0",
+    "Isolation/component/clarification API+browser10PASS",
+    "Additional late-rejected-read/missingtarget/dismiss/unmount Chromium probes PASS"
+  ],
+  "findings": [],
+  "resolved": [
+    "Persistent summary Escape advisory"
+  ],
+  "limitations": [
+    "W21 interaction/accessibility and broaderproductionauth outsideacceptance"
+  ]
+}

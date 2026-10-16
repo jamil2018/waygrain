@@ -1,0 +1,37 @@
+{
+  "task": "W20",
+  "dependency": {
+    "W19": "1666ea2"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "183PASS;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/isolation.test.mjs (permitted)",
+      "exit": 0,
+      "result": "2PASS all11scopes/sentinels/source+history denial, rawunsupported diskabsence, project/app/env/nullforgery, frozenproviderforeigncitation502 no writes"
+    },
+    {
+      "command": "node --test tests/descriptor/isolation.browser.mjs tests/descriptor/component.browser.mjs (permitted)",
+      "exit": 0,
+      "result": "5PASS hostile import/render/source/question/scopereset plusEscape late-summary/focus-restoration andW10regressions; finalisolationbrowser2PASS withpostcommitinertassertion"
+    },
+    {
+      "command": "Exact previously interrupted task-owned Chromium profile-directory absence/cleanup check",
+      "exit": 0,
+      "result": "Two known synthetic temp paths absent after check; no contents read"
+    }
+  ],
+  "findings_fixed": [
+    "W10 advisory: persistent/pending summary nowEscape-dismissible; focus restoration and late reads cannot resurrect it."
+  ],
+  "boundary": "New synthetic private-scope marker corpus spans API, provider, source inspector, conversation, DOM cleanup and disk sentinel checks. Host instructions/markup remain text through explicit import. Forged provider source membership rejected before turn persistence. Existingorigin/importatomicity/forgery/verification regressions stillpass.",
+  "limitations": [
+    "Single-user configured loopback fixture; no productionauth/universalhost/provider-sandbox/fullWCAG claim",
+    "W21 final journey/accessibility/recovery matrix stillpending; publicreleaseHOLD"
+  ]
+}
