@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "REQUEST_CHANGES",
+  "manifest_file_sha256": "10342c16ba3a42c55bd21ae806f65a2707035aa98601dd4efccb79bc0410298b",
+  "required": [
+    "Export accepted1048549-byte archive but preview envelope1048583 exceeded1MiB. Validate complete commit envelope at export and add near-limit regression."
+  ],
+  "checks": [
+    "All12 hashes matched",
+    "typecheck/build EXIT0",
+    "restart/store/archive Chromium8 PASS",
+    "independent near-limit reproduction defect confirmed"
+  ]
+}

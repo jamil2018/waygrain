@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "a3bab93713ce47044b4dc37f65e1b3c86a22e0bc8473c28fe0b7bfa112da2f4e",
+  "checks": [
+    "All15 hashes matched",
+    "typecheck/build EXIT0",
+    "restart/store/archive Chromium9 PASS",
+    "Independent former-defect near-limit export now LIMIT_EXCEEDED",
+    "New64-snapshot near-limit real destination exact history roundtrip PASS"
+  ],
+  "findings": [],
+  "resolved": [
+    "R1 complete export/restore commit envelope bound"
+  ],
+  "limitations": [
+    "Synthetic local portability only; no merge or partial-scope export; public release HOLD"
+  ]
+}

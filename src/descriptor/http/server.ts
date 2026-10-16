@@ -22,6 +22,11 @@ import {
   commitImport,
 } from '../authoring.js';
 import { readBundle, writeBundle, previewBundle } from '../store.js';
+import {
+  exportDescriptor,
+  previewRestore,
+  commitRestore,
+} from '../portable.js';
 
 const assetRoot = new URL('../../../assets/descriptor-demo/', import.meta.url);
 // dist/descriptor/http -> repository root requires three parents.
@@ -50,6 +55,7 @@ const authorAssets = [
   'editor.html',
   'editor.mjs',
   'editor-import.mjs',
+  'editor-archive.mjs',
   'editor.css',
   'style.css',
 ];
@@ -262,6 +268,38 @@ export async function startDescriptorService(
                 )
               : retrieveDescriptor(store, selected.context, request);
           send(res, 200, data);
+          return;
+        }
+        if (
+          mode === 'author' &&
+          req.method === 'GET' &&
+          url.pathname === '/api/archive' &&
+          !url.search
+        ) {
+          send(res, 200, exportDescriptor(store, author, app));
+          return;
+        }
+        if (
+          mode === 'author' &&
+          req.method === 'POST' &&
+          ['/api/archive/preview', '/api/archive/commit'].includes(
+            url.pathname,
+          ) &&
+          !url.search
+        ) {
+          if (
+            req.headers.origin !== authorURL ||
+            req.headers['content-type'] !== 'application/json'
+          )
+            throw new DescriptorError('ACCESS_DENIED');
+          const input = await body(req);
+          send(
+            res,
+            200,
+            url.pathname.endsWith('/preview')
+              ? previewRestore(store, author, input)
+              : commitRestore(store, author, input),
+          );
           return;
         }
         if (

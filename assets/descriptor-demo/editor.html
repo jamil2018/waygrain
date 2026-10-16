@@ -85,6 +85,24 @@
         <p id="import-status" role="status"></p>
         <pre id="import-preview"></pre>
       </section>
+      <section aria-label="History export and restore">
+        <h2>Export and restore history</h2>
+        <p>
+          Export retains all authorized app revisions and stable IDs. Restore
+          only into an empty app with the same project/app identities; existing
+          history is never overwritten.
+        </p>
+        <button type="button" id="export-history">Export history</button>
+        <label for="history-json">History archive (JSON)</label
+        ><textarea id="history-json" rows="8" spellcheck="false"></textarea>
+        <button type="button" id="preview-history">
+          Preview history restore
+        </button>
+        <button type="button" id="commit-history" disabled>
+          Commit history restore
+        </button>
+        <p id="history-status" role="status"></p>
+      </section>
       <div class="editor-actions">
         <button id="validate-document" type="button">Validate draft</button
         ><button id="save-document" type="button">Save revision</button
@@ -93,5 +111,9 @@
       <p id="editor-error" role="alert"></p>
     </main>
     <script type="module" src="/assets/descriptor-demo/editor.mjs"></script>
+    <script
+      type="module"
+      src="/assets/descriptor-demo/editor-archive.mjs"
+    ></script>
   </body>
 </html>

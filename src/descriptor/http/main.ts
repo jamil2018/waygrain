@@ -9,8 +9,33 @@ import { descriptorFixture } from '../fixture.js';
 import { readBundle, writeBundle } from '../store.js';
 import { startDescriptorService } from './server.js';
 
-const configPath = resolve(process.cwd(), '.waygrain-descriptor/config.json');
+const args = process.argv.slice(2);
+let configPath = resolve(process.cwd(), '.waygrain-descriptor/config.json'),
+  empty = false,
+  port = 4317,
+  authorPort = 4318;
+function options() {
+  for (let i = 0; i < args.length; i++) {
+    const flag = args[i];
+    if (flag === '--empty') {
+      empty = true;
+      continue;
+    }
+    const value = args[++i];
+    if (!value) throw new Error('INVALID_OPTIONS');
+    if (flag === '--config') {
+      if (!value.startsWith('/')) throw new Error('INVALID_OPTIONS');
+      configPath = value;
+    } else if (flag === '--port' || flag === '--author-port') {
+      if (!/^\d+$/.test(value) || Number(value) > 65535)
+        throw new Error('INVALID_OPTIONS');
+      if (flag === '--port') port = Number(value);
+      else authorPort = Number(value);
+    } else throw new Error('INVALID_OPTIONS');
+  }
+}
 async function main() {
+  options();
   if (!existsSync(configPath))
     await initializeConfiguration(configPath, {
       project_alias: 'descriptor_demo',
@@ -52,15 +77,15 @@ async function main() {
   let service: Awaited<ReturnType<typeof startDescriptorService>> | undefined;
   try {
     const app = configuration.apps[0]!.app_id;
-    if (!readBundle(store, app))
+    if (!empty && !readBundle(store, app))
       writeBundle(store, {
         schema_version: 1,
         expected_revision: store.revision,
         bundle: await descriptorFixture(configuration.project_id, app),
       });
     service = await startDescriptorService(store, {
-      port: 4317,
-      authorPort: 4318,
+      port,
+      authorPort,
     });
     process.stdout.write(
       `Waygrain synthetic local demo: ${service.readURL}\nAuthoring: ${service.authorURL}\nDeterministic offline fixture; public release HOLD.\n`,

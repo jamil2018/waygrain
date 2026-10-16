@@ -280,7 +280,7 @@ Acceptance: [W11 exact artifact and independent review](evidence/w11/review.json
 
 ### W12 — Export, import and restart durability
 
-**Status:** pending. **Dependencies:** W08, W11. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W08, W11. **Phase:** B. **Size:** M.
 
 Finish the portable documented local data round-trip using the validated import boundary.
 
@@ -288,11 +288,13 @@ Finish the portable documented local data round-trip using the validated import 
 
 **Acceptance:**
 
-- [ ] Export includes schema version and all authorized mappings/sources/claims/revisions with IDs/provenance; no credentials, arbitrary form data or unrelated scopes.
-- [ ] Export into a clean synthetic store reproduces documentation and history; conflicts/newer revisions cannot be silently overwritten.
-- [ ] Stop/start/reload preserves authored state, mapping status and source inspection; failure leaves no partial restoration.
+- [x] Export includes schema version and all authorized mappings/sources/claims/revisions with IDs/provenance; no credentials, arbitrary form data or unrelated scopes.
+- [x] Export into a clean synthetic store reproduces documentation and history; conflicts/newer revisions cannot be silently overwritten.
+- [x] Stop/start/reload preserves authored state, mapping status and source inspection; failure leaves no partial restoration.
 
 **Verification:** Process restart and clean-store round-trip tests, invalid export/import fixture checks and legacy backup/restore regression; document actual format and commands.
+
+Acceptance: [W12 exact artifact and independent review](evidence/w12/review.json).
 
 ### W13 — Freshness and explicit verification
 

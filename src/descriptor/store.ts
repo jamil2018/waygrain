@@ -86,10 +86,13 @@ function validateSuccessor(
       throw new KnowledgeError('CONFLICT');
   }
 }
-function validateStoredSuccessor(store: Store, b: DescriptorBundle) {
-  const previous = readBundle(store, b.app_id);
+function validateStoredSuccessor(
+  store: Store,
+  b: DescriptorBundle,
+  previous: DescriptorBundle | null = readBundle(store, b.app_id),
+  historic: DescriptorBundle[] = bundleHistory(store, b.app_id),
+) {
   validateSuccessor(previous, b);
-  const historic = bundleHistory(store, b.app_id);
   // An ID cannot reappear after removal or be repurposed across entity kinds/apps.
   for (const old of historic) {
     for (const key of [
@@ -199,4 +202,61 @@ export function writeBundle(
     store.requireStorageCapacity();
     return { revision, revision_id: b.revision_id };
   });
+}
+
+/** Restore a complete chain only into an empty app. Validation precedes allocation; one transaction covers all rows. */
+export function restoreBundleHistory(
+  store: Store,
+  expectedRevision: number,
+  history: DescriptorBundle[],
+  preview = false,
+) {
+  return store.transaction(() => {
+    store.requireRevision(expectedRevision);
+    if (!history.length) throw new DescriptorError('INVALID_INPUT');
+    const app = history[0]!.app_id,
+      project = history[0]!.project_id;
+    appOwned(store, project, app);
+    if (bundleHistory(store, app).length) throw new KnowledgeError('CONFLICT');
+    const validated: DescriptorBundle[] = [];
+    for (const raw of history) {
+      const bundle = parseDescriptor(bundleSchema, raw);
+      if (bundle.app_id !== app || bundle.project_id !== project)
+        throw new DescriptorError('ACCESS_DENIED');
+      if (validated.some((old) => old.revision_id === bundle.revision_id))
+        throw new KnowledgeError('CONFLICT');
+      validateStoredSuccessor(
+        store,
+        bundle,
+        validated.at(-1) ?? null,
+        validated,
+      );
+      validated.push(bundle);
+    }
+    if (!preview) {
+      for (const b of validated) {
+        const revision = store.advanceRevision();
+        store.db
+          .prepare('INSERT INTO descriptor_revisions VALUES(?,?,?,1,?,?)')
+          .run(
+            b.revision_id,
+            b.app_id,
+            revision,
+            b.supersedes_revision_id,
+            JSON.stringify(b),
+          );
+      }
+      const last = validated.at(-1)!;
+      store.db
+        .prepare('INSERT INTO descriptor_heads VALUES(?,?)')
+        .run(app, last.revision_id);
+      store.requireStorageCapacity();
+    }
+    return {
+      valid: true,
+      revision: store.revision,
+      revisions: validated.length,
+      revision_id: validated.at(-1)!.revision_id,
+    };
+  }, !preview);
 }

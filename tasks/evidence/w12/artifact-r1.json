@@ -1,0 +1,14 @@
+{
+  "assets/descriptor-demo/editor-archive.mjs": "b8086405828cc2c9c10434550bca975747ca2391ca2c715524df039ebd203bb6",
+  "assets/descriptor-demo/editor.html": "24a3ba54a6480170c03c3a3536324791bbf949b92bc0d6b9f04b5bdf09f02a0e",
+  "docs/descriptor-data.md": "f91229dc997cac0f0333aa3f995473315b8e43072dabdc2914733762cc463564",
+  "src/descriptor/http/main.ts": "c982a3f08fb739e8c80e22b7d7b1a9ce13f23fa7c7a65d7a84fcd2745731ee68",
+  "src/descriptor/http/server.ts": "67713a92170ab280a301bdfac16af4925ab6243e44c31a05b21b25332443cf5c",
+  "src/descriptor/portable.ts": "c47280bbb474a212c12788582487e39697eace849eb3be724e8d543d48ae7006",
+  "src/descriptor/store.ts": "8f9e5c221f353d37dad600df508e0aea01f648bee81a632df5ac364b0c0af620",
+  "tasks/evidence/w12/RESULTS.json": "aa12cf82e2d652c45975c3bba6211ee7ab2028adeae3325ff364ecbab44accbf",
+  "tasks/todo.md": "2d4eb795671dc51e9732208a333525e49aa8d1fb704afeea02c03e128ae9ec4d",
+  "tests/descriptor/archive.browser.mjs": "bd11b156f4c32687c8dac7c81d7623d835b9308ef0bf901f34213e154c15b498",
+  "tests/descriptor/restart-worker.mjs": "b6e04d893d46326045a9048351fb093fe518004c451ca86b978ae334951d5a7d",
+  "tests/descriptor/restart.test.mjs": "3d5400383cc75e95c34b84852906854a0edcfb6c85e59c3b0e3652d0c1ba23bc"
+}

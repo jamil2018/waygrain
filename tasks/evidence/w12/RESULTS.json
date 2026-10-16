@@ -1,0 +1,52 @@
+{
+  "task": "W12",
+  "dependencies": {
+    "W08": "7c3ba21",
+    "W11": "138728f"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "165 PASS no fail/skip; type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/restart.test.mjs tests/descriptor/store.test.mjs (permitted)",
+      "exit": 0,
+      "result": "7 PASS; full history roundtrip; two service process start-stop cycles; exact source inspection/reexport; invalid chain, receipt, scope, existing app and injected transaction failure preserve destination"
+    },
+    {
+      "command": "node --test tests/descriptor/archive.browser.mjs (permitted)",
+      "exit": 0,
+      "result": "1 PASS real Chromium export/clean preview/edit invalidation/commit/reload/existing-store refusal; synthetic paste event for large JSON"
+    },
+    {
+      "command": "node dist/descriptor/http/main.js --config <isolated-private-synthetic-copy>/config.json --empty --port 0 --author-port 0 (permitted smoke)",
+      "exit": 0,
+      "result": "readiness and graceful SIGTERM stop PASS; temp copy removed"
+    },
+    {
+      "command": "npm run check (permitted, R2)",
+      "exit": 0,
+      "result": "166 PASS;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/restart.test.mjs (permitted,R2)",
+      "exit": 0,
+      "result": "3 PASS incl64-snapshot near-limit envelope refusal and successful near-limit clean restore"
+    }
+  ],
+  "findings_fixed": [
+    "Trusted context test incorrectly included schema_version in strict grant; fixed fixture.",
+    "Export author checks moved after transactional snapshot read so access failure preserves ACCESS_DENIED instead of shared SQLite error wrapping.",
+    "Missing globals fixed after lint failure.",
+    "Browser test expected Loaded rather than Saved status; corrected. Large Playwright fill slow; test uses synthetic paste event without archive body diagnostic logging.",
+    "Independent R1 export envelope overflow: export now validates worst supported expected-revision commit envelope including digest; near-limit regression proves successful export can restore."
+  ],
+  "boundary": "Complete immutable descriptor history only; all included historical scopes require author access. Max64 snapshots,1MiB bound including commit envelope. Same project/app identity and empty destination required; global store counters reallocated, evidence IDs/provenance preserved. Chain preflight before row allocation and one atomic transaction. Read-only listener has no export/restore route.",
+  "limitations": [
+    "No merge/overwrite/partial-scope export or credential/config transport",
+    "Synthetic Chromium/local service; no public release qualification"
+  ]
+}
