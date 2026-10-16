@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** resumed; W00–W09 independently verified. W00–W23 remain authorized with independent review and per-task commit/push. **Next eligible task:** W10. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** resumed; W00–W14 independently verified. W00–W23 remain authorized with independent review and per-task commit/push. **Next eligible task:** W10. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -316,7 +316,7 @@ Acceptance: [W13 exact artifact and independent review](evidence/w13/review.json
 
 ### W14 — Phase B independent checkpoint
 
-**Status:** pending. **Dependencies:** W13. **Phase:** B. **Size:** S.
+**Status:** verified. **Dependencies:** W13. **Phase:** B. **Size:** S.
 
 Verify a user can author one rule, inspect it at component and page levels, and retain it across restart.
 
@@ -324,11 +324,13 @@ Verify a user can author one rule, inspect it at component and page levels, and 
 
 **Acceptance:**
 
-- [ ] Independent real-browser replay covers editor/import, hover/focus/touch Details, whole-page evidence and export/restart.
-- [ ] Host action counts and unrelated field sentinels prove no accidental activation/capture in covered cases; access and stale states are checked.
-- [ ] Accepted exact artifacts and actual accessibility/host limitations are recorded; no claim of universal integration.
+- [x] Independent real-browser replay covers editor/import, hover/focus/touch Details, whole-page evidence and export/restart.
+- [x] Host action counts and unrelated field sentinels prove no accidental activation/capture in covered cases; access and stale states are checked.
+- [x] Accepted exact artifacts and actual accessibility/host limitations are recorded; no claim of universal integration.
 
 **Verification:** Independent npm run check/build plus phase B browser/store/isolation suite and a fresh startup replay.
+
+Acceptance: [W14 exact artifact and independent checkpoint](evidence/w14/review.json).
 
 ### W15 — Bounded evidence package and answer validation
 

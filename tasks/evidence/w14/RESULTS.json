@@ -1,0 +1,19 @@
+{
+  "task": "W14",
+  "status": "ready for independent integrated checkpoint",
+  "dependency": {
+    "W13": "b9fd46f"
+  },
+  "required_replay": [
+    "Verify W06-W13 accepted dependency commits and exact current bound PhaseB artifact (historical task manifests bind prior versions, not later changed source).",
+    "npm run check and npm run build",
+    "PhaseB browser/store/import/isolation/freshness/restart suites with synthetic fixtures, no screenshots/traces",
+    "Fresh startup plus integrated browser path: edit an authored rule or import one, inspect component and whole-page evidence/source, reload/restart retain authored content; pointer/focus/touch parity, no host activation or unrelated sentinel reads",
+    "Confirm pre-W historical evidence unchanged from52324b7"
+  ],
+  "limits": [
+    "Synthetic local Chromium only; no universal integration or production authorization qualification",
+    "Provider/conversation work W15-W19 not yet implemented",
+    "Public release HOLD; no paid providers or real customer data"
+  ]
+}
