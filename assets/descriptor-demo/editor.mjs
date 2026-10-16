@@ -1,4 +1,5 @@
 /* global document, crypto, fetch */
+import { mountImport } from './editor-import.mjs';
 const $ = (selector) => document.querySelector(selector);
 const fields = [
   'name',
@@ -188,3 +189,10 @@ $('#reload-document').addEventListener('click', () => {
   void load().catch((e) => feedback(e.message, true));
 });
 void load().catch((e) => feedback(e.message, true));
+
+mountImport({
+  api,
+  load,
+  feedback,
+  getState: () => ({ saved, draft, revision, selected }),
+});

@@ -1,0 +1,53 @@
+{
+  "task": "W08",
+  "status": "implemented locally; user resumed; R1 review required preview-race correction; renewed independent review pending",
+  "dependency": {
+    "W07": "f4b426d8477fdee49e45800daf2c6a5ca0451bb2",
+    "review_manifest": "068c80d357aa1ae2e35da87ca12271ce05d6c7a4abb3b4e30620eb6accd9c4ac"
+  },
+  "commands": [
+    {
+      "command": "npm run build && node --test tests/descriptor/import.test.mjs",
+      "exit": 0,
+      "result": "3 focused cases PASS"
+    },
+    {
+      "command": "npm run check (initial W08, permitted loopback)",
+      "exit": 0,
+      "result": "163 PASS no fail/skip"
+    },
+    {
+      "command": "node --test tests/descriptor/editor.browser.mjs tests/descriptor/import.browser.mjs (final after module separation, permitted)",
+      "exit": 0,
+      "result": "2 real Chromium cases PASS; includes unsaved-draft guard, inert preview, commit/reload, editor regression; no retained artifacts"
+    },
+    {
+      "command": "npm run check (final separated module and asset allowlist, permitted loopback)",
+      "exit": 0,
+      "result": "163 PASS,0 fail/skip; typecheck/lint/format/build PASS"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    },
+    {
+      "command": "npm run check (resumed R2, permitted loopback)",
+      "exit": 0,
+      "result": "163 PASS no fail/skip; typecheck/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/editor.browser.mjs tests/descriptor/import.browser.mjs (R2, permitted)",
+      "exit": 0,
+      "result": "3 PASS including delayed source/target/out-of-order previews"
+    }
+  ],
+  "scope": "Source/JSON bundle preview/validate/exact-candidate atomic commit; bounded source metadata/excerpts, digest/revision receipt, preserved prior evidence, code imports inferred without verification. UI assigns selected target/scope and displays inert preview. Unsaved description drafts block imports. Separate import UI module and documented JSON format.",
+  "review": "R1 REQUEST_CHANGES preserved in review-r1.json; generation/fingerprint invalidation and captured display text added. Delayed source/target and out-of-order preview regression passes. No acceptance yet.",
+  "limitations": [
+    "W08 R1 rejected; no final acceptance or commit/push",
+    "Source excerpt wizard capped4KiB; JSON schema supports16KiB excerpts",
+    "Claims/source assignments remain partially advanced JSON",
+    "Receipt detects candidate changes; authorization and full transactional validation enforced independently",
+    "W09 independent adapter locally implemented separately; W10\u2013W23 pending; public release HOLD"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "assets/descriptor-demo/editor-import.mjs": "0031cda64011e327651ff27b5d3402f907878e5da485db8cb30aac6f15bc345b",
+  "assets/descriptor-demo/editor.css": "3c6906538c813ed90a4e6e5185e6c974dbc85ab8a75ae48eec62e556803fd930",
+  "assets/descriptor-demo/editor.html": "d23c94970efb4f4d3b8ce441c028de86a7c382aec8e466a887368b6bc051f0e1",
+  "assets/descriptor-demo/editor.mjs": "169da0072b4a4a8cdf99007868d67982f0fcceb275605c7b3d7ce6f96ae68785",
+  "docs/descriptor-import.md": "b200f7c84c404814d64f1cd02e37ca8398beda65c3992d05a96d8265bfa0e602",
+  "src/descriptor/authoring.ts": "fa7c5b1dccf8987b285fbbdd115e6c26d16b3046e22a7e0c39b878def82b8774",
+  "src/descriptor/http/server.ts": "248c2bb1778c00d1239f2d859c4e93e8262b8707e6075bea3613c56d930446d7",
+  "tasks/evidence/w08/RESULTS.json": "d9d23edc81f16bafa5a097f3b6cb5b0dfa946aecdd4b08e0272374b049059d03",
+  "tasks/evidence/w08/artifact-r1.json": "2043965392be25abd062e8f3fe8d0788d0d001c738d8c8d08d8f3472e2ae36b1",
+  "tasks/evidence/w08/review-r1.json": "095ea8704a58819bb5cb7e19be852aae6a963aae718aa0946f357b2b414ffde6",
+  "tasks/todo.md": "fc43c37702445b6115f7a2f09ea07356da1e11f1d1401985617e789a9f7d12c2",
+  "tests/descriptor/import.browser.mjs": "f56059b7bfe35f30ae8bfb94dc5702df9bc8e42cfdb8481a292481d44df8e26d",
+  "tests/descriptor/import.test.mjs": "c8254756ab9b0d6df657bd61b9e70d7ec624c3f4d93cbc57dd232c2f49f2e6d3"
+}

@@ -49,3 +49,20 @@ summary {
     grid-template-columns: 1fr;
   }
 }
+
+#source-import {
+  border-top: 1px solid var(--line);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+#source-import input,
+#source-import select,
+#source-import textarea {
+  margin-bottom: 1rem;
+}
+#import-preview {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 16rem;
+  overflow: auto;
+}

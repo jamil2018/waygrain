@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "REQUEST_CHANGES",
+  "manifest_file_sha256": "2043965392be25abd062e8f3fe8d0788d0d001c738d8c8d08d8f3472e2ae36b1",
+  "checks": [
+    "All11 hashes match",
+    "npm run check permitted EXIT0 PASS163 no fail/skip",
+    "Editor/import Chromium replay EXIT0 PASS2",
+    "Deferred preview probe reproduced stale candidate committing OLD SOURCE while displaying NEW SOURCE"
+  ],
+  "required_findings": [
+    "Invalidate delayed/out-of-order preview responses on source/target/context edits; render captured candidate content; add delayed-response regression"
+  ]
+}

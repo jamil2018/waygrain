@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** W00–W07 independently verified; W00–W23 authorized for autonomous dependency-order execution, independent review and per-task commit/push. **Next eligible task:** W08. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** resumed; W00–W08 independently verified. W00–W23 remain authorized with independent review and per-task commit/push. **Next eligible task:** W09. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -25,7 +25,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | W05 | A | Phase A independent checkpoint | W04 | verified |
 | W06 | B | Local demo service and safe transport | W05 | verified |
 | W07 | B | Page and component authoring editor | W06 | verified |
-| W08 | B | Validated source and bundle import | W07 | pending |
+| W08 | B | Validated source and bundle import | W07 | verified |
 | W09 | B | Reusable target adapter | W06 | pending |
 | W10 | B | Component summary and details panel | W09, W07 | pending |
 | W11 | B | Whole-page documentation and source inspection | W10 | pending |
@@ -208,7 +208,7 @@ Acceptance: [W07 exact artifact and independent review](evidence/w07/review.json
 
 ### W08 — Validated source and bundle import
 
-**Status:** pending. **Dependencies:** W07. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W07. **Phase:** B. **Size:** M.
 
 Add explicit preview, validation result and atomic confirmation for documented JSON bundles and selected Markdown/plain-text sources.
 
@@ -216,11 +216,13 @@ Add explicit preview, validation result and atomic confirmation for documented J
 
 **Acceptance:**
 
-- [ ] Preview retains title, origin/reference, selected content and revision; users assign targets/sources; structured observations and supplied code references import without auto-verification.
-- [ ] Reject dangling/cross-project links, duplicate IDs, stale overwrites, invalid schema and oversized payloads before any write; errors do not leak content.
-- [ ] Successful import commits once atomically; imported instructions/scripts stay inert; source class and exact provenance survive a reload.
+- [x] Preview retains title, origin/reference, selected content and revision; users assign targets/sources; structured observations and supplied code references import without auto-verification.
+- [x] Reject dangling/cross-project links, duplicate IDs, stale overwrites, invalid schema and oversized payloads before any write; errors do not leak content.
+- [x] Successful import commits once atomically; imported instructions/scripts stay inert; source class and exact provenance survive a reload.
 
 **Verification:** Valid and invalid import round-trips, transaction failure and stale-preview tests, browser preview/cancel/commit checks; full applicable store/contract regressions.
+
+Acceptance: [W08 exact artifact and independent review](evidence/w08/review.json).
 
 ### W09 — Reusable target adapter
 

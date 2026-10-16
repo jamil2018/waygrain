@@ -45,6 +45,46 @@
         <h2>Claims and sources</h2>
         <div id="claim-list"></div>
       </section>
+      <section id="source-import" aria-labelledby="import-heading">
+        <h2 id="import-heading">Import a source or knowledge bundle</h2>
+        <p>
+          Assign the source to the selected description and its visible scope.
+          Use synthetic product knowledge only.
+        </p>
+        <label for="import-mode">Import format</label
+        ><select id="import-mode">
+          <option value="source">Markdown or plain text excerpt</option>
+          <option value="bundle">JSON bundle (complete candidate)</option>
+        </select>
+        <label for="import-title">Source title</label
+        ><input id="import-title" />
+        <label for="import-origin">Source origin or reference</label
+        ><input id="import-origin" />
+        <label for="import-kind">Source kind</label
+        ><select id="import-kind">
+          <option value="document">Documented source</option>
+          <option value="observation">Recorded observation</option>
+          <option value="code">Supplied code, requires verification</option>
+        </select>
+        <label for="import-locator">Section, file or observation locator</label
+        ><input id="import-locator" />
+        <label for="import-revision">Supplied code revision (code only)</label
+        ><input id="import-revision" />
+        <label for="import-symbol">Supplied symbol (code only)</label
+        ><input id="import-symbol" />
+        <label for="import-observation"
+          >Observation identity (observation only)</label
+        ><input id="import-observation" />
+        <label for="import-content"
+          >Selected excerpt (up to 4 KiB) or JSON bundle</label
+        ><textarea id="import-content" rows="6"></textarea>
+        <button id="preview-import" type="button">Preview import</button
+        ><button id="commit-import" type="button" disabled>
+          Commit validated import
+        </button>
+        <p id="import-status" role="status"></p>
+        <pre id="import-preview"></pre>
+      </section>
       <div class="editor-actions">
         <button id="validate-document" type="button">Validate draft</button
         ><button id="save-document" type="button">Save revision</button

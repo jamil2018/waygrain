@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "48f34184a8b29976d51cba00e459edc5735184136b4a04b989ac5dd3a0a34a55",
+  "checks": [
+    "All13 hashes match",
+    "Focused import3 PASS",
+    "Permitted editor/import Chromium3 PASS including delayed edits,target changes,reverse responses",
+    "Original deferred probe: invalidated response leaves Commit disabled;no commit dispatched",
+    "Independent R1 fullcheck163 PASS; core/HTTP unchanged. Writer R2 fullcheck163 PASS"
+  ],
+  "resolved_findings": [
+    "Generation and state fingerprint invalidate stale previews; captured text shown; commit validity rechecked"
+  ],
+  "limits": [
+    "W08 only; W09/public release excluded"
+  ]
+}

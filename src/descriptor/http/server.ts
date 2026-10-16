@@ -15,7 +15,12 @@ import {
   writeRequestSchema,
   type DescriptorBundle,
 } from '../contracts.js';
-import { authorize, retrieveDescriptor, inspectSource } from '../retrieval.js';
+import { retrieveDescriptor, inspectSource } from '../retrieval.js';
+import {
+  authorizeAuthorBundle,
+  previewImport,
+  commitImport,
+} from '../authoring.js';
 import { readBundle, writeBundle, previewBundle } from '../store.js';
 
 const assetRoot = new URL('../../../assets/descriptor-demo/', import.meta.url);
@@ -26,7 +31,13 @@ const types: Record<string, string> = {
   '.css': 'text/css; charset=utf-8',
 };
 const readerAssets = ['index.html', 'app.mjs', 'calculate.mjs', 'style.css'];
-const authorAssets = ['editor.html', 'editor.mjs', 'editor.css', 'style.css'];
+const authorAssets = [
+  'editor.html',
+  'editor.mjs',
+  'editor-import.mjs',
+  'editor.css',
+  'style.css',
+];
 const assetNames = [...new Set([...readerAssets, ...authorAssets])];
 const send = (res: ServerResponse, status: number, data: unknown) => {
   res.writeHead(status, { 'Content-Type': 'application/json; charset=utf-8' });
@@ -99,27 +110,8 @@ export async function startDescriptorService(
     author: true,
     grants: contexts.map((c) => c.context.grants[0]!),
   };
-  const authorizeBundle = (b: DescriptorBundle) => {
-    if (b.project_id !== project || b.app_id !== app)
-      throw new DescriptorError('ACCESS_DENIED');
-    for (const { scope } of [
-      ...b.documents,
-      ...b.claims,
-      ...b.sources,
-      ...b.mappings,
-    ])
-      authorize(
-        author,
-        {
-          schema_version: 1,
-          project_id: b.project_id,
-          app_id: b.app_id,
-          target_id: fixtureTargets.page,
-          scope,
-        },
-        true,
-      );
-  };
+  const authorizeBundle = (b: DescriptorBundle) =>
+    authorizeAuthorBundle(author, b);
   const assets = new Map(
     await Promise.all(
       assetNames.map(
@@ -245,6 +237,29 @@ export async function startDescriptorService(
                 )
               : retrieveDescriptor(store, selected.context, request);
           send(res, 200, data);
+          return;
+        }
+        if (
+          mode === 'author' &&
+          req.method === 'POST' &&
+          ['/api/import/preview', '/api/import/commit'].includes(
+            url.pathname,
+          ) &&
+          !url.search
+        ) {
+          if (
+            req.headers.origin !== authorURL ||
+            req.headers['content-type'] !== 'application/json'
+          )
+            throw new DescriptorError('ACCESS_DENIED');
+          const input = await body(req);
+          send(
+            res,
+            200,
+            url.pathname.endsWith('/preview')
+              ? previewImport(store, author, input)
+              : commitImport(store, author, input),
+          );
           return;
         }
         if (
