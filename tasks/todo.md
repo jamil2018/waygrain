@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** resumed; W00–W14 independently verified. W00–W23 remain authorized with independent review and per-task commit/push. **Next eligible task:** W10. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** resumed; W00–W19 independently verified. W00–W23 remain authorized with independent review and per-task commit/push. **Next eligible task:** W10. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -406,7 +406,7 @@ Acceptance: [W18 exact artifact and independent review](evidence/w18/review.json
 
 ### W19 — Phase C independent checkpoint
 
-**Status:** pending. **Dependencies:** W18. **Phase:** C. **Size:** S.
+**Status:** verified. **Dependencies:** W18. **Phase:** C. **Size:** S.
 
 Independently verify contextual clarification and persisted follow-up behavior against the frozen fixture evidence.
 
@@ -414,11 +414,13 @@ Independently verify contextual clarification and persisted follow-up behavior a
 
 **Acceptance:**
 
-- [ ] Both component/page conversations pass supported calculation, nine-item follow-up, tax unknown and conflicting-source cases with correct citations.
-- [ ] Adversarial citation/source/scope attempts and action requests do not leak evidence, fabricate established rules or act on the app.
-- [ ] Exact implementation and validation evidence accepted; deterministic demo is not described as production general-purpose AI.
+- [x] Both component/page conversations pass supported calculation, nine-item follow-up, tax unknown and conflicting-source cases with correct citations.
+- [x] Adversarial citation/source/scope attempts and action requests do not leak evidence, fabricate established rules or act on the app.
+- [x] Exact implementation and validation evidence accepted; deterministic demo is not described as production general-purpose AI.
 
 **Verification:** Independent provider/contract/conversation/browser suite and npm run check/build with external providers disabled.
+
+Acceptance: [W19 exact artifact and independent checkpoint](evidence/w19/review.json).
 
 ### W20 — Integrated isolation and adversarial acceptance
 

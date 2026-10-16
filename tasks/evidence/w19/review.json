@@ -1,0 +1,20 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "8b7a32e721005be853fe43bc08eb7acca948e22c8c8cdd2c7cb06754332a9bd3",
+  "checks": [
+    "All152 hashes matched before/after",
+    "fullcheck181PASS no fail/skip;type/lint/format/build PASS",
+    "PhaseC provider/contract/conversation/migration/retrieval/browser20PASS",
+    "Freshmain+Chromium both distinct conversations10 then processrestart then9/tax;bothsurfaces two conflict citations without reconciliation",
+    "Retained citation exactdescriptorrevision+keyboardfocus PASS",
+    "Actionsunsupported; restrictedhistorysource sanitized404;zero Calculate/fieldreads;descriptorbytes+verificationunchanged",
+    "AcceptedW15-W18 commits/receipts/manifests/source verified",
+    "440 historical baselinefiles byte-identical52324b7"
+  ],
+  "findings": [],
+  "limitations": [
+    "Offline finite templates and synthetic local Chromium only",
+    "Screen readers/fullaccessibility/summarydismissal/universalhost/productionauth unqualified; publicreleaseHOLD"
+  ]
+}

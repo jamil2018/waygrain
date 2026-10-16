@@ -1,0 +1,19 @@
+{
+  "task": "W19",
+  "status": "ready for independent PhaseC checkpoint",
+  "dependency": {
+    "W18": "1d00118"
+  },
+  "required_replay": [
+    "Verify current combined artifact and accepted W15-W18 commits/reviews at their revisions.",
+    "npm run check/build plus provider/answer contract/conversation/migration/retrieval/clarification browser suites with externalprovidersdisabled.",
+    "Fresh synthetic main process and real Chromium: component/page supported10 then restart/reload Whatabout9 within each separateconversation; taxunknown/conflictingsources onbothsurfaces; citedsource opens exact retainedrevision.",
+    "Adversarial citation/source/scope/action requests reject/nohosteffect; question writes never change verification timestamps.",
+    "Confirm historical pre-W evidence remains byte-identical baseline52324b7 and record actual environment/accessibility limits."
+  ],
+  "limits": [
+    "Offline finite synthetic grammar, no general-purposeAI/realhost/productionauth claim",
+    "Persistent-summary dismissal W20; broader integrated interaction/accessibility W21",
+    "No screenshots/traces/rawhostdata; public release HOLD"
+  ]
+}
