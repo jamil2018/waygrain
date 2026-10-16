@@ -40,6 +40,20 @@ export function readBundle(
       .get(appId),
   );
 }
+export function readBundleRevision(
+  store: Store,
+  appId: string,
+  revisionId: string,
+): DescriptorBundle | null {
+  appOwned(store, store.location.configuration.project_id, appId);
+  return decode(
+    store.db
+      .prepare(
+        'SELECT schema_version,bundle_json FROM descriptor_revisions WHERE app_id=? AND revision_id=?',
+      )
+      .get(appId, revisionId),
+  );
+}
 export function bundleHistory(store: Store, appId: string): DescriptorBundle[] {
   appOwned(store, store.location.configuration.project_id, appId);
   return store.db

@@ -1,3 +1,4 @@
+import type { ClarificationMount } from './clarification.js';
 import type { EvidencePackage } from '../retrieval.js';
 import {
   node,
@@ -28,10 +29,14 @@ export function mountComponentPanel(
   let summaryGeneration = 0,
     detailGeneration = 0,
     trigger: HTMLElement | null = null,
-    citation: CitationHandler | undefined;
+    citation: CitationHandler | undefined,
+    clarification: ClarificationMount | undefined,
+    cleanup: (() => void) | undefined;
   const dismiss = (restore = true) => {
     detailGeneration++;
     panel.hidden = true;
+    cleanup?.();
+    cleanup = undefined;
     body.replaceChildren();
     if (restore && trigger?.isConnected) trigger.focus();
     trigger = null;
@@ -91,6 +96,8 @@ export function mountComponentPanel(
         });
     },
     details(targetId: string, source: HTMLElement) {
+      cleanup?.();
+      cleanup = undefined;
       const current = ++detailGeneration;
       summaryGeneration++;
       summary.hidden = true;
@@ -105,7 +112,10 @@ export function mountComponentPanel(
             body.replaceChildren(
               node('p', 'Target mapping or scope is unavailable.'),
             );
-          else renderDocumentation(body, data, targetId, citation);
+          else {
+            renderDocumentation(body, data, targetId, citation);
+            cleanup = clarification?.(body, data, targetId);
+          }
         })
         .catch(() => {
           if (current === detailGeneration && !panel.hidden)
@@ -116,6 +126,9 @@ export function mountComponentPanel(
               ),
             );
         });
+    },
+    setClarificationHandler(handler: ClarificationMount) {
+      clarification = handler;
     },
     setCitationHandler(handler: CitationHandler) {
       citation = handler;

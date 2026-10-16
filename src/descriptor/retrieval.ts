@@ -1,7 +1,8 @@
 import type { Store } from '../store/database.js';
-import { readBundle } from './store.js';
+import { readBundle, readBundleRevision } from './store.js';
 import {
   accessContextSchema,
+  idSchema,
   readRequestSchema,
   parseDescriptor,
   sameScope,
@@ -59,6 +60,7 @@ export function retrieveDescriptor(
   store: Store,
   context: AccessContext,
   input: unknown,
+  revisionId?: string,
 ): EvidencePackage {
   const request = parseDescriptor(readRequestSchema, input);
   authorize(context, request); // Before opening any source/document projection.
@@ -68,7 +70,13 @@ export function retrieveDescriptor(
   )
     throw new DescriptorError('ACCESS_DENIED');
   return store.transaction(() => {
-    const bundle = readBundle(store, request.app_id);
+    const bundle = revisionId
+      ? readBundleRevision(
+          store,
+          request.app_id,
+          parseDescriptor(idSchema, revisionId),
+        )
+      : readBundle(store, request.app_id);
     const result: EvidencePackage = {
       ...request,
       revision: store.revision,
@@ -176,11 +184,14 @@ export function inspectSource(
   context: AccessContext,
   input: unknown,
   sourceId: string,
+  revisionId?: string,
+  sourceRevision?: string,
 ): DescriptorBundle['sources'][number] {
   const request = parseDescriptor(readRequestSchema, input);
   authorize(context, request);
-  const evidence = retrieveDescriptor(store, context, request);
+  const evidence = retrieveDescriptor(store, context, request, revisionId);
   const source = evidence.sources.find((s) => s.id === sourceId);
-  if (!source) throw new DescriptorError('NOT_FOUND');
+  if (!source || (sourceRevision && source.revision_id !== sourceRevision))
+    throw new DescriptorError('NOT_FOUND');
   return source;
 }

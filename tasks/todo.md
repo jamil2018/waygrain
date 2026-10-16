@@ -388,7 +388,7 @@ Acceptance: [W17 exact artifact and independent review](evidence/w17/review.json
 
 ### W18 — Ask about this on both surfaces
 
-**Status:** pending. **Dependencies:** W17. **Phase:** C. **Size:** M.
+**Status:** verified. **Dependencies:** W17. **Phase:** C. **Size:** M.
 
 Wire component and page clarification, follow-ups and clickable citations into the documentation panels.
 
@@ -396,11 +396,13 @@ Wire component and page clarification, follow-ups and clickable citations into t
 
 **Acceptance:**
 
-- [ ] Both surfaces show active target/page, role/version, provider label and cited evidence; follow-ups retain their intended scope.
-- [ ] Loading, missing evidence, conflict, stale evidence and unavailable/failed provider states are distinct, readable and keyboard accessible.
-- [ ] Asking never invokes Calculate, changes host data or clears verification warnings; switching scope mid-request cannot render the old response.
+- [x] Both surfaces show active target/page, role/version, provider label and cited evidence; follow-ups retain their intended scope.
+- [x] Loading, missing evidence, conflict, stale evidence and unavailable/failed provider states are distinct, readable and keyboard accessible.
+- [x] Asking never invokes Calculate, changes host data or clears verification warnings; switching scope mid-request cannot render the old response.
 
 **Verification:** Real-browser acceptance questions on both surfaces, source opening, unavailable-provider injection, input/host event counters and scope-switch race tests; typecheck/build.
+
+Acceptance: [W18 exact artifact and independent review](evidence/w18/review.json).
 
 ### W19 — Phase C independent checkpoint
 

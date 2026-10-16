@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "906e42c04556971c9bee7fbde88e232e46ba9e3448c32f35bfddddd73a78f12c",
+  "checks": [
+    "All15 hashes matched",
+    "typecheck/build EXIT0",
+    "clarification/component/page/retrieval12PASS",
+    "Additional loopback Chromium late history/error/reset/new identity/cleanup probes PASS"
+  ],
+  "findings": [],
+  "probe_correction": "Synthetic insecure-origin probe lacked crypto.randomUUID; supported loopback rerun passed.",
+  "writer_followup": [
+    "W21 assess draft edits typed while an earlier answer is pending; current accepted checks cover reset/scope invalidation."
+  ],
+  "limitations": [
+    "Full accessibility and persistent summary dismissal remainW20/W21; broaderhostunqualified"
+  ]
+}

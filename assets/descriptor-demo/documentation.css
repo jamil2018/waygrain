@@ -91,3 +91,25 @@
 .wg-page {
   z-index: 15;
 }
+
+.wg-conversation {
+  border-top: 2px solid var(--line);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+.wg-conversation textarea {
+  display: block;
+  width: 100%;
+  margin-block: 0.5rem;
+  font: inherit;
+}
+.wg-conversation ol {
+  padding-left: 1.5rem;
+}
+.wg-conversation li {
+  border-top: 1px solid var(--line);
+  padding-block: 1rem;
+}
+.wg-answer {
+  white-space: pre-wrap;
+}

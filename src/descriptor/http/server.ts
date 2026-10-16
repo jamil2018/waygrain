@@ -62,6 +62,7 @@ const uiModules = [
   'component-panel.js',
   'page-panel.js',
   'source-inspector.js',
+  'clarification.js',
 ];
 const authorAssets = [
   'editor.html',
@@ -256,7 +257,7 @@ export async function startDescriptorService(
         ) {
           const allowed =
             url.pathname === '/api/source'
-              ? ['context', 'target', 'source']
+              ? ['context', 'target', 'source', 'revision', 'source_revision']
               : ['context', 'target'];
           if (
             [...url.searchParams.keys()].some(
@@ -283,6 +284,8 @@ export async function startDescriptorService(
                   selected.context,
                   request,
                   url.searchParams.get('source') ?? '',
+                  url.searchParams.get('revision') ?? undefined,
+                  url.searchParams.get('source_revision') ?? undefined,
                 )
               : retrieveDescriptor(store, selected.context, request);
           send(res, 200, data);

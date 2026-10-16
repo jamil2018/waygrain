@@ -4,14 +4,19 @@ export function node<K extends keyof HTMLElementTagNameMap>(tag: K, text = '') {
   element.textContent = text;
   return element;
 }
-export function scopeLabel(data: EvidencePackage) {
+export function scopeLabel(data: Pick<EvidencePackage, 'scope'>) {
   const s = data.scope;
   return `Role ${s.role ?? 'unknown'} · Version ${s.version ?? 'unknown'} · Tenant ${s.tenant ?? 'unknown'} · Environment ${s.environment ?? 'unknown'} · State ${s.state ?? 'unknown'}`;
+}
+export interface SourceReference {
+  descriptor_revision_id: string;
+  source_revision_id: string;
 }
 export type CitationHandler = (
   sourceId: string,
   targetId: string,
   trigger: HTMLElement,
+  reference?: SourceReference,
 ) => void;
 export function renderDocumentation(
   body: HTMLElement,
@@ -110,7 +115,10 @@ export function renderDocumentation(
         const button = node('button', `${source.title} · ${ref.locator}`);
         button.type = 'button';
         button.addEventListener('click', () =>
-          onCitation(source.id, targetId, button),
+          onCitation(source.id, targetId, button, {
+            descriptor_revision_id: data.revision_id!,
+            source_revision_id: source.revision_id,
+          }),
         );
         article.append(button);
       } else

@@ -1,11 +1,12 @@
 import type { DescriptorBundle } from '../contracts.js';
-import { node, type CitationHandler } from './render.js';
+import { node, type CitationHandler, type SourceReference } from './render.js';
 
 export function mountSourceInspector(
   root: HTMLElement,
   read: (
     target: string,
     source: string,
+    reference?: SourceReference,
   ) => Promise<DescriptorBundle['sources'][number]>,
 ) {
   const panel = node('section');
@@ -36,17 +37,33 @@ export function mountSourceInspector(
     }
   };
   document.addEventListener('keydown', escape, true);
-  const open: CitationHandler = (sourceId, targetId, sourceTrigger) => {
+  const open: CitationHandler = (
+    sourceId,
+    targetId,
+    sourceTrigger,
+    reference,
+  ) => {
     const current = ++generation;
     trigger = sourceTrigger;
     panel.hidden = false;
     body.replaceChildren(node('p', 'Loading authorized source…'));
     close.focus();
-    void read(targetId, sourceId)
+    void read(targetId, sourceId, reference)
       .then((source) => {
         if (current !== generation || panel.hidden) return;
-        if (source.id !== sourceId) throw new Error('SOURCE_MISMATCH');
+        if (
+          source.id !== sourceId ||
+          (reference && source.revision_id !== reference.source_revision_id)
+        )
+          throw new Error('SOURCE_MISMATCH');
         body.replaceChildren(node('h3', source.title));
+        if (reference)
+          body.append(
+            node(
+              'p',
+              `Retained descriptor revision: ${reference.descriptor_revision_id}`,
+            ),
+          );
         for (const [key, value] of Object.entries({
           Kind: source.kind,
           Origin: source.origin,

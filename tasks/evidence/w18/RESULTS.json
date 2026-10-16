@@ -1,0 +1,29 @@
+{
+  "task": "W18",
+  "dependency": {
+    "W17": "9501f8f"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "181 PASS no fail/skip;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/clarification.browser.mjs tests/descriptor/page.browser.mjs tests/descriptor/component.browser.mjs (permitted)",
+      "exit": 0,
+      "result": "7 Chromium PASS initially; expanded final clarification suite3PASS covers bothsurfaces10/9/tax/conflicts, stalewarning, provider unavailable/invalid-output distinctstates, historicalcitation, scope-switch pendingreply, nohostactivation/inputcapture"
+    }
+  ],
+  "findings_fixed": [
+    "Browser lint found unused setup store; removed.",
+    "Documentation update script type mistake corrected without product impact."
+  ],
+  "boundary": "Owned question textarea only; canonical persistent history displays active target/scope and provider label. Reset/reload lifecycle discards late replies and removes incompatible history/input nodes on panel/scope change. Read-only knowledge adapter remains separate from context API. Citations carry retained descriptor+source revision; historical projection uses same exact authorization and bounded source closure. Source inspector rejects mismatched revision and never substitutes changed content.",
+  "limitations": [
+    "Finite synthetic grammar/local configured scopes, no general-purposeAI/productionauth claim",
+    "No screenshots/traces; real Chromium semantic checks only",
+    "Summary dismissal accessibility advisory remains forW20; public release HOLD"
+  ]
+}

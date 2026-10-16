@@ -3,6 +3,7 @@ import { mountTargetAdapter } from '/ui/adapter.js';
 import { mountComponentPanel } from '/ui/component-panel.js';
 import { mountPagePanel } from '/ui/page-panel.js';
 import { mountSourceInspector } from '/ui/source-inspector.js';
+import { mountClarification } from '/ui/clarification.js';
 const root = document.querySelector('#waygrain-documentation');
 const status = document.createElement('p');
 status.setAttribute('role', 'status');
@@ -44,9 +45,9 @@ try {
   const panels = mountComponentPanel(panelRoot, (id) => adapter.describe(id));
   const inspector = mountSourceInspector(
     panelRoot,
-    async (targetId, sourceId) => {
+    async (targetId, sourceId, reference) => {
       const response = await fetch(
-        `/api/source?context=${encodeURIComponent(context)}&target=${encodeURIComponent(targetId)}&source=${encodeURIComponent(sourceId)}`,
+        `/api/source?context=${encodeURIComponent(context)}&target=${encodeURIComponent(targetId)}&source=${encodeURIComponent(sourceId)}${reference ? `&revision=${encodeURIComponent(reference.descriptor_revision_id)}&source_revision=${encodeURIComponent(reference.source_revision_id)}` : ''}`,
       );
       if (!response.ok) throw new Error('SOURCE_UNAVAILABLE');
       return response.json();
@@ -66,6 +67,45 @@ try {
       panels.reset();
     },
   );
+  async function conversationAPI(path, input) {
+    const response = await fetch(
+      path,
+      input === undefined
+        ? {}
+        : {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(input),
+          },
+    );
+    const data = await response.json();
+    if (!response.ok) {
+      const error = new Error('CONVERSATION_UNAVAILABLE');
+      error.code = data.error;
+      throw error;
+    }
+    return data;
+  }
+  const mountQuestion = (body, data, targetId) =>
+    mountClarification(body, data, targetId, {
+      label: bootstrap.provider_label,
+      load: (id) =>
+        conversationAPI(
+          `/api/conversation?context=${encodeURIComponent(context)}&target=${encodeURIComponent(targetId)}&page=${encodeURIComponent(bootstrap.targets.page)}${id ? `&id=${encodeURIComponent(id)}` : ''}`,
+        ),
+      ask: (id, expected, question) =>
+        conversationAPI('/api/ask', {
+          context,
+          target_id: targetId,
+          page_id: bootstrap.targets.page,
+          conversation_id: id,
+          expected_turn: expected,
+          question,
+        }),
+      citation: inspector.open,
+    });
+  panels.setClarificationHandler(mountQuestion);
+  pagePanel.setClarificationHandler(mountQuestion);
   adapter = mountTargetAdapter(targetRoot, client(), {
     summary: panels.summary,
     details(id, trigger) {

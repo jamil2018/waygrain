@@ -1,3 +1,4 @@
+import type { ClarificationMount } from './clarification.js';
 import type { EvidencePackage } from '../retrieval.js';
 import { node, renderDocumentation, type CitationHandler } from './render.js';
 
@@ -20,10 +21,14 @@ export function mountPagePanel(
   close.type = 'button';
   panel.append(node('h2', 'Page documentation'), close, body);
   root.append(entry, panel);
-  let generation = 0;
+  let generation = 0,
+    clarification: ClarificationMount | undefined,
+    cleanup: (() => void) | undefined;
   const reset = (restore = false) => {
     generation++;
     panel.hidden = true;
+    cleanup?.();
+    cleanup = undefined;
     body.replaceChildren();
     if (restore) entry.focus();
   };
@@ -37,6 +42,8 @@ export function mountPagePanel(
   document.addEventListener('keydown', escape);
   entry.addEventListener('click', () => {
     beforeOpen();
+    cleanup?.();
+    cleanup = undefined;
     const current = ++generation;
     panel.hidden = false;
     body.replaceChildren(node('p', 'Loading page documentation…'));
@@ -66,6 +73,7 @@ export function mountPagePanel(
           renderDocumentation(content, data, target.id, citation);
           body.append(section);
         }
+        cleanup = clarification?.(body, data, data.target_id);
       })
       .catch(() => {
         if (current === generation && !panel.hidden)
@@ -75,6 +83,9 @@ export function mountPagePanel(
       });
   });
   return {
+    setClarificationHandler(handler: ClarificationMount) {
+      clarification = handler;
+    },
     reset,
     unmount() {
       reset();
