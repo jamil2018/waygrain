@@ -1,0 +1,163 @@
+[
+  {
+    "task": "W00",
+    "commit": "922cd2337479047f2029273eb5738d37ad1dc34c",
+    "review": "tasks/evidence/w00/review.json",
+    "manifest_sha256": "7630a0151f177559bed20c0374b666bef543798ef713ee1ef16b95f1e8ccf310",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W01",
+    "commit": "19889320ee0b23958911bb24bdcb55d736555000",
+    "review": "tasks/evidence/w01/review.json",
+    "manifest_sha256": "2d3a6dd97de5c842562120c3248428b4a0fb6ace4cf1d36e02391c62babac6da",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W02",
+    "commit": "ef915482b72e6f10f2c26e14bf78f2a61865cbd2",
+    "review": "tasks/evidence/w02/review.json",
+    "manifest_sha256": "7bcbdd57d10e357c212b22281a0e66c06f6bf638528157460e2f69bc608851ab",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W03",
+    "commit": "efd5ef79c3913916dd36b6091d49b18a4d13dc2b",
+    "review": "tasks/evidence/w03/review.json",
+    "manifest_sha256": "1785cb762c64fbab9dd6aa10284e502e3779b999842e43f3af096f9505c38ac6",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W04",
+    "commit": "2ca6835f84a236f7f5a740f30a516c96a77a84d5",
+    "review": "tasks/evidence/w04/review.json",
+    "manifest_sha256": "a179ccb2931b0d7f936be3d4e4c66406976cb6bc2ecb15a74582c0319acef65d",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W05",
+    "commit": "54e962e9dbc7135b594dd489272ce02fac2baafd",
+    "review": "tasks/evidence/w05/review.json",
+    "manifest_sha256": "1ed4bbd7ce5f6c87a3d0c934afba37243512795f524b2bdbff9b7041f119e6c3",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W06",
+    "commit": "35d2e1bebf5e4fa397e04d91a8cb8a10fcd0e7c6",
+    "review": "tasks/evidence/w06/review.json",
+    "manifest_sha256": "414ff28ee0645eb78d2c96ed2f5de681bfd599c19e682e1dfbd60b443a67e561",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W07",
+    "commit": "f4b426d8477fdee49e45800daf2c6a5ca0451bb2",
+    "review": "tasks/evidence/w07/review.json",
+    "manifest_sha256": "068c80d357aa1ae2e35da87ca12271ce05d6c7a4abb3b4e30620eb6accd9c4ac",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W08",
+    "commit": "7c3ba21832f9a7aac0e2a6f43ddbaee0aa663f1a",
+    "review": "tasks/evidence/w08/review.json",
+    "manifest_sha256": "48f34184a8b29976d51cba00e459edc5735184136b4a04b989ac5dd3a0a34a55",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W09",
+    "commit": "37b12b383ffbf174072b635ab4c6b394308e8846",
+    "review": "tasks/evidence/w09/review.json",
+    "manifest_sha256": "55f1a6b3715e7371b0f0504dbc978b6083e9101aee2be8263f9f3192d2f2607a",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W10",
+    "commit": "229c93ead815d9fd1c2666a49812ea8110046209",
+    "review": "tasks/evidence/w10/review.json",
+    "manifest_sha256": "fb6ec29dc6b919d6ab731ae116f629d5ce489ff16cbfbff76f254a50faa82122",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W11",
+    "commit": "138728fd555885ad0a3537e5c782ec29e54ee03d",
+    "review": "tasks/evidence/w11/review.json",
+    "manifest_sha256": "daa8cf5f992083577a4f599ad48f0ed6d358ba81e55d19dd1bd19d73109e1962",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W12",
+    "commit": "3bda5ec2edd76094ae156b0b11d507fd69f6f1f0",
+    "review": "tasks/evidence/w12/review.json",
+    "manifest_sha256": "a3bab93713ce47044b4dc37f65e1b3c86a22e0bc8473c28fe0b7bfa112da2f4e",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W13",
+    "commit": "b9fd46f7bcecac6c894f4405801a97573a286c6f",
+    "review": "tasks/evidence/w13/review.json",
+    "manifest_sha256": "dff8baa279616a2ddade0e4a6553bbd1d993085d11973f93f09ceec5442f110d",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W14",
+    "commit": "2693d4f5f53404f781c4352e441807aa5674dd6b",
+    "review": "tasks/evidence/w14/review.json",
+    "manifest_sha256": "a9c64b9617cf51b3f33cff099a4e5080f7381c063078c274fb97b8630932b022",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W15",
+    "commit": "eb8837d2651c3d73fc2501905ae5d1c8dcc687a8",
+    "review": "tasks/evidence/w15/review.json",
+    "manifest_sha256": "2e223670337f1ef852f2995cd4faa908a05477189441264ea05ddd386e9a4698",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W16",
+    "commit": "65ececc99aaec8b2a1c914851c26708d1f681b6f",
+    "review": "tasks/evidence/w16/review.json",
+    "manifest_sha256": "9201107b85657e5829850a9d90750574243890be84685c42a11a50f7d0ea4cae",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W17",
+    "commit": "9501f8f7615c0e68cb1989659ab644a3a0ee01b9",
+    "review": "tasks/evidence/w17/review.json",
+    "manifest_sha256": "3152939ec9ae7f88f89bc27a5e937ecbe07defcb375ac6cfd9d05ec8de62e578",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W18",
+    "commit": "1d001184cd01eb871b00f0d7f8117643159b2440",
+    "review": "tasks/evidence/w18/review.json",
+    "manifest_sha256": "906e42c04556971c9bee7fbde88e232e46ba9e3448c32f35bfddddd73a78f12c",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W19",
+    "commit": "1666ea256dc278b7b12183e2c27d2e63ec628f42",
+    "review": "tasks/evidence/w19/review.json",
+    "manifest_sha256": "8b7a32e721005be853fe43bc08eb7acca948e22c8c8cdd2c7cb06754332a9bd3",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W20",
+    "commit": "86c445195dd6f8edc1ffec6c74773e3aaff84c79",
+    "review": "tasks/evidence/w20/review.json",
+    "manifest_sha256": "d8c36f64efb8743b5917c308aaf00f29f09f916623d93e22e272d66327577ed4",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W21",
+    "commit": "9d52647825b8e1f9638d7c5d2da8f733c2b7c0ec",
+    "review": "tasks/evidence/w21/review.json",
+    "manifest_sha256": "ca05bc538f5de652af7f23e2a09e595eb06459ba109e0f8e30126151b4e52787",
+    "verdict": "ACCEPT"
+  },
+  {
+    "task": "W22",
+    "commit": "ad0c67d12d22222d6292257da51341192d75e85b",
+    "review": "tasks/evidence/w22/review.json",
+    "manifest_sha256": "5dec1587ae152db4577a5056823ace2a28a638ff66a018faae85c0de0eaa0769",
+    "verdict": "ACCEPT"
+  }
+]

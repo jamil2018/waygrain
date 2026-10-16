@@ -478,7 +478,7 @@ Acceptance: [W22 exact artifact and independent clean-checkout replay](evidence/
 
 ### W23 — Final independent local-demo acceptance
 
-**Status:** pending. **Dependencies:** W22. **Phase:** D. **Size:** S.
+**Status:** verified. **Dependencies:** W22. **Phase:** D. **Size:** S.
 
 Close only the bounded v0.3 local descriptor roadmap after independent review of the exact final artifact.
 
@@ -486,11 +486,13 @@ Close only the bounded v0.3 local descriptor roadmap after independent review of
 
 **Acceptance:**
 
-- [ ] Reviewer replays the complete ten-case acceptance matrix and startup/test commands from the frozen artifact; no unresolved required finding or relevant failing test.
-- [ ] Final report lists artifact hashes, commands/results, dependency acceptance, preserved history, actual supported environment and unqualified limits.
-- [ ] Record local-demo completion separately from public release HOLD, production provider/real pilot/portability/benefit claims; stop without starting deferred work.
+- [x] Reviewer replays the complete ten-case acceptance matrix and startup/test commands from the frozen artifact; no unresolved required finding or relevant failing test.
+- [x] Final report lists artifact hashes, commands/results, dependency acceptance, preserved history, actual supported environment and unqualified limits.
+- [x] Record local-demo completion separately from public release HOLD, production provider/real pilot/portability/benefit claims; stop without starting deferred work.
 
 **Verification:** Independent exact-artifact review, clean-start demo/test replay, full applicable regression results and preservation check. No runtime success is inferred from documentation review.
+
+Acceptance: [W23 final exact artifact and independent local-demo review](evidence/w23/review.json); [final report](evidence/w23/REPORT.md) and [CI observations](evidence/w23/ci.json).
 
 ## Specification coverage
 
@@ -512,4 +514,4 @@ Close only the bounded v0.3 local descriptor roadmap after independent review of
 
 ## Results
 
-W00–W09 are independently verified; implementation receipts and limits are recorded per task above. Original planning validation and independent review are recorded under `tasks/evidence/descriptor-plan/`; that review does not satisfy W00 or any runtime acceptance case.
+W00–W23 are independently verified for the bounded v0.3 synthetic local demo. The local synthetic descriptor, scoped offline clarification, immutable history, import/export and reproducible commands have task-specific receipts above. Public release remains HOLD. Original planning validation and independent review are recorded under `tasks/evidence/descriptor-plan/`; that review does not satisfy W00 or any runtime acceptance case.

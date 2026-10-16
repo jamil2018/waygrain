@@ -1,0 +1,24 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "3059fe7c6676b0806b3c63ff039aa9bd8d05f5017271dab48ac68e4bb82c50ca",
+  "environment": "Independent macOS arm64 Node26.11.0 clean candidate; remote macOS Node24.21.0/26.12.0",
+  "checks": [
+    "All760 source/candidate hashes matched, rechecked afterexecution",
+    "All23 W00\u2013W22 accepted commit receipts/manifests/artifactbytes verified",
+    "All440 protected baseline file hashes match",
+    "Fresh clean npmci107installed/108audited/0vulnerabilities;explicit cachedChromiuminstall EXIT0",
+    "npm run test:descriptor EXIT0;strictgates/build;183Node+18Chromium PASS;0fail/skip",
+    "Actual npm demo wrapper builds/starts;author validates/saves;separate component/page10conversations survive processgrouprestart with9followup andtaxgap",
+    "Exact retained source/focus;conflict bothsurfaces2sources;zero hostactions/unrelatedreads;descriptorbytes+verificationunchanged",
+    "Final wrapper probe EXIT0;scratchremoved;browsers/processgroups stopped",
+    "Independent gh verified runtimecommitad0c67d CI38913685686 successNode24/26,includinginstall/fullteststeps"
+  ],
+  "findings": [],
+  "post_acceptance": "Only status/checkbox/reference updates to tasks/todo.md, this external review and CI receipt are outside frozenartifact hashes. Runtime remains exact frozen bytes.",
+  "limitations": [
+    "Synthetic local offline finitegrammar;configuredlocalroles notproductionauth",
+    "No screenreader/fullWCAG/otherOS/universalhost/realpilot/benefit/publicpackaging claim",
+    "Historicalfailed/unqualified verdicts retained;publicreleaseHOLD;deferredwork notstarted"
+  ]
+}

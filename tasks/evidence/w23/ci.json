@@ -1,0 +1,47 @@
+{
+  "runtime_commit": "ad0c67d12d22222d6292257da51341192d75e85b",
+  "run_id": 38913685686,
+  "url": "https://github.com/jamil2018/waygrain/actions/runs/38913685686",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "quality (24)",
+      "conclusion": "success",
+      "url": "https://github.com/jamil2018/waygrain/actions/runs/38913685686/job/117015599585"
+    },
+    {
+      "name": "quality (26)",
+      "conclusion": "success",
+      "url": "https://github.com/jamil2018/waygrain/actions/runs/38913685686/job/117015600070"
+    }
+  ],
+  "observed_log_totals": [
+    {
+      "node": "24.21.0",
+      "npm": "11.19.0",
+      "node_tests": 183,
+      "chromium_tests": 18,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "node": "26.12.0",
+      "npm": "11.20.0",
+      "node_tests": 183,
+      "chromium_tests": 18,
+      "failed": 0,
+      "skipped": 0
+    }
+  ],
+  "commands": [
+    "npm ci with PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1",
+    "npx playwright install chromium",
+    "npm run test:descriptor"
+  ],
+  "scope": "Exact W22 runtime/package/CI artifact; W23 adds final evidence/status only and does not alter runtime. macOS runners; no otherOS/host qualification.",
+  "annotations": [
+    "Actions checkout/setup-node v4 runtime deprecation annotation; forced Node24 by GitHub runner. Bothjobs succeeded.",
+    "macOS arm64 capacity annotation; no relevant failure."
+  ]
+}
