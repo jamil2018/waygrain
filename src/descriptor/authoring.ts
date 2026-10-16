@@ -1,4 +1,5 @@
 import { randomUUID } from 'node:crypto';
+import { markFreshness } from './freshness.js';
 import { z } from 'zod';
 import type { Store } from '../store/database.js';
 import { authorize } from './retrieval.js';
@@ -177,6 +178,10 @@ export function previewImport(
     parsed.kind === 'bundle'
       ? parsed.candidate
       : sourceCandidate(store, context, parsed);
+  candidate.bundle = markFreshness(
+    readBundle(store, candidate.bundle.app_id),
+    candidate.bundle,
+  );
   authorizeAuthorBundle(context, candidate.bundle);
   previewBundle(store, candidate);
   const validated = {

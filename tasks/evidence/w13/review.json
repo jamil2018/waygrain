@@ -1,0 +1,16 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "dff8baa279616a2ddade0e4a6553bbd1d993085d11973f93f09ceec5442f110d",
+  "checks": [
+    "All13 hashes matched",
+    "typecheck/build EXIT0",
+    "freshness/HTTP/editor/import/freshness browser10 PASS",
+    "Historical version mismatch only in stale records; role/tenant/environment/state and current version mismatch refused",
+    "Partial-author verification ACCESS_DENIED; revision unchanged"
+  ],
+  "findings": [],
+  "limitations": [
+    "Manual verification is synthetic author attestation; no real-host behavior qualification"
+  ]
+}

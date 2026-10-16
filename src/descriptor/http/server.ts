@@ -22,6 +22,8 @@ import {
   commitImport,
 } from '../authoring.js';
 import { readBundle, writeBundle, previewBundle } from '../store.js';
+import { markFreshness } from '../freshness.js';
+import { verifyClaim } from '../verification.js';
 import {
   exportDescriptor,
   previewRestore,
@@ -327,6 +329,20 @@ export async function startDescriptorService(
         }
         if (
           mode === 'author' &&
+          req.method === 'POST' &&
+          url.pathname === '/api/verify' &&
+          !url.search
+        ) {
+          if (
+            req.headers.origin !== authorURL ||
+            req.headers['content-type'] !== 'application/json'
+          )
+            throw new DescriptorError('ACCESS_DENIED');
+          send(res, 200, verifyClaim(store, author, await body(req)));
+          return;
+        }
+        if (
+          mode === 'author' &&
           ['/api/bundle', '/api/validate'].includes(url.pathname) &&
           !url.search
         ) {
@@ -346,6 +362,10 @@ export async function startDescriptorService(
             // Validate before checking all supplied scopes; no imported role can become a grant.
             const parsed = parseDescriptor(writeRequestSchema, input);
             authorizeBundle(parsed.bundle);
+            parsed.bundle = markFreshness(
+              readBundle(store, app),
+              parsed.bundle,
+            );
             send(
               res,
               200,

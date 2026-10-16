@@ -1,0 +1,35 @@
+{
+  "task": "W13",
+  "dependency": {
+    "W12": "3bda5ec"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "169 PASS no fail/skip;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/freshness.test.mjs (permitted)",
+      "exit": 0,
+      "result": "3 PASS source/version/mapping reasons; controlled-clock explicit verification; old evidence/unknown/conflict retention; unaffected claim; old code revision retained; unknown-version refusal"
+    },
+    {
+      "command": "node --test tests/descriptor/freshness.browser.mjs tests/descriptor/editor.browser.mjs tests/descriptor/import.browser.mjs (permitted)",
+      "exit": 0,
+      "result": "4 Chromium PASS warning visibility/read timestamp unchanged/editor explicit verification/reload plus editor/import regression"
+    }
+  ],
+  "findings_fixed": [
+    "Strict grant fixture and missing imports caught by build/focused checks and corrected.",
+    "Earlier fullcheck format failure corrected.",
+    "W06 internal synthetic injection test updated to explicit trusted verification bypass plus freshness markings; author POST/GET denial assertions unchanged."
+  ],
+  "boundary": "Core successor validation rejects unmarked changes, cleared prior warnings and ordinary verification metadata changes. Author endpoint/import prepares review markings. Source references/content/revision, claim text, app version and mapping changes invalidate affected claims. Read/inspection never writes. Manual endpoint takes only explicit allowed method; actor/time trusted server; version/mapping unresolved refuses; evidence classes/unknown/conflicts untouched. Historical verification version or supplied code revision may mismatch only in needs_review records; role/tenant/environment/state remain exact.",
+  "limitations": [
+    "Explicit synthetic author attestation, not independent proof of real host behavior",
+    "Historical restore does not rewrite/reinterpret old evidence with new freshness policy",
+    "No structural-similarity verification or general-purpose provider integration"
+  ]
+}

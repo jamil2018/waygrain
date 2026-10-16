@@ -298,7 +298,7 @@ Acceptance: [W12 exact artifact and independent review](evidence/w12/review.json
 
 ### W13 — Freshness and explicit verification
 
-**Status:** pending. **Dependencies:** W12. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W12. **Phase:** B. **Size:** M.
 
 Track affected claim invalidation and provide explicit scoped manual verification with retained history.
 
@@ -306,11 +306,13 @@ Track affected claim invalidation and provide explicit scoped manual verificatio
 
 **Acceptance:**
 
-- [ ] Source-hash, application-version and mapped-target changes mark affected claims for review; unknown versions/mappings stay visible.
-- [ ] Reading/documentation questions do not advance verification time; UI structure similarity cannot clear hidden-rule staleness.
-- [ ] Manual verification records method/time/scope and new revision without deleting prior evidence or arbitrarily resolving conflicts.
+- [x] Source-hash, application-version and mapped-target changes mark affected claims for review; unknown versions/mappings stay visible.
+- [x] Reading/documentation questions do not advance verification time; UI structure similarity cannot clear hidden-rule staleness.
+- [x] Manual verification records method/time/scope and new revision without deleting prior evidence or arbitrarily resolving conflicts.
 
 **Verification:** Controlled-clock source/version/mapping change tests, unchanged read timestamps, unaffected-claim checks and browser warning/verification tests; typecheck/build.
+
+Acceptance: [W13 exact artifact and independent review](evidence/w13/review.json).
 
 ### W14 — Phase B independent checkpoint
 

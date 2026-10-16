@@ -105,7 +105,59 @@ function render() {
         return source ? `${source.title} — ${ref.locator}` : 'Missing source';
       })
       .join('; ');
-    article.append(title, text, meta);
+    const verification = document.createElement('p'),
+      method = document.createElement('select'),
+      verify = document.createElement('button');
+    verification.textContent = claim.verification
+      ? `Verified ${claim.verification.at} by ${claim.verification.actor}: ${claim.verification.method}.`
+      : 'No explicit verification recorded.';
+    method.setAttribute('aria-label', 'Verification method');
+    for (const [value, label] of [
+      ['supplied-source-review', 'Review supplied source'],
+      ['synthetic-behavior-test', 'Run synthetic behavior test'],
+    ]) {
+      const option = document.createElement('option');
+      option.value = value;
+      option.textContent = label;
+      method.append(option);
+    }
+    verify.type = 'button';
+    verify.textContent = 'Record explicit verification';
+    verify.addEventListener('click', async () => {
+      if (
+        JSON.stringify(draft) !== JSON.stringify(saved) ||
+        $('#bundle-editor').value !== JSON.stringify(draft, null, 2)
+      ) {
+        feedback(
+          'Save or reload draft changes before recording verification.',
+          true,
+        );
+        return;
+      }
+      verify.disabled = true;
+      try {
+        await api('/api/verify', {
+          schema_version: 1,
+          expected_revision: revision,
+          project_id: saved.project_id,
+          app_id: saved.app_id,
+          claim_id: claim.id,
+          scope: claim.scope,
+          method: method.value,
+        });
+        await load();
+        feedback(
+          'Explicit verification recorded; unknowns and conflicts are retained.',
+        );
+      } catch (e) {
+        feedback(e.message, true);
+        verify.disabled = false;
+      }
+    });
+    const note = document.createElement('p');
+    note.textContent =
+      'Record only a review you performed. UI similarity does not verify hidden rules; unknown versions or unresolved mappings prevent verification.';
+    article.append(title, text, meta, verification, method, verify, note);
     $('#claim-list').append(article);
   }
   syncJSON();
@@ -122,6 +174,19 @@ function candidate() {
         item.revision_id = crypto.randomUUID();
       }
     }
+  for (const claim of b.claims) {
+    const old = saved.claims.find((c) => c.id === claim.id);
+    if (old && old.scope.version !== claim.scope.version)
+      claim.freshness = {
+        status: 'needs_review',
+        reasons: [
+          ...new Set([
+            ...claim.freshness.reasons,
+            'Application version changed',
+          ]),
+        ],
+      };
+  }
   for (const claim of b.claims)
     for (const ref of claim.sources) {
       const source = b.sources.find((s) => s.id === ref.source_id);
@@ -131,7 +196,25 @@ function candidate() {
           claim.supersedes_revision_id = old.revision_id;
           claim.revision_id = crypto.randomUUID();
         }
+        const oldSource = saved.sources.find((s) => s.id === source.id);
+        if (
+          oldSource &&
+          (oldSource.content_hash !== source.content_hash ||
+            oldSource.supplied_revision !== source.supplied_revision)
+        ) {
+          claim.freshness = {
+            status: 'needs_review',
+            reasons: [
+              ...new Set([
+                ...claim.freshness.reasons,
+                'Source content changed',
+              ]),
+            ],
+          };
+        }
         ref.revision_id = source.revision_id;
+        ref.content_hash = source.content_hash;
+        ref.locator = source.locator;
       }
     }
   return { schema_version: 1, expected_revision: revision, bundle: b };

@@ -1,3 +1,4 @@
+import { markFreshness } from '../../dist/descriptor/freshness.js';
 import assert from 'node:assert/strict';
 import { Buffer } from 'node:buffer';
 import { request as httpRequest } from 'node:http';
@@ -197,12 +198,17 @@ test('W06 imported scope never expands trusted contexts or author read grants', 
   );
   assert.equal(result.status, 403);
   assert(!result.text.includes('unconfigured-superuser'));
-  // Internal synthetic injection checks the author GET boundary as well.
-  writeBundle(f.store, {
-    schema_version: 1,
-    expected_revision: 1,
-    bundle: changed,
-  });
+  // Explicit trusted synthetic injection (including changed verification scope)
+  // tests the author GET boundary independently of normal author writes.
+  writeBundle(
+    f.store,
+    {
+      schema_version: 1,
+      expected_revision: 1,
+      bundle: markFreshness(f.bundle, changed),
+    },
+    true,
+  );
   const read = await request(authorURL, '/api/bundle');
   assert.equal(read.status, 403);
   assert(!read.text.includes('unconfigured-superuser'));

@@ -129,7 +129,15 @@ export const claimSchema = z
     if (
       (c.evidence_class === 'code-verified' &&
         !c.verification?.supplied_revision) ||
-      (c.verification && !sameScope(c.scope, c.verification.scope)) ||
+      (c.verification &&
+        !sameScope(c.scope, c.verification.scope) &&
+        !(
+          c.freshness.status === 'needs_review' &&
+          sameScope(c.scope, {
+            ...c.verification.scope,
+            version: c.scope.version,
+          })
+        )) ||
       (c.verification &&
         Date.parse(c.verification.at) < Date.parse(c.recorded_at)) ||
       (c.freshness.status === 'needs_review' && !c.freshness.reasons.length) ||
@@ -220,7 +228,8 @@ export const bundleSchema = z
         if (
           c.evidence_class === 'code-verified' &&
           (s.kind !== 'code' ||
-            s.supplied_revision !== c.verification?.supplied_revision)
+            (s.supplied_revision !== c.verification?.supplied_revision &&
+              c.freshness.status !== 'needs_review'))
         )
           fail();
         if (c.evidence_class === 'observed' && s.kind !== 'observation') fail();

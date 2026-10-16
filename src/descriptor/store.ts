@@ -1,5 +1,6 @@
 import type { Store } from '../store/database.js';
 import { KnowledgeError } from '../core/normalize.js';
+import { assertFreshness } from './freshness.js';
 import {
   DescriptorError,
   bundleSchema,
@@ -167,6 +168,7 @@ export function previewBundle(store: Store, input: unknown) {
   return store.transaction(() => {
     store.requireRevision(request.expected_revision);
     validateStoredSuccessor(store, request.bundle);
+    assertFreshness(readBundle(store, request.bundle.app_id), request.bundle);
     return {
       valid: true,
       expected_revision: request.expected_revision,
@@ -177,6 +179,7 @@ export function previewBundle(store: Store, input: unknown) {
 export function writeBundle(
   store: Store,
   input: unknown,
+  explicitVerification = false,
 ): { revision: number; revision_id: string } {
   const request = parseDescriptor(writeRequestSchema, input),
     b = request.bundle;
@@ -184,6 +187,7 @@ export function writeBundle(
   const encoded = JSON.stringify(b);
   return store.write(request.expected_revision, (revision) => {
     validateStoredSuccessor(store, b);
+    assertFreshness(readBundle(store, b.app_id), b, explicitVerification);
     store.db
       .prepare('INSERT INTO descriptor_revisions VALUES(?,?,?,1,?,?)')
       .run(
