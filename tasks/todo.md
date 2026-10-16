@@ -2,7 +2,7 @@
 
 Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [the plan](plan.md) and [specification v0.3](../docs/specification-v0.3.md).
 
-**Current execution:** resumed; W00–W08 independently verified. W00–W23 remain authorized with independent review and per-task commit/push. **Next eligible task:** W09. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
+**Current execution:** resumed; W00–W09 independently verified. W00–W23 remain authorized with independent review and per-task commit/push. **Next eligible task:** W10. **Public release:** HOLD. Old task IDs/results are preserved in [history](history/2026-10-16-v0.2/INDEX.md), not reset or credited to this roadmap.
 
 ## Agent operating contract
 
@@ -26,7 +26,7 @@ Updated: 16 October 2026. Scope: the standalone app-descriptor local slice in [t
 | W06 | B | Local demo service and safe transport | W05 | verified |
 | W07 | B | Page and component authoring editor | W06 | verified |
 | W08 | B | Validated source and bundle import | W07 | verified |
-| W09 | B | Reusable target adapter | W06 | pending |
+| W09 | B | Reusable target adapter | W06 | verified |
 | W10 | B | Component summary and details panel | W09, W07 | pending |
 | W11 | B | Whole-page documentation and source inspection | W10 | pending |
 | W12 | B | Export, import and restart durability | W08, W11 | pending |
@@ -226,7 +226,7 @@ Acceptance: [W08 exact artifact and independent review](evidence/w08/review.json
 
 ### W09 — Reusable target adapter
 
-**Status:** pending. **Dependencies:** W06. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W06. **Phase:** B. **Size:** M.
 
 Attach a read-only documentation surface through explicit stable keys and trusted host scope, independently of the synthetic app internals.
 
@@ -234,11 +234,13 @@ Attach a read-only documentation surface through explicit stable keys and truste
 
 **Acceptance:**
 
-- [ ] Register/update/unmount lifecycle handles duplicate, missing and ambiguous mappings visibly without binding to the wrong control.
-- [ ] Stable IDs survive label/layout/version changes; accessible-name/selector fallbacks, if supported, remain visibly provisional and fail on ambiguity.
-- [ ] Only registered target metadata is read; no form values, unrelated DOM data, host writes or new host permissions; lifecycle cleanup removes handlers.
+- [x] Register/update/unmount lifecycle handles duplicate, missing and ambiguous mappings visibly without binding to the wrong control.
+- [x] Stable IDs survive label/layout/version changes; accessible-name/selector fallbacks, if supported, remain visibly provisional and fail on ambiguity.
+- [x] Only registered target metadata is read; no form values, unrelated DOM data, host writes or new host permissions; lifecycle cleanup removes handlers.
 
 **Verification:** Real-browser duplicate-key, remount, label-change and input-sentinel tests with host-action counters; inspect adapter API separation; typecheck/build.
+
+Acceptance: [W09 exact artifact and independent review](evidence/w09/review.json).
 
 ### W10 — Component summary and details panel
 
@@ -484,4 +486,4 @@ Close only the bounded v0.3 local descriptor roadmap after independent review of
 
 ## Results
 
-No implementation task has started. Planning validation and independent review are recorded under `tasks/evidence/descriptor-plan/`; that review does not satisfy W00 or any runtime acceptance case.
+W00–W09 are independently verified; implementation receipts and limits are recorded per task above. Original planning validation and independent review are recorded under `tasks/evidence/descriptor-plan/`; that review does not satisfy W00 or any runtime acceptance case.

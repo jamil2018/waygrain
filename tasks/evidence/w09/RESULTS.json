@@ -1,0 +1,30 @@
+{
+  "task": "W09",
+  "dependency": {
+    "W06": "35d2e1b",
+    "review_manifest": "414ff28ee0645eb78d2c96ed2f5de681bfd599c19e682e1dfbd60b443a67e561"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run typecheck && npm run build",
+      "exit": 0
+    },
+    {
+      "command": "node --test tests/descriptor/adapter.browser.mjs (permitted)",
+      "exit": 0,
+      "result": "Real Chromium lifecycle/duplicate/missing/remount/nestedfocus/input-read sentinel/host-actions/stale-read PASS"
+    },
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "163 PASS no fail/skip; typecheck/lint/format/build PASS"
+    }
+  ],
+  "boundary": "Explicit host registrations only; no DOM discovery or field-value reads. Read-only typed client capability; documentation controls live in owned non-form root. Duplicate keys fail closed; caller refreshes after host layout/mapping changes. Unmount removes only owned list and listeners. Scope client update discards prior in-flight results.",
+  "limitations": [
+    "Component/page panels and actual app wiring are W10/W11",
+    "Explicit stable keys only; no heuristic selector/name fallbacks",
+    "Real Chromium synthetic host only; no universal integration claim"
+  ]
+}

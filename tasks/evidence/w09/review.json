@@ -1,0 +1,16 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "55f1a6b3715e7371b0f0504dbc978b6083e9101aee2be8263f9f3192d2f2607a",
+  "checks": [
+    "All4 hashes match",
+    "npm run typecheck && npm run build EXIT0",
+    "Adapter Chromium suite EXIT0 PASS1",
+    "Additional Chromium probe: invalid form root refused; unmapped target avoids reader; mismatched response rejected; unmount discards pending read"
+  ],
+  "findings": [],
+  "limits": [
+    "Caller refreshes after host mapping/layout changes",
+    "App panels/wiring W10/W11; no universal integration claim"
+  ]
+}
