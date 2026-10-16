@@ -370,7 +370,7 @@ Acceptance: [W16 exact artifact and independent review](evidence/w16/review.json
 
 ### W17 — Scoped persistent conversations
 
-**Status:** pending. **Dependencies:** W16. **Phase:** C. **Size:** M.
+**Status:** verified. **Dependencies:** W16. **Phase:** C. **Size:** M.
 
 Persist bounded sanitized product clarification context and preserve follow-up scope across reload without leaking across contexts.
 
@@ -378,11 +378,13 @@ Persist bounded sanitized product clarification context and preserve follow-up s
 
 **Acceptance:**
 
-- [ ] What about 9? resolves within the established target/page/role/version scope, with retained cited provenance and no promotion of old answers into evidence.
-- [ ] Project/app/role/tenant/version/state or target changes reauthorize and clear incompatible caches/context; cancel or discard stale in-flight responses.
-- [ ] Restart restores only authorized compatible history; source revisions trigger retrieval/freshness reevaluation; diagnostic logs omit question/source bodies.
+- [x] What about 9? resolves within the established target/page/role/version scope, with retained cited provenance and no promotion of old answers into evidence.
+- [x] Project/app/role/tenant/version/state or target changes reauthorize and clear incompatible caches/context; cancel or discard stale in-flight responses.
+- [x] Restart restores only authorized compatible history; source revisions trigger retrieval/freshness reevaluation; diagnostic logs omit question/source bodies.
 
 **Verification:** Restart, cross-scope forged-conversation IDs, out-of-order response and source-change tests, storage/log privacy sentinel checks; full relevant store/contract suite.
+
+Acceptance: [W17 exact artifact and independent review](evidence/w17/review.json).
 
 ### W18 — Ask about this on both surfaces
 

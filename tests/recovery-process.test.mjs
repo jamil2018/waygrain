@@ -38,7 +38,7 @@ async function message(child, type) {
 function legacy(path, conflict = false) {
   const db = new Sqlite(path);
   db.exec(
-    'DROP TABLE descriptor_heads;DROP TABLE descriptor_revisions;DROP TABLE deletion_batches;DELETE FROM migrations WHERE version>=4;PRAGMA user_version=3;',
+    'DROP TABLE descriptor_turns;DROP TABLE descriptor_conversations;DROP TABLE descriptor_heads;DROP TABLE descriptor_revisions;DROP TABLE deletion_batches;DELETE FROM migrations WHERE version>=4;PRAGMA user_version=3;',
   );
   if (conflict) db.exec('CREATE TABLE deletion_batches (synthetic INTEGER)');
   db.close();

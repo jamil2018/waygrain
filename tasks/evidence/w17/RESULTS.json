@@ -1,0 +1,41 @@
+{
+  "task": "W17",
+  "dependency": {
+    "W16": "65ececc"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "181 PASS no fail/skip;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/conversation.test.mjs tests/descriptor/conversation-migration.test.mjs (permitted)",
+      "exit": 0,
+      "result": "Core/migration5 PASS before added HTTP case; final conversation suite5PASS includes actual HTTP Origin/forgedrole/crossscope/providerfailure boundaries; migration testPASS1"
+    },
+    {
+      "command": "node --test tests/descriptor/conversation.test.mjs tests/descriptor/store.test.mjs tests/recovery-process.test.mjs (permitted, first run)",
+      "exit": 1,
+      "result": "10PASS1FAIL: test reused unmarked pre-write candidate for later successor; fixed to use actual retained bundle; full181 regression later PASS"
+    },
+    {
+      "command": "npm run build; node --test tests/descriptor/conversation.test.mjs tests/descriptor/conversation-migration.test.mjs (permitted,R2)",
+      "exit": 0,
+      "result": "buildPASS focused6PASS including same-object in-place principal mutation during first pending turn"
+    }
+  ],
+  "findings_fixed": [
+    "Build caught duplicate recovery migration argument; corrected before tests.",
+    "History now checks immutable head binding before loading turn bodies.",
+    "Race test initially reused raw unmarked candidate; corrected to retained marked bundle and expanded to actual source-hash change.",
+    "Root post-review inspection found getContext alias could mutate initial principal in place. Snapshot parsed initial/post-provider contexts; regression refuses in-place rebinding without writes."
+  ],
+  "boundary": "Append-only schema6 conversation/turn tables, existing-v5 private backup and DDL rollback, canonical recovery schema extended. Raw unsupported questions canonicalized before provider/storage;20turn/100thread bounds. Reauthorize scope/principal before reload and after async generation; expected ordinal and descriptor revision checked inside writer transaction. Old answers never become evidence; follow-up basis bound to all identities and scope. Provider/action errors sanitized. Read listener adds only local context persistence, not authoring/host actions.",
+  "limitations": [
+    "No UI untilW18; caller must discard/reset incompatible in-flight UI state",
+    "Descriptor archive excludes conversation history; whole-store backup retains it",
+    "Finite synthetic grammar and local configured scopes; public release HOLD"
+  ]
+}

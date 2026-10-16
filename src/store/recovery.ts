@@ -16,6 +16,7 @@ import {
   visibilityMigration,
   deletionMigration,
   descriptorMigration,
+  conversationMigration,
   STORE_SCHEMA_VERSION,
 } from './schema.js';
 import { checkPrivateEntry } from '../config/filesystem.js';
@@ -60,7 +61,8 @@ function verify(db: Database, configuration: Configuration) {
         graphMigration +
         visibilityMigration +
         deletionMigration +
-        descriptorMigration,
+        descriptorMigration +
+        conversationMigration,
     );
     if (canonical(schemaRows(db)) !== canonical(schemaRows(expected)))
       throw new KnowledgeError('STORE_CORRUPT');

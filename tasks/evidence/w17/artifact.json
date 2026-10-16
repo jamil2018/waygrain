@@ -1,0 +1,17 @@
+{
+  "docs/descriptor-conversations.md": "0ca239d1c7b6cd4d48a6f5d71f0bd5b6de332739063355b788ce0949c19ed6cb",
+  "src/descriptor/conversation.ts": "d673c3e3a1d337e8dbdffc5cd8dabb1f3a22268613997cc9beaafae813fa028f",
+  "src/descriptor/http/server.ts": "d8ddb1a276c59372c33d89a7f2ebc9584af266f4ddbdd29bc14ab0f03feb58f9",
+  "src/store/database.ts": "8feec9757577ed4bb592445bef05181bd68a01de527fa322f3ad7e00e6a97321",
+  "src/store/recovery.ts": "8ac2e67dba349a32b3641d3c5d03d7a9a819478475a855543cddf2c6853d18a5",
+  "src/store/schema.ts": "0e646e0bca708ef6b2b8ba767517344deef4b07d3e416b0105242793cbed7658",
+  "tasks/evidence/w17/RESULTS-r1.json": "494a006d6f8a34c3e21f59244208879410be65bcfdb0e1645807a1d1ce96be65",
+  "tasks/evidence/w17/RESULTS.json": "800ca39de01f049bf4155e02ba3bdb1a16ef7611701c3c0c036dd2a6c66e3dc3",
+  "tasks/evidence/w17/artifact-r1.json": "bbc4a6dee697da60e247a0c06a7b7d67023a77050a2915dde3ce3b70bb13d3fd",
+  "tasks/evidence/w17/review-r1.json": "a8a33e5ab25ed405793b40c396b47abc8bf4a10855388c6d5b7209f904f6880a",
+  "tasks/todo.md": "ec9c5374c8024bd943eeea20ccb31b0c0f2d3edc7cf2c273397047bf03290b85",
+  "tests/descriptor/conversation-migration.test.mjs": "6970919248595500ed63500002ee1ef041c4e3079ced93d93791dddc7b98a750",
+  "tests/descriptor/conversation.test.mjs": "0d355ae6969da44a25172b9f92178fd77eb14cd5076a41a9562930c214b14056",
+  "tests/descriptor/store.test.mjs": "f8bc9ef86e0b1a909a63bcdb8d60b58d40d0160f44b198de05d5ec55e0346678",
+  "tests/recovery-process.test.mjs": "c7a774fe594b131a0fa9aa6c13b9123f9aed9a001ac3f03788191793a6c7b953"
+}

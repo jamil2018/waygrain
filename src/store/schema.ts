@@ -1,4 +1,4 @@
-export const STORE_SCHEMA_VERSION = 5;
+export const STORE_SCHEMA_VERSION = 6;
 // Initial migration only. Later schema upgrades require new numbered migrations.
 export const initialSchema = `
 CREATE TABLE meta (singleton INTEGER PRIMARY KEY CHECK(singleton=1), project_id TEXT NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));
@@ -131,4 +131,21 @@ CREATE TABLE descriptor_heads (
 CREATE TRIGGER immutable_descriptor_revisions BEFORE UPDATE ON descriptor_revisions BEGIN SELECT RAISE(ABORT,'immutable'); END;
 CREATE TRIGGER retain_descriptor_revisions BEFORE DELETE ON descriptor_revisions BEGIN SELECT RAISE(ABORT,'immutable'); END;
 PRAGMA user_version=5;
+`;
+
+export const conversationMigration = `
+CREATE TABLE descriptor_conversations (
+ id TEXT PRIMARY KEY, project_id TEXT NOT NULL, app_id TEXT NOT NULL REFERENCES apps(id),
+ principal TEXT NOT NULL, target_id TEXT NOT NULL, page_id TEXT NOT NULL, scope_json TEXT NOT NULL
+);
+CREATE TABLE descriptor_turns (
+ conversation_id TEXT NOT NULL REFERENCES descriptor_conversations(id), ordinal INTEGER NOT NULL CHECK(ordinal>0),
+ store_revision INTEGER NOT NULL UNIQUE, descriptor_revision_id TEXT NOT NULL REFERENCES descriptor_revisions(revision_id),
+ question TEXT NOT NULL, answer_json TEXT NOT NULL, PRIMARY KEY(conversation_id,ordinal)
+);
+CREATE TRIGGER immutable_descriptor_conversations BEFORE UPDATE ON descriptor_conversations BEGIN SELECT RAISE(ABORT,'immutable'); END;
+CREATE TRIGGER retain_descriptor_conversations BEFORE DELETE ON descriptor_conversations BEGIN SELECT RAISE(ABORT,'immutable'); END;
+CREATE TRIGGER immutable_descriptor_turns BEFORE UPDATE ON descriptor_turns BEGIN SELECT RAISE(ABORT,'immutable'); END;
+CREATE TRIGGER retain_descriptor_turns BEFORE DELETE ON descriptor_turns BEGIN SELECT RAISE(ABORT,'immutable'); END;
+PRAGMA user_version=6;
 `;

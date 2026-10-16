@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "3152939ec9ae7f88f89bc27a5e937ecbe07defcb375ac6cfd9d05ec8de62e578",
+  "checks": [
+    "All15 hashes matched",
+    "typecheck/build EXIT0",
+    "conversation/migration6PASS",
+    "Independent first-turn in-place principal mutation/reassignment/nested grant mutation all ACCESS_DENIED; zero conversation/turn rows; revision unchanged"
+  ],
+  "findings": [],
+  "resolved": [
+    "Root-found initial context alias now detached validated snapshot; post-provider context snapshot too"
+  ],
+  "limitations": [
+    "Finite synthetic provider/local authorization; retained citation inspection and UI W18"
+  ]
+}

@@ -1,3 +1,4 @@
+import { z } from 'zod';
 import {
   createServer,
   type IncomingMessage,
@@ -11,6 +12,8 @@ import { fixtureAccess, fixtureScopes, fixtureTargets } from '../fixture.js';
 import {
   DescriptorError,
   DESCRIPTOR_LIMITS,
+  boundedText,
+  idSchema,
   parseDescriptor,
   writeRequestSchema,
   type DescriptorBundle,
@@ -24,6 +27,13 @@ import {
 import { readBundle, writeBundle, previewBundle } from '../store.js';
 import { markFreshness } from '../freshness.js';
 import { verifyClaim } from '../verification.js';
+import {
+  askConversation,
+  loadConversation,
+  latestConversation,
+} from '../conversation.js';
+import { deterministicProvider } from '../providers/deterministic.js';
+import type { AnswerProvider } from '../providers/contracts.js';
 import {
   exportDescriptor,
   previewRestore,
@@ -118,8 +128,13 @@ const closeServer = (server: Server) =>
 /** Local single-user fixture trust boundary; not production identity/authentication. */
 export async function startDescriptorService(
   store: Store,
-  options: { port?: number; authorPort?: number } = {},
+  options: {
+    port?: number;
+    authorPort?: number;
+    provider?: AnswerProvider;
+  } = {},
 ) {
+  const provider = options.provider ?? deterministicProvider();
   const project = store.location.configuration.project_id,
     app = store.location.configuration.apps[0]!.app_id;
   const contexts = fixtureScopes().map((scope, index) => ({
@@ -230,6 +245,7 @@ export async function startDescriptorService(
             targets: fixtureTargets,
             mode,
             author_url: authorURL,
+            provider_label: provider.label,
           });
           return;
         }
@@ -270,6 +286,92 @@ export async function startDescriptorService(
                 )
               : retrieveDescriptor(store, selected.context, request);
           send(res, 200, data);
+          return;
+        }
+        if (
+          mode === 'read' &&
+          req.method === 'GET' &&
+          url.pathname === '/api/conversation'
+        ) {
+          const allowed = ['context', 'target', 'page', 'id'];
+          if (
+            [...url.searchParams.keys()].some((k) => !allowed.includes(k)) ||
+            allowed.some((k) => url.searchParams.getAll(k).length > 1)
+          )
+            throw new DescriptorError('INVALID_INPUT');
+          const selected = contexts.find(
+            (c) => c.key === (url.searchParams.get('context') ?? '0'),
+          );
+          if (!selected) throw new DescriptorError('ACCESS_DENIED');
+          const input = {
+            schema_version: 1,
+            project_id: project,
+            app_id: app,
+            scope: selected.scope,
+            target_id: url.searchParams.get('target') ?? fixtureTargets.page,
+            page_id: url.searchParams.get('page') ?? fixtureTargets.page,
+          };
+          const id = url.searchParams.get('id');
+          send(
+            res,
+            200,
+            id
+              ? loadConversation(store, selected.context, {
+                  ...input,
+                  conversation_id: id,
+                })
+              : latestConversation(store, selected.context, input),
+          );
+          return;
+        }
+        if (
+          mode === 'read' &&
+          req.method === 'POST' &&
+          url.pathname === '/api/ask' &&
+          !url.search
+        ) {
+          if (
+            req.headers.origin !== readURL ||
+            req.headers['content-type'] !== 'application/json'
+          )
+            throw new DescriptorError('ACCESS_DENIED');
+          const input = parseDescriptor(
+            z.strictObject({
+              context: z.string().max(16),
+              target_id: idSchema,
+              page_id: idSchema,
+              conversation_id: idSchema,
+              expected_turn: z
+                .number()
+                .int()
+                .min(0)
+                .max(DESCRIPTOR_LIMITS.turns),
+              question: boundedText(DESCRIPTOR_LIMITS.question).min(1),
+            }),
+            await body(req),
+          );
+          const selected = contexts.find((c) => c.key === input.context);
+          if (!selected) throw new DescriptorError('ACCESS_DENIED');
+          send(
+            res,
+            200,
+            await askConversation(
+              store,
+              () => selected.context,
+              {
+                schema_version: 1,
+                project_id: project,
+                app_id: app,
+                scope: selected.scope,
+                target_id: input.target_id,
+                page_id: input.page_id,
+                conversation_id: input.conversation_id,
+                expected_turn: input.expected_turn,
+                question: input.question,
+              },
+              provider,
+            ),
+          );
           return;
         }
         if (
@@ -389,6 +491,8 @@ export async function startDescriptorService(
           ACCESS_DENIED: 403,
           NOT_FOUND: 404,
           STORE_BUSY: 409,
+          PROVIDER_UNAVAILABLE: 503,
+          INVALID_ANSWER: 502,
           STORAGE_LIMIT: 507,
           UNSUPPORTED_SCHEMA: 409,
         };

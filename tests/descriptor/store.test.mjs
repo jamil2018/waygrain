@@ -7,6 +7,7 @@ import { fork } from 'node:child_process';
 import { once } from 'node:events';
 import { URL } from 'node:url';
 import test from 'node:test';
+import { STORE_SCHEMA_VERSION } from '../../dist/store/schema.js';
 import { Store, ingest, evidence } from '../../dist/index.js';
 import {
   writeBundle,
@@ -35,7 +36,7 @@ const next = (b) => ({
 const downgrade = (path) => {
   const db = new Sqlite(path);
   db.exec(
-    'DROP TABLE descriptor_heads;DROP TABLE descriptor_revisions;DELETE FROM migrations WHERE version=5;PRAGMA user_version=4;',
+    'DROP TABLE descriptor_turns;DROP TABLE descriptor_conversations;DROP TABLE descriptor_heads;DROP TABLE descriptor_revisions;DELETE FROM migrations WHERE version>=5;PRAGMA user_version=4;',
   );
   db.close();
 };
@@ -166,7 +167,10 @@ test('W02 v4 upgrade retains old data, rollback/future refusal retain consistent
   broken.close();
   const store = await Store.open(f.configPath);
   assert.equal(store.revision, 1);
-  assert.equal(store.db.pragma('user_version', { simple: true }), 5);
+  assert.equal(
+    store.db.pragma('user_version', { simple: true }),
+    STORE_SCHEMA_VERSION,
+  );
   writeBundle(store, {
     schema_version: 1,
     expected_revision: 1,
