@@ -1,0 +1,13 @@
+{
+  "docs/descriptor-answers.md": "38ec5cfd97a9db8e891aa88c0954c9c5ee01b6d9b80b7703ab9432325850b53d",
+  "src/descriptor/contracts.ts": "e064970fd6ad8d271de2fcd86a2fcbc7232e997a495e99ff436421a1858e1943",
+  "src/descriptor/providers/contracts.ts": "194c52f14eac96a0e7633fdcd3e2a902962d066c8f789ae13189770c72b22037",
+  "src/descriptor/providers/evidence.ts": "39e33dacaad99fe208c6b9642513a8c61ced822ddd567373d9a5b75e604bbf9c",
+  "src/descriptor/providers/validation.ts": "18119f10033dc35b4251b10db06299d60c3165402df0c52be431564dbc833764",
+  "tasks/evidence/w15/RESULTS-r1.json": "0014b33bf79d618acfc42d93ac96134c3d7b803dd80fdae9463c490f4619505a",
+  "tasks/evidence/w15/RESULTS.json": "4bcdc61e1f21f6868c8114105326b97eb58f362dc9ba9c097823a35c674fbfad",
+  "tasks/evidence/w15/artifact-r1.json": "fd871fad7159ce404597853e83e2876a524203858893a9368cd38f22105d3770",
+  "tasks/evidence/w15/review-r1.json": "5c3db23cfa5a62b1e95e2ef38371a7a2db2ee2042395be3a37496e54c75d86e6",
+  "tasks/todo.md": "62472a491fa152fc21e58e415986eba7d5107d6d47ad01fa5f2073b19efbafce",
+  "tests/descriptor/answer-contract.test.mjs": "f50d61b32f7ce34756138ff3e67bd0e1410ba9a8b607607b6859dd9a4cf6d742"
+}

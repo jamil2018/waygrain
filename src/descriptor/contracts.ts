@@ -21,7 +21,8 @@ export class DescriptorError extends Error {
       | 'ACCESS_DENIED'
       | 'NOT_FOUND'
       | 'UNSUPPORTED_SCHEMA'
-      | 'PROVIDER_UNAVAILABLE',
+      | 'PROVIDER_UNAVAILABLE'
+      | 'INVALID_ANSWER',
   ) {
     super(code);
   }

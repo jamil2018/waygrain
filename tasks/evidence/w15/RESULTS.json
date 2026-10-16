@@ -1,0 +1,40 @@
+{
+  "task": "W15",
+  "dependency": {
+    "W14": "2693d4f"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "172 PASS no fail/skip;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/answer-contract.test.mjs (permitted)",
+      "exit": 0,
+      "result": "3 PASS authorized bounded/frozen package, page/component closure, raw unsupported canonicalization, forged prose/citations/classes/scope/revisions/metadata/tools rejection, sanitized provider error/timeout, malicious source inert, bound follow-up context"
+    },
+    {
+      "command": "npm run check (permitted,R2)",
+      "exit": 0,
+      "result": "173 PASS no fail/skip;type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test tests/descriptor/answer-contract.test.mjs (permitted,R2)",
+      "exit": 0,
+      "result": "4 PASS including valid stored/retrieved70-claim conflict graph; bounded unresolved output and omission-forgery rejection"
+    }
+  ],
+  "findings_fixed": [
+    "Initial class-upgrade test happened to select code verification already. Made supported-evidence preference explicit: documented then pinned code.",
+    "Malicious documented source did not remove separately valid pinned code support; corrected test to assert that independent code support remains honest while injected instructions are never rendered/executed.",
+    "Independent R1 large conflict union exceeded64 metadata IDs: now bound IDs and explicitly mark CONFLICT_METADATA_TRUNCATED/CONFLICT_EVIDENCE_INCOMPLETE without reconciliation."
+  ],
+  "boundary": "Vendor-neutral plain-data provider interface, frozen authorized package, target/page/conversation/scope binding, canonical supported grammar. Validator independently reconstructs bounded evidence-derived templates and compares full answer including citations/classes/conflicts/missing/warnings. No arbitrary provider prose accepted as established facts; no provider/action invoked by preparation/validation.",
+  "limitations": [
+    "Finite synthetic fixture grammar; no general-purpose language understanding or tax qualification",
+    "Provider interface is not a sandbox for arbitrary implementation code",
+    "Offline provider wrapper/matrix W16; persistence/UI W17/W18; public release HOLD"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "REQUEST_CHANGES",
+  "manifest_file_sha256": "fd871fad7159ce404597853e83e2876a524203858893a9368cd38f22105d3770",
+  "checks": [
+    "All8 hashes matched",
+    "typecheck/build EXIT0",
+    "contract suite PASS3",
+    "Stored70-claim graph; retrieved31751-byte14-claim truncated package;70 union conflict IDs caused INVALID_INPUT at max64 answer bound"
+  ],
+  "required": [
+    "Return bounded unresolved conflict/insufficient evidence with explicit omission marker; add real stored/retrieved large-conflict regression."
+  ]
+}

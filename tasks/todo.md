@@ -334,7 +334,7 @@ Acceptance: [W14 exact artifact and independent checkpoint](evidence/w14/review.
 
 ### W15 — Bounded evidence package and answer validation
 
-**Status:** pending. **Dependencies:** W14. **Phase:** C. **Size:** M.
+**Status:** verified. **Dependencies:** W14. **Phase:** C. **Size:** M.
 
 Define vendor-neutral clarification request/result and prepare an authorized bounded evidence package without invoking a model.
 
@@ -342,11 +342,13 @@ Define vendor-neutral clarification request/result and prepare an authorized bou
 
 **Acceptance:**
 
-- [ ] Request binds question/conversation/target/page and trusted scope; component context includes applicable page facts and page context includes permitted components.
-- [ ] Answer validation enforces scope, retrieved citation membership, evidence classes, conflict/missing fields and bounded content; restricted source metadata cannot reach a provider.
-- [ ] Provider gets no application action/tool capability; malicious source instructions remain data and unsupported/forged outputs fail visibly.
+- [x] Request binds question/conversation/target/page and trusted scope; component context includes applicable page facts and page context includes permitted components.
+- [x] Answer validation enforces scope, retrieved citation membership, evidence classes, conflict/missing fields and bounded content; restricted source metadata cannot reach a provider.
+- [x] Provider gets no application action/tool capability; malicious source instructions remain data and unsupported/forged outputs fail visibly.
 
 **Verification:** Adversarial fake-provider tests for injected IDs, unauthorized records, class upgrades and unsupported assertions plus bounded selection and typecheck/build.
+
+Acceptance: [W15 exact artifact and independent review](evidence/w15/review.json).
 
 ### W16 — Deterministic clarification provider
 

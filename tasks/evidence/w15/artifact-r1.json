@@ -1,0 +1,10 @@
+{
+  "docs/descriptor-answers.md": "dc15979996733b267e557190d36dd7d57b8ca22fbc2c4644245d2e611aec19ac",
+  "src/descriptor/contracts.ts": "e064970fd6ad8d271de2fcd86a2fcbc7232e997a495e99ff436421a1858e1943",
+  "src/descriptor/providers/contracts.ts": "194c52f14eac96a0e7633fdcd3e2a902962d066c8f789ae13189770c72b22037",
+  "src/descriptor/providers/evidence.ts": "39e33dacaad99fe208c6b9642513a8c61ced822ddd567373d9a5b75e604bbf9c",
+  "src/descriptor/providers/validation.ts": "39e069a390428c1bea1aba12b9bb632203f498f83e716a9a3a6ef60c48c37da3",
+  "tasks/evidence/w15/RESULTS.json": "0014b33bf79d618acfc42d93ac96134c3d7b803dd80fdae9463c490f4619505a",
+  "tasks/todo.md": "62472a491fa152fc21e58e415986eba7d5107d6d47ad01fa5f2073b19efbafce",
+  "tests/descriptor/answer-contract.test.mjs": "013a316f1af6a4fc642408f324424a3a21646c26e17630e1b6e7df610c041ca7"
+}
