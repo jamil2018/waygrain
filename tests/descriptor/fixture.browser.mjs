@@ -1,49 +1,32 @@
 /* global document, window */
 // Real ephemeral browser; never retain screenshot/trace/video/profile/raw DOM artifacts.
 import assert from 'node:assert/strict';
-import { URL } from 'node:url';
 import console from 'node:console';
-import { createServer } from 'node:http';
-import { readFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
-const names = ['index.html', 'app.mjs', 'calculate.mjs', 'style.css'];
-const files = new Map(
-  await Promise.all(
-    names.map(async (name) => [
-      name,
-      await readFile(
-        new URL(`../../assets/descriptor-demo/${name}`, import.meta.url),
-      ),
-    ]),
-  ),
-);
-const server = createServer((request, response) => {
-  const name =
-    request.url === '/'
-      ? 'index.html'
-      : request.url.replace('/assets/descriptor-demo/', '');
-  if (!files.has(name)) {
-    response.writeHead(404).end();
-    return;
-  }
-  response.setHeader(
-    'Content-Type',
-    name.endsWith('.html')
-      ? 'text/html'
-      : name.endsWith('.css')
-        ? 'text/css'
-        : 'text/javascript',
-  );
-  response.end(files.get(name));
+import { storageFixture } from '../fixtures/storage.mjs';
+import { descriptorFixture } from '../../dist/descriptor/fixture.js';
+import { writeBundle } from '../../dist/descriptor/store.js';
+import { startDescriptorService } from '../../dist/descriptor/http/server.js';
+const cleanups = [];
+const f = await storageFixture({
+  after: (callback) => cleanups.push(callback),
 });
-await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+writeBundle(f.store, {
+  schema_version: 1,
+  expected_revision: 0,
+  bundle: await descriptorFixture(f.base.project_id, f.base.app_id),
+});
+const service = await startDescriptorService(f.store);
 let browser;
 try {
   browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   let errors = 0;
   page.on('pageerror', () => errors++);
-  await page.goto(`http://127.0.0.1:${server.address().port}`);
+  page.on('console', (message) => {
+    if (['error', 'warning'].includes(message.type())) errors++;
+  });
+  await page.goto(service.readURL);
   await page.getByRole('button', { name: 'Calculate', exact: true }).click();
   assert.equal(await page.locator('#total').textContent(), '90.00');
   await page.getByLabel('Quantity', { exact: true }).fill('9');
@@ -78,5 +61,6 @@ try {
   );
 } finally {
   await browser?.close();
-  await new Promise((resolve) => server.close(resolve));
+  await service.close();
+  for (const cleanup of cleanups) await cleanup();
 }

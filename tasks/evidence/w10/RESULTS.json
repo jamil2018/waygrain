@@ -1,0 +1,33 @@
+{
+  "task": "W10",
+  "dependencies": {
+    "W09": "37b12b3",
+    "W07": "f4b426d"
+  },
+  "status": "implemented; independent review pending",
+  "commands": [
+    {
+      "command": "npm run check (permitted)",
+      "exit": 0,
+      "result": "typecheck/lint/format/build PASS;163 tests PASS no fail/skip"
+    },
+    {
+      "command": "node --test tests/descriptor/component.browser.mjs (permitted)",
+      "exit": 0,
+      "result": "3 real Chromium tests PASS: pointer/focus/keyboard/touch; conflict/stale/missing; loading/empty/error; no host activation/field capture/storage writes"
+    },
+    {
+      "command": "node tests/descriptor/fixture.browser.mjs (permitted)",
+      "exit": 0,
+      "result": "original calculation/keyboard/responsive fixture replay PASS"
+    }
+  ],
+  "findings_fixed": [
+    "In-flow summary changed scroll position during pointer/touch activation. Fixed-position noninteractive summary avoids layout shifts; pointer and touch replay passed."
+  ],
+  "boundary": "Safe textContent rendering; read-only authorized evidence; explicit scope switch clears old UI and in-flight generations; shared service fixed static module allowlist. No screenshots/traces retained.",
+  "limitations": [
+    "Synthetic Chromium fixture only; no universal host/browser compatibility claim",
+    "Page documentation/source inspector W11; freshness mutations W13"
+  ]
+}

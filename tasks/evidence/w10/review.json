@@ -1,0 +1,18 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "fb6ec29dc6b919d6ab731ae116f629d5ce489ff16cbfbff76f254a50faa82122",
+  "checks": [
+    "All10 hashes matched",
+    "npm run typecheck && npm run build EXIT0",
+    "Chromium component suite EXIT0 PASS3",
+    "Additional probes EXIT0: delayed details discarded after reset; malicious markup inert; unmount removes nodes"
+  ],
+  "findings": [],
+  "advisory": [
+    "W20 accessibility: assess hover summary dismissal after pointer departure and Escape."
+  ],
+  "limitations": [
+    "Synthetic Chromium only; W11 source/page UI not included"
+  ]
+}

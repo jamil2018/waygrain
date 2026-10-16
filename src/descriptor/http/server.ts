@@ -28,9 +28,18 @@ const assetRoot = new URL('../../../assets/descriptor-demo/', import.meta.url);
 const types: Record<string, string> = {
   '.html': 'text/html; charset=utf-8',
   '.mjs': 'text/javascript; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
 };
-const readerAssets = ['index.html', 'app.mjs', 'calculate.mjs', 'style.css'];
+const readerAssets = [
+  'index.html',
+  'app.mjs',
+  'calculate.mjs',
+  'style.css',
+  'reader.mjs',
+  'documentation.css',
+];
+const uiModules = ['adapter.js', 'render.js', 'component-panel.js'];
 const authorAssets = [
   'editor.html',
   'editor.mjs',
@@ -148,6 +157,16 @@ export async function startDescriptorService(
         const url = new URL(req.url ?? '/', origin);
         if (url.pathname === '/favicon.ico') {
           res.writeHead(204).end();
+          return;
+        }
+        if (
+          req.method === 'GET' &&
+          mode === 'read' &&
+          uiModules.some((name) => url.pathname === '/ui/' + name)
+        ) {
+          const name = url.pathname.slice('/ui/'.length);
+          res.writeHead(200, { 'Content-Type': types['.js']! });
+          res.end(await readFile(new URL('../ui/' + name, import.meta.url)));
           return;
         }
         if (req.method === 'GET') {

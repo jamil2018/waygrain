@@ -244,7 +244,7 @@ Acceptance: [W09 exact artifact and independent review](evidence/w09/review.json
 
 ### W10 — Component summary and details panel
 
-**Status:** pending. **Dependencies:** W09, W07. **Phase:** B. **Size:** M.
+**Status:** verified. **Dependencies:** W09, W07. **Phase:** B. **Size:** M.
 
 Display concise hover/focus summaries and an explicit stable Details panel for components and sections.
 
@@ -252,11 +252,13 @@ Display concise hover/focus summaries and an explicit stable Details panel for c
 
 **Acceptance:**
 
-- [ ] Hover, keyboard and touch/click expose equivalent name/purpose/input/action content, with progressive rules/conditions/outcomes/caveats/provenance/freshness.
-- [ ] Details never activates Calculate or submits a form; Escape closes, focus returns appropriately, and layout/input behavior remains usable.
-- [ ] Loading/empty/missing-target/stale/error states are accessible; unknowns/conflicts remain visible and unauthorized material never enters hidden UI data.
+- [x] Hover, keyboard and touch/click expose equivalent name/purpose/input/action content, with progressive rules/conditions/outcomes/caveats/provenance/freshness.
+- [x] Details never activates Calculate or submits a form; Escape closes, focus returns appropriately, and layout/input behavior remains usable.
+- [x] Loading/empty/missing-target/stale/error states are accessible; unknowns/conflicts remain visible and unauthorized material never enters hidden UI data.
 
 **Verification:** Real-browser pointer, keyboard, touch emulation, event-count and restricted-data assertions; responsive checks without retained screenshots/traces; typecheck/build.
+
+Acceptance: [W10 exact artifact and independent review](evidence/w10/review.json).
 
 ### W11 — Whole-page documentation and source inspection
 

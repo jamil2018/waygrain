@@ -1,0 +1,80 @@
+#waygrain-documentation {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+#waygrain-documentation select {
+  margin-block: 0.5rem 1rem;
+}
+#waygrain-documentation .wg-targets > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+#waygrain-documentation button {
+  margin: 0.25rem;
+  font-size: 0.875rem;
+}
+.wg-summary {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 10;
+  width: min(28rem, calc(100% - 2rem));
+  max-height: 18rem;
+  overflow: auto;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  padding: 1rem;
+  box-shadow: 0 0.25rem 1rem #222d2726;
+}
+.wg-summary[hidden] {
+  display: none;
+}
+.wg-summary:empty {
+  display: none;
+}
+.wg-panel {
+  position: fixed;
+  inset: 1rem 1rem 1rem auto;
+  z-index: 20;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  width: min(35rem, calc(100% - 2rem));
+  overflow: auto;
+  box-shadow: 0 0.5rem 2rem #222d2726;
+  overflow-wrap: anywhere;
+}
+.wg-panel[hidden] {
+  display: none;
+}
+.wg-panel h3 {
+  margin-top: 1.5rem;
+}
+.wg-panel h4 {
+  margin-bottom: 0.25rem;
+}
+.wg-panel p {
+  margin-block: 0.5rem;
+}
+.wg-claim {
+  border-top: 1px solid var(--line);
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+}
+.wg-panel button {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+@media (max-width: 40rem) {
+  .wg-panel {
+    inset: 1rem;
+    width: auto;
+  }
+}

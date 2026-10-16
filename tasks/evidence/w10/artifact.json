@@ -1,0 +1,12 @@
+{
+  "assets/descriptor-demo/documentation.css": "63cc1ad85100646490bad4cf4e9ab4880970f489a10970626cfbbfc0c2300c8d",
+  "assets/descriptor-demo/index.html": "eca2c94ab7c23b81b4f52e17e147f503cada8491d97bf4da54f5ae26ba6c6ace",
+  "assets/descriptor-demo/reader.mjs": "775281592f03d0dfd8f67168c68916a6c18c3568413143bb79930c71c4abe936",
+  "src/descriptor/http/server.ts": "5f5eb8549242ad034e1f158fa485f828a639c401c3da8c441a7bca6844578a44",
+  "src/descriptor/ui/component-panel.ts": "245de959566942a2fe5becf23b3b39f6c6547701636378dbeee7a0670af83f03",
+  "src/descriptor/ui/render.ts": "85c7a034bc346cae1a2df0b4bfe8c2ca5c0fadc334e379024c7bc31ea467417b",
+  "tasks/evidence/w10/RESULTS.json": "02d78772ab8fa71a609d49adecd37a37f989026330f82c7564f055828663c918",
+  "tasks/todo.md": "089de3fe54b37140f7ba173363a97d0ad4b68d4ea287d964c7938973a093adb7",
+  "tests/descriptor/component.browser.mjs": "0e713c7c8cee1f520350cbbf66241a42e7b3b565e1f4d6ea86924ee643d54964",
+  "tests/descriptor/fixture.browser.mjs": "f83bcaca0dcca78516e866c835a0cdc4b4adfaa76050b80ef19aa2a85446bfe1"
+}
