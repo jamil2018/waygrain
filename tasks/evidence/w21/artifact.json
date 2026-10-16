@@ -1,0 +1,8 @@
+{
+  "src/descriptor/ui/clarification.ts": "8030473e835fdc033c2928fd219fcb3e8391c1f903f517699f4ac563d2a4c6b2",
+  "src/descriptor/ui/source-inspector.ts": "3433081657e6c970631080bb93bfc0e6c1501abd219790d486b6648a7418a798",
+  "tests/descriptor/acceptance.browser.mjs": "abb8c387fac7107270666fa742e183259d44f7aaab408f466b9af334d46d3b67",
+  "tasks/evidence/w21/MATRIX.json": "d816933f2c3a50fcd81d5fb9707e3f7c214cdd3aa26bbd29c989e7f95d91285d",
+  "tasks/evidence/w21/RESULTS.json": "b4d73c0edc04eaa8e4cd2123f24a060e20b2cf40c985d19aba3ab800dc268edd",
+  "tasks/todo.md": "df062c7e832b71cb865f7ba226ca1cbef52bf219ab464454f93976a74717635b"
+}

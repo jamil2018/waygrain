@@ -1,0 +1,32 @@
+{
+  "task": "W21",
+  "dependency": {
+    "W20": "86c4451"
+  },
+  "status": "independent review pending",
+  "environment": "macOS; Node 26.11.0; pinned Playwright Chromium headless; synthetic private scratch stores",
+  "commands": [
+    {
+      "command": "npm run check",
+      "exit": 0,
+      "result": "183 PASS; type/lint/format/build PASS"
+    },
+    {
+      "command": "node --test --test-concurrency=1 tests/descriptor/*.browser.mjs",
+      "exit": 0,
+      "result": "18 PASS; 0 fail/skip"
+    }
+  ],
+  "findings_fixed": [
+    "Reproduced newer draft erased by pending answer: clear only when unchanged from submitted draft.",
+    "Conversation rendering can detach source trigger: restore focus to retained owned panel close control."
+  ],
+  "initial_probes": [
+    "First browser run: draft assertion failed as expected; incorrect touch source locator corrected.",
+    "Second run: draft/focus passed; premature page assertion corrected to await Purpose heading."
+  ],
+  "limits": [
+    "Ten-case coverage is combined across API/unit/fresh-process/real-browser assertions; see MATRIX.json.",
+    "W22 clean-install command replay pending. Public release HOLD."
+  ]
+}

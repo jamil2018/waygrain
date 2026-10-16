@@ -442,7 +442,7 @@ Acceptance: [W20 exact artifact and independent review](evidence/w20/review.json
 
 ### W21 — Integrated accessibility, freshness and recovery
 
-**Status:** pending. **Dependencies:** W20. **Phase:** D. **Size:** M.
+**Status:** verified. **Dependencies:** W20. **Phase:** D. **Size:** M.
 
 Exercise the ten v0.3 acceptance cases as a complete user journey, including restart and interaction failure modes.
 
@@ -450,11 +450,13 @@ Exercise the ten v0.3 acceptance cases as a complete user journey, including res
 
 **Acceptance:**
 
-- [ ] Pointer/keyboard/touch-equivalent documentation and source navigation work without host activation; focus/escape, narrow viewport and readable state messaging pass.
-- [ ] Editing/importing/restart/export preserves history; source/version/mapping change warnings survive questions and reload.
-- [ ] Acceptance matrix records every case with actual commands and results; existing applicable tests pass and unresolved failures remain explicit.
+- [x] Pointer/keyboard/touch-equivalent documentation and source navigation work without host activation; focus/escape, narrow viewport and readable state messaging pass.
+- [x] Editing/importing/restart/export preserves history; source/version/mapping change warnings survive questions and reload.
+- [x] Acceptance matrix records every case with actual commands and results; existing applicable tests pass and unresolved failures remain explicit.
 
 **Verification:** Real-browser E2E plus fresh-process persistence/import failure suite, applicable legacy regressions and npm run check/build; retain no screenshots/videos/raw snapshots/traces.
+
+Acceptance: [W21 exact artifact and independent review](evidence/w21/review.json).
 
 ### W22 — Reproducible demo commands and user documentation
 

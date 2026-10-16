@@ -20,13 +20,18 @@ export function mountSourceInspector(
   panel.append(node('h2', 'Source inspector'), close, body);
   root.append(panel);
   let generation = 0,
-    trigger: HTMLElement | null = null;
+    trigger: HTMLElement | null = null,
+    fallback: HTMLElement | null = null;
   const reset = (restore = false) => {
     generation++;
     panel.hidden = true;
     body.replaceChildren();
-    if (restore && trigger?.isConnected) trigger.focus();
+    if (restore) {
+      if (trigger?.isConnected) trigger.focus();
+      else if (fallback?.isConnected) fallback.focus();
+    }
     trigger = null;
+    fallback = null;
   };
   close.addEventListener('click', () => reset(true));
   const escape = (e: KeyboardEvent) => {
@@ -45,6 +50,10 @@ export function mountSourceInspector(
   ) => {
     const current = ++generation;
     trigger = sourceTrigger;
+    fallback =
+      sourceTrigger
+        .closest('.wg-panel')
+        ?.querySelector<HTMLElement>('button') ?? null;
     panel.hidden = false;
     body.replaceChildren(node('p', 'Loading authorized source…'));
     close.focus();

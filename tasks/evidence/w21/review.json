@@ -1,0 +1,16 @@
+{
+  "reviewer": "/root/w_review",
+  "verdict": "ACCEPT",
+  "manifest_file_sha256": "ca05bc538f5de652af7f23e2a09e595eb06459ba109e0f8e30126151b4e52787",
+  "checks": [
+    "All six bound hashes match",
+    "npm run check EXIT0;183PASS; type/lint/format/build PASS",
+    "node --test --test-concurrency=1 tests/descriptor/*.browser.mjs EXIT0;18PASS",
+    "Independent scratch Chromium AC8 probe: actual source edit -> stale UI -> question -> reload; warning retained and exact verification unchanged"
+  ],
+  "findings": [],
+  "limitations": [
+    "No screen-reader/full WCAG qualification",
+    "W22 clean-install command qualification pending; public release HOLD"
+  ]
+}

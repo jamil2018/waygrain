@@ -180,7 +180,7 @@ export function mountClarification(
       const view = await options.ask(conversationId, expected, captured);
       if (current !== generation) return;
       render(view);
-      question.value = '';
+      if (question.value === captured) question.value = '';
       status.textContent =
         'Answer ready. Citations open retained authorized sources.';
     } catch (error) {

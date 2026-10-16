@@ -1,0 +1,117 @@
+{
+  "specification": "docs/specification-v0.3.md \u00a78",
+  "commands": {
+    "unit": "npm run check",
+    "browser": "node --test --test-concurrency=1 tests/descriptor/*.browser.mjs"
+  },
+  "cases": [
+    {
+      "case": 1,
+      "tests": [
+        "tests/descriptor/component.browser.mjs",
+        "tests/descriptor/acceptance.browser.mjs",
+        "tests/descriptor/isolation.browser.mjs"
+      ],
+      "assertions": "Hover/focus/keyboard/touch Details, Escape/late summary, source focus fallback, 320px overflow and zero host action assertions.",
+      "result": "PASS"
+    },
+    {
+      "case": 2,
+      "tests": [
+        "tests/descriptor/page.browser.mjs"
+      ],
+      "assertions": "Whole-page purpose/inputs/rules/outputs/workflows/limitations, expandable components and exact authorized source navigation.",
+      "result": "PASS"
+    },
+    {
+      "case": 3,
+      "tests": [
+        "tests/descriptor/provider.test.mjs",
+        "tests/descriptor/clarification.browser.mjs",
+        "tests/descriptor/conversation.test.mjs"
+      ],
+      "assertions": "Supported 10 and contextual 9 on both surfaces; same-scope persisted follow-up after separate process; exact citations.",
+      "result": "PASS"
+    },
+    {
+      "case": 4,
+      "tests": [
+        "tests/descriptor/provider.test.mjs",
+        "tests/descriptor/clarification.browser.mjs"
+      ],
+      "assertions": "Explicit tax evidence gap and two conflicting discount sources on both surfaces.",
+      "result": "PASS"
+    },
+    {
+      "case": 5,
+      "tests": [
+        "tests/descriptor/contracts.test.mjs",
+        "tests/descriptor/import.test.mjs",
+        "tests/descriptor/freshness.test.mjs",
+        "tests/descriptor/answer-contract.test.mjs"
+      ],
+      "assertions": "Evidence-class constraints, inferred code import, exact supplied revision/method, forged prose and citation rejection.",
+      "result": "PASS"
+    },
+    {
+      "case": 6,
+      "tests": [
+        "tests/descriptor/retrieval.test.mjs",
+        "tests/descriptor/conversation.test.mjs",
+        "tests/descriptor/isolation.test.mjs",
+        "tests/descriptor/isolation.browser.mjs"
+      ],
+      "assertions": "All 11 trusted scopes plus explicit nulls and foreign project/app; provider/history/source and late UI isolation.",
+      "result": "PASS"
+    },
+    {
+      "case": 7,
+      "tests": [
+        "tests/descriptor/store.test.mjs",
+        "tests/descriptor/restart.test.mjs",
+        "tests/descriptor/conversation-migration.test.mjs",
+        "tests/descriptor/editor.browser.mjs",
+        "tests/descriptor/import.browser.mjs",
+        "tests/descriptor/archive.browser.mjs"
+      ],
+      "assertions": "Immutable history, fresh-process persistence and export/restore, editor reload, invalid imports/receipts and transaction failure atomicity.",
+      "result": "PASS"
+    },
+    {
+      "case": 8,
+      "tests": [
+        "tests/descriptor/freshness.test.mjs",
+        "tests/descriptor/freshness.browser.mjs",
+        "tests/descriptor/conversation.test.mjs",
+        "tests/descriptor/clarification.browser.mjs"
+      ],
+      "assertions": "Source/version/mapping invalidation retains old verification; stale follow-up stays warned; reload labels historical answers and opens old retained source. Questions do not promote verification.",
+      "result": "PASS"
+    },
+    {
+      "case": 9,
+      "tests": [
+        "tests/descriptor/answer-contract.test.mjs",
+        "tests/descriptor/isolation.test.mjs",
+        "tests/descriptor/isolation.browser.mjs",
+        "tests/descriptor/clarification.browser.mjs"
+      ],
+      "assertions": "Hostile imports inert, forged provider output rejected, source/history denied, provider failure sanitized, scope-switch in flight discarded; no unrelated input reads/host action.",
+      "result": "PASS"
+    },
+    {
+      "case": 10,
+      "tests": [
+        "tests/descriptor/fixture.browser.mjs",
+        "tests/descriptor/provider.test.mjs"
+      ],
+      "assertions": "Real fixture calculation, validation, decimal rounding/unit regressions; deterministic adapter offline/no paid key; all applicable existing checks pass. Clean-checkout startup/test command qualification belongs to W22.",
+      "result": "PASS"
+    }
+  ],
+  "limits": [
+    "Semantic real-Chromium assertions; no screen-reader study or full WCAG certification.",
+    "No screenshots/videos/traces/raw snapshots retained.",
+    "Synthetic configured loopback contexts; no production authentication or universal-host qualification."
+  ]
+}
